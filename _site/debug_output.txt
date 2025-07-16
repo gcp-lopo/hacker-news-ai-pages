@@ -1,0 +1,661 @@
+[DEBUG] Debug start.
+[DEBUG] Homepage <body> preview:
+<body>
+ <header class="header clear">
+  <div class="top-bar cf">
+   <div class="top-bar-box cf">
+    <div class="slogan-container">
+     <span class="slogan">
+      #1 Trusted Cybersecurity News Platform
+     </span>
+     <div class="cursor">
+     </div>
+    </div>
+    <span class="top-follow">
+     <span class="f-tag">
+      Followed by 5.20+ million
+     </span>
+     <a href="https://twitter.com/thehackersnews" rel="noopener" target="_blank">
+      <i class="icon-font icon-twitter">
+       
+      </i>
+     </a>
+     <a href="https://www.linkedin.com/company/thehackernews/" rel="noopener" target="_blank">
+      <i class="icon-font icon-linkedin">
+       
+      </i>
+     </a>
+     <a class="top-follow-last" href="https://www.facebook.com/thehackernews" rel="noopener" target="_blank">
+      <i class="icon-font icon-facebook">
+       
+      </i>
+     </a>
+    </span>
+   </div>
+  </div>
+  <div class="logo-area cf">
+   <div class="logo-box">
+    <a href="/">
+     <img alt="The Hacker News Logo" class="no-lazy" fetchpriority="high" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1IAAABdCAMAAACYRqd9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACWUExURUdwTP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7KwB0MAAAAxdFJOUwBAwHCwIA+QYNCgAfKA+AUK/FHgOu4YSByq18UveCm76RNZ5Wlkhsql3Jy2jDWUlyR/G9pxAAASqUlEQVR42u2d6WKyvBKAowKqAQFx39e6t+X+b+7U9m2LyWQlgqdf5mcrSibzJJPJZIKQFStWrFixYsWKFStWrFixYsWKFStWrFh5gEw7N2n8ilWJFSt5pJUS8v/1+iu1j+Oh+0+m3xJaG/iSnUNIZHXyX0RqsVb7vE82N3X/Vn92a6ryTU6d1Iz3BM2pUK9bgT84pD64tkhpSTUNsEUqO8akipKgZ0aKeqm0zmCP+mDTIqWJVNoKLVI/ErVVkbpYpCxSBFJpdWWR+paBKlFp1yJlkSKRSsfvFimmCYr8PmyRskhRSKW9rkXqS8aqSNWRRcoiRSOVttcWKYQQHur7fRYpi1QWqVQ28PfHZ6mdKlEbbJGySMFISQb+/jhSI1WkXpFFyiLFQCqdrP7zSOGevt9nkbJIkUilx/f/OlJdVaKW2CJlkWIjJRP4+9tIBapIvSGLlEWKg1Qar//bSE1UkapYpCxSXKTEgb8/jZQX5/D7LFIWKRCp9BD+d5HqqE5SJ2SRskiJkBIE/v40UidVpAYWKYuUGCl+4O9PI5UoEtULLVIWKQmkuIG/v4xU2KGEtsh95r9dJIPUsHGaJL7fSyaHWUX2IE3YnbVuT/nL8eJt2w2fByk878zezs1k6ft+0jy/1Soqp5dXnaBVPW5u6tiPXjrDgpDKrc6wMjudx0lvGWkhlcYNQ0jJtSRyM9L3PgT82KUGhhQ+pJ/9AqiXos/3WPr+cj+aqSi0QTXXkbfeWzOi3f7ub/5BIkM5XDvEsS3faXhPgFQ0uFRpC4gntaHMu+DuhcpKPtYr+NFI5Vfn++t3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"/>
+    </a>
+   </div>
+   <div class="m-button m-menu-more">
+    <a aria-label="open menu" class="btn-open" href="javascript:void(0)">
+     <i class="icon-font icon-menu m-m-icon">
+      
+     </i>
+    </a>
+   </div>
+   <div class="m-search-here">
+    <i class="icon-font icon-search">
+     
+    </i>
+   </div>
+   <a class="sub-button" href="#email-outer">
+    <div class="sub-style">
+     <i class="icon-font icon-mail-alt">
+      
+     </i>
+     Subscribe – Get Latest News
+    </div>
+   </a>
+  </div>
+ </header>
+ <nav class="menu cf" id="big-boss">
+  <div class="m-menu-box cf">
+   <ul class="cf m-menu-ul">
+    <li>
+     <a href="/">
+      <i class="icon-font icon-home">
+       
+      </i>
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="#email-outer">
+      <i class="icon-font icon-mail-alt">
+       
+      </i>
+      Newsletter
+     </a>
+    </li>
+    <li>
+     <a href="/p/upcoming-hacker-news-webinars.html" rel="noopener">
+      <i class="icon-font icon-basket">
+       
+      </i>
+      Webinars
+     </a>
+    </li>
+   </ul>
+  </div>
+  <div class="menu-box cf">
+   <ul class="cf menu-ul">
+    <li class="show-menu">
+     <a href="/" itemprop="url">
+      Home
+     </a>
+    </li>
+    <li class="eight_plus">
+     <a href="/search/label/data%20breach">
+      Data Breaches
+     </a>
+    </li>
+    <li class="show-menu">
+     <a href="/search/label/Cyber%20Attack">
+      Cyber Attacks
+     </a>
+    </li>
+    <li class="show-menu">
+     <a href="/search/label/Vulnerability">
+      Vulnerabilities
+     </a>
+    </li>
+    <li class="eight_plus">
+     <a href="/p/upcoming-hacker-news-webinars.html">
+      Webinars
+     </a>
+    </li>
+    <li class="show-menu">
+     <a href="https://thehackernews.com/expert-insights/" rel="noopener" target="_blank">
+      Expert Insights
+     </a>
+    </li>
+    <li class="show-menu">
+     <a href="/p/submit-news.html">
+      Contact
+     </a>
+    </li>
+   </ul>
+   <div class="button menu-more">
+    <a class="btn-open" href="javascript:void(0)">
+     <i class="icon-font icon-menu">
+      
+     </i>
+    </a>
+   </div>
+   <div class="search-here">
+    <i class="icon-font icon-search">
+     
+    </i>
+   </div>
+  </div>
+ </nav>
+ <aside class="search-box cf">
+  <div class="search-b">
+   <form action="https://www.google.com/cse" id="searchform" method="get">
+    <input autocomplete="off" id="s" name="q" placeholder="Search Here..." type="text"/>
+    <input name="cx" type="hidden" value="partner-pub-7983783048239650:3179771210"/>
+   </form>
+   <span class="underline">
+   </span>
+  </div>
+ </aside>
+ <aside class="overlay slide-up-fade-in cf" id="overlay">
+  <div class="wrap cf">
+   <div class="o-top cf">
+    <a class="btn-close" href="javascript:void(0)">
+     <i class="icon-font icon-cancel close-m-i">
+      
+     </i>
+    </a>
+   </div>
+   <nav class="o-menu-box cf">
+    <div class="o-menu-left">
+     <div class="o-menu-h5">
+      Resources
+     </div>
+     <ul class="o-menu">
+      <li>
+       <a href="/p/upcoming-hacker-news-webinars.html" rel="noopener">
+        Webinars
+       </a>
+      </li>
+      <li>
+       <a href="https://thehackernews.tradepub.com" rel="noopener" target="_blank">
+        Free eBooks
+       </a>
+      </li>
+     </ul>
+    </div>
+    <div class="o-menu-right">
+     <div class="o-menu-h5">
+      About Site
+     </div>
+     <ul class="o-menu">
+      <li>
+       <a href="/p/about-us.html">
+        About THN
+       </a>
+      </li>
+      <li>
+       <a href="/p/careers-technical-writer-designer-and.html">
+        Jobs
+       </a>
+      </li>
+      <li>
+       <a href="/p/advertising-with-hacker-news.html">
+        Advertise with us
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+   <div class="gap">
+   </div>
+   <div class="o-h5">
+    Contact/Tip Us
+   </div>
+   <div class="o-contact">
+    <a href="/p/submit-news.html">
+     <div class="o-contact-icon">
+      <i class="icon-font icon-mail-alt">
+       
+      </i>
+     </div>
+     <span>
+      Reach out to get featured—contact us to send your exclusive story idea, research, hacks, or ask us a question or leave a comment/feedback!
+     </span>
+    </a>
+   </div>
+   <div class="gap">
+   </div>
+   <div class="o-h5">
+    Follow Us On Social Media
+   </div>
+   <div class="o-follow cf">
+    <a href="https://www.facebook.com/thehackernews" rel="noopener" target="_blank">
+     <i class="icon-font icon-facebook">
+      
+     </i>
+    </a>
+    <a href="https://twitter.com/thehackersnews" rel="noopener" target="_blank">
+     <i class="icon-font icon-twitter">
+      
+     </i>
+    </a>
+    <a href="https://www.linkedin.com/company/thehackernews/" rel="noopener" target="_blank">
+     <i class="icon-font icon-linkedin">
+      
+     </i>
+    </a>
+    <a href="https://www.youtube.com/c/thehackernews?sub_confirmation=1" rel="noopener" target="_blank">
+     <i class="icon-font icon-youtube">
+      
+     </i>
+    </a>
+    <a href="https://www.instagram.com/thehackernews/" rel="noopener" target="_blank">
+     <i class="icon-font icon-instagram">
+      
+     </i>
+    </a>
+   </div>
+   <div class="o-sub cf">
+    <a href="https://feeds.feedburner.com/TheHackersNews" rel="noopener" target="_blank">
+     <i class="icon-font icon-rss">
+      
+     </i>
+     RSS Feeds
+    </a>
+    <a href="#email-outer">
+     <i class="icon-font icon-bell-alt">
+      
+     </i>
+     Email Alerts
+    </a>
+    <a href="https://t.me/+wKrQxniFO1Q1OTRk" rel="noopener" target="_blank">
+     <i class="icon-font icon-telegram">
+      
+     </i>
+     Telegram Channel
+    </a>
+   </div>
+  </div>
+ </aside>
+ <div class="rocking cf">
+  <div class="header-cn">
+   <a href="https://thehackernews.uk/ai-security-2025-header-d" rel="noopener" target="_blank">
+    <img alt="AWS EKS Security Best Practices" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgND4mfZIflUFe0NNTxlkCIzBbduJWfmWZnEj6JZZt1XXZgvhCtLVAXPwoypwgupKOOM9xsEJ8A0NevTw64gwPCGhUL3H89gCjQbydEYacwxWZNFvCZbUHv_FVoyHzGqHQn1DxI_FdoTEThb-gcvPj1mBJwnRjaiOqJYPfz4gDrldq0JkEfTn5syXUGXUug/s729-e100/z-d.jpg" height="91" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=" width="729"/>
+   </a>
+  </div>
+ </div>
+ <main class="main clear">
+  <div class="main-box clear">
+   <!--Homepage-->
+   <h1 class="story-title-all">
+    The Hacker News | #1 Trusted Source for Cybersecurity News
+   </h1>
+   <div class="main-left-right clear">
+    <div class="left-box" id="left-box">
+     <div class="content section" id="content">
+      <div class="widget Blog" data-version="1" id="Blog1">
+       <div class="blog-posts clear">
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2025/07/mobile-security-alert-352-iconads-fraud.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Massive Android Fraud Operations Uncovered: IconAds, Kaleidoscope, SMS Malware, NFC Scams" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgo732-_bYkVBnDit_7f_u4KbruG0TeSyfudnEHSB-n9g2gwyLsEThuvDNZx1BAWoephgu6p7NB8-OurwTzNu8lHcqPc-xQyV_v43d8Qefk1TfiLG-2EeqGOkjI4aop63vT3rBTbyk7FhmgkAMsDCRBQ0KVPuDzbbC1h6jjIXhWaUeYo_8PI7sumX_2dH6E/w500/mobile-hacking.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Massive Android Fraud Operations Uncovered: IconAds, Kaleidoscope, SMS Malware, NFC Scams" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgo732-_bYkVBnDit_7f_u4KbruG0TeSyfudnEHSB-n9g2gwyLsEThuvDNZx1BAWoephgu6p7NB8-OurwTzNu8lHcqPc-xQyV_v43d8Qefk1TfiLG-2EeqGOkjI4aop63vT3rBTbyk7FhmgkAMsDCRBQ0KVPuDzbbC1h6jjIXhWaUeYo_8PI7sumX_2dH6E/s728-rw-e365/mobile-hacking.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Massive Android Fraud Operations Uncovered: IconAds, Kaleidoscope, SMS Malware, NFC Scams
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 03, 2025
+             </span>
+             <span class="h-tags">
+              Mobile Security / Cybercrime
+             </span>
+            </div>
+            <div class="home-desc">
+             A mobile ad fraud operation dubbed IconAds that consisted of 352 Android apps has been disrupted, according to a new report  from HUMAN.  The identified apps were designed to load out-of-context ads on a user's screen and hide their icons from the device home screen launcher, making it harder for victims to remove them, per the company's Satori Threat Intelligence and Research Team. The apps have since been removed from the Play Store by Google.  The ad fraud scheme accounted for 1.2 billion bid requests a day, at the height of its activity. The vast majority of IconAds-associated traffic originated from Brazil, Mexico, and the United States.  It's worth noting that IconAds is a variant of a threat that's also tracked  by other cybersecurity vendors under the names HiddenAds  and Vapor , with the malicious apps repeatedly slipping past the Google Play Store since at least 2019 .  Some of the common characteristics of these apps include the use of obfuscation to conceal...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2025/07/over-40-malicious-firefox-extensions.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets, Stealing User Assets" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcw-DB7_DpDzaPacMcMOjsRBO-M8ALN6Pe2P68U5MK82ITPBVvLRyGI8l3QNO_bFo0yJd2xWuMEisytPuiT6GBErhTac58CQ_ksCydeFjWZj7s48hlCrYiiFyWrqZszwR45HxcsZKKwa1zXQT7MfgBBafJe1s7fL3J-upHsgofKlnpK4YpcvGcNNg6teU9/w500/firefox-crypto-malware.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets, Stealing User Assets" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcw-DB7_DpDzaPacMcMOjsRBO-M8ALN6Pe2P68U5MK82ITPBVvLRyGI8l3QNO_bFo0yJd2xWuMEisytPuiT6GBErhTac58CQ_ksCydeFjWZj7s48hlCrYiiFyWrqZszwR45HxcsZKKwa1zXQT7MfgBBafJe1s7fL3J-upHsgofKlnpK4YpcvGcNNg6teU9/s728-rw-e365/firefox-crypto-malware.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets, Stealing User Assets
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 03, 2025
+             </span>
+             <span class="h-tags">
+              Browser Security / Cryptocurrency
+             </span>
+            </div>
+            <div class="home-desc">
+             Cybersecurity researchers have uncovered over 40 malicious browser extensions for Mozilla Firefox that are designed to steal cryptocurrency wallet secrets, putting users' digital assets at risk.  "These extensions impersonate legitimate wallet tools from widely-used platforms such as Coinbase, MetaMask, Trust Wallet, Phantom, Exodus, OKX, Keplr, MyMonero, Bitget, Leap, Ethereum Wallet, and Filfox," Koi Security researcher Yuval Ronen said .  The large-scale campaign is said to have been ongoing since at least April 2025, with new extensions uploaded to the Firefox Add-ons store as recently as last week.   The identified extensions have been found to artificially inflate their popularity, adding hundreds of 5-star reviews that go far beyond the total number of active installations. This strategy is employed to give them an illusion of authenticity, making it seem like they are widely adopted and tricking unsuspecting users into installing them.  Another tactic adopted by ...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2025/07/the-hidden-weaknesses-in-ai-soc-tools.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="The Hidden Weaknesses in AI SOC Tools that No One Talks About" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRmtpEctES2NJMqE2hZdi4NuMZLRbzjHSm5UO7hFi01_qzwM4k2jhaynzXCJjBvQEWskgyTfANT3gxaCRPtdjAYQz4rF1xLsY7vCVGFU6HvaNsmmJvCuGAYhlDfZL51Ww7NZSHW_5O4uEKiRkazHLVp1kgr5Hme7orghzOFzTj842WSoVSilr7BU19pM4/w500/main.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="The Hidden Weaknesses in AI SOC Tools that No One Talks About" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRmtpEctES2NJMqE2hZdi4NuMZLRbzjHSm5UO7hFi01_qzwM4k2jhaynzXCJjBvQEWskgyTfANT3gxaCRPtdjAYQz4rF1xLsY7vCVGFU6HvaNsmmJvCuGAYhlDfZL51Ww7NZSHW_5O4uEKiRkazHLVp1kgr5Hme7orghzOFzTj842WSoVSilr7BU19pM4/s1200/main.png"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             The Hidden Weaknesses in AI SOC Tools that No One Talks About
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 03, 2025
+             </span>
+             <span class="h-tags">
+              Security Operations / Machine Learning
+             </span>
+            </div>
+            <div class="home-desc">
+             If you're evaluating AI-powered SOC platforms, you've likely seen bold claims: faster triage, smarter remediation, and less noise. But under the hood, not all AI is created equal. Many solutions rely on pre-trained AI models that are hardwired for a handful of specific use cases. While that might work for yesterday's SOC, today's reality is different.  Modern security operations teams face a sprawling and ever-changing landscape of alerts. From cloud to endpoint, identity to OT, insider threats to phishing, network to DLP, and so many more, the list goes on and is continuously growing. CISOs and SOC managers are rightly skeptical. Can this AI actually handle all of my alerts, or is it just another rules engine in disguise?  In this post, we'll examine the divide between two types of AI SOC platforms. Those built on adaptive AI, which learns to triage and respond to any alert type, and those that rely on pre-trained AI, limited to handling predefined use cases only. Understanding t...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <section class="body-post clear newsfeed nf1">
+         <a class="story-link" href="https://thehackernews.uk/saas-security-vendor-selection" rel="nofollow noopener" target="_blank" title="cyber security">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1OE6nZWesak-QhQ5t3ZPFhV_9Tg0Xr7GlvbcWMrOnhbqp7dLDSObhAbnILLb51W1hjZ_Z09b1BwuxQhAaamsqiWffo9eiWwk6qkegbrdvBG4-170OIrOgymZYw4kcbF0iIgCXPE6iwlKGqkMNLmlzLEPd2LWzWW4RqykWKHc9C0tmd7Wp_uOP5IDWEhh2/s729-e100/saas.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             SaaS Security Made Simple
+            </h2>
+            <div class="item-label">
+             <img alt="website" class="no-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAsVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAk2wLSAAAAOnRSTlMA+ilQCO0cZSXxFUtUEvXjrZ5aVxnNBIVqQjstDurSl9mycGAggF3mvZCKR97IwzK6dTB5v7anon02apqd5gAAA7pJREFUSMetlIeS4jAMhuU0EgIphISaRgt92QW26P0f7GzL3s3dcWXm7pvBchQXIf0R/Bccc30vGsbyY/G6mPbhT8wHdw85wTpG1vBJGE/hd/SvObMR4zubAIzYwTwh2pia8EsGOZadMDzMvT1/yqozZO9suznhbQYPGUZYG0aermDPusLRQx6TH9wt84jP8ICP0BtANy/6YNmxcHD7xscJi2C+w+jnPPisMABu9oovwgn5dp7FxwSvPGaWdn/cgZc5wBUPfF56c3JOUGarxBeAqV18v+eDbS1eESYjKmqdQDaSiQ9vfHwKzlb7n4enjJvYnsuFHe3fnqU5yMundKAiQtOYGRMsXcMwOtgzCDe2Z67gmPLB2WECmgT/CJM/29Eh59uD7/sJi3zBLTQ1Y9yZPUGe9pKkt/kM7YqGzo/gVoPGYmOalHYmzDu6qmKv0saNdGf5CDRZWNJkigeZO/uNlIUv9Jp2DrEDn6S1ui7fSbtnQ2HOBQgMHCjrt1J50pNKGlee53A9kAhdFUPrA9mHGU2eGWms2vLBRFL22qbi6mdaGSjtHNRBo0Ac5NHSWsXQwZUw+mEIKqIlaVFsOafkLF7VwdiS30Dvn3vv1BiOfAhjymezA7paRa2idHW66bUlYvHUB2df1RYPvph8RlnEZGuxJRoLFqwejzucbSAMsdzh+1KyCU8byVmczgghO2H+gM23BOuuYBWMupLSWw0/2eDEIapamtVd3EKSyuy1ql5gtb9vF4iqJHsR84jmx/JBxhK9xcr3lOxUqaetwGeqHrFER7eBhbSzpqWet0Ktald/oa98QpNqy6QMJ9+99dsaW+eWloFBBzdSCqUS3tPPSo4rLWkSrWqkMZ3kIEVrUAjEdgvE+SKNaqQfqtek5O3i+GtL9QbkZOSsG4vWVkpccxLgHjSWN9J/ZUYRLHS9EnruUbEuoOnzN+RL6RJ7riNuBgL7nAhuTU9hPuPaFAxY5Ju+P/7qJC7Dv+OWfVUM1yvDeMovoicvcWDMBC+zy/FFMGHxEycN3HYfDz7ETvknrWCh3cdXKihzZKscQIv5yeN7rONJZlAXw6Ae8YIjqT0ldU03DQ6iUlep5W672VhFZXEn7uEH+ltciBemkuBXH425kvqRvqONVWK9gohNIDvepWclC7fHBPyQbeARicfeu1GQwJg+rF3QFwd13AjPBjzGKbHZFbhzjrWs1hqmJ3x9w3ycwS8x4gARw4qnYVh4mwjF06IPv8VZRqHn2d49DRqP2VV5sOCf+QZnr33vr1o0bwAAAABJRU5ErkJggg==" style=" display: inline-block; max-width: 12px; margin-right: 8px; "/>
+             Appomni
+             <span class="h-tags">
+              SaaS Security / SSPM
+             </span>
+            </div>
+            <div class="home-desc">
+             Simplify SaaS security with a vendor checklist, RFP, and expert guidance.
+            </div>
+           </div>
+          </div>
+         </a>
+        </section>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2025/07/chinese-hackers-exploit-ivanti-csa-zero.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Chinese Hackers Exploit Ivanti CSA Zero-Days in Attacks on French Government, Telecoms" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilySQZXFBxfCs69IpylSEN2OX3WwfsknLwJA1hLJ4I6nVhrQkq9S85ExcPhvhj5vX7WPI5IDG3td10HOPc7m0Zb2yMCOANJ7T1fEIJYHjM9_WiBRyGzi5M6Tnu5KiPc_KPtvRURxjLNuJU_2BAlcK2etJWp8tJdEoQSk79gy23_fF_vtiuod5euxh5lS7d/w500/china-france-hackers.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Chinese Hackers Exploit Ivanti CSA Zero-Days in Attacks on French Government, Telecoms" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilySQZXFBxfCs69IpylSEN2OX3WwfsknLwJA1hLJ4I6nVhrQkq9S85ExcPhvhj5vX7WPI5IDG3td10HOPc7m0Zb2yMCOANJ7T1fEIJYHjM9_WiBRyGzi5M6Tnu5KiPc_KPtvRURxjLNuJU_2BAlcK2etJWp8tJdEoQSk79gy23_fF_vtiuod5euxh5lS7d/s728-rw-e365/china-france-hackers.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Chinese Hackers Exploit Ivanti CSA Zero-Days in Attacks on French Government, Telecoms
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-f
+
+[DEBUG] https://thehackernews.com/2025/07/mobile-security-alert-352-iconads-fraud.html content length: 10034
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-displ
+
+[DEBUG] https://thehackernews.com/2025/07/over-40-malicious-firefox-extensions.html content length: 2703
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;
+
+[DEBUG] https://thehackernews.com/2025/07/the-hidden-weaknesses-in-ai-soc-tools.html content length: 12953
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+04
+
+[DEBUG] https://thehackernews.uk/saas-security-vendor-selection content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://appomni.com/ebooks/saas-security-made-simple-vendor-selection/?utm_campaign=12470400-Saas%20Security%20Vendor%20Selection%20Ebook%20FY26&amp;utm_source=the-hacker-news&amp;utm_medium=newsfeed&amp;utm_content=july-20205" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   SaaS Security Made Simple: Vendor Selection | AppOmni
+  </title>
+  <meta content="SaaS Security Made Simple: Vendor Selection | AppOmni" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2025/07/chinese-hackers-exploit-ivanti-csa-zero.html content length: 4742
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1E
+
+[DEBUG] https://thehackernews.com/2025/07/critical-cisco-vulnerability-in-unified.html content length: 2175
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/gre
+
+[DEBUG] https://thehackernews.com/2025/06/the-hidden-risks-of-saas-why-built-in.html content length: 9844
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:s
+
+[DEBUG] https://thehackernews.com/2025/07/north-korean-hackers-target-web3-with.html content length: 10331
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A
+
+[DEBUG] https://thehackernews.com/2025/07/that-network-traffic-looks-legit-but-it.html content length: 6708
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+04
+
+[DEBUG] https://thehackernews.com/2025/07/hackers-using-pdfs-to-impersonate.html content length: 7953
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font
+
+[DEBUG] https://thehackernews.com/2025/07/us-sanctions-russian-bulletproof.html content length: 4153
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range
+
+[DEBUG] https://thehackernews.com/2025/07/vercels-v0-ai-tool-weaponized-by.html content length: 3225
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+01
+
+[DEBUG] https://thehackernews.com/2025/07/critical-vulnerability-in-anthropics.html content length: 8048
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:s
+
+[DEBUG] https://thehackernews.com/2025/07/ta829-and-unkgreensec-share-tactics-and.html content length: 6569
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U
+
+[DEBUG] Failed to fetch list page: https://thehackernews.com/search/label/Artificial%20Intelligence?updated-max=&max-results=10, status: 404

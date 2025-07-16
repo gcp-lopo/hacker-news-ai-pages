@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-07-04 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Massive Android Fraud Operations Uncovered: IconAds, Kaleidoscope, SMS Malware, NFC Scams</a></li>
+      
+        <li><a href="#article-2">Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets, Stealing User Assets</a></li>
+      
+        <li><a href="#article-3">The Hidden Weaknesses in AI SOC Tools that No One Talks About</a></li>
+      
+        <li><a href="#article-4">Chinese Hackers Exploit Ivanti CSA Zero-Days in Attacks on French Government, Telecoms</a></li>
+      
+        <li><a href="#article-5">Critical Cisco Vulnerability in Unified CM Grants Root Access via Static Credentials</a></li>
+      
+        <li><a href="#article-6">The Hidden Risks of SaaS: Why Built-In Protections Aren't Enough for Modern Data Resilience</a></li>
+      
+        <li><a href="#article-7">North Korean Hackers Target Web3 with Nim Malware and Use ClickFix in BabyShark Campaign</a></li>
+      
+        <li><a href="#article-8">That Network Traffic Looks Legit, But it Could be Hiding a Serious Threat</a></li>
+      
+        <li><a href="#article-9">Hackers Using PDFs to Impersonate Microsoft, DocuSign, and More in Callback Phishing Campaigns</a></li>
+      
+        <li><a href="#article-10">U.S. Sanctions Russian Bulletproof Hosting Provider for Supporting Cybercriminals Behind Ransomware</a></li>
+      
+        <li><a href="#article-11">Vercel's v0 AI Tool Weaponized by Cybercriminals to Rapidly Create Fake Login Pages at Scale</a></li>
+      
+        <li><a href="#article-12">Critical Vulnerability in Anthropic's MCP Exposes Developer Machines to Remote Exploits</a></li>
+      
+        <li><a href="#article-13">TA829 and UNK_GreenSec Share Tactics and Infrastructure in Ongoing Malware Campaigns</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-07-04-ai创业新闻">2025-07-04 AI创业新闻</h1>
+
+<h2 id="massive-android-fraud-operations-uncovered-iconads-kaleidoscope-sms-malware-nfc-scams"><a id="article-1"></a>Massive Android Fraud Operations Uncovered: IconAds, Kaleidoscope, SMS Malware, NFC Scams</h2>
+
+<p>A mobile ad fraud operation dubbed
+IconAds
+that consisted of 352 Android apps has been disrupted, according to a
+new report
+from HUMAN.
+The identified apps were designed to load out-of-context ads on a user’s screen and hide their icons from the device home screen launcher, making it harder for victims to remove them, per the company’s Satori Threat Intelligence and Research Team. The apps have since been removed from the Play Store by Google.
+The ad fraud scheme accounted for 1.2 billion bid requests a day, at the height of its activity. The vast majority of IconAds-associated traffic originated from Brazil, Mexico, and the United States.
+It’s worth noting that IconAds is a variant of a threat that’s also
+tracked
+by other cybersecurity vendors under the names
+HiddenAds
+and
+Vapor
+, with the malicious apps repeatedly slipping past the Google Play Store
+since at least 2019
+.
+Some of the common characteristics of these apps include the use of obfuscation to conceal device information during network communications, a set naming pattern used for the command-and-control (C2) domains, and its ability to replace the default MAIN/LAUNCHER activity by declaring an alias.
+“This means that when the app is installed, the default label name and icon will be displayed, but as soon as the app runs, the activity-alias declared on the manifest will be active and persist even after relaunching the app or rebooting the device,” HUMAN said.
+This behavior, in turn, causes the apps’s name and icon to be hidden from the home screen, preventing easy uninstallation. The end goal of the apps is to load interstitial ads, regardless of which app is active, effectively disrupting user experience.
+Some variants of IconAds apps have been found to impersonate the Google Play Store (or using other Google-related application icons and names) instead of concealing them. Clicking on the app redirects the victim to the official app, while the malicious activity is taking place in the background.
+Some of the other new additions incorporated into new iterations of the malicious apps are a check to determine if the application was installed from the Play Store, as well as feature more layers of obfuscation to resist dynamic analysis.
+“Many IconAds-associated apps have short shelf lives before being removed from the Play Store,” HUMAN researchers said. “With the several evolutions of this threat, researchers expect continued adaptation, with new apps published and new obfuscation techniques added.”
+The disclosure comes as IAS Threat Lab
+exposed
+another “insidiously adaptive” ad fraud operation called Kaleidoscope that resorts to the evil twin technique, wherein “legitimate-looking apps hosted on Google Play as a deceptive façade, while its malicious duplicate counterparts, distributed predominantly through third-party app stores, drive fraudulent ad supply.”
+Kaleidoscope is an evolution of
+Konfety
+, a similar ad fraud scheme that revolved around apps embedding an advertising framework called CaramelAds SDK. The newly identified apps have since removed references to CaramelAds and included the core functionality into other manipulated SDKs under different names like Leisure, Raccoon, and Adsclub.
+The essence of the operation is this: Cybercriminals create two nearly identical versions of the same app, a harmless “decoy twin” available on Google Play and an “evil twin” that’s distributed through third-party app stores or fake websites. The “evil twin” app then generates intrusive, unwanted ads to fraudulently earn advertising revenue.
+According to
+telemetry data
+from ESET for the period December 2024 to May 2025, Kaleidoscope impacts a large number of Android users across the world, the most affected being Latin America, Türkiye, Egypt, and India due to the popularity of third-party app stores in these regions.
+The adware activity kicks in when users unintentionally install the “evil twin” apps, resulting in intrusive ads and degraded device performance. But since the ads are served via the copycat apps, it tricks advertisers into paying the fraudsters for illegitimate ad views.
+“The primary monetization strategy in this scheme relies on malicious duplicates distributed through third-party app stores, where a benign app ID is exploited by a malicious counterpart to generate ad impressions and drive revenue,” IAS
+said
+. “The malicious app delivers intrusive out-of-context ads under the guise of the benign app ID in the form of full-screen interstitial images and videos, triggered even without user interaction.”
+A significant chunk of Kaleidoscope’s monetization has been traced back to a Portuguese company named Saturn Dynamic that claims to offer a way to “monetize display ads and videos.”
+From Ad Fraud to Financial Fraud
+Android devices have also come under assault from
+various
+malware families
+like NGate and SuperCard X that abuse the Near-field communication (NFC) technology to commit financial fraud using inventive relay techniques that allow NFC signals from a victim’s payment card to be routed through the compromised phone to attacker-controlled devices, enabling criminals to withdraw cash from ATMs remotely.
+Mobile malware campaigns leveraging these malicious programs have claimed successful infections across Russia, Italy, Germany, and Chile.
+NGate has also been an inspiration for another NFC-based technique referred to as
+Ghost Tap
+, which involves the attackers using stolen card data to register them in their own digital wallets like Google Pay and Apple Pay. The loaded wallets are subsequently relayed to conduct fraudulent contactless payments anywhere in the world.
+“Ghost Tap attackers create fraudulent transactions by tapping compromised mobile devices against NFC-enabled payment terminals,” ESET noted. “These transactions appear legitimate, bypassing traditional security checks, and allowing criminals to cash out quickly.”
+Android SMS Stealer Infects 100,000 Devices in Uzbekistan
+The findings coincide with the discovery of a new Android malware campaign that’s distributing a previously unidentified SMS stealer called Qwizzserial that has infected nearly 100,000 devices, primarily in Uzbekistan. The resulting financial losses are estimated to be at least $62,000 between March and June 2025.
+First
+discovered
+by Group-IB in March 2024, the malware is designed to harvest a list of installed financial apps, intercept two-factor authentication (2FA) SMS codes, and exfiltrate the details to the attackers via Telegram bots.
+Masquerading as legitimate banking apps and government services, Qwizzserial is mainly distributed in the form of APK files on bogus Telegram channels that claim to be government entities and officials. Simply put, the attacks abuse the trust users place in government services to trick them into installing the apps.
+Telegram is also central to the operation in that bots operated by the threat actors are used to automate the process of creating the malicious apps used for distribution. Other channels are devoted to internal group chats and making announcements related to the earnings made by different members.
+Once installed, the apps request users to grant it permission to access SMS messages and phone calls. The user is then prompted to enter two phone numbers and their bank card numbers along with the expiration date, after which the entered information is sent to the attackers via the Telegram bot API.
+As part of its SMS gathering step, Qwizzserial employs regular expression patterns to search for messages related to bank account balances and those that mention a sum exceeding 500,000 UZS ($39).
+Newer samples of the malware have also been found to ask users to disable battery optimization restrictions, thereby allowing it to run in the background without any intervention. Another change is that the collected data is transmitted to an external server by means of HTTP POST requests instead of directly sending it to the Telegram API.
+“SMS stealers pose a serious threat in Uzbekistan, as SMS remains a primary channel to interact with end users,” the Singaporean cybersecurity company said. “Local payment systems are reliant on SMS to deliver two-factor authentication (2FA) codes for confirmation.”
+It’s not just Qwizzserial. In recent months, mobile users in India have been
+targeted
+by fake wedding invites that propagate malware-laced APK files through WhatsApp and Telegram to ultimately deploy
+SpyMax RAT
+(aka SpyNote) or other spyware that can capture sensitive data from infected devices.
+Another campaign documented by Kaspersky entails the distribution of a new trojan named SparkKitty, which is capable of targeting both Android and iOS devices. The offending apps (币coin and SOEX) are no longer available for download from the respective app storefronts.
+Outside of Apple’s Apple Store, the malware is also embedded within modified TikTok clones that are hosted on phony websites mimicking app listing pages. To facilitate installation through this vector, the malware developers rely on a
+provisioning profile
+available via Apple’s Developer Program to deploy a certificate on victims’ iPhones and push the app without uploading them to the App Store.
+“While most versions of this malware indiscriminately steal all images, we discovered a related malicious activity cluster that uses OCR [optical character recognition] to pick specific pictures,” the Russian cybersecurity company
+said
+.
+SparkKitty, assessed to be active since at least February 2024, is believed to be a possible successor to
+SparkCat
+, which also employs OCR to detect specific images containing wallet recovery phrases.
+“Although we suspect the attackers’ main goal is to find screenshots of crypto wallet seed phrases, other sensitive data could also be present in the stolen images,” Kaspersky said. “Judging by the distribution sources, this spyware primarily targets users in Southeast Asia and China.”
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-40-malicious-firefox-extensions-target-cryptocurrency-wallets-stealing-user-assets"><a id="article-2"></a>Over 40 Malicious Firefox Extensions Target Cryptocurrency Wallets, Stealing User Assets</h2>
+
+<p>Cybersecurity researchers have uncovered over 40 malicious browser extensions for Mozilla Firefox that are designed to steal cryptocurrency wallet secrets, putting users’ digital assets at risk.
+“These extensions impersonate legitimate wallet tools from widely-used platforms such as Coinbase, MetaMask, Trust Wallet, Phantom, Exodus, OKX, Keplr, MyMonero, Bitget, Leap, Ethereum Wallet, and Filfox,” Koi Security researcher Yuval Ronen
+said
+.
+The large-scale campaign is said to have been ongoing since at least April 2025, with new extensions uploaded to the Firefox Add-ons store as recently as last week.
+The identified extensions have been found to artificially inflate their popularity, adding hundreds of 5-star reviews that go far beyond the total number of active installations. This strategy is employed to give them an illusion of authenticity, making it seem like they are widely adopted and tricking unsuspecting users into installing them.
+Another tactic adopted by the threat actor to bolster trust involves passing off these add-ons as legitimate wallet tools, using the same names and logos.
+The fact that some of the actual extensions were open-source allowed the attackers to clone their source code and inject their own malicious functionality to extract wallet keys and seed phrases from targeted websites and exfiltrate them to a remote server. The rogue extensions have also been found to transmit the victims’ external IP addresses.
+Unlike typical phishing scams that rely on fake websites or emails, these extensions operate inside the user’s browser—making them far harder to detect or block with traditional endpoint tools.
+“This low-effort, high-impact approach allowed the actor to maintain expected user experience while reducing the chances of immediate detection,” Ronen said.
+The presence of Russian language comments in the source code as well as metadata obtained from a PDF file retrieved from the command-and-control (C2) server used for the activity points to a Russian-speaking threat actor group.
+All the identified add-ons with the exception of MyMonero Wallet have since been taken down by Mozilla. Last month, the browser maker
+said
+it has developed an “early detection system” to detect and block scam crypto wallet extensions before they gain popularity among users and are used to steal users’ assets by tricking them into entering their credentials.
+To mitigate the risk posed by such threats, it’s advised to install extensions only from verified publishers and vet them to ensure that they don’t silently change their behavior post-installation.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-hidden-weaknesses-in-ai-soc-tools-that-no-one-talks-about"><a id="article-3"></a>The Hidden Weaknesses in AI SOC Tools that No One Talks About</h2>
+
+<p>If you’re evaluating AI-powered SOC platforms, you’ve likely seen bold claims: faster triage, smarter remediation, and less noise. But under the hood, not all AI is created equal. Many solutions rely on pre-trained AI models that are hardwired for a handful of specific use cases. While that might work for yesterday’s SOC, today’s reality is different.
+Modern security operations teams face a sprawling and ever-changing landscape of alerts. From cloud to endpoint, identity to OT, insider threats to phishing, network to DLP, and so many more, the list goes on and is continuously growing. CISOs and SOC managers are rightly skeptical. Can this AI actually handle all of my alerts, or is it just another rules engine in disguise?
+In this post, we’ll examine the divide between two types of AI SOC platforms. Those built on adaptive AI, which learns to triage and respond to any alert type, and those that rely on pre-trained AI, limited to handling predefined use cases only. Understanding this difference isn’t just academic; it’s the key to building a resilient SOC that is ready for the future.
+What is a pre-trained AI model?
+Pre-trained AI models in the SOC are typically developed by training machine learning algorithms on historical data from specific security use cases, such as phishing detection, endpoint malware alerts, and the like. Engineers curate large, labeled datasets and tune the models to recognize common patterns and remediation steps associated with those use cases. Once deployed, the model operates like a highly specialized assistant. When it encounters an alert type it was trained on, it can quickly classify the alert, assign a confidence score, and recommend the next action, often with impressive accuracy.
+This makes pre-trained AI particularly well-suited for high-volume, repeatable alert categories where the threat behavior is well-understood and relatively consistent over time. It can dramatically reduce triage times, surface clear remediation guidance, and eliminate redundant work by automating common security workflows. For organizations with predictable threat profiles, pre-trained models offer a fast track to operational efficiency, delivering value out-of-the-box without requiring deep customization.
+But do such organizations exist? If they do, they are certainly far and few in between, leading us to our next section. The limitations of pre-trained AI.
+Limitations of a pre-trained AI model for the SOC
+Despite their initial appeal, pre-trained AI models come with significant limitations, especially for organizations seeking broad and adaptable alert coverage. From a business standpoint, the most critical drawback is that pre-trained AI can only triage what it has been explicitly taught, similar to SOARs that can only execute actions based on pre-configured playbooks.
+This means that AI SOC vendors relying on the pre-trained approach must develop, test, and deploy new models for each individual use case, an inherently slow and resource-intensive process. As a result, their customers (i.e. SOC teams) are often left waiting for broader coverage of both existing and emerging alert types. This rigid development approach hinders agility and forces SOC teams to fall back on manual workflows for anything not covered.
+In fast-changing environments where security signals evolve constantly, pre-trained models struggle to keep pace, quickly becoming outdated or brittle. This can create blind spots, inconsistent triage quality, and increased analyst workload, which undermines the very efficiency gains the AI was meant to deliver.
+What is an adaptive AI model?
+In the context of SOC triage, adaptive AI represents a fundamental shift from the limitations of pre-trained models. Unlike static systems that can only respond to alerts they were trained on, adaptive AI is built to handle any alert, even one it has never seen before. When a new alert is ingested, adaptive AI doesn’t fail silently or defer to a human; instead, it actively researches the new alert. It begins by analyzing the alert’s structure, semantics, and context to determine what it represents and whether it poses a threat. This capability to research novel alerts in real-time (which is what experienced, higher-tier analysts do) is what allows adaptive AI to triage and respond across the entire spectrum of security signals without requiring prior training for each use case.
+This capability holds true both for alert types the adaptive AI has never seen before, as well as for new variations of threats (e.g. a new form of malware).
+Technically, adaptive AI uses semantic classification to assess how closely a new alert resembles previously seen alerts. If there’s a strong match, it can intelligently reuse an existing triage outline: a structured set of investigative questions and actions tailored to the alert’s characteristics. The AI performs a fresh analysis, which includes verifying the results of each step in the triage outline, assessing these results, identifying additional areas to investigate and finally compiling a conclusion.
+But when the alert is novel or unfamiliar, the system shifts into discovery mode. Here,
+research agents,
+just like senior SOC analysts, will search vendor docs, threat intelligence feeds, as well as reputable websites and forums. They then analyze all the information and compile a report that defines what the new alert represents, e.g. is it malware or some other threat type. With this, the agents dynamically construct a brand-new triage outline. These outlines are passed to
+triage agents
+, which execute the full triage process autonomously. This is possible because adaptive AI isn’t a monolithic model. Rather, it’s a coordinated system of dozens of specialized AI agents, each capable of performing a range of tasks. In complex cases, these agents may collectively perform over 150 inference jobs to fully triage a single alert, from data enrichment to threat validation to remediation planning.
+In contrast to pre-trained AI, where all research is front-loaded by human trainers and triage is constrained to static and potentially outdated knowledge, adaptive AI brings continuous learning and execution into the SOC with research agents leveraging up-to-date, online resources and threat intelligence. Once research agents have surfaced fresh insights, they immediately share them with triage agents to complete the triage process. This agent-to-agent collaboration makes the system both flexible and scalable, enabling security teams to confidently automate triage across their entire alert landscape without waiting for vendors to catch up with new use cases or attack patterns.
+Why multiple LLMs are better than one for SOC triage
+Using multiple large language models (LLMs) in the SOC isn’t just a technical decision—it’s a strategic advantage. Each LLM has its own strengths, whether it’s deep reasoning, concise summarization, code generation, or multilingual understanding. By orchestrating a set of complementary models, an adaptive AI platform assigns the right model to the right task, thereby ensuring more accurate, efficient, and context-aware triage. For example, one model might excel at analyzing structured security logs, another at understanding unstructured ticket narratives or phishing emails, while a third might be optimized for generating remediation scripts or querying cloud infrastructure.
+This multi-LLM architecture adds resilience and depth to the triage process. If one model struggles to understand or classify a novel alert, another might offer a better interpretation or route the issue through a different reasoning path. It also reduces single-model bias and error amplification, which are common risks in mono-model systems. Most importantly, it enables the platform to continuously improve by benchmarking model performance on real-world SOC tasks and dynamically switching between them based on quality, latency, or cost.
+In essence, the usage of multiple LLMs ensures the SOC gets the best of all worlds: speed, accuracy, flexibility, and robustness, tailored to the complexity and diversity of modern security environments. It’s a design choice rooted in real-world SOC needs, not AI hype.
+The business benefits of the adaptive AI model
+Adaptive AI delivers transformative value to both the SOC and the broader organization by removing the operational bottlenecks that have traditionally slowed security teams down. From a business perspective, it dramatically accelerates time-to-value by providing immediate triage coverage across all alert types, without waiting for vendor-led model development or manual tuning.
+Adaptive AI can handle all alert types and data sources
+This means faster detection, faster response, and greater resilience across evolving environments. On the security front, adaptive AI ensures that no alert, no matter how novel or obscure, slips through the cracks due to model limitations. It adapts to new data sources, attack techniques, and threat vectors as they emerge, closing blind spots and improving overall threat coverage.
+For human analysts, adaptive AI acts as a powerful force multiplier: it automates the investigative heavy lifting, eliminates alert fatigue, and surfaces high-context, high-confidence insights that allow analysts to focus on the most strategic and high-risk issues. The result is a more agile, efficient, and empowered SOC, one that can scale without compromising quality or coverage.
+Other essential features of AI SOC platforms
+In addition to an adaptive AI model that can triage any alert type, SOC teams need more to boost end-to-end SOC efficiency and productivity.
+Even after all the false positives have been automatically triaged and only real threats escalated to incidents, human analysts still need to come up with and execute response actions.
+Furthermore, Tier 3 analysts will frequently want to dig deeper into the underlying logs for threat hunting and forensics. To avoid the “swivel chair” effect, an adaptive AI SOC platform should also provide integrated response and logging capabilities as follows:
+Integrated response automation
+If an alert has been deemed malicious, the adaptive AI generates custom, recommended actions to remediate the threat. Human analysts can execute the recommended remediation in one click or do so manually with step-by-step guidance.
+Additionally, there is no need to configure or maintain any complex playbooks with the AI keeping the response action logic up-to-date and relevant for dynamic environments.
+Integrated logging at a fraction of what traditional SIEMs cost
+Built-in log management leveraging customer cloud archive storage and modern logging architecture provides rapid querying and visualizations, and the ability to drill down directly from alerts and incidents into the relevant log data.
+This approach eliminates vendor lock-in with unlimited storage and retention for a fraction of what traditional log management and SIEMs cost.
+Summary
+Not all AI SOC platforms are created equal. While pre-trained AI offers narrow, rules-bound automation for familiar alert types, it struggles to keep pace with today’s dynamic and unpredictable threat landscape. Adaptive AI, by contrast, delivers continuous learning, real-time investigation, and full-spectrum triage for any alert. Powered by multiple specialized LLMs and a coordinated system of research and triage agents, adaptive AI empowers security teams to focus on real threats with speed, flexibility, and confidence.
+To truly drive efficiency and scale, an AI SOC platform also needs integrated response automation and built-in log management, enabling analysts to quickly remediate threats and seamlessly drill into underlying log data without the overhead or cost associated with legacy SIEMs. With adaptive AI, organizations can finally break free from legacy limitations and operate a SOC that keeps pace with the real world.
+About Radiant’s adaptive AI SOC platform
+Radiant provides an adaptive AI SOC platform designed for enterprise security teams looking to fully address 100% of the alerts they receive from multiple tools and sensors. Triaging alerts from any security vendor or data source, Radiant ensures real threats are detected in minutes. With integrated response automation, MTTR is slashed from days to minutes, enabling analysts to focus on real incidents and proactive security.
+Additionally, Radiant’s integrated and ultra-affordable log management empowers SOC teams to access all relevant data for both forensic and compliance purposes, all without vendor lock-in and the high costs associated with traditional SIEM solutions.
+Schedule a demo
+with one of our friendly and knowledgeable product experts and see how Radiant can work for you!
+Found this article interesting?
+This article is a contributed piece from one of our valued partners.
+Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-hackers-exploit-ivanti-csa-zero-days-in-attacks-on-french-government-telecoms"><a id="article-4"></a>Chinese Hackers Exploit Ivanti CSA Zero-Days in Attacks on French Government, Telecoms</h2>
+
+<p>The French cybersecurity agency on Tuesday revealed that a number of entities spanning governmental, telecommunications, media, finance, and transport sectors in the country were impacted by a malicious campaign undertaken by a Chinese hacking group by weaponizing several zero-day vulnerabilities in Ivanti Cloud Services Appliance (CSA) devices.
+The campaign, detected at the beginning of September 2024, has been attributed to a distinct intrusion set codenamed
+Houken
+, which is assessed to share some level overlaps with a threat cluster tracked by Google Mandiant under the moniker UNC5174 (aka Uteus or Uetus).
+“While its operators use zero-day vulnerabilities and a sophisticated rootkit, they also leverage a wide number of open-source tools mostly crafted by Chinese-speaking developers,” the French National Agency for the Security of Information Systems (ANSSI)
+said
+. “Houken’s attack infrastructure is made up of diverse elements – including commercial VPNs and dedicated servers.”
+The agency theorized that Houken is likely being used by an initial access broker since 2023 with an aim to gain a foothold into target networks and then shared with other threat actors interested in carrying out follow-on post-exploitation activities, reflective of a multi-party approach to vulnerability exploitation, as pointed out by HarfangLab.
+“A first party identifies vulnerabilities, a second uses them at scale to create opportunities, then accesses are distributed to third parties which further attempt to develop targets of interest,” the French cybersecurity company
+noted
+earlier this February.
+“The operators behind the UNC5174 and Houken intrusion sets are likely primarily looking for valuable initial accesses to sell to a state-linked actor seeking insightful intelligence,” the agency added.
+In recent months,
+UNC5174
+has been linked to the active exploitation of SAP NetWeaver flaws to deliver GOREVERSE, a variant of GoReShell. The hacking crew has also leveraged vulnerabilities in Palo Alto Networks, Connectwise ScreenConnect, and F5 BIG-IP software in the past to deliver the SNOWLIGHT malware, which is then used to drop a Golang tunneling utility called GOHEAVY.
+Another report from SentinelOne
+attributed
+the threat actor to an intrusion against a “leading European media organization” in late September 2024.
+In the attacks documented by ANSSI, the attackers have been observed exploiting three security defects in Ivanti CSA devices,
+CVE-2024-8963
+,
+CVE-2024-9380
+, and
+CVE-2024-8190
+, as zero-days to obtain credentials and establish persistence using one of the three methods -
+Directly deploying PHP web shells
+Modifying existing PHP scripts to inject web shell capabilities, and
+Installing a kernel module that serves as a rootkit
+The attacks are characterized by the use of publicly available web shells like
+Behinder
+and
+neo-reGeorg
+, followed by the deployment of GOREVERSE to maintain persistence after lateral movements. Also employed is an
+HTTP proxy tunneling tool
+called
+suo5
+and a Linux kernel module named “sysinitd.ko” that was
+documented
+by Fortinet in October 2024 and January 2025.
+“It is composed of a kernel module (sysinitd.ko) and a user-space executable file (sysinitd) installed on the targeted device through the execution of a shell script: install.sh,” ANSSI said. “By hijacking inbound TCP traffic over all ports, and invoking shells, sysinitd.ko and sysinitd allow the remote execution of any command with root privileges.”
+That’s not all. Besides conducting reconnaissance and operating in the UTC+8 time zone (which corresponds to China Standard Time), the attackers have been observed attempting to patch the vulnerabilities, likely to prevent exploitation by other unrelated actors, ANSSI added.
+It’s suspected that the threat actors have a wide targeting range, comprising governmental and education sectors in Southeast Asia, non-governmental organizations located in China, including Hong Kong and Macau, and governmental, defence, education, media or telecommunication sectors in the West.
+On top of that, the tradecraft similarities between Houken and UNC5174 have raised the possibility that they are operated by a common threat actor. That having said, at least in one incident, the threat actors are said to have weaponized the access to deploy cryptocurrency miners, underscoring their financial motivations.
+“The threat actor behind the Houken and UNC5174 intrusion sets might correspond to a private entity, selling accesses and worthwhile data to several state-linked bodies while seeking its own interests leading lucrative oriented operations,” ANSSI said.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-cisco-vulnerability-in-unified-cm-grants-root-access-via-static-credentials"><a id="article-5"></a>Critical Cisco Vulnerability in Unified CM Grants Root Access via Static Credentials</h2>
+
+<p>Cisco has released security updates to address a maximum-severity security flaw in Unified Communications Manager (Unified CM) and Unified Communications Manager Session Management Edition (Unified CM SME) that could permit an attacker to login to a susceptible device as the root user, allowing them to gain elevated privileges.
+The vulnerability, tracked as
+CVE-2025-20309
+, carries a CVSS score of 10.0.
+“This vulnerability is due to the presence of static user credentials for the root account that are reserved for use during development,” Cisco
+said
+in an advisory released Wednesday.
+“An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and execute arbitrary commands as the root user.”
+Hard-coded credentials like this usually come from testing or quick fixes during development, but they should never make it into live systems. In tools like Unified CM that handle voice calls and communication across a company, root access can let attackers move deeper into the network, listen in on calls, or change how users log in.
+The networking equipment major said it found no evidence of the flaw being exploited in the wild, and that it was discovered during internal security testing.
+CVE-2025-20309 affects Unified CM and Unified CM SME versions 15.0.1.13010-1 through 15.0.1.13017-1, irrespective of device configuration.
+Cisco has also released indicators of compromise (IoCs) associated with the flaw, stating successful exploitation would result in a log entry to “/var/log/active/syslog/secure” for the root user with root permissions. The log can retrieved by running the below command from the command-line interface -
+cucm1# file get activelog syslog/secure
+The development comes merely days after the company
+fixed
+two security flaws in Identity Services Engine and ISE Passive Identity Connector (CVE-2025-20281 and CVE-2025-20282) that could permit an unauthenticated attacker to execute arbitrary commands as the root user.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-hidden-risks-of-saas-why-built-in-protections-arent-enough-for-modern-data-resilience"><a id="article-6"></a>The Hidden Risks of SaaS: Why Built-In Protections Aren’t Enough for Modern Data Resilience</h2>
+
+<p>SaaS Adoption is Skyrocketing, Resilience Hasn’t Kept Pace
+SaaS platforms have revolutionized how businesses operate. They simplify collaboration, accelerate deployment, and reduce the overhead of managing infrastructure. But with their rise comes a subtle, dangerous assumption: that the convenience of SaaS extends to resilience.
+It doesn’t.
+These platforms weren’t built with full-scale data protection in mind
+. Most follow a shared responsibility model — wherein the provider ensures uptime and application security, but the data inside is your responsibility. In a world of hybrid architectures, global teams, and relentless cyber threats, that responsibility is harder than ever to manage.
+Modern organizations are being stretched across:
+Hybrid and multi-cloud environments with decentralized data sprawl
+Complex integration layers between IaaS, SaaS, and legacy systems
+Expanding regulatory pressure with steeper penalties for noncompliance
+Escalating ransomware threats and insider risk
+Shrinking recovery windows and rising expectations for uptime
+Built-in protections were never meant to handle this level of complexity, and they rarely do. By the time you realize the gap, the damage is already done.
+Why Traditional Protection Falls Short
+Too many businesses still rely on outdated, fragmented, or overly simplistic backup strategies. They assume that cloud equals safe; or worse, that native features like recycle bins or version history are “good enough.” But most built-in tools are shallow by design. They prioritize collaboration and performance, not resilience.
+And while that’s great for getting work done, it’s not enough to keep your business running when the unexpected hits. Let’s break down the risks.</p>
+<ol>
+  <li>Human Error Is Ubiquitous
+Start with a question: What’s the most common reason for data loss in SaaS environments? Simple mistakes. Data loss goes beyond cyberthreats and natural disasters. Files are deleted, syncs are misconfigured, records are overwritten in bulk by well-meaning users, rushed decisions, or miscommunication. These are everyday mistakes caused by trusted employees whose intentions are aligned with yours.
+So, data risk is inherently part of owning data. But most SaaS platforms offer limited rollback options, and some don’t cover the specific types of data you actually lost. If you don’t catch the mistake in time, or if the data bypasses the recycle bin entirely, it’s gone; for many mistakes, recovery isn’t as simple as clicking “undo.”
+As organizations lean more heavily on SaaS tools for business-critical operations, the cost of these errors rises. One wrong deletion shouldn’t derail a product launch, delay an audit, or disrupt customer service. But without a recovery plan that goes deeper than native tools, that’s exactly what can happen.</li>
+  <li>Legal, Compliance, and Regulatory Risks
+Compliance is about proving you can find your data, restore it, and report on it quickly. In 2024, new regulations and smarter attackers raised the stakes even higher. Frameworks like GDPR, HIPAA, SOX, and NIS2 come with real teeth: heavy fines, operational disruption, and reputational damage.
+Now, organizations can’t afford to rely on good intentions. They need tools built for full accountability. Unfortunately, most native SaaS platforms don’t give you that level of control or visibility, meaning they don’t meet most regulatory requirements. Retention policies are too short, recovery options too limited, and auditing capabilities too shallow.
+Many industries require organizations to retain records for years, not weeks. Staying compliant (and staying in control) requires a real strategy and the right tools to back it up.</li>
+  <li>The True Cost of Data Loss
+For some large enterprises, the importance of compliance is understood, but not necessarily prioritized. But, importantly, understand that fines you pay for data loss or noncompliance are just the
+minimum, mandatory
+cost
+. Even for the largest organizations with the heaviest checkbooks, downtime hits hard.
+Data loss rarely stays in the IT department. Amid a crisis or serious incident, teams are pulled away from critical projects. Customers grow frustrated with lack of service. Revenue takes a hit as your business simply cannot continue operations. And beyond it all, trust with investors, partners, or the public begins to erode.
+Too often, businesses treat data loss as hypothetical. But this landslide can start with a single missing file, record, or user. Ask any team that’s been through it, and you’ll hear, “once is enough.” Whether it was ransomware, accidental deletion, or a failed recovery, the damage is rarely isolated, and the true costs are never foreseen.</li>
+  <li>Internal Threats
+Internal threats are some of the most underestimated risks out there, and some of the most damaging. Employees, contractors, and vendors with access to sensitive systems can expose data, whether by mistake or on purpose. With teams spread out and systems more open than ever, oversight is tougher, and internal threats can slip past traditional defenses. These aren’t headline-making attacks from the outside, but rather quiet breaches from within. By the time you catch them, critical data may already be gone.
+Whether malicious or accidental, insider threats are one of the most underestimated risks in SaaS. With teams working across locations, systems, and devices, visibility is limited — and oversight is tougher than ever.
+Access mismanagement, privilege creep, and poor Role-Based Access Control (RBAC) hygiene can expose sensitive data in ways external actors never could. Most SaaS platforms weren’t built to detect or respond to these kinds of quiet, internal failures.</li>
+  <li>Cyberthreats Are Evolving Faster Than Defense
+Today’s attacks steal data, corrupt environments, and pressure businesses through multi-phase extortion. Groups like Akira have shown how easily attackers can pivot into SaaS environments, exploiting token misconfigurations and shared credentials,
+leading the charge on ransomware for 18 consecutive months
+. If something as quiet, indiscriminate, and devastating as Akira is ransomware’s most common form, it’s impossible to foresee the true danger of cyberthreats in coming years.
+What we do know is that, in 2024, the average ransom payment exceeded half a million dollars, and targeted organizations of every size, type, and industry. Even when data isn’t encrypted directly, business operations still grind to a halt. And in a multi-cloud world, one compromised app can cascade across others.
+SaaS providers aren’t built to defend your business against these threats. They’ll keep the lights on. They won’t get your data back.</li>
+  <li>
+    <dl>
+      <dt>Recovery Speed Defines Success</dt>
+      <dt>Disruptions come in many forms — ransomware, outages, natural disasters — and when they hit, the clock starts ticking. Most teams aren’t set up to recover quickly enough. According to Gartner, ransomware recovery often drags on for weeks. Downtime cuts into revenue, frustrates customers, and drains internal resources. In sectors like healthcare, finance, and government, where every minute counts, the cost can escalate fast.</dt>
+      <dt>Customers expect availability. When systems go dark, patience wears thin, and brand trust takes a hit. But in many organizations, recovery is still manual, clunky, or all-or-nothing. You’re forced to choose between waiting hours to restore everything — or giving up on what’s lost.</dt>
+      <dt>The Lesson is Clear</dt>
+      <dt>The shift to SaaS has reshaped how organizations approach data management, revealing crucial lessons about efficiency, agility, and resource optimization. Modern businesses have the potential to thrive when they adopt a SaaS data solution, which remains the clear, strategic choice for future-ready IT operations. But as we’ve seen, the bar is set high.</dt>
+      <dt>What Modern SaaS Data Resilience Looks Like</dt>
+      <dt>SaaS applications are incredibly powerful — but they also introduce real risk to your data. Protecting that data isn’t easy, but it’s essential. Doing it right means having the ability to:</dt>
+      <dt>Restore data quickly and precisely — even down to a single object or record</dt>
+      <dt>Run automated, policy-driven backups without constant oversight</dt>
+      <dt>Build in security from the start with features like immutability, encryption, and RBAC</dt>
+      <dt>Align retention policies with your compliance obligations</dt>
+      <dt>Manage everything — SaaS, IaaS, hybrid — from a single, unified interface</dt>
+      <dt>It’s a long list. And a complex one. But modern resilience isn’t just a checklist — it’s a mindset. And it demands a platform built to keep up. For everything you need to know, read this e-book:</dt>
+      <dt>6 Essential Traits of Modern SaaS Data Resilience</dt>
+      <dt>SaaS Data Resilience with Veeam Data Cloud</dt>
+      <dt>Protecting your data shouldn’t be complicated. With</dt>
+      <dt>Veeam Data Cloud</dt>
+      <dt>, you’re empowered by a unified cloud platform, integrating industry-leading innovation, modern cloud-native technologies, and powerful AI acceleration to secure, protect, and manage your data wherever it resides.</dt>
+      <dt>Realize True Resilience</dt>
+      <dd>Ensure uninterrupted business operations through intelligent automation, policy-driven protection, and precise, rapid recoveries.
+Embed Security at Every Level</dd>
+      <dd>Safeguard your sensitive data proactively with integrated Zero Trust architecture, robust encryption, immutability, and intelligent threat detection.
+Drive Operational Excellence</dd>
+      <dd>Streamline operations, significantly reduce total cost of ownership (TCO), and boost efficiency with an intuitive, AI-accelerated interface.
+Don’t wait for disruption to test your readiness. Choose
+Veeam Data Cloud
+and confidently embrace a future where your data resilience strategy actively drives efficiency, compliance, and business continuity.
+Found this article interesting?
+This article is a contributed piece from one of our valued partners.
+Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</dd>
+    </dl>
+  </li>
+</ol>
+
+<h2 id="north-korean-hackers-target-web3-with-nim-malware-and-use-clickfix-in-babyshark-campaign"><a id="article-7"></a>North Korean Hackers Target Web3 with Nim Malware and Use ClickFix in BabyShark Campaign</h2>
+
+<p>Threat actors with ties to North Korea have been observed targeting Web3 and cryptocurrency-related businesses with malware written in the Nim programming language, underscoring a constant evolution of their tactics.
+“Unusually for macOS malware, the threat actors employ a process injection technique and remote communications via wss, the TLS-encrypted version of the WebSocket protocol,” SentinelOne researchers Phil Stokes and Raffaele Sabato
+said
+in a report shared with The Hacker News.
+“A novel persistence mechanism takes advantage of SIGINT/SIGTERM signal handlers to install persistence when the malware is terminated or the system rebooted.”
+The cybersecurity company is tracking the malware components collectively under the name NimDoor. It’s worth noting that some aspects of the campaign were previously documented by
+Huntabil.IT
+and later by
+Huntress
+and
+Validin
+, but with differences in the payloads deployed.
+The attack chains involve social engineering tactics, approaching targets on messaging platforms like Telegram to schedule a Zoom meeting via Calendly, an appointment scheduling software. The target is then sent an email containing a supposed Zoom meeting link along with instructions to run a Zoom SDK update script to ensure that they are running the latest version of the videoconferencing software.
+This step results in the execution of an AppleScript that acts as a delivery vehicle for a second-stage script from a remote server, while ostensibly redirecting the user to a legitimate Zoom redirect link. The newly downloaded script subsequently unpacks ZIP archives containing binaries that are responsible for setting up persistence and launching information stealing bash scripts.
+At the heart of the infection sequence is a C++ loader called InjectWithDyldArm64 (aka InjectWithDyld), which decrypts two embedded binaries named Target and trojan1_arm64. InjectWithDyldArm64 launches Target in a suspended state and injects into it the trojan1_arm64’s binary’s code, after which the execution of the suspended process is resumed.
+The malware proceeds to establish communication with a remote server and fetch commands that allow it to gather system information, run arbitrary commands, and change or set the current working directory. The results of the execution are sent back to the server.
+Trojan1_arm64, for its part, is capable of downloading two more payloads, which come fitted with capabilities to harvest credentials from web browsers like Arc, Brave, Google Chrome, Microsoft Edge, and Mozilla Firefox, as well as extract data from the Telegram application.
+Also dropped as part of the attacks is a collection of Nim-based executable that are used as a launchpad for CoreKitAgent, which monitors for user attempts to kill the malware process and ensures persistence by installing custom handlers for SIGINT and SIGTERM.
+“This behavior ensures that any user-initiated termination of the malware results in the deployment of the core components, making the code resilient to basic defensive actions,” the researchers said.
+The malware also launches an AppleScript that beacons out every 30 seconds to one of two hard-coded command-and-control (C2) servers, while also exfiltrating a snapshot of the list of running processes and executing additional scripts sent by the server.
+The findings demonstrate how North Korean threat actors are increasingly training their sights on macOS systems, weaponizing AppleScript to act as a post-exploitation backdoor to meet their data gathering goals.
+“North Korean-aligned threat actors have previously experimented with Go and Rust, similarly combining scripts and compiled binaries into multi-stage attack chains,” the researchers said.
+“However, Nim’s rather unique ability to execute functions during compile time allows attackers to blend complex behaviour into a binary with less obvious control flow, resulting in compiled binaries in which developer code and Nim runtime code are intermingled even at the function level.”
+Kimsuky’s Use of ClickFix Continues
+The disclosure comes as South Korean cybersecurity company Genians
+exposed
+Kimusky’s continued use of the
+ClickFix social engineering tactic
+to deliver a variety of remote access tools as part of a campaign dubbed
+BabyShark
+, a known cluster of activity attributed to the North Korean hacking group.
+The attacks, first observed in January 2025 and targeting national security experts in South Korea, involve the use of spear-phishing emails masquerading as interview requests for a legitimate German-language business newspaper and trick them into opening a malicious link containing a bogus RAR archive.
+Present within the archive is a Visual Basic Script (VBS) file that’s engineered to open a decoy Google Docs file in the user’s web browser, while, in the background, malicious code is executed to establish persistence on the host via scheduled tasks and harvest system information.
+Subsequent attacks observed in March 2025 have impersonated a senior U.S. national security official to deceive targets into opening a PDF attachment that included a list of questions related to a meeting during the official’s purported visit to South Korea.
+“They also tried to trick the target into opening a manual and entering an authentication code, supposedly required to access a secure document,” Genians said. “While the original ‘ClickFix’ tactic tricked users into clicking to fix a specific error, this variant modified the approach by prompting users to copy and paste an authentication code to access a secure document.”
+A similar tactic was
+documented
+by Proofpoint in April 2025, the difference being that the email message claimed to originate from a Japanese diplomat and urged the recipient to set up a meeting with the Japanese ambassador to the United States.
+Once the obfuscated malicious PowerShell command is executed, a decoy Google Docs file is used as a distraction to conceal the execution of malicious code that establishes persistent communication with a C2 server to collect data and deliver additional payloads.
+A second variant of the ClickFix strategy entails using a fake website mimicking a legitimate defense research job portal and populating it with bogus listings, causing site visitors who click on these postings to be served with a ClickFix-style pop-up message to open the Windows Run dialog and run a PowerShell command.
+The command, for its part, guided users to download and install the Chrome Remote Desktop software on their systems, enabling remote control over SSH via the C2 server “kida.plusdocs.kro[.]kr.” Genians said it discovered a directory listing vulnerability in the C2 server that publicly exposed data likely collected from victims located across South Korea.
+The C2 server also included an IP address from China, which has been found to contain a keylogging record for a Proton Drive link hosting a ZIP archive that’s used to drop BabyShark malware on the infected Windows host by means of a multi-stage attack chain.
+As recently as last month, Kimsuky is believed to have concocted yet another variant of ClickFix in which the threat actors deploy phony Naver CAPTCHA verification pages to copy and paste PowerShell commands into the Windows Run dialog that launches an AutoIt script to siphon user information.
+“The ‘BabyShark’ campaign is known for its swift adoption of new attack techniques, often integrating them with script-based mechanisms,” the company said. “The ‘ClickFix’ tactic discussed in this report appears to be another case of publicly available methods being adapted for malicious use.”
+In recent weeks, Kimsuky has also been linked to email phishing campaigns that seemingly originate from academic institutions, but distribute malware under the pretext of reviewing a research paper.
+“The email prompted the recipient to open a HWP document file with a malicious OLE object attachment,” AhnLab
+said
+. “The document was password-protected, and the recipient had to enter the password provided in the email body to view the document.”
+Opening the weaponized document activates the infection process, leading to the execution of a PowerShell script that performs extensive system reconnaissance and the deployment of the legitimate AnyDesk software for persistent remote access.
+The prolific threat actor that Kimsuky is, the group is in a constant state of flux regarding its tools, tactics, and techniques for malware delivery, with some of the cyber attacks also leveraging GitHub as a stager for propagating an open-source trojan called
+Xeno RAT
+.
+“The malware accesses the attacker’s private repositories using a hard-coded Github Personal Access Token (PAT),” ENKI WhiteHat
+said
+. “This token was used to download malware from a private repository and upload information collected from victim systems.”
+According to the South Korean cybersecurity vendor, the attacks begin with spear-phishing emails with compressed archive attachments containing a Windows shortcut (LNK) file, which, in turn, is likely used to drop a PowerShell script that then downloads and launches the decoy document, as well as executes Xeno RAT and a PowerShell information stealer.
+Other attack sequences have been found to utilize a PowerShell-based downloader that fetches a file with an RTF extension from Dropbox to ultimately launch Xeno RAT. The campaign shares infrastructure overlaps with another set of attacks that delivered a variant of Xeno RAT known as
+MoonPeak
+.
+“The attacker managed not only the malware used in attacks but also uploaded and maintained infected system log files and exfiltrated information in private repositories using GitHub Personal Access Tokens (PATs),” ENKI noted. “This ongoing activity highlights the persistent and evolving nature of Kimsuky’s operations, including their use of both GitHub and Dropbox as part of their infrastructure.”
+Kimsuky, per
+data
+from NSFOCUS, has been one of the most active threat groups from Korea, alongside
+Konni
+, accounting for 5% of all the 44 advanced persistent threat (APT) activities recorded by the Chinese cybersecurity company in May 2025. In
+comparison
+, the top three most active APT groups in April were Kimsuky,
+Sidewinder
+, and Konni.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="that-network-traffic-looks-legit-but-it-could-be-hiding-a-serious-threat"><a id="article-8"></a>That Network Traffic Looks Legit, But it Could be Hiding a Serious Threat</h2>
+
+<p>With nearly 80% of cyber threats now mimicking legitimate user behavior, how are top SOCs determining what’s legitimate traffic and what is potentially dangerous?
+Where do you turn when firewalls and endpoint detection and response (EDR) fall short at detecting the most important threats to your organization? Breaches at edge devices and VPN gateways have risen from 3% to 22%, according to Verizon’s latest Data Breach Investigations report. EDR solutions are struggling to catch zero-day exploits, living-off-the-land techniques, and malware-free attacks. Nearly 80% of detected threats use malware-free techniques that mimic normal user behavior, as highlighted in CrowdStrike’s 2025 Global Threat Report. The stark reality is that conventional detection methods are no longer sufficient as threat actors adapt their strategies, using clever techniques like credential theft or DLL hijacking to avoid discovery.
+In response, security operations centers (SOCs) are turning to a
+multi-layered detection
+approach that uses network data to expose activity adversaries can’t conceal.
+Technologies like network detection and response (NDR) are being adopted to provide visibility that complements EDR by exposing behaviors that are more likely to be missed by endpoint-based solutions. Unlike EDR, NDR operates without agent deployment, so it effectively identifies threats that use common techniques and legitimate tools maliciously. The bottom line is evasive techniques that work against edge devices and EDR are less likely to succeed when NDR is also on the lookout.
+Layering up: The faster threat detection strategy
+Much like layering for unpredictable weather, elite SOCs boost resilience through a multi-layered detection strategy centered on network insights. By consolidating detections into a single system, NDR streamlines management and empowers teams to focus on high-priority risks and use cases.
+Teams can adapt quickly to evolving attack conditions, detect threats faster, and minimize damage. Now, let’s gear up and take a closer look at the layers that make up this dynamic stack:
+THE BASE LAYER
+Lightweight and quick to apply, these easily catch known threats to form the basis for defense:
+Signature-based network detection
+serves as the first layer of protection due to its lightweight nature and quick response times. Industry-leading signatures, such as those from Proofpoint ET Pro running on Suricata engines, can rapidly identify known threats and attack patterns.
+Threat intelligence
+,
+often composed of indicators of compromise (IOCs), looks for known network entities (e.g., IP addresses, domain names, hashes) observed in actual attacks. As with signatures, IOCs are easy to share, light-weight, and quick to deploy, offering quicker detection.
+THE MALWARE LAYER
+Think of
+malware detection
+as a waterproof barrier, protecting against “drops” of malware payloads by identifying malware families. Detections such as YARA rules — a standard for static file analysis in the malware analysis community — can identify malware families sharing common code structures. It’s crucial for detecting polymorphic malware that alters its signature while retaining core behavioral characteristics.
+THE ADAPTIVE LAYER
+Built to weather evolving conditions, the most sophisticated layers use behavioral detection and machine learning algorithms that identify known, unknown, and evasive threats:
+Behavioral detection
+identifies dangerous activities like domain generation algorithms (DGAs), command and control communications, and unusual data exfiltration patterns. It remains effective even when attackers change their IOCs (or even components of the attack), since the underlying behaviors don’t change, enabling quicker detection of unknown threats.
+ML
+models, both supervised and unsupervised, can detect both known attack patterns and anomalous behaviors that might indicate novel threats. They can target attacks that span greater lengths of time and complexity than behavioral detections.
+Anomaly detection
+uses unsupervised machine learning to spot deviations from baseline network behavior. This alerts SOCs to anomalies like unexpected services, unusual client software, suspicious logins, and malicious management traffic. It helps organizations uncover threats hiding in normal network activity and minimize attacker dwell time.
+THE QUERY LAYER
+Finally, in some situations, there is simply no faster way to generate an alert than to query the existing network data.
+Search-based detection
+—
+log search queries that generate alerts and detections — functions like a snap-on layer that’s at the ready for short-term, rapid response.
+Unifying threat detection layers with NDR
+The true strength in multi-layered detections is how they work together. Top SOCs are deploying Network Detection and Response (NDR) to provide a unified view of threats across the network. NDR correlates detections from multiple engines to deliver a complete threat view, centralized network visibility, and the context that powers real-time incident response.
+Beyond layered detections,
+advanced NDR solutions
+can also offer several key advantages that enhance overall threat response capabilities:
+Detecting emerging attack vectors and novel techniques that haven’t yet been incorporated into traditional EDR signature-based detection systems.
+Reducing false positive rates by ~25%, according to a 2022 FireEye report
+Cutting incident response times with AI-driven triage and automated workflows
+Comprehensive coverage of MITRE ATT&amp;CK network-based tools, techniques and procedures (TTPs)
+Leveraging shared intelligence and community-driven detections (open-source solutions)
+The path forward for modern SOCs
+The combination of increasingly sophisticated attacks, expanding attack surfaces, and added resource constraints requires a shift toward multi-layered detection strategies. In an environment where attacks succeed in seconds, the window for maintaining effective cybersecurity without an NDR solution is rapidly closing.
+Elite SOC teams get this
+and have already layered up. The question isn’t whether to implement multi-layered detection, it’s how quickly organizations can make this transition.
+Corelight Network Detection and Response
+Corelight’s integrated Open NDR Platform combines all seven of the network detection types mentioned above and is built on a foundation of open-source software like Zeek®, allowing you to tap into the power of community-driven detection intelligence. For more information:
+Corelight
+.
+Found this article interesting?
+This article is a contributed piece from one of our valued partners.
+Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-using-pdfs-to-impersonate-microsoft-docusign-and-more-in-callback-phishing-campaigns"><a id="article-9"></a>Hackers Using PDFs to Impersonate Microsoft, DocuSign, and More in Callback Phishing Campaigns</h2>
+
+<p>Cybersecurity researchers are calling attention to phishing campaigns that impersonate popular brands and trick targets into calling phone numbers operated by threat actors.
+“A significant portion of email threats with PDF payloads persuade victims to call adversary-controlled phone numbers, displaying another popular social engineering technique known as Telephone-Oriented Attack Delivery (TOAD), also known as callback phishing,” Cisco Talos researcher Omid Mirzaei
+said
+in a report shared with The Hacker News.
+An analysis of phishing emails with PDF attachments between May 5 and June 5, 2025, has revealed Microsoft and Docusign to be the most impersonated brands. NortonLifeLock, PayPal, and Geek Squad are among the most impersonated brands in TOAD emails with PDF attachments.
+The activity is part of wider phishing attacks that attempt to leverage the trust people have with popular brands to initiate malicious actions. These messages typically incorporate PDF attachments featuring legitimate brands like Adobe and Microsoft to scan malicious QR codes that point to fake Microsoft login pages or click on links that redirect users to phishing pages posing as services like Dropbox.
+QR code phishing emails with PDF payloads have also been found to leverage PDF annotations to embed the URLs within a sticky note, comment, or form fields within a PDF attachment, while linking the QR codes to an authentic web page to give the impression that the messages are trustworthy.
+In TOAD-based attacks, victims are coaxed into calling a phone number in a purported attempt to resolve an issue or confirm a transaction. During the phone call, the attacker masquerades as a legitimate customer representative and tricks the victim into either disclosing sensitive information or installing malware on their devices.
+Most TOAD campaigns rely on the illusion of urgency, but their effectiveness often hinges on how convincingly attackers imitate real support workflows – using scripted call center tactics, hold music, and even spoofed caller IDs.
+This technique has been a
+popular method
+among
+threat actors
+to install banking trojans on Android devices and remote access programs on victim machines to gain persistent access. In May 2025, the U.S. Federal Bureau of Investigation (FBI) warned of such attacks perpetrated by a financially motivated group called Luna Moth to breach target networks by posing as IT department personnel.
+“Attackers use direct voice communication to exploit the victim’s trust in phone calls and the perception that phone communication is a secure way to interact with an organization,” Mirzaei said. “Additionally, the live interaction during a phone call enables attackers to manipulate the victim’s emotions and responses by employing social engineering tactics.”
+Cisco Talos said most threat actors use Voice over Internet Protocol (VoIP) numbers to remain anonymous and make it harder to trace, with some numbers reused consecutively for as many as four days, allowing the attackers to pull off multi-stage social engineering attacks using the same number.
+“Brand impersonation is one of the most
+popular social engineering techniques
+, and it is continuously being used by attackers in different types of email threats,” the company said. “Therefore, a brand impersonation detection engine plays a pivotal role in defending against cyber attacks.”
+In recent months, phishing campaigns have also capitalized on a legitimate feature in Microsoft 365 (M365) called
+Direct Send
+to spoof internal users and deliver phishing emails without the need for compromising an account. The novel method has been employed to target more than 70 organizations since May 2025, per Varonis.
+These spoofed messages not only seem to originate from inside the victim organization, they also take advantage of the fact that
+smart host addresses
+follow a predictable pattern (“<tenant_name>.mail.protection.outlook.com") to send the phishing emails without requiring authentication.
+This tactic shares similarities with vishing, tech support scams, and business email compromise (BEC), but differs in delivery vector and persistence. While some attackers push victims to download remote access software like AnyDesk or TeamViewer, others route them through fake payment portals or impersonate billing departments to harvest credit card information, broadening the attack surface beyond just credential theft.
+In one phishing email sent on June 17, 2025, the message body resembled a voicemail notification and included a PDF attachment that contained a QR code directing the recipients to a Microsoft 365 credentials harvesting page.
+"In many of their initial access attempts, the threat actor utilized M365 Direct Send functionality to target an individual organization with phishing messages that were subject to less scrutiny compared to standard inbound email," security researcher Tom Barnea
+said
+. "This simplicity makes Direct Send an attractive and low-effort vector for phishing campaigns."
+The disclosure comes as new research from Netcraft found that asking large language models (LLMs) where to log in to 50 different brands across various sectors like finance, retail, tech, and utilities suggested unrelated hostnames as responses that were not owned by the brands in the first place.
+"Two-thirds of the time, the model returned the correct URL," the company
+said
+. "But in the remaining third, the results broke down like this: nearly 30% of the domains were unregistered, parked, or otherwise inactive, leaving them open to takeover. Another 5% pointed users to completely unrelated businesses."
+This also means that users could be likely sent to a fake website just by asking an artificial intelligence (AI) chatbot where to sign in, opening the door for brand impersonation and phishing attacks when threat actors claim control of these unregistered or unrelated domains.
+With
+threat actors
+already
+using
+AI-powered tools to
+create phishing pages
+at scale, the latest development marks a new twist where cybercriminals are looking to game an LLM's response by surfacing malicious URLs as responses to queries.
+Netcraft said it has also observed attempts to poison AI coding assistants like Cursor by publishing fake APIs to GitHub that harbor functionality to route transactions on the Solana blockchain to an attacker-controlled wallet.
+"The attacker didn't just publish the code," security researcher Bilaal Rashid said. "They launched blog tutorials, forum Q&amp;As, and dozens of GitHub repos to promote it. Multiple fake GitHub accounts shared a project called Moonshot-Volume-Bot, seeded across accounts with rich bios, profile images, social media accounts and credible coding activity. These weren't throwaway accounts – they were crafted to be indexed by AI training pipelines."
+The developments also follow concerted efforts on the part of threat actors to inject reputed websites (e.g., .gov or .edu domains) with JavaScript or HTML designed to influence search engines into prioritizing phishing sites in search results. This is accomplished by an illicit marketplace called Hacklink.
+The service "enables cybercriminals to purchase access to thousands of compromised websites and inject malicious code designed to manipulate search engine algorithms," security researcher Andrew Sebborn
+said
+. "Scammers use Hacklink control panels to insert links to phishing or illicit websites into the source code of legitimate but compromised domains."
+These outbound links are associated with specific keywords so that the hacked websites are served in search results when users search for relevant terms. To make matters worse, the actors can alter the text that appears in the search result to match their needs without having to take control of the site in question, impacting brand integrity and user trust.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</tenant_name></p>
+
+<h2 id="us-sanctions-russian-bulletproof-hosting-provider-for-supporting-cybercriminals-behind-ransomware"><a id="article-10"></a>U.S. Sanctions Russian Bulletproof Hosting Provider for Supporting Cybercriminals Behind Ransomware</h2>
+
+<p>The U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC) has levied sanctions against Russia-based bulletproof hosting (BPH) service provider Aeza Group to assist threat actors in their malicious activities and targeting victims in the country and across the world.
+The sanctions also extend to its subsidiaries Aeza International Ltd., the U.K. branch of Aeza Group, as well as Aeza Logistic LLC, Cloud Solutions LLC, and four individuals linked to the company -
+Arsenii Aleksandrovich Penzev, CEO and 33% owner of Aeza Group
+Yurii Meruzhanovich Bozoyan, general director and 33% owner of Aeza Group
+Vladimir Vyacheslavovich Gast, technical director who works closely with Penzev and Bozoyan
+Igor Anatolyevich Knyazev, 33% owner of Aeza Group who manages the operations in the absence of Penzev and Bozoyan
+It’s worth noting that Penzev was
+arrested
+in
+early April 2025
+on charges of leading a criminal organization and enabling large-scale drug trafficking by hosting
+BlackSprut
+, an illicit drugs marketplace on the dark web. Bozoyan and two other Aeza employees, Maxim Orel and Tatyana Zubova, were also detained.
+“Cybercriminals continue to rely heavily on BPH service providers like Aeza Group to facilitate disruptive ransomware attacks, steal U.S. technology, and sell black-market drugs,”
+said
+Acting Under Secretary of the Treasury for Terrorism and Financial Intelligence Bradley T. Smith.
+“Treasury, in close coordination with the U.K. and our other international partners, remains resolved to expose the critical nodes, infrastructure, and individuals that underpin this criminal ecosystem.”
+BPH services have been
+godsend
+for
+threat actors
+as they are known to deliberately ignore abuse reports and law enforcement takedown requests, often operating in countries with weak enforcement or intentionally vague legal standards. This makes them a resilient option for attackers to host their malicious infrastructure, including phishing sites and command-and-control (C2) servers, without disruption or consequences.
+Headquartered in St. Petersburg, Aeza Group is accused of leasing its services to various ransomware and information stealer families, such as BianLian, RedLine, Meduza, and Lumma, some of which have been used to target U.S. defense industrial base and technology companies and other victims worldwide.
+What’s more, a report published by Correctiv and Qurium last July detailed the use of Aeza’s infrastructure by the
+pro-Russian influence operation
+dubbed
+Doppelganger
+. Another threat actor that has availed the services of Aeza is
+Void Rabisu
+, the Russia-aligned threat actor behind RomCom RAT.
+According to Chainalysis, a TRON cryptocurrency address associated with Aeza Group has received more than $350,000 in crypto and cashed out at various deposit addresses at different exchanges. These deposit addresses have also received funds from a darknet vendor peddling a stealer malware, Garantex, and an escrow service used for selling items on a popular gaming platform.
+“The designated address appears to function as an administrative wallet, handling cash-outs from the payment processor, forwarding funds to various exchanges, and occasionally receiving direct payments for Aeza’s services,” the company
+said
+.
+The development comes nearly five months after the Treasury
+sanctioned
+another Russia-based BPH service provider named Zservers for facilitating ransomware attacks, such as those orchestrated by the LockBit group.
+Last week, Qurium also
+linked
+a Russian web hosting and proxy provider named Biterika to distributed denial-of-service (
+DDoS
+) attacks against two Russian independent media outlets IStories and Verstka.
+These sanctions form part of a broader effort to dismantle the ransomware supply chain by targeting critical enablers like malicious hosting, C2 servers, and dark web infrastructure. As threat actors shift tactics, monitoring sanctioned entities, IP reputation scores, and abuse-resilient networks is becoming central to modern threat intelligence operations.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="vercels-v0-ai-tool-weaponized-by-cybercriminals-to-rapidly-create-fake-login-pages-at-scale"><a id="article-11"></a>Vercel’s v0 AI Tool Weaponized by Cybercriminals to Rapidly Create Fake Login Pages at Scale</h2>
+
+<p>Unknown threat actors have been observed weaponizing
+v0
+, a generative artificial intelligence (AI) tool from Vercel, to design fake sign-in pages that impersonate their legitimate counterparts.
+“This observation signals a new evolution in the weaponization of Generative AI by threat actors who have demonstrated an ability to generate a functional phishing site from simple text prompts,” Okta Threat Intelligence researchers Houssem Eddine Bordjiba and Paula De la Hoz
+said
+.
+v0 is an
+AI-powered offering
+from Vercel that allows users to create
+basic landing pages
+and
+full-stack apps
+using natural language prompts.
+The identity services provider said it has observed scammers using the technology to develop convincing replicas of login pages associated with multiple brands, including an unnamed customer of its own. Following responsible disclosure, Vercel has blocked access to these phishing sites.
+The threat actors behind the campaign have also been found to host other resources such as the impersonated company logos on Vercel’s infrastructure, likely in an effort to abuse the trust associated with the developer platform and evade detection.
+Unlike traditional
+phishing kits
+that require some amount of effort to set, tools like v0 — and its open-source clones on GitHub — allows attackers spin up fake pages just by typing a prompt. It’s faster, easier, and doesn’t require coding skills. This makes it simple for even low-skilled threat actors to build convincing phishing sites at scale.
+“The observed activity confirms that today’s threat actors are actively experimenting with and weaponizing leading GenAI tools to streamline and enhance their phishing capabilities,” the researchers said.
+“The use of a platform like Vercel’s v0.dev allows emerging threat actors to rapidly produce high-quality, deceptive phishing pages, increasing the speed and scale of their operations.”
+The development comes as bad actors continue to leverage large language models (LLMs) to aid in their criminal activities, building uncensored versions of these models that are explicitly designed for illicit purposes. One such LLM that has gained popularity in the cybercrime landscape is
+WhiteRabbitNeo
+, which advertises itself as an “Uncensored AI model for (Dev) SecOps teams.”
+“Cybercriminals are increasingly gravitating towards uncensored LLMs, cybercriminal-designed LLMs, and jailbreaking legitimate LLMs,” Cisco Talos researcher Jaeson Schultz
+said
+.
+“Uncensored LLMs are unaligned models that operate without the constraints of guardrails. These systems happily generate sensitive, controversial, or potentially harmful output in response to user prompts. As a result, uncensored LLMs are perfectly suited for cybercriminal usage.”
+This fits a bigger shift we’re seeing: Phishing is being powered by AI in more ways than before. Fake emails, cloned voices, even deepfake videos are showing up in social engineering attacks. These tools help attackers scale up fast, turning small scams into large, automated campaigns. It’s no longer just about tricking users—it’s about building whole systems of deception.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-vulnerability-in-anthropics-mcp-exposes-developer-machines-to-remote-exploits"><a id="article-12"></a>Critical Vulnerability in Anthropic’s MCP Exposes Developer Machines to Remote Exploits</h2>
+
+<p>Cybersecurity researchers have discovered a critical security vulnerability in artificial intelligence (AI) company Anthropic’s Model Context Protocol (
+MCP
+) Inspector project that could result in remote code execution (RCE) and allow an attacker to gain complete access to the hosts.
+The vulnerability, tracked as
+CVE-2025-49596
+, carries a CVSS score of 9.4 out of a maximum of 10.0.
+“This is one of the first critical RCEs in Anthropic’s MCP ecosystem, exposing a new class of browser-based attacks against AI developer tools,” Oligo Security’s Avi Lumelsky
+said
+in a report published last week.
+“With code execution on a developer’s machine, attackers can steal data, install backdoors, and move laterally across networks - highlighting serious risks for AI teams, open-source projects, and enterprise adopters relying on MCP.”
+MCP, introduced by Anthropic in November 2024, is an open protocol that standardizes the way large language model (LLM) applications integrate and share data with external data sources and tools.
+The
+MCP Inspector
+is a developer tool for testing and debugging MCP servers, which expose specific capabilities through the protocol and allow an AI system to access and interact with information beyond its training data.
+It contains two components, a client that provides an interactive interface for testing and debugging, and a proxy server that bridges the web UI to different MCP servers.
+That said, a key security consideration to keep in mind is that the server should not be exposed to any untrusted network as it has permission to spawn local processes and can connect to any specified MCP server.
+This aspect, coupled with the fact that the default settings developers use to spin up a local version of the tool come with “significant” security risks, such as missing authentication and encryption, opens up a new attack pathway, per Oligo.
+“This misconfiguration creates a significant attack surface, as anyone with access to the local network or public internet can potentially interact with and exploit these servers,” Lumelsky said.
+The attack plays out by chaining a known security flaw affecting modern web browsers, dubbed 0.0.0.0 Day, with a cross-site request forgery (CSRF) vulnerability in Inspector (CVE-2025-49596) to run arbitrary code on the host simply upon visiting a malicious website.
+“Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio,” the developers of MCP Inspector
+said
+in an advisory for CVE-2025-49596.
+0.0.0.0 Day is a
+19-year-old vulnerability
+in modern web browsers that could enable malicious websites to breach local networks. It takes advantage of the browsers’ inability to securely handle the IP address 0.0.0.0, leading to code execution.
+“Attackers can exploit this flaw by crafting a malicious website that sends requests to localhost services running on an MCP server, thereby gaining the ability to execute arbitrary commands on a developer’s machine,” Lumelsky explained.
+“The fact that the default configurations expose MCP servers to these kinds of attacks means that many developers may be inadvertently opening a backdoor to their machine.”
+Specifically, the proof-of-concept (PoC) makes use of the Server-Sent Events (SSE) endpoint to dispatch a malicious request from an attacker-controlled website to achieve RCE on the machine running the tool even if it’s listening on localhost (127.0.0.1).
+This works because the IP address 0.0.0.0 tells the operating system to listen on all IP addresses assigned to the machine, including the local loopback interface (i.e., localhost).
+In a hypothetical attack scenario, an attacker could set up a fake web page and trick a developer into visiting it, at which point, the malicious JavaScript embedded in the page would send a request to 0.0.0.0:6277 (the default port on which the proxy runs), instructing the MCP Inspector proxy server to execute arbitrary commands.
+The attack can also leverage
+DNS rebinding techniques
+to create a forged DNS record that points to 0.0.0.0:6277 or 127.0.0.1:6277 in order to bypass security controls and gain RCE privileges.
+Following responsible disclosure in April 2025, the vulnerability was addressed by the project maintainers on June 13 with the release of
+version 0.14.1
+. The fixes add a session token to the proxy server and incorporate origin validation to completely plug the attack vector.
+“Localhost services may appear safe but are often exposed to the public internet due to network routing capabilities in browsers and MCP clients,” Oligo said.
+“The mitigation adds Authorization which was missing in the default prior to the fix, as well as
+verifying the Host and Origin headers
+in HTTP, making sure the client is really visiting from a known, trusted domain. Now, by default, the server blocks DNS rebinding and CSRF attacks.”
+The discovery of CVE-2025-49596 comes days after Trend Micro detailed an unpatched SQL injection bug in Anthropic’s SQLite MCP server that could be exploited to seed malicious prompts, exfiltrate data, and take control of agent workflows.
+“AI agents often trust internal data whether from databases, log entry, or cached records, agents often treat it as safe,” researcher Sean Park
+said
+. “An attacker can exploit this trust by embedding a prompt at that point and can later have the agent call powerful tools (email, database, cloud APIs) to steal data or move laterally, all while sidestepping earlier security checks.”
+Although the open-source project has been billed as a reference implementation and not intended for production use, it has been forked over 5,000 times. The GitHub repository was
+archived
+on May 29, 2025, meaning no patches have been planned to address the shortcoming.
+“The takeaway is clear. If we allow yesterday’s web-app mistakes to slip into today’s agent infrastructure, we gift attackers an effortless path from SQL injection to full agent compromise,” Park said.
+The findings also follow a report from Backslash Security that found hundreds of MCP servers to be susceptible to two major misconfigurations: Allowing arbitrary command execution on the host machine due to unchecked input handling and excessive permissions, and making them accessible to any party on the same local network owing to them being explicitly bound to 0.0.0.0, a vulnerability dubbed NeighborJack.
+“Imagine you’re coding in a shared coworking space or café. Your MCP server is silently running on your machine,” Backslash Security
+said
+. “The person sitting near you, sipping their latte, can now access your MCP server, impersonate tools, and potentially run operations on your behalf. It’s like leaving your laptop open – and unlocked for everyone in the room.”
+Because MCPs, by design, are built to access external data sources, they can serve as covert pathways for prompt injection and context poisoning, thereby influencing the outcome of an LLM when parsing data from an attacker-controlled site that contains hidden instructions.
+“One way to secure an MCP server might be to carefully process any text scraped from a website or database to avoid context poisoning,” researcher Micah Gold said. “However, this approach bloats tools – by requiring each individual tool to reimplement the same security feature – and leaves the user dependent on the security protocol of the individual MCP tool.”
+A better approach, Backslash Security noted, is to configure AI rules with MCP clients to protect against vulnerable servers. These rules refer to pre-defined prompts or instructions that are assigned to an AI agent to guide its behavior and ensure it does not break security protocols.
+“By conditioning AI agents to be skeptical and aware of the threat posed by context poisoning via AI rules, MCP clients can be secured against MCP servers,” Gold
+said
+.
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ta829-and-unk_greensec-share-tactics-and-infrastructure-in-ongoing-malware-campaigns"><a id="article-13"></a>TA829 and UNK_GreenSec Share Tactics and Infrastructure in Ongoing Malware Campaigns</h2>
+
+<p>Cybersecurity researchers have flagged the tactical similarities between the threat actors behind the
+RomCom RAT
+and a cluster that has been observed delivering a loader dubbed
+TransferLoader
+.
+Enterprise security firm Proofpoint is tracking the activity associated with TransferLoader to a group dubbed
+UNK_GreenSec
+and the RomCom RAT actors under the moniker
+TA829
+. The latter is also known by the names CIGAR, Nebulous Mantis, Storm-0978, Tropical Scorpius, UAC-0180, UAT-5647, UNC2596, and Void Rabisu.
+The company said it discovered UNK_GreenSec as part of its investigation into TA829, describing it as using an “unusual amount of similar infrastructure, delivery tactics, landing pages, and email lure themes.”
+TA829 is something of an unusual hacking group in the threat landscape given its ability to conduct both espionage as well as financially motivated attacks. The Russia-aligned hybrid group has also been linked to the
+zero-day exploitation of security flaws
+in Mozilla Firefox and Microsoft Windows to deliver RomCom RAT in attacks aimed at global targets.
+Earlier this year, PRODAFT
+detailed
+the threat actors’ use of bulletproof hosting providers, living-off-the-land (LOTL) tactics, and encrypted command-and-control (C2) communications to sidestep detection.
+TransferLoader, on the other hand, was
+first documented
+by Zscaler ThreatLabz in connection with a February 2025 campaign that delivered the
+Morpheus ransomware
+against an unnamed American law firm.
+Proofpoint noted that campaigns undertaken by both TA829 and UNK_GreenSec rely on REM Proxy services that are deployed on compromised MikroTik routers for their upstream infrastructure. That said, the exact method used to breach these devices is not known.
+“REM Proxy devices are likely rented to users to relay traffic,” the Proofpoint threat research team
+said
+. “In observed campaigns, both TA829 and UNK_GreenSec use the service to relay traffic to new accounts at freemail providers to then send to targets. REM Proxy services have also been used by TA829 to initiate similar campaigns via compromised email accounts.”
+Given that the format of the sender addresses are similar – e.g., ximajazehox333@gmail.com and hannahsilva1978@ukr.net – it’s believed that the threat actors are likely using some sort of an email builder utility that facilitates the en masse creation and sending of phishing emails via REM Proxy nodes.
+The messages act as a conduit to deliver a link, which is either directly embedded in the body or within a PDF attachment. Clicking on the link initiates a series of redirections via Rebrandly that ultimately take the victim to a fake Google Drive or Microsoft OneDrive page, while filtering out machines that have been flagged as sandboxes or deemed not of interest to the attackers.
+It’s at this stage that the attack chains splinter into two, as the adversary infrastructure to which the targets are redirected is different, ultimately paving the way for TransferLoader in the case of UNK_GreenSec and a malware strain called SlipScreen in the case of TA829.
+“TA829 and UNK_GreenSec have both deployed Putty’s PLINK utility to set up SSH tunnels, and both used IPFS services to host those utilities in follow-on activity,” Proofpoint noted.
+SlipScreen is a first-stage loader that’s designed to decrypt and load shellcode directly into memory and initiate communications with a remote server, but only after a Windows Registry check to ensure the targeted computer has at least 55 recent documents based on the “HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs” key.
+“We assess that 55 is an arbitrary number chosen by the actor, and is a best guess at determining if a host is ‘real’ or if it is a sandbox,” Greg Lesnewich, senior threat researcher at Proofpoint, told The Hacker News. “Previous versions of the loader have checked that at least
+100 recent documents
+were logged in the Registry; it is unclear why that change was made.”
+The infection sequence is then used to deploy a
+downloader
+named MeltingClaw (aka
+DAMASCENED PEACOCK
+) or RustyClaw, which is then used to drop backdoors like ShadyHammock or DustyHammock, with the former being used to launch SingleCamper (aka SnipBot), an updated version of RomCom RAT.
+DustyHammock, besides running reconnaissance commands on an infected system, comes fitted with the ability to download additional payloads hosted on the InterPlanetary File System (
+IPFS
+) network.
+Campaigns propagating TransferLoader have been found to leverage job opportunity-themed messages to trick victims into clicking on a link that ostensibly leads to a PDF resume, but, in reality, results in the download of TransferLoader from an IPFS webshare.
+TransferLoader’s primary objective is to fly under the radar and serve more malware, such as Metasploit and Morpheus ransomware, a rebranded version of
+HellCat ransomware
+.
+“Unlike the TA829 campaigns, the TransferLoader campaigns’ JavaScript components redirected users to a different PHP endpoint on the same server, which allows the operator to conduct further server-side filtering,” Proofpoint said. “UNK_GreenSec used a dynamic landing page, often irrelevant to the OneDrive spoof, and redirected users to the final payload that was stored on an IPFS webshare.”
+The overlapping tradecraft between TA829 and UNK_GreenSec raises one of the four possibilities -
+The threat actors are procuring distribution and infrastructure from the same third-party provider
+TA829 acquires and distributes infrastructure on its own, and has provided these services to UNK_GreenSec
+UNK_GreenSec is the infrastructure provider that typically offers its warez to TA829, but decided to temporarily use it to deliver its own malware, TransferLoader
+TA829 and UNK_GreenSec are one and the same, and TransferLoader is a new addition to their malware arsenal
+“In the current threat landscape, the points at which cybercrime and espionage activity overlap continue to increase, removing the distinctive barriers that separate criminal and state actors,” Proofpoint said. “Campaigns, indicators, and threat actor behaviors have converged, making attribution and clustering within the ecosystem more challenging.”
+“While there is not sufficient evidence to substantiate the exact nature of the relationship between TA829 and UNK_GreenSec, there is very likely a link between the groups.”
+(The story was updated after publication to include a response from Proofpoint.)
+Found this article interesting?  Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai/assets/js/main.js"></script>
+</body>
+</html> 
