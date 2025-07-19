@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-07-18 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Hackers Use GitHub Repositories to Host Amadey Malware and Data Stealers, Bypassing Filters</a></li>
+      
+        <li><a href="#article-2">Hackers Exploit Apache HTTP Server Flaw to Deploy Linuxsys Cryptocurrency Miner</a></li>
+      
+        <li><a href="#article-3">Europol Disrupts NoName057(16) Hacktivist Group Linked to DDoS Attacks Against Ukraine</a></li>
+      
+        <li><a href="#article-4">CTEM vs ASM vs Vulnerability Management: What Security Leaders Need to Know in 2025</a></li>
+      
+        <li><a href="#article-5">Chinese Hackers Target Taiwan's Semiconductor Sector with Cobalt Strike, Custom Backdoors</a></li>
+      
+        <li><a href="#article-6">AI Can Personalize Everything—Except Trust. Here's How to Build It Anyway</a></li>
+      
+        <li><a href="#article-7">Cisco Warns of Critical ISE Flaw Allowing Unauthenticated Attackers to Execute Root Code</a></li>
+      
+        <li><a href="#article-8">Hackers Leverage Microsoft Teams to Spread Matanbuchus 3.0 Malware to Targeted Firms</a></li>
+      
+        <li><a href="#article-9">UNC6148 Backdoors Fully-Patched SonicWall SMA 100 Series Devices with OVERSTEP Rootkit</a></li>
+      
+        <li><a href="#article-10">Critical Golden dMSA Attack in Windows Server 2025 Enables Cross-Domain Attacks and Persistent Access</a></li>
+      
+        <li><a href="#article-11">AI Agents Act Like Employees With Root Access—Here's How to Regain Control</a></li>
+      
+        <li><a href="#article-12">New Konfety Malware Variant Evades Detection by Manipulating APKs and Dynamic Code</a></li>
+      
+        <li><a href="#article-13">Deepfakes. Fake Recruiters. Cloned CFOs — Learn How to Stop AI-Driven Attacks in Real Time</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-07-18-ai创业新闻">2025-07-18 AI创业新闻</h1>
+
+<h2 id="hackers-use-github-repositories-to-host-amadey-malware-and-data-stealers-bypassing-filters"><a id="article-1"></a>Hackers Use GitHub Repositories to Host Amadey Malware and Data Stealers, Bypassing Filters</h2>
+
+<p>Threat actors are leveraging
+public GitHub repositories
+to host malicious payloads and distribute them via Amadey as part of a campaign observed in April 2025. “The MaaS [malware-as-a-service] operators used fake GitHub accounts to host payloads, tools, and Amadey plug-ins, likely as an attempt to bypass web filtering and for ease of use,” Cisco Talos researchers Chris Neal and Craig Jackson
+said
+in a report published today. The cybersecurity company said the attack chains leverage a malware loader called
+Emmenhtal
+(aka PEAKLIGHT) to deliver Amadey, which, for its part, downloads various custom payloads from public GitHub repositories operated by the threat actors. The activity shares tactical similarities with an email phishing campaign that used invoice payment and billing-related lures to
+distribute
+SmokeLoader via Emmenhtal in February 2025 in attacks targeting Ukrainian entities.</p>
+
+<p>Both Emmenhtal and Amadey function as a downloader for secondary payloads like information stealers, although the latter has also been
+observed
+delivering ransomware like LockBit 3.0 in the past. Another crucial distinction between the two malware families is that unlike Emmenhtal, Amadey can collect system information and can be extended feature-wise with an array of DLL plugins that enable a specific functionality, such as credential theft or screenshot capture. Cisco Talos’ analysis of the April 2025 campaign has uncovered three GitHub accounts (Legendary99999, DFfe9ewf, and Milidmdds) being used to host Amadey plugins, secondary payloads, and other malicious attack scripts, including Lumma Stealer, RedLine Stealer, and Rhadamanthys Stealer. The accounts have since been taken down by GitHub.</p>
+
+<p>Some of the JavaScript files present in the GitHub repositories have been found to be identical to the Emmenthal scripts employed in the SmokeLoader campaign, the primary difference being the payloads downloaded. Specifically, the Emmenhtal loader files in the repositories serve as a delivery vector for Amadey, AsyncRAT, and a legitimate copy of PuTTY.exe. Also discovered in the GitHub repositories is a Python script that likely represents an evolution of Emmenhtal, incorporating an embedded PowerShell command to download Amadey from a hard-coded IP address. It’s believed that the GitHub accounts used to stage the payloads are part of a larger MaaS operation that abuses Microsoft’s code hosting platform for malicious purposes.</p>
+
+<p>The disclosure comes as Trellix detailed a phishing campaign that propagates another malware loader known as
+SquidLoader
+in cyber attacks directed against financial services institutions in Hong Kong. Additional artifacts unearthed by the security vendor suggest related attacks may be underway in Singapore and Australia. SquidLoader attack chain
+SquidLoader is a formidable threat owing to the diverse array of anti-analysis, anti-sandbox, and anti-debug techniques packed into it, allowing it to evade detection and hinder investigation efforts. It can also establish communication with a remote server to send information about the infected host and inject the next-stage payload.</p>
+
+<p>“SquidLoader employs an attack chain culminating in the deployment of a Cobalt Strike beacon for remote access and control,” security researcher Charles Crofford
+said
+. “Its intricate anti-analysis, anti-sandbox, and anti-debugging techniques, coupled with its sparse detection rates, pose a significant threat to targeted organizations.”
+The findings also follow the discovery of a wide range of social engineering campaigns that are engineered to distribute various malware families -
+Attacks likely undertaken by a financially motivated group referred to as UNC5952 that
+leverage
+invoice themes in emails to serve malicious droppers that lead to the deployment of a downloader called CHAINVERB that, in turn, delivers the ConnectWise ScreenConnect remote access software
+Attacks that
+employ
+tax-related decoys to trick recipients into clicking on a link that ultimately delivers a ConnectWise ScreenConnect installer under the pretext of launching a PDF document
+Attacks that
+make use of
+U.S. Social Security Administration (SSA) themes to harvest user credentials or install trojanized version of ConnectWise ScreenConnect, following which victims are instructed to install and sync Microsoft’s Phone Link app to possibly collect text messages and two-factor authentication codes sent to the connected mobile device
+Attacks that
+leverage
+a phishing kit called Logokit to enable credential harvesting by creating lookalike login pages and hosting them on Amazon Web Services (AWS) infrastructure to bypass detection, while simultaneously integrating Cloudflare Turnstile CAPTCHA verification to create a false sense of security and legitimacy
+Attacks that
+make use of
+another custom Python Flask-based
+phishing kit
+to facilitate credential theft with minimal technical effort
+Attacks codenamed Scanception that
+employ
+QR codes in PDF email attachments to direct users to credential harvesting pages mimicking the Microsoft login portal
+Attacks that employ the
+ClickFix
+tactic to deliver
+Rhadamanthys Stealer
+and
+NetSupport RAT
+Attacks that
+utilize
+cloaking-as-a-service (CaaS) offerings like Hoax Tech and JS Click Cloaker to conceal phishing and malicious websites from security scanners and show them only to intended victims as a way to fly under the radar
+Attacks that
+leverage
+HTML and JavaScript to craft malicious realistic-looking emails that can bypass user suspicion and traditional detection tools
+Attacks targeting B2B service providers that
+make use of
+Scalable Vector Graphics (SVG) image files in phishing emails and which embed obfuscated JavaScript to facilitate redirects to attacker-controlled infrastructure using the window.location.href function once they are opened in a web browser
+According to data compiled by Cofense, the use of QR codes accounted for 57% of campaigns with advanced Tactics, Techniques, and Procedures (TTPs) in 2024. Other notable methods include the use of password-protected archive attachments in emails to get around secure email gateways (SEG).</p>
+
+<p>“By password-protecting the archive, threat actors prevent SEGs and other methods from scanning its contents and detecting what is typically a clearly malicious file,” Cofense researcher Max Gannon
+said
+. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-exploit-apache-http-server-flaw-to-deploy-linuxsys-cryptocurrency-miner"><a id="article-2"></a>Hackers Exploit Apache HTTP Server Flaw to Deploy Linuxsys Cryptocurrency Miner</h2>
+
+<p>Cybersecurity researchers have discovered a new campaign that exploits a known security flaw impacting Apache HTTP Server to deliver a cryptocurrency miner called
+Linuxsys
+. The vulnerability in question is
+CVE-2021-41773
+(CVSS score: 7.5), a high-severity
+path traversal vulnerability
+in Apache HTTP Server version 2.4.49 that could result in remote code execution. “The attacker leverages compromised legitimate websites to distribute malware, enabling stealthy delivery and evasion of detection,” VulnCheck
+said
+in a report shared with The Hacker News. The infection sequence, observed earlier this month and originating from an Indonesian IP address
+103.193.177[.]152
+, is designed to drop a next-stage payload from “repositorylinux[.]org” using curl or wget.</p>
+
+<p>The payload is a shell script that’s responsible for downloading the Linuxsys cryptocurrency miner from five different legitimate websites, suggesting that the threat actors behind the campaign have managed to compromise third-party infrastructure to facilitate the distribution of the malware. “This approach is clever because victims connect to legitimate hosts with valid SSL certificates, making detection less likely,” VulnCheck noted. “Additionally, it provides a layer of separation for the downloader site (‘repositorylinux[.]org’) since the malware itself isn’t hosted there.”
+The sites also host another shell script named “cron.sh” that ensures that the miner is launched automatically upon a system reboot. Cybersecurity firm said it also identified two Windows executables on the hacked sites, raising the possibility that the attackers are also going after Microsoft’s desktop operating system.</p>
+
+<p>It’s worth noting that attacks distributing the Linuxsys miner have previously
+exploited
+a critical security flaw in OSGeo GeoServer GeoTools (CVE-2024-36401, CVSS score: 9.8), as documented by Fortinet FortiGuard Labs in September 2024. Interestingly, the shell script dropped following the exploitation of the flaw was downloaded from “repositorylinux[.]com,” with comments in the source code written in Sundanese, an Indonesian language. The same shell script has been
+detected
+in the wild as far back as December 2021. Some of the other vulnerabilities exploited to deliver the miner in recent years include -
+CVE-2023-22527
+, a template injection vulnerability in Atlassian Confluence Data Center and Confluence Server
+CVE-2023-34960
+, a command injection vulnerability in Chamilo Learning Management Systems (LMS)
+CVE-2023-38646
+, a command injection vulnerability in Metabase
+CVE-2024-0012 and CVE-2024-9474
+, are authentication bypass and privilege escalation vulnerabilities in Palo Alto Networks firewalls
+“All of this indicates that the attacker has been conducting a long-term campaign, employing consistent techniques such as n-day exploitation, staging content on compromised hosts, and coin mining on victim machines,” VulnCheck said.</p>
+
+<p>“Part of their success comes from careful targeting. They appear to avoid low interaction honeypots and require high interaction to observe their activity. Combined with the use of compromised hosts for malware distribution, this approach has largely helped the attacker avoid scrutiny.”
+Exchange Servers Targeted by GhostContainer Backdoor
+The development comes as Kaspersky
+disclosed
+details of a campaign that’s targeting government entities in Asia, likely with a N-day security flaw in Microsoft Exchange Server, to deploy a bespoke backdoor dubbed
+GhostContainer
+. It’s suspected that the attacks may have exploited a now-patched remote code execution bug in Exchange Server (
+CVE-2020-0688
+, CVSS score: 8.8).</p>
+
+<p>The “sophisticated, multi-functional backdoor” can be “dynamically extended with arbitrary functionality through the download of additional modules,” the Russian company said, adding “the backdoor grants the attackers full control over the Exchange server, allowing them to execute a range of malicious activities.”
+The malware is equipped to parse instructions that can execute shellcode, download files, read or delete files, run arbitrary commands, and load additional .NET byte code. It also incorporates a web proxy and tunneling module. It’s suspected that the activity may have been part of an advanced persistent threat (APT) campaign aimed at high-value organizations, including high-tech companies, in Asia. Not much is known about who is behind the attacks, although they are assessed to be highly skilled owing to their in-depth understanding of Microsoft Exchange Server and their ability to transform publicly available code into advanced espionage tools.</p>
+
+<p>“The GhostContainer backdoor does not establish a connection to any [command-and-control] infrastructure,” Kaspersky said. “Instead, the attacker connects to the compromised server from the outside, and their control commands are hidden within normal Exchange web requests.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="europol-disrupts-noname05716-hacktivist-group-linked-to-ddos-attacks-against-ukraine"><a id="article-3"></a>Europol Disrupts NoName057(16) Hacktivist Group Linked to DDoS Attacks Against Ukraine</h2>
+
+<p>An international operation coordinated by Europol has
+disrupted
+the infrastructure of a pro-Russian hacktivist group known as NoName057(16) that has been linked to a string of distributed denial-of-service (DDoS) attacks against Ukraine and its allies. The
+actions
+have led to the dismantling of a major part of the group’s central server infrastructure and more than 100 systems across the world. The joint effort also included two arrests in France and Spain, searches of two dozen homes in Spain, Italy, Germany, the Czech Republic, France and Poland, and the issuance of arrest warrants for six Russian nationals. The effort, codenamed Operation Eastwood, took place between July 14 and 17, and involved authorities from Czechia, France, Finland, Germany, Italy, Lithuania, Poland, Spain, Sweden, Switzerland, the Netherlands, and the United States.</p>
+
+<p>The investigation was also supported by Belgium, Canada, Estonia, Denmark, Latvia, Romania and Ukraine. NoName057(16) has been
+operational
+since March 2022, acting as a pro-Kremlin collective that mobilizes ideologically motivated sympathizers on Telegram to launch DDoS attacks against websites using a special program called
+DDoSia
+in exchange for a cryptocurrency payment in an effort to keep them incentivized. It sprang up shortly after Russia’s invasion of Ukraine. Five individuals from Russia have been
+added
+to the E.U.</p>
+
+<p>Most Wanted list for allegedly supporting NoName57(16) -
+Andrey Muravyov (aka DaZBastaDraw)
+Maxim Nikolaevich Lupin (aka s3rmax)
+Olga Evstratova (aka olechochek, olenka)
+Mihail Evgeyevich Burlakov (aka Ddosator3000, darkklogo)
+Andrej Stanislavovich Avrosimow (aka ponyaska)
+“BURLAKOV is suspected of being a central member of the group ‘NoName057(16)’ and as such of having made a significant contribution to performing DDoS attacks on various institutions in Germany and other countries,” according to a description posted on the Most Wanted fugitives site. “In particular, he is suspected of assuming a leading role within the group under the pseudonym ‘darkklogo’ and in this role of having taken decisions including on the development and further optimisation of software for the strategic identification of targets and for developing the attack software, as well as having executed payments relating to renting illicit servers.”
+Evstratova, also believed to be a core member of the group, has been accused of taking on responsibilities to optimize the DDoSia attack software. Avrosimow has been attributed to 83 cases of computer sabotage. Europol said officials have reached out to more than 1,000 individuals who are believed to be supporters of the cybercrime network, notifying them of the criminal liability they bear for orchestrating DDoS attacks using automated tools.</p>
+
+<p>“In addition to the activities of the network, estimated at over 4,000 supporters, the group was also able to construct their own botnet made up of several hundred servers, used to increase the attack load,” Europol noted. “Mimicking game-like dynamics, regular shout-outs, leaderboards, or badges provided volunteers with a sense of status. This gamified manipulation, often targeted at younger offenders, was emotionally reinforced by a narrative of defending Russia or avenging political events.”
+In recent years, threat actors have been observed staging a series of attacks aimed at Swedish authorities and bank websites, as well as against 250 companies and institutions in Germany over the course of 14 separate waves since November 2023. Last July, Spain’s La Guardia Civil
+arrested
+three suspected members of the group for participating in “denial-of-service cyber attacks against public institutions and strategic sectors of Spain and other NATO countries.”
+The development comes as Russian hacktivist groups like Z-Pentest, Dark Engine, and Sector 16 are increasingly training their sights on critical infrastructure, going beyond DDoS attacks and website defacements that are typically associated with ideologically motivated cyber attacks.</p>
+
+<p>“The groups have aligned messaging, coordinated timing, and shared targeting priorities, suggesting deliberate collaboration supporting Russian strategic cyber objectives,” Cyble
+said
+. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ctem-vs-asm-vs-vulnerability-management-what-security-leaders-need-to-know-in-2025"><a id="article-4"></a>CTEM vs ASM vs Vulnerability Management: What Security Leaders Need to Know in 2025</h2>
+
+<p>The modern-day threat landscape requires enterprise security teams to think and act beyond traditional cybersecurity measures that are purely passive and reactive, and in most cases, ineffective against emerging threats and sophisticated threat actors. Prioritizing cybersecurity means implementing more proactive, adaptive, and actionable measures that can work together to effectively address the threats that most affect your business. Ideally, these measures should include the implementation of a Continuous Threat Exposure Management (CTEM) program, Vulnerability Management, and Attack Surface Management (ASM), which are all very different from one another, yet overlap. With
+CTEM
+, vulnerability management, and ASM, it’s not a question of which one is “better” or “more effective”, as they complement each other uniquely.</p>
+
+<p>By adopting all three, security teams get the continuous visibility and context they need to proactively boost defenses, giving them a leg up over threat actors. Read on to discover how the CTEM vs VM vs ASM triad could be the optimal investment for your security-aware organization. What is Vulnerability Management (VM)? Vulnerability management is the process of identifying, analyzing, remediating, and managing cybersecurity vulnerabilities across an organization’s IT ecosystem.</p>
+
+<p>A well-defined VM process is crucial to proactively identifying and resolving vulnerabilities before adversaries can exploit them to better defend organizations against common cyberattacks. VM is an ongoing process that typically includes the following phases:
+Vulnerability discovery
+Vulnerability assessment and prioritization
+Vulnerability resolution
+Vulnerability reassessment
+VM improvement
+What is Attack Surface Management (ASM)? Attack Surface Management
+or ASM is the practice of continuously identifying and prioritizing assets at their most critical attacker entry points across the organization’s attack surface. It is like VM in the sense that both aim to discover, analyze, remediate, and monitor the vulnerabilities within an organization’s attack surface.</p>
+
+<p>However, ASM takes a broader more holistic approach to enterprise security. So where the main goal of VM is to identify and manage known vulnerabilities within known assets, ASM aims to discover and manage all potential entry points for attackers – including those that are unknown. In addition, ASM enables organizations to identify and address vulnerabilities before they can be exploited. ASM tools are intelligent since they can not only discover exposed assets but also provide deep contextual insights into those assets and their critical attacker entry points.</p>
+
+<p>By providing deeper contextual insights across the entire attack surface, ASM complements VM and helps strengthen security defenses. As with VM, ASM is an ongoing and cyclical process that typically includes multiple, overlapping phases:
+Asset discovery
+Asset inventory and classification
+Vulnerability identification and risk assessment
+Asset prioritization and risk scoring
+Vulnerability remediation and reporting
+What is Continuous Threat Exposure Management (CTEM)? Continuous Threat Exposure Management, often shortened to
+CTEM
+, is a systematic approach to discover, prioritize, validate, and respond to security exposures. A CTEM program provides the structure and framework modern organizations need to proactively and continually monitor their external surfaces, assess the vulnerabilities in those surfaces, and mobilize responses and cross-functional resources to reduce security risks.</p>
+
+<p>Effective, ongoing CTEM is a five-stage process. These stages are:
+Scope for cybersecurity threats (identify the internal and external attack surfaces)
+Discover assets and build a risk profile for each asset
+Prioritize threats by urgency, security, and level of risk
+Test and validate vulnerabilities with real-world attack simulations
+Mobilize resources for vulnerability and threat remediation
+CTEM, VM, and ASM: Overlapping and Complementary Security Approaches
+It’s important to understand that CTEM is not a stand-alone tool or a single technology-based solution. Rather, it is a
+holistic, proactive
+, and
+iterative approach to security
+that leverages multiple tools and technologies to deliver improved security outcomes. As we have seen, the CTEM lifecycle begins with identifying the organization’s attack surfaces.</p>
+
+<p>Here’s where risk-based ASM solutions and VM tools come in. VM tools facilitate vulnerability identification and prioritization, but ASM tools provide visibility into all exposed assets – both known and unknown – and their associated risks. The most effective CTEM programs combine VM and ASM techniques and tools. They also incorporate other offensive security techniques like Pen Testing as a Service (
+Top Pen testing Companies
+),
+red teaming
+, and
+Adversarial Exposure Validation
+(AEV).</p>
+
+<p>These technologies mutually reinforce each other to inform risk identification and remediation, manage the organization’s attack surface, and strengthen its security posture. Together, they help to create a holistic CTEM program that provides:
+Real-time visibility into assets and risk exposure for continuous protection
+Context- and risk-informed vulnerability prioritization for more effective resource allocation and remediation
+Real-world vulnerability simulations that highlight the potential impact of the real-world exploitation of identified vulnerabilities
+Centralized insights and actionable recommendations to manage security exposures across the entire digital environment
+Optimize your Security Posture with BreachLock’s Unified Platform for CTEM
+As we have seen, CTEM, VM, and ASM are not isolated processes or programs. Rather, they overlap with each other to provide more comprehensive visibility into the threat landscape and stronger protection from all kinds of attacks. However, managing different point solutions for VM, ASM, PTaaS, etc.</p>
+
+<p>can be complicated and burdensome for security teams. BreachLock seamlessly consolidates VM, ASM, and PTaaS solutions into a unified interface to support your holistic CTEM program. It can also consolidate your assets, vulnerabilities, and test findings, map your entire attack surface, unify security testing, and validate attack paths to both ease
+and
+power your security processes. BreachLock’s integrated CTEM approach provides a single source of truth that will empower you to:
+Get a complete view of the attack surface
+Accelerate vulnerability and threat remediation
+Scale with your environment, no matter its size or complexity
+Enable faster, context-driven decision-making
+Get a clear, comprehensive view of security investments and outcomes
+Mature your security program
+Discover how BreachLock’s solutions align with the five-stage CTEM framework to elevate your defense strategy.</p>
+
+<p>Contact us
+for a free demo. About BreachLock
+BreachLock is a global leader in offensive security, delivering scalable and continuous security testing. Trusted by global enterprises, BreachLock provides human-led and AI-powered attack surface management, penetration testing, red teaming, and adversarial exposure validation (AEV) services that help security teams stay ahead of adversaries. With a mission to make proactive security the new standard, BreachLock is shaping the future of cybersecurity through automation, data-driven intelligence, and expert-driven execution.</p>
+
+<p>Know Your Risk. Contact BreachLock today! Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-hackers-target-taiwans-semiconductor-sector-with-cobalt-strike-custom-backdoors"><a id="article-5"></a>Chinese Hackers Target Taiwan’s Semiconductor Sector with Cobalt Strike, Custom Backdoors</h2>
+
+<p>The Taiwanese semiconductor industry has become the target of spear-phishing campaigns undertaken by three Chinese state-sponsored threat actors. “Targets of these campaigns ranged from organizations involved in the manufacturing, design, and testing of semiconductors and integrated circuits, wider equipment and services supply chain entities within this sector, as well as financial investment analysts specializing in the Taiwanese semiconductor market,” Proofpoint
+said
+in a report published Wednesday. The activity, per the enterprise security firm, took place between March and June 2025. They have been attributed to three China-aligned clusters it tracks as UNK_FistBump, UNK_DropPitch, and UNK_SparkyCarp.</p>
+
+<p>UNK_FistBump is said to have targeted semiconductor design, packaging, manufacturing, and supply chain organizations in employment-themed phishing campaigns that resulted in the delivery of Cobalt Strike or a C-based custom backdoor dubbed
+Voldemort
+that has been previously used in attacks aimed at over 70 organizations globally. The attack chain involves the threat actor posing as a graduate student in emails sent to recruitment and human resources personnel, seeking job opportunities at the targeted company. The messages, likely sent from compromised accounts, include a purported resume (a LNK file masquerading as a PDF) that, when opened, triggers a multi-stage sequence that either leads to the deployment of Cobalt Strike or Voldemort. Simultaneously, a decoy document is displayed to the victim to avoid raising suspicion.</p>
+
+<p>The use of Voldemort has been attributed by Proofpoint to a threat actor called TA415, which overlaps with the prolific Chinese nation-state group referred to as APT41 and Brass Typhoon. That said, the Voldemort activity linked to UNK_FistBump is assessed to be distinct from TA415 due to differences in the loader used to drop Cobalt Strike and the reliance on a hard-coded IP address for command-and-control. UNK_DropPitch, on the other hand, has been observed striking individuals in multiple major investment firms who focus on investment analysis, particularly within the Taiwanese semiconductor industry. The phishing emails, sent in April and May 2025, embed a link to a PDF document, which, upon opening, downloads a ZIP file containing a malicious DLL payload that’s launched using DLL side-loading.</p>
+
+<p>The rogue DLL is a backdoor codenamed HealthKick that’s capable of executing commands, capturing the results of those runs, and exfiltrating them to a C2 server. In another attack detected in late May 2025, the same DLL side-loading approach has been put to use to spawn a TCP reverse shell that establishes contact with an actor-controlled VPS server 45.141.139[.]222 over TCP port 465. The reverse shell serves as a pathway for the attackers to conduct reconnaissance and discovery steps, and if deemed of interest, drop the Intel Endpoint Management Assistant (EMA) for remote control via the C2 domain “ema.moctw[.]info.”
+“This UNK_DropPitch targeting is exemplary of intelligence collection priorities spanning less obvious areas of the semiconductor ecosystem beyond just design and manufacturing entities,” Proofpoint said. Further analysis of the threat actor infrastructure has revealed that two of the servers have been configured as SoftEther VPN servers, an open-source VPN solution
+widely
+used
+by
+Chinese hacking groups
+.</p>
+
+<p>An additional connection to China comes from the reuse of a TLS certificate for one of the C2 servers. This certificate has been tied in the past in connection with malware families like
+MoonBounce
+and
+SideWalk
+(aka ScrambleCross). That said, it’s currently not known if the reuse stems from a custom malware family shared across multiple China-aligned threat actors, such as SideWalk, or due to shared infrastructure provisioning across these groups. The third cluster, UNK_SparkyCarp, is characterized by credential phishing attacks that single out an unnamed Taiwanese semiconductor company using a bespoke adversary-in-the-middle (
+AitM
+) kit.</p>
+
+<p>The campaign was spotted in March 2025. “The phishing emails masqueraded as account login security warnings and contained a link to the actor-controlled credential phishing domain accshieldportal[.]com, as well as a tracking beacon URL for acesportal[.]com,” Proofpoint said, adding the threat actor had previously targeted the company in November 2024. The company said it also observed UNK_ColtCentury, which is also called
+TAG-100
+and
+Storm-2077
+, sending benign emails to legal personnel at a Taiwanese semiconductor organization in an effort to build trust and ultimately deliver a remote access trojan known as Spark RAT. “This activity likely reflects China’s strategic priority to achieve semiconductor self-sufficiency and decrease reliance on international supply chains and technologies, particularly in light of U.S.</p>
+
+<p>and Taiwanese export controls,” the company said. “These emerging threat actors continue to exhibit long-standing targeting patterns consistent with Chinese state interests, as well as TTPs and custom capabilities historically associated with China-aligned cyber espionage operations.”
+Salt Typhoon Goes After U.S. National Guard
+The development comes as NBC News
+reported
+that the Chinese state-sponsored hackers tracked as
+Salt Typhoon
+(aka Earth Estries, Ghost Emperor, and UNC2286) broke into at least one U.S. state’s National Guard, signaling an expansion of its targeting.</p>
+
+<p>The breach is said to have lasted for no less than nine months between March and December 2024. The breach “likely provided Beijing with data that could facilitate the hacking of other states’ Army National Guard units, and possibly many of their state-level cybersecurity partners,” a June 11, 2025, report from the U.S. Department of Defense (DoD) said. “
+Salt Typhoon
+extensively compromised a US state’s Army National Guard’s network and, among other things, collected its network configuration and its data traffic with its counterparts’ networks in every other U.S.</p>
+
+<p>state and at least four U.S. territories.”
+The threat actor also exfiltrated configuration files associated with other U.S. government and critical infrastructure entities, including two state government agencies, between January and March 2024. That same year, Salt Typhoon leveraged its access to a U.S.</p>
+
+<p>state’s Army National Guard network to harvest administrator credentials, network traffic diagrams, a map of geographic locations throughout the state, and PII of its service members. These network configuration files could enable further computer network exploitation of other networks, including data capture, administrator account manipulation, and lateral movement between networks, the report said. Initial access has been found to be facilitated by the exploitation of known security vulnerabilities in Cisco (
+CVE-2018-0171, CVE-2023-20198, and CVE-2023-20273
+) and Palo Alto Networks (
+CVE-2024-3400
+) appliances. “Salt Typhoon access to Army National Guard networks in these states could include information on state cyber defense posture as well as the personally identifiable information (PII) and work locations of state cybersecurity personnel – data that could be used to inform future cyber-targeting efforts.”
+Ensar Seker, CISO at SOCRadar, said in a statement that the attack is a yet another reminder that advanced persistent threat actors are going after federal agencies and state-level components, which may have a more varied security posture.</p>
+
+<p>“The revelation that Salt Typhoon maintained access to a U.S. National Guard network for nearly a year is a serious escalation in the cyber domain,” Seker said. “This isn’t just an opportunistic intrusion. It reflects deliberate, long-term espionage designed to quietly extract strategic intelligence.”
+“The group’s sustained presence suggests they were gathering more than just files, they were likely mapping infrastructure, monitoring communication flows, and identifying exploitable weak points for future use.</p>
+
+<p>What’s deeply concerning is that this activity went undetected for so long in a military environment. It raises questions about visibility gaps, segmentation policies, and detection capabilities in hybrid federal-state defense networks.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ai-can-personalize-everythingexcept-trust-heres-how-to-build-it-anyway"><a id="article-6"></a>AI Can Personalize Everything—Except Trust. Here’s How to Build It Anyway</h2>
+
+<p>JavaScript must be enabled in order to register for webinar. Yes, I’d like to register for the webinar and agree to the handling of my information as explained in thePrivacy Policy. In a world reshaped by AI, customer trust is your competitive edge.Join us as we unpack key findings from theAuth0 2025 Customer Identity Trends Report, revealing how digital-first organizations can adapt to rising customer expectations around security, privacy, and transparency.This webinar will dive into:How users are responding to AI-powered experiences—and where they’re drawing the lineThe shifting landscape of identity-based threats and what you must do to stay aheadStrategies to deliver seamless, secure logins without sacrificing user trustReal-world insights on using AIresponsiblyin CIAM while keeping the human touchWhether you’re shaping customer journeys or safeguarding digital identities, this session equips you with forward-looking insights and practical steps to thrive in the new era of customer identity.Reserve your spot and stay ahead of the curve. In a world reshaped by AI, customer trust is your competitive edge.</p>
+
+<p>Join us as we unpack key findings from theAuth0 2025 Customer Identity Trends Report, revealing how digital-first organizations can adapt to rising customer expectations around security, privacy, and transparency. Whether you’re shaping customer journeys or safeguarding digital identities, this session equips you with forward-looking insights and practical steps to thrive in the new era of customer identity. Reserve your spot and stay ahead of the curve. By clicking “Register Now,” you agree to permit The Hacker News and its partners to process your contact details, which may include The Hacker News reaching out to you and sharing your contact information with its webinar partners.</p>
+
+<h2 id="cisco-warns-of-critical-ise-flaw-allowing-unauthenticated-attackers-to-execute-root-code"><a id="article-7"></a>Cisco Warns of Critical ISE Flaw Allowing Unauthenticated Attackers to Execute Root Code</h2>
+
+<p>Cisco has disclosed a new maximum-severity security vulnerability impacting Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) that could permit an attacker to execute arbitrary code on the underlying operating system with elevated privileges. Tracked as CVE-2025-20337, the shortcoming carries a CVSS score of 10.0 and is similar to
+CVE-2025-20281
+, which was patched by the networking equipment major late last month. “Multiple vulnerabilities in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit these vulnerabilities,” the company
+said
+in an updated advisory.</p>
+
+<p>“These vulnerabilities are due to insufficient validation of user-supplied input. An attacker could exploit these vulnerabilities by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device.”
+Kentaro Kawane of GMO Cybersecurity has been credited with discovering and reporting the flaw. Kawane was previously
+acknowledged
+for two other critical Cisco ISE flaws (CVE-2025-20286 and CVE-2025-20282) and another
+critical bug
+in Fortinet FortiWeb (CVE-2025-25257)
+CVE-2025-20337 affects ISE and ISE-PIC releases 3.3 and 3.4, regardless of device configuration.</p>
+
+<p>It does not impact ISE and ISE-PIC release 3.2 or earlier. The issue has been patched in the following versions -
+Cisco ISE or ISE-PIC Release 3.3 (Fixed in 3.3 Patch 7)
+Cisco ISE or ISE-PIC Release 3.4 (Fixed in 3.4 Patch 2)
+There is no evidence that the vulnerability has been exploited in a malicious context. That said, it’s always a good practice to ensure that systems are kept up-to-date to avoid potential threats. The disclosure comes as The Shadowserver Foundation
+reported
+that threat actors are likely exploiting
+publicly released exploits
+associated with CVE-2025-25257 to drop web shells on susceptible Fortinet FortiWeb instances since July 11, 2025.</p>
+
+<p>As of July 15, there are
+estimated
+to be 77 infected instances, down from 85 the day before. The majority of the compromises are concentrated around North America (44), Asia (14), and Europe (13). Data from the attack surface management platform Censys shows that there are 20,098 Fortinet FortiWeb appliances online, excluding honeypots, although it’s currently not known how many of these are vulnerable to CVE-2025-25257. “This flaw enables unauthenticated attackers to execute arbitrary SQL commands via crafted HTTP requests, leading to remote code execution (RCE),” Censys
+said
+.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-leverage-microsoft-teams-to-spread-matanbuchus-30-malware-to-targeted-firms"><a id="article-8"></a>Hackers Leverage Microsoft Teams to Spread Matanbuchus 3.0 Malware to Targeted Firms</h2>
+
+<p>Cybersecurity researchers have flagged a new variant of a known malware loader called
+Matanbuchus
+that packs in significant features to enhance its stealth and evade detection. Matanbuchus is the name given to a malware-as-a-service (MaaS) offering that can act as a conduit for
+next-stage payloads
+, including Cobalt Strike beacons and ransomware. First
+advertised
+in February 2021 on Russian-speaking cybercrime forums for a rental price of $2,500, the malware has been put to use as part of
+ClickFix-like lures
+to trick users visiting legitimate-but-compromised sites not running it. Matanbuchus’s delivery methods have evolved over time, leveraging
+phishing emails
+pointing to booby-trapped Google Drive links,
+drive-by downloads
+from compromised sites,
+malicious MSI installers
+, and
+malvertising
+.</p>
+
+<p>It has been used to deploy a variety of secondary payloads including DanaBot, QakBot, and Cobalt Strike, all known precursors to ransomware deployment. The latest version of the loader, tracked as Matanbuchus 3.0, incorporates several new features, including improved communication protocol techniques, in-memory capabilities, enhanced obfuscation methods, CMD and PowerShell reverse shell support, and the ability to run next-stage DLL, EXE, and shellcode payloads, per Morphisec. The cybersecurity company said it observed the malware in an incident earlier this month where an unnamed company was targeted via external Microsoft Teams calls that impersonated an IT help desk and tricked employees into launching Quick Assist for remote access and then executing a PowerShell script that deployed Matanbuchus. It’s worth noting that similar social engineering tactics have been
+employed
+by threat actors associated with the Black Basta ransomware operation.</p>
+
+<p>“Victims are carefully targeted and persuaded to execute a script that triggers the download of an archive,” Morphisec CTO Michael Gorelik
+said
+. “This archive contains a renamed Notepad++ updater (GUP), a slightly modified configuration XML file, and a malicious side-loaded DLL representing the Matanbuchus loader.”
+Matanbuchus 3.0 has been advertised publicly for a monthly price of $10,000 for the HTTPS version and $15,000 for the DNS version. Once launched, the malware collects system information and iterates over the list of running processes to determine the presence of security tools. It also checks the status of its process to check if it’s running with administrative privileges.</p>
+
+<p>It then sends the gathered details to a command-and-control (C2) server to receive additional payloads in the form of MSI installers and portable executables. Persistence on the shot is achieved by setting up a scheduled task. “While it sounds simple, Matanbuchus developers implemented advanced techniques to schedule a task through the usage of
+COM
+and injection of shellcode,” Gorelik explained. “The shellcode itself is interesting; it implements a relatively basic API resolution (simple string comparisons), and a sophisticated COM execution that manipulates the
+ITaskService
+.”
+The loader also comes fitted with features that can be invoked remotely by the C2 server to collect all executing processes, running services, and a list of installed applications.</p>
+
+<p>“The Matanbuchus 3.0 Malware-as-a-Service has evolved into a sophisticated threat,” Gorelik said. “This updated version introduces advanced techniques such as improved communication protocols, in-memory stealth, enhanced obfuscation, and support for WQL queries, CMD, and PowerShell reverse shells.”
+“The loader’s ability to execute regsvr32, rundll32, msiexec, or process hollowing commands underscores its versatility, making it a significant risk to compromised systems.”
+As malware-as-a-service evolves, Matanbuchus 3.0 fits into a broader trend of stealth-first loaders that rely on LOLBins (living-off-the-land binaries), COM object hijacking, and PowerShell stagers to stay under the radar. Threat researchers are increasingly mapping these loaders as part of attack surface management strategies and linking them to abuse of enterprise collaboration tools like Microsoft Teams and Zoom. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="unc6148-backdoors-fully-patched-sonicwall-sma-100-series-devices-with-overstep-rootkit"><a id="article-9"></a>UNC6148 Backdoors Fully-Patched SonicWall SMA 100 Series Devices with OVERSTEP Rootkit</h2>
+
+<p>A threat activity cluster has been observed targeting fully-patched
+end-of-life
+SonicWall Secure Mobile Access (SMA) 100 series appliances as part of a campaign designed to drop a backdoor called
+OVERSTEP
+. The malicious activity, dating back to at least October 2024, has been
+attributed
+by the Google Threat Intelligence Group (GTIG) to a hacking crew it tracks as
+UNC6148
+. The number of known victims is “limited” at this stage. The tech giant assessed with high confidence that the threat actor is “leveraging credentials and one-time password (OTP) seeds stolen during previous intrusions, allowing them to regain access even after organizations have applied security updates.”
+“Analysis of network traffic metadata records suggests that UNC6148 may have initially exfiltrated these credentials from the SMA appliance as early as January 2025.”
+The exact initial access vector used to deliver the malware is currently not known due to the steps taken by the threat actors to remove log entries.</p>
+
+<p>But it’s believed that access may have been gained through the exploitation of known security flaws such as
+CVE-2021-20035
+,
+CVE-2021-20038, CVE-2021-20039
+,
+CVE-2024-38475
+, or
+CVE-2025-32819
+. Alternately, the tech giant’s threat intelligence team theorized that the administrator credentials could’ve been obtained through information-stealing logs or acquired from credential marketplaces. However, it said it didn’t find any evidence to back up this hypothesis. Upon gaining access, the threat actors have been found to establish an SSL-VPN session and spawn a reverse shell, although how this was achieved remains a mystery given that shell access should not be possible by design on these appliances.</p>
+
+<p>It’s believed that it may have been pulled off by means of a zero-day flaw. The reverse shell is used to run reconnaissance and file manipulation commands, not to mention export and import settings to the SMA appliance, suggesting that UNC6148 may have altered an exported settings file offline to include new rules so that their operations are not interrupted or blocked by the access gateways. The attacks culminate in the deployment of a previously undocumented implant named OVERSTEP that’s capable of modifying the appliance’s boot process to maintain persistent access, as well as credential theft and concealing its own components to evade detection by patching various file system-related functions. This is achieved by implementing a usermode rootkit through the hijacked standard library functions open and readdir, allowing it to hide the artifacts associated with the attack.</p>
+
+<p>The malware also hooks into the write API function to receive commands from an attacker-controlled server in the form of embedded within web requests -
+dobackshell
+, which starts a reverse shell to the specified IP address and port
+dopasswords
+, which creates a TAR archive of the files /tmp/temp.db, /etc/EasyAccess/var/conf/persist.db, and /etc/EasyAccess/var/cert, and save it in the location “/usr/src/EasyAccess/www/htdocs/” so that it can be downloaded via a web browser
+“UNC6148 modified the legitimate RC file ‘/etc/rc.d/rc.fwboot’ to achieve persistence for OVERSTEP,” GTIG said. “The changes meant that whenever the appliance was rebooted, the OVERSTEP binary would be loaded into the running file system on the appliance.”
+Once the deployment step is complete, the threat actor then proceeds to clear the system logs and reboots the firewall to activate the execution of the C-based backdoor. The malware also attempts to remove the command execution traces from different log files, including httpd.log, http_request.log, and inotify.log. “The actor’s success in hiding their tracks is largely due to OVERSTEP’s capability to selectively delete log entries [from the three log files],” Google said.</p>
+
+<p>“This anti-forensic measure, combined with a lack of shell history on disk, significantly reduces visibility into the actor’s secondary objectives.”
+Google has evaluated with medium confidence that UNC6148 may have weaponized an unknown, zero-day remote code execution vulnerability to deploy OVERSTEP on targeted SonicWall SMA appliances. Furthermore, it’s suspected that the operations are carried out with the intent to facilitate data theft and extortion operations, and even ransomware deployment. This connection stems from the fact that one of the organizations that was targeted by UNC6148 was posted on the data leak site operated by World Leaks, an extortion gang run by individuals previously associated with the Hunters International ransomware scheme. It’s worth noting that Hunters International recently
+shuttered
+its criminal enterprise.</p>
+
+<p>According to Google, UNC6148 exhibits tactical overlaps with prior exploitation of SonicWall SMA devices observed in July 2023 that involved an unknown threat actor deploying a web shell, a hiding mechanism, and a way to ensure persistence across firmware upgrades, per
+Truesec
+. The exploitation activity was subsequently
+linked
+by security researcher Stephan Berger to the deployment of the Abyss ransomware. The findings once again highlight how threat actors are increasingly focusing on edge network systems that aren’t usually covered by common security tools like Endpoint Detection and Response (EDR) or antivirus software and slip into target networks unnoticed. “Organizations should acquire disk images for forensic analysis to avoid interference from the rootkit anti-forensic capabilities.</p>
+
+<p>Organizations may need to engage with SonicWall to capture disk images from physical appliances,” Google said. When reached for comment on the findings, SonicWall told The Hacker News that it has been “working closely” with GTIG throughout the whole process, and that it plans to accelerate the end-of-support date for the SMA 100 series. It also said it intends to support existing SMA 100 deployments with firmware updates throughout the remaining lifecycle. “In response to the evolving threat landscape – and in alignment with our commitment to transparency and customer protection – SonicWall will accelerate the end-of-support date for the SMA 100 series from October 1, 2027, to December 31, 2025,” the company said.</p>
+
+<p>“The SMA 100 has already reached end-of-sale status, as reflected in our Product Lifecycle Table, and this update aligns with our long-term strategy and industry direction.”
+“SonicWall has been actively guiding customers toward more modern, secure solutions such as our Cloud Secure Edge service and the SMA 1000 series. These platforms are built on advanced technology stacks and offer stronger security, greater scalability, and an improved user experience – better suited for today’s distributed and cloud-connected environments. This mirrors broader industry trends, where leading vendors like Cisco and Palo Alto Networks have moved customers from legacy hardware to cloud-native architectures.”
+(The story was updated after publication to include a response from SonicWall.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-golden-dmsa-attack-in-windows-server-2025-enables-cross-domain-attacks-and-persistent-access"><a id="article-10"></a>Critical Golden dMSA Attack in Windows Server 2025 Enables Cross-Domain Attacks and Persistent Access</h2>
+
+<p>Cybersecurity researchers have disclosed what they say is a “critical design flaw” in delegated Managed Service Accounts (dMSAs) introduced in Windows Server 2025. “The flaw can result in high-impact attacks, enabling cross-domain lateral movement and persistent access to all managed service accounts and their resources across Active Directory indefinitely,” Semperis said in a report shared with The Hacker News. Put differently, successful exploitation could allow adversaries to sidestep authentication guardrails and generate passwords for all Delegated Managed Service Accounts (
+dMSAs
+) and group Managed Service Accounts (
+gMSAs
+) and their associated service accounts. The persistence and privilege escalation method has been codenamed
+Golden dMSA
+, with the cybersecurity company deeming it as low complexity owing to the fact that the vulnerability simplifies brute-force password generation.</p>
+
+<p>However, in order for bad actors to exploit it, they must already be in possession of a Key Distribution Service (KDS)
+root key
+that’s typically only available to privileged accounts, such as root Domain Admins, Enterprise Admins, and SYSTEM. Described as the crown jewel of Microsoft’s gMSA infrastructure, the KDS root key serves as a master key, allowing an attacker to derive the current password for any dMSA or gMSA account without having to connect to the domain controller (DC). “The attack leverages a critical design flaw: A structure that’s used for the password-generation computation contains predictable time-based components with only 1,024 possible combinations, making brute-force password generation computationally trivial,” security researcher Adi Malyanker
+said
+. Delegated Managed Service Accounts is a new feature
+introduced
+by Microsoft that facilitates migration from an existing legacy service account.</p>
+
+<p>It was introduced in Windows Server 2025 as a way to counter Kerberoasting attacks. The machine accounts bind authentication directly to explicitly authorized machines in Active Directory (AD), thus eliminating the possibility of credential theft. By tying authentication to device identity, only specified machine identities mapped in AD can access the account. Golden dMSA, similar to
+Golden gMSA
+Active Directory
+attacks
+, plays out over four steps once an attacker has obtained elevated privileges within a domain -
+Extracting KDS root key material by elevating to SYSTEM privileges on one of the domain controllers
+Enumerating dMSA accounts using
+LsaOpenPolicy
+and
+LsaLookupSids
+APIs or via a Lightweight Directory Access Protocol (
+LDAP
+)-based approach
+Identifying the
+ManagedPasswordID
+attribute and password hashes through targeted guessing
+Generating valid passwords (i.e., Kerberos tickets) for any gMSA or dMSA associated with the compromised key and testing them via
+Pass the Hash
+or
+Overpass the Hash
+techniques
+“This process requires no additional privileged access once the KDS root key is obtained, making it a particularly dangerous persistence method,” Malyanker said.</p>
+
+<p>“The attack highlights the critical trust boundary of managed service accounts. They rely on domain-level cryptographic keys for security. Although automatic password rotation provides excellent protection against typical credential attacks, Domain Admins, DnsAdmins, and Print Operators can bypass these protections entirely and compromise all of the dMSAs and gMSAs in the forest.”
+Semperis noted that the Golden dMSA technique turns the breach into a forest-wide persistent backdoor, given that compromising the KDS root key from any single domain within the forest is enough to breach every dMSA account across all domains in that forest. In other words, a single KDS root key extraction can be weaponized to achieve cross-domain account compromise, forest-wide credential harvesting, and lateral movement across domains using the compromised dMSA accounts.</p>
+
+<p>“Even in environments with multiple KDS root keys, the system consistently uses the first (oldest) KDS root key for compatibility reasons,” Malyanker pointed out. “This means that the original key we’ve compromised could be preserved by Microsoft’s design – creating a persistent backdoor that could last for years.”
+Even more concerning is that the attack completely sidesteps normal
+Credential Guard
+protections, which are used to secure NTLM password hashes, Kerberos Ticket Granting Tickets (TGTs), and credentials so that only privileged system software can access them. Following responsible disclosure on May 27, 2025, Microsoft said, “If you have the secrets used to derive the key, you can authenticate as that user. These features have never been intended to protect against a compromise of a domain controller.” Semperis has also
+released
+an open-source as proof-of-concept (PoC) to demonstrate the attack.</p>
+
+<p>“What starts as one DC compromise escalates to owning every dMSA-protected service across an entire enterprise forest,” Malyanker said. “It’s not just privilege escalation. It’s enterprise-wide digital domination through a single cryptographic vulnerability.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ai-agents-act-like-employees-with-root-accessheres-how-to-regain-control"><a id="article-11"></a>AI Agents Act Like Employees With Root Access—Here’s How to Regain Control</h2>
+
+<p>The AI gold rush is on. But without identity-first security, every deployment becomes an open door. Most organizations secure native AI like a web app, but it behaves more like a junior employee with root access and no manager. From Hype to High Stakes
+Generative AI has moved beyond the hype cycle.</p>
+
+<p>Enterprises are:
+Deploying LLM copilots to accelerate software development
+Automating customer service workflows with AI agents
+Integrating AI into financial operations and decision-making
+Whether building with open-source models or plugging into platforms like OpenAI or Anthropic, the goal is speed and scale. But what most teams miss is this:
+Every LLM access point or website is a new identity edge. And every integration adds risk unless identity and device posture are enforced. What Is the AI Build vs.</p>
+
+<dl>
+  <dt>Buy Dilemma? Most enterprises face a pivotal decision:</dt>
+  <dt>Build</dt>
+  <dd>Create in-house agents tailored to internal systems and workflows
+Buy</dd>
+  <dd>Adopt commercial AI tools and SaaS integrations
+The threat surface doesn’t care which path you choose. Custom-built agents
+expand internal attack surfaces, especially if access control and identity segmentation aren’t enforced at runtime. Third-party tools
+are often misused or accessed by unauthorized users, or more commonly, corporate users on personal accounts, where governance gaps exist.</dd>
+</dl>
+
+<p>Securing AI isn’t about the algorithm, it’s about who (or what device) is talking to it, and what permissions that interaction unlocks. What’s Actually at Risk? AI agents are agentic which is to say they can take actions on a human’s behalf and access data like a human would. They’re often embedded in business-critical systems, including:
+Source code repositories
+Finance and payroll applications
+Email inboxes
+CRM and ERP platforms
+Customer support logs and case history
+Once a user or device is compromised, the AI agent becomes a high-speed backdoor to sensitive data.</p>
+
+<p>These systems are highly privileged, and AI amplifies attacker access. Common AI-Specific Threat Vectors:
+Identity-based attacks
+like credential stuffing or session hijacking targeting LLM APIs
+Misconfigured agents
+with excessive permissions and no scoped role-based access control (RBAC)
+Weak session integrity
+where infected or insecure devices request privileged actions through LLMs
+How to Secure Enterprise AI Access
+To eliminate AI access risk without killing innovation, you need:
+Phishing-resistant MFA
+for every user and device accessing LLMs or agent APIs
+Granular RBAC
+tied to business roles—developers shouldn’t access finance models
+Continuous device trust enforcement
+, using signals from EDR, MDM, and ZTNA
+AI access control must evolve from a one-time login check to a real-time policy engine that reflects current identity and device risk. The Secure AI Access Checklist:
+No shared secrets
+No trusted device assumptions
+No over-permissioned agents
+No productivity tax
+The Fix: Secure AI Without Slowing Down
+You don’t have to trade security for speed. With the right architecture, it’s possible to:
+Block unauthorized users and devices by default
+Eliminate trust assumptions at every layer
+Secure AI workflows without interrupting legitimate use
+Beyond Identity makes this possible today.</p>
+
+<p>Beyond Identity’s IAM platform makes unauthorized access to AI systems impossible by enforcing phishing-resistant, device-aware, continuous access control for AI systems. No passwords. No shared secrets. No untrustworthy devices.</p>
+
+<p>Beyond Identity is also prototyping a secure-by-design architecture for in-house AI agents that binds agent permissions to verified user identity and device posture—enforcing RBAC at runtime and continuously evaluating risk signals from EDR, MDM, and ZTNA. For instance, if an engineer loses CrowdStrike full disk access, the agent immediately blocks access to sensitive data until posture is remediated. Want a First Look? Register for Beyond Identity’s webinar
+to get a behind-the-scenes look at
+how a Global Head of IT Security built and secured his internal, enterprise AI agents that’s now used by 1,000+ employees.</p>
+
+<p>You’ll see a demo of how one of Fortune’s Fastest Growing Companies uses phishing-resistant, device-bound access controls to make unauthorized access impossible. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-konfety-malware-variant-evades-detection-by-manipulating-apks-and-dynamic-code"><a id="article-12"></a>New Konfety Malware Variant Evades Detection by Manipulating APKs and Dynamic Code</h2>
+
+<p>Cybersecurity researchers have discovered a new, sophisticated variant of a known Android malware referred to as
+Konfety
+that leverages the evil twin technique to enable ad fraud. The sneaky approach essentially involves a scenario wherein two variants of an application share the same package name: A benign “decoy” app that’s hosted on the Google Play Store and its evil twin, which is distributed via third-party sources. It’s worth pointing out that the decoy apps don’t have to be necessarily published by threat actors themselves and could be legitimate. The only caveat is that the malicious apps share the exact same package names as their real counterparts already available on the Play Store.</p>
+
+<p>“The threat actors behind Konfety are highly adaptable, consistently altering their targeted ad networks and updating their methods to evade detection,” Zimperium zLabs researcher Fernando Ortega
+said
+. “This latest variant demonstrates their sophistication by specifically tampering with the APK’s ZIP structure.”
+By using malformed APKs, the tactic allows threat actors to sidestep detection and challenge reverse engineering efforts. Besides dynamically loading the main DEX (Dalvik Executable) payload at runtime, the newly discovered versions enable the general-purpose bit flag by setting it to “
+Bit 0
+,” signaling to the system that the file is encrypted. This behavior, in turn, triggers a false password prompt when attempting to inspect the Android package, thereby blocking access and complicating attempts to analyze its contents.</p>
+
+<p>The second technique entails falsely declaring the use of BZIP compression method in the app’s manifest XML file (“AndroidManifest.xml”), causing analysis tools like APKTool and JADX to crash due to a parsing failure. A similar compression-based defense evasion technique was previously highlighted by Kaspersky in another Android malware called
+SoumniBot
+. The use of dynamic code loading to execute the primary payload affords added stealth during initial scans or reverse engineering, Zimperium noted. During execution, the DEX payload is decrypted and loaded directly into memory without attracting any red flags.</p>
+
+<p>“This multi-layered obfuscation approach, combining encrypted assets, runtime code injection, and deceptive manifest declarations, demonstrates the evolving sophistication of the Konfety operation and its continuous efforts to evade analysis and bypass detection mechanisms,” Ortega said. Like the previous iteration reported by HUMAN last year, Konfety abuses the CaramelAds software development kit (SDK) to fetch ads, deliver payloads, and maintain communication with attacker-controlled servers. It comes with capabilities to redirect users to malicious websites, prompt unwanted app installs, and trigger persistent spam-like browser notifications. Furthermore, the malware hides its app icon and uses geofencing to alter its functionality based on the victim’s region.</p>
+
+<p>The development comes as ANY.RUN detailed a Chinese Android
+packer
+tool known as Ducex that’s mainly designed to conceal embedded payloads like
+Triada
+within fake Telegram apps. “The packer employs serious obfuscation through function encryption using a modified RC4 algorithm with added shuffling,” ANY.RUN researcher Alina Markova
+said
+. “Ducex creates major roadblocks for debugging. It performs APK signature verification, failing if the app is re-signed.</p>
+
+<p>It also employs self-debugging using fork and ptrace to block external tracing.”
+On top of that, Ducex is designed to detect the presence of popular analysis tools such as Frida, Xposed, and Substrate, and if present, terminate itself. The findings also follow a new study published by a team of researchers from TU Wien and the University of Bayreuth about a novel technique dubbed TapTrap that can be weaponized by a malicious app to covertly bypass Android’s permission system and gain access to sensitive data or execute destructive actions. The attack, in a nutshell, hijacks user interactions on Android devices by overlaying animations or games on a user’s screen, while surreptitiously launching user interface elements underneath that trick users into performing undesirable actions, such as installing malware or granting the app intrusive permissions. “Normally, Android shows an animation when the screen changes, such as the new screen sliding or fading in,” researchers Philipp Beer, Marco Squarcina, Sebastian Roth, and Martina Lindorfer
+said
+.</p>
+
+<p>“However, the app can tell the system that a custom animation should be used instead that is long-running and makes the new screen fully transparent, keeping it hidden from you.”
+“Any taps you make during this animation go to the hidden screen, not the visible app. The app can then use this to lure you into tapping on specific areas of the screen that correspond to sensitive actions on the hidden screen, allowing it to perform actions without your knowledge.”
+In a hypothetical attack scenario, a threat actor-released game installed by the victim can secretly open a web browser session and dupe them into granting camera permissions to a malicious website. That said, TapTrap’s impact extends beyond the Android ecosystem, opening the door to tapjacking and web clickjacking attacks. The issue has been addressed in
+GrapheneOS
+, Chrome 135 (
+CVE-2025-3067
+), and Firefox 136 (
+CVE-2025-1939
+).</p>
+
+<p>Android 16 continues to remain susceptible to the attack. When reached for comment, Google told The Hacker News that it’s working to mitigate the problem in an upcoming Android update, adding the operating system already has defenses in place to prevent
+tapjacking attacks
+. It also pointed out that there is no evidence of any malicious Play Store apps abusing the technique in the wild. “Android is constantly improving its existing mitigations against tapjacking attacks.</p>
+
+<p>We are aware of this research and we will be addressing this issue in a future update,” a Google spokesperson said. “Google Play has policies in place to keep users safe that all developers must adhere to, and if we find that an app has violated our policies, we take appropriate action.”
+(The story was updated after publication to include a response from Google on the TapTrap attack.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="deepfakes-fake-recruiters-cloned-cfos--learn-how-to-stop-ai-driven-attacks-in-real-time"><a id="article-13"></a>Deepfakes. Fake Recruiters. Cloned CFOs — Learn How to Stop AI-Driven Attacks in Real Time</h2>
+
+<p>Social engineering attacks have entered a new era—and they’re coming fast, smart, and deeply personalized. It’s no longer just suspicious emails in your spam folder. Today’s attackers use generative AI, stolen branding assets, and deepfake tools to mimic your executives, hijack your social channels, and create convincing fakes of your website, emails, and even voice. They don’t just spoof—
+they impersonate.</p>
+
+<p>Modern attackers aren’t relying on chance. They’re running long-term, multi-channel campaigns across email, LinkedIn, SMS, and even support portals—targeting your employees, customers, and partners. Whether it’s a fake recruiter reaching out on LinkedIn, a lookalike login page sent via text, or a cloned CFO demanding a wire transfer, the tactics are faster, more adaptive, and increasingly automated using AI. The result?</p>
+
+<p>Even trained users are falling for sophisticated fakes—because they’re not just phishing links anymore. They’re operations. This Webinar Shows You How to Fight Back
+Join us for a deep dive
+into how
+Doppel’s real-time AI platform
+detects and disrupts social engineering threats before they escalate. You’ll learn how AI can be used not just to spot suspicious signals, but to
+understand attacker behavior
+, track impersonation campaigns across platforms, and respond instantly—before reputational or financial damage occurs.</p>
+
+<p>What You’ll Learn
+The Modern Threat Landscape:
+How AI-powered social engineering campaigns are evolving—and what that means for your current defenses. Real-Time Defense:
+How Doppel identifies impersonation attempts and shuts them down before users engage. Shared Intelligence at Scale:
+How learning from attacks across thousands of brands helps make deception unprofitable. Impersonation attacks are scaling faster than any human team can monitor manually.</p>
+
+<p>Security awareness training isn’t enough. Static detection rules fall short. You need a defense that thinks and adapts in real-time. Doppel’s AI learns from every attack attempt—so your protection keeps getting smarter.</p>
+
+<p>Who Should Attend:
+Security leaders responsible for brand trust and executive protection, SOC teams overwhelmed by phishing and impersonation alerts, and risk, fraud, or threat intelligence professionals seeking faster, smarter signal-to-action. Watch this Webinar
+Don’t wait for an impersonation attack to make the first move. Learn how to fight back—before it happens. Save Your Spot.</p>
+
+<p>Register Now
+→
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai/assets/js/main.js"></script>
+</body>
+</html> 

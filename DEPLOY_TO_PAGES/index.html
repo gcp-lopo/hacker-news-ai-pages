@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Pages 自动部署详细教程（双仓库方案）</title>
+  <link rel="stylesheet" href="/hacker-news-ai/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+  <a href="/hacker-news-ai/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">GitHub Pages 自动部署详细教程（双仓库方案）</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="github-pages-自动部署详细教程双仓库方案">GitHub Pages 自动部署详细教程（双仓库方案）</h1>
+
+<p>本教程适用于：<strong>源码/爬虫/配置私有，仅公开静态网页</strong>，并实现每天自动抓取、自动部署到 GitHub Pages。</p>
+
+<hr />
+
+<h2 id="1-仓库准备">1. 仓库准备</h2>
+
+<h3 id="11-创建私有源码仓库">1.1 创建私有源码仓库</h3>
+<ul>
+  <li>仓库名建议：<code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code></li>
+  <li>选择 Private（私有）</li>
+  <li>存放所有源码、爬虫、配置、Actions 等</li>
+</ul>
+
+<h3 id="12-创建公开静态网页仓库">1.2 创建公开静态网页仓库</h3>
+<ul>
+  <li>仓库名建议：<code class="language-plaintext highlighter-rouge">hacker-news-ai-pages</code></li>
+  <li>选择 Public（公开）</li>
+  <li>只存静态网页（HTML/CSS/JS），用于 GitHub Pages</li>
+</ul>
+
+<hr />
+
+<h2 id="2-生成-github-token-并配置-secrets">2. 生成 GitHub Token 并配置 Secrets</h2>
+
+<h3 id="21-生成-token">2.1 生成 Token</h3>
+<ol>
+  <li>打开 <a href="https://github.com/settings/tokens">GitHub Token 设置</a></li>
+  <li>点击“Generate new token”</li>
+  <li>备注如 <code class="language-plaintext highlighter-rouge">pages-deploy-token</code>，勾选 <code class="language-plaintext highlighter-rouge">repo</code> 权限</li>
+  <li>生成后<strong>复制 Token</strong>，妥善保存</li>
+</ol>
+
+<h3 id="22-配置-secrets">2.2 配置 Secrets</h3>
+<ol>
+  <li>打开私有仓库（<code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code>）</li>
+  <li>进入 Settings → Secrets → Actions</li>
+  <li>新建一个 secret：
+    <ul>
+      <li>Name: <code class="language-plaintext highlighter-rouge">PAGES_DEPLOY_TOKEN</code></li>
+      <li>Value: 粘贴刚才生成的 Token</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="3-配置-github-actions私有仓库">3. 配置 GitHub Actions（私有仓库）</h2>
+
+<p>在 <code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code> 仓库根目录下新建 <code class="language-plaintext highlighter-rouge">.github/workflows/deploy.yml</code>，内容如下：</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Auto Crawler &amp; Deploy to Public Pages</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0</span><span class="nv"> </span><span class="s">2</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>   <span class="c1"># 每天UTC时间2点（北京时间10点）自动运行</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>      <span class="c1"># 允许手动触发</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build-and-deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout source repo</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set up Python</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-python@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">python-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.10'</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">pip install -r requirements.txt</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Run crawler and generate static site</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># 运行你的爬虫和静态站点生成命令</span>
+          <span class="s">python crawl_novel_v4.py</span>
+          <span class="s"># 假设生成的静态网页在 _site 目录</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout public pages repo</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">repository</span><span class="pi">:</span> <span class="s">gcp-lopo/hacker-news-ai-pages</span>
+          <span class="na">ref</span><span class="pi">:</span> <span class="s">main</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">public-pages</span>
+          <span class="na">token</span><span class="pi">:</span> <span class="s">$</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Copy generated site to public repo</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">rm -rf public-pages/*</span>
+          <span class="s">cp -r _site/* public-pages/</span>
+          <span class="s">cd public-pages</span>
+          <span class="s">git config user.name "github-actions[bot]"</span>
+          <span class="s">git config user.email "github-actions[bot]@users.noreply.github.com"</span>
+          <span class="s">git add .</span>
+          <span class="s">git commit -m "Auto update: $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"</span>
+          <span class="s">git push origin main</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>注意：</strong></p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">repository: gcp-lopo/hacker-news-ai-pages</code> 已替换为你的用户名和公开仓库名</li>
+    <li><code class="language-plaintext highlighter-rouge">_site</code> 为静态网页目录，如有不同请自行修改</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="4-配置公开仓库为-github-pages">4. 配置公开仓库为 GitHub Pages</h2>
+
+<ol>
+  <li>打开 <code class="language-plaintext highlighter-rouge">hacker-news-ai-pages</code> 仓库</li>
+  <li>进入 Settings → Pages</li>
+  <li>选择 <code class="language-plaintext highlighter-rouge">main</code> 分支作为 Pages 源，保存</li>
+  <li>稍等片刻，访问分配的 GitHub Pages 地址即可</li>
+</ol>
+
+<hr />
+
+<h2 id="5-常见问题与注意事项">5. 常见问题与注意事项</h2>
+
+<ul>
+  <li><strong>首次推送</strong>：公开仓库需有至少一次初始化提交（如 README.md），否则无法推送</li>
+  <li><strong>Token 权限</strong>：只需 <code class="language-plaintext highlighter-rouge">repo</code> 权限即可推送到公开仓库</li>
+  <li><strong>静态目录</strong>：确保 Actions 里复制的是你生成的静态网页目录</li>
+  <li><strong>定时任务</strong>：cron 表达式可调整为你希望的时间</li>
+  <li><strong>私有仓库 Actions</strong>：免费账户可用，私有仓库 Actions 有免费额度限制</li>
+  <li><strong>公开仓库内容</strong>：只有 HTML/CSS/JS 公开，源码、爬虫、配置等全部私有</li>
+</ul>
+
+<hr />
+
+<p>如有疑问，欢迎随时提问！</p>
+
+<hr />
+
+<h2 id="6-本地项目迁移到私有源码仓库的操作步骤">6. 本地项目迁移到私有源码仓库的操作步骤</h2>
+
+<h3 id="61-克隆私有源码仓库到本地">6.1 克隆私有源码仓库到本地</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/gcp-lopo/hacker-news-ai-source.git
+</code></pre></div></div>
+
+<h3 id="62-拷贝项目内容到新仓库">6.2 拷贝项目内容到新仓库</h3>
+
+<ol>
+  <li>将你本地的 <code class="language-plaintext highlighter-rouge">Hacker-News-Ai</code> 文件夹里的所有内容（包括隐藏文件如 <code class="language-plaintext highlighter-rouge">.github</code>、<code class="language-plaintext highlighter-rouge">.gitignore</code> 等）<strong>复制到 <code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code> 文件夹</strong>（即刚刚 clone 下来的目录）里。</li>
+  <li>如果 <code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code> 目录里有默认的 <code class="language-plaintext highlighter-rouge">README.md</code> 或其他初始化文件，可以选择覆盖或合并。</li>
+</ol>
+
+<h3 id="63-提交并推送到-github">6.3 提交并推送到 GitHub</h3>
+
+<p>在 <code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code> 目录下执行：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Initial import of all project files"</span>
+git push
+</code></pre></div></div>
+
+<h3 id="64-检查-actions-和-secrets">6.4 检查 Actions 和 Secrets</h3>
+
+<ol>
+  <li>确认 <code class="language-plaintext highlighter-rouge">.github/workflows/deploy.yml</code> 已在仓库中。</li>
+  <li>确认你已经在 GitHub 仓库的 Settings → Secrets → Actions 里添加了 <code class="language-plaintext highlighter-rouge">PAGES_DEPLOY_TOKEN</code>。</li>
+</ol>
+
+<h3 id="65-等待自动部署">6.5 等待自动部署</h3>
+
+<ul>
+  <li>你可以在 GitHub 上的 Actions 页面看到自动部署流程。</li>
+  <li>首次部署后，静态网页会自动推送到 <code class="language-plaintext highlighter-rouge">hacker-news-ai-pages</code> 仓库。</li>
+</ul>
+
+<hr />
+
+<blockquote>
+  <p>之后所有开发、更新都在 <code class="language-plaintext highlighter-rouge">hacker-news-ai-source</code> 仓库进行，静态网页自动同步到公开仓库。</p>
+</blockquote>
+
+  </div>
+
+</article>
+
+    </main>
+  </div>
+  <script src="/hacker-news-ai/assets/js/main.js"></script>
+</body>
+</html> 

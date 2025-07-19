@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小说爬虫入门教程（以 crawl_novel_v4.py 为例）</title>
+  <link rel="stylesheet" href="/hacker-news-ai/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+  <a href="/hacker-news-ai/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">小说爬虫入门教程（以 crawl_novel_v4.py 为例）</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="小说爬虫入门教程以-crawl_novel_v4py-为例">小说爬虫入门教程（以 crawl_novel_v4.py 为例）</h1>
+
+<h2 id="1-什么是爬虫">1. 什么是爬虫？</h2>
+
+<p>爬虫（Web Crawler）是一种自动化程序，用于模拟人工浏览网页、批量抓取网页上的数据。小说爬虫就是自动化下载小说网站上的章节内容，整理成本地文件。</p>
+
+<hr />
+
+<h2 id="2-环境准备">2. 环境准备</h2>
+
+<ul>
+  <li><strong>Python 版本</strong>：推荐 3.7 及以上</li>
+  <li><strong>依赖库</strong>：
+    <ul>
+      <li>requests（网络请求）</li>
+      <li>beautifulsoup4（网页解析）</li>
+      <li>lxml（加速解析，可选）</li>
+      <li>re（正则表达式，内置）</li>
+      <li>time、os、json（内置）</li>
+    </ul>
+  </li>
+</ul>
+
+<p>安装依赖：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>requests beautifulsoup4 lxml
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="3-网站分析">3. 网站分析</h2>
+
+<ol>
+  <li><strong>目标网站</strong>：以 <code class="language-plaintext highlighter-rouge">https://www.kanshudashi.com</code> 为例。</li>
+  <li><strong>分析章节列表页</strong>：找到所有章节的链接（通常在目录页）。</li>
+  <li><strong>分析章节内容页</strong>：确定正文内容和标题的 HTML 标签。</li>
+</ol>
+
+<blockquote>
+  <p>小技巧：按 F12 打开浏览器开发者工具，查看网页结构。</p>
+</blockquote>
+
+<hr />
+
+<h2 id="4-代码结构与核心流程">4. 代码结构与核心流程</h2>
+
+<h3 id="41-类的设计">4.1 类的设计</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NovelCrawlerV4</code> 类：负责所有爬虫逻辑。</li>
+  <li>主要方法：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">get_all_chapter_links()</code>：获取所有章节链接</li>
+      <li><code class="language-plaintext highlighter-rouge">get_chapter_content(url)</code>：获取单章内容</li>
+      <li><code class="language-plaintext highlighter-rouge">crawl_novel()</code>：主流程，循环爬取所有章节</li>
+      <li><code class="language-plaintext highlighter-rouge">load_progress()</code>/<code class="language-plaintext highlighter-rouge">save_progress()</code>：断点续爬</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="42-主要流程">4.2 主要流程</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">crawler</span> <span class="o">=</span> <span class="n">NovelCrawlerV4</span><span class="p">()</span>
+<span class="n">crawler</span><span class="p">.</span><span class="n">crawl_novel</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ol>
+  <li><strong>获取章节列表</strong>
+    <ul>
+      <li>访问小说目录页，解析所有章节的链接和标题。</li>
+    </ul>
+  </li>
+  <li><strong>循环爬取每一章</strong>
+    <ul>
+      <li>依次访问每个章节链接，提取标题和正文。</li>
+      <li>保存到本地 txt 文件。</li>
+      <li>每爬完一章，记录进度，支持断点续爬。</li>
+    </ul>
+  </li>
+  <li><strong>异常处理</strong>
+    <ul>
+      <li>网络超时、内容缺失等会自动跳过并记录。</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="5-关键代码讲解">5. 关键代码讲解</h2>
+
+<h3 id="51-获取章节链接">5.1 获取章节链接</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">novel_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="sa">r</span><span class="s">'/book/hbwlll-\\d+\\.html'</span><span class="p">))</span>
+</code></pre></div></div>
+<ul>
+  <li>用正则匹配所有章节的链接。</li>
+</ul>
+
+<h3 id="52-获取章节内容">5.2 获取章节内容</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">chapter_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+<span class="n">content_div</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">select_one</span><span class="p">(</span><span class="s">'div.content'</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">content_div</span><span class="p">.</span><span class="n">get_text</span><span class="p">().</span><span class="n">strip</span><span class="p">()</span>
+</code></pre></div></div>
+<ul>
+  <li>选择合适的标签提取正文。</li>
+</ul>
+
+<h3 id="53-断点续爬">5.3 断点续爬</h3>
+<ul>
+  <li>每爬完一章，保存已完成的章节到 json 文件。</li>
+  <li>下次运行时自动跳过已完成部分。</li>
+</ul>
+
+<hr />
+
+<h2 id="6-反爬虫机制与应对">6. 反爬虫机制与应对</h2>
+
+<ul>
+  <li><strong>User-Agent</strong>：模拟浏览器访问。</li>
+  <li><strong>延迟请求</strong>：<code class="language-plaintext highlighter-rouge">time.sleep(1)</code>，防止访问过快被封。</li>
+  <li><strong>异常处理</strong>：捕获网络错误，自动重试或跳过。</li>
+</ul>
+
+<hr />
+
+<h2 id="7-常见报错与排查">7. 常见报错与排查</h2>
+
+<ul>
+  <li><strong>网络超时</strong>：检查网络，适当加大超时时间。</li>
+  <li><strong>内容提取不到</strong>：检查网页结构是否变化，调整选择器。</li>
+  <li><strong>编码问题</strong>：统一用 <code class="language-plaintext highlighter-rouge">utf-8</code> 读写文件。</li>
+</ul>
+
+<hr />
+
+<h2 id="8-小白写爬虫的建议">8. 小白写爬虫的建议</h2>
+
+<ol>
+  <li>先用浏览器分析目标网页结构。</li>
+  <li>用 requests+BeautifulSoup 先抓一页，调试提取内容。</li>
+  <li>再批量抓取，注意加延迟。</li>
+  <li>处理异常，保证脚本健壮。</li>
+  <li>尊重网站 robots 协议和版权。</li>
+</ol>
+
+<hr />
+
+<h2 id="9-参考资料">9. 参考资料</h2>
+<ul>
+  <li><a href="https://docs.python-requests.org/zh_CN/latest/">requests 官方文档</a></li>
+  <li><a href="https://beautifulsoup.readthedocs.io/zh_CN/latest/">BeautifulSoup4 文档</a></li>
+  <li><a href="https://docs.python.org/zh-cn/3/library/re.html">Python 正则表达式</a></li>
+</ul>
+
+<hr />
+
+<p>如有疑问，欢迎提问！</p>
+
+<hr />
+
+<h2 id="10-crawl_novel_v4py-代码逐行讲解">10. crawl_novel_v4.py 代码逐行讲解</h2>
+
+<p>下面以主要结构和关键函数为例，逐行详细注释说明：</p>
+
+<h3 id="101-导入依赖">10.1 导入依赖</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>  <span class="c1"># 用于发送网络请求
+</span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span><span class="p">,</span> <span class="n">Tag</span>  <span class="c1"># 网页解析库
+</span><span class="kn">import</span> <span class="nn">time</span>  <span class="c1"># 控制请求间隔，防止被封
+</span><span class="kn">import</span> <span class="nn">re</span>  <span class="c1"># 正则表达式，提取链接和内容
+</span><span class="kn">import</span> <span class="nn">os</span>  <span class="c1"># 文件和路径操作
+</span><span class="kn">import</span> <span class="nn">json</span>  <span class="c1"># 进度保存为json
+</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>  <span class="c1"># 类型提示
+</span></code></pre></div></div>
+
+<h3 id="102-爬虫类初始化">10.2 爬虫类初始化</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NovelCrawlerV4</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="s">"https://www.kanshudashi.com"</span>  <span class="c1"># 网站主域名
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">novel_url</span> <span class="o">=</span> <span class="s">"https://www.kanshudashi.com/book/hbwlll.html"</span>  <span class="c1"># 小说目录页
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">'User-Agent'</span><span class="p">:</span> <span class="s">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'</span>
+        <span class="p">}</span>  <span class="c1"># 伪装成浏览器，防止被封
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>  <span class="c1"># 会话对象，自动管理cookie
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">headers</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">headers</span><span class="p">)</span>  <span class="c1"># 设置请求头
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">progress_file</span> <span class="o">=</span> <span class="s">"crawl_progress_v4.json"</span>  <span class="c1"># 进度保存文件
+</span></code></pre></div></div>
+
+<h3 id="103-进度加载与保存">10.3 进度加载与保存</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">load_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""加载爬取进度"""</span>
+        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">progress_file</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">progress_file</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># 读取已完成章节
+</span>            <span class="k">except</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">{</span><span class="s">"completed_chapters"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"failed_chapters"</span><span class="p">:</span> <span class="p">[]}</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s">"completed_chapters"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"failed_chapters"</span><span class="p">:</span> <span class="p">[]}</span>
+
+    <span class="k">def</span> <span class="nf">save_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
+        <span class="s">"""保存爬取进度"""</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">progress_file</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 保存为json
+</span></code></pre></div></div>
+
+<h3 id="104-检查章节url是否存在">10.4 检查章节URL是否存在</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">test_chapter_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chapter_num</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"https://www.kanshudashi.com/book/hbwlll-</span><span class="si">{</span><span class="n">chapter_num</span><span class="si">}</span><span class="s">.html"</span>  <span class="c1"># 拼接章节链接
+</span>        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">get_text</span><span class="p">()</span>
+                <span class="c1"># 判断页面内容是否像小说正文
+</span>                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="ow">and</span> <span class="p">(</span><span class="s">'这是我'</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="s">'师父'</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="s">'施主'</span> <span class="ow">in</span> <span class="n">content</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<h3 id="105-获取章节标题">10.5 获取章节标题</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">get_chapter_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chapter_num</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"https://www.kanshudashi.com/book/hbwlll-</span><span class="si">{</span><span class="n">chapter_num</span><span class="si">}</span><span class="s">.html"</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+                <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'h1'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'h2'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'chapter-title'</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">title</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="sa">f</span><span class="s">"第</span><span class="si">{</span><span class="n">chapter_num</span><span class="si">}</span><span class="s">章"</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s">"第</span><span class="si">{</span><span class="n">chapter_num</span><span class="si">}</span><span class="s">章"</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s">"第</span><span class="si">{</span><span class="n">chapter_num</span><span class="si">}</span><span class="s">章"</span>
+</code></pre></div></div>
+
+<h3 id="106-获取所有章节链接">10.6 获取所有章节链接</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">get_all_chapter_links</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">all_chapters</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 存储所有章节
+</span>        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># 方式1：从目录页提取
+</span>            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">novel_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+            <span class="n">chapters</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">extract_chapters_from_page</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">chapters</span><span class="p">:</span>
+                <span class="n">all_chapters</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">chapters</span><span class="p">)</span>
+            <span class="c1"># 方式2：遍历所有可能的章节号，测试是否存在
+</span>            <span class="n">test_ranges</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">101</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">...</span> <span class="p">]</span>  <span class="c1"># 章节号分段
+</span>            <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">test_ranges</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">test_chapter_url</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+                        <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_chapter_title</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                        <span class="n">all_chapters</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="s">'title'</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="s">'url'</span><span class="p">:</span> <span class="sa">f</span><span class="s">"https://www.kanshudashi.com/book/hbwlll-</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">.html"</span><span class="p">})</span>
+                    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># 防止请求过快
+</span>            <span class="c1"># 去重、排序
+</span>            <span class="p">...</span>
+            <span class="k">return</span> <span class="n">unique_chapters</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"获取章节列表失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<h3 id="107-提取章节链接辅助函数">10.7 提取章节链接（辅助函数）</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">extract_chapters_from_page</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">soup</span><span class="p">):</span>
+        <span class="n">chapters</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">all_links</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">all_links</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">Tag</span><span class="p">):</span>
+                <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">link</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">href</span> <span class="ow">and</span> <span class="n">text</span> <span class="ow">and</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s">'/book/hbwlll-\d+\.html'</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">href</span><span class="p">)):</span>
+                    <span class="n">chapters</span><span class="p">.</span><span class="n">append</span><span class="p">({</span><span class="s">'title'</span><span class="p">:</span> <span class="n">text</span><span class="p">,</span> <span class="s">'url'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">base_url</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">href</span><span class="p">)})</span>
+        <span class="k">return</span> <span class="n">chapters</span>
+</code></pre></div></div>
+
+<h3 id="108-获取章节内容">10.8 获取章节内容</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">get_chapter_content</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chapter_url</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">chapter_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'h1'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'h2'</span><span class="p">)</span> <span class="ow">or</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'chapter-title'</span><span class="p">)</span>
+            <span class="n">title_text</span> <span class="o">=</span> <span class="n">title</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="n">title</span> <span class="k">else</span> <span class="s">"未知章节"</span>
+            <span class="c1"># 多种选择器尝试正文div
+</span>            <span class="n">selectors</span> <span class="o">=</span> <span class="p">[</span> <span class="s">'div.content'</span><span class="p">,</span> <span class="s">'div#content'</span><span class="p">,</span> <span class="p">...</span> <span class="p">]</span>
+            <span class="k">for</span> <span class="n">selector</span> <span class="ow">in</span> <span class="n">selectors</span><span class="p">:</span>
+                <span class="n">content_div</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">select_one</span><span class="p">(</span><span class="n">selector</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">content_div</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">content_div</span><span class="p">:</span>
+                <span class="c1"># 兜底：找包含大量文本的div
+</span>                <span class="p">...</span>
+            <span class="k">if</span> <span class="n">content_div</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">content_div</span><span class="p">.</span><span class="n">get_text</span><span class="p">()</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s">'\s+'</span><span class="p">,</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">,</span> <span class="n">content</span><span class="p">).</span><span class="n">strip</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">title_text</span><span class="p">,</span> <span class="n">content</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">title_text</span><span class="p">,</span> <span class="s">"内容获取失败"</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"获取章节内容失败: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s">"获取失败"</span><span class="p">,</span> <span class="sa">f</span><span class="s">"错误: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">"</span>
+</code></pre></div></div>
+
+<h3 id="109-主流程爬取整本小说">10.9 主流程：爬取整本小说</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">crawl_novel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_chapters</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">resume</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"开始爬取《天眼风水师》完整版..."</span><span class="p">)</span>
+        <span class="n">progress</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">load_progress</span><span class="p">()</span> <span class="k">if</span> <span class="n">resume</span> <span class="k">else</span> <span class="p">{</span><span class="s">"completed_chapters"</span><span class="p">:</span> <span class="p">[],</span> <span class="s">"failed_chapters"</span><span class="p">:</span> <span class="p">[]}</span>
+        <span class="n">completed_urls</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">progress</span><span class="p">[</span><span class="s">"completed_chapters"</span><span class="p">])</span>
+        <span class="n">chapters</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_all_chapter_links</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">chapters</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"未找到章节列表"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+        <span class="k">if</span> <span class="n">resume</span><span class="p">:</span>
+            <span class="n">chapters</span> <span class="o">=</span> <span class="p">[</span><span class="n">ch</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">chapters</span> <span class="k">if</span> <span class="n">ch</span><span class="p">[</span><span class="s">'url'</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">completed_urls</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">max_chapters</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">chapters</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_chapters</span><span class="p">:</span>
+            <span class="n">chapters</span> <span class="o">=</span> <span class="n">chapters</span><span class="p">[:</span><span class="n">max_chapters</span><span class="p">]</span>
+        <span class="n">novel_content</span> <span class="o">=</span> <span class="p">[</span><span class="s">"《天眼风水师》"</span><span class="p">,</span> <span class="p">...]</span>  <span class="c1"># 小说元信息
+</span>        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">chapter</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">chapters</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"正在爬取第 </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chapters</span><span class="p">)</span><span class="si">}</span><span class="s"> 章: </span><span class="si">{</span><span class="n">chapter</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="n">title</span><span class="p">,</span> <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_chapter_content</span><span class="p">(</span><span class="n">chapter</span><span class="p">[</span><span class="s">'url'</span><span class="p">])</span>
+            <span class="k">if</span> <span class="s">"获取失败"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">title</span> <span class="ow">and</span> <span class="s">"内容获取失败"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">content</span><span class="p">:</span>
+                <span class="n">novel_content</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="se">\n</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+                <span class="n">novel_content</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"-"</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
+                <span class="n">novel_content</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+                <span class="n">novel_content</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span> <span class="o">+</span> <span class="s">"="</span> <span class="o">*</span> <span class="mi">50</span> <span class="o">+</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+                <span class="n">progress</span><span class="p">[</span><span class="s">"completed_chapters"</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">chapter</span><span class="p">[</span><span class="s">'url'</span><span class="p">])</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">save_progress</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"章节 </span><span class="si">{</span><span class="n">chapter</span><span class="p">[</span><span class="s">'title'</span><span class="p">]</span><span class="si">}</span><span class="s"> 爬取失败"</span><span class="p">)</span>
+                <span class="n">progress</span><span class="p">[</span><span class="s">"failed_chapters"</span><span class="p">].</span><span class="n">append</span><span class="p">({</span><span class="s">"title"</span><span class="p">:</span> <span class="n">chapter</span><span class="p">[</span><span class="s">'title'</span><span class="p">],</span> <span class="s">"url"</span><span class="p">:</span> <span class="n">chapter</span><span class="p">[</span><span class="s">'url'</span><span class="p">],</span> <span class="s">"error"</span><span class="p">:</span> <span class="n">content</span><span class="p">})</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">save_progress</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="s">"天眼风水师_完整版_v4.txt"</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">novel_content</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="se">\n</span><span class="s">爬取完成！小说已保存为: </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"成功爬取: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">progress</span><span class="p">[</span><span class="s">'completed_chapters'</span><span class="p">])</span><span class="si">}</span><span class="s"> 章"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"失败章节: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">progress</span><span class="p">[</span><span class="s">'failed_chapters'</span><span class="p">])</span><span class="si">}</span><span class="s"> 章"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filename</span>
+</code></pre></div></div>
+
+<h3 id="1010-程序入口">10.10 程序入口</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">crawler</span> <span class="o">=</span> <span class="n">NovelCrawlerV4</span><span class="p">()</span>
+    <span class="n">crawler</span><span class="p">.</span><span class="n">crawl_novel</span><span class="p">(</span><span class="n">max_chapters</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">resume</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<hr />
+
+<blockquote>
+  <p>以上为 crawl_novel_v4.py 的主要结构和关键函数逐行讲解。建议新手结合实际代码和注释多调试、多尝试，遇到问题多查文档和报错信息。</p>
+</blockquote>
+
+  </div>
+
+</article>
+
+    </main>
+  </div>
+  <script src="/hacker-news-ai/assets/js/main.js"></script>
+</body>
+</html> 

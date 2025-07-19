@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-07-17 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Hackers Leverage Microsoft Teams to Spread Matanbuchus 3.0 Malware to Targeted Firms</a></li>
+      
+        <li><a href="#article-2">UNC6148 Backdoors Fully-Patched SonicWall SMA 100 Series Devices with OVERSTEP Rootkit</a></li>
+      
+        <li><a href="#article-3">Critical Golden dMSA Attack in Windows Server 2025 Enables Cross-Domain Attacks and Persistent Access</a></li>
+      
+        <li><a href="#article-4">AI Agents Act Like Employees With Root Access—Here's How to Regain Control</a></li>
+      
+        <li><a href="#article-5">New Konfety Malware Variant Evades Detection by Manipulating APKs and Dynamic Code</a></li>
+      
+        <li><a href="#article-6">Between Buzz and Reality: The CTEM Conversation We All Need</a></li>
+      
+        <li><a href="#article-7">Deepfakes. Fake Recruiters. Cloned CFOs — Learn How to Stop AI-Driven Attacks in Real Time</a></li>
+      
+        <li><a href="#article-8">Urgent: Google Releases Critical Chrome Update for CVE-2025-6558 Exploit Active in the Wild</a></li>
+      
+        <li><a href="#article-9">Google AI "Big Sleep" Stops Exploitation of Critical SQLite Vulnerability Before Hackers Act</a></li>
+      
+        <li><a href="#article-10">Hyper-Volumetric DDoS Attacks Reach Record 7.3 Tbps, Targeting Key Global Sectors</a></li>
+      
+        <li><a href="#article-11">Newly Emerged GLOBAL GROUP RaaS Expands Operations with AI-Driven Negotiation Tools</a></li>
+      
+        <li><a href="#article-12">State-Backed HazyBeacon Malware Uses AWS Lambda to Steal Data from SE Asian Governments</a></li>
+      
+        <li><a href="#article-13">Securing Agentic AI: How to Protect the Invisible Identity Access</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-07-17-ai创业新闻">2025-07-17 AI创业新闻</h1>
+
+<h2 id="hackers-leverage-microsoft-teams-to-spread-matanbuchus-30-malware-to-targeted-firms"><a id="article-1"></a>Hackers Leverage Microsoft Teams to Spread Matanbuchus 3.0 Malware to Targeted Firms</h2>
+
+<p>Cybersecurity researchers have flagged a new variant of a known malware loader called
+Matanbuchus
+that packs in significant features to enhance its stealth and evade detection. Matanbuchus is the name given to a malware-as-a-service (MaaS) offering that can act as a conduit for
+next-stage payloads
+, including Cobalt Strike beacons and ransomware. First
+advertised
+in February 2021 on Russian-speaking cybercrime forums for a rental price of $2,500, the malware has been put to use as part of
+ClickFix-like lures
+to trick users visiting legitimate-but-compromised sites not running it. Matanbuchus stands out among loaders because it’s not usually spread through spam emails or drive-by downloads.</p>
+
+<p>Instead, it’s often deployed using hands-on social engineering, where attackers trick users directly. In some cases, it supports the kind of initial access used by brokers who sell entry to ransomware groups. This makes it more targeted and coordinated than typical commodity loaders. The latest version of the loader, tracked as Matanbuchus 3.0, incorporates several new features, including improved communication protocol techniques, in-memory capabilities, enhanced obfuscation methods, CMD and PowerShell reverse shell support, and the ability to run next-stage DLL, EXE, and shellcode payloads, per Morphisec.</p>
+
+<p>The cybersecurity company said it observed the malware in an incident earlier this month where an unnamed company was targeted via external Microsoft Teams calls that impersonated an IT help desk and tricked employees into launching Quick Assist for remote access and then executing a PowerShell script that deployed Matanbuchus. It’s worth noting that similar social engineering tactics have been
+employed
+by threat actors associated with the Black Basta ransomware operation. “Victims are carefully targeted and persuaded to execute a script that triggers the download of an archive,” Morphisec CTO Michael Gorelik
+said
+. “This archive contains a renamed Notepad++ updater (GUP), a slightly modified configuration XML file, and a malicious side-loaded DLL representing the Matanbuchus loader.”
+Matanbuchus 3.0 has been advertised publicly for a monthly price of $10,000 for the HTTPS version and $15,000 for the DNS version.</p>
+
+<p>Once launched, the malware collects system information and iterates over the list of running processes to determine the presence of security tools. It also checks the status of its process to check if it’s running with administrative privileges. It then sends the gathered details to a command-and-control (C2) server to receive additional payloads in the form of MSI installers and portable executables. Persistence on the shot is achieved by setting up a scheduled task.</p>
+
+<p>“While it sounds simple, Matanbuchus developers implemented advanced techniques to schedule a task through the usage of
+COM
+and injection of shellcode,” Gorelik explained. “The shellcode itself is interesting; it implements a relatively basic API resolution (simple string comparisons), and a sophisticated COM execution that manipulates the
+ITaskService
+.”
+The loader also comes fitted with features that can be invoked remotely by the C2 server to collect all executing processes, running services, and a list of installed applications. “The Matanbuchus 3.0 Malware-as-a-Service has evolved into a sophisticated threat,” Gorelik said. “This updated version introduces advanced techniques such as improved communication protocols, in-memory stealth, enhanced obfuscation, and support for WQL queries, CMD, and PowerShell reverse shells.”
+“The loader’s ability to execute regsvr32, rundll32, msiexec, or process hollowing commands underscores its versatility, making it a significant risk to compromised systems.”
+As malware-as-a-service evolves, Matanbuchus 3.0 fits into a broader trend of stealth-first loaders that rely on LOLBins (living-off-the-land binaries), COM object hijacking, and PowerShell stagers to stay under the radar.</p>
+
+<p>Threat researchers are increasingly mapping these loaders as part of attack surface management strategies and linking them to abuse of enterprise collaboration tools like Microsoft Teams and Zoom. Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="unc6148-backdoors-fully-patched-sonicwall-sma-100-series-devices-with-overstep-rootkit"><a id="article-2"></a>UNC6148 Backdoors Fully-Patched SonicWall SMA 100 Series Devices with OVERSTEP Rootkit</h2>
+
+<p>A threat activity cluster has been observed targeting fully-patched
+end-of-life
+SonicWall Secure Mobile Access (SMA) 100 series appliances as part of a campaign designed to drop a backdoor called
+OVERSTEP
+. The malicious activity, dating back to at least October 2024, has been
+attributed
+by the Google Threat Intelligence Group (GTIG) to a hacking crew it tracks as
+UNC6148
+. The number of known victims is “limited” at this stage. The tech giant assessed with high confidence that the threat actor is “leveraging credentials and one-time password (OTP) seeds stolen during previous intrusions, allowing them to regain access even after organizations have applied security updates.”
+“Analysis of network traffic metadata records suggests that UNC6148 may have initially exfiltrated these credentials from the SMA appliance as early as January 2025.”
+The exact initial access vector used to deliver the malware is currently not known due to the steps taken by the threat actors to remove log entries.</p>
+
+<p>But it’s believed that access may have been gained through the exploitation of known security flaws such as
+CVE-2021-20035
+,
+CVE-2021-20038, CVE-2021-20039
+,
+CVE-2024-38475
+, or
+CVE-2025-32819
+. Alternately, the tech giant’s threat intelligence team theorized that the administrator credentials could’ve been obtained through information-stealing logs or acquired from credential marketplaces. However, it said it didn’t find any evidence to back up this hypothesis. Upon gaining access, the threat actors have been found to establish an SSL-VPN session and spawn a reverse shell, although how this was achieved remains a mystery given that shell access should not be possible by design on these appliances.</p>
+
+<p>It’s believed that it may have been pulled off by means of a zero-day flaw. The reverse shell is used to run reconnaissance and file manipulation commands, not to mention export and import settings to the SMA appliance, suggesting that UNC6148 may have altered an exported settings file offline to include new rules so that their operations are not interrupted or blocked by the access gateways. The attacks culminate in the deployment of a previously undocumented implant named OVERSTEP that’s capable of modifying the appliance’s boot process to maintain persistent access, as well as credential theft and concealing its own components to evade detection by patching various file system-related functions. This is achieved by implementing a usermode rootkit through the hijacked standard library functions open and readdir, allowing it to hide the artifacts associated with the attack.</p>
+
+<p>The malware also hooks into the write API function to receive commands from an attacker-controlled server in the form of embedded within web requests -
+dobackshell
+, which starts a reverse shell to the specified IP address and port
+dopasswords
+, which creates a TAR archive of the files /tmp/temp.db, /etc/EasyAccess/var/conf/persist.db, and /etc/EasyAccess/var/cert, and save it in the location “/usr/src/EasyAccess/www/htdocs/” so that it can be downloaded via a web browser
+“UNC6148 modified the legitimate RC file ‘/etc/rc.d/rc.fwboot’ to achieve persistence for OVERSTEP,” GTIG said. “The changes meant that whenever the appliance was rebooted, the OVERSTEP binary would be loaded into the running file system on the appliance.”
+Once the deployment step is complete, the threat actor then proceeds to clear the system logs and reboots the firewall to activate the execution of the C-based backdoor. The malware also attempts to remove the command execution traces from different log files, including httpd.log, http_request.log, and inotify.log. “The actor’s success in hiding their tracks is largely due to OVERSTEP’s capability to selectively delete log entries [from the three log files],” Google said.</p>
+
+<p>“This anti-forensic measure, combined with a lack of shell history on disk, significantly reduces visibility into the actor’s secondary objectives.”
+Google has evaluated with medium confidence that UNC6148 may have weaponized an unknown, zero-day remote code execution vulnerability to deploy OVERSTEP on targeted SonicWall SMA appliances. Furthermore, it’s suspected that the operations are carried out with the intent to facilitate data theft and extortion operations, and even ransomware deployment. This connection stems from the fact that one of the organizations that was targeted by UNC6148 was posted on the data leak site operated by World Leaks, an extortion gang run by individuals previously associated with the Hunters International ransomware scheme. It’s worth noting that Hunters International recently
+shuttered
+its criminal enterprise.</p>
+
+<p>According to Google, UNC6148 exhibits tactical overlaps with prior exploitation of SonicWall SMA devices observed in July 2023 that involved an unknown threat actor deploying a web shell, a hiding mechanism, and a way to ensure persistence across firmware upgrades, per
+Truesec
+. The exploitation activity was subsequently
+linked
+by security researcher Stephan Berger to the deployment of the Abyss ransomware. The findings once again highlight how threat actors are increasingly focusing on edge network systems that aren’t usually covered by common security tools like Endpoint Detection and Response (EDR) or antivirus software and slip into target networks unnoticed. “Organizations should acquire disk images for forensic analysis to avoid interference from the rootkit anti-forensic capabilities.</p>
+
+<p>Organizations may need to engage with SonicWall to capture disk images from physical appliances,” Google said. When reached for comment on the findings, SonicWall told The Hacker News that it has been “working closely” with GTIG throughout the whole process, and that it plans to accelerate the end-of-support date for the SMA 100 series. It also said it intends to support existing SMA 100 deployments with firmware updates throughout the remaining lifecycle. “In response to the evolving threat landscape – and in alignment with our commitment to transparency and customer protection – SonicWall will accelerate the end-of-support date for the SMA 100 series from October 1, 2027, to December 31, 2025,” the company said.</p>
+
+<p>“The SMA 100 has already reached end-of-sale status, as reflected in our Product Lifecycle Table, and this update aligns with our long-term strategy and industry direction.”
+“SonicWall has been actively guiding customers toward more modern, secure solutions such as our Cloud Secure Edge service and the SMA 1000 series. These platforms are built on advanced technology stacks and offer stronger security, greater scalability, and an improved user experience – better suited for today’s distributed and cloud-connected environments. This mirrors broader industry trends, where leading vendors like Cisco and Palo Alto Networks have moved customers from legacy hardware to cloud-native architectures.”
+(The story was updated after publication to include a response from SonicWall.)
+Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-golden-dmsa-attack-in-windows-server-2025-enables-cross-domain-attacks-and-persistent-access"><a id="article-3"></a>Critical Golden dMSA Attack in Windows Server 2025 Enables Cross-Domain Attacks and Persistent Access</h2>
+
+<p>Cybersecurity researchers have disclosed what they say is a “critical design flaw” in delegated Managed Service Accounts (dMSAs) introduced in Windows Server 2025. “The flaw can result in high-impact attacks, enabling cross-domain lateral movement and persistent access to all managed service accounts and their resources across Active Directory indefinitely,” Semperis said in a report shared with The Hacker News. Put differently, successful exploitation could allow adversaries to sidestep authentication guardrails and generate passwords for all Delegated Managed Service Accounts (
+dMSAs
+) and group Managed Service Accounts (
+gMSAs
+) and their associated service accounts. The persistence and privilege escalation method has been codenamed
+Golden dMSA
+, with the cybersecurity company deeming it as low complexity owing to the fact that the vulnerability simplifies brute-force password generation.</p>
+
+<p>However, in order for bad actors to exploit it, they must already be in possession of a Key Distribution Service (KDS)
+root key
+that’s typically only available to privileged accounts, such as root Domain Admins, Enterprise Admins, and SYSTEM. Described as the crown jewel of Microsoft’s gMSA infrastructure, the KDS root key serves as a master key, allowing an attacker to derive the current password for any dMSA or gMSA account without having to connect to the domain controller (DC). “The attack leverages a critical design flaw: A structure that’s used for the password-generation computation contains predictable time-based components with only 1,024 possible combinations, making brute-force password generation computationally trivial,” security researcher Adi Malyanker
+said
+. Delegated Managed Service Accounts is a new feature
+introduced
+by Microsoft that facilitates migration from an existing legacy service account.</p>
+
+<p>It was introduced in Windows Server 2025 as a way to counter Kerberoasting attacks. The machine accounts bind authentication directly to explicitly authorized machines in Active Directory (AD), thus eliminating the possibility of credential theft. By tying authentication to device identity, only specified machine identities mapped in AD can access the account. Golden dMSA, similar to
+Golden gMSA
+Active Directory
+attacks
+, plays out over four steps once an attacker has obtained elevated privileges within a domain -
+Extracting KDS root key material by elevating to SYSTEM privileges on one of the domain controllers
+Enumerating dMSA accounts using
+LsaOpenPolicy
+and
+LsaLookupSids
+APIs or via a Lightweight Directory Access Protocol (
+LDAP
+)-based approach
+Identifying the
+ManagedPasswordID
+attribute and password hashes through targeted guessing
+Generating valid passwords (i.e., Kerberos tickets) for any gMSA or dMSA associated with the compromised key and testing them via
+Pass the Hash
+or
+Overpass the Hash
+techniques
+“This process requires no additional privileged access once the KDS root key is obtained, making it a particularly dangerous persistence method,” Malyanker said.</p>
+
+<p>“The attack highlights the critical trust boundary of managed service accounts. They rely on domain-level cryptographic keys for security. Although automatic password rotation provides excellent protection against typical credential attacks, Domain Admins, DnsAdmins, and Print Operators can bypass these protections entirely and compromise all of the dMSAs and gMSAs in the forest.”
+Semperis noted that the Golden dMSA technique turns the breach into a forest-wide persistent backdoor, given that compromising the KDS root key from any single domain within the forest is enough to breach every dMSA account across all domains in that forest. In other words, a single KDS root key extraction can be weaponized to achieve cross-domain account compromise, forest-wide credential harvesting, and lateral movement across domains using the compromised dMSA accounts.</p>
+
+<p>“Even in environments with multiple KDS root keys, the system consistently uses the first (oldest) KDS root key for compatibility reasons,” Malyanker pointed out. “This means that the original key we’ve compromised could be preserved by Microsoft’s design – creating a persistent backdoor that could last for years.”
+Even more concerning is that the attack completely sidesteps normal
+Credential Guard
+protections, which are used to secure NTLM password hashes, Kerberos Ticket Granting Tickets (TGTs), and credentials so that only privileged system software can access them. Following responsible disclosure on May 27, 2025, Microsoft said, “If you have the secrets used to derive the key, you can authenticate as that user. These features have never been intended to protect against a compromise of a domain controller.” Semperis has also
+released
+an open-source as proof-of-concept (PoC) to demonstrate the attack.</p>
+
+<p>“What starts as one DC compromise escalates to owning every dMSA-protected service across an entire enterprise forest,” Malyanker said. “It’s not just privilege escalation. It’s enterprise-wide digital domination through a single cryptographic vulnerability.”
+Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ai-agents-act-like-employees-with-root-accessheres-how-to-regain-control"><a id="article-4"></a>AI Agents Act Like Employees With Root Access—Here’s How to Regain Control</h2>
+
+<p>The AI gold rush is on. But without identity-first security, every deployment becomes an open door. Most organizations secure native AI like a web app, but it behaves more like a junior employee with root access and no manager. From Hype to High Stakes
+Generative AI has moved beyond the hype cycle.</p>
+
+<p>Enterprises are:
+Deploying LLM copilots to accelerate software development
+Automating customer service workflows with AI agents
+Integrating AI into financial operations and decision-making
+Whether building with open-source models or plugging into platforms like OpenAI or Anthropic, the goal is speed and scale. But what most teams miss is this:
+Every LLM access point or website is a new identity edge. And every integration adds risk unless identity and device posture are enforced. What Is the AI Build vs.</p>
+
+<dl>
+  <dt>Buy Dilemma? Most enterprises face a pivotal decision:</dt>
+  <dt>Build</dt>
+  <dd>Create in-house agents tailored to internal systems and workflows
+Buy</dd>
+  <dd>Adopt commercial AI tools and SaaS integrations
+The threat surface doesn’t care which path you choose. Custom-built agents
+expand internal attack surfaces, especially if access control and identity segmentation aren’t enforced at runtime. Third-party tools
+are often misused or accessed by unauthorized users, or more commonly, corporate users on personal accounts, where governance gaps exist.</dd>
+</dl>
+
+<p>Securing AI isn’t about the algorithm, it’s about who (or what device) is talking to it, and what permissions that interaction unlocks. What’s Actually at Risk? AI agents are agentic which is to say they can take actions on a human’s behalf and access data like a human would. They’re often embedded in business-critical systems, including:
+Source code repositories
+Finance and payroll applications
+Email inboxes
+CRM and ERP platforms
+Customer support logs and case history
+Once a user or device is compromised, the AI agent becomes a high-speed backdoor to sensitive data.</p>
+
+<p>These systems are highly privileged, and AI amplifies attacker access. Common AI-Specific Threat Vectors:
+Identity-based attacks
+like credential stuffing or session hijacking targeting LLM APIs
+Misconfigured agents
+with excessive permissions and no scoped role-based access control (RBAC)
+Weak session integrity
+where infected or insecure devices request privileged actions through LLMs
+How to Secure Enterprise AI Access
+To eliminate AI access risk without killing innovation, you need:
+Phishing-resistant MFA
+for every user and device accessing LLMs or agent APIs
+Granular RBAC
+tied to business roles—developers shouldn’t access finance models
+Continuous device trust enforcement
+, using signals from EDR, MDM, and ZTNA
+AI access control must evolve from a one-time login check to a real-time policy engine that reflects current identity and device risk. The Secure AI Access Checklist:
+No shared secrets
+No trusted device assumptions
+No over-permissioned agents
+No productivity tax
+The Fix: Secure AI Without Slowing Down
+You don’t have to trade security for speed. With the right architecture, it’s possible to:
+Block unauthorized users and devices by default
+Eliminate trust assumptions at every layer
+Secure AI workflows without interrupting legitimate use
+Beyond Identity makes this possible today.</p>
+
+<p>Beyond Identity’s IAM platform makes unauthorized access to AI systems impossible by enforcing phishing-resistant, device-aware, continuous access control for AI systems. No passwords. No shared secrets. No untrustworthy devices.</p>
+
+<p>Beyond Identity is also prototyping a secure-by-design architecture for in-house AI agents that binds agent permissions to verified user identity and device posture—enforcing RBAC at runtime and continuously evaluating risk signals from EDR, MDM, and ZTNA. For instance, if an engineer loses CrowdStrike full disk access, the agent immediately blocks access to sensitive data until posture is remediated. Want a First Look? Register for Beyond Identity’s webinar
+to get a behind-the-scenes look at
+how a Global Head of IT Security built and secured his internal, enterprise AI agents that’s now used by 1,000+ employees.</p>
+
+<p>You’ll see a demo of how one of Fortune’s Fastest Growing Companies uses phishing-resistant, device-bound access controls to make unauthorized access impossible. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-konfety-malware-variant-evades-detection-by-manipulating-apks-and-dynamic-code"><a id="article-5"></a>New Konfety Malware Variant Evades Detection by Manipulating APKs and Dynamic Code</h2>
+
+<p>Cybersecurity researchers have discovered a new, sophisticated variant of a known Android malware referred to as
+Konfety
+that leverages the evil twin technique to enable ad fraud. The sneaky approach essentially involves a scenario wherein two variants of an application share the same package name: A benign “decoy” app that’s hosted on the Google Play Store and its evil twin, which is distributed via third-party sources. It’s worth pointing out that the decoy apps don’t have to be necessarily published by threat actors themselves and could be legitimate. The only caveat is that the malicious apps share the exact same package names as their real counterparts already available on the Play Store.</p>
+
+<p>“The threat actors behind Konfety are highly adaptable, consistently altering their targeted ad networks and updating their methods to evade detection,” Zimperium zLabs researcher Fernando Ortega
+said
+. “This latest variant demonstrates their sophistication by specifically tampering with the APK’s ZIP structure.”
+By using malformed APKs, the tactic allows threat actors to sidestep detection and challenge reverse engineering efforts. Besides dynamically loading the main DEX (Dalvik Executable) payload at runtime, the newly discovered versions enable the general-purpose bit flag by setting it to “
+Bit 0
+,” signaling to the system that the file is encrypted. This behavior, in turn, triggers a false password prompt when attempting to inspect the Android package, thereby blocking access and complicating attempts to analyze its contents.</p>
+
+<p>The second technique entails falsely declaring the use of BZIP compression method in the app’s manifest XML file (“AndroidManifest.xml”), causing analysis tools like APKTool and JADX to crash due to a parsing failure. A similar compression-based defense evasion technique was previously highlighted by Kaspersky in another Android malware called
+SoumniBot
+. The use of dynamic code loading to execute the primary payload affords added stealth during initial scans or reverse engineering, Zimperium noted. During execution, the DEX payload is decrypted and loaded directly into memory without attracting any red flags.</p>
+
+<p>“This multi-layered obfuscation approach, combining encrypted assets, runtime code injection, and deceptive manifest declarations, demonstrates the evolving sophistication of the Konfety operation and its continuous efforts to evade analysis and bypass detection mechanisms,” Ortega said. Like the previous iteration reported by HUMAN last year, Konfety abuses the CaramelAds software development kit (SDK) to fetch ads, deliver payloads, and maintain communication with attacker-controlled servers. It comes with capabilities to redirect users to malicious websites, prompt unwanted app installs, and trigger persistent spam-like browser notifications. Furthermore, the malware hides its app icon and uses geofencing to alter its functionality based on the victim’s region.</p>
+
+<p>The development comes as ANY.RUN detailed a Chinese Android
+packer
+tool known as Ducex that’s mainly designed to conceal embedded payloads like
+Triada
+within fake Telegram apps. “The packer employs serious obfuscation through function encryption using a modified RC4 algorithm with added shuffling,” ANY.RUN researcher Alina Markova
+said
+. “Ducex creates major roadblocks for debugging. It performs APK signature verification, failing if the app is re-signed.</p>
+
+<p>It also employs self-debugging using fork and ptrace to block external tracing.”
+On top of that, Ducex is designed to detect the presence of popular analysis tools such as Frida, Xposed, and Substrate, and if present, terminate itself. The findings also follow a new study published by a team of researchers from TU Wien and the University of Bayreuth about a novel technique dubbed TapTrap that can be weaponized by a malicious app to covertly bypass Android’s permission system and gain access to sensitive data or execute destructive actions. The attack, in a nutshell, hijacks user interactions on Android devices by overlaying animations or games on a user’s screen, while surreptitiously launching user interface elements underneath that trick users into performing undesirable actions, such as installing malware or granting the app intrusive permissions. “Normally, Android shows an animation when the screen changes, such as the new screen sliding or fading in,” researchers Philipp Beer, Marco Squarcina, Sebastian Roth, and Martina Lindorfer
+said
+.</p>
+
+<p>“However, the app can tell the system that a custom animation should be used instead that is long-running and makes the new screen fully transparent, keeping it hidden from you.”
+“Any taps you make during this animation go to the hidden screen, not the visible app. The app can then use this to lure you into tapping on specific areas of the screen that correspond to sensitive actions on the hidden screen, allowing it to perform actions without your knowledge.”
+In a hypothetical attack scenario, a threat actor-released game installed by the victim can secretly open a web browser session and dupe them into granting camera permissions to a malicious website. That said, TapTrap’s impact extends beyond the Android ecosystem, opening the door to tapjacking and web clickjacking attacks. The issue has been addressed in
+GrapheneOS
+, Chrome 135 (
+CVE-2025-3067
+), and Firefox 136 (
+CVE-2025-1939
+).</p>
+
+<p>Android 16 continues to remain susceptible to the attack. When reached for comment, Google told The Hacker News that it’s working to mitigate the problem in an upcoming Android update, adding the operating system already has defenses in place to prevent
+tapjacking attacks
+. It also pointed out that there is no evidence of any malicious Play Store apps abusing the technique in the wild. “Android is constantly improving its existing mitigations against tapjacking attacks.</p>
+
+<p>We are aware of this research and we will be addressing this issue in a future update,” a Google spokesperson said. “Google Play has policies in place to keep users safe that all developers must adhere to, and if we find that an app has violated our policies, we take appropriate action.”
+(The story was updated after publication to include a response from Google on the TapTrap attack.)
+Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="between-buzz-and-reality-the-ctem-conversation-we-all-need"><a id="article-6"></a>Between Buzz and Reality: The CTEM Conversation We All Need</h2>
+
+<p>I had the honor of hosting the first episode of the Xposure Podcast live from Xposure Summit 2025. And I couldn’t have asked for a better kickoff panel: three cybersecurity leaders who don’t just talk security, they live it. Let me introduce them. Alex Delay
+, CISO at IDB Bank, knows what it means to defend a highly regulated environment.</p>
+
+<p>Ben Mead
+, Director of Cybersecurity at Avidity Biosciences, brings a forward-thinking security perspective that reflects the innovation behind Avidity’s targeted RNA therapeutics. Last but not least,
+Michael Francess
+, Director of Cybersecurity Advanced Threat at Wyndham Hotels and Resorts, leads the charge in protecting the franchise. Each brought a unique vantage point to a common challenge: applying Continuous Threat Exposure Management (CTEM) to complex production environments. Gartner made waves in 2023 with a bold prediction: organizations that prioritize CTEM will be
+three times less likely
+to be breached by 2026.</p>
+
+<p>But here’s the kicker - only if it’s operationalized. Speaking with these seasoned defenders, we unpacked the realities and challenges behind the hype of implementing and operationalizing an effective Exposure Management strategy, addressing the following tough questions:
+What does a good CTEM program look like and what are the typical challenges that need to be overcome? How do you optimize cyber and risk reporting to influence board-level decisions? And ultimately, how do you measure the success of your CTEM program?</p>
+
+<p>Challenges, Priorities, and Best Practices
+CTEM isn’t plug-and-play. The panelists’ prescription was clear: start with asset inventory and identity management; weak service accounts, over-permissioned users, legacy logins. None of these are small gaps, they’re wide-open doors that need to be checked frequently. And for all of our panelists, frequency matters - a lot.</p>
+
+<p>Because guess what? Adversaries are constantly challenging defenses too. For internal assets, weekly validation is the rule of thumb. For external-facing assets?</p>
+
+<p>Daily. As they see it, it’s the only way to maintain a constant handle over their constantly changing environments. Surprisingly, Michael pointed to threat intelligence as the backbone of any security testing program. “You need to understand your adversaries, simulate their TTPs, and test your defenses against real-world scenarios, not just patching CVEs.” That’s the key difference between CTEM and vulnerability management.</p>
+
+<p>Vulnerability management is about patching. Exposure management is about figuring out whether your controls actually work to block threats. Reporting: Translating Cyber to Risk Terms
+In the banking industry, like many other highly regulated industries, Alex couldn’t emphasize enough the need to be prepared to answer hard questions asked from regulators. “You
+will
+get challenged on your exposure, your remediation timelines, and your risk treatment.</p>
+
+<p>And that’s a good thing. It forces clarity and accountability”. But even outside regulated industries, the conversation is changing. Boards do not want to hear about CVSS scores.</p>
+
+<p>They want to understand
+risk -
+and that’s a completely different discussion. Is the company’s risk profile going up or down? Where is it concentrated? And what are we doing about it?</p>
+
+<p>Measuring Progress
+Success in CTEM isn’t about counting vulnerabilities; Ben pinned it down when he said he measures the number of exploited attack paths his team has closed. He shared how validating attack paths revealed risky security gaps, like over-permissioned accounts and forgotten assets. Suddenly, risk becomes visible. Others took it in another direction with tabletop exercises that walk leadership through real
+attack scenarios.</p>
+
+<p>It’s not about metrics, it’s about explaining the risk and the consequences. A shift that moves the discussion from noise to signal, and gives the business clarity on what matters:
+where we’re exposed, and what we’re doing about it
+. From Concept to Action
+Want to hear how these defenders are putting CTEM into action without drowning in noise? This episode dives deep into the real questions: where do you start, how do you stay focused on what’s exploitable, and how do you connect it all to business risk?</p>
+
+<p>You’ll hear first-hand how security leaders like Alex, Ben, and Michael are tackling these challenges head-on, with a few surprises along the way…
+🎧Make sure to catch the full conversation on
+Apple Podcast
+and
+Spotify
+Note:
+This article was expertly written and contributed by Aviv Cohen, CMO of Pentera. Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="deepfakes-fake-recruiters-cloned-cfos--learn-how-to-stop-ai-driven-attacks-in-real-time"><a id="article-7"></a>Deepfakes. Fake Recruiters. Cloned CFOs — Learn How to Stop AI-Driven Attacks in Real Time</h2>
+
+<p>Social engineering attacks have entered a new era—and they’re coming fast, smart, and deeply personalized. It’s no longer just suspicious emails in your spam folder. Today’s attackers use generative AI, stolen branding assets, and deepfake tools to mimic your executives, hijack your social channels, and create convincing fakes of your website, emails, and even voice. They don’t just spoof—
+they impersonate.</p>
+
+<p>Modern attackers aren’t relying on chance. They’re running long-term, multi-channel campaigns across email, LinkedIn, SMS, and even support portals—targeting your employees, customers, and partners. Whether it’s a fake recruiter reaching out on LinkedIn, a lookalike login page sent via text, or a cloned CFO demanding a wire transfer, the tactics are faster, more adaptive, and increasingly automated using AI. The result?</p>
+
+<p>Even trained users are falling for sophisticated fakes—because they’re not just phishing links anymore. They’re operations. This Webinar Shows You How to Fight Back
+Join us for a deep dive
+into how
+Doppel’s real-time AI platform
+detects and disrupts social engineering threats before they escalate. You’ll learn how AI can be used not just to spot suspicious signals, but to
+understand attacker behavior
+, track impersonation campaigns across platforms, and respond instantly—before reputational or financial damage occurs.</p>
+
+<p>What You’ll Learn
+The Modern Threat Landscape:
+How AI-powered social engineering campaigns are evolving—and what that means for your current defenses. Real-Time Defense:
+How Doppel identifies impersonation attempts and shuts them down before users engage. Shared Intelligence at Scale:
+How learning from attacks across thousands of brands helps make deception unprofitable. Impersonation attacks are scaling faster than any human team can monitor manually.</p>
+
+<p>Security awareness training isn’t enough. Static detection rules fall short. You need a defense that thinks and adapts in real-time. Doppel’s AI learns from every attack attempt—so your protection keeps getting smarter.</p>
+
+<p>Who Should Attend:
+Security leaders responsible for brand trust and executive protection, SOC teams overwhelmed by phishing and impersonation alerts, and risk, fraud, or threat intelligence professionals seeking faster, smarter signal-to-action. Watch this Webinar
+Don’t wait for an impersonation attack to make the first move. Learn how to fight back—before it happens. Save Your Spot.</p>
+
+<p>Register Now
+→
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="urgent-google-releases-critical-chrome-update-for-cve-2025-6558-exploit-active-in-the-wild"><a id="article-8"></a>Urgent: Google Releases Critical Chrome Update for CVE-2025-6558 Exploit Active in the Wild</h2>
+
+<p>Google on Tuesday rolled out fixes for six security issues in its Chrome web browser, including one that it said has been exploited in the wild. The high-severity vulnerability in question is
+CVE-2025-6558
+(CVSS score: 8.8), which has been described as an incorrect validation of untrusted input in the browser’s ANGLE and GPU components. “Insufficient validation of untrusted input in ANGLE and GPU in Google Chrome prior to 138.0.7204.157 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page,” according to the
+description
+of the flaw from the NIST’s National Vulnerability Database (NVD). ANGLE, short for “Almost Native Graphics Layer Engine,” acts as a translation layer between Chrome’s rendering engine and device-specific graphics drivers.</p>
+
+<p>Vulnerabilities in the module can let attackers escape Chrome’s sandbox by abusing low-level GPU operations that browsers usually keep isolated, making this a rare but powerful path to deeper system access. For most users, a sandbox escape like this means that visiting a malicious site is sufficient to potentially break out of the browser’s security bubble and interact with the underlying system. This is especially critical in targeted attacks where just opening a webpage could trigger a silent compromise without requiring any download or click. Clément Lecigne and Vlad Stolyarov of Google’s Threat Analysis Group (TAG) have been credited with discovering and reporting the zero-day vulnerability on June 23, 2025.</p>
+
+<p>The exact nature of the attacks weaponizing the flaw has not been disclosed, but Google
+acknowledged
+that an “exploit for CVE-2025-6558 exists in the wild.” That said, the discovery by TAG alludes to the possibility of nation-state involvement. The development comes about two weeks after Google addressed another actively exploited Chrome zero-day (
+CVE-2025-6554
+, CVSS score: 8.1), which was also reported by Lecigne on June 25, 2025. Google has resolved a total of five zero-day vulnerabilities in Chrome that have been either actively exploited or demonstrated as a proof-of-concept (PoC) since the start of the year. This includes:
+CVE-2025-2783
+,
+CVE-2025-4664
+,
+CVE-2025-5419
+, and
+CVE-2025-6554
+.</p>
+
+<p>To safeguard against potential threats, it’s advised to update their Chrome browser to versions 138.0.7204.157/.158 for Windows and Apple macOS, and 138.0.7204.157 for Linux. To make sure the latest updates are installed, users can
+navigate
+to More &gt; Help &gt; About Google Chrome, and select Relaunch. Users of other Chromium-based browsers such as Microsoft Edge, Brave, Opera, and Vivaldi are also advised to apply the fixes as and when they become available. Issues like this often fall under broader categories like GPU sandbox escapes, shader-related bugs, or WebGL vulnerabilities.</p>
+
+<p>While not always headline-grabbing, they tend to resurface in chained exploits or targeted attacks. If you follow Chrome security updates, it’s worth keeping an eye out for graphics driver flaws, privilege boundary bypasses, and memory corruption in rendering paths, as they often point to the next round of patch-worthy bugs. Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-ai-big-sleep-stops-exploitation-of-critical-sqlite-vulnerability-before-hackers-act"><a id="article-9"></a>Google AI “Big Sleep” Stops Exploitation of Critical SQLite Vulnerability Before Hackers Act</h2>
+
+<p>Google on Tuesday revealed that its large language model (LLM)-assisted vulnerability discovery framework discovered a security flaw in the SQLite open-source database engine before it could have been exploited in the wild. The vulnerability, tracked as
+CVE-2025-6965
+(CVSS score: 7.2), is a memory corruption flaw affecting all versions prior to 3.50.2. It was discovered by
+Big Sleep
+, an artificial intelligence (AI) agent that was launched by Google last year as part of a collaboration between DeepMind and Google Project Zero. “An attacker who can inject arbitrary SQL statements into an application might be able to cause an integer overflow resulting in read off the end of an array,” SQLite project maintainers
+said
+in an advisory.</p>
+
+<p>The tech giant described CVE-2025-6965 as a critical security issue that was “known only to threat actors and was at risk of being exploited.” Google did not reveal who the threat actors were. “Through the combination of threat intelligence and Big Sleep, Google was able to actually predict that a vulnerability was imminently going to be used and we were able to cut it off beforehand,” Kent Walker, President of Global Affairs at Google and Alphabet,
+said
+. “We believe this is the first time an AI agent has been used to directly foil efforts to exploit a vulnerability in the wild.”
+In October 2024, Big Sleep was
+behind
+the discovery of another flaw in SQLite, a stack buffer underflow vulnerability that could have been exploited to result in a crash or arbitrary code execution. Coinciding with the development, Google has also published a white paper to build secure AI agents such that they have well-defined human controllers, their capabilities are carefully limited to avoid potential rogue actions and sensitive data disclosure, and their actions are observable and transparent.</p>
+
+<p>“Traditional systems security approaches (such as restrictions on agent actions implemented through classical software) lack the contextual awareness needed for versatile agents and can overly restrict utility,” Google’s Santiago (Sal) Díaz, Christoph Kern, and Kara Olive
+said
+. “Conversely, purely reasoning-based security (relying solely on the AI model’s judgment) is insufficient because current LLMs remain susceptible to manipulations like prompt injection and cannot yet offer sufficiently robust guarantees.”
+To mitigate the key risks associated with agent security, the company said it has adopted a hybrid defense-in-depth approach that combines the strengths of both traditional, deterministic controls and dynamic, reasoning-based defenses. The idea is to create robust boundaries around the agent’s operational environment so that the risk of harmful outcomes is significantly mitigated, specifically malicious actions carried out as a result of prompt injection. “This defense-in-depth approach relies on enforced boundaries around the AI agent’s operational environment to prevent potential worst-case scenarios, acting as guardrails even if the agent’s internal reasoning process becomes compromised or misaligned by sophisticated attacks or unexpected inputs,” Google said.</p>
+
+<p>“This multi-layered approach recognizes that neither purely rule-based systems nor purely AI-based judgment are sufficient on their own.”
+Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hyper-volumetric-ddos-attacks-reach-record-73-tbps-targeting-key-global-sectors"><a id="article-10"></a>Hyper-Volumetric DDoS Attacks Reach Record 7.3 Tbps, Targeting Key Global Sectors</h2>
+
+<p>Cloudflare on Tuesday said it mitigated 7.3 million distributed denial-of-service (DDoS) attacks in the second quarter of 2025, a significant drop from
+20.5 million DDoS attacks
+it fended off the previous quarter. “Overall, in Q2 2025, hyper-volumetric DDoS attacks skyrocketed,” Omer Yoachimik and Jorge Pacheco
+said
+. “Cloudflare blocked over 6,500 hyper-volumetric DDoS attacks, an average of 71 per day.”
+In Q1 2025, the company said an 18-day sustained campaign against its own and other critical infrastructure protected by Cloudflare was responsible for 13.5 million of the attacks observed during the time period. Cumulatively, Cloudflare has blocked nearly 28 million DDoS attacks, surpassing the number of attacks it mitigated in all of 2024.</p>
+
+<p>The notable of the attacks in Q2 2025 is a
+staggering DDoS attack
+that peaked at 7.3 terabits per second (Tbps) and 4.8 billion packets per second (Bpps) within a span of 45 seconds. Big traffic spikes like these make headlines—but what often gets missed is how attackers are now combining them with smaller, targeted probes. Instead of just overwhelming systems with brute force, they’re mixing large-scale floods with quiet scans to find weak spots and slip past defenses built to block only the obvious. Layer 3/Layer 4 (L3/4) DDoS attacks
+declined 81% quarter-over-quarter to 3.2 million, while HTTP DDoS attacks rose 9% to 4.1 million.</p>
+
+<p>More than 70% of the HTTP DDoS attacks emanated from known botnets. The most common L3/4 attack vectors were flood attacks conducted over DNS, TCP SYN, and UDP protocols. Telecommunication service providers and carriers were among the most targeted, followed by the Internet, IT services, gaming, and gambling sectors. China, Brazil, Germany, India, South Korea, Turkey, Hong Kong, Vietnam, Russia, and Azerbaijan emerged as the most attacked locations based on the billing country of the Cloudflare customers.</p>
+
+<p>Indonesia, Singapore, Hong Kong, Argentina, and Ukraine were the top five sources of DDoS attacks. The web infrastructure and security company also revealed that the number of hyper-volumetric DDoS attacks exceeding 100 million packets per second (pps) increased by 592% compared to the previous quarter. Another significant aspect is the 68% increase in ransom DDoS attack, which occurs when malicious actors attempt to extort money from an organization by threatening them with a DDoS attack. It also involves scenarios where the attacks are carried out and a ransom is demanded to stop it from happening again.</p>
+
+<p>“While the majority of DDoS attacks are small, hyper-volumetric DDoS attacks are increasing in size and frequency,” Cloudflare said. “Six out of every 100 HTTP DDoS attacks exceed 1M rps, and 5 out of every 10,000 L3/4 DDoS attacks exceed 1 Tbps — a 1,150% QoQ increase.”
+The company further has called attention to a botnet variant dubbed
+DemonBot
+that infects Linux-based systems, predominantly unsecured IoT devices, via open ports or weak credentials to enlist them into a DDoS botnet that can carry out UDP, TCP, and application-layer floods. “Attacks are typically command-and-control (C2) driven and can generate significant volumetric traffic, often targeting gaming, hosting, or enterprise services,” it added. “To avoid infection, leverage antivirus software and domain filtering.”
+Infection vectors like those exploited by DemonBot highlight broader challenges with unsecured IoT exposure, weak SSH credentials, and outdated firmware—common themes across DDoS botnet proliferation.</p>
+
+<p>Related attack strategies, such as TCP reflection, DNS amplification, and burst-layer evasion, are increasingly discussed in Cloudflare’s application-layer threat reports and API security breakdowns. Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="newly-emerged-global-group-raas-expands-operations-with-ai-driven-negotiation-tools"><a id="article-11"></a>Newly Emerged GLOBAL GROUP RaaS Expands Operations with AI-Driven Negotiation Tools</h2>
+
+<p>Cybersecurity researchers have shed light on a new ransomware-as-a-service (RaaS) operation called
+GLOBAL GROUP
+that has targeted a wide range of sectors in Australia, Brazil, Europe, and the United States since its emergence in early June 2025. GLOBAL GROUP was “promoted on the Ramp4u forum by the threat actor known as ‘$$$,’” EclecticIQ researcher Arda Büyükkaya
+said
+. “The same actor controls the BlackLock RaaS and previously managed Mamona ransomware operations.”
+It’s believed that GLOBAL GROUP is a rebranding of BlackLock after the latter’s data leak site was
+defaced
+by the DragonForce ransomware cartel back in March. It’s worth mentioning that BlackLock in itself is a rebrand of another RaaS scheme known as Eldorado.</p>
+
+<p>The financially motivated group has been found to lean heavily on initial access brokers (IABs) to deploy the ransomware by weaponizing access to vulnerable edge appliances from Cisco, Fortinet, and Palo Alto Networks. Also put to use are brute-force utilities for Microsoft Outlook and RDWeb portals. $$$ has acquired Remote Desktop Protocol (RDP) or web shell access to corporate networks, such as those related to law firms, as a way to deploy post-exploitation tools, conduct lateral movement, siphon data, and deploy the ransomware. Outsourcing the infiltration phase to other threat actors, who supply pre-compromised entry points into enterprise networks, allows affiliates to expend their efforts on payload delivery, extortion, and negotiation rather than network penetration.</p>
+
+<p>The RaaS platform comes with a negotiation portal and an affiliate panel, the latter of which allows cybercriminals to manage victims, build ransomware payloads for VMware ESXi, NAS, BSD, and Windows, and monitor operations. In a bid to entice more affiliates, the threat actors promise a revenue-sharing model of 85%. “GLOBAL GROUP’s ransom negotiation panel features an automated system powered by AI-driven chatbots,” the Dutch security company said. “This enables non-English-speaking affiliates to engage victims more effectively.”
+As of July 14, 2025, the RaaS group has claimed 17 victims in Australia, Brazil, Europe, and the United States, spanning healthcare, oil-and-gas equipment fabrication, industrial machinery and precision engineering, automotive repair, accident-recovery services, and large-scale business process outsourcing (BPO).</p>
+
+<p>The links to BlackLock and Mamona stem from the use of the same Russian VPS provider IpServer and source code similarities with Mamona. Specifically, GLOBAL GROUP is said to be an evolution of Mamona with added features to enable domain-wide ransomware installation. What’s more, the malware is also written in Go, just like BlackLock. “The creation of GLOBAL GROUP by BlackLock’s administrator is a deliberate strategy to modernize operations, expand revenue streams, and stay competitive in the ransomware market,” Büyükkaya said.</p>
+
+<p>“This new brand integrates AI-powered negotiation, mobile-friendly panels, and customizable payload builders, appealing to a broader pool of affiliates.”
+The disclosure comes as the
+Qilin
+ransomware group emerged as the most active RaaS operation in June 2025, accounting for 81 victims. Other major players include Akira (34), Play (30), SafePay (27), and DragonForce (25). “SafePay saw the steepest decline at 62.5%, suggesting a major pullback,” cybersecurity company CYFIRMA
+said
+. “DragonForce emerged rapidly, with attacks spiking by 212.5%.”
+In all, the total number of ransomware victims has dropped from 545 in May to 463 in June 2025, a 15% decline.</p>
+
+<p>February tops this year’s list with 956 victims. “Despite the decline in numbers, geopolitical tensions and high-profile cyber attacks highlight growing instability, potentially heightening the risk of cyber threats,” NCC Group
+noted
+late last month. According to data gathered by Optiv’s Global Threat Intelligence Center (gTIC), 314 ransomware victims were listed on 74 unique data leak sites in Q1 2025, representing a 213% increase in the number of victims. A total of 56 variants were observed in Q1 2024.</p>
+
+<p>“Ransomware operators continued to use tried-and-true methods to gain initial access to victims – social engineering/phishing, exploitation of software vulnerabilities, compromising exposed and insecure software, supply-chain attacks and leveraging the initial access broker (IAB) community,” Optiv researcher Emily Lee
+said
+. Found this article interesting? Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="state-backed-hazybeacon-malware-uses-aws-lambda-to-steal-data-from-se-asian-governments"><a id="article-12"></a>State-Backed HazyBeacon Malware Uses AWS Lambda to Steal Data from SE Asian Governments</h2>
+
+<p>Governmental organizations in Southeast Asia are the target of a new campaign that aims to collect sensitive information by means of a previously undocumented Windows backdoor dubbed
+HazyBeacon
+. The activity is being tracked by Palo Alto Networks Unit 42 under the moniker
+CL-STA-1020
+, where “CL” stands for “cluster” and “STA” refers to “state-backed motivation.”
+“The threat actors behind this cluster of activity have been collecting sensitive information from government agencies, including information about recent tariffs and trade disputes,” security researcher Lior Rochberger
+said
+in a Monday analysis. Southeast Asia has increasingly become a focal point for cyber espionage due to its role in sensitive trade negotiations, military modernization, and strategic alignment in the U.S.–China power dynamic. Targeting government agencies in this region can provide valuable intelligence on foreign policy direction, infrastructure planning, and internal regulatory shifts that influence regional and global markets.</p>
+
+<p>The exact initial access vector used to deliver the malware is currently not known, although evidence shows the use of DLL side-loading techniques to deploy it on compromised hosts. Specifically, it involves planting a malicious version of a DLL called “mscorsvc.dll” along with the legitimate Windows executable, “
+mscorsvw.exe
+.”
+Once the binary is launched, the DLL proceeds to establish communication with an attacker-controlled URL that allows it to execute arbitrary commands and download additional payloads. Persistence is achieved by means of a service that ensures the DLL is launched even after a reboot of the system. HazyBeacon is notable for the fact that it leverages Amazon Web Services (AWS) Lambda URLs for command-and-control (C2) purposes, demonstrating threat actors’ continued abuse of legitimate services to fly under the radar and escape detection.</p>
+
+<p>”
+AWS Lambda URLs
+are a feature of AWS Lambda that allows users to invoke serverless functions directly over HTTPS,” Rochberger explained. “This technique uses legitimate cloud functionality to hide in plain sight, creating a reliable, scalable and difficult-to-detect communication channel.”
+Defenders should pay attention to outbound traffic to rarely used cloud endpoints like
+<em>.lambda-url.</em>.amazonaws.com
+, especially when initiated by unusual binaries or system services. While AWS usage itself isn’t suspicious, context-aware baselining—such as correlating process origins, parent-child execution chains, and endpoint behavior—can help distinguish legitimate activity from malware leveraging cloud-native evasion. Downloaded among the payloads is a file collector module that’s responsible for harvesting files matching a specific set of extensions (e.g., doc, docx, xls, xlsx, and pdf) and within a time range.</p>
+
+<p>This includes attempts to search for files related to the recent tariff measures imposed by the United States. The threat actor has also been found to employ other services like Google Drive and Dropbox as exfiltration channels so as to blend in with normal network traffic and transmit the gathered data. In the incident analyzed by Unit 42, attempts to upload the files to the cloud storage services are said to have been blocked. In the final stage, the attackers run cleanup commands to avoid leaving traces of their activity, deleting all the archives of staged files and other payloads downloaded during the attack.</p>
+
+<p>“The threat actors used HazyBeacon as the main tool for maintaining a foothold and collecting sensitive information from the affected governmental entities,” Rochberger said. “This campaign highlights how attackers continue to find new ways to abuse legitimate, trusted cloud services.”
+HazyBeacon reflects a broader trend of advanced persistent threats using trusted platforms as covert channels—a tactic often referred to as “living-off-trusted-services” (LOTS). As part of this cloud-based malware cluster, similar techniques have been observed in threats using Google Workspace, Microsoft Teams, or Dropbox APIs to evade detection and facilitate persistent access. Found this article interesting?</p>
+
+<p>Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="securing-agentic-ai-how-to-protect-the-invisible-identity-access"><a id="article-13"></a>Securing Agentic AI: How to Protect the Invisible Identity Access</h2>
+
+<p>AI agents promise to automate everything from financial reconciliations to incident response. Yet every time an AI agent spins up a workflow, it has to authenticate somewhere; often with a high-privilege API key, OAuth token, or service account that defenders can’t easily see. These “invisible” non-human identities (NHIs) now outnumber human accounts in most cloud environments, and they have become one of the ripest targets for attackers. Astrix’s Field CTO Jonathan Sander put it bluntly in a recent
+Hacker News webinar
+:
+“One dangerous habit we’ve had for a long time is trusting application logic to act as the guardrails.</p>
+
+<p>That doesn’t work when your AI agent is powered by LLMs that don’t stop and think when they’re about to do something wrong. They just do it.”
+Why AI Agents Redefine Identity Risk
+Autonomy changes everything:
+An AI agent can chain multiple API calls and modify data without a human in the loop. If the underlying credential is exposed or overprivileged, each additional action amplifies the blast radius. LLMs behave unpredictably:
+Traditional code follows deterministic rules; large language models operate on probability.</p>
+
+<p>That means you cannot guarantee how or where an agent will use the access you grant it. Existing IAM tools were built for humans:
+Most identity governance platforms focus on employees, not tokens. They lack the context to map which NHIs belong to which agents, who owns them, and what those identities can actually touch. Treat AI Agents Like First-Class (Non-Human) Users
+Successful security programs already apply “human-grade” controls like birth, life, and retirement to service accounts and machine credentials.</p>
+
+<p>Extending the same discipline to AI agents delivers quick wins
+without blocking business innovation. Human Identity Control
+How It Applies to AI Agents
+Owner assignment
+Every agent must have a named human owner (for example, the developer who configured a Custom GPT) who is accountable for its access. Least privilege
+Start from read-only scopes, then grant narrowly scoped write actions the moment the agent proves it needs them. Lifecycle governance
+Decommission credentials the moment an agent is deprecated, and rotate secrets automatically on a schedule.</p>
+
+<p>Continuous monitoring
+Watch for anomalous calls (e.g., sudden spikes to sensitive APIs) and revoke access in real time. Secure AI Agent Access
+Enterprises shouldn’t have to choose between security and agility. Astrix makes it easy to protect innovation without slowing it down, delivering all essential controls in one intuitive platform:</p>
+<ol>
+  <li>Discovery and Governance
+Automatically discover and map all AI agents, including external and homegrown agents, with context into their associated NHIs, permissions, owners, and accessed environments.</li>
+</ol>
+
+<p>Prioritize remediation efforts based on automated risk scoring based on agent exposure levels and configuration weaknesses. 2. Lifecycle management
+Manage AI agents and the NHIs they rely on from provisioning to decommissioning through automated ownership, policy enforcement, and streamlined remediation processes, without the manual overhead. 3.</p>
+
+<p>Threat detection &amp; response
+Continuously monitor AI agent activity to detect deviations, out-of-scope actions, and abnormal behaviors, while automating remediation with real-time alerts, workflows, and investigation guides. The Instant Impact: From Risk to ROI in 30 Days
+Within the first month of deploying Astrix, our customers consistently report three transformative business wins within the first month of deployment:
+Reduced risk, zero blind spots
+Automated discovery
+and a single source of truth for every AI agent, NHI, and secret reveal unauthorized third-party connections, over-entitled tokens, and policy violations the moment they appear. Short-lived, least-privileged identities prevent credential sprawl before it starts. “Astrix gave us full visibility into high-risk NHIs and helped us take action without slowing down the business.”
+-
+Albert Attias
+, Senior Director at Workday.</p>
+
+<p>Read Workday’s success story
+here
+. Audit-ready compliance, on demand
+Meet compliance requirements
+with scoped permissions, time-boxed access, and per-agent audit trails. Events are stamped at creation, giving security teams instant proof of ownership for regulatory frameworks such as NIST, PCI, and SOX, turning board-ready reports into a click-through exercise. “With Astrix, we gained visibility into over 900 non-human identities and automated ownership tracking, making audit prep a non-issue”
+-
+Brandon Wagner
+, Head of Information Security at Mercury.</p>
+
+<p>Read Mercury’s success story
+here
+. Productivity increased, not undermined
+Automated remediation
+enables engineers to integrate new AI workflows without waiting on manual reviews, while security gains real-time alerts for any deviation from policy. The result: faster releases, fewer fire drills, and a measurable boost to innovation velocity. “The time to value was much faster than other tools.</p>
+
+<h2 id="what-could-have-taken-hours-or-days-was-compressed-significantly-with-astrix">What could have taken hours or days was compressed significantly with Astrix”</h2>
+<p>Carl Siva
+, CISO at Boomi. Read Boomi’s success story
+here
+. The Bottom Line
+AI agents unlock historic productivity, yet they also magnify the identity problem security teams have wrestled with for years. By treating every agent as an NHI, applying least privilege from day one, and leaning on automation for continuous enforcement, you can help your business embrace AI safely, instead of cleaning up the breach after attackers exploit a forgotten API key.</p>
+
+<p>Ready to see your invisible identities? Visit
+astrix.security
+and schedule a live demo to map every AI agent and NHI in minutes. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Twitter
+
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai/assets/js/main.js"></script>
+</body>
+</html> 
