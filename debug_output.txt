@@ -286,99 +286,99 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/08/apache-activemq-flaw-exploited-to.html">
+         <a class="story-link" href="https://thehackernews.com/2025/08/dom-based-extension-clickjacking.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Apache ActiveMQ Flaw Exploited to Deploy DripDropper Malware on Cloud Linux Systems" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiolpI1JCim4Tq4vF9ga4h9hCoxclnoW-bT8LLJxmy28H0KjL-XoVvN2L4jXic510GLokL-t8hzxZcfyd4AR3CdglFrnX4PgYGYMx92OXNJK96t29lOWu7PNz5hwbO4e3iBZwyiu4zyjl2bcS1mVlJjUjBFzGNpByCSyHZLQi1Wnto9t3fJ8ev-v7F9MduC/s728-rw-e365/linux.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="DOM-Based Extension Clickjacking Exposes Popular Password Managers to Credential and Data Theft" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis8s2AE2HL9hS_h59LP2ylzs5MHDhwBvrz3osuRARB4BpzRakMQnL4b5FJtFiHJsBv8w1JWNQ9d2uv932WVPoWKj_MJbatN4Oprl-eA2bN3QM8G3xdbB1g0-BV-WnQclf5L4WLJbNqA1ku-i0SUX-YlWvsJfNMOwQ536TSbUGugv2syApaFvPR8rQcSqGF/s728-rw-e365/passwords.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Apache ActiveMQ Flaw Exploited to Deploy DripDropper Malware on Cloud Linux Systems" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiolpI1JCim4Tq4vF9ga4h9hCoxclnoW-bT8LLJxmy28H0KjL-XoVvN2L4jXic510GLokL-t8hzxZcfyd4AR3CdglFrnX4PgYGYMx92OXNJK96t29lOWu7PNz5hwbO4e3iBZwyiu4zyjl2bcS1mVlJjUjBFzGNpByCSyHZLQi1Wnto9t3fJ8ev-v7F9MduC/s728-rw-e365/linux.jpg"/>
+             <img alt="DOM-Based Extension Clickjacking Exposes Popular Password Managers to Credential and Data Theft" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEis8s2AE2HL9hS_h59LP2ylzs5MHDhwBvrz3osuRARB4BpzRakMQnL4b5FJtFiHJsBv8w1JWNQ9d2uv932WVPoWKj_MJbatN4Oprl-eA2bN3QM8G3xdbB1g0-BV-WnQclf5L4WLJbNqA1ku-i0SUX-YlWvsJfNMOwQ536TSbUGugv2syApaFvPR8rQcSqGF/s728-rw-e365/passwords.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Apache ActiveMQ Flaw Exploited to Deploy DripDropper Malware on Cloud Linux Systems
+             DOM-Based Extension Clickjacking Exposes Popular Password Managers to Credential and Data Theft
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Aug 19, 2025
+              Aug 20, 2025
              </span>
              <span class="h-tags">
-              Linux / Malware
+              Vulnerability / Browser Security
              </span>
             </div>
             <div class="home-desc">
-             Threat actors are exploiting a nearly two-year-old security flaw in Apache ActiveMQ to gain persistent access to cloud Linux systems and deploy malware called DripDropper .  But in an unusual twist, the unknown attackers have been observed patching the exploited vulnerability after securing initial access to prevent further exploitation by other adversaries and evade detection, Red Canary said  in a report shared with The Hacker News.  "Follow-on adversary command-and-control (C2) tools varied by endpoint and included Sliver , and Cloudflare Tunnels to maintain covert command and control over the long term," researchers Christina Johns, Chris Brook, and Tyler Edmonds said.  The attacks exploit a maximum-severity security flaw in Apache ActiveMQ ( CVE-2023-46604 , CVSS score: 10.0), a remote code execution vulnerability that could be exploited to run arbitrary shell commands. It was addressed in late October 2023.   The security defect has since come under  heavy exploitation...
+             Popular password manager plugins for web browsers have been found susceptible to clickjacking security vulnerabilities that could be exploited to steal account credentials, two-factor authentication (2FA) codes, and credit card details under certain conditions.  The technique has been dubbed Document Object Model ( DOM )-based extension clickjacking by independent security researcher Marek Tóth, who presented the findings  at the DEF CON 33 security conference earlier this month.  "A single click anywhere on an attacker-controlled website could allow attackers to steal users' data (credit card details, personal data, login credentials, including TOTP)," Tóth said . "The new technique is general and can be applied to other types of extensions."   Clickjacking , also called UI redressing, refers to a type of attack in which users are tricked into performing a series of actions on a website that appear ostensibly harmless, such as clicking on buttons, when, in rea...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/08/new-godrat-trojan-targets-trading-firms.html">
+         <a class="story-link" href="https://thehackernews.com/2025/08/webinar-discover-and-control-shadow-ai.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="New GodRAT Trojan Targets Trading Firms Using Steganography and Gh0st RAT Code" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsq_GI_YykIgjctOcC0P903Hdw-Zu02tnPUipIblNrMNmL-phCyBPLUxwMo487iM6BdZyMxmlXyBOjydhgoSVEZ4hYNIEysl-Vah4vBLhCQAsaEHNBG0pgDYLg5Q_UVDrhuRfxlyAG9-Sx0la_8JBEb9iu7sMaiadKbZIOy58x8tZOXymxNpFX7mcfDh0g/s728-rw-e365/trading.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="🕵️ Webinar: Discover and Control Shadow AI Agents in Your Enterprise Before Hackers Do" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-JNPnYJ5enid27UoiOZYBEF-T-wiWSvmg3BV9h9Fm0zft0xyU0lS381SGaCSQG4TZJBBOtFUqXrqlQZ0pV0vkdlcCNK49gUzTNDjU0_asPgRU0m4ERHelZ-uMUFn7VrCMIMnipKbkOy5acxPahmtWj4T0uH5zmg494YMuqbq-HkQc-pT9LbQrvSBbUn8/s728-rw-e365/ai-webinar.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="New GodRAT Trojan Targets Trading Firms Using Steganography and Gh0st RAT Code" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsq_GI_YykIgjctOcC0P903Hdw-Zu02tnPUipIblNrMNmL-phCyBPLUxwMo487iM6BdZyMxmlXyBOjydhgoSVEZ4hYNIEysl-Vah4vBLhCQAsaEHNBG0pgDYLg5Q_UVDrhuRfxlyAG9-Sx0la_8JBEb9iu7sMaiadKbZIOy58x8tZOXymxNpFX7mcfDh0g/s728-rw-e365/trading.jpg"/>
+             <img alt="🕵️ Webinar: Discover and Control Shadow AI Agents in Your Enterprise Before Hackers Do" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-JNPnYJ5enid27UoiOZYBEF-T-wiWSvmg3BV9h9Fm0zft0xyU0lS381SGaCSQG4TZJBBOtFUqXrqlQZ0pV0vkdlcCNK49gUzTNDjU0_asPgRU0m4ERHelZ-uMUFn7VrCMIMnipKbkOy5acxPahmtWj4T0uH5zmg494YMuqbq-HkQc-pT9LbQrvSBbUn8/s728-rw-e365/ai-webinar.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             New GodRAT Trojan Targets Trading Firms Using Steganography and Gh0st RAT Code
+             🕵️ Webinar: Discover and Control Shadow AI Agents in Your Enterprise Before Hackers Do
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Aug 19, 2025
+              Aug 20, 2025
              </span>
              <span class="h-tags">
-              Malware / Cyber Attack
+              Artificial Intelligence / Enterprise Security
              </span>
             </div>
             <div class="home-desc">
-             Financial institutions like trading and brokerage firms are the target of a new campaign that delivers a previously unreported remote access trojan called GodRAT .  The malicious activity involves the "distribution of malicious .SCR (screen saver) files disguised as financial documents via Skype messenger," Kaspersky researcher Saurabh Sharma said  in a technical analysis published today.  The attacks, which have been active as recently as August 12, 2025, employ a technique called steganography to conceal within image files shellcode used to download the malware from a command-and-control (C2) server. The screen saver artifacts have been detected since September 9, 2024, targeting countries and territories like Hong Kong, the United Arab Emirates, Lebanon, Malaysia, and Jordan.  Assessed to be based on Gh0st RAT, GodRAT follows a plugin-based approach to augment its functionality in order to harvest sensitive information and deliver secondary payloads like AsyncRAT. It'...
+             Do you know how many AI agents are running inside your business right now?  If the answer is "not sure," you're not alone—and that's exactly the concern.  Across industries, AI agents are being set up every day. Sometimes by IT, but often by business units moving fast to get results. That means agents are running quietly in the background—without proper IDs, without owners, and without logs of what they're doing. In short: they're invisible.  👉  Register now for Shadow Agents and Silent Threats: Securing AI's New Identity Frontier  and learn how to get ahead of this growing challenge.  The Hidden Risk of Shadow AI Agents  Shadow agents aren't harmless helpers. Once compromised, they can move through systems, grab sensitive data, or escalate privileges at machine speed. Unlike humans, they don't pause to think—they just execute 24/7.  The truth is, most security programs weren't built for this. They manage people, not autonomous software agents. And as adoption grows, these s...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/08/public-exploit-for-chained-sap-flaws.html">
+         <a class="story-link" href="https://thehackernews.com/2025/08/fbi-warns-russian-fsb-linked-hackers.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Public Exploit for Chained SAP Flaws Exposes Unpatched Systems to Remote Code Execution" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_U_IAg6-6xvngNpsDACirnnYY8fdExWFUhb7SLUdORIxO21DNeWABff_HISoWKMT7p05jv3ovNs0r7IQtkWvfeKGhBJGtsV0eE-TZDJ6gpx_IjV-scUsiyyc4TQ53-eWNBIcNox3Ws0Tjb6IcWQa6aUbkC9qVekrUV2otQ7sph0PT9mfO54PdCAoRiAOA/s728-rw-e365/sap.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="FBI Warns FSB-Linked Hackers Exploiting Unpatched Cisco Devices for Cyber Espionage" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjsB55EZlFkQ_8AgCYnCRIs-wtmupP6NYmic_WHNjwi3Fmzy9A-Yy_sIAwqwDsbhJP0nxUsiDi7JDVMcAXGqWeHw5IfTByj9p5sgbR7Kz23DnnooCeUNFBhomdr9XF7m35qz7yEuIdoXDy2li1CrIUCLtJvxcoejs3mEusAnZDBgdUVkoEAKwBoWvGJpxx/s728-rw-e365/cisco-hackers.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Public Exploit for Chained SAP Flaws Exposes Unpatched Systems to Remote Code Execution" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_U_IAg6-6xvngNpsDACirnnYY8fdExWFUhb7SLUdORIxO21DNeWABff_HISoWKMT7p05jv3ovNs0r7IQtkWvfeKGhBJGtsV0eE-TZDJ6gpx_IjV-scUsiyyc4TQ53-eWNBIcNox3Ws0Tjb6IcWQa6aUbkC9qVekrUV2otQ7sph0PT9mfO54PdCAoRiAOA/s728-rw-e365/sap.jpg"/>
+             <img alt="FBI Warns FSB-Linked Hackers Exploiting Unpatched Cisco Devices for Cyber Espionage" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjsB55EZlFkQ_8AgCYnCRIs-wtmupP6NYmic_WHNjwi3Fmzy9A-Yy_sIAwqwDsbhJP0nxUsiDi7JDVMcAXGqWeHw5IfTByj9p5sgbR7Kz23DnnooCeUNFBhomdr9XF7m35qz7yEuIdoXDy2li1CrIUCLtJvxcoejs3mEusAnZDBgdUVkoEAKwBoWvGJpxx/s728-rw-e365/cisco-hackers.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Public Exploit for Chained SAP Flaws Exposes Unpatched Systems to Remote Code Execution
+             FBI Warns FSB-Linked Hackers Exploiting Unpatched Cisco Devices for Cyber Espionage
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Aug 19, 2025
+              Aug 20, 2025
              </span>
              <span class="h-tags">
-              Vulnerability / Cyber Espionage
+              Cyber Espionage / Vulnerability
              </span>
             </div>
             <div class="home-desc">
-             A new exploit combining two critical, now-patched security flaws in SAP NetWeaver has emerged in the wild, putting organizations at risk of system compromise and data theft.  The exploit in question chains together CVE-2025-31324 and CVE-2025-42999 to bypass authentication and achieve remote code execution, SAP security company Onapsis said .   CVE-2025-31324  (CVSS score: 10.0) - Missing Authorization check in SAP NetWeaver's Visual Composer development server  CVE-2025-42999  (CVSS score: 9.1) - Insecure Deserialization in SAP NetWeaver's Visual Composer development server   The vulnerabilities were addressed  by SAP back in April and May 2025, but not before they were abused by threat actors as zero-days since at least March.   Multiple ransomware and data extortion groups, including Qilin, BianLian, and RansomExx, have been observed  weaponizing the flaws , not to mention several China-nexus espionage crews  who have also put them to use in attacks targeting critical infra...
+             A Russian state-sponsored cyber espionage group known as Static Tundra  has been observed actively exploiting a seven-year-old security flaw in Cisco IOS and Cisco IOS XE software as a means to establish persistent access to target networks.  Cisco Talos, which disclosed  details of the activity, said the attacks single out organizations in telecommunications, higher education and manufacturing sectors across North America, Asia, Africa and Europe. Prospective victims are chosen based on their "strategic interest" to Russia, it added, with recent efforts directed against Ukraine and its allies following the onset of the Russo-Ukrainian war in 2022.  The vulnerability  in question is CVE-2018-0171  (CVSS score: 9.8), a critical flaw in the Smart Install feature of Cisco IOS Software and Cisco IOS XE software that could allow an unauthenticated, remote attacker to trigger a denial-of-service (DoS) condition or execute arbitrary code.   It's worth noting that the security ...
             </div>
            </div>
           </div>
@@ -411,31 +411,26 @@
          </a>
         </section>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/08/uk-government-drops-apple-encryption.html">
+         <a class="story-link" href="https://thehackernews.com/2025/08/experts-find-ai-browsers-can-be-tricked.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="U.K. Government Drops Apple Encryption Backdoor Order After U.S. Civil Liberties Pushback" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilT1TyTz6CxzFc48E714QdOSlrJDwfGG_uTRqwGY0pVKp8dRXIdc9eba-E8qb2vWemXqUZArOCpBspMk8Ry0f6LaNZdL_YBqj4n0dTKYidHIfiYwxzqUITbxRXaNthzh6IeRWOtuwItA-NLLca_hlEJ-IUnovXW0BXxTdHf8_47IideojD76Q4vPPvxFZp/s728-rw-e365/apple.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Experts Find AI Browsers Can Be Tricked by PromptFix Exploit to Run Malicious Hidden Prompts" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmhyGUMWNIdIO4Cnvl8SW0iboC-CslSgKE5vSl2VbstoEpPEnTacdTtW0lYN6fEcKRk7YLYop6jiw6d2B1ukmn2WgSbfvU__08D07BnTTEJHLgp0Vd39vCIn_YD8sJ8MxDrutptIEUeF23RAXMSiXMRyHGA2cgSuVKj7LAoGbFV_xJtdbReG0QR6XQmLnK/s2600/ai-browser.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="U.K. Government Drops Apple Encryption Backdoor Order After U.S. Civil Liberties Pushback" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilT1TyTz6CxzFc48E714QdOSlrJDwfGG_uTRqwGY0pVKp8dRXIdc9eba-E8qb2vWemXqUZArOCpBspMk8Ry0f6LaNZdL_YBqj4n0dTKYidHIfiYwxzqUITbxRXaNthzh6IeRWOtuwItA-NLLca_hlEJ-IUnovXW0BXxTdHf8_47IideojD76Q4vPPvxFZp/s728-rw-e365/apple.jpg"/>
+             <img alt="Experts Find AI Browsers Can Be Tricked by PromptFix Exploit to Run Malicious Hidden Prompts" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmhyGUMWNIdIO4Cnvl8SW0iboC-CslSgKE5vSl2VbstoEpPEnTacdTtW0lYN6fEcKRk7YLYop6jiw6d2B1ukmn2WgSbfvU__08D07BnTTEJHLgp0Vd39vCIn_YD8sJ8MxDrutptIEUeF23RAXMSiXMRyHGA2cgSuVKj7LAoGbFV_xJtdbReG0QR6XQmLnK/s2600/ai-browser.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             U.K. Government Drops Apple Encryption Backdoor Order After U.S. Civil Liberties Pushback
+             Experts Find AI Browsers Can Be Tricked by PromptFix Exploit to Run Malicious Hidden Prompts
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
-               
-              </i>
-              Aug 19, 2025
-             </span>
-             <span class="h-tags">
-     
+               
 
-[DEBUG] https://thehackernews.com/2025/08/apache-activemq-flaw-exploited-to.html content length: 3386
+[DEBUG] https://thehackernews.com/2025/08/dom-based-extension-clickjacking.html content length: 3295
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -449,9 +444,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/lat
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+01
 
-[DEBUG] https://thehackernews.com/2025/08/new-godrat-trojan-targets-trading-firms.html content length: 3699
+[DEBUG] https://thehackernews.com/2025/08/webinar-discover-and-control-shadow-ai.html content length: 2224
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -465,9 +460,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+01
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyr
 
-[DEBUG] https://thehackernews.com/2025/08/public-exploit-for-chained-sap-flaws.html content length: 2991
+[DEBUG] https://thehackernews.com/2025/08/fbi-warns-russian-fsb-linked-hackers.html content length: 4736
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -481,7 +476,7 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/rob
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font
 
 [DEBUG] https://thehackernews.uk/phishing-evolution content length: 0
 <html>
@@ -498,7 +493,7 @@
 </html>
 
 
-[DEBUG] https://thehackernews.com/2025/08/uk-government-drops-apple-encryption.html content length: 2823
+[DEBUG] https://thehackernews.com/2025/08/experts-find-ai-browsers-can-be-tricked.html content length: 7261
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -512,9 +507,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+01
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.wof
 
-[DEBUG] https://thehackernews.com/2025/08/why-your-security-culture-is-critical.html content length: 6597
+[DEBUG] https://thehackernews.com/2025/08/turning-bia-insights-into-resilient-recovery.html content length: 9423
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -528,7 +523,7 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+21
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff
 
 [DEBUG] https://thehackernews.uk/6-essential-traits-modern-saas-data-resilience content length: 0
 <html>
@@ -545,7 +540,7 @@
 </html>
 
 
-[DEBUG] https://thehackernews.com/2025/08/pypi-blocks-1800-expired-domain-emails.html content length: 2958
+[DEBUG] https://thehackernews.com/2025/08/north-korea-uses-github-in-diplomat.html content length: 6957
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -559,9 +554,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1E
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:
 
-[DEBUG] https://thehackernews.com/2025/08/noodlophile-malware-campaign-expands.html content length: 3395
+[DEBUG] https://thehackernews.com/2025/08/doj-charges-22-year-old-for-running.html content length: 3412
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -575,9 +570,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-displ
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11
 
-[DEBUG] https://thehackernews.com/2025/08/microsoft-windows-vulnerability.html content length: 5249
+[DEBUG] https://thehackernews.com/2025/08/apache-activemq-flaw-exploited-to.html content length: 3386
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -591,9 +586,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11
 
-[DEBUG] https://thehackernews.com/2025/08/weekly-recap-nfc-fraud-curly-comrades-n.html content length: 39597
+[DEBUG] https://thehackernews.com/2025/08/new-godrat-trojan-targets-trading-firms.html content length: 3699
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -607,9 +602,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font
 
-[DEBUG] https://thehackernews.com/2025/08/malicious-pypi-and-npm-packages.html content length: 4958
+[DEBUG] https://thehackernews.com/2025/08/public-exploit-for-chained-sap-flaws.html content length: 2991
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -623,9 +618,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s
 
-[DEBUG] https://thehackernews.com/2025/08/wazuh-for-regulatory-compliance.html content length: 6232
+[DEBUG] https://thehackernews.com/2025/08/uk-government-drops-apple-encryption.html content length: 2823
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -639,9 +634,9 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1E
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/gre
 
-[DEBUG] https://thehackernews.com/2025/08/ermac-v30-banking-trojan-source-code.html content length: 3235
+[DEBUG] https://thehackernews.com/2025/08/why-your-security-culture-is-critical.html content length: 6597
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -655,6 +650,6 @@
   <meta content="#3732b3" name="msapplication-navbutton-color"/>
   <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
   <style type="text/css">
-   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;
 
 [DEBUG] Failed to fetch list page: https://thehackernews.com/search/label/Artificial%20Intelligence?updated-max=&max-results=10, status: 404
