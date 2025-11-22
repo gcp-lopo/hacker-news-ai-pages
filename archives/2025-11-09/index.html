@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-09 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Microsoft Uncovers 'Whisper Leak' Attack That Identifies AI Chat Topics in Encrypted Traffic</a></li>
+      
+        <li><a href="#article-2">Samsung Mobile Flaw Exploited as Zero-Day to Deploy LANDFALL Android Spyware</a></li>
+      
+        <li><a href="#article-3">From Log4j to IIS, China's Hackers Turn Legacy Bugs into Global Espionage Tools</a></li>
+      
+        <li><a href="#article-4">Hidden Logic Bombs in Malware-Laced NuGet Packages Set to Detonate Years After Installation</a></li>
+      
+        <li><a href="#article-5">Enterprise Credentials at Risk – Same Old, Same Old?</a></li>
+      
+        <li><a href="#article-6">Google Launches New Maps Feature to Help Businesses Report Review-Based Extortion Attempts</a></li>
+      
+        <li><a href="#article-7">Vibe-Coded Malicious VS Code Extension Found with Built-In Ransomware Capabilities</a></li>
+      
+        <li><a href="#article-8">Trojanized ESET Installers Drop Kalambur Backdoor in Phishing Attacks on Ukraine</a></li>
+      
+        <li><a href="#article-9">Cisco Warns of New Firewall Attack Exploiting CVE-2025-20333 and CVE-2025-20362</a></li>
+      
+        <li><a href="#article-10">From Tabletop to Turnkey: Building Cyber Resilience in Financial Services</a></li>
+      
+        <li><a href="#article-11">ThreatsDay Bulletin: AI Tools in Malware, Botnets, GDI Flaws, Election Attacks & More</a></li>
+      
+        <li><a href="#article-12">Bitdefender Named a Representative Vendor in the 2025 Gartner® Market Guide for Managed Detection and Response</a></li>
+      
+        <li><a href="#article-13">Hackers Weaponize Windows Hyper-V to Hide Linux VM and Evade EDR Detection</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-09-ai创业新闻">2025-11-09 AI创业新闻</h1>
+
+<h2 id="microsoft-uncovers-whisper-leak-attack-that-identifies-ai-chat-topics-in-encrypted-traffic"><a id="article-1"></a>Microsoft Uncovers ‘Whisper Leak’ Attack That Identifies AI Chat Topics in Encrypted Traffic</h2>
+
+<p>Microsoft has disclosed details of a novel side-channel attack targeting remote language models that could enable a passive adversary with capabilities to observe network traffic to glean details about model conversation topics despite encryption protections under certain circumstances. This leakage of data exchanged between humans and streaming-mode language models could pose serious risks to the privacy of user and enterprise communications, the company noted. The
+attack
+has been codenamed
+Whisper Leak
+. “Cyber attackers in a position to observe the encrypted traffic (for example, a nation-state actor at the internet service provider layer, someone on the local network, or someone connected to the same Wi-Fi router) could use this cyber attack to infer if the user’s prompt is on a specific topic,” security researchers Jonathan Bar Or and Geoff McDonald, along with the Microsoft Defender Security Research Team,
+said
+.</p>
+
+<p>Put differently, the attack allows an attacker to observe encrypted TLS traffic between a user and LLM service, extract packet size and timing sequences, and use trained classifiers to infer whether the conversation topic matches a sensitive target category. Model streaming in large language models (
+LLMs
+) is a technique that allows for incremental data reception as the model generates responses, instead of having to wait for the entire output to be computed. It’s a critical feedback mechanism as certain responses can take time, depending on the complexity of the prompt or task. The latest technique demonstrated by Microsoft is significant, not least because it works despite the fact that the communications with artificial intelligence (AI) chatbots are encrypted with HTTPS, which ensures that the contents of the exchange stay secure and cannot be tampered with.</p>
+
+<p>Many a side-channel attack has been devised against LLMs in recent years, including the ability to
+infer the length of individual plaintext tokens
+from the size of encrypted packets in streaming model responses or by exploiting timing differences caused by caching LLM inferences to execute input theft (aka
+InputSnatch
+). Whisper Leak builds upon these findings to explore the possibility that “the sequence of encrypted packet sizes and inter-arrival times during a streaming language model response contains enough information to classify the topic of the initial prompt, even in the cases where responses are streamed in groupings of tokens,” per Microsoft. To test this hypothesis, the Windows maker said it trained a binary classifier as a proof-of-concept that’s capable of differentiating between a specific topic prompt and the rest (i.e., noise) using three different machine learning models:
+LightGBM
+,
+Bi-LSTM
+, and
+BERT
+. The result is that many models from Mistral, xAI, DeepSeek, and OpenAI have been found to achieve scores above 98%, thereby making it possible for an attacker monitoring random conversations with the chatbots to reliably flag that specific topic.</p>
+
+<p>“If a government agency or internet service provider were monitoring traffic to a popular AI chatbot, they could reliably identify users asking questions about specific sensitive topics – whether that’s money laundering, political dissent, or other monitored subjects – even though all the traffic is encrypted,” Microsoft said. Whisper Leak attack pipeline
+To make matters worse, the researchers found that the effectiveness of Whisper Leak can improve as the attacker collects more training samples over time, turning it into a practical threat. Following responsible disclosure, OpenAI, Mistral, Microsoft, and xAI have all deployed mitigations to counter the risk. “Combined with more sophisticated attack models and the richer patterns available in multi-turn conversations or multiple conversations from the same user, this means a cyberattacker with patience and resources could achieve higher success rates than our initial results suggest,” it added.</p>
+
+<p>One effective countermeasure devised by OpenAI, Microsoft, and Mistral involves adding a “random sequence of text of variable length” to each response, which, in turn, masks the length of each token to render the side-channel moot. Microsoft is also recommending that users concerned about their privacy when talking to AI providers can avoid discussing highly sensitive topics when using untrusted networks, utilize a VPN for an extra layer of protection, use non-streaming models of LLMs, and switch to providers that have implemented mitigations. The disclosure comes as a
+new evaluation
+of eight open-weight LLMs from Alibaba (Qwen3-32B), DeepSeek (v3.1), Google (Gemma 3-1B-IT), Meta (Llama 3.3-70B-Instruct), Microsoft (Phi-4), Mistral (Large-2 aka Large-Instruct-2047), OpenAI (GPT-OSS-20b), and Zhipu AI (GLM 4.5-Air) has found them to be highly susceptible to adversarial manipulation, specifically when it comes to
+multi-turn attacks
+. Comparative vulnerability analysis showing attack success rates across tested models for both single-turn and multi-turn scenarios
+“These results underscore a systemic inability of current open-weight models to maintain safety guardrails across extended interactions,” Cisco AI Defense researchers Amy Chang, Nicholas Conley, Harish Santhanalakshmi Ganesan, and Adam Swanda said in an
+accompanying paper
+.</p>
+
+<p>“We assess that alignment strategies and lab priorities significantly influence resilience: capability-focused models such as Llama 3.3 and Qwen 3 demonstrate higher multi-turn susceptibility, whereas safety-oriented designs such as Google Gemma 3 exhibit more balanced performance.”
+These discoveries show that organizations adopting open-source models can face operational risks in the absence of additional security guardrails, adding to a
+growing body of research
+exposing fundamental security weaknesses in LLMs and AI chatbots ever since OpenAI ChatGPT’s public debut in November 2022. This makes it crucial that developers enforce adequate security controls when integrating such capabilities into their workflows, fine-tune open-weight models to be more robust to jailbreaks and other attacks, conduct periodic AI red-teaming assessments, and implement strict system prompts that are aligned with defined use cases. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="samsung-mobile-flaw-exploited-as-zero-day-to-deploy-landfall-android-spyware"><a id="article-2"></a>Samsung Mobile Flaw Exploited as Zero-Day to Deploy LANDFALL Android Spyware</h2>
+
+<p>A now-patched security flaw in Samsung Galaxy Android devices was exploited as a zero-day to deliver a “commercial-grade” Android spyware dubbed
+LANDFALL
+in targeted attacks in the Middle East. The activity involved the exploitation of
+CVE-2025-21042
+(CVSS score: 8.8), an out-of-bounds write flaw in the “libimagecodec.quram.so” component that could allow remote attackers to execute arbitrary code, according to Palo Alto Networks Unit 42. The issue was
+addressed
+by Samsung in April 2025. “This vulnerability was actively exploited in the wild before Samsung patched it in April 2025, following reports of in-the-wild attacks,” Unit 42
+said
+.</p>
+
+<p>Potential targets of the activity, tracked as CL-UNK-1054, are located in Iraq, Iran, Turkey, and Morocco based on VirusTotal submission data. The development comes as Samsung
+disclosed
+in September 2025 that another flaw in the same library (CVE-2025-21043, CVSS score: 8.8) had also been exploited in the wild as a zero-day. There is no evidence of this security flaw being weaponized in the LANDFALL campaign. Samsung did not immediately respond to a request for comment.</p>
+
+<p>It’s assessed that the attacks involved sending via WhatsApp malicious images in the form of
+DNG
+(Digital Negative) files, with evidence of LANDFALL samples going all the way back to July 23, 2024. This is based on DNG artifacts bearing names like “WhatsApp Image 2025-02-10 at 4.54.17 PM.jpeg” and “IMG-20240723-WA0000.jpg.”
+Itay Cohen, senior principal researcher at Palo Alto Networks Unit 42, told The Hacker News that they have not observed any significant functional changes between the samples from July 2024 and February 2025, when the most recent LANDFALL artifact was uploaded to VirusTotal. LANDFALL, once installed and executed, acts as a comprehensive spy tool, capable of harvesting sensitive data, including microphone recording, location, photos, contacts, SMS, files, and call logs. While Unit 42 said the exploit chain may have involved the use of a zero-click approach to trigger the exploitation of CVE-2025-21042 without requiring any user interaction, there are currently no indications that it has happened or there exists an unknown security issue in WhatsApp to support this hypothesis.</p>
+
+<p>The Android spyware is specifically designed to target Samsung’s Galaxy S22, S23, and S24 series devices, as well as Z Fold 4 and Z Flip 4, covering some of the flagship devices from the South Korean electronics chaebol, with the exception of the latest generation. Flowchart for LANDFALL spyware
+It’s worth noting that around the same time WhatsApp disclosed that a flaw in its messaging app for iOS and macOS (
+CVE-2025-55177
+, CVSS score: 5.4) was chained along with
+CVE-2025-43300
+(CVSS score: 8.8), a flaw in Apple iOS, iPadOS, and macOS, to potentially target less than 200 users as part of a sophisticated campaign. Apple and WhatsApp have since patched the flaws. Timeline for recent malicious DNG image files and associated exploit activity
+Unit 42’s analysis of the discovered DNG files show that they come with an embedded ZIP file appended to the end of the file, with the exploit being used to extract a shared object library from the archive to run the spyware.</p>
+
+<p>Also present in the archive is another shared object that’s designed to manipulate the device’s
+SELinux
+policy to grant LANDFALL elevated permissions and facilitate persistence. The shared object that loads LANDFALL also communicates with a command-and-control (C2) server over HTTPS to enter into a beaconing loop and receive unspecified next-stage payloads for subsequent execution. “At this point, we can’t share details about the next-stage payloads delivered from the C2 server,” Cohen said. “What we can say is that LANDFALL is a modular spyware framework – the loader we analyzed is clearly designed to fetch and execute additional components from the C2 infrastructure.</p>
+
+<p>Those later stages likely extend its surveillance and persistence capabilities, but they weren’t recovered in the samples available to us.”
+It’s currently not known who is behind the spyware or the campaign. That said, Unit 42 said LANDFALL’s C2 infrastructure and domain registration patterns dovetail with that of
+Stealth Falcon
+(aka FruityArmor), although, as of October 2025, no direct overlaps between the two clusters have been detected. The findings suggest that the delivering LANDFALL is likely part of a broader DNG exploitation wave that also hit iPhone devices via the aforementioned exploit chains. They also highlight how sophisticated exploits can remain accessible in public repositories for extended periods of time, flying under the radar until they can be fully analyzed.</p>
+
+<p>“We don’t believe this specific exploit is still being used, since Samsung patched it in April 2025,” Cohen said. “However, related exploit chains affecting Samsung and iOS devices were observed as recently as August and September, indicating that similar campaigns remained active until very recently. Some infrastructure that might be related to LANDFALL also remains online, which could suggest ongoing or follow-on activity by the same operators.”
+(The story was updated after publication to clarify details surrounding the use of WhatsApp as a distribution vector for the malware and additional insights from Unit 42.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="from-log4j-to-iis-chinas-hackers-turn-legacy-bugs-into-global-espionage-tools"><a id="article-3"></a>From Log4j to IIS, China’s Hackers Turn Legacy Bugs into Global Espionage Tools</h2>
+
+<p>A China-linked threat actor has been attributed to a cyber attack targeting an U.S. non-profit organization with an aim to establish long-term persistence, as part of broader activity aimed at U.S. entities that are linked to or involved in policy issues. The organization, according to a
+report
+from Broadcom’s Symantec and Carbon Black teams, is “active in attempting to influence U.S.</p>
+
+<p>government policy on international issues.” The attackers managed to gain access to the network for several weeks in April 2025. The first sign of activity occurred on April 5, 2025, when mass scanning efforts were detected against a server by leveraging various well-known exploits, including
+CVE-2022-26134
+(Atlassian),
+CVE-2021-44228
+(Apache Log4j),
+CVE-2017-9805
+(Apache Struts), and
+CVE-2017-17562
+(GoAhead Web Server). Symantec and Carbon Black told The Hacker News that there is no indication that these exploitation efforts were successful. It’s suspected that the attackers ultimately gained initial access with a brute-force or credential stuffing attack.</p>
+
+<p>No further actions were recorded until April 16, when the attacks executed several curl commands to test internet connectivity, after which the Windows command-line tool netstat was executed to collect network configuration information. This was followed by setting up persistence on the host by means of a scheduled task. The task was designed to execute a legitimate Microsoft binary “msbuild.exe” to run an unknown payload, as well as create another scheduled task that’s configured to run every 60 minutes as a high-privileged SYSTEM user. This new task, Symantec and Carbon Black said, was capable of loading and injecting unknown code into “csc.exe” that ultimately established communications with a command-and-control (C2) server (“38.180.83[.]166”).</p>
+
+<p>Subsequently, the attackers were observed executing a custom loader to unpack and run an unspecified payload, likely a remote access trojan (RAT) in memory. Also observed was the execution of the legitimate Vipre AV component (“vetysafe.exe”) to sideload a DLL loader (“sbamres.dll”). This component is also said to have been used for DLL side-loading in connection with
+Deed RAT
+(aka
+Snappybee
+) in prior activity attributed to Salt Typhoon (aka Earth Estries), and in attacks attributed to
+Earth Longzhi
+, a sub-cluster of
+APT41
+. “A copy of this malicious DLL was previously used in attacks linked to the China-based threat actors known as
+Space Pirates
+,” Broadcom said.</p>
+
+<p>“A variant of this component, with a different filename, was also used by that Chinese APT group Kelp (aka Salt Typhoon) in a separate incident.”
+Some of the other tools observed in the targeted network included Dcsync and Imjpuexc. It’s not clear how successful the attackers were in their efforts. No additional activity was registered after April 16, 2025. “It is clear from the activity on this victim that the attackers were aiming to establish a persistent and stealthy presence on the network, and they were also very interested in targeting domain controllers, which could potentially allow them to spread to many machines on the network,” Symantec and Carbon Black said.</p>
+
+<p>“The sharing of tools among groups has been a long-standing trend among Chinese threat actors, making it difficult to say which specific group is behind a set of activities.”
+The disclosure comes as a security researcher who goes by the online moniker BartBlaze
+disclosed
+Salt Typhoon’s exploitation of a security flaw in WinRAR (
+CVE-2025-8088
+) to initiate an attack chain that
+sideloads a DLL
+responsible for running shellcode on the compromised host. The final payload is designed to establish contact with a remote server (“mimosa.gleeze[.]com”). Activity from Other Chinese Hacking Groups
+According to a report from ESET, China-aligned groups have
+continued
+to remain active, striking entities across Asia, Europe, Latin America, and the U.S. to serve Beijing’s geopolitical priorities.</p>
+
+<p>Some of the notable campaigns include -
+The targeting of the energy sector in Central Asia by a threat actor codenamed
+Speccom
+(aka IndigoZebra or SMAC) in July 2025 via phishing emails to deliver a variant of
+BLOODALCHEMY
+and custom backdoors such as kidsRAT and RustVoralix. The targeting of European organizations by a threat actor codenamed
+DigitalRecyclers
+in July 2025, using an unusual persistence technique that involved the use of the
+Magnifier accessibility tool
+to gain SYSTEM privileges. The targeting of governmental entities in Latin America (Argentina, Ecuador, Guatemala, Honduras, and Panama) between June and September 2025 by a threat actor codenamed
+FamousSparrow
+that likely exploited
+ProxyLogon
+flaws in Microsoft Exchange Server to deploy SparrowDoor. The targeting of a Taiwanese company in the defense aviation sector, a U.S.</p>
+
+<p>trade organization based in China, and the China-based offices of a Greek governmental entity, and an Ecuadorian government body between May and September 2025 by a threat actor codenamed
+SinisterEye
+(aka LuoYu and Cascade Panda) to deliver malware like WinDealer (for Windows) and SpyDealer (for Android) using adversary-in-the-middle (AitM) attacks to hijack legitimate software update mechanisms. The targeting of a Japanese company and a multinational enterprise, both in Cambodia, in June 2025 by a threat actor codenamed
+PlushDaemon
+by means of AitM poisoning to deliver SlowStepper. “PlushDaemon achieves AitM positioning by compromising network devices such as routers, and deploying a tool that we have named EdgeStepper, which redirects DNS traffic from the targeted network to a remote, attacker-controlled DNS server,” ESET said. “This server responds to queries for domains associated with software update infrastructure with the IP address of the web server that performs the update hijacking and ultimately serves PlushDaemon’s flagship backdoor, SlowStepper.”
+Chinese Hacking Groups Target Misconfigured IIS Servers
+In recent months, threat hunters have also spotted a Chinese-speaking threat actor targeting misconfigured IIS servers using
+publicly exposed machine keys
+to install a backdoor called TOLLBOOTH (aka HijackServer) that comes with SEO cloaking and web shell capabilities.</p>
+
+<p>“REF3927 abuses publicly disclosed ASP.NET machine keys to compromise IIS servers and deploy TOLLBOOTH SEO cloaking modules globally,” Elastic Security Labs researchers
+said
+in a report published late last month. Per HarfangLab, the operation has infected hundreds of servers around the world, with infections concentrated in India and the U.S. The attacks are also characterized by attempts to weaponize the initial access to drop the Godzilla web shell, execute GotoHTTP remote access tool, use Mimikatz to harvest credentials, and deploy HIDDENDRIVER, a modified version of the open source rootkit
+Hidden
+, to conceal the presence of malicious payloads on the infected machine. REF3927 attack pattern and TOLLBOOTH SEO cloaking workflow
+It’s worth pointing out that the cluster is the latest addition to a long list of Chinese threat actors, such as
+GhostRedirector
+,
+Operation Rewrite
+, and
+UAT-8099
+, that have targeted IIS servers, indicating a surge in such activity.</p>
+
+<p>“While the malicious operators appear to be using Chinese as their main language and leveraging the compromises to support search engine optimization (SEO), we notice that the deployed module offers a persistent and unauthenticated channel which allows any party to remotely execute commands on affected servers,” the French cybersecurity company
+said
+. (The story was updated after publication to include a response from Symantec and Carbon Black.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hidden-logic-bombs-in-malware-laced-nuget-packages-set-to-detonate-years-after-installation"><a id="article-4"></a>Hidden Logic Bombs in Malware-Laced NuGet Packages Set to Detonate Years After Installation</h2>
+
+<p>A set of nine malicious NuGet packages has been identified as capable of dropping time-delayed payloads to sabotage database operations and corrupt industrial control systems. According to software supply chain security company Socket, the packages were published in 2023 and 2024 by a user named “
+shanhai666
+“ and are designed to run malicious code after specific trigger dates in August 2027 and November 2028. The packages were collectively downloaded 9,488 times. “The most dangerous package, Sharp7Extend, targets industrial PLCs with dual sabotage mechanisms: immediate random process termination and silent write failures that begin 30-90 minutes after installation, affecting safety-critical systems in manufacturing environments,” security researcher Kush Pandya
+said
+.</p>
+
+<p>The list of malicious packages is below -
+MyDbRepository (Last updated on May 13, 2023)
+MCDbRepository (Last updated on June 5, 2024)
+Sharp7Extend (Last updated on August 14, 2024)
+SqlDbRepository (Last updated on October 24, 2024)
+SqlRepository (Last updated on October 25, 2024)
+SqlUnicornCoreTest (Last updated on October 26, 2024)
+SqlUnicornCore (Last updated on October 26, 2024)
+SqlUnicorn.Core (Last updated on October 27, 2024)
+SqlLiteRepository (Last updated on October 28, 2024)
+Socket said all nine rogue packages work as advertised, allowing the threat actors to build trust among downstream developers who may end up downloading them without realizing they come embedded with a
+logic bomb
+inside that’s scheduled to detonate in the future. The threat actor has been found to publish a total of 12 packages, with the remaining three working as intended without any malicious functionality. All of them have been removed from NuGet. Sharp7Extend, the company added, is designed to target users of the legitimate Sharp7 library, a .NET implementation for communicating with Siemens S7 programmable logic controllers (PLCs).</p>
+
+<p>While bundling Sharp7 into the NuGet package lends it a false sense of security, it belies the fact that the library stealthily injects malicious code when an application performs a database query or PLC operation by exploiting C# extension methods. “Extension methods allow developers to add new methods to existing types without modifying the original code – a powerful C# feature that the threat actor weaponizes for interception,” Pandya explained. “Each time an application executes a database query or PLC operation, these extension methods automatically execute, checking the current date against trigger dates (hardcoded in most packages, encrypted configuration in Sharp7Extend).”
+Once a trigger date is passed, the malware terminates the entire application process with a 20% probability. In the case of Sharp7Extend, the malicious logic is activated immediately following installation and continues until June 6, 2028, when the termination mechanism stops by itself.</p>
+
+<p>The package also includes a feature to sabotage write operations to the PLC 80% of the time after a randomized delay of anywhere between 30 to 90 minutes. This also means that both the triggers – the random process terminations and write failures – are operational in tandem once the grace period elapses. Certain SQL Server, PostgreSQL, and SQLite implementations associated with other packages, on the other hand, are set to trigger on August 8, 2027, (MCDbRepository) and November 29, 2028 (SqlUnicornCoreTest and SqlUnicornCore). “This staggered approach gives the threat actor a longer window to collect victims before the delayed-activation malware triggers, while immediately disrupting industrial control systems,” Pandya said.</p>
+
+<p>It’s currently not known who is behind the supply chain attack, but Socket said source code analysis and the choice of the name “shanhai666” suggest that it may be the work of a threat actor, possibly of Chinese origin. “This campaign demonstrates sophisticated techniques rarely combined in NuGet supply chain attacks,” the company concluded. “Developers who installed packages in 2024 will have moved to other projects or companies by 2027-2028 when the database malware triggers, and the 20% probabilistic execution disguises systematic attacks as random crashes or hardware failures.”
+“This makes incident response and forensic investigation nearly impossible, organizations cannot trace the malware back to its introduction point, identify who installed the compromised dependency, or establish a clear timeline of compromise, effectively erasing the attack’s paper trail.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="enterprise-credentials-at-risk--same-old-same-old"><a id="article-5"></a>Enterprise Credentials at Risk – Same Old, Same Old?</h2>
+
+<p>Imagine this: Sarah from accounting gets what looks like a routine password reset email from your organization’s cloud provider. She clicks the link, types in her credentials, and goes back to her spreadsheet. But unknown to her, she’s just made a big mistake. Sarah just accidentally handed over her login details to cybercriminals who are laughing all the way to their dark web marketplace, where they’ll sell her credentials for about $15.</p>
+
+<p>Not much as a one-off, but a serious money-making operation when scaled up. The credential compromise lifecycle
+Users create credentials:
+With dozens of standalone business apps (each with its own login) your employees must create numerous accounts. But keeping track of multiple unique usernames/passwords is a pain, so they reuse passwords or make tiny variations. Hackers compromise credentials:
+Attackers snag these credentials through phishing, brute force attacks, third-party breaches, or exposed API keys.</p>
+
+<p>And many times, nobody even notices that it’s happened. Hackers aggregate and monetize credentials:
+Criminal networks dump stolen credentials into massive databases, then sell them on underground markets. Hackers sell your company’s login details to the highest bidder. Hackers distribute and weaponize credentials:
+Buyers spread these credentials across criminal networks.</p>
+
+<p>Bots test them against every business app they can find, while human operators cherry-pick the most valuable targets. Hackers actively exploit credentials:
+Successful logins let attackers dig in, escalate privileges, and start their real work — data theft, ransomware, or whatever pays best. By the time you notice weird login patterns or unusual network activity, they could have already been inside for days, weeks, or even longer. Common compromise vectors
+Criminals have
+no shortage of ways
+to get their hands on your company’s user credentials:
+Phishing campaigns:
+Attackers craft fake emails that look legit — complete with stolen company logos and convincing copy.</p>
+
+<p>Even your most security-conscious employees can be fooled by these sophisticated scams. Credential stuffing:
+Attackers grab passwords from old breaches, then test them everywhere. A 0.1% hacking success rate may sound tiny, but with rampant password reuse and the fact that hackers are testing millions of credentials per hour, it quickly adds up. Third-party breaches:
+When LinkedIn gets hacked, attackers don’t just target LinkedIn users — they test those same credentials against all kinds of other business apps.</p>
+
+<p>Your company may have the most robust security in the world, but you’re still vulnerable if users are reusing credentials. Leaked API keys:
+Developers accidentally publish credentials in GitHub repos, config files, and documentation. Automated bots scan for these 24/7, scooping them up within minutes. The criminal ecosystem
+Just like a car theft ring has different players — from the street-level thieves grabbing cars to the chop shop operators and overseas exporters — the
+credential theft ecosystem
+has bad actors who want different things from your stolen credentials.</p>
+
+<p>But knowing their game can help you better defend your organization. Opportunistic fraudsters want quick cash. They’ll drain bank accounts, make fraudulent purchases, or steal crypto. They aren’t picky – if your business credentials work on consumer sites, they’ll use them.</p>
+
+<p>Automated botnets are credential-testing machines that never sleep. They throw millions of username/password combos at thousands of websites, looking for anything that sticks. The name of their game is volume, not precision. Then criminal marketplaces act as middlemen who buy stolen credentials in bulk and resell them to end users.</p>
+
+<p>Think of them as the eBay of cybercrime, with search functions that let buyers easily hunt for your organization’s data. Organized crime groups treat your credentials like strategic weapons. They’ll sit on access for months, mapping your network and planning big-ticket attacks like ransomware or IP theft. These are the kind of professionals who turn single credential compromises into million-dollar disasters.</p>
+
+<p>Real-world impact
+Once attackers get their hands on a set of working credentials, the damage starts fast and spreads everywhere:
+Account takeover:
+Hackers waltz right past your security controls with legitimate access. They’re reading emails, grabbing customer data, and sending messages that look like they’re coming from your employees. Lateral movement:
+One compromised account quickly becomes ten, then fifty. Attackers hop through your network, escalating privileges and mapping out your most valuable systems.</p>
+
+<p>Data theft:
+Attackers focus on identifying your crown jewels — customer databases, financial records, trade secrets — and siphoning them off through channels that appear normal to your monitoring tools. Resource abuse:
+Your cloud bill explodes as attackers spin up crypto mining operations, send spam through your email systems, or burn through API quotas for their own projects. Ransomware deployment:
+If hackers are looking for a major payout, they often turn to ransomware. They encrypt everything important and demand payment, knowing you’ll likely pay because restoration from backups takes forever — and is far from a cheap process.</p>
+
+<p>But that’s just the beginning. You could also be looking at regulatory fines, lawsuits, massive remediation costs, and a reputation that takes years to rebuild. In fact, many organizations never fully recover from a major credential compromise incident. Take action now
+The reality is that some of your company’s user credentials are likely already compromised.</p>
+
+<p>And the longer the exposed credentials sit out undetected, the bigger the target on your back. Make it a priority to find your compromised credentials before the criminals use them. For example,
+Outpost24’s Credential Checker
+is a free tool that shows you how often your company’s email domain appears in leak repositories, observed channels or underground marketplaces. This no-cost, no-registration check doesn’t display or save individual compromised credentials; it simply makes you aware of your level of risk.</p>
+
+<p>Check your domain for leaked credentials now
+. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-launches-new-maps-feature-to-help-businesses-report-review-based-extortion-attempts"><a id="article-6"></a>Google Launches New Maps Feature to Help Businesses Report Review-Based Extortion Attempts</h2>
+
+<p>Google on Thursday said it’s rolling out a dedicated form to allow businesses listed on Google Maps to report extortion attempts made by threat actors who post inauthentic bad reviews on the platform and demand ransoms to remove the negative comments. The approach is designed to tackle a common practice called
+review bombing
+, where online users intentionally post negative user reviews in an attempt to harm a product, a service, or a business. “Bad actors try to circumvent our moderation systems and flood a business’s profile with fake one-star reviews,” Laurie Richardson, vice president of Trust &amp; Safety at Google,
+said
+. “Following this initial attack, the scammers directly contact the business owner, often through third-party messaging apps, to demand payment.”
+The threat actors warn of further escalation should the victim fail to pay the fee, risking potential damage to their public rating and reputation.</p>
+
+<p>These ploys are seen as an attempt to coerce merchants into paying the extortion demand. Google has also warned users of other kinds of scams that are prevalent today -
+Online job scams
+, where fraudsters impersonate legitimate job boards to target people looking for employment using fake postings and recruiter profiles to trick them into providing sensitive data under the pretext of filling fake application forms and video interviews, or downloading malware like remote access trojans (RATs) or information stealers. AI product impersonation scams
+, which involve capitalizing on the popularity surrounding artificial intelligence (AI) tools to impersonate and promote popular AI services using malvertising, hijacked social media accounts, and trojanized open-source repositories that promise “free” or “exclusive” access in order to trap victims into downloading malicious mobile and desktop apps, “
+fleeceware
+“ apps with hidden subscriptions, and bogus browser extensions. Malicious VPN apps and extensions
+, where threat actors distribute malicious applications disguised as legitimate VPN services across platforms using social engineering lures that leverage geopolitical events to ensnare victims who are seeking secure internet access.</p>
+
+<p>Once installed, these apps can act as a conduit for other payloads like information stealers, RATs, and banking malware that can steal data and drain funds from cryptocurrency wallets. Fraud recovery scams
+, which involve targeting individuals who have already been scammed by posing as asset recovery agents associated with trusted entities like law firms and government agencies, only to scam them a second time. It’s worth noting that the U.S. Federal Bureau of Investigation (FBI)
+issued
+a bulletin about this threat back in August 2025.</p>
+
+<p>Seasonal holiday scams
+, where threat actors exploit major holiday and shopping periods to deceive unsuspecting shoppers with counterfeit offers on social media platforms that lead to financial fraud and data theft. To counter these schemes, users are advised to be wary of unexpected delivery texts or emails that demand a fee, exercise caution when approached by people who claim they can recover funds, download apps only from trusted sources and legitimate developers, and be vigilant when asked to fill out sensitive personal information. The development coincides with a report from Reuters, which
+found
+that Meta is making billions of dollars every year from ad marketing scams and illegal products on its platform. Citing an internal December 2024 document, the British news agency said the scam ads could account for as much as 10.1% of its overall revenue, or approximately $16 billion.</p>
+
+<p>Meta allowed “high value accounts” to “accrue more than 500 strikes without Meta shutting them down,” Reuters reported, adding “a small advertiser would have to get flagged for promoting financial fraud at least eight times before Meta blocked it.”
+In addition, the company is said to have charged bad actors higher rates more to run ads as a penalty, as they accrued more strikes, only banning advertisers if its automated systems predict they are 95% certain to be committing fraud. On average, Meta is estimated to have served its platforms’ users an estimated 15 billion “higher risk” scam advertisements every day. In response, Meta said the 10.1% estimate was rough and overly-inclusive, and that it has removed more than 134 million pieces of scam ad content so far in 2025. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="vibe-coded-malicious-vs-code-extension-found-with-built-in-ransomware-capabilities"><a id="article-7"></a>Vibe-Coded Malicious VS Code Extension Found with Built-In Ransomware Capabilities</h2>
+
+<p>Cybersecurity researchers have flagged a malicious Visual Studio Code (VS Code) extension with basic ransomware capabilities that appears to be created with the help of artificial intelligence – in other words, vibe-coded. Secure Annex researcher John Tuckner, who
+flagged
+the extension “
+susvsex
+,” said it does not attempt to hide its malicious functionality. The extension was uploaded on November 5, 2025, by a user named “suspublisher18” along with the description “Just testing” and the email address “donotsupport@example[.]com.”
+“Automatically zips, uploads, and encrypts files from C:\Users\Public\testing (Windows) or /tmp/testing (macOS) on first launch,” reads the description of the extension. As of November 6, Microsoft has stepped in to
+remove
+it from the official VS Code Extension Marketplace.</p>
+
+<p>According to details shared by “suspublisher18,” the extension is designed to automatically activate itself on any event, including installing or when launching VS Code, and invoke a function named “zipUploadAndEncrypt,” which creates a ZIP archive of a target directory, exfiltrates it to a remote server, and replaces the files with their encrypted versions. “Fortunately, the TARGET_DIRECTORY is configured to be a test staging directory so it would have little impact right now, but is easily updated with an extension release or as a command sent through the C2 channel covered next,” Tuckner said. Besides encryption, the malicious extension also uses GitHub as command-and-control (C2) by polling a private GitHub repository for any new commands to be executed by parsing the “index.html” file. The results of the command execution are written back to the same repository in the “requirements.txt” file using a GitHub access token embedded in the code.</p>
+
+<p>The GitHub account associated with the
+repository
+– aykhanmv – continues to be active, with the developer claiming to be from the city of Baku, Azerbaijan. “Extraneous comments which detail functionality, README files with execution instructions, and placeholder variables are clear signs of ‘vibe-coded’ malware,” Tuckner said. “The extension package accidentally included decryption tools, command and control server code, GitHub access keys to the C2 server, which other people could use to take over the C2.”
+Trojanized npm Packages Drop Vidar Infostealer
+The disclosure comes as Datadog Security Labs
+unearthed
+17 npm packages that masquerade as benign software development kits (SDKs) and provide the advertised functionality, but are engineered to stealthily execute
+Vidar Stealer
+on infected systems. The development marks the first time the information stealer has been distributed via the npm registry.</p>
+
+<p>The cybersecurity company, which is tracking the cluster under the name MUT-4831, said some of the packages were first flagged on October 21, 2025, with subsequent uploads recorded the next day and on October 26. The names of the packages, published by accounts called “aartje” and “saliii229911,” are below -
+abeya-tg-api
+bael-god-admin
+bael-god-api
+bael-god-thanks
+botty-fork-baby
+cursor-ai-fork
+cursor-app-fork
+custom-telegram-bot-api
+custom-tg-bot-plan
+icon-react-fork
+react-icon-pkg
+sabaoa-tg-api
+sabay-tg-api
+sai-tg-api
+salli-tg-api
+telegram-bot-start
+telegram-bot-starter
+While the two accounts have since been banned, the libraries were downloaded at least 2,240 times prior to them being taken down. That said, Datadog noted that many of these downloads could likely have been the result of automated scrapers. The attack chain in itself is fairly straightforward, kicking in as part of a postinstall script specified in the “package.json” file that downloads a ZIP archive from an external server (“bullethost[.]cloud domain”) and execute the Vidar executable contained within the ZIP file.</p>
+
+<p>The Vidar 2.0 samples have been found to use hard-coded Telegram and Steam accounts as dead drop resolvers to fetch the actual C2 server. In some variants, a post-install PowerShell script, embedded directly in the package.json file, is used to download the ZIP archive, after which the execution control is passed to a JavaScript file to complete the rest of the steps in the attack. ‘
+“It is not clear why MUT-4831 chose to vary the postinstall script in this way,” security researchers Tesnim Hamdouni, Ian Kretz, and Sebastian Obregoso said. “One possible explanation is that diversifying implementations can be advantageous to the threat actor in terms of surviving detection.”
+The discovery is just another in a long list of supply chain attacks targeting the open-source ecosystem spanning
+npm
+,
+PyPI, RubyGems
+, and
+Open VSX
+, making it crucial that developers perform due diligence, review changelogs, and watch out for techniques like typosquatting and dependency confusion before installing packages.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="trojanized-eset-installers-drop-kalambur-backdoor-in-phishing-attacks-on-ukraine"><a id="article-8"></a>Trojanized ESET Installers Drop Kalambur Backdoor in Phishing Attacks on Ukraine</h2>
+
+<p>A previously unknown threat activity cluster has been observed impersonating Slovak cybersecurity company ESET as part of phishing attacks targeting Ukrainian entities. The campaign, detected in May 2025, is tracked by the security outfit under the moniker
+InedibleOchotense
+, describing it as Russia-aligned. “InedibleOchotense sent spear-phishing emails and Signal text messages, containing a link to a trojanized ESET installer, to multiple Ukrainian entities,” ESET
+said
+in its APT Activity Report Q2 2025–Q3 2025 shared with The Hacker News. InedibleOchotense is assessed to share tactical overlaps with a campaign
+documented
+by EclecticIQ that involved the deployment of a backdoor called BACKORDER and by CERT-UA as
+UAC-0212
+, which it describes as a sub-cluster within the Sandworm (aka APT44) hacking group.</p>
+
+<p>While the email message is written in Ukrainian, ESET said the first line uses a Russian word, likely indicating a typo or a translation error. The email, which purports to be from ESET, claims its monitoring team detected a suspicious process associated with their email address and that their computers might be at risk. The activity is an attempt to capitalize on the widespread use of ESET software in the country and its brand reputation to trick recipients into installing malicious installers hosted on domains such as esetsmart[.]com, esetscanner[.]com, and esetremover[.]com. The installer is designed to deliver the legitimate ESET AV Remover, alongside a variant of a C# backdoor dubbed Kalambur (aka SUMBUR), which uses the Tor anonymity network for command-and-control.</p>
+
+<p>It’s also capable of dropping OpenSSH and enabling remote access via the Remote Desktop Protocol (RDP) on port 3389. It’s worth noting that CERT-UA, in a report
+published
+last month, attributed a nearly identical campaign to
+UAC-0125
+, another sub-cluster within Sandworm. “InedibleOchotense is a Russia-aligned threat actor that is weakly related to Sandworm, and that overlaps with Sandworm’s BACKORDER-related campaign and UAC-0212,” Matthieu Faou, senior malware researcher at ESET, told The Hacker News. “While there are some similarities with what was reported by CERT-UA as UAC-0125, we cannot independently confirm the link.”
+Sandworm Wiper Attacks in Ukraine
+Sandworm, per ESET, has continued to mount
+destructive
+campaigns
+in Ukraine, launching two wiper malware tracked as ZEROLOT and Sting aimed at an unnamed university in April 2025, followed by the deployment of multiple data-wiping malware variants targeting government, energy, logistics, and grain sectors.</p>
+
+<p>“During this period, we observed and confirmed that the
+UAC-0099
+group
+conducted initial access operations and subsequently transferred validated targets to Sandworm for follow-up activity,” the company said. “These destructive attacks by Sandworm are a reminder that wipers very much remain a frequent tool of Russia-aligned threat actors in Ukraine.”
+RomCom Exploits WinRAR 0-Day in Attacks
+Another Russia-aligned threat actor of note that has been active during the time period is RomCom (aka Storm-0978, Tropical Scorpius, UNC2596, or Void Rabisu), which launched spear-phishing campaigns in mid-July 2025 that weaponized a WinRAR vulnerability (
+CVE-2025-8088
+, CVSS score: 8.8) as part of attacks targeting financial, manufacturing, defense, and logistics companies in Europe and Canada. “Successful exploitation attempts delivered various backdoors used by the RomCom group, specifically a SnipBot [aka SingleCamper or RomCom RAT 5.0] variant, RustyClaw, and a Mythic agent,” ESET said. In a detailed profile of RomCom in late September 2025, AttackIQ characterized the hacking group as closely keeping an eye out for geopolitical developments surrounding the war in Ukraine, and leveraging them to carry out credential harvesting and data exfiltration activities likely in support of Russian objectives.</p>
+
+<p>“RomCom was initially developed as an e-crime commodity malware, engineered to facilitate the deployment and persistence of malicious payloads, enabling its integration into prominent and extortion-focused ransomware operations,” security researcher Francis Guibernau
+said
+. “RomCom transitioned from a purely profit-driven commodity to become a utility leveraged in nation-state operations.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisco-warns-of-new-firewall-attack-exploiting-cve-2025-20333-and-cve-2025-20362"><a id="article-9"></a>Cisco Warns of New Firewall Attack Exploiting CVE-2025-20333 and CVE-2025-20362</h2>
+
+<p>Cisco on Wednesday disclosed that it became aware of a new attack variant that’s designed to target devices running Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software releases that are susceptible to
+CVE-2025-20333
+and
+CVE-2025-20362
+. “This attack can cause unpatched devices to unexpectedly reload, leading to denial-of-service (DoS) conditions,” the company said in an updated advisory, urging customers to apply the updates as soon as possible. Both vulnerabilities were
+disclosed
+in late September 2025, but not before they were exploited as zero-day vulnerabilities in attacks delivering malware such as
+RayInitiator and LINE VIPER
+, according to the U.K. National Cyber Security Centre (NCSC).</p>
+
+<p>While successful exploitation of CVE-2025-20333 allows an attacker to execute arbitrary code as root using crafted HTTP requests, CVE-2025-20362 makes it possible to access a restricted URL without authentication. The update comes as Cisco
+addressed
+two critical security flaws in Unified Contact Center Express (Unified CCX) that could permit an unauthenticated, remote attacker to upload arbitrary files, bypass authentication, execute arbitrary commands, and elevate privileges to root. The networking equipment major credited security researcher Jahmel Harris for discovering and reporting the shortcomings. The vulnerabilities are listed below -
+CVE-2025-20354
+(CVSS score: 9.8) - A vulnerability in the Java Remote Method Invocation (RMI) process of Unified CCX that allows an attacker to upload arbitrary files and execute arbitrary commands with root permissions on an affected system.</p>
+
+<p>CVE-2025-20358
+(CVSS score: 9.4) - A vulnerability in the Contact Center Express (CCX) Editor application of Unified CCX that allows an attacker to bypass authentication and obtain administrative permissions to create arbitrary scripts on the underlying operating system and execute them. They have been addressed in the following versions -
+Cisco Unified CCX Release 12.5 SU3 and earlier (Fixed in 12.5 SU3 ES07)
+Cisco Unified CCX Release 15.0 (Fixed in 15.0 ES01)
+In addition to the two vulnerabilities, Cisco has shipped patches for a high-severity DoS bug (CVE-2025-20343, CVSS score: 8.6) in Identity Services Engine (ISE) that could allow an unauthenticated, remote attacker to cause a susceptible device to restart unexpectedly. “This vulnerability is due to a logic error when processing a RADIUS access request for a MAC address that is already a rejected endpoint,” it
+said
+. “An attacker could exploit this vulnerability by sending a specific sequence of multiple crafted RADIUS access request messages to Cisco ISE.”
+While there is no evidence that any of the three security flaws have been exploited in the wild, it’s essential that users apply the updates as soon as possible for optimal protection.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="from-tabletop-to-turnkey-building-cyber-resilience-in-financial-services"><a id="article-10"></a>From Tabletop to Turnkey: Building Cyber Resilience in Financial Services</h2>
+
+<p>Introduction
+Financial institutions are facing a new reality: cyber-resilience has passed from being a best practice, to an operational necessity, to a prescriptive regulatory requirement. Crisis management or Tabletop exercises, for a long time relatively rare in the context of cybersecurity, have become required as a series of regulations has introduced this requirement to FSI organizations in several regions, including
+DORA
+(Digital Operational Resilience Act) in the EU;
+CPS230 / CORIE
+(Cyber Operational Resilience Intelligence-led Exercises) in Australia;
+MAS TRM
+(Monetary Authority of Singapore Technology Risk Management guidelines);
+FCA/PRA Operational Resilience
+in the UK; the
+FFIEC IT Handbook
+in the US, and the
+SAMA Cybersecurity Framework
+in Saudi Arabia. What makes complying with these regulatory requirements complex is the cross-functional collaboration between technical and non-technical teams. For example, simulation of the technical aspects of the cyber incident - in other words, red-teaming - is required, if not precisely at the same time, then certainly within the same resilience program, in the same context, and with many of the same inputs and outputs.</p>
+
+<p>This is strongest in the regulations based on the
+TIBER-EU
+framework, particularly CORIE and DORA. There’s Always Excel
+As requirements become more prescriptive, and best practices become more established, what used to be a tabletop exercise driven by a simple Excel file with a short series of events, timestamps, personas and comments, has grown into a series of scenarios, scripts, threat landscape analyses, threat actor profiles, TTPs and IOCs, folders of threat reports, hacking tools, injects and reports - all of which must be reviewed, prepared, rehearsed, played, analyzed, and reported, at least once per year, if not per quarter, if not continuously. While Excel is a stalwart in each of the cyber, financial, and GRC domains, even it has its limits at these levels of complexity. Blending Tabletop and Red Team Simulation
+Over the past several years,
+Filigran
+has advanced
+OpenAEV
+to the point where you can design and execute end-to-end scenarios that blend human communications with technical events.</p>
+
+<p>Initially launched as a crisis simulation management platform, it later incorporated breach &amp; attack simulation to now holistic adversarial exposure management, providing a unique capability to assess both technical and human readiness. Simulations are more realistic when ransomware encryption alerts are followed by emails from confused users
+There are many advantages to blending these two capabilities into one tool. For a start, it greatly simplifies the preparation work for the scenario. Following threat landscape research in OpenCTI (a threat intelligence platform), a relevant intelligence report can be used to both generate the technical injects based on the Attacker TTPs, but also have content such as attacker communications, third party Security Operations Centre and Managed Detection and Response communications, and internal leadership communications, built off intelligence and timing from the same report.</p>
+
+<p>Keeping Track of the Team
+Using a single tool also deduplicates logistics, before, during, and after the exercise. “Players” in the exercise, in their teams and organizational units, can be synchronized with enterprise Identity and Access Management sources, so that recipients of alerts from technical events during the exercise, are the same as those receiving simulated crisis emails from the tabletop components; and the same who receive the automated feedback questionnaires for the ‘hot wash’ review immediately after the exercise; and the same who appear in the final reports for auditor review. OpenAEV can synchronise current team participant and analyst details from multiple identity sources
+Similarly, if the same exercise is run again after lessons learnt have been put into place, as part of the demonstrable continual improvement required under DORA and CORIE, then this synchronization will maintain a current contact list for the individuals in these roles, or, indeed, for the alternate phone tree and out-of-band crisis communications channels that are also kept up to date, and for third parties such as MSSP, MDR, and upstream supply chain providers. Similar efficiencies exist in threat landscape tracking, threat report mapping, and other features.</p>
+
+<p>As with all business processes, streamlining logistics makes for greater efficiency, enabling shorter preparation times, and more frequent simulations. Choosing your timing
+With CORIE and DORA being relatively recently enforced regulations, most organizations will be just starting their journey in running tabletop and red team scenarios, with much refinement in the process still to come. For such organizations, running blended simulations may feel too large a first step. This is fine.</p>
+
+<p>Scenarios can be run in OpenAEV in more discreet ways. Most typically, this might involve running a red team simulation on the first day, to test detective and preventative technical controls, and SOC response processes. The tabletop exercise would then be run on the second day, and can potentially be tweaked to reflect findings and timings from the technical exercise. Simulations can be scheduled to repeat over days, weeks, or months
+More interestingly, simulations can be scheduled and run over much longer periods of time - even months.</p>
+
+<p>This permits automation and management of trickier, but very real scenarios, such as leaving signs of intrusion on hosts in advance, and challenging the SOC, IR and CTI teams to show their ability to retrieve logs from archive in order to search for patient zero, the first system compromised. This can be hard to realistically model in a day’s simulation, but all too common a requirement in reality. Practice makes Perfect
+Aside from the regulatory requirements, insurance conditions, risk management, and other external drivers, the ability to streamline attack simulations and tabletop exercises for current, relevant threats, with all the technical integrations, scheduling, and automation that enable this means that your security, leadership, and crisis management teams, will develop a muscle memory and flow that will engender confidence in your organization’s ability to handle a real crisis, when the next one occurs. Having access to a tool like OpenAEV, which is free for community use, with a library of common ransomware and threat scenarios, technical integrations to SIEMs and EDRs, and an extensible and open source integration ecosystem, is one of many ways in which we can help improve our cyber defenses and cyber resilience.</p>
+
+<p>And, not to forget, our compliance. And when your team is fully rehearsed and confident at handling crisis situations, then it’s no longer a crisis. Ready to Take the Next Step? To dive deeper into how organizations can turn regulatory mandates into actionable resilience strategies, join one of Filigran’s upcoming expert-led sessions:
+Operationalizing Incident Response: Compliance-Ready Tabletop Exercises with an AEV Platform
+November 20th, 11:00 AM - 12:00 PM CET (Europe Session)
+November 20th, 1:00 PM - 2:00 PM EST (North America Session)
+Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-ai-tools-in-malware-botnets-gdi-flaws-election-attacks--more"><a id="article-11"></a>ThreatsDay Bulletin: AI Tools in Malware, Botnets, GDI Flaws, Election Attacks &amp; More</h2>
+
+<p>Cybercrime has stopped being a problem of just the internet — it’s becoming a problem of the real world. Online scams now fund organized crime, hackers rent violence like a service, and even trusted apps or social platforms are turning into attack vectors. The result is a global system where every digital weakness can be turned into physical harm, economic loss, or political leverage. Understanding these links is no longer optional — it’s survival.</p>
+
+<p>For a full look at the most important security news stories of the week, keep reading. Hidden flaws resurface in Windows core
+Security Flaws in Windows GDI
+Details have emerged about three now-patched security vulnerabilities in Windows Graphics Device Interface (GDI) that could enable remote code execution and information disclosure. These issues –
+CVE-2025-30388
+,
+CVE-2025-53766
+, and
+CVE-2025-47984
+– involve out-of-bounds memory access triggered through malformed enhanced metafile (EMF) and EMF+ records that can cause memory corruption during image rendering. They are rooted in gdiplus.dll and gdi32full.dll, which process vector graphics, text, and print operations.</p>
+
+<p>They were addressed by Microsoft in the Patch Tuesday updates in May, July, and August 2025 in gdiplus.dll versions 10.0.26100.3037 through 10.0.26100.4946 and gdi32full.dll version 10.0.26100.4652. “Security vulnerabilities can persist undetected for years, often resurfacing due to incomplete fixes,” Check Point
+said
+. “A particular information disclosure vulnerability, despite being formally addressed with a security patch, remained active for years due to the original issue receiving only a partial fix. This example underscores a basic conundrum for researchers: introducing a vulnerability is often easy, fixing it can be difficult, and verifying that a fix is both thorough and effective is even more challenging.”
+Syndicate staffed by fake workers net millions
+3 Chinese Nationals Sent to Prison in Singapore
+Three Chinese nationals, Yan Peijian, 39, Huang Qinzheng, 37, and Liu Yuqi, 33, were convicted and sentenced to a little over two years in prison in Singapore for their involvement in hacking into overseas gambling websites and companies for the purposes of cheating during gameplay and stealing databases of personally identifiable information for trade.</p>
+
+<p>The three individuals, part of a
+group
+of five Chinese nationals and one Singaporean man, were
+originally arrested and charged
+in September 2024. “The three accused persons were tasked by the syndicate’s group leader to probe sites of interest for system vulnerabilities, conduct penetration attacks, and exfiltrate personal information from the compromised systems,” the Singapore Police Force
+said
+. “Further investigations revealed that the syndicate possessed foreign government data, including confidential communications.” The three defendants were also found to be in possession of tools like PlugX and “hundreds of different remote access trojans” to conduct cyber attacks. According to
+Channel News Asia
+, the three men entered the country on fake work permits in 2022 and worked for a 38-year-old Ni-Vanuatu citizen named Xu Liangbiao.</p>
+
+<p>They were paid about $3 million for their work. Xu, the alleged leader, is said to have left Singapore in August 2023. His present whereabouts are unknown. AI speeds triage but human skill still needed
+Reverse Engineering XLoader Using ChatGPT
+Check Point has demonstrated a way by which ChatGPT can be used for malware analysis and flip the balance when it comes to taking apart sophisticated trojans like
+XLoader
+, which is designed such that its code decrypts only at runtime and is protected by multiple layers of encryption.</p>
+
+<p>Specifically, the research found that cloud-based static analysis with ChatGPT can be combined with Model Context Protocol (MCP) for runtime key extraction and live debugging validation. “The use of AI doesn’t eliminate the need for human expertise,” security researcher Alexey Bukhteyev
+said
+. “XLoader’s most sophisticated protections, such as scattered key derivation logic and multi-layer function encryption, still require manual analysis and targeted adjustments. But the heavy lifting of triage, deobfuscation, and scripting can now be accelerated dramatically.</p>
+
+<p>What once took days can now be compressed into hours.”
+RondoDox goes from DVRs to enterprise-wide weapon
+RondoDox Updates its Exploit Arsenal
+The malware known as
+RondoDox
+has witnessed a
+650% increase in exploitation vectors
+, expanding from niche DVR targeting to enterprise. This includes more than 15 new exploitation vectors targeting LB-LINK, Oracle WebLogic Server, PHPUnit, D-Link, NETGEAR, Linksys, Tenda, TP-Link devices, as well as a new command-and-control (C2) infrastructure on compromised residential IP. Once dropped, the malware proceeds to eliminate competition by killing existing malware such as XMRig and other botnets, disabling SELinux and AppArmor, and running the main payload that’s compatible with the system architecture. DHS pushes sweeping biometric rule for immigration
+U.S.</p>
+
+<p>DHS Proposes Biometric Data Collection for Immigration Applications
+The U.S. Department of Homeland Security (DHS) has
+proposed
+an amendment to existing regulations governing the use and collection of biometric information. The agency has put forth requirements for a “robust system for biometrics collection, storage, and use related to adjudicating immigration benefits and other requests and performing other functions necessary for administering and enforcing immigration and naturalization laws.” As part of the plan, any individual filing or associated with a benefit request or other request or collection of information, including U.S. citizens, U.S.</p>
+
+<p>nationals, and lawful permanent residents, must submit biometrics, regardless of their age, unless DHS otherwise exempts the requirement. The agency said using biometrics for identity verification and management will assist DHS’s efforts to combat trafficking, confirm the results of biographical criminal history checks, and deter fraud. The DHS is
+taking comments on the proposal
+until January 2, 2026. Researchers uncover large-scale AWS abuse network
+New Attack Infrastructure TruffleNet Detailed
+Cybersecurity researchers have discovered a new large-scale attack infrastructure dubbed TruffleNet that’s built around the open-source tool
+TruffleHog
+, which is used to systematically test compromised credentials and perform reconnaissance across Amazon Web Services’ (AWS) environments.</p>
+
+<p>“In one incident involving multiple compromised credentials, we recorded activity from more than 800 unique hosts across 57 distinct Class C networks,” Fortinet
+said
+. “This infrastructure was characterized by the use of TruffleHog, a popular open-source secret-scanning tool, and by consistent configurations, including open ports and the presence of Portainer,” an open-source management UI for Docker and Kubernetes that simplifies container deployment and orchestration. In these activities, the threat actors make calls to the GetCallerIdentity and GetSendQuota APIs to test whether the credentials are valid and abuse the Simple Email Service (SES). While no follow-on actions were observed by Fortinet, it’s assessed that the attacks originate from a possibly tiered infrastructure, with some nodes dedicated to reconnaissance and others reserved for later stages of the attack.</p>
+
+<p>Also observed alongside the TruffleNet reconnaissance activity is the abuse of SES for Business Email Compromise (BEC) attacks. It’s currently not known if these are directly connected to each other. The development comes as Fortinet
+revealed
+that financially motivated adversaries are targeting a broad range of sectors but relying on the same low-complexity, high-return methods, typically gaining initial access through compromised credentials, external remote services like VPNs, and exploitation of public-facing applications. These attacks are often characterized by the use of legitimate remote access tools for secondary persistence and leveraging them for data exfiltration to their infrastructure.</p>
+
+<p>FIN7 deploys stealthy SSH backdoor for persistence
+FIN7 Uses SSH Backdoor in Attacks
+PRODAFT has
+revealed
+that the financially motivated threat actor known as
+FIN7
+(aka Savage Ladybug) has deployed since 2022 a “Windows specific SSH-based backdoor by packaging a self-contained OpenSSH toolset and an installer named install.bat.” The backdoor provides attackers with persistent remote access and reliable file exfiltration using an outbound reverse SSH tunnel and SFTP. Cloudflare fends off massive DDoS surge on election day
+Cloudflare Detailed Steps Taken to Secure 2025 Moldova Elections
+Web infrastructure company Cloudflare said Moldova’s Central Election Commission (CEC) experienced significant cyber attacks in the days leading to the country’s Parliament election on September 28. The CEC also witnessed a “series of concentrated, high-volume (DDoS) attacks strategically timed throughout the day” on the day of the elections. Attacks also targeted other election-related, civil society, and news websites.</p>
+
+<p>“These attack patterns mirrored those against the election authority, suggesting a coordinated effort to disrupt both official election processes and the public information channels voters rely on,” it
+said
+, adding it mitigated over 898 million malicious requests directed at the CEC over a 12-hour period between 09:06:00 UTC and 21:34:00 UTC. Silent Lynx exploits diplomacy themes to breach targets
+Silent Lynx Targets Russian-Azerbaijani Entities in Mid-October 2025
+The threat actor tracked as
+Silent Lynx
+(aka Cavalry Werewolf, Comrade Saiga, ShadowSilk, SturgeonPhisher, and Tomiris) has been observed targeting government entities, diplomatic missions, mining firms, and transportation companies. In one campaign, the adversary singled out organizations involved in Azerbaijan-Russian diplomacy, using phishing lures related to the
+CIS summit held in Dushanbe
+around mid-October 2025 to deliver the open-source Ligolo-ng reverse shell and a loader called Silent Loader that’s responsible for running a PowerShell script to connect to a remote server. Also deployed is a C++ implant named Laplas that’s designed to connect to an external server and receive additional commands for execution via “cmd.exe.” Another payload of note is SilentSweeper, a .NET backdoor that extracts and runs a PowerShell Script that acts as a reverse shell.</p>
+
+<p>The second campaign, on the other hand, aimed at
+China-Central Asia relations
+to distribute a RAR archive that led to the deployment of SilentSweeper. The activity has been codenamed
+Operation Peek-a-Baku
+by Seqrite Labs. Doctor Web, in an independent analysis,
+said
+it investigated a phishing attack mounted by the threat actor targeting a government-owned organization within the Russian Federation to deliver reverse shell backdoors with the goal of collecting confidential information as well as network configuration data. Cyber gangs blend digital and physical extortion across Europe
+Surge in Violence-as-a-Service Attacks in Europe
+European organizations
+witnessed
+a 13% increase in ransomware over the past year, with entities in the U.K., Germany, Italy, France, and Spain most affected.</p>
+
+<p>A review of data leak sites over the period September 2024–August 2025 has revealed that the number of European victims has increased annually to 1,380. The most targeted sectors were manufacturing, professional services, technology, industrials, engineering, and retail. Since January 2024, over 2,100 victims across Europe have been named on extortion leak sites, with 92% involving file encryption and data theft. Akira (167), LockBit (162), RansomHub (141), INC, Lynx, and Sinobi were the most successful ransomware groups over the period.</p>
+
+<p>CrowdStrike said it’s also seeing a surge in violence-as-a-service offerings across the continent with the goal of securing big payouts, including physical cryptocurrency theft. Cybercriminals connected to The Com, a loose-knit collective of young, English-speaking hackers, and a Russia-affiliated group called Renaissance Spider have coordinated physical attacks, kidnapping, and arson through Telegram-based networks. Renaissance Spider, which has been active since October 2017, is also said to have emailed fake bomb threats to European entities, likely aiming to undermine support for Ukraine. There have been 17 of these kinds of attacks since January 2024, out of which 13 took place in France.</p>
+
+<p>Fake ChatGPT and WhatsApp apps exploit user trust
+Fake Apps Exploit ChatGPT and WhatsApp Branding
+Cybersecurity researchers have discovered apps that use the branding of established services like OpenAI’s ChatGPT and DALL-E, and WhatsApp. While the fake DALL-E Android app (“com.openai.dalle3umagic”) is used for ad traffic generation, the ChatGPT wrapper app connects to legitimate OpenAI APIs while identifying itself as an “unofficial interface” for the artificial intelligence chatbot. Although not outright malicious, impersonation without transparency can expose users to unintended security risks. The counterfeit WhatsApp app, named WhatsApp Plus, masquerades as an upgraded version of the messaging platform, but contains stealthy payloads that can harvest contacts, SMS messages, and call logs.</p>
+
+<p>“The flood of cloned applications reflects a deeper problem: brand trust has become a vector for exploitation,” Appknox
+said
+. “As AI and messaging tools dominate the digital landscape, bad actors are learning that mimicking credibility is often more profitable than building new malware from scratch.”
+Phishers weaponize trusted email accounts post-breach
+Attackers Use Compromised Accounts for Phishing Attacks
+Threat actors are continuing to launch phishing campaigns after their initial compromise by leveraging compromised internal email accounts to expand their reach both within the compromised organization as well as externally to partner entities. “The follow-on phishing campaigns were primarily oriented towards credential harvesting,” Cisco Talos
+said
+. “Looking forward, as defenses against phishing attacks improve, adversaries are seeking ways to enhance these emails’ legitimacy, likely leading to the increased use of compromised accounts post-exploitation.”
+Asia-wide phishing surge uses multilingual lures
+Phishing Attacks Target Financial and Government Orgs in Asia
+Recent phishing campaigns across East and Southeast Asia have been found to leverage multilingual ZIP file lures and shared web templates to target government and financial organizations.</p>
+
+<p>“These operations are characterized by multilingual web templates, region-specific incentives, and adaptive payload delivery mechanisms, demonstrating a clear shift toward scalable and automation-driven infrastructure,” Hunt.io
+said
+. “From China and Taiwan to Japan and Southeast Asia, the adversaries have continuously repurposed templates, filenames, and hosting patterns to sustain their operations while evading conventional detection. The strong overlap in domain structures, webpage titles, and scripting logic indicates a shared toolkit or centralized builder designed to automate payload delivery at scale. This investigation links multiple clusters to a unified phishing toolkit used across Asia.”
+Remote kill-switch fears spark probe into Chinese buses
+Dutch Authorities Launch Probe to Close Security Hole in Chinese Electric Buses
+Authorities in Denmark have launched an investigation following a discovery that electric buses manufactured by the Chinese company Yutong had remote access to the vehicles’ control systems and allowed them to be remotely deactivated.</p>
+
+<p>This has raised security concerns that the loophole could be exploited to affect buses while in transit. “The testing revealed risks that we are now taking measures against,” Bernt Reitan Jenssen, chief executive of the Norwegian public transport authority Ruter, was
+quoted as saying
+. “National and local authorities have been informed and must assist with additional measures at a national level.”
+Cloudflare scrubs botnet domains from global rankings
+Cloudflare Takes Action on AISURU Botnet
+Cloudflare has scrubbed domains associated with the massive
+AISURU
+botnet from its
+top domain rankings
+. According to security journalist
+Brian Krebs
+, AISURU’s operators are using the botnet to boost their malicious domain rankings, while simultaneously targeting the company’s domain name system (DNS) service.</p>
+
+<p>China delivers harsh verdict in cross-border scam crackdown
+China Sentences 5 Myanmar Scam Mafia Members to Death
+A court in China has
+sentenced
+five members of a Myanmar crime syndicate to death for their roles in running industrial-scale scamming compounds near the border with China. The death sentences were handed out to the syndicate boss Bai Suocheng and his son Bai Yingcang, as well as Yang Liqiang, Hu Xiaojiang, and Chen Guangyi. Five others were sentenced to life. In all, 21 members and associates of the syndicate were convicted of fraud, homicide, injury, and other crimes.</p>
+
+<p>According to
+Xinhua
+, the defendants ran 41 industrial parks to facilitate telecommunications and online fraud at scale. The harsh penalty is the latest in a series of actions governments across the world have taken to combat the rise of
+cyber-enabled scam centers
+in Southeast Asia, where thousands are trafficked under the pretext of well-paying jobs, and are trapped, abused, and forced to defraud others in criminal operations worth billions. In September 2025, 11 members of the Ming crime family arrested during a 2023 cross-border crackdown were
+sentenced
+to death. Massive global credit card scam busted in €300M sting
+Operation Chargeback Dismantles €300 million Credit Card Fraud Scheme
+A coordinated law enforcement operation against a massive credit card fraud scheme dubbed Chargeback has led to the arrest of 18 suspects.</p>
+
+<p>The arrested individuals are German, Lithuanian, Dutch, Austrian, Danish, American, and Canadian nationals. “The alleged perpetrators are suspected of setting up an intricate scheme of fake online subscriptions to dating, pornography, and streaming services, among others, which were paid for by credit card,” Eurojust
+said
+. “Among those arrested are five executive officials from four German payment service providers. The perpetrators deliberately kept monthly credit card payments to their accounts below the maximum of EUR 50 to avoid arousing suspicion among victims about high transfer amounts.” The illicit scam is estimated to have defrauded at least €300 million from over 4.3 million credit card users with 19 million accounts in 193 countries between 2016 and 2021.</p>
+
+<p>The total value of attempted fraud against card users amounts to more than €750 million. Europol
+said
+the suspects used numerous shell companies, primarily registered in the U.K. and Cyprus, to conceal their activities. Every hack or scam has one thing in common — someone takes advantage of trust.</p>
+
+<p>As security teams improve their defenses, attackers quickly find new tricks. The best way to stay ahead isn’t to panic, but to stay informed, keep learning, and stay alert. Cybersecurity keeps changing fast — and our understanding needs to keep up. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="bitdefender-named-a-representative-vendor-in-the-2025-gartner-market-guide-for-managed-detection-and-response"><a id="article-12"></a>Bitdefender Named a Representative Vendor in the 2025 Gartner® Market Guide for Managed Detection and Response</h2>
+
+<p>Bitdefender has once again been recognized as a Representative Vendor in the
+Gartner® Market Guide for Managed Detection and Response (MDR)
+— marking the fourth consecutive year of inclusion. According to Gartner, more than 600 providers globally claim to deliver MDR services, yet only a select few meet the criteria to appear in the Market Guide. While inclusion is not a ranking or comparative assessment, we believe it underscores Bitdefender’s human-driven approach to MDR and our continued alignment with Gartner’s rigorous inclusion standards. To be included, must demonstrate consistent visibility through Gartner client inquiries or Peer Insights reviews, focus on delivering end-user–oriented services rather than purely technological solutions, and represent a variety of company sizes and geographies.</p>
+
+<p>We believe independent analyst research like the Gartner Market Guide for Managed Detection and Response is a valuable resource for organizations assessing MDR providers. The report outlines the evolving MDR landscape, identifies its core components, and highlights emerging trends — including the growing emphasis on proactive exposure management. Download the Report
+Why MDR Adoption Is Accelerating
+The MDR market continues to expand rapidly, fueled by two key forces: the rising sophistication of cyber threats and the ongoing shortage of skilled in-house security talent. While large enterprises have long had access to around-the-clock monitoring and expert-led response, small and mid-sized organizations are increasingly recognizing the same need — often without the capacity to build and maintain full Security Operations Centers (SOCs).</p>
+
+<p>For these organizations, MDR delivers human-led, enterprise-grade protection with proactive exposure management — without the complexity or cost of running it internally. Bitdefender MDR integrates advanced detection technologies, global threat intelligence, and expert-led response, giving organizations access to elite analysts who monitor, investigate, and neutralize threats 24x7. This approach enhances resilience, reduces alert fatigue, and allows internal teams to focus on strategic initiatives instead of managing constant alerts. Organizations leveraging MDR typically experience faster detection, reduced dwell time, and increased confidence in handling advanced attacks such as ransomware or supply-chain compromises.</p>
+
+<p>Many also report improved compliance readiness and more efficient recovery from incidents. As threat actors exploit vulnerabilities across cloud, identity, and endpoint layers, MDR fills a critical role by delivering continuous visibility and active defense. Bitdefender MDR stands out for its focus on proactive threat hunting — identifying hidden adversaries before damage occurs — and its use of AI-driven analytics to surface only the most relevant, high-priority alerts. This blend of human expertise and advanced technology enables rapid containment and minimal business disruption, delivering measurable security outcomes for organizations of all sizes.</p>
+
+<p>Choosing the Right MDR Partner
+When selecting an MDR provider, prioritize services that can proactively reduce exposure, hunt for emerging threats, and enable rapid incident containment. An MDR service that accomplishes these goals doesn’t just reinforce defenses — it transforms your security posture. By minimizing exposure, detecting threats early, and responding with speed and accuracy, you gain stronger protection and lasting peace of mind. Your team can operate confidently knowing expert defenders are watching over your environment 24x7, ready to act before anomalies escalate into breaches.</p>
+
+<p>Join your industry peers in downloading the
+Gartner Market Guide for Managed Detection and Response
+to take the next step in your MDR journey. According to the 2025 Bitdefender Cybersecurity Assessment, 64% of IT and security professionals say independent evaluations and research from organizations like Gartner and MITRE influence their cybersecurity purchasing decisions — underscoring the importance of trusted third-party insights in shaping effective security strategies. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-weaponize-windows-hyper-v-to-hide-linux-vm-and-evade-edr-detection"><a id="article-13"></a>Hackers Weaponize Windows Hyper-V to Hide Linux VM and Evade EDR Detection</h2>
+
+<p>The threat actor known as
+Curly COMrades
+has been observed exploiting virtualization technologies as a way to bypass security solutions and execute custom malware. According to a
+new report
+from Bitdefender, the adversary is said to have enabled the Hyper-V role on selected victim systems to deploy a minimalistic, Alpine Linux-based virtual machine. “This hidden environment, with its lightweight footprint (only 120MB disk space and 256MB memory), hosted their custom reverse shell, CurlyShell, and a reverse proxy, CurlCat,” security researcher Victor Vrabie, along with Adrian Schipor and Martin Zugec, said in a technical report. Curly COMrades was
+first documented
+by the Romanian cybersecurity vendor in August 2025 in connection with a series of attacks targeting Georgia and Moldova.</p>
+
+<p>The activity cluster is assessed to be active since late 2023, operating with interests that are aligned with Russia. These attacks were found to deploy tools like CurlCat for bidirectional data transfer, RuRat for persistent remote access, Mimikatz for credential harvesting, and a modular .NET implant dubbed MucorAgent, with early iterations dating back all the way to November 2023. In a follow-up analysis conducted in collaboration with Georgia CERT, additional tooling associated with the threat actor has been identified, alongside attempts to establish long-term access by weaponizing Hyper-V on compromised Windows 10 hosts to set up a hidden remote operating environment. “By isolating the malware and its execution environment within a VM, the attackers effectively bypassed many traditional host-based EDR detections,” the researchers said.</p>
+
+<p>“The threat actor demonstrated a clear determination to maintain a reverse proxy capability, repeatedly introducing new tooling into the environment.”
+Besides using
+Resocks
+,
+Rsockstun
+,
+Ligolo-ng
+,
+CCProxy
+,
+Stunnel
+, and SSH-based methods for proxy and tunneling, Curly COMrades has employed various other tools, including a PowerShell script designed for remote command execution and CurlyShell, a previously undocumented ELF binary deployed in the virtual machine that provides a persistent reverse shell. Written in C++, the malware is executed as a headless background daemon to connect to a command-and-control (C2) server and launch a reverse shell, allowing the threat actors to run encrypted commands. Communication is achieved via HTTP GET requests to poll the server for new commands and using HTTP POST requests to transmit the results of the command execution back to the server. “Two custom malware families – CurlyShell and CurlCat – were at the center of this activity, sharing a largely identical code base but diverging in how they handled received data: CurlyShell executed commands directly, while CurlCat funneled traffic through SSH,” Bitdefender said.</p>
+
+<p>“These tools were deployed and operated to ensure flexible control and adaptability.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

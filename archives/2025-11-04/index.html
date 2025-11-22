@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-04 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Malicious VSX Extension "SleepyDuck" Uses Ethereum to Keep Its Command Server Alive</a></li>
+      
+        <li><a href="#article-2">Cybercriminals Exploit Remote Monitoring Tools to Infiltrate Logistics and Freight Networks</a></li>
+      
+        <li><a href="#article-3">⚡ Weekly Recap: Lazarus Hits Web3, Intel/AMD TEEs Cracked, Dark Web Leak Tool & More</a></li>
+      
+        <li><a href="#article-4">The Evolution of SOC Operations: How Continuous Exposure Management Transforms Security Operations</a></li>
+      
+        <li><a href="#article-5">Researchers Uncover BankBot-YNRK and DeliveryRAT Android Trojans Stealing Financial Data</a></li>
+      
+        <li><a href="#article-6">New HttpTroy Backdoor Poses as VPN Invoice in Targeted Cyberattack on South Korea</a></li>
+      
+        <li><a href="#article-7">ASD Warns of Ongoing BADCANDY Attacks Exploiting Cisco IOS XE Vulnerability</a></li>
+      
+        <li><a href="#article-8">OpenAI Unveils Aardvark: GPT-5 Agent That Finds and Fixes Code Flaws Automatically</a></li>
+      
+        <li><a href="#article-9">Nation-State Hackers Deploy New Airstalk Malware in Suspected Supply Chain Attack</a></li>
+      
+        <li><a href="#article-10">China-Linked Hackers Exploit Windows Shortcut Flaw to Target European Diplomats</a></li>
+      
+        <li><a href="#article-11">China-Linked Tick Group Exploits Lanscope Zero-Day to Hijack Corporate Systems</a></li>
+      
+        <li><a href="#article-12">The MSP Cybersecurity Readiness Guide: Turning Security into Growth</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-04-ai创业新闻">2025-11-04 AI创业新闻</h1>
+
+<h2 id="malicious-vsx-extension-sleepyduck-uses-ethereum-to-keep-its-command-server-alive"><a id="article-1"></a>Malicious VSX Extension “SleepyDuck” Uses Ethereum to Keep Its Command Server Alive</h2>
+
+<p>Cybersecurity researchers have flagged a new malicious extension in the Open VSX registry that harbors a remote access trojan called
+SleepyDuck
+. According to Secure Annex’s John Tuckner, the extension in question, juan-bianco.solidity-vlang (version 0.0.7), was first published on October 31, 2025, as a completely benign library that was subsequently updated to version 0.0.8 on November 1 to include new malicious capabilities after reaching 14,000 downloads. “The malware includes sandbox evasion techniques and utilizes an Ethereum contract to update its command and control address in case the original address is taken down,” Tuckner
+added
+. Campaigns
+distributing
+rogue extensions targeting Solidity developers have been repeatedly detected across both the Visual Studio Extension Marketplace and Open VSX.</p>
+
+<p>In July 2025, Kaspersky
+disclosed
+that a Russian developer lost $500,000 in cryptocurrency assets after installing one such extension through Cursor. In the latest instance detected by the enterprise extension security firm, the malware is triggered when a new code editor window is opened or a .sol file is selected. Specifically, it’s configured to find the fastest Ethereum Remote Procedure Call (RPC) provider to connect to in order to obtain access to the blockchain, initialize contact with a remote server at “sleepyduck[.]xyz” (hence the name) via the contract address “
+0xDAfb81732db454DA238e9cFC9A9Fe5fb8e34c465
+,” and kicks off a polling loop that checks for new commands to be executed on the host every 30 seconds. It’s also capable of gathering system information, such as hostname, username, MAC address, and timezone, and exfiltrating the details to the server.</p>
+
+<p>In the event the domain is seized or taken down, the malware has built-in fallback controls to reach out to a predefined list of Ethereum RPC addresses to extract the contract information that can hold the server details. What’s more, the extension is equipped to reach a new configuration from the contract address to set a new server, as well as execute an emergency command to all endpoints in the event that something unexpected occurs. The contract was created on October 31, 2025, with the
+threat actor
+updating the server details from “localhost:8080” to “sleepyduck[.]xyz” over the course of four transactions. It’s not clear if the download counts were artificially inflated by the threat actors to boost the relevance of the extension in search results – a tactic often
+adopted
+to increase the popularity so as to trick unsuspecting developers into installing a malicious library.</p>
+
+<p>The development comes as the company also disclosed details of another set of five extensions, this time published to the VS Code Extension Marketplace by a user named “developmentinc,” including a Pokémon-themed library that downloads a batch script miner from an external server (“mock1[.]su:443”) as soon as it’s installed or enabled, and runs the miner using “cmd.exe.”
+The script file, besides relaunching itself with administrator privileges using PowerShell and configuring Microsoft Defender Antivirus exclusions by adding every drive letter from C: through Z:, downloads a Monero mining executable from “mock1[.]su” and runs it. The extensions uploaded by the threat actor, now no longer available for download, are listed below -
+developmentinc.cfx-lua-vs
+developmentinc.pokemon
+developmentinc.torizon-vs
+developmentinc.minecraftsnippets
+developmentinc.kombai-vs
+Users are advised to exercise caution when it comes to downloading extensions, and make sure that they are from trusted publishers. Microsoft, for its part, announced back in June that it’s instituting periodic marketplace-wide scans to protect users against malware. Every removed extension from the official marketplace can be viewed from the
+RemovedPackages page
+on GitHub.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cybercriminals-exploit-remote-monitoring-tools-to-infiltrate-logistics-and-freight-networks"><a id="article-2"></a>Cybercriminals Exploit Remote Monitoring Tools to Infiltrate Logistics and Freight Networks</h2>
+
+<p>Bad actors are increasingly training their sights on trucking and logistics companies with an aim to infect them with remote monitoring and management (RMM) software for financial gain and ultimately steal cargo freight. The threat cluster, believed to be active since at least June 2025 according to Proofpoint, is said to be collaborating with organized crime groups to break into entities in the surface transportation industry with the end goal of plundering physical goods. The most targeted commodities of the cyber-enabled heists are food and beverage products. “The stolen cargo most likely is sold online or shipped overseas,” researchers Ole Villadsen and Selena Larson
+said
+in a report shared with The Hacker News.</p>
+
+<p>“In the observed campaigns, threat actors aim to infiltrate companies and use their fraudulent access to bid on real shipments of goods to ultimately steal them.”
+The campaigns share similarities with a previous set of attacks
+disclosed
+in September 2024 that involved targeting transportation and logistics companies in North America with information stealers and remote access trojans (RATs) such as Lumma Stealer, StealC, or NetSupport RAT. However, there is no evidence to suggest that they are the work of the same threat actor. In the current intrusion wave detected by Proofpoint, the unknown attackers have leveraged multiple methods, including compromised email accounts to hijack existing conversations, targeting asset-based carriers, freight brokerage firms, and integrated supply chain providers with spear-phishing emails, and posting fraudulent freight listings using hacked accounts on load boards. “The actor posts fraudulent freight listings using compromised accounts on load boards and then sends emails containing malicious URLs to carriers who inquire about the loads,” it said.</p>
+
+<p>“This tactic exploits the trust and urgency inherent in freight negotiations.”
+Needless to say, the malicious URLs embedded within the messages lead to booby-trapped MSI installers or executables that deploy legitimate RMM tools like ScreenConnect, SimpleHelp, PDQ Connect, Fleetdeck, N-able, and LogMeIn Resolve. In select instances, several of these programs are used together, with PDQ Connect being used to drop and install ScreenConnect and SimpleHelp. Once remote access is obtained, the attackers move to conduct system and network reconnaissance, followed by dropping credential harvesting tools such as
+WebBrowserPassView
+to capture additional credentials and burrow deeper into the corporate network. In at least one case, the threat actor is believed to have weaponized the access to delete existing bookings and block dispatcher notifications, and then added their own device to the dispatcher’s phone extension, booked loads under the compromised carrier’s name, and coordinated the transport.</p>
+
+<p>The use of RMM software offers several advantages. First, it obviates the need for threat actors to devise bespoke malware. Second, it also allows them to fly under the radar, owing to the prevalence of such tools in enterprise environments, and are typically not flagged as malicious by security solutions. “It’s fairly easy for threat actors to create and distribute attacker-owned remote monitoring tools, and because they are often used as legitimate pieces of software, end users might be less suspicious of installing RMMs than other remote access trojans,” Proofpoint
+noted
+back in March 2025.</p>
+
+<p>“Additionally, such tooling may evade anti-virus or network detection because the installers are often signed, legitimate payloads distributed maliciously.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-lazarus-hits-web3-intelamd-tees-cracked-dark-web-leak-tool--more"><a id="article-3"></a>⚡ Weekly Recap: Lazarus Hits Web3, Intel/AMD TEEs Cracked, Dark Web Leak Tool &amp; More</h2>
+
+<p>Cyberattacks are getting smarter and harder to stop. This week, hackers used sneaky tools, tricked trusted systems, and quickly took advantage of new security problems—some just hours after being found. No system was fully safe. From spying and fake job scams to strong ransomware and tricky phishing, the attacks came from all sides.</p>
+
+<p>Even encrypted backups and secure areas were put to the test. Keep reading for the full list of the biggest cyber news from this week—clearly explained and easy to follow. ⚡ Threat of the Week
+Motex Lanscope Flaw Exploited to Drop Gokcpdoor
+— A suspected Chinese cyber espionage actor known as Tick has been attributed to a target campaign that has leveraged a recently disclosed critical security flaw in Motex Lanscope Endpoint Manager (CVE-2025-61932, CVSS score: 9.3) to infiltrate target networks and deploy a backdoor called Gokcpdoor. Sophos, which disclosed details of the activity, said it was “limited to sectors aligned with their intelligence objectives.”
+Bad Actors Are Using New AI Capabilities and Powerful AI Agents
+Traditional firewalls and VPNs aren’t helping—instead, they’re expanding your attack surface and enabling lateral threat movement.</p>
+
+<p>They’re also more easily exploited with AI-powered attacks. It’s time for Zero Trust + AI. Learn More ➝
+🔔 Top News
+TEE.Fail Side-Channel Attack Extracts Secrets from Intel and AMD DDR5 Secure Enclaves
+— A low-cost physical side-channel attack has been found to break the confidentiality and security guarantees offered by modern Trusted Execution Environments (TEEs) from Intel and AMD, enabling full extraction of cryptographic keys and subversion of secure attestation mechanisms. The attack, codenamed TEE.fail, exploits deterministic encryption and DDR5 bus interposition to successfully bypass protections in Intel’s SGX and TDX, as well as AMD’s SEV-SNP, by eavesdropping on memory transactions using a homemade logic analyzer setup built for under $1,000.</p>
+
+<p>That having said, the attack requires physical access to the target as well as root-level privileges for Kernel driver modification. Russian Hackers Target Ukraine With Stealth Tactics
+— Suspected Russian hackers breached Ukrainian networks this summer using ordinary administrative tools to steal data and remain undetected, researchers have found. According to a report by Broadcom-owned Symantec and Carbon Black, the attackers targeted a large Ukrainian business services company and a local government agency in two separate incidents earlier this year. What makes these attacks notable is that the hackers deployed little custom malware and instead relied heavily on living-off-the-land tactics, i.e., using legitimate software already present in the victims’ networks, to carry out their malicious actions.</p>
+
+<p>The targeted organizations were not named, and it remains unclear what information, if any, was stolen. N. Korea Targets Web3 Sector with GhostCall and GhostHire
+— The North Korea-affiliated threat actor BlueNoroff, also known under aliases APT38 and TA444, has resurfaced with two new campaigns dubbed GhostCall and GhostHire, targeting executives, Web3 developers, and blockchain professionals. The campaigns rely on social engineering via platforms like Telegram and LinkedIn to send fake meeting invites and initiate multi-stage malware chains to compromise Windows, Linux, and macOS hosts.</p>
+
+<p>GhostCall marks a major leap in operational stealth compared to earlier BlueNoroff operations, with the attackers relying on multiple layers of staging to sidestep detection. The GhostHire operation takes a different approach, targeting Web3 developers through fake job offers and recruitment tests. BlueNoroff is a financially motivated sub-cluster of the Lazarus Group, North Korea’s state-sponsored cyber unit linked to the Reconnaissance General Bureau (RGB), and is believed to operate the long-running SnatchCrypto campaign. GhostCall and GhostHire are assessed to be the latest extensions of this campaign.</p>
+
+<p>The threat actor’s strategy is said to have evolved beyond cryptocurrency and browser credential theft to comprehensive data acquisition across a range of assets. “This harvested data is exploited not only against the initial target but also to facilitate subsequent attacks, enabling the actor to execute supply chain attacks and leverage established trust relationships to impact a broader range of users,” Kaspersky said. New Android Banking Malware Herodotus Mimics Human Behavior
+— Researchers have discovered a new Android banking malware called Herodotus that evades detection by mimicking human behavior when remotely controlling infected devices. The malware is advertised by a little-known hacker who goes by the name K1R0.</p>
+
+<p>Herodotus works like many modern Android banking trojans. Operators distribute it through SMS messages that trick users into downloading a malicious app. Once installed, the malware waits for a targeted application to be opened and then overlays a fake screen that mimics the real banking or payment interface to steal credentials. It also intercepts incoming SMS messages to capture one-time passcodes and exploits Android’s accessibility features to read what’s displayed on the device screen.</p>
+
+<p>What makes Herodotus unusual, ThreatFabric said, is that it tries to “humanize” the actions attackers undertake during remote control. Instead of pasting stolen details into form fields all at once — a behavior that can easily be flagged as automated — the malware types each character separately with random pauses of about 0.3 to 3 seconds between keystrokes, imitating how a real person would type. Qilin Ransomware Uses Linux Encryptors in Windows Attacks
+— The Qilin ransomware actors have been observed leveraging the Windows Subsystem for Linux (
+WSL
+) to launch Linux encryptors in Windows in an attempt to evade detection. Qilin, which emerged in mid-2022, has attacked more than 700 victims across 62 countries this year.</p>
+
+<p>The sustained rate of victims claimed on its data leak site underscores Qilin’s position as one of the most active and pernicious ransomware operations worldwide. In new attacks spotted by Trend Micro, Qilin affiliates have been seen using WinSCP to transfer the Linux ELF encryptor to compromised devices, which is then launched through the Splashtop remote management software. This is accomplished by enabling or installing WSL on the host, allowing them to natively run Linux binaries on Windows without the need for a virtual machine. ‎️‍🔥 Trending CVEs
+Hackers move fast.</p>
+
+<p>They often exploit new vulnerabilities within hours, turning a single missed patch into a major breach. One unpatched CVE can be all it takes for a full compromise. Below are this week’s most critical vulnerabilities gaining attention across the industry. Review them, prioritize your fixes, and close the gap before attackers take advantage.</p>
+
+<p>This week’s list includes —
+CVE-2025-55315
+(QNAP NetBak PC Agent),
+CVE-2025-10680
+(OpenVPN),
+CVE-2025-55752
+,
+CVE-2025-55754
+(Apache Tomcat),
+CVE-2025-52665
+(Ubiquiti UniFi Access),
+CVE-2025-12044
+,
+CVE-2025-11621
+(HashiCorp Vault),
+CVE-2025-43995
+(Dell Storage Manager),
+CVE-2025-5842
+(Veeder-Root TLS4B Automatic Tank Gauge System),
+CVE-2025-24893
+(XWiki),
+CVE-2025-62725
+(Docker Compose),
+CVE-2025-12080
+(Google Messages for Wear OS), CVE-2025-12450 (LiteSpeed Cache plugin),
+CVE-2025-11705
+(Anti-Malware Security and Brute-Force Firewall plugin),
+CVE-2025-55680
+(Microsoft Cloud Files Minifilter driver),
+CVE-2025-6325, CVE-2025-6327
+(King Addons for Elementor plugin),
+CVE-2025-49401
+(Quiz and Survey Master plugin),
+CVE-2025-54603
+(Claroty Secure Remote Access), and
+CVE-2025-10932
+(Progress MOVEit Transfer). 📰 Around the Cyber World
+Canada Warns of Hacktivist Attacks Targeting Critical Infra
+— The Canadian Centre for Cyber Security has issued an alert warning of attacks mounted by hacktivists targeting internet-exposed industrial control systems (ICS). “One incident affected a water facility, tampering with water pressure values and resulting in degraded service for its community,” the Cyber Centre
+said
+. “Another involved a Canadian oil and gas company, where an Automated Tank Gauge (ATG) was manipulated, triggering false alarms.</p>
+
+<p>A third one involved a grain drying silo on a Canadian farm, where temperature and humidity levels were manipulated, resulting in potentially unsafe conditions if not caught on time.” Organizations are being recommended to ensure all services are properly inventoried, documented, and protected. Kinsing Exploits Apache ActiveMQ Flaw
+— The threat actor known as
+Kinsing
+is
+exploiting
+CVE-2023-46604
+, a known flaw in Apache ActiveMQ, to conduct cryptojacking attacks on both Linux and Windows systems. The latest set of attacks, observed by AhnLab, is notable for the deployment of a .NET backdoor called Sharpire, along with XMRig and Stager. “
+Sharpire
+is a .NET backdoor that supports PowerShell Empire,” the South Korean cybersecurity company said.</p>
+
+<p>“During the process of taking control of the infected system, the threat actor uses CobaltStrike, Meterpreter, and PowerShell Empire together.” It’s worth noting that Kinsing was spotted
+exploiting the same flaw
+following its public disclosure in 2023. 2 Flaws in 8 Confidential Computing Systems
+— Two security flaws (CVE-2025-59054 and CVE-2025-58356) have been disclosed in eight different confidential computing systems (Oasis Protocol, Phala Network, Flashbots TDX, Fortanix Salmiac, Edgeless Constellation, Edgeless Contrast, and Cosmian VM) that use Linux Unified Key Setup version 2 (LUKS2) for disk encryption. A partial mitigation has been introduced in
+cryptsetup
+version 2.8.1. “Using these vulnerabilities, a malicious actor with access to storage disks can extract all confidential data stored on that disk and can modify the contents of the disk arbitrarily,” Trail of Bits researcher Tjaden Hess
+said
+.</p>
+
+<p>“The vulnerabilities are caused by malleable metadata headers that allow an attacker to trick a trusted execution environment guest into encrypting secret data with a null cipher.” That said, exploitation of this issue requires write access to encrypted disks. There is no evidence that the vulnerabilities were exploited in the wild. Hackers Abuse LinkedIn to Target Finance Executives
+— Hackers are abusing LinkedIn to target finance executives with direct-message phishing attacks that impersonate executive board invitations with an aim to steal their Microsoft credentials. The messages contain a malicious URL, clicking which triggers a redirect chain that leads victims to a fake landing page instructing them to sign in with their Microsoft account credentials to view a document.</p>
+
+<p>The phishing page also implements bot protection like Cloudflare Turnstile to block automated scanners. “Sending phishing lures via social media apps like LinkedIn is a great way to reach employees in a place that they expect to be contacted by people outside of their organization,” Push Security
+said
+. “By evading the traditional phishing control point altogether (email) attackers significantly reduce the risk of interception.”
+WhatsApp Adds Support for Passkey-Encrypted Backups
+— WhatsApp has announced a new way to access encrypted backups with passkey support. “Passkeys will allow you to use your fingerprint, face, or screen lock code to encrypt your chat backups instead of having to memorize a password or a cumbersome 64-digit encryption key,” WhatsApp
+said
+.</p>
+
+<p>“Now, with just a tap or a glance, the same security that protects your personal chats and calls on WhatsApp is applied to your chat backups so they are always safe, accessible, and private.” The change is expected to be rolled out gradually over the coming weeks and months. Passkeys are a passwordless authentication method based on the FIDO industry standard. They are designed to replace passwords with cryptographic keys stored on the user’s device and secured by biometric or device-lock methods. WhatsApp launched support for passkeys on Android in October 2023 and for iOS in April 2024.</p>
+
+<p>12 Malicious VS Code Extensions Flagged
+— Cybersecurity researchers have flagged a set of 12 malicious components in the Visual Studio Code (VS Code) extension marketplace that come with capabilities to steal sensitive information or plant a backdoor that establishes a persistent connection with an attacker-controlled server address and executes arbitrary code on the user’s host. “Malware in IDE plugins is a supply chain attack channel that enterprise security teams need to take seriously,” HelixGuard
+said
+. The development comes as Aikido reported that the threat actors behind the
+GlassWorm campaign
+targeting the VS Code extension marketplace and Open VSX have moved to GitHub, employing the same Unicode steganography trick to hide their malicious payloads within JavaScript projects. The supply chain security company said the use of hidden malicious code injected with invisible Unicode Private Use Area (PUA) characters was first observed in a set of malicious npm packages back in March 2025.</p>
+
+<p>“These incidents highlight the need for better awareness around Unicode misuse, especially the dangers of invisible Private Use Area characters,” security researcher Ilyas Makari
+said
+. “Developers can only defend against what they can see, and right now, most tools are not showing them enough. Neither GitHub’s web interface nor VS Code displayed any sign that something was wrong.”
+Proton Releases Data Breach Observatory
+— Swiss privacy-focused company Proton has released
+Data Breach Observatory
+as a way to scan the dark web for leaks of sensitive data from enterprises. It said over 306.1 million records have been leaked from 794 breaches, with retail, technology, and media emerging as the most targeted sectors.</p>
+
+<p>“Small- and medium-sized businesses (companies with 1–249 employees) accounted for 70.5% of the breaches reported,” the company
+said
+. “Larger companies (250–999 employees) accounted for 13.5% of data breaches, and enterprise organizations of more than 1,000+ employees accounted for the remaining 15.9%. SMBs are perfect targets for hackers, because while they might offer a smaller payday than an enterprise organization, they’re much easier to breach because they have fewer security protections in place.”
+Russia Arrests 3 in
+Connection with Meduza Infostealer
+— Russian authorities
+arrested
+three individuals who are believed to have created and sold the Meduza infostealer. The suspects were arrested last week in the Moscow metropolitan area, according to Russia’s Interior Ministry.</p>
+
+<p>Authorities said they seized computer equipment, phones, and bank cards during raids on the suspects’ homes. The Ministry’s spokesperson, Irina Volk,
+said
+the malware was used in attacks against at least one government network in the Astrakhan region. In a report published last September, Russian security firm BI.ZONE said Meduza was
+used
+in
+multiple attacks
+targeting Russian organizations last year. “The arrests of three alleged developers behind
+Meduza Stealer
+underscore a growing trend we flagged in
+Dark Covenant 3.0
+– namely, the shift from tolerated cyber-malign behavior toward selective enforcement by Russian authorities,” Alexander Leslie, senior advisor for government affairs at Recorded Future, told The Hacker News.</p>
+
+<p>“While the takedown is noteworthy, Dark Covenant 3.0 cautions that this does not signal a full-scale disruption of the underground marketplace – many stealer services continue to proliferate and will likely adapt quickly. In short, while the arrests may temporarily disrupt this particular actor’s operations, the broader infostealer ecosystem remains resilient and warrants continued vigilance.”
+Ukrainian National Extradited to U.S. for Conti Attacks
+— A Ukrainian national believed to be a member of the Conti ransomware operation has been extradited to the U.S. “From in or around 2020 and continuing until about June 2022, Oleksii Oleksiyovych Lytvynenko, 43, of Cork, Ireland, conspired with others to deploy Conti ransomware to extort victims and steal their data,” the U.S.</p>
+
+<p>Justice Department
+said
+. “Lytvynenko controlled data stolen from numerous Conti victims and was involved in the ransom notes deployed on the victims’ systems.” Lytvynenko was arrested by Irish authorities in July 2023. He is charged with computer fraud conspiracy and wire fraud conspiracy. If convicted, he faces a maximum penalty of 5 years in prison for the computer fraud conspiracy and 20 years in prison for the wire fraud conspiracy.</p>
+
+<p>According to estimates, Conti was used to attack more than 1,000 victims worldwide, resulting in at least $150 million in ransom payments as of January 2022. While the group shut down the “Conti” brand in 2022, its members have split into smaller crews and moved to other ransomware or extortion operations. Four of Lytvynenko’s alleged co-conspirators, Maksim Galochkin, Maksim Rudenskiy, Mikhail Mikhailovich Tsarev and Andrey Yuryevich Zhuykov, were indicted in 2023. FCC to Eliminate Cybersecurity Requirements for U.S.</p>
+
+<p>Telcos
+— The U.S. Federal Communications Commission (FCC) said it will vote next month to eliminate new cybersecurity requirements for telecommunication providers. “Following extensive FCC engagement with carriers, the item announces the substantial steps that providers have taken to strengthen their cybersecurity defenses,” Brendan Carr, chairman of the FCC,
+said
+. Denmark Backs Off from E.U.</p>
+
+<p>Chat Control
+— The Danish government has formally
+withdrawn
+its Chat Control legislation after the controversial proposal failed to garner majority support among E.U. bloc members. The German government, on October 8, announced it would not support the plan. While
+Chat Control
+was presented as a way to combat the threat arising from Child Sexual Abuse Material (CSAM), critics of the proposal said it would mandate scanning of all private digital communications, including encrypted messages and photos, threatening privacy and security for all citizens in the region.</p>
+
+<p>Poland Arrests 11 for Running Investment Scam
+— Polish authorities have
+arrested
+11 suspects who ran an investment scam scheme that relied on call centers located overseas to trick Polish citizens into investing their money in bogus investment websites. The gang allegedly made more than $20 million from at least 1,500 victims. 4 New RATs Use Discord for C2
+— Cybersecurity researchers have shed light on four new remote access trojans (RATs) that utilize the Discord platform for command-and-control (C2). This includes UwUdisRAT, STD RAT, Minecraft RAT, and Propionanilide RAT.</p>
+
+<p>“Minecraft RAT […] is operated by a threat actor group who call themselves ‘STD Group,’” ReversingLabs
+said
+. “They also operate a series of very closely related RATs that use Discord as their C2 mechanism. The RATs are so closely related that they may be the same code base, just rebranded.” Propionanilide RAT, on the other hand, features a packer called Proplock or STD Crypter to decrypt and launch the Discord RAT functionality. Security Weaknesses in Tata Motors Sites
+— A number of security issues have been
+uncovered
+in Tata Motors’ sites like E-Dukaan, FleetEdge, and cvtestdrive.tatamotors[.]com, including exposed Azuga API keys, two AWS keys, and an embedded “backdoor” account that granted unauthorized access to over 70 TB of sensitive information and infrastructure across hundreds of buckets, compromise its test drive fleet management system, gain admin access to a Tableau account managed by the conglomerate.</p>
+
+<p>Following responsible disclosure by security researcher Eaton Zveare in August 2023 in coordination with India’s Computer Emergency Response Team (CERT-In), the issues were eventually addressed by early January 2024. In recent months, Zveare has also demonstrated methods to break into
+Intel’s internal websites
+and identified flaws in an unnamed automaker’s
+centralized dealer platform
+that could have been abused to gain complete control over the systems of more than 1,000 car dealerships in the U.S. by creating a national admin account. The researcher also
+identified
+an API-level security defect in an unspecified platform that granted the ability to access commands to start and stop power generators.</p>
+
+<p>While the problem was rectified in October 2023, the platform is no longer active. Tangerine Turkey Uses Batch and Visual Basic Scripts to Drop Crypto Miners
+— A cryptocurrency mining campaign dubbed Tangerine Turkey has been found leveraging batch files and Visual Basic Scripts to gain persistence, evade defenses, and deploy XMRig miners across victim environments. Since its emergence in late 2024, the campaign is assessed to have expanded in scope, targeting organizations indiscriminately across multiple industries and geographies. “Initial access in the Tangerine Turkey malware campaign is achieved through an infected USB device,” Cybereason
+said
+.</p>
+
+<p>“The attack begins when the wscript.exe executes a malicious VB Script located on the removable drive. By leveraging living‑off-the‑land binaries such as wscript.exe and printui.exe, as well as registry modifications and decoy directories, the malware is able to evade traditional defenses and maintain persistence.”
+Hezi Rash Targets Global Sites in Hacktivist Campaign
+— A new ideologically-motivated threat actor known as Hezi Rash (meaning Black Force) has been linked to approximately 350 distributed denial-of-service (DDoS) attacks targeting countries perceived as hostile to Kurdish or Muslim communities between August and October 2025. Founded in 2023, the Kurdish nationalist hacktivist group has described itself as a digital collective defending Kurdish society against cyber threats, per Check Point, while pushing a mix of nationalism, religion, and activism in its messaging. It’s believed that the threat actor is using tools and services from more established threat actors such as EliteStress, a DDoS-as-a-service (DaaS) platform linked to Keymous+, KillNet, and Project DDoSia and Abyssal DDoS v3.</p>
+
+<p>“While the technical impact of these attacks, such as temporary website outages, is evident, the broader business consequences remain unclear,” Check Point
+said
+. “The attacks appear to be of the ‘usual variety,’ focusing on disruption rather than sophisticated exploitation.” The disclosure follows a report from Radware, highlighting a surge in claimed DDoS activity between October 6 and October 8, 2025, by hacktivist groups targeting Israel. Some of the key participating groups include Sylhet Gang, Keymous+, Arabian Ghosts, and NoName057(16). “On October 7 alone, more than 50 cyberattack claims against Israeli targets were recorded,” Radware
+said
+.</p>
+
+<p>“The weekly average number of attacks claimed spiked to almost three times the average compared to the weeks preceding October 7. This sharp escalation underscores how hacktivist campaigns continue to use symbolic anniversaries to amplify their visibility and coordinate global action.”
+Phishing Campaigns Distribute Lampion Stealer
+— A Brazilian threat group has been spotted
+employing
+bank transfer receipt lures containing ZIP files to drop the
+Lampion
+stealer by means of ClickFix-style pages present within HTML pages present in the archive. The banking trojan has been active since at least 2019. “The first change was around mid September 2024, where the TAs started using ZIP attachments instead of links to a ZIP; the second change was around mid December 2024 with the introduction of ClickFix lures as a new social engineering technique; the last change was at the end of June 2025, where persistence capabilities were added to the first stage,” Bitsight
+said
+.</p>
+
+<p>The command executed following ClickFix paves the way for three different VB Scripts that ultimately deploy the DLL stealer component of the malware. MITRE Releases ATT&amp;CK v18
+— The MITRE Corporation has released an updated version of the ATT&amp;CK (v18) framework, which updates detections with two new objects: Detection Strategies for detecting specific attacker techniques and Analytics that provide platform-specific threat detection logic. “On the Mobile front, there’s coverage of state-sponsored abuse of Signal/WhatsApp-linked devices and enhanced account collection techniques,” MITRE
+said
+. “And in ICS, new and updated Asset objects expand the range of industrial equipment and attack scenarios ATT&amp;CK can represent, including improved connections across sector-specific terminology through Related Assets.”
+🎥 Cybersecurity Webinars
+Stop Drowning in Vulnerability Lists: Discover Dynamic Attack Surface Reduction
+— Tired of too many security problems and not enough time to fix them?</p>
+
+<p>Join The Hacker News and Bitdefender to learn about Dynamic Attack Surface Reduction (DASR)—a new way to quickly close security gaps using smart tools and automation. See how Bitdefender PHASR helps teams stay safe, reduce risk, and block threats before they cause harm. Securing Cloud Infrastructure: Strategies to Balance Agility, Compliance, and Security
+— As more companies move to the cloud, keeping data and access safe becomes harder. In this webinar, experts will share easy-to-follow tips to protect cloud systems, manage user access, and stay on top of global rules—all without slowing down your business.</p>
+
+<p>You’ll learn real steps you can take right away to keep your cloud secure and your team moving fast. 🔧 Cybersecurity Tools
+runZeroHound
+— A new handy open‑source toolkit from runZero that turns your asset data into visual “attack graphs” so you can see exactly how threats could move through your network. With this in hand, you’ll spot dangerous paths, close the gaps faster, and stay ahead of what attackers might try next. DroidRun
+— It is a security testing tool that helps researchers and analysts safely run and monitor Android malware in a sandboxed environment.</p>
+
+<p>It’s designed to make it easier to observe how malicious apps behave without risking your system. Perfect for dynamic analysis, it supports automation and gives detailed insights into malware activity. Disclaimer: These tools are for educational and research use only. They haven’t been fully security-tested and could pose risks if used incorrectly.</p>
+
+<p>Review the code before trying them, test only in safe environments, and follow all ethical, legal, and organizational rules. 🔒 Tip of the Week
+Why Attack Surface Reduction Matters More Than Ever —
+What if your biggest risk isn’t a new zero-day—but something already sitting quietly inside your system? This week, the spotlight turns to Attack Surface Reduction (ASR)—a strategy that’s fast becoming a must-have, not a nice-to-have. As companies spin up more cloud apps, APIs, and accounts, hackers are finding easy ways in through what’s already exposed.</p>
+
+<p>Think forgotten subdomains, unused ports, old user accounts. The more you have, the more they have to work with. The good news? Open-source tools are stepping up.</p>
+
+<p>EasyEASM
+helps map what’s live on the web. Microsoft’s Attack Surface Analyze
+r shows what changes after updates or installs. ASRGEN
+lets you test smart rules in Windows Defender to shut down risky behaviors before they’re exploited. Here’s the truth: you don’t have to stop building fast—you just have to build smart.</p>
+
+<p>Shrinking your attack surface doesn’t slow innovation. It protects it. Don’t wait for an alert. Take control before attackers do.</p>
+
+<p>Map it. Cut it. Lock it down. Conclusion
+The big lesson this week?</p>
+
+<p>Cyber threats don’t always look like threats. They can hide in normal apps, trusted websites, or even job offers. It’s no longer just about stopping viruses—it’s about spotting tricks, acting fast, and thinking ahead. Every click, update, and login matters.</p>
+
+<p>Cybersecurity isn’t a one-time fix. It’s an everyday habit. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-evolution-of-soc-operations-how-continuous-exposure-management-transforms-security-operations"><a id="article-4"></a>The Evolution of SOC Operations: How Continuous Exposure Management Transforms Security Operations</h2>
+
+<p>Security Operations Centers (SOC) today are overwhelmed. Analysts handle thousands of alerts every day, spending much time chasing false positives and adjusting detection rules reactively. SOCs often lack the environmental context and relevant threat intelligence needed to quickly verify which alerts are truly malicious. As a result, analysts spend excessive time manually triaging alerts, the majority of which are classified as benign.</p>
+
+<p>Addressing the root cause of these blind spots and alert fatigue isn’t as simple as implementing more accurate tools. Many of these traditional tools are very accurate, but their fatal flaw is a lack of context and a narrow focus - missing the forest for the trees. Meanwhile, sophisticated attackers exploit exposures invisible to traditional reactive tools, often evading detection using
+widely-available bypass kits
+. While all of these tools are effective in their own right, they often fail because of the reality that attackers don’t employ just one attack technique, exploit just one type of exposure or weaponize a single CVE when breaching an environment.</p>
+
+<p>Instead,
+attackers chain together
+multiple exposures, utilizing known CVEs where helpful, and employing evasion techniques to move laterally across an environment and accomplish their desired goals. Individually, traditional security tools may detect one or more of these exposures or IoCs, but without the context derived from a deeply integrated continuous exposure management program, it can be nearly impossible for security teams to effectively correlate otherwise seemingly disconnected signals. SecOps Benefits at Every Stage of the Cybersecurity Lifecycle
+Exposure management platforms can help transform SOC operations by weaving exposure intelligence directly into existing analyst workflows. Of course, having attack surface visibility and insight into interconnected exposures provides immense value, but that’s just scratching the surface.</p>
+
+<p>This really shouldn’t come as much of a surprise, given the significant overlap in the high-level models each team is operating, albeit often in parallel as opposed to working in tandem. To make the point further, I’ve included a comparison below between a typical SOC workflow and the CTEM lifecycle:
+Typical SOC Lifecycle
+How Integrated Exposure Management Helps
+CTEM Lifecycle
+Monitor
+Maintain continuous visibility into the entire attack surface, prioritizing critical assets that matter most to the business and attackers are most likely to go after. Shared Attack Surface Visibility
+Integration with CMDB and SOC tooling creates a unified view of the attack surface and critical assets, aligning security and IT teams on what matters most. Scope
+Outline the scope of the exposure management program, identifying critical assets that matter most to the business, maintaining continuous visibility across the attack surface.</p>
+
+<p>Detect
+Identify suspicious and malicious activity across the attack surface, ideally before access is gained or critical systems and data are compromised. Contextualize Threat Alerts
+When detections fire, analysts instantly see the asset’s risk posture and whether suspicious activity aligns with known attack paths, turning generic alerts into targeted investigations. Discover
+Uncover exposures across the attack surface, including attack paths, vulnerabilities, misconfigs, identity and permissions issues, etc. Triage
+Validate security alerts and correlate event logs to identify true security incidents and malicious activity vs benign anomalous activity.</p>
+
+<p>Improve Disposition Accuracy
+Make better-informed decisions with asset and business context to sift through the noise of security alerts while reducing the risk of false negatives. Prioritize
+Prioritize discovered exposures based on threat intelligence, environment and business context to focus remediation operations on the most impactful and imminent risk. Investigate
+Deep dive into threat intelligence, event logs and other findings to determine the blast radius, root cause, and impact of a security incident. Visualize Complex Attack Chains
+Transform abstract risk findings into validated potential attack scenarios.</p>
+
+<p>Analysts can visualize how threat actors would chain together specific exposures, identifying critical choke points. Validate
+Confirm that discovered exposures are actually present, are reachable by threat actors and can actually be exploited based on patch availability and compensating controls. Respond
+Take action to minimize breach impact and eliminate the threat within the environment. Targeted Incident Response
+Understanding exploitable paths enables precise containment and remediation, addressing specific exposures quickly without disruptive over-isolation or business impact.</p>
+
+<p>Mobilize
+Drive efficient and effective remediation of exposures by driving cross-functional alignment, automating notification and ticketing workflows, and where possible, implementing security mitigations and automating patching workflows. This natural alignment between proactive and reactive teams’ high-level workflows makes it easy to see where the targeted threat and attack surface intelligence derived from exposure management platforms can be of use to SOC teams prior to and in the midst of a threat investigation. The magic really starts to happen when teams integrate their
+exposure management platforms
+with EDRs, SIEMs, and SOAR tools to deliver contextual threat intelligence precisely when and where SOC analysts need it most. This allows teams to automatically correlate discovered exposures with specific MITRE ATT&amp;CK techniques, creating actionable threat intelligence that’s immediately relevant to each organization’s unique attack surface.</p>
+
+<p>For exposures that can’t be immediately remediated, teams can leverage this intelligence to inform detection engineering and threat hunting activities. This creates a continuous feedback loop where exposure intelligence informs detection updates, improves alert triage and investigation, and supports automated response and prioritized remediation. A Deeper Dive Into SOC Workflows Enriched with Exposure Intelligence
+Traditional detection tools generate alerts based on signatures and behavioral patterns, but lack environmental context. Continuous exposure management transforms this by providing real-time context about the systems, configurations, and vulnerabilities involved in each alert.</p>
+
+<p>When an detection fires, SOC analysts immediately understand what exposures exist on the affected system, which attack techniques are viable given the current configuration, what the potential blast radius looks like and how this alert fits into known attack paths. Alert triage becomes dramatically more efficient when analysts can instantly assess the true risk potential of each alert. Instead of triaging based on generic severity scores, exposure management provides an environment-specific risk context. During investigation, continuous exposure management provides analysts with detailed attack path analysis showing exactly how an adversary could exploit the current alert as part of a broader campaign.</p>
+
+<p>This includes understanding all viable attack paths based on actual network topology, access relationships, and system configurations. It also includes digging into the root cause of a breach, helping analysts determine the most likely breach points and paths an attacker would take. Response activities become more precise when guided by exposure intelligence. Instead of broad containment measures that might disrupt business operations, SOC teams can implement surgical responses that address the specific exposures being exploited.</p>
+
+<p>The remediation phase extends beyond immediate incident response to systematic exposure reduction, automatically generating tickets that address not just the immediate incident, but the underlying conditions that made it possible. As remediation activities are completed, the same testing processes used to uncover security gaps can be used to validate that implemented changes actually worked and risk was reduced. With continuous exposure management integrated into the SecOps workflow, each incident becomes a learning opportunity that strengthens future detection and response capabilities. Understanding which exposures led to successful attacks during red teaming and validation testing helps refine and implement compensating controls and/or tune detection rules to catch similar activity earlier in the attack chain.</p>
+
+<p>The Future of SOC Operations
+The future of SOC operations
+lies not in processing more alerts faster, but in preventing the conditions that generate unnecessary alerts while developing laser-focused capabilities against the threats that matter most. Continuous exposure management provides the environmental awareness that transforms generic security tools into precision instruments. In an era where threat actors are increasingly sophisticated and persistent, SOCs need every advantage they can get. The ability to proactively shape the battlefield, eliminating exposures, tuning detections, and developing custom capabilities based on environmental reality may be the difference between staying ahead of threats and constantly playing catch-up.</p>
+
+<p>Note:
+This article was written and contributed by Ryan Blanchard, currently a Director of Product Marketing at XM Cyber. He started his career analyzing IT and professional services markets and GTM strategies, now helping translate complex technology benefits into stories that connect innovation, business, and people. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-uncover-bankbot-ynrk-and-deliveryrat-android-trojans-stealing-financial-data"><a id="article-5"></a>Researchers Uncover BankBot-YNRK and DeliveryRAT Android Trojans Stealing Financial Data</h2>
+
+<p>Cybersecurity researchers have shed light on two different Android trojans called
+BankBot-YNRK
+and
+DeliveryRAT
+that are capable of harvesting sensitive data from compromised devices. According to CYFIRMA, which
+analyzed
+three different samples of BankBot-YNRK, the malware incorporates features to sidestep analysis efforts by first checking its running within a virtualized or emulated environment, and then extracting device details such as the manufacturer and model name to ascertain if it’s being executed on a real device. BankBot-YNRK also checks if the device is manufactured by Oppo, or is running on ColorOS, a version of the Android operating system that’s used on devices made by the Chinese original equipment manufacturer (OEM). “The malware also includes logic to identify specific devices,” CYFIRMA said.</p>
+
+<p>“It verifies whether the device is a Google Pixel or a Samsung device and checks if its model is included in a predefined list of recognized or supported models. This allows the malware to apply device-specific functionality or optimizations only on targeted devices while avoiding execution on unrecognized models.”
+The names of the APK packages distributing the malware are listed below. All three apps go by the name “IdentitasKependudukanDigital.apk,” which likely appears to be an attempt to impersonate a
+legitimate Indonesian government app
+called “Identitas Kependudukan Digital.”
+com.westpacb4a.payqingynrk1b4a
+com.westpacf78.payqingynrk1f78
+com.westpac91a.payqingynrk191a
+Once installed, the malicious apps are designed to harvest device information and set the volume of various audio streams, such as music, ringtone, and notifications, to zero to prevent the affected victim from being alerted to incoming calls, messages, and other in-app notifications. It also establishes communication with a remote server (“ping.ynrkone[.]top”), and upon receiving the “OPEN_ACCESSIBILITY” command, it urges the user to enable
+accessibility services
+so as to realize its goals, including gaining elevated privileges and performing malicious actions.</p>
+
+<p>The malware, however, is capable of targeting only Android devices running versions 13 and below, as Android 14, launched in late 2023, introduced a new security feature that prevents the use of accessibility services to automatically request or grant app additional permissions. “Until Android 13, apps could bypass permission requests through accessibility features; however, with Android 14, this behavior is no longer possible, and users must grant permissions directly through the system interface,” CYFIRMA said. BankBot-YNRK leverages Android’s JobScheduler service to establish persistence on the device and ensure it’s launched after a reboot. It also supports a wide range of commands to gain device administrator privileges, manage apps, interact with the device, redirect incoming calls using MMI codes, take photos, perform file operations, and harvest contacts, SMS messages, locations, lists of installed apps, and clipboard content.</p>
+
+<p>Some of the other features of the malware are as follows -
+Impersonating Google News by programmatically replacing the apps’s name and icons, as well as launching “news.google[.]com” via a WebView
+Capture screen content to reconstruct a “skeleton UI” of application screens such as banking apps to facilitate credential theft
+Abusing accessibility services to open cryptocurrency wallet apps from a predefined list and automating UI actions to gather sensitive data and initiate unauthorized transactions
+Retrieving a list of 62 financial apps to target
+Displaying an overlay message claiming their personal information is being verified, while the malicious actions are carried out, including requesting itself extra permissions and adding itself as a device administrator app
+“BankBot-YNRK exhibits a comprehensive feature set aimed at maintaining long-term access, stealing financial data, and executing fraudulent transactions on compromised Android devices,” CYFIRMA said. The disclosure comes as F6
+revealed
+that threat actors are distributing an updated version of DeliveryRAT targeting Russian Android device owners under the guise of food delivery services, marketplaces, banking services, as well as parcel tracking applications. The mobile threat is assessed to be active since mid-2024. According to the Russian cybersecurity company, the malware is
+advertised
+under a malware-as-a-service (MaaS) model through a Telegram bot named Bonvi Team, allowing users to either get access to an APK file or links to phishing pages distributing the malware.</p>
+
+<p>Victims are then approached on messaging apps like Telegram, where they are asked to download the malicious app as part of tracking orders from fake marketplaces or for a remote employment opportunity. Regardless of the method used, the app requests access to notifications and battery optimization settings so that it can gather sensitive data and run in the background without being terminated. Furthermore, the rogue apps come with capabilities to access SMS messages and call logs, and hide their own icons from the home screen launcher, thereby making it difficult for a less tech-savvy user to remove it from the device. Some iterations of the DeliveryRAT are also equipped to conduct distributed denial-of-service (DDoS) attacks by making simultaneous requests to the URL link transmitted from the external server and launching activities to capture by making simultaneous requests to the URL link transmitted or by tricking the user into scanning a QR code.</p>
+
+<p>The discovery of the two Android malware families coincides with a report from Zimperium, which discovered more than 760 Android apps since April 2024 that misuse near-field communication (NFC) to
+illegally obtain payment data
+and send it to a remote attacker. These fake apps, masquerading as financial applications, prompt users to set them as their default payment method, while taking advantage of Android’s host-based card emulation (
+HCE
+) to steal contactless credit card and payment data. The information is
+relayed
+either to a Telegram channel or a
+dedicated tapper app
+operated by the threat actors. The stolen NFC data is then used to withdraw funds from a user’s accounts or make purchases at point-of-sale (PoS) terminals almost instantly.</p>
+
+<p>“Approximately 20 institutions have been impersonated – primarily Russian banks and financial services, but also target organizations in Brazil, Poland, the Czech Republic, and Slovakia,” the mobile security company
+said
+. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-httptroy-backdoor-poses-as-vpn-invoice-in-targeted-cyberattack-on-south-korea"><a id="article-6"></a>New HttpTroy Backdoor Poses as VPN Invoice in Targeted Cyberattack on South Korea</h2>
+
+<p>The North Korea-linked threat actor known as
+Kimsuky
+has distributed a previously undocumented backdoor codenamed HttpTroy as part of a likely spear-phishing attack targeting a single victim in South Korea. Gen Digital, which
+disclosed details
+of the activity, did not reveal any details on when the incident occurred, but noted that the phishing email contained a ZIP file (“250908_A_HK이노션_SecuwaySSL VPN Manager U100S 100user_견적서.zip”), which masqueraded as a VPN invoice to distribute malware capable of file transfer, capturing screenshots, and executing arbitrary commands. “The chain has three steps: a small dropper, a loader called MemLoad, and the final backdoor, named ‘HttpTroy,’” security researcher Alexandru-Cristian Bardaș said. Present within the ZIP archive is a SCR file of the same name, opening which triggered the execution chain, starting with a Golang binary containing three embedded files, including a decoy PDF document that’s displayed to the victim to avoid raising any suspicion.</p>
+
+<p>Also launched simultaneously in the background is MemLoad, which is responsible for setting up persistence on the host by means of a scheduled task named “AhnlabUpdate,” an attempt to impersonate AhnLab, a South Korean cybersecurity company, and decrypt and execute the DLL backdoor (“HttpTroy”). The implant allows the attackers to gain complete control over the compromised system, enabling file upload/download, screenshot capture, command execution with elevated privileges, in-memory loading of executables, reverse shell, process termination, and trace removal. It communicates with the command-and-control (C2) server (“load.auraria[.]org”) over HTTP POST requests. “HttpTroy employs multiple layers of obfuscation to hinder analysis and detection,” Bardaș explained.</p>
+
+<p>“API calls are concealed using custom hashing techniques, while strings are obfuscated through a combination of XOR operations and SIMD instructions. Notably, the backdoor avoids reusing API hashes and strings. Instead, it dynamically reconstructs them during runtime using varied combinations of arithmetic and logical operations, further complicating static analysis.”
+The findings come as the cybersecurity vendor also detailed a
+Lazarus Group
+attack that led to the deployment of
+Comebacker
+and an upgraded version of its
+BLINDINGCAN
+(aka AIRDRY or ZetaNile) remote access trojan. The attack targeted two victims in Canada and was detected in the “middle of the attack chain,” it added.</p>
+
+<p>While the exact initial access vector used in the attack is not known, it’s assessed to be a phishing email based on the absence of any known security vulnerabilities that could have been exploited to gain a foothold. Two different variants of Comebacker – one as a DLL and another as an EXE – have been put to use, with the former launched via a Windows service and the latter through “cmd.exe.” Irrespective of the method used to execute them, the end goal of the malware is the same: to decrypt an embedded payload (i.e., BLINDINGCAN) and deploy it as a service. BLINDINGCAN is designed to establish a connection with a remote C2 server (“tronracing[.]com”) and await further instructions that allow it to -
+Upload/download files
+Delete files
+Alter a file’s attributes to mimic another file
+Recursively enumerate all files and sub-directories for a specified path
+Gather data about files across the entire file system
+Collect system metadata
+List running processes
+Run a command-line using
+CreateProcessW
+Execute binaries directly in memory
+Execute commands using “cmd.exe”
+Terminate a specific process by passing a process ID as input
+Take screenshots
+Take pictures from the available video capture devices
+Update configuration
+Change current working directory
+Delete itself and remove all traces of malicious activity
+“Kimsuky and Lazarus continue to sharpen their tools, showing that DPRK-linked actors aren’t just maintaining their arsenals, they’re reinventing them,” Gen Digital said. “These campaigns demonstrate a well-structured and multi-stage infection chain, leveraging obfuscated payloads and stealthy persistence mechanisms.”
+“From the initial stages to the final backdoors, each component is designed to evade detection, maintain access and provide extensive control over the compromised system.</p>
+
+<p>The use of custom encryption, dynamic API resolution and COM-based task registration/services exploitation highlights the groups’ continued evolution and technical sophistication.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="asd-warns-of-ongoing-badcandy-attacks-exploiting-cisco-ios-xe-vulnerability"><a id="article-7"></a>ASD Warns of Ongoing BADCANDY Attacks Exploiting Cisco IOS XE Vulnerability</h2>
+
+<p>The Australian Signals Directorate (ASD) has
+issued
+a bulletin about ongoing cyber attacks targeting unpatched Cisco IOS XE devices in the country with a previously undocumented implant known as
+BADCANDY
+. The activity, per the intelligence agency, involves the exploitation of
+CVE-2023-20198
+(CVSS score: 10.0), a critical vulnerability that allows a remote, unauthenticated attacker to create an account with elevated privileges and use it to seize control of susceptible systems. The security defect has come under active exploitation in the wild since last 2023, with China-linked threat actors like
+Salt Typhoon
+weaponizing it in recent months to breach telecommunications providers. ASD noted that variations of BADCANDY have been detected since October 2023, with a fresh set of attacks continuing to be recorded in 2024 and 2025.</p>
+
+<p>As many as 400 devices in Australia are estimated to have been compromised with the malware since July 2025, out of which 150 devices were infected in October alone. “BADCANDY is a low equity Lua-based web shell, and cyber actors have typically applied a non-persistent patch post-compromise to mask the device’s vulnerability status in relation to CVE-2023-20198,” it said. “In these instances, the presence of the BADCANDY implant indicates compromise of the Cisco IOS XE device, via CVE-2023-20198.”
+The lack of a persistence mechanism means it cannot survive across system reboots. However, if the device remains unpatched and exposed to the internet, it’s possible for the threat actor to re-introduce the malware and regain access to it.</p>
+
+<p>ASD has assessed that the threat actors are able to detect when the implant is removed and are infecting the devices again. This is based on the fact that re-exploitation has occurred on devices for which the agency has previously issued notifications to affected entities. That having said, a reboot will not undo other actions undertaken by the attackers. It’s therefore essential that system operators apply the patches, limit public exposure of the web user interface, and follow necessary
+hardening guidelines
+issued by Cisco to prevent future exploitation attempts.</p>
+
+<p>Some of the other actions outlined by the agency are listed below -
+Review the running configuration for accounts with privilege 15 and remove unexpected or unapproved accounts
+Review accounts with random strings or “cisco_tac_admin,” “cisco_support,” “cisco_sys_manager,” or “cisco” and remove them if not legitimate
+Review the running configuration for unknown tunnel interfaces
+Review TACACS+ AAA command accounting logging for configuration changes, if enabled
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="openai-unveils-aardvark-gpt-5-agent-that-finds-and-fixes-code-flaws-automatically"><a id="article-8"></a>OpenAI Unveils Aardvark: GPT-5 Agent That Finds and Fixes Code Flaws Automatically</h2>
+
+<p>OpenAI has announced the launch of an “agentic security researcher” that’s powered by its GPT-5 large language model (LLM) and is programmed to emulate a human expert capable of scanning, understanding, and patching code. Called
+Aardvark
+, the artificial intelligence (AI) company said the autonomous agent is designed to help developers and security teams flag and fix security vulnerabilities at scale. It’s currently available in private beta. “Aardvark continuously analyzes source code repositories to identify vulnerabilities, assess exploitability, prioritize severity, and propose targeted patches,” OpenAI
+noted
+.</p>
+
+<p>It works by embedding itself into the software development pipeline, monitoring commits and changes to codebases, detecting security issues and how they might be exploited, and proposing fixes to address them using LLM-based reasoning and tool-use. Powering the agent is
+GPT‑5
+, which OpenAI introduced in August 2025. The company describes it as a “smart, efficient model” that features deeper reasoning capabilities, courtesy of GPT‑5 thinking, and a “real‑time router” to decide the right model to use based on conversation type, complexity, and user intent. Aardvark, OpenAI added, analyses a project’s codebase to produce a threat model that it thinks best represents its security objectives and design.</p>
+
+<p>With this contextual foundation, the agent then scans its history to identify existing issues, as well as detect new ones by scrutinizing incoming changes to the repository. Once a potential security defect is found, it attempts to trigger it in an isolated, sandboxed environment to confirm its exploitability and leverages
+OpenAI Codex
+, its coding agent, to produce a patch that can be reviewed by a human analyst. OpenAI said it’s been running the agent across OpenAI’s internal codebases and some of its external alpha partners, and that it has helped identify at least 10 CVEs in open-source projects. The AI upstart is far from the only company to trial AI agents to tackle automated vulnerability discovery and patching.</p>
+
+<p>Earlier this month, Google announced
+CodeMender
+that it said detects, patches, and rewrites vulnerable code to prevent future exploits. The tech giant also noted that it intends to work with maintainers of critical open-source projects to integrate CodeMender-generated patches to help keep projects secure. Viewed in that light, Aardvark, CodeMender, and
+XBOW
+are being positioned as tools for continuous code analysis, exploit validation, and patch generation. It also comes close on the heels of OpenAI’s release of the
+gpt-oss-safeguard models
+that are fine-tuned for safety classification tasks.</p>
+
+<p>“Aardvark represents a new defender-first model: an agentic security researcher that partners with teams by delivering continuous protection as code evolves,” OpenAI said. “By catching vulnerabilities early, validating real-world exploitability, and offering clear fixes, Aardvark can strengthen security without slowing innovation. We believe in expanding access to security expertise.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="nation-state-hackers-deploy-new-airstalk-malware-in-suspected-supply-chain-attack"><a id="article-9"></a>Nation-State Hackers Deploy New Airstalk Malware in Suspected Supply Chain Attack</h2>
+
+<p>A suspected nation-state threat actor has been linked to the distribution of a new malware called Airstalk as part of a likely supply chain attack. Palo Alto Networks Unit 42 said it’s tracking the cluster under the moniker
+CL-STA-1009
+, where “CL” stands for cluster and “STA” refers to state-backed motivation. “Airstalk misuses the AirWatch API for mobile device management (MDM), which is now called Workspace ONE Unified Endpoint Management,” security researchers Kristopher Russo and Chema Garcia
+said
+in an analysis. “It uses the API to establish a covert command-and-control (C2) channel, primarily through the AirWatch feature to manage custom device attributes and file uploads.”
+The malware, which appears in PowerShell and .NET variants, makes use of a multi-threaded command-and-control (C2) communication protocol and is capable of capturing screenshots and harvesting cookies, browser history, bookmarks, and screenshots from web browsers.</p>
+
+<p>It’s believed that the threat actors are leveraging a stolen certificate to sign some of the artifacts. Unit 42 said the .NET variant of Airstalk is equipped with more capabilities than its PowerShell counterpart, suggesting it could be an advanced version of the malware. The PowerShell variant, for its part, utilizes the “
+/api/mdm/devices/
+“ endpoint for C2 communications. While the endpoint is designed to fetch content details of a particular device, the malware uses the custom attributes feature in the API to use it as a dead drop resolver for storing information necessary for interacting with the attacker.</p>
+
+<p>Once launched, the backdoor initializes contact by sending a “CONNECT” message and awaits a “CONNECTED” message from the server. It then receives various tasks to be executed on the compromised host in the form of a message of type “ACTIONS.” The output of the execution is sent back to the threat actor using a “RESULT” message. The backdoor supports seven different ACTIONS, including taking a screenshot, getting cookies from Google Chrome, listing all user Chrome profiles, obtaining browser bookmarks of a given profile, collecting the browser history of a given Chrome profile, enumerating all files within the user’s directory, and uninstalling itself from the host. “Some tasks require sending back a large amount of data or files after Airstalk is executed,” Unit 42 said.</p>
+
+<p>“To do so, the malware uses the blobs feature of the AirWatch MDM API to upload the content as a new blob.”
+The .NET variant of Airstalk expands on the capabilities by also targeting Microsoft Edge and Island, an enterprise-focused browser, while attempting to mimic an AirWatch Helper utility (“AirwatchHelper.exe”). Furthermore, it supports three more message types -
+MISMATCH, for flagging version mismatch errors
+DEBUG, for sending debug messages
+PING, for beaconing
+In addition, it uses three different execution threads, each of which serves a unique purpose: to manage C2 tasks, exfiltrate the debug log, and beacon to the C2 server. The malware also supports a broader set of commands, although one of them appears not to have been implemented yet -
+Screenshot, to take a screenshot
+UpdateChrome, to exfiltrate a specific Chrome profile
+FileMap, to list the contents of the specific directory
+RunUtility (not implemented)
+EnterpriseChromeProfiles, to fetch available Chrome profiles
+UploadFile, to exfiltrate specific Chrome artifacts and credentials
+OpenURL, to open a new URL in Chrome
+Uninstall, to finish the execution
+EnterpriseChromeBookmarks, to fetch Chrome bookmarks from a specific user profile
+EnterpriseIslandProfiles, to fetch available Island browser profiles
+UpdateIsland, to exfiltrate a specific Island browser profile
+ExfilAlreadyOpenChrome, to dump all cookies from the current Chrome profile
+Interestingly, while the PowerShell variant uses a scheduled task for persistence, its .NET version lacks such a mechanism. Unit 42 said some of the .NET variant samples are signed with a “likely stolen” certificate signed by a valid certificate authority (Aoteng Industrial Automation (Langfang) Co., Ltd.), with early iterations featuring a compilation timestamp of June 28, 2024.</p>
+
+<p>It’s currently not known how the malware is distributed, or who may have been targeted in these attacks. But the use of MDM-related APIs for C2 and the targeting of enterprise browsers like Island suggest the possibility of a supply chain attack targeting the business process outsourcing (BPO) sector. “Organizations specializing in BPO have become lucrative targets for both criminal and nation-state attackers,” it said. “Attackers are willing to invest generously in the resources necessary to not only compromise them but maintain access indefinitely.”
+“The evasion techniques employed by this malware allow it to remain undetected in most environments.</p>
+
+<p>This is particularly true if the malware is running within a third-party vendor’s environment. This is particularly disastrous for organizations that use BPO because stolen browser session cookies could allow access to a large number of their clients.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="china-linked-hackers-exploit-windows-shortcut-flaw-to-target-european-diplomats"><a id="article-10"></a>China-Linked Hackers Exploit Windows Shortcut Flaw to Target European Diplomats</h2>
+
+<p>A China-affiliated threat actor known as
+UNC6384
+has been linked to a fresh set of attacks exploiting an unpatched Windows shortcut vulnerability to target European diplomatic and government entities between September and October 2025. The activity targeted diplomatic organizations in Hungary, Belgium, Italy, and the Netherlands, as well as government agencies in Serbia, Arctic Wolf
+said
+in a technical report published Thursday. “The attack chain begins with spear-phishing emails containing an embedded URL that is the first of several stages that lead to the delivery of malicious LNK files themed around European Commission meetings, NATO-related workshops, and multilateral diplomatic coordination events,” the cybersecurity company said. The files are designed to exploit ZDI-CAN-25373 to trigger a multi-stage attack chain that culminates in the deployment of the
+PlugX
+malware using DLL side-loading.</p>
+
+<p>PlugX is a
+remote access trojan
+that’s also referred to as Destroy RAT, Kaba, Korplug, SOGU, and TIGERPLUG. UNC6384 was the
+subject
+of a recent analysis by Google Threat Intelligence Group (GTIG), which described it as a cluster with tactical and tooling overlaps with a hacking group known as Mustang Panda. The threat actor has been observed delivering a memory-resident variant of PlugX called SOGU.SEC. The latest attack wave uses phishing emails with diplomatic lures to entice recipients into opening a bogus attachment that’s designed to exploit
+ZDI-CAN-25373
+, a vulnerability that has been put to use by multiple threat actors as far back as 2017 to execute hidden malicious commands on a victim’s machine.</p>
+
+<p>It’s officially tracked as
+CVE-2025-9491
+(CVSS score: 7.0)
+The existence of the bug was first reported by security researchers Peter Girnus and Aliakbar Zahravi in March 2025. A subsequent report from HarfangLab
+found
+that the shortcoming has also been abused by a cyber espionage cluster known as XDSpy to distribute a Go-based malware called XDigo in attacks targeting Eastern European governmental entities in March 2025. At that time, Microsoft told The Hacker News that Microsoft Defender has detections in place to detect and block this threat activity, and that Smart App Control provides an extra layer of protection by blocking malicious files from the Internet. Specifically, the LNK file is designed to launch a PowerShell command to decode and extract the contents of a TAR archive and simultaneously display a decoy PDF document to the user.</p>
+
+<p>The archive contains three files: A legitimate Canon printer assistant utility, a malicious DLL dubbed CanonStager that’s sideloaded using the binary, and an encrypted PlugX payload (“cnmplog.dat”) that’s launched by the DLL. “The malware provides comprehensive remote access capabilities including command execution, keylogging, file upload and download operations, persistence establishment, and extensive system reconnaissance functions,” Arctic Wolf said. “Its modular architecture allows operators to extend functionality through plugin modules tailored to specific operational requirements.”
+PlugX also implements various anti-analysis techniques and anti-debugging checks to resist efforts to unpack its internals and fly under the radar. It achieves persistence by means of a Windows Registry modification.</p>
+
+<p>Arctic Wolf said the CanonStager artifacts found in early September and October 2025 have witnessed a steady decline in size from approximately 700 KB to 4 KB, indicating active development and its evolution into a minimal tool capable of achieving its goals without leaving much of a forensic footprint. Furthermore, in what’s being perceived as a refinement of the malware delivery mechanism, UNC6384 has been found to leverage an HTML Application (HTA) file in early September to load an external JavaScript that, in turn, retrieves the malicious payloads from a cloudfront[.]net subdomain. “The campaign’s focus on European diplomatic entities involved in defense cooperation, cross-border policy coordination, and multilateral diplomatic frameworks aligns with PRC strategic intelligence requirements concerning European alliance cohesion, defense initiatives, and policy coordination mechanisms,” Arctic Wolf concluded. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="china-linked-tick-group-exploits-lanscope-zero-day-to-hijack-corporate-systems"><a id="article-11"></a>China-Linked Tick Group Exploits Lanscope Zero-Day to Hijack Corporate Systems</h2>
+
+<p>The exploitation of a recently disclosed critical security flaw in Motex Lanscope Endpoint Manager has been
+attributed
+to a cyber espionage group known as
+Tick
+. The vulnerability, tracked as
+CVE-2025-61932
+(CVSS score: 9.3), allows remote attackers to execute arbitrary commands with SYSTEM privileges on on-premise versions of the program. JPCERT/CC, in an alert issued this month, said that it has confirmed reports of active abuse of the security defect to drop a backdoor on compromised systems. Tick, also known as Bronze Butler, Daserf, REDBALDKNIGHT, Stalker Panda, Stalker Taurus, and Swirl Typhoon (formerly Tellurium), is a
+suspected
+Chinese cyber espionage actor known for its extensive targeting of East Asia, specifically Japan.</p>
+
+<p>It’s assessed to be active since at least 2006. “We’re aware of very targeted activity in Japan and believe the exploitation by Bronze Butler was limited to sectors aligned with their intelligence objectives,” Rafe Pilling, director of threat intelligence at Sophos CTU, told The Hacker News. “Since this vulnerability is now publicly disclosed, other threat actors may seek to exploit it.”
+The sophisticated campaign, observed by Sophos, involved the exploitation of CVE-2025-61932 to deliver a known backdoor referred to as
+Gokcpdoor
+that can establish a proxy connection with a remote server and act as a backdoor to execute malicious commands on the compromised host. “The 2025 variant discontinued support for the KCP protocol and added multiplexing communication using a third-party library [
+smux
+] for its C2 [command-and-control] communication,” the Sophos Counter Threat Unit (CTU) said in a Thursday report.</p>
+
+<p>The cybersecurity company said it detected two different types of Gokcpdoor serving distinct use-cases -
+A server type that listens for incoming client connections to enable remote access
+A client type that initiates connections to hard-coded C2 servers with the goal of setting up a covert communication channel
+The attack is also characterized by the deployment of the Havoc post-exploitation framework on select systems, with the infection chains relying on DLL side-loading to launch a DLL loader named OAED Loader to inject the payloads. Some of the other tools utilized in the attack to facilitate lateral movement and data exfiltration include
+goddi
+, an open-source Active Directory information dumping tool; Remote Desktop, for remote access through a backdoor tunnel; and 7-Zip. The threat actors have also been found to access cloud services such as io, LimeWire, and Piping Server via the web browser during remote desktop sessions in an effort to exfiltrate the harvested data. This is not the first time Tick has been observed leveraging a zero-day flaw in its attack campaigns.</p>
+
+<p>In October 2017, Sophos-owned Secureworks
+detailed
+the hacking group’s exploitation of a then-unpatched remote code execution vulnerability (CVE-2016-7836) in SKYSEA Client View, a Japanese IT asset management software, to compromise machines and steal data. “Organizations upgrade vulnerable Lanscope servers as appropriate in their environments,” Sophos TRU said. “Organizations should also review internet-facing Lanscope servers that have the Lanscope client program (MR) or detection agent (DA) installed to determine if there is a business need for them to be publicly exposed.”
+(The story was updated after publication to include a response from Sophos.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-msp-cybersecurity-readiness-guide-turning-security-into-growth"><a id="article-12"></a>The MSP Cybersecurity Readiness Guide: Turning Security into Growth</h2>
+
+<p>MSPs are facing rising client expectations for strong cybersecurity and compliance outcomes, while threats grow more complex and regulatory demands evolve. Meanwhile, clients are increasingly seeking comprehensive protection without taking on the burden of managing security themselves. This shift represents a major growth opportunity. By delivering advanced cybersecurity and compliance services, MSPs can build deeper relationships, generate higher-value recurring revenue streams, and stand out in a competitive market.</p>
+
+<p>However, the move from basic IT and security services to strategic cybersecurity offerings requires more than technical expertise. It demands a clear service strategy, the right internal resources, and the ability to communicate security value in business terms. Without this foundation, MSPs risk inconsistent service delivery, missed opportunities, and stalled growth. We created the guide
+Turn Security Into Growth: Is Your MSP Ready to Expand?</p>
+
+<p>to help providers pinpoint their current capabilities. It includes a structured checklist for evaluating both strategic mindset and operational readiness. Mindset Readiness: From Technical Support to Business Value
+Traditional IT services keep systems operational. Cybersecurity ensures those systems remain protected, resilient, and able to support uninterrupted business operations.</p>
+
+<p>This requires a security-first mindset that extends beyond technical execution to address risk management, compliance, and resilience as integral components of the client’s overall business strategy. Two mindset shifts are essential:
+From Checkbox Compliance to Continuous Risk Management
+Compliance is often treated as the finish line, the moment a business can pass audits and meet regulatory obligations. For MSPs aiming to deliver advanced cybersecurity and compliance services, it can be helpful to view compliance as the starting point instead. Regulations establish a baseline; Unfortunately, the reality is that threats often evolve faster than standards change.</p>
+
+<p>Viewing compliance as one part of an ongoing risk management process enables MSPs to uncover broader business risks, address them proactively, and help clients build resilience. From Technical Delivery to Strategic Outcomes
+Technical execution, such as deploying tools, configuring firewalls, and patching systems, is only part of the bigger picture. The greatest impact comes when these activities are connected to what matters most to the business: protecting revenue streams, maintaining operational continuity, safeguarding reputation, and supporting long-term growth. Framing security conversations in terms of business impact rather than technical detail can help clients better understand the value of your services.</p>
+
+<p>When security is positioned in this way, MSPs are often seen less as vendors and more as strategic partners contributing to resilience and shared success. Assessing Mindset Readiness: Are You Positioned for Strategic Security? A security-first mindset involves engaging clients in meaningful conversations, framing services in a way that aligns with their goals, and making clear connections between security initiatives and business value. Consider:
+Do you have a strong understanding of your clients’ most critical business processes and the systems that support them?</p>
+
+<p>Can you estimate the potential business impact if a critical system is unavailable for a day, a week, or longer? Is your team able to explain security risks and benefits without relying on technical jargon? Do your reports and discussions consistently link security to uptime, revenue protection, and overall resilience? If several of these questions are difficult to answer confidently, it may signal an opportunity to deepen business understanding and strengthen the way security value is communicated.</p>
+
+<p>Operational Readiness: Can You Scale? The guide
+Turn Security Into Growth: Is Your MSP Ready to Expand? doesn’t just break preparedness into categories, it provides a detailed checklist to help assess your readiness in each area. This structured approach ensures you can pinpoint strengths, identify gaps, and create a clear plan for scaling security services effectively.</p>
+
+<p>Key categories include:
+Service Definition:
+Map offerings to client needs and compliance frameworks to create packaged tiers with clear value. Staffing &amp; Expertise:
+Define and fill critical roles, whether in-house or outsourced, to cover compliance, incident response, and cybersecurity analysis. Tool Alignment &amp; Management:
+Ensure tools match the service scope and are actively managed by trained personnel. Financial Planning:
+Budget for tools, training, and liability coverage to support sustainable growth.</p>
+
+<p>Process Documentation:
+Standardize incident response, compliance workflows, and data handling procedures. Sales Capability:
+Equip sales teams to communicate business outcomes, not just technical features. Strategic Client Engagement:
+Be able to lead roadmap discussions that connect security to business goals. Assessing Operational Readiness: Are You Positioned for Strategic Security?</p>
+
+<p>If you can confidently check most of these boxes, your MSP is in a strong position to scale security services profitably. If not, this is your opportunity to strengthen operational foundations before committing to expansion. From Readiness to Revenue
+An MSP with a strong foundation in both mindset and operational capability can scale security services confidently, deliver measurable value, and unlock new revenue streams. Whether you’re laying the groundwork or ready to refine your approach, our guide
+Turn Security Into Growth: Is Your MSP Ready to Expand?</p>
+
+<p>offers a clear framework for assessing strengths, closing capability gaps, and building a profitable expansion into advanced security and compliance services. It walks you through both mindset and operational readiness, helping you identify where you can scale confidently, deliver measurable value, and unlock new revenue opportunities while avoiding the pitfalls of reactive service and competitive disadvantage. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-10-16 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Chinese Threat Group 'Jewelbug' Quietly Infiltrated Russian IT Network for Months</a></li>
+      
+        <li><a href="#article-2">F5 Breach Exposes BIG-IP Source Code — Nation-State Hackers Behind Massive Intrusion</a></li>
+      
+        <li><a href="#article-3">Over 100 VS Code Extensions Exposed Developers to Hidden Supply Chain Risks</a></li>
+      
+        <li><a href="#article-4">How Attackers Bypass Synced Passkeys</a></li>
+      
+        <li><a href="#article-5">Two New Windows Zero-Days Exploited in the Wild — One Affects Every Version Ever Shipped</a></li>
+      
+        <li><a href="#article-6">Two CVSS 10.0 Bugs in Red Lion RTUs Could Hand Hackers Full Industrial Control</a></li>
+      
+        <li><a href="#article-7">Hackers Target ICTBroadcast Servers via Cookie Exploit to Gain Remote Shell Access</a></li>
+      
+        <li><a href="#article-8">New SAP NetWeaver Bug Lets Attackers Take Over Servers Without Login</a></li>
+      
+        <li><a href="#article-9">Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</a></li>
+      
+        <li><a href="#article-10">Moving Beyond Awareness: How Threat Hunting Builds Readiness</a></li>
+      
+        <li><a href="#article-11">RMPocalypse: Single 8-Byte Write Shatters AMD's SEV-SNP Confidential Computing</a></li>
+      
+        <li><a href="#article-12">New Pixnapping Android Flaw Lets Rogue Apps Steal 2FA Codes Without Permissions</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-10-16-ai创业新闻">2025-10-16 AI创业新闻</h1>
+
+<h2 id="chinese-threat-group-jewelbug-quietly-infiltrated-russian-it-network-for-months"><a id="article-1"></a>Chinese Threat Group ‘Jewelbug’ Quietly Infiltrated Russian IT Network for Months</h2>
+
+<p>A threat actor with ties to China has been attributed to a five-month-long intrusion targeting a Russian IT service provider, marking the hacking group’s expansion to the country beyond Southeast Asia and South America. The activity, which took place from January to May 2025, has been attributed by Broadcom-owned Symantec to a threat actor it tracks as
+Jewelbug
+, which it said overlaps with clusters known as
+CL-STA-0049
+(Palo Alto Networks Unit 42),
+Earth Alux
+(Trend Micro), and
+REF7707
+(Elastic Security Labs). The findings suggest Russia is not off-limits for Chinese cyber espionage operations despite
+increased
+“military, economic, and diplomatic”
+relations
+between Moscow and Beijing over the years. “Attackers had access to code repositories and software build systems that they could potentially leverage to carry out supply chain attacks targeting the company’s customers in Russia,” the Symantec Threat Hunter Team
+said
+in a report shared with The Hacker News.</p>
+
+<p>“Notably too, the attackers were exfiltrating data to Yandex Cloud.”
+Earth Alux is assessed to be active since at least the second quarter of 2023, with attacks primarily targeting government, technology, logistics, manufacturing, telecommunications, IT services, and retail in the Asia-Pacific (APAC) and Latin American (LATAM) regions to deliver malware like VARGEIT and COBEACON (aka Cobalt Strike Beacon). The attacks mounted by CL-STA-0049/REF7707, on the other hand, have been observed distributing an advanced backdoor named FINALDRAFT (aka Squidoor) that’s capable of infecting both Windows and Linux systems. The findings from Symantec mark the first time these two activity clusters have been tied together. In the attack aimed at the Russian IT service provider, Jewelbug is said to have leveraged a renamed version of Microsoft Console Debugger (“cdb.exe”), which can be used to run shellcode and bypass application allowlisting, as well as launch executables, run DLLs, and terminate security solutions.</p>
+
+<p>The threat actor has also been observed dumping credentials, establishing persistence via scheduled tasks, and attempting to conceal traces of their activity by clearing Windows Event Logs. The targeting of IT service providers is strategic as it opens the door to possible supply chain attacks, enabling threat actors to leverage the compromise to breach several downstream customers at once through malicious software updates. Furthermore, Jewelbug has also been linked to an intrusion at a large South American government organization in July 2025, deploying a previously undocumented backdoor that’s said to be under development – underscoring the group’s evolving capabilities. The malware uses Microsoft Graph API and OneDrive for command-and-control (C2), and can collect system information, enumerate files from targeted machines, and upload the information to OneDrive.</p>
+
+<p>The use of Microsoft Graph API allows the threat actor to blend in with normal network traffic and leaves minimal forensic artifacts, complicating post-incident analysis and prolonging dwell time for threat actors. Other targets include an IT provider based in South Asia and a Taiwanese company in October and November 2024, with the attack on the latter leveraging DLL side-loading techniques to drop malicious payloads, including ShadowPad, a backdoor exclusively used by Chinese hacking groups. The infection chain is also characterized by the deployment of the KillAV tool to disable security software and a publicly available tool named EchoDrv, which permits abuse of the kernel read/write vulnerability in the ECHOAC anti-cheat driver, as part of what appears to be a bring your own vulnerable driver (BYOVD) attack. Also leveraged were LSASS and Mimikatz for dumping credentials, freely available tools like PrintNotifyPotato, Coerced Potato, and Sweet Potato for discovery and privilege escalation, and a SOCKS tunneling utility dubbed
+EarthWorm
+that has been used by Chinese hacking crews like Gelsemium and Lucky Mouse.</p>
+
+<p>“Jewelbug’s preference for using cloud services and other legitimate tools in its operations indicates that remaining under the radar and establishing a stealthy and persistent presence on victim networks is of utmost importance to this group,” Symantec said. The disclosure comes as Taiwan’s National Security Bureau
+warned
+of a rise in Chinese cyber attacks targeting its government departments, and called out Beijing’s “online troll army” for attempting to disseminate fabricated content across social networks and undermine people’s trust in the government and sow distrust in the U.S., Reuters reported. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="f5-breach-exposes-big-ip-source-code--nation-state-hackers-behind-massive-intrusion"><a id="article-2"></a>F5 Breach Exposes BIG-IP Source Code — Nation-State Hackers Behind Massive Intrusion</h2>
+
+<p>U.S. cybersecurity company F5 on Wednesday disclosed that unidentified threat actors broke into its systems and stole files containing some of BIG-IP’s source code and information related to undisclosed vulnerabilities in the product. It attributed the activity to a “highly sophisticated nation-state threat actor,” adding the adversary maintained long-term, persistent access to its network. The company said it learned of the breach on August 9, 2025, per a
+Form 8-K filing
+with the U.S.</p>
+
+<p>Securities and Exchange Commission (SEC). “We have taken extensive actions to contain the threat actor,” it
+noted
+. “Since beginning these activities, we have not seen any new unauthorized activity, and we believe our containment efforts have been successful.”
+F5 did not say for how long the threat actors had access to its BIG-IP product development environment, but emphasized that it has not observed any indication that the vulnerabilities have been exploited in a malicious context. It also said that the attackers did not access its CRM, financial, support case management, or iHealth systems.</p>
+
+<p>That said, the company acknowledged that some of the exfiltrated files from its knowledge management platform contained configuration or implementation information for a small percentage of customers. Impacted customers are expected to be directly notified following a review of the files. Following the discovery of the incident, F5 has engaged the services of Google Mandiant and CrowdStrike, as well as rotated credentials and strengthened access controls, deployed tooling to better monitor threats, bolstered its product development environment with extra security controls, and implemented enhancements to its network security architecture. Users are advised to apply the
+latest updates
+for BIG-IP, F5OS, BIG-IP Next for Kubernetes, BIG-IQ, and APM clients as soon as possible for optimal protection.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-100-vs-code-extensions-exposed-developers-to-hidden-supply-chain-risks"><a id="article-3"></a>Over 100 VS Code Extensions Exposed Developers to Hidden Supply Chain Risks</h2>
+
+<p>New research has uncovered that publishers of over 100 Visual Studio Code (VS Code) extensions leaked access tokens that could be exploited by bad actors to update the extensions, posing a critical software supply chain risk. “A leaked VSCode Marketplace or Open VSX PAT [personal access token] allows an attacker to directly distribute a malicious extension update across the entire install base,” Wiz security researcher Rami McCarthy
+said
+in a report shared with The Hacker News. “An attacker who discovered this issue would have been able to directly distribute malware to the cumulative 150,000 install base.”
+The cloud security firm noted in many cases publishers failed to account for the fact that VS Code extensions, while distributed as .vsix files, can be unzipped and inspected, exposing hard-coded secrets embedded into them. In all, Wiz said it found over 550 validated secrets, distributed across more than 500 extensions from hundreds of distinct publishers.</p>
+
+<p>The 550 secrets have been found to fall under 67 distinct types of secrets, including -
+AI provider secrets
+, such as those related to OpenAI, Gemini, Anthropic, XAI, DeepSeek, Hugging Face, and Perplexity
+Cloud service provider secrets, such as those related to Amazon Web Services (AWS), Google Cloud, GitHub, Stripe, and Auth0
+Database secrets, such as those related to MongoDB, PostgreSQL, and Supabase
+Wiz also noted in its report that more than 100 extensions leaked VS Code Marketplace PATs, which accounted for over 85,000 installs. Another 30 extensions with a cumulative install base of no less than 100,000 have been found to Open VSX Access Tokens. A significant chunk of the flagged extensions are themes. With Open VSX also integrated into artificial intelligence (AI)-powered VS Code forks like Cursor and Windsurf, extensions that leak access tokens can significantly expand the attack surface.</p>
+
+<p>In one instance, the company said it identified a VS Code Marketplace PAT that could have allowed for pushing targeted malware to the workforce of a $30 billion market cap Chinese mega corporation, indicating that the problem also extends to internal or vendor-specific extensions used by organizations. Following responsible disclosure to Microsoft in late March and April 2025, the Windows maker has revoked the leaked PATs and
+announced
+it’s adding
+secret scanning capabilities
+to block extensions with verified secrets and notify developers when secrets are detected. VS Code users are advised to limit the number of installed extensions, scrutinize extensions prior to downloading them, and weigh the pros and cons of enabling auto-updates. Organizations are recommended to develop an extension inventory to better respond to reports of malicious extensions and consider a centralized allowlist for extensions.</p>
+
+<p>“The issue highlights the continued risks of extensions and plugins, and supply chain security in general,” Wiz said. “It continues to validate the impression that any package repository carries a high risk of mass secrets leakage.”
+TigerJack Targets VS Code Marketplace with Malicious Extensions
+The development comes as Koi Security disclosed details of a threat actor codenamed TigerJack that’s been attributed to publishing at least 11 legitimate-looking malicious VS Code extensions using various publisher accounts since early 2025 as part of a “coordinated, systematic” campaign. “Operating under the identities ab-498, 498, and 498-00, Tiger-Jack has deployed a sophisticated arsenal: extensions that steal source code, mine cryptocurrency, and establish remote backdoors for complete system control,” security researcher Tuval Admoni
+said
+. Two of the malicious extensions – C++ Playground and HTTP Format – attracted over 17,000 downloads
+prior to their takedown
+.</p>
+
+<p>However, they continue to be available on Open VSX, with the threat actor also republishing the same malicious code on September 17, 2025, under new names on the VS Code Marketplace after removal. What’s notable about these extensions is that they deliver the promised functionality, which provides the perfect cover for their malicious activities to go unnoticed by unsuspecting developers who may have installed them. Specifically, the C++ Playground extension has been found to capture keystrokes in almost real-time through a listener that’s triggered after a 500-millisecond delay. The end goal is to steal C++ source code files.</p>
+
+<p>On the other hand, the HTTP Format extension harbors nefarious code to run the CoinIMP miner and stealthily mine cryptocurrency by abusing the system resources. Three other extensions published by TigerJack under the alias “498,” namely cppplayground, httpformat, and pythonformat, further escalate the risk by incorporating the ability to act as a backdoor by downloading and running arbitrary JavaScript from an external server (“ab498.pythonanywhere[.]com”) every 20 minutes. “By checking for new instructions every 20 minutes and using eval() on remotely fetched code, TigerJack can dynamically push any malicious payload without updating the extension—stealing credentials and API keys, deploying ransomware, using compromised developer machines as entry points into corporate networks, injecting backdoors into your projects, or monitoring your activity in real-time,” Admoni noted. Koi Security also pointed out that most of these extensions started off as completely benign tools before the malicious modifications were introduced, a classic case of a Trojan horse approach.</p>
+
+<p>This offers several advantages, as it allows the threat actor to establish legitimacy and gain traction among users. What’s more, it can also deceive a developer who may have vetted the extension before installation, as the threat actor could push an update later on to compromise their environment. In June 2025, Microsoft
+said
+it has a multi-step process in place to keep the VS Code marketplace free of malware. This includes an initial scan of all incoming packages for malicious run-time behavior in a sandbox environment, as well as rescanning and periodic marketplace-wide scans to “make sure everything stays safe.”
+That said, these security protections only apply to VS Code Marketplace, and not others like the Open VSX registry, meaning even if the malicious extension gets removed from Microsoft’s platform, threat actors can easily migrate to less-secure alternatives.</p>
+
+<p>“The fragmented security landscape across all marketplaces creates dangerous blind spots that sophisticated threat actors are already exploiting,” the company said. “When security operates in silos, threats simply migrate between platforms while developers remain unknowingly exposed.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-attackers-bypass-synced-passkeys"><a id="article-4"></a>How Attackers Bypass Synced Passkeys</h2>
+
+<p>TLDR
+Even if you take nothing else away from this piece, if your organization is evaluating passkey deployments, it is insecure to deploy synced passkeys. Synced passkeys inherit the risk of the cloud accounts and recovery processes that protect them, which creates material enterprise exposure. Adversary-in-the-middle (AiTM) kits can force authentication fallbacks that circumvent strong authentication all together
+Malicious or compromised browser extensions can hijack WebAuthn requests, manipulate passkey registration or sign-in, and drive autofill to leak credentials and one-time codes. Device-bound passkeys in hardware security keys offer higher assurance and better administrative control than synced passkeys, and should be mandatory for enterprise access use cases
+Synced Passkey Risks
+Synced passkey vulnerabilities
+Passkeys are credentials stored in an authenticator.</p>
+
+<p>Some are device-bound, others are synced across devices through consumer cloud services like iCloud and Google Cloud. Sync improves usability and recovery in low-security, consumer-facing scenarios, but shifts the trust boundary to cloud accounts and recovery workflows. The FIDO Alliance and Yubico, have both
+issued important advisories for enterprises to evaluate this split
+and to prefer device-bound options for higher assurance. Operationally, synced passkeys expand the attack surface in three ways:
+Cloud account takeover or recovery abuse can authorize new devices, which then erodes the integrity of the credential.</p>
+
+<p>If a user is logged in on their corporate device with their personal Apple iCloud account, then passkeys created could be synced to their personal accounts; this dramatically explodes the attack surface beyond enterprise security boundaries. Help desk and account recovery become the real control points that attackers target because they can copy the same protected keychain onto a new, unknown, and untrusted device. Authentication downgrade attacks
+See the “captured” session. (Image source: Proofpoint)
+Proofpoint researchers documented a
+practical downgrade against Microsoft Entra ID
+where a phishing proxy spoofs an unsupported browser, such as Safari on Windows, Entra disables passkeys, and the user is guided to select a weaker method, such as SMS or OTP.</p>
+
+<p>The proxy then captures credentials and the resulting session cookie and imports it to gain access. This threat vector is reliant on webAuthnpasskey’s uneven operating system and browser support and the identity provider’s (IdP) acceptance of weak authentication methods in favor of a practical UX consideration. It is a classic adversary-in-the-middle (AitM) powered by policy steering. It does not break WebAuthn origin binding because the platform never reaches a WebAuthn ceremony when a compatibility branch disables it.</p>
+
+<p>Your weakest authentication method defines your real security. Immediate mediation in WebAuthn
+is a feature that allows sites to offer an alternative authentication method when WebAuthn is not available. This is useful for UX but can also be abused by attackers to steer users toward non-webAuthn paths if policy allows them. Browser-based security vulnerable to extension and autofill threat vectors
+SquareX researchers showed that a
+compromised browser environment can hijack WebAuthn calls
+and manipulate passkey registration or sign-in.</p>
+
+<p>The technique does not break passkey cryptography. It injects or intercepts the browser-side process, for example, through a malicious extension or an XSS bug, to reinitiate registration, force a password fallback, or silently complete an assertion. Chrome documents an extension API named “webAuthenticationProxy” that can intercept navigator.credentials.create() and navigator.credentials.get() methods once attached, then supply its own responses. This capability exists for remote desktop use cases, but it demonstrates that an extension with the right permission can sit in the WebAuthn path.</p>
+
+<p>Extensions also run content scripts inside the page context, where they can read and modify the DOM and drive user interface flows, which include invoking credential APIs from the page. Independent research presented at DEF CON described DOM-based extension clickjacking that targets the UI elements injected by password manager extensions. A single user click on a crafted page can trigger autofill and exfiltration of stored data such as logins, credit cards, and one-time codes. The researcher reports that in some scenarios,
+passkey authentication can also be exploited and lists vulnerable versions across multiple vendors
+.</p>
+
+<p>Device-bound credentials are the only effective enterprise solution
+Device-bound passkeys are tied to a specific device, typically with private key generation and usage conducted in secure hardware components. In enterprise, hardware security keys provide consistent device signals, attestation, and a lifecycle you can inventory and revoke. Guidance for an enterprise-grade passkey program
+Policy
+Require phishing-resistant authentication for all users, and especially those in privileged roles. Accept only device-bound authenticators that generate non-exportable credentials at registration and never leave the device.</p>
+
+<p>Credentials should be rooted in secure hardware and verifiably tied to the physical device attempting the login. Eliminate all fallback methods such as SMS, voice calls, TOTP apps, email links, and push approvals. These exist to be exploited during social engineering and downgrade attacks. If a fallback exists, an attacker will force it.</p>
+
+<p>Make the strong path the only path. Ensure universal operating system and browser support for phishing-resistant, device-bound credentials. Don’t offer alternatives – yes this is possible, we’re happy to show you a demo with Beyond Identity’s identity defense platform. Universal coverage is necessary for complete defense because you’re only as protected as your weakest link.</p>
+
+<p>Browser and Extension Posture
+Enforce extension allowlists in managed browsers. Disallow any extension that requests webAuthenticationProxy, activeTab, or broad content script permissions. Continuously monitor extension installs and usage trends for suspicious mass removals or unexplained permission escalations. Extension-level compromise is increasingly indistinguishable from a legitimate user.</p>
+
+<p>Lock down browser behavior as tightly as you would an endpoint. Enrollment and Recovery
+Use high-assurance authenticators as the root of recovery. No help desk, email inbox, or call center should be able to bypass phishing-resistant controls. Recovery is often the attacker’s entry point.</p>
+
+<p>Eliminate social engineering vectors and force policy-compliant reproofing. Only allow for enrollment of device-bound credentials. Capture attestation metadata at registration, including device model and assurance level. Reject unrecognized or unverifiable authenticators.</p>
+
+<p>Trust begins at registration. If you don’t know what created the credential, you don’t control access. Device Hygiene &amp; Runtime Defense
+Bind sessions to trusted device context. A session cookie should never be a portable artifact.</p>
+
+<p>Runtime session enforcement should tie identity to continuous device posture, not just an initial authentication. Enforce continuous authentication. If device posture, location, or security status changes, require reauthentication or deny access. A login is not a hall pass.</p>
+
+<p>Risk is dynamic, authentication must be too. Assume authentication attempts with weak factors should be blocked by default. See how Beyond Identity customers
+instantly block identity attacks based on the simple fact that it is not a strong credential attempting access
+. What This Looks Like in Practice
+The architecture of an identity security system that offers uncompromising defense against identity, browser, and device-based attacks can be defined by these three traits:
+Device-bound credentials:
+Credentials never leave the device.</p>
+
+<p>They are non-exportable, hardware-backed, and cannot be synced or replayed elsewhere. Continuous trust:
+Authentication never stops at login. It continues throughout the session, tied to posture signals from the device. Universal endpoint hygiene enforcement:
+All endpoints are in scope.</p>
+
+<p>Even unmanaged devices must be evaluated in real time for risk posture and session integrity. The bottom line
+Synced passkeys are not a force field that is appropriate for defense. They improve usability for consumer use cases at the cost of enterprise access security. See more in-action in an upcoming webinar,
+How Attackers Bypass FIDO: Why Synced Passkeys Fail and What To Do Instead
+where Beyond Identity will review how synced passkey failures happen and how leading security teams, including Snowflake and Cornell University, close these paths.</p>
+
+<p>Even if you can’t join, register and you’ll get the recording! Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="two-new-windows-zero-days-exploited-in-the-wild--one-affects-every-version-ever-shipped"><a id="article-5"></a>Two New Windows Zero-Days Exploited in the Wild — One Affects Every Version Ever Shipped</h2>
+
+<p>Microsoft on Tuesday released fixes for a whopping
+183 security flaws
+spanning its products, including three vulnerabilities that have come under active exploitation in the wild, as the tech giant officially
+ended support
+for its Windows 10 operating system unless the PCs are enrolled in the Extended Security Updates (
+ESU
+) program. Of the 183 vulnerabilities, eight of them are non-Microsoft issued CVEs. As many as 165 flaws have been rated as Important in severity, followed by 17 as Critical and one as Moderate. The vast majority of them relate to elevation of privilege vulnerabilities (84), with remote code execution (33), information disclosure (28), spoofing (14), denial-of-service (11), and security feature bypass (11) issues accounting for the rest of them.</p>
+
+<p>The updates are in addition to the
+25 vulnerabilities
+Microsoft addressed in its Chromium-based Edge browser since the release of September 2025’s
+Patch Tuesday update
+. The two Windows zero-days that have come under active exploitation are as follows -
+CVE-2025-24990
+(CVSS score: 7.8) - Windows Agere Modem Driver (“ltmdm64.sys”) Elevation of Privilege Vulnerability
+CVE-2025-59230
+(CVSS score: 7.8) - Windows Remote Access Connection Manager (RasMan) Elevation of Privilege Vulnerability
+Microsoft said both issues could allow attackers to execute code with elevated privileges, although there are currently no indications on how they are being exploited and how widespread these efforts may be. In the case of CVE-2025-24990, the company said it’s planning to remove the driver entirely, rather than issue a patch for a legacy third-party component. The security defect has been
+described
+as “dangerous” by Alex Vovk, CEO and co-founder of Action1, as it’s rooted within legacy code installed by default on all Windows systems, irrespective of whether the associated hardware is present or in use.</p>
+
+<p>“The vulnerable driver ships with every version of Windows, up to and including Server 2025,” Adam Barnett, lead software engineer at Rapid7, said. “Maybe your fax modem uses a different chipset, and so you don’t need the Agere driver? Perhaps you’ve simply discovered email? Tough luck.</p>
+
+<p>Your PC is still vulnerable, and a local attacker with a minimally privileged account can elevate to administrator.”
+According to Satnam Narang, senior staff research engineer at Tenable, CVE-2025-59230 is the first vulnerability in RasMan to be exploited as a zero-day. Microsoft has patched more than 20 flaws in the component since January 2022. The third vulnerability that has been exploited in real-world attacks concerns a case of Secure Boot bypass in IGEL OS before 11 (
+CVE-2025-47827
+, CVSS score: 4.6). Details about the flaw were first
+publicly disclosed
+by security researcher Zack Didcott in June 2025.</p>
+
+<p>“The impacts of a Secure Boot bypass can be significant, as threat actors can deploy a kernel-level rootkit, gaining access to the IGEL OS itself and, by extension, then tamper with the Virtual Desktops, including capturing credentials,” Kev Breen, senior director of threat research at Immersive, said. “It should be noted that this is not a remote attack, and physical access is typically required to exploit this type of vulnerability, meaning that ‘evil-maid’ style attacks are the most likely vector affecting employees who travel frequently.”
+All three issues have since been added to the U.S. Cybersecurity and Infrastructure Security Agency’s (CISA) Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring federal agencies to apply the patches by November 4, 2025. Some other critical vulnerabilities of note include a remote code execution (RCE) bug (
+CVE-2025-59287
+, CVSS score: 9.8) in Windows Server Update Service (WSUS), an out-of-bounds read vulnerability in the Trusted Computing Group (TCG) TPM2.0 reference implementation’s CryptHmacSign helper function (
+CVE-2025-2884
+, CVSS score: 5.3), and an RCE in Windows URL Parsing (
+CVE-2025-59295
+, 8.8).</p>
+
+<p>“An attacker can leverage this by carefully constructing a malicious URL,” Ben McCarthy, lead cybersecurity engineer at Immersive, said. “The overflowed data can be designed to overwrite critical program data, such as a function pointer or an object’s virtual function table (vtable) pointer.”
+“When the application later attempts to use this corrupted pointer, instead of calling a legitimate function, it redirects the program’s execution flow to a memory address controlled by the attacker. This allows the attacker to execute arbitrary code (shellcode) on the target system.”
+Two vulnerabilities with the highest CVSS score in this month’s update relate to a privilege escalation flaw in Microsoft Graphics Component (
+CVE-2025-49708
+, CVSS score: 9.9) and a security feature bypass in ASP.NET (
+CVE-2025-55315
+, CVSS score: 9.9). While exploiting CVE-2025-55315 requires an attacker to be first authenticated, it can be abused to covertly get around security controls and carry out malicious actions by smuggling a second, malicious HTTP request within the body of their initial authenticated request.</p>
+
+<p>“An organization must prioritize patching this vulnerability because it invalidates the core security promise of virtualization,” McCarthy explained regarding CVE-2025-49708, characterizing it as a high-impact flaw that leads to a full virtual machine (VM) escape. “A successful exploit means an attacker who gains even low-privilege access to a single, non-critical guest VM can break out and execute code with SYSTEM privileges directly on the underlying host server. This failure of isolation means the attacker can then access, manipulate, or destroy data on every other VM running on that same host, including mission-critical domain controllers, databases, or production applications.”
+Software Patches from Other Vendors
+In addition to Microsoft, security updates have also been released by other vendors over the past several weeks to rectify several vulnerabilities, including —
+Adobe
+Amazon Web Services
+AMD
+AMI
+Apple
+ASUS
+Broadcom
+(including VMware)
+Canon
+Check Point
+Cisco
+D-Link
+Dell
+Drupal
+Elastic
+F5
+Fortinet
+Foxit Software
+FUJIFILM
+Gigabyte
+GitLab
+Google Chrome
+Google Cloud
+Google Pixel Watch
+Hitachi Energy
+HMS Networks
+(including Red Lion)
+Honeywell
+HP
+HP Enterprise
+(including Aruba Networking and
+Juniper Networks
+)
+IBM
+Ivanti
+Jenkins
+Lenovo
+Linux distributions
+AlmaLinux
+, Alpine Linux,
+Amazon Linux
+,
+Arch Linux
+,
+Debian
+,
+Gentoo
+,
+Oracle Linux
+,
+Mageia
+,
+Red Hat
+,
+Rocky Linux
+,
+SUSE
+, and
+Ubuntu
+MediaTek
+Mitsubishi Electric
+MongoDB
+Moxa
+Mozilla
+Firefox, Firefox ESR, and Thunderbird
+NVIDIA
+Oracle
+Palo Alto Networks
+Progress Software
+QNAP
+Qualcomm
+Ricoh
+Rockwell Automation
+Salesforce
+Samsung
+SAP
+Schneider Electric
+ServiceNow
+Siemens
+SolarWinds
+SonicWall
+Splunk
+Spring Framework
+Supermicro
+Synology
+TP-Link
+Veeam
+, and
+Zoom
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="two-cvss-100-bugs-in-red-lion-rtus-could-hand-hackers-full-industrial-control"><a id="article-6"></a>Two CVSS 10.0 Bugs in Red Lion RTUs Could Hand Hackers Full Industrial Control</h2>
+
+<p>Cybersecurity researchers have disclosed two critical security flaws impacting
+Red Lion Sixne
+t remote terminal unit (RTU) products that, if successfully exploited, could result in code execution with the highest privileges. The shortcomings, tracked as
+CVE-2023-40151
+and
+CVE-2023-42770
+, are both rated 10.0 on the CVSS scoring system. “The vulnerabilities affect Red Lion SixTRAK and VersaTRAK RTUs, and allow an unauthenticated attacker to execute commands with root privileges,” Claroty Team 82 researchers
+said
+in a report published Tuesday. Red Lion’s Sixnet RTUs provide advanced automation, control, and data acquisition capabilities in industrial automation and control systems, primarily across energy, water, and wastewater treatment, transportation, utilities, and manufacturing sectors.</p>
+
+<p>These industrial devices are configured using a Windows utility called Sixnet IO Tool Kit, with a proprietary
+Sixnet “Universal” protocol
+used to interface and enable communication between the kit and the RTUs. There also exists a user-permission system atop this mechanism to support file management, set/get station information, obtain Linux kernel and boot version, among others, over the UDP protocol. The two vulnerabilities identified by Claroty are listed below -
+CVE-2023-42770</p>
+<ul>
+  <li>An authentication bypass that arises as a result of the Sixnet RTU software listening to the same port (number 1594) in UDP and TCP that only prompts for an authentication challenge over UDP, while accepting the incoming message over TCP without prompting for any authentication
+CVE-2023-40151</li>
+  <li>A remote code execution vulnerability that leverages Sixnet Universal Driver’s (UDR) built-in support for Linux shell command execution to run arbitrary code with root privileges
+As a result, an attacker could chain both flaws to sidestep authentication protections to run commands and achieve remote code execution. “Red Lion SixTRAK and VersaTRAK Series RTUs with authenticated users enabled (UDR-A), any Sixnet UDR message received over TCP/IP, the RTU will accept the message with no authentication challenge,” Red Lion
+said
+in an advisory released back in June 2025.</li>
+</ul>
+
+<p>“When user authentication is not enabled, the shell can execute commands with the highest privileges.”
+Users are advised to apply the patches for the two vulnerabilities as soon as possible. It’s also recommended to enable user authentication in the Red Lion RTU and block access over TCP to the affected RTUs. According to an
+alert
+issued by the U.S. Cybersecurity and Infrastructure Security Agency (CISA) in November 2023, the flaws impact the following products -
+ST-IPm-8460: Firmware 6.0.202 and later
+ST-IPm-6350: Firmware version 4.9.114 and later
+VT-mIPm-135-D: Firmware version 4.9.114 and later
+VT-mIPm-245-D: Firmware version 4.9.114 and later
+VT-IPm2m-213-D: Firmware version 4.9.114 and later
+VT-IPm2m-113-D: Firmware version 4.9.114 and later
+“Red Lion’s RTUs are prominent in many industrial automation settings, and an attacker with access to the devices and the ability to run commands at root presents significant possibilities for process disruption or damage,” Claroty noted.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-target-ictbroadcast-servers-via-cookie-exploit-to-gain-remote-shell-access"><a id="article-7"></a>Hackers Target ICTBroadcast Servers via Cookie Exploit to Gain Remote Shell Access</h2>
+
+<p>Cybersecurity researchers have disclosed that a critical security flaw impacting ICTBroadcast, an autodialer software from ICT Innovations, has come under active exploitation in the wild. The vulnerability, assigned the CVE identifier
+CVE-2025-2611
+(CVSS score: 9.3), relates to improper input validation that can result in unauthenticated remote code execution due to the fact that the call center application unsafely passes session cookie data to shell processing. This, in turn, allows an attacker to inject shell commands into a session cookie that can get executed in the vulnerable server. The security flaw affects ICTBroadcast versions 7.4 and below.</p>
+
+<p>“Attackers are leveraging the unauthenticated command injection in ICTBroadcast via the BROADCAST cookie to gain remote code execution,” VulnCheck’s Jacob Baines
+said
+in a Tuesday alert. “Approximately 200 online instances are exposed.”
+The cybersecurity firm said that it detected in-the-wild exploitation on October 11, with the attacks occurring in two phases, starting with a time-based exploit check followed by attempts to set up reverse shells. To that end, unknown threat actors have been observed injecting a Base64-encoded command that translates to “sleep 3” in the BROADCAST cookie in specially crafted HTTP requests to confirm command execution and then create reverse shells. “The attacker used a localto[.]net URL in the mkfifo + nc payload, and also made connections to 143.47.53[.]106 in other payloads,” Baines noted.</p>
+
+<p>It’s worth noting that both the use of a localto.net link and the IP address were previously flagged by Fortinet in connection with an
+email campaign
+distributing a Java-based remote access trojan (RAT) named Ratty RAT targeting organizations in Spain, Italy, and Portugal. These indicator overlaps suggest possible reuse or shared tooling, VulnCheck pointed out. There is currently no information available on the patch status of the flaw. The Hacker News has reached out to ICT Innovations for further comment, and we will update the story if we hear back.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-sap-netweaver-bug-lets-attackers-take-over-servers-without-login"><a id="article-8"></a>New SAP NetWeaver Bug Lets Attackers Take Over Servers Without Login</h2>
+
+<p>SAP has rolled out security fixes for
+13 new security issues
+, including additional hardening for a maximum-severity bug in SAP NetWeaver AS Java that could result in arbitrary command execution. The vulnerability, tracked as CVE-2025-42944, carries a CVSS score of 10.0. It has been described as a case of insecure deserialization. “Due to a deserialization vulnerability in SAP NetWeaver, an unauthenticated attacker could exploit the system through the RMI-P4 module by submitting a malicious payload to an open port,” according to a
+description
+of the flag in CVE.org.</p>
+
+<p>“The deserialization of such untrusted Java objects could lead to arbitrary OS command execution, posing a high impact to the application’s confidentiality, integrity, and availability.”
+While the vulnerability was
+first addressed
+by SAP last month, security company Onapsis said the latest fix provides extra safeguards to secure against the risk posed by deserialization. “The additional layer of protection is based on implementing a JVM-wide filter (jdk.serialFilter) that prevents dedicated classes from being deserialized,” it
+noted
+. “The list of recommended classes and packages to block was defined in collaboration with the ORL and is divided into a mandatory section and an optional section.”
+Another critical vulnerability of note is
+CVE-2025-42937
+(CVSS score: 9.8), a directory traversal flaw in SAP Print Service that arises as a result of insufficient path validation, allowing an unauthenticated attacker to reach the parent directory and overwrite system files. The third critical flaw patched by SAP concerns an unrestricted file upload bug in SAP Supplier Relationship Management (
+CVE-2025-42910
+, CVSS score: 9.0) that could permit an attacker to upload arbitrary files, including malicious executables that could impact the confidentiality, integrity, and availability of the application.</p>
+
+<p>While there is no evidence of these flaws being exploited in the wild, it’s essential that users apply the latest patches and mitigations as soon as possible to avoid potential threats. “Deserialization remains the major risk,” Pathlock’s Jonathan Stross
+said
+. “The P4/RMI chain continues to drive critical exposure in AS Java, with SAP issuing both a direct fix and a hardened JVM configuration to reduce gadget‑class abuse.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-hackers-exploit-arcgis-server-as-backdoor-for-over-a-year"><a id="article-9"></a>Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</h2>
+
+<p>Threat actors with ties to China have been attributed to a novel campaign that compromised an
+ArcGIS
+system and turned it into a backdoor for more than a year. The activity, per ReliaQuest, is the handiwork of a Chinese state-sponsored hacking group called
+Flax Typhoon
+, which is also tracked as Ethereal Panda and RedJuliett. According to the U.S. government, it’s
+assessed
+to be a publicly-traded, Beijing-based company known as Integrity Technology Group.</p>
+
+<p>“The group cleverly modified a geo-mapping application’s Java server object extension (SOE) into a functioning web shell,” the cybersecurity company
+said
+in a report shared with The Hacker News. “By gating access with a hardcoded key for exclusive control and embedding it in system backups, they achieved deep, long-term persistence that could survive a full system recovery.”
+Flax Typhoon is known for living up to the “stealth” in its tradecraft by extensively incorporating living-off-the-land (LotL) methods and hands-on keyboard activity, thereby turning software components into vehicles for malicious attacks, while simultaneously evading detection. The attack demonstrates how attackers increasingly abuse trusted tools and services to bypass security measures and gain unauthorized access to victims’ systems, at the same time blending in with normal server traffic. The “unusually clever attack chain” involved the threat actors targeting a public-facing ArcGIS server by compromising a portal administrator account to deploy a malicious SOE.</p>
+
+<p>“The attackers activated the malicious SOE using a standard [JavaSimpleRESTSOE] ArcGIS extension, invoking a REST operation to run commands on the internal server via the public portal—making their activity difficult to spot,” ReliaQuest said. “By adding a hard-coded key, Flax Typhoon prevented other attackers, or even curious admins, from tampering with its access.”
+The “web shell” is said to have been used to run network discovery operations, establish persistence by uploading a renamed SoftEther VPN executable (“bridge.exe”) to the “System32” folder, and then creating a service named “SysBridge” to automatically start the binary every time the server is rebooted. The “bridge.exe” process has been found to establish outbound HTTPS connections to an attacker-controlled IP address on port 443 with the primary goal of setting up a covert VPN channel to the external server. “This VPN bridge allows the attackers to extend the target’s local network to a remote location, making it appear as if the attacker is part of the internal network,” researchers Alexa Feminella and James Xiang explained.</p>
+
+<p>“This allowed them to bypass network-level monitoring, acting like a backdoor that allows them to conduct additional lateral movement and exfiltration.”
+The threat actors are said to have specifically targeted two workstations belonging to IT personnel in order to obtain credentials and further burrow into the network. Further investigation has uncovered that the adversary had access to the administrative account and was able to reset the password. “This attack highlights not just the creativity and sophistication of attackers but also the danger of trusted system functionality being weaponized to evade traditional detection,” the researchers noted. “It’s not just about spotting malicious activity; it’s about recognizing how legitimate tools and processes can be manipulated and turned against you.”
+ReliaQuest told The Hacker News it cannot share any further details regarding when the attack commenced other than noting that the attackers had access to the system for over a year.</p>
+
+<p>“The threat actor likely resorted to this method over an N-day flaw for a simple reason: why use an exploit if they didn’t have to?,” it pointed out. “They likely gained initial access through a weak administrator password and then repurposed a software component into a backdoor.”
+“This allowed them to exploit a ‘weakness’ in the system, just not in the conventional sense of a software vulnerability or misconfiguration, but a weakness in the customer’s own security practices. This method offered the dual benefits of longer persistence and remaining undetected, as exploiting a flaw might have set off alarms much earlier. While the group’s go-to method may be exploitation, it’s clear they don’t limit themselves and will adapt to whatever method gives them the best advantage.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="moving-beyond-awareness-how-threat-hunting-builds-readiness"><a id="article-10"></a>Moving Beyond Awareness: How Threat Hunting Builds Readiness</h2>
+
+<p>Every October brings a familiar rhythm - pumpkin-spice everything in stores and cafés, alongside a wave of reminders, webinars, and checklists in my inbox. Halloween may be just around the corner, yet for those of us in cybersecurity,
+Security Awareness Month
+is the true seasonal milestone. Make no mistake, as a security professional, I love this month. Launched by CISA and the National Cybersecurity Alliance back in 2004, it’s designed to make security a shared responsibility.</p>
+
+<p>It helps regular citizens, businesses, and public agencies build safer digital habits. And it works. It draws attention to risk in its many forms, sparks conversations that otherwise might not happen, and helps employees recognize their personal stake in and influence over the organization’s security. Security Awareness Month initiatives boost confidence, sharpen instincts, and keep security at the front of everyone’s mind…</p>
+
+<p>until the winter holiday season decorations start to go up, that is. After that, the momentum slips. Awareness without reinforcement fades quickly. People know what to do, yet daily pressure and shifting priorities let weak passwords, misconfigurations, and unused accounts slip back in.</p>
+
+<p>Real progress needs a structure that verifies what people remember and catches what they miss - systems that continuously validate identity, configuration, and privilege. In this article, I’ll take a closer look at why awareness alone can’t carry the full weight of security and how proactive threat hunting closes the gap between what we know and what we can actually prevent. The Limits of Awareness
+Security Awareness Month highlights the human side of defense. It reminds employees that every click, credential, and connection matters.</p>
+
+<p>That focus has value, and I’ve seen organizations invest heavily in creative campaigns that genuinely change employee behavior. Yet many of these same organizations still experience serious breaches. The reason is that many breaches start in places that training just cannot reach. Security misconfigurations alone account for
+more than a third
+of all cyber incidents and roughly
+a quarter of cloud security
+incidents.</p>
+
+<p>The signal is clear: awareness has its limits. It can improve decision-making, but it cannot fix what people never see. Part of the problem is that traditional defenses focus primarily on detection and response. EDR alerts on suspicious activity.</p>
+
+<p>SIEM correlates events after they occur. Vulnerability scanners identify known weaknesses. These tools operate primarily on the right side of the
+Cyber Defense Matrix
+, focusing on the reactive phases of defense. Effective defense needs to start earlier.</p>
+
+<p>The proactive left side of the Matrix - identification and protection – should be based on assurances, not assumptions. Proactive threat hunting establishes a mechanism that provides these assurances, lending power to the process that awareness initiates. Creates a mechanism that provides those assurances – lending power to the process that awareness kicks off. It searches for the misconfigurations, the exposed credentials, and the excessive privileges that create attack opportunities, then removes them before an adversary can exploit them.</p>
+
+<p>Proactive Threat Hunting Changes the Equation
+The best defense begins before the first alert. Proactive threat hunting identifies the conditions that allow an attack to form and addresses them early. It moves security from passive observation to a clear understanding of where exposure originates. This move from observation to proactive understanding forms the core of a modern security program: Continuous Threat Exposure Management (CTEM).</p>
+
+<p>Instead of a one-time project, a CTEM program provides a structured, repeatable framework to continuously model threats, validate controls, and secure the business. For organizations ready to build this capability,
+A Practical Guide to Getting Started With CTEM
+offers a clear roadmap. Attackers already follow this model. Today’s campaigns threat actors link identity misuse, credential reuse, and lateral movement across hybrid environments at machine speed.</p>
+
+<p>AI-driven automation maps and arms entire infrastructures in minutes. Teams that examine their environments through an attacker’s perspective can see how small minor oversights connect into full attack paths allowing threat actors to weave through defensive layers. This turns scattered risk data into a living picture of how compromise develops and how to stop it early. Defenders need the depth of contextual visibility that attackers already possess.</p>
+
+<p>Proactive threat hunting creates that visibility - building readiness in three stages:
+Get the Right Data
+– Collect vulnerability, network design, and each system’s connectivity, identity (both SSO, and data cached on systems), and configuration data from every part of the environment to create a single attacker-centric view. The goal is to see what an adversary would see, including weak credentials, cloud posture gaps, and privilege relationships that create entry points. A digital twin offers a practical way to safely replicate the environment and view all exposures in one place. Map the Attack Paths
+– Utilize the digital twin to connect exposures and assets, illustrating how a compromise could progress through the environment and impact critical systems.</p>
+
+<p>This mapping reveals the chains of exploitation that matter. It replaces assumptions with evidence, showing exactly how multiple small exposures converge to form an attack path. Prioritize by Business Impact
+– Link each validated path to the assets and processes that support business operations. This stage translates technical findings into business risk, focusing remediation on the exposures that could cause the greatest business disruption.</p>
+
+<p>The result is clarity - a verified, prioritized set of actions that directly strengthen resilience. Awareness is a critical building block. But proactive threat hunting gives defenders something awareness alone can never provide - proof. It shows exactly where the organization stands and how quickly it can close the gap between visibility and prevention.</p>
+
+<p>From Awareness to Readiness
+Security Awareness Month reminds us that awareness is an essential step. Yet real progress begins when awareness leads to action. Awareness is only as powerful as the systems that measure and validate it. Proactive threat hunting turns awareness into readiness by keeping attention fixed on what matters most - the weak points that form the basis for tomorrow’s attacks.</p>
+
+<p>Awareness teaches people to see risk. Threat hunting proves whether the risk still exists. Together they form a continuous cycle that keeps security viable long after awareness campaigns end. This October, the question for every organization is not how many employees completed the training, but how confident you are that your defenses would hold today if someone tested them.</p>
+
+<p>Awareness builds understanding. Readiness delivers protection. Note:
+This article was written and contributed by
+Jason Frugé
+, CISO in Residence, XM Cyber. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="rmpocalypse-single-8-byte-write-shatters-amds-sev-snp-confidential-computing"><a id="article-11"></a>RMPocalypse: Single 8-Byte Write Shatters AMD’s SEV-SNP Confidential Computing</h2>
+
+<p>Chipmaker AMD has released fixes to address a security flaw dubbed
+RMPocalypse
+that could be exploited to undermine confidential computing guarantees provided by Secure Encrypted Virtualization with Secure Nested Paging (
+SEV-SNP
+). The
+attack
+, per ETH Zürich researchers Benedict Schlüter and Shweta Shinde, exploits AMD’s incomplete protections that make it possible to perform a single memory write to the Reverse Map Paging (RMP) table, a data structure that’s used to store security metadata for all DRAM pages in the system. “The Reverse Map Table (RMP) is a structure that resides in DRAM and maps system physical addresses (sPAs) to guest physical addresses (gPAs),” according to AMD’s
+specification documentation
+. “There is only one RMP for the entire system, which is configured using x86 model-specific registers (MSRs).”
+“The RMP also contains various security attributes of each that are managed by the hypervisor through hardware-mediated and firmware-mediated controls.”
+AMD makes use of what’s called a Platform Security Processor (PSP) to initialize the RMP, which is crucial to enabling SEV-SNP on the platform.</p>
+
+<p>RMPocalypse exploits a memory management flaw in this initialization step, allowing attackers to access sensitive information in contravention of SEV-SNP’s confidentiality and integrity protections. At the heart of the problem is a lack of adequate safeguards for the security mechanism itself – something of a catch-22 situation that arises as a result of RMP not being fully protected when a virtual machine is started, effectively opening the door to RMP corruption. “This gap could allow attackers with remote access to bypass certain protective functions and manipulate the virtual machine environment, which is intended to be securely isolated,” ETH Zürich
+said
+. “This vulnerability can be exploited to activate hidden functions (such as a debug mode), simulate security checks (so-called attestation forgeries) and restore previous states (replay attacks) – and even to inject foreign code.”
+Successful exploitation of RMPocalypse can allow a bad actor to arbitrarily tamper with the execution of the confidential virtual machines (CVMs) and exfiltrate all secrets with 100% success rate, the researchers found.</p>
+
+<p>In response to the findings, AMD has assigned the CVE identifier CVE-2025-0033 (CVSS v4 score: 5.9) to the vulnerability, describing it as a race condition that can occur while the AMD Secure Processor (ASP or PSP) is initializing the RMP. As a result, it could allow a malicious hypervisor to manipulate the initial RMP content, potentially resulting in loss of SEV-SNP guest memory integrity. “Improper access control within AMD SEV-SNP could allow an admin-privileged attacker to write to the RMP during SNP initialization, potentially resulting in a loss of SEV-SNP guest memory integrity,” the chipmaker
+noted
+in its advisory released Monday. AMD has revealed that the following chipsets are impacted by the flaw -
+AMD EPYC™ 7003 Series Processors
+AMD EPYC™ 8004 Series Processors
+AMD EPYC™ 9004 Series Processors
+AMD EPYC™ 9005 Series Processors
+AMD EPYC™ Embedded 7003 Series Processors (Fix planned for release in November 2025)
+AMD EPYC™ Embedded 8004 Series Processors
+AMD EPYC™ Embedded 9004 Series Processors
+AMD EPYC™ Embedded 9004 Series Processors
+AMD EPYC™ Embedded 9005 Series Processors (Fix planned for release in November 2025)
+Microsoft
+and
+Supermicro
+have also acknowledged CVE-2025-0033, with the Windows maker stating that it’s working to remediate it in Azure Confidential Computing’s (ACC) AMD-based clusters.</p>
+
+<p>Supermicro said impacted motherboard SKUs require a BIOS update to address the flaw. “RMPocalypse shows that AMD’s platform protection mechanisms are not complete, thus leaving a small window of opportunity for the attacker to maliciously overwrite the RMP on initialization,” the researchers said. “Due to the design of the RMP, a single overwrite of 8 bytes within the RMP causes the entire RMP to become subsequently compromised.”
+“With a compromised RMP, all integrity guarantees of SEV-SNP become void. RMPocalypse case studies show that an attacker-controlled RMP not only voids the integrity but also results in a full breach of confidentiality.”
+The development comes weeks after a group of academics from KU Leuven and the University of Birmingham demonstrated a new vulnerability called
+Battering RAM
+to bypass the latest defenses on Intel and AMD cloud processors.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-pixnapping-android-flaw-lets-rogue-apps-steal-2fa-codes-without-permissions"><a id="article-12"></a>New Pixnapping Android Flaw Lets Rogue Apps Steal 2FA Codes Without Permissions</h2>
+
+<p>Android devices from Google and Samsung have been found vulnerable to a
+side-channel attack
+that could be exploited to covertly steal two-factor authentication (2FA) codes, Google Maps timelines, and other sensitive data without the users’ knowledge pixel-by-pixel. The attack has been codenamed
+Pixnapping
+by a group of academics from the University of California (Berkeley), University of Washington, University of California (San Diego), and Carnegie Mellon University. Pixnapping, at its core, is a pixel-stealing framework aimed at Android devices in a manner that bypasses browser mitigations and even siphons data from non-browser apps like Google Authenticator by taking advantage of Android APIs and a hardware side-channel, allowing a malicious app to weaponize the technique to capture 2FA codes in under 30 seconds. “Our key observation is that Android APIs enable an attacker to create an analog to
+[Paul] Stone-style attacks
+outside of the browser,” the researchers
+said
+in a paper.</p>
+
+<p>“Specifically, a malicious app can force victim pixels into the rendering pipeline via Android intents and compute on those victim pixels using a stack of semi-transparent Android activities.”
+The study specifically focused on five devices from Google and Samsung running Android versions 13 to 16, and while it’s not clear if Android devices from other original equipment manufacturers (OEMs) are susceptible to Pixnapping, the underlying methodology necessary to pull off the attack is present in all devices running the mobile operating system. What makes the novel attack significant is that any Android app can be used to execute it, even if the application does not have any special permissions attached via its manifest file. However, the attack presupposes that the victim has been convinced by some other means to install and launch the app. The side-channel that makes Pixnapping possible is
+GPU.zip
+, which was disclosed by some of the same researchers back in September 2023.</p>
+
+<p>The attack essentially takes advantage of a compression feature in modern integrated GPUs (iGPUs) to perform cross-origin pixel stealing attacks in the browser using SVG filters. Overview of our pixel stealing framework
+The latest class of attack combines this with Android’s window blur API to leak rendering data and enable theft from victim apps. In order to accomplish this, a malicious Android app is used to send victim app pixels into the rendering pipeline and overlay semi-transparent activities using
+intents
+– an Android software mechanism that allows for navigation between applications and
+activities
+. In other words, the idea is to invoke a target app containing information of interest (e.g., 2FA codes) and cause the data to be submitted for rendering, following which the rogue app installed the device isolates the coordinates of a target pixel (i.e., ones which contain the 2FA code) and induces a stack of semi-transparent activities to mask, enlarge, and transmit that pixel using the side-channel.</p>
+
+<p>This step is then repeated for every pixel pushed to the rendering pipeline. The researchers said Android is vulnerable to Pixnapping due to a combination of three factors that allow an app to -
+Send another app’s activities to the Android rendering pipeline (e.g., with intents)
+Induce graphical operations (e.g., blur) on pixels displayed by another app’s activities
+Measure the pixel color-dependent side effects of graphical operations
+Google is tracking the issue under the CVE identifier
+CVE-2025-48561
+(CVSS score: 5.5). Patches for the vulnerability were issued by the tech giant as part of its
+September 2025 Android Security Bulletin
+, with Google
+noting
+that: “An application requesting lots and lots of blurs: (1) enables pixel stealing by measuring how long it takes to perform a blur across windows, [and] (2) probably isn’t very valid anyways.”
+“We issued a patch for CVE-2025-48561 in the September Android security bulletin, which partially mitigates this behavior,” a Google spokesperson told The Hacker News. “We are issuing an additional patch for this vulnerability in the December Android security bulletin.</p>
+
+<p>We have not seen any evidence of in-the-wild exploitation.”
+However, it has since come to light that there exists an updated method by “altering its timing” that can be used to re-enable Pixnapping. The company pointed out that it’s readying a second, more comprehensive patch to address the new attack vector that bypasses existing mitigations, adding exploiting the flaw requires specific data about the targeted device and that it has not found any malicious exploiting it on Google Play. Furthermore, the study found that as a consequence of this behavior, it’s possible for an attacker to determine if an arbitrary app is installed on the device, bypassing restrictions
+implemented
+since Android 11 that prevent querying the list of all installed apps on a user’s device. The app list bypass remains unpatched, with Google marking it as “won’t fix.”
+“Like browsers at the beginning, the intentionally collaborative and multi-actor design of mobile app layering makes the obvious restrictions unappealing,” the researchers concluded.</p>
+
+<p>“App layering is not going away, and layered apps would be useless with a no-third-party-cookies style of restriction. A realistic response is making the new attacks as unappealing as the old ones: allow sensitive apps to opt out and restrict the attacker’s measurement capabilities so that any proof-of-concept stays just that.”
+(The story was updated after publication to include a response from Google.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

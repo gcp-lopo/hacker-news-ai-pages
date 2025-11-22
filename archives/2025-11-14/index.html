@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-14 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Russian Hackers Create 4,300 Fake Travel Sites to Steal Hotel Guests' Payment Data</a></li>
+      
+        <li><a href="#article-2">Fake Chrome Extension "Safery" Steals Ethereum Wallet Seed Phrases Using Sui Blockchain</a></li>
+      
+        <li><a href="#article-3">When Attacks Come Faster Than Patches: Why 2026 Will be the Year of Machine-Speed Security</a></li>
+      
+        <li><a href="#article-4">Operation Endgame Dismantles Rhadamanthys, Venom RAT, and Elysium Botnet in Global Crackdown</a></li>
+      
+        <li><a href="#article-5">ThreatsDay Bulletin: Cisco 0-Days, AI Bug Bounties, Crypto Heists, State-Linked Leaks and 20 More Stories</a></li>
+      
+        <li><a href="#article-6">CISA Flags Critical WatchGuard Fireware Flaw Exposing 54,000 Fireboxes to No-Login Attacks</a></li>
+      
+        <li><a href="#article-7">Over 67,000 Fake npm Packages Flood Registry in Worm-Like Spam Attack</a></li>
+      
+        <li><a href="#article-8">Google Sues China-Based Hackers Behind $1 Billion Lighthouse Phishing Platform</a></li>
+      
+        <li><a href="#article-9">Amazon Uncovers Attacks Exploited Cisco ISE and Citrix NetScaler as Zero-Day Flaws</a></li>
+      
+        <li><a href="#article-10">[Webinar] Learn How Leading Security Teams Reduce Attack Surface Exposure with DASR</a></li>
+      
+        <li><a href="#article-11">Active Directory Under Siege: Why Critical Infrastructure Needs Stronger Security</a></li>
+      
+        <li><a href="#article-12">Microsoft Fixes 63 Security Flaws, Including a Windows Kernel Zero-Day Under Active Attack</a></li>
+      
+        <li><a href="#article-13">Google Launches 'Private AI Compute' — Secure AI Processing with On-Device-Level Privacy</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-14-ai创业新闻">2025-11-14 AI创业新闻</h1>
+
+<h2 id="russian-hackers-create-4300-fake-travel-sites-to-steal-hotel-guests-payment-data"><a id="article-1"></a>Russian Hackers Create 4,300 Fake Travel Sites to Steal Hotel Guests’ Payment Data</h2>
+
+<p>A Russian-speaking threat behind an ongoing, mass phishing campaign has registered
+more than 4,300 domain names
+since the start of the year. The
+activity
+, per Netcraft security researcher Andrew Brandt, is designed to target customers of the hospitality industry, specifically hotel guests who may have travel reservations with spam emails. The campaign is said to have begun in earnest around February 2025. Of the 4,344 domains tied to the attack, 685 domains contain the name “Booking”, followed by 18 with “Expedia,” 13 with “Agoda,” and 12 with “Airbnb,” indicating an attempt to target all popular booking and rental platforms.</p>
+
+<p>“The ongoing campaign employs a sophisticated phishing kit that customizes the page presented to the site visitor depending on a unique string in the URL path when the target first visits the website,” Brandt said. “The customizations use the logos from major online travel industry brands, including Airbnb and Booking.com.”
+The attack begins with a phishing email urging recipients to click on a link to confirm their booking within the next 24 hours using a credit card. Should they take the bait, the victims are taken to a fake site instead after initiating a chain of redirects. These bogus sites follow consistent naming patterns for their domains, featuring phrases like confirmation, booking, guestcheck, cardverify, or reservation to give them an illusion of legitimacy.</p>
+
+<p>The pages support 43 different languages, allowing the threat actors to cast a wide net. The page then instructs the victim to pay a deposit for their hotel reservation by entering their card information. In the event that any user directly attempts to access the page without a unique identifier called AD_CODE, they are greeted with a blank page. The bogus sites also feature a fake CAPTCHA check that mimics Cloudflare to deceive the target.</p>
+
+<p>“After the initial visit, the AD_CODE value is written to a cookie, which ensures that subsequent pages present the same impersonated branding appearance to the site visitor as they click through pages,” Netcraft said. This also means that changing the “AD_CODE” value in the URL produces a page targeting a different hotel on the same booking platform. As soon as the card details, along with the expiration data and CVV number, are entered, the page attempts to process a transaction in the background, while an “support chat” window appears on the screen with steps to complete a supposed “3D Secure verification for your credit card” to secure against fake bookings. The identity of the threat group behind the campaign remains unknown, but the use of Russian for source code comments and debugger output either alludes to their provenance or is an attempt to cater to prospective customers of the phishing kit who may be looking to customize it to suit their needs.</p>
+
+<p>The disclosure comes days after Sekoia
+warned
+of a large-scale phishing campaign targeting the hospitality industry that lures hotel managers to ClickFix-style pages and harvest their credentials by deploying malware like PureRAT and then approach hotel customers via WhatsApp or emails with their reservation details and confirm their booking by clicking on a link. Interestingly, one of the indicators shared by the French cybersecurity company – guestverifiy5313-booking[.]com/67122859 – matches the domain pattern registered by the threat actor (e.g., verifyguets71561-booking[.]com), raising the possibility that these two clusters of activity could be related. The Hacker News has reached out to Netcraft for comment, and we will update the story if we hear back. In recent weeks, large-scale phishing campaigns have also
+impersonated
+multiple brands like Microsoft, Adobe, WeTransfer, FedEx, and DHL to steal credentials by distributing HTML attachments through email.</p>
+
+<p>The embedded HTML files, once launched, display a fake login page while JavaScript code captures credentials entered by the victim and sends them directly to attacker-controlled Telegram bots, Cyble said. The campaign has mainly targeted a wide range of organizations across Central and Eastern Europe, particularly in the Czech Republic, Slovakia, Hungary, and Germany. “The attackers distribute phishing emails posing as legitimate customers or business partners, requesting quotations or invoice confirmations,” the company pointed out. “This regional focus is evident through targeted recipient domains belonging to local enterprises, distributors, government-linked entities, and hospitality firms that routinely process RFQs and supplier communications.”
+Furthermore, phishing kits have been put to use in a large-scale campaign targeting customers of Aruba S.p.A, one of Italy’s largest web hosting and IT service providers, in a similar attempt to steal sensitive data and payment information.</p>
+
+<p>The phishing kit is a “fully automated, multi-stage platform designed for efficiency and stealth,” Group-IB researchers Ivan Salipur and Federico Marazzi
+said
+. “It employs CAPTCHA filtering to evade security scans, pre-fills victim data to increase credibility, and uses Telegram bots to exfiltrate stolen credentials and payment information. Every function serves a single goal: industrial-scale credential theft.”
+These findings exemplify the growing demand for phishing-as-a-service (PhaaS) offerings in the underground economy, enabling threat actors with little to no technical expertise to pull off attacks at scale. “The automation observed in this particular kit exemplifies how phishing has become systematized – faster to deploy, harder to detect, and easier to replicate,” the Singaporean company added.</p>
+
+<p>“What once required technical expertise can now be executed at scale through pre-built, automated frameworks.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fake-chrome-extension-safery-steals-ethereum-wallet-seed-phrases-using-sui-blockchain"><a id="article-2"></a>Fake Chrome Extension “Safery” Steals Ethereum Wallet Seed Phrases Using Sui Blockchain</h2>
+
+<p>Cybersecurity researchers have uncovered a malicious Chrome extension that poses as a legitimate Ethereum wallet but harbors functionality to exfiltrate users’ seed phrases. The name of the extension is “Safery: Ethereum Wallet,” with the threat actor describing it as a “secure wallet for managing Ethereum cryptocurrency with flexible settings.” It was uploaded to the Chrome Web Store on September 29, 2025, and was updated as recently as November 12. It’s still
+available for download
+as of writing. “Marketed as a simple, secure Ethereum (ETH) wallet, it contains a backdoor that exfiltrates seed phrases by encoding them into Sui addresses and broadcasting microtransactions from a threat actor-controlled Sui wallet,” Socket security researcher Kirill Boychenko
+said
+.</p>
+
+<p>Specifically, the malware present within the browser add-on is designed to steal wallet mnemonic phrases by encoding them as fake Sui wallet addresses and then using micro-transactions to send 0.000001 SUI to those wallets from a hard-coded threat actor-controlled wallet. The end goal of the malware is to smuggle the seed phrase inside normal looking blockchain transactions without the need for setting up a command-and-control (C2) server to receive the information. Once the transactions are complete, the threat actor can decode the recipient addresses to reconstruct the original seed phrase and ultimately drain assets from it. “This extension steals wallet seed phrases by encoding them as fake Sui addresses and sending micro-transactions to them from an attacker-controlled wallet, allowing the attacker to monitor the blockchain, decode the addresses back to seed phrases, and drain victims’ funds,” Koi Security
+notes
+in an analysis.</p>
+
+<p>To counter the risk posed by the threat, users are advised to stick to trusted wallet extensions. Defenders are recommended to scan extensions for mnemonic encoders, synthetic address generators, and hard-coded seed phrases, as well as block those that write on the chain during wallet import or creation. “This technique lets threat actors switch chains and RPC endpoints with little effort, so detections that rely on domains, URLs, or specific extension IDs will miss it,” Boychenko said. “Treat unexpected blockchain RPC calls from the browser as high signal, especially when the product claims to be single chain.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="when-attacks-come-faster-than-patches-why-2026-will-be-the-year-of-machine-speed-security"><a id="article-3"></a>When Attacks Come Faster Than Patches: Why 2026 Will be the Year of Machine-Speed Security</h2>
+
+<p>The Race for Every New CVE
+Based on multiple 2025 industry reports: roughly 50 to 61 percent of newly disclosed vulnerabilities saw exploit code weaponized within 48 hours. Using the
+CISA Known Exploited Vulnerabilities Catalog
+as a reference, hundreds of software flaws are now confirmed as actively targeted within days of public disclosure. Each new announcement now triggers a global race between attackers and defenders. Both sides monitor the same feeds, but one moves at machine speed while the other moves at human speed.</p>
+
+<p>Major threat actors have fully industrialized their response. The moment a new vulnerability appears in public databases, automated scripts scrape, parse, and assess it for exploitation potential, and now these efforts are getting ever more streamlined through the use of AI. Meanwhile, IT and security teams often enter triage mode, reading advisories, classifying severity, and queuing updates for the next patch cycle. That delay is precisely the gap the adversaries exploit.</p>
+
+<p>The traditional cadence of quarterly or even monthly patching is no longer sustainable. Attackers now weaponize critical vulnerabilities within hours of disclosure, long before organizations have even analyzed or validated them, and usually well before they have rolled out the fix. The Exploitation Economy of Speed
+Today’s threat ecosystem is built on automation and volume. Exploit brokers and affiliate groups operate as supply chains, each specializing in one part of the attack process.</p>
+
+<p>They use vulnerability feeds, open-source scanners, and fingerprinting tools to match new CVEs against exposed software targets. Many of these targets have already been identified, and these systems know in advance which targets are most likely to be susceptible to the impending attack. This is a game of quick draw, the fastest gun wins. Research from Mandiant shows that exploitation often begins within 48 hours of public disclosure, in many organizations, IT operates on 8 hours a day, leaving the 32 hours in the attackers’ favor.</p>
+
+<p>This efficiency in operations illustrates how attackers have stripped almost every manual step from their workflow. Once a working exploit is confirmed, it’s packaged and shared within hours across dark web forums, internal channels, and malware kits. Failure at Scale is Acceptable
+Attackers also enjoy a luxury defenders can’t afford:
+failure
+. If they crash a thousand systems on the path to compromising a hundred, the effort is still a success.</p>
+
+<p>Their metrics are based on yield, not uptime. Defenders, on the other hand, must achieve near-perfect stability. A single failed update or service interruption can have a widespread impact and cause loss of customer trust. This imbalance allows adversaries to take reckless risks while defenders remain constrained, and that also helps keep the operational gap wide enough for consistent exploitation.</p>
+
+<p>From Human-Speed Defense to Machine-Speed Resilience
+Awareness is not the issue. The challenge is execution speed. Security teams know when vulnerabilities are published but cannot move fast enough without automation. Transitioning from ticket-based and or manual patching to orchestrated, policy-driven remediation is no longer optional if you want to remain competitive in this fight.</p>
+
+<p>Automated hardening and response systems can drastically shorten exposure windows. By continuously applying critical patches, enforcing configuration baselines, and using conditional rollback when needed, organizations can maintain operational safety while removing delay. And a hard lesson here that many will have to simply get over, is the damage
+you
+may cause will almost certainly be less, and easier to recover from than an attack. It is a calculated risk, and one that can be managed.</p>
+
+<p>The lesson is simple, would you rather have to roll back a browser update for 1000 systems, or recover them entirely from backup. I am not suggesting you be cavalier about this but weigh the value of your hesitance against the value of your action, and when action wins, listen to your gut. IT leaders need to begin to understand this, and business leaders need to realize that this is IT’s best strategy. Absolutely test, and factor business criticality when choosing the speed at which to proceed on critical systems but tilt the whole process towards streamlined automation and in favor of rapid action.</p>
+
+<p>Flatten the Burnout Curve
+Automation also reduces fatigue and error. Instead of chasing alerts, security teams define rules once, allowing systems to enforce them continuously. This shift turns cybersecurity into an adaptive, self-sustaining process instead of a cycle of manual triage and stitches. It takes less time to audit and review processes than it does to enact them in almost all cases.</p>
+
+<p>This new class of attack automation systems do not sleep, they do not get tired, they do not care about any consequences of their actions. They are singularly focused on a goal, gain access to as many systems as they can. No matter how many people you throw at this problem, the problem festers between departments, policies, personalities, and egos. If you aim to combat a tireless machine, you need a tireless machine in your corner of the ring.</p>
+
+<p>Changing What Can’t Be Automated
+Even the most advanced tools cannot automate everything. Some workloads are too delicate or bound by strict compliance frameworks. But those exceptions should still be examined through a single lens:
+How can they be made more automatable, if not, at least more efficient? That may mean standardizing configurations, segmenting legacy systems, or streamlining dependencies that slow patch workflows.</p>
+
+<p>Every manual step left in place represents time lost, and time is the one resource attackers exploit most effectively. We have to look at defense strategies in depth to determine which decisions, policies, or approval processes are creating drag. If the chain of command or change management is slowing remediation, it may be time for
+sweeping policy changes
+designed to eliminate those bottlenecks. Defense automation should operate at a pace commensurate with attacker behavior, not for administrative convenience.</p>
+
+<p>Accelerated Defense in Practice
+Many forward-thinking enterprises have already adopted the principle of accelerated defense, combining automation, orchestration, and controlled rollback to maintain agility without introducing chaos. Platforms such as
+Action1
+facilitate this approach by enabling security teams to identify, deploy, and verify patches automatically across entire enterprise environments. This eliminates the manual steps that slow patch deployment and closes the gap between awareness and action. IF your policies are sound, your automation is sound, and your decisions are sound in practice because they are all agreed upon in advance.</p>
+
+<p>By automating remediation and validation, Action1 and similar solutions exemplify what security at machine speed looks like: rapid, governed, and resilient. The objective isn’t simply automation, but
+policy-driven automation
+, where human judgment defines boundaries and technology executes instantly. The Future Is Automated Defense
+Both attackers and defenders draw from the same public data, but it is the automation built atop that data that decides who wins the race. Every hour between disclosure and remediation represents a potential compromise.</p>
+
+<p>Defenders cannot slow the pace of discovery, but they can close the gap through hardening, orchestration, and systemic automation. The future of cybersecurity belongs to those who make instant, informed action their standard operating mode, because in this race, the slowest responder is already compromised. Key takeaways:
+No team of humans will ever be able to outpace the sheer speed and efficiency of the automated attack systems being built. More people lead to more decisions, delays, confusion, and margins for error.</p>
+
+<p>This is a firefight: you must use equal force, automate or lose. Threat actors are building fully automated attack pipelines in which new exploit code is simply fed to the system —or even developed by it —using AI. They work 24/7/365, they do not fatigue, they do not take breaks, they seek and destroy as a reason for existence until turned off or directed otherwise. Most mass threat actors operate on body count, not precision shots.</p>
+
+<p>They are not looking “for you” as much as they are looking for “Anyone”. Your scale and value mean nothing at the initial compromise phase, which is evaluated AFTER access is gained. Threat actors think nothing about using large volumes of their ill-gotten gains on new tech to further their offensive capabilities; to them, it is an investment. At the same time, the industry sees it as a drain on profits.</p>
+
+<p>The system attacking you involved many talented devs in its construction and maintenance, and budgets beyond the wildest dream of any defender. These are not hobby crooks, they are highly organized enterprises just as capable, and more willing to invest in the resources than the business sector is. Here comes 2026. Is your network ready for it?</p>
+
+<p>Note:
+This article was written and contributed by Gene Moody, Field CTO at Action1. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="operation-endgame-dismantles-rhadamanthys-venom-rat-and-elysium-botnet-in-global-crackdown"><a id="article-4"></a>Operation Endgame Dismantles Rhadamanthys, Venom RAT, and Elysium Botnet in Global Crackdown</h2>
+
+<p>Malware families like
+Rhadamanthys Stealer
+,
+Venom RAT
+, and the Elysium botnet have been disrupted as part of a coordinated law enforcement operation led by Europol and Eurojust. The activity, which is taking place between November 10 and 13, 2025, marks the latest phase of
+Operation Endgame
+, an
+ongoing operation
+designed to take down criminal infrastructures and combat ransomware enablers worldwide. Besides dismantling the “three large cybercrime enablers,” authorities have also arrested the main suspect behind Venom RAT in Greece on November 3, more than 1,025 servers have been taken down, and 20 domains have been seized. “The dismantled malware infrastructure consisted of hundreds of thousands of infected computers containing several million stolen credentials,” Europol
+said
+in a statement.</p>
+
+<p>“Many of the victims were not aware of the infection of their systems.”
+It’s currently not clear if the Elysium botnet Europol refers to is the same proxy botnet service RHAD security (aka Mythical Origin Labs), the threat actor associated with Rhadamanthys, was observed advertising as recently as last month. Europol also noted that the main suspect behind the infostealer had access to no less than 100,000 cryptocurrency wallets belonging to victims, potentially amounting to millions of euros. A recent analysis published by Check Point revealed that the latest version of Rhadamanthys added support for collecting device and web browser fingerprints, along with incorporating several mechanisms to fly under the radar. “It is important to note that Rhadamanthys may have been used to drop additional malware on infected systems, so other malware infections may also be active on these systems and require further local remediation efforts,” the Shadowserver Foundation
+said
+.</p>
+
+<p>“These victim systems may also have been used in historic or recent intrusions and ransomware incidents.”
+The non-profit, which assisted in the enforcement action, said 525,303 unique Rhadamanthys Stealer infections were identified between March and November 2025 across 226 countries and territories, representing over 86.2 million “information stealing events.” Of these, about 63,000 IP addresses are located in India. “Operation Endgame 3.0 shows what’s possible when law enforcement and the private sector work together,” Adam Meyers, head of Counter Adversary Operations at CrowdStrike, said in a statement. “Disrupting the front end of the ransomware kill chain – the initial-access brokers, loaders, and infostealers – instead of just the operators themselves has a ripple effect through the eCrime ecosystem.”
+“By targeting the infrastructure that fuels ransomware, this operation struck the ransomware economy at its source. But disruption isn’t eradication.</p>
+
+<p>Defenders should use this window to harden their environments, close visibility gaps, and hunt for the next wave of tools these adversaries will deploy.”
+Authorities that participated in the effort included law enforcement agencies from Australia, Canada, Denmark, France, Germany, Greece, Lithuania, the Netherlands, and the U.S. (This is a developing story. Please check back for more updates.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-cisco-0-days-ai-bug-bounties-crypto-heists-state-linked-leaks-and-20-more-stories"><a id="article-5"></a>ThreatsDay Bulletin: Cisco 0-Days, AI Bug Bounties, Crypto Heists, State-Linked Leaks and 20 More Stories</h2>
+
+<p>Behind every click, there’s a risk waiting to be tested. A simple ad, email, or link can now hide something dangerous. Hackers are getting smarter, using new tools to sneak past filters and turn trusted systems against us. But security teams are fighting back.</p>
+
+<p>They’re building faster defenses, better ways to spot attacks, and stronger systems to keep people safe. It’s a constant race — every move by attackers sparks a new response from defenders. In this week’s ThreatsDay Bulletin, we look at the latest moves in that race — from new malware and data leaks to AI tools, government actions, and major security updates shaping the digital world right now. U.K.</p>
+
+<p>moves to tighten cyber rules for key sectors
+U.K. Debuts Cyber Security and Resilience Bill
+The U.K. government has proposed a new Cyber Security and Resilience Bill that aims to strengthen national security and secure public services like healthcare, drinking water providers, transport, and energy from cybercriminals and state-backed actors. Under the proposal, medium and large companies providing services like IT management, IT help desk support, and cybersecurity to private and public sector organisations like the National Health Service (NHS) will be regulated.</p>
+
+<p>Organizations covered by the new law would have to report more harmful cyber incidents to both their regulator and the National Cyber Security Centre (NCSC) within 24 hours, followed by a full report sent within 72 hours. Penalties for serious violations under the new rules will reach daily fines equivalent to £100,000 ($131,000), or 10% of the organization’s daily turnover – whichever is higher. “Because they hold trusted access across government, critical national infrastructure and business networks, they will need to meet clear security duties,” the government
+said
+. “This includes reporting significant or potentially significant cyber incidents promptly to the government and their customers as well as having robust plans in place to deal with the consequences.”
+Intel’s data breach drama unfolds
+Intel Says Engineer Absconded With Top Secret Files
+A former Intel employee has been accused of downloading thousands of documents shortly after the company fired him in July, many of them classified as “Top Secret.” The Oregonian, which
+reported
+on the lawsuit, said Jinfeng Luo downloaded 18,000 files to a storage device.</p>
+
+<p>After failing to get in touch with Luo at his home in Seattle and at two other addresses associated with him, the chipmaker filed suit seeking at least $250,000 in damages. New OWASP list exposes evolving web threats
+OWASP Releases Top 10 2025 Edition
+The Open Web Application Security Project (OWASP) has
+released
+a revised version of its Top 10 list of critical risks to web applications, adding two new categories, including software supply chain failures and mishandling of exceptional conditions to the list. While the former relates to compromises occurring within or across the entire ecosystem of software dependencies, build systems, and distribution infrastructure, the latter focuses on “improper error handling, logical errors, failing open, and other related scenarios stemming from abnormal conditions that systems may encounter.” Broken Access Control, Security Misconfiguration, Cryptographic Failures, Injection, Insecure Design, Authentication Failures, Software and Data Integrity Failures, and Logging &amp; Alerting Failures take up the remaining eight spots. Sensitive data spills from top AI firms
+AI Companies Leak Secrets on GitHub
+A study of 50 leading AI companies has found that 65% had leaked verified secrets on GitHub, including API keys, tokens, and sensitive credentials.</p>
+
+<p>“Some of these leaks could have exposed organizational structures, training data, or even private models,” Wiz researchers Shay Berkovich and Rami McCarthy
+said
+. “If you use a public Version Control System (VCS), deploy secret scanning now. This is your immediate, non-negotiable defense against easy exposure. Even companies with the smallest footprints can be exposed to secret leaks as we have just proved.”
+Fake Meta invites trick businesses worldwide
+Phishing Campaign Targets Facebook Business Suite
+A new large-scale phishing campaign is abusing Facebook’s Business Suite and facebookmail.com features to send convincing fake notifications (“Meta Agency Partner Invitation” or “Account Verification Required”) that appear to come directly from Meta.</p>
+
+<p>“This method makes their campaigns extremely convincing, bypasses many traditional security filters, and demonstrates how attackers are exploiting trust in well-known platforms,” Check Point
+said
+. “While the volume of emails may suggest a spray-and-pray approach, the credibility of the sender domain makes these phishing attempts far more dangerous than ordinary spam.” More than 40,000 phishing emails have been recorded to date, primarily targeting entities in the U.S., Europe, Canada, and Australia that rely heavily on Facebook for advertising. To pull off the scheme, the attackers create fake Facebook Business pages and use the Business invitation feature to send phishing emails that mimic official Facebook alerts. The fact that these messages are sent from the “facebookmail[.]com” domain means they are perceived as trustworthy by email security filters.</p>
+
+<p>Present within the emails are links that, when clicked, direct users to bogus websites that are designed to steal credentials and other sensitive information. Firefox tightens shield against online tracking
+Mozilla Firefox Gets New Anti-Fingerprinting Defenses
+Mozilla has
+added
+more fingerprint protections to its Firefox browser to prevent websites from identifying users without their consent, even when cookies are blocked or private browsing is enabled. The safeguards, starting with Firefox 145, aim to block access to certain pieces of information used by online fingerprinters. “This ranges from strengthening the font protections to preventing websites from getting to know your hardware details like the number of cores your processor has, the number of simultaneous fingers your touchscreen supports, and the dimensions of your dock or taskbar,” Mozilla said.</p>
+
+<p>Specifically, the new protections
+include
+introducing random data to images generated in canvas elements, preventing locally installed fonts from being used to render text on a page, reporting the number of simultaneous touches supported by device hardware as 0, 1, or 5, reporting Available Screen Resolution as the screen height minus 48 pixels, and reporting the number of processor cores as either 4 or 8. Phishing kit simplifies global Microsoft 365 theft
+Microsoft 365 Credential Theft via Quantum Route Redirect
+A new phishing kit called Quantum Route Redirect is being wielded by threat actors to steal Microsoft 365 credentials. “Quantum Route Redirect comes with a pre-configured setup and phishing domains that significantly simplifies a once technically complex campaign flow, further ‘democratizing’ phishing for less skilled cybercriminals,” KnowBe4 Threat Labs
+said
+. The phishing campaigns impersonate legitimate services like DocuSign, or masquerade as payment notifications or missed voicemails to trick users into clicking on URLs that consistently follow the pattern “/([\w\d-]+.){2}[\w]{,3}\/quantum.php/” and are hosted on parked or compromised domains.</p>
+
+<p>Nearly 1,000 such domains have been detected. The phishing kit also enables browser fingerprinting and VPN/proxy detection to redirect security tools to legitimate websites. Campaigns leveraging the kit have successfully claimed victims across 90 countries, with the U.S. accounting for 76% of affected users.</p>
+
+<p>AI platform boosts defenses with Guardio tech
+Lovable Integrates with Guardio for Improved Security
+AI coding platform Lovable has
+partnered
+with Guardio to embed its Safe Browsing detection engine into the platform’s generative AI workflows, with an aim to scan every site created on the platform to detect phishing, scams, impersonation, and other forms of abuse. The development comes against the backdrop of reports that found AI-powered coding assistants like Lovable to be susceptible to techniques like
+VibeScamming
+, 
+      allowing bad actors to set up lookalike credential harvesting pages and carry out scams. Windows boosts passkey freedom for users
+Windows 11 Expands Passkey Manager Support
+Microsoft has officially launched native support for third-party passkey managers in Windows 11. The feature is available with the Windows November 2025 security update.</p>
+
+<p>“This new capability empowers users to choose their favorite passkey manager – whether it’s Microsoft Password Manager or trusted third-party providers,” Microsoft
+said
+. The company also noted it has integrated Microsoft Password Manager from Microsoft Edge into Windows as a plugin, thereby making it possible to use it in Microsoft Edge, other browsers, or any app that supports passkeys. Hackers lay siege to construction industry
+Attacks Against the Construction Sector
+Threat actors ranging from ransomware operators and organized cybercriminal networks to state-sponsored APT groups are increasingly targeting the construction industry by exploiting the sector’s growing dependence on vulnerable IoT-enabled heavy machinery, Building Information Modeling (BIM) systems, and cloud-based project management platforms. “Cybercriminals increasingly target construction companies for initial access and data leaks, exploiting weak security practices, outdated legacy systems, and widespread use of cloud-based project management tools,” Rapid7
+said
+.</p>
+
+<p>“Attackers commonly employ phishing email messages, compromised credentials, and supply chain attacks, taking advantage of insufficient employee training and lax vendor risk management.” Attackers are also shifting to procuring initial access to construction company networks through underground forums rather than conducting resource-intensive initial compromise operations themselves. These listings facilitate support for escrow services to provide buyers with assurances about the validity of purchased data. Once breached, the threat actors move swiftly across the network to exfiltrate valuable data and even extort it through ransomware. Google backs down, keeps sideloading alive
+Google to Allow Experienced Users to Sideload Unverified Apps
+Back in August, Google
+announced
+plans to verify the identity of all developers who distribute apps on Android, even for those who distribute their software outside the Play Store.</p>
+
+<p>The move was
+met with backlash
+, 
+      raising concerns that it could be the end of sideloading in Android. While Google has claimed the intention behind the change was to tackle online scams and malware campaigns, particularly those that occur when users download APK files distributed via third-party marketplaces, F-Droid painted the framing as disingenuous, given that there already exists Google Play Protect as a remediation mechanism. “Any perceived risks associated with direct app installation can be mitigated through user education, open-source transparency, and existing security measures without imposing exclusionary registration requirements,” F-Droid
+said
+. In response to feedback from “developers and power users,” Google
+said
+it’s “building a new advanced flow that allows experienced users to accept the risks of installing software that isn’t verified.” More details are expected to be shared in the coming months.</p>
+
+<p>CISA warns of false Cisco patch security
+CISA Releases Emergency Cisco Directive
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has
+issued
+a
+new alert
+, 
+      stating it has identified devices marked as “patched” as part of Emergency Directive 25-03, but which were “updated to a version of the software that is still vulnerable to the threat activity” that involves the exploitation of
+CVE-2025-20333 and CVE-2025-20362
+. “CISA is aware of multiple organizations that believed they had applied the necessary updates but had not in fact updated to the minimum software version,” the agency said. “CISA recommends all organizations verify the correct updates are applied.” Both vulnerabilities have come under active exploitation by a suspected China-linked hacking group known as
+UAT4356
+(aka Storm-1849).</p>
+
+<p>Russia tests new SIM-based drone defense
+Russia Imposes 24-Hour Mobile Internet Blackout for Citizens Returning Home
+Russia’s Digital Development Ministry has
+disclosed
+that telecom operators in the country have launched a new mechanism to combat drones at the request of regulators. “If a SIM card is brought into Russia from abroad, it must be confirmed that it is used by a person and not embedded in a drone,” the ministry said in a post on Telegram. “Until then, mobile internet and SMS services on this SIM card will be temporarily blocked.” The mechanism is being tested as of November 10, 2025. The ministry also noted that subscribers with Russian SIM cards are eligible for a 24-hour cooling-off period if the SIM has been inactive for 72 hours or upon returning from international travel.</p>
+
+<p>Subscribers can restore access by solving a CAPTCHA provided by the carrier or calling their service provider and verifying their identity over the phone. The development comes a month after Moscow imposed a similar 24-hour blackout for people entering Russia with foreign SIM cards, citing similar reasons. Citrix patches exploitable XSS bug in NetScaler
+New Citrix Flaw Detailed
+Cybersecurity company watchTowr Labs has published details about a newly patched
+reflected cross-site scripting
+(XSS) flaw (CVE-2025-12101, CVSS score: 6.1) in NetScaler ADC and NetScaler Gateway when the appliance is configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) or Authentication, Authorization, and Auditing (AAA) virtual server. The
+vulnerability
+was patched by Citrix
+earlier this week
+.</p>
+
+<p>Sina Kheirkhah of watchTowr said the vulnerability stems from the application’s handling of the RelayState parameter, allowing an attacker to execute an arbitrary XSS payload by means of a specially crafted HTTPS request containing a RelayState parameter with a Base64-encoded value. “While this may not look realistic as a usable vulnerability (and we’d agree given the low hanging fruit elsewhere), it is broadly still usable via CSRF - as the NetScaler’s /cgi/logout endpoint accepts an HTTP POST request containing a valid SAMLResponse and a modified RelayState,” Kheirkhah
+said
+. Cloud apps emerge as top malware carriers
+Cloud Services as a Malware Distribution Vector
+A new report from Netskope has found that approximately 22 out of every 10,000 users in the manufacturing sector encounter malicious content every month. “Microsoft OneDrive is now the most commonly exploited platform, with 18% of organizations reporting malware downloads from the service each month,” the cybersecurity company
+said
+.</p>
+
+<p>GitHub came in second at 14%, followed by Google Drive (11%) and SharePoint (5.3%). To counter the risk, organizations are advised to inspect all HTTP and HTTPS downloads, including all web and cloud traffic, to prevent malware from infiltrating the enterprise network. Malvertising crew reroutes paychecks nationwide
+Payroll Pirates Hijacks Payroll Systems and Credit Unions
+A financially motivated threat actor known as
+Payroll Pirates
+(aka Storm-2657) has been observed hijacking payroll systems, credit unions, and trading platforms across the U.S. by orchestrating malvertising campaigns.</p>
+
+<p>The malicious activity, described as persistent and adaptive, dates back to May 2023, when the threat actors set up phishing sites that impersonated payroll platforms. These sites were promoted via Google Ads, tricking employees into logging into fake HR portals with the goal of stealing their credentials. Once the login details were captured, the attackers rerouted salaries to their own accounts. Subsequent iterations came equipped with capabilities to bypass two-factor authentication (2FA).</p>
+
+<p>Check Point, which has been tracking a recent surge in these campaigns, said it found a single Telegram bot that’s used to capture the 2FA codes in real-time across credit unions, payroll, health care benefits, and trading platforms, suggesting a “unified network.” While one set of attacks has been found to rely on cloaking techniques to ensure that only intended victims are redirected to the phishing sites, a second cluster targets financial institutions using Microsoft Ads. “Domains are aged for months and host dozens of phishing pages with randomized URLs,” Check Point
+said
+. “A cloaking service from adspect.ai determines which page to show based on browser fingerprinting. Both clusters use the same phishing kits.</p>
+
+<p>Pages adapt dynamically based on operator feedback, making it easy to bypass most authentication methods.”
+Infamous banking trojan resurfaces stronger
+DanaBot Resurfaces After a 6-Month Hiatus
+The
+DanaBot
+malware has returned with a new version 669, nearly six months after law enforcement’s Operation Endgame disrupted its activity in May. The new variant has a command-and-control (C2) infrastructure that comprises Tor domains and BackConnect nodes, per
+Zscaler
+. It’s also using four different wallet addresses to steal cryptocurrency: 12eTGpL8EqYowAfw7DdqmeiZ87R922wt5L (BTC), 0xb49a8bad358c0adb639f43c035b8c06777487dd7 (ETH), LedxKBWF4MiM3x9F7zmCdaxnnu8A8SUohZ (LTC), and TY4iNhGut31cMbE3M6TU5CoCXvFJ5nP59i (TRX). New Android RAT enters black market for $500
+New KomeX Android RAT Advertised on Hacking Forums
+A new Android remote access trojan (RAT) called KomeX RAT is being
+advertised
+for sale on cybercrime forums for a monthly price of $500 or $1,200 for a lifetime license.</p>
+
+<p>Potential buyers can also obtain access to the entire codebase for $3,000. According to claims made by the seller, the Trojan is based on
+BTMOB
+, 
+      another Android remote control tool that emerged earlier this year as an evolution of SpySolr. Other features include the ability to acquire all necessary permissions, bypass Google Play Protect, log keystrokes, harvest SMS messages, and more. The threat actor also claims the RAT works worldwide without any geographic restrictions.</p>
+
+<p>Interestingly, a
+Facebook page for SpySolr
+states that the malware is developed by
+EVLF
+, 
+      which was unmasked in 2023 as a Syrian threat actor behind CypherRAT and CraxsRAT. Amazon opens its AI models to ethical hackers
+Amazon Launches AI Bug Bounty Program
+Amazon has become the latest company to open its large language models to outside security researchers by instituting a bug bounty program to identify security issues in
+NOVA
+, 
+      the company’s suite of foundational AI models. “Through this program, researchers will test the Nova models across critical areas, including cybersecurity issues and Chemical, Biological, Radiological, and Nuclear (CBRN) threat detection,” the tech giant
+said
+. “Qualified participants can earn monetary rewards, ranging from $200 to $25,000.”
+Privacy groups slam EU’s proposed GDPR rewrite
+Leaked E.U.</p>
+
+<p>GDPR Reforms Invite Criticism
+Austrian privacy non-profit None of Your Business (noyb) has condemned the European Commission’s
+leaked plans
+to overhaul the bloc’s landmark privacy regulation, referred to as the General Data Protection Regulation (GDPR), including likely allowing AI companies to use personal data of citizens in the region for model training. “In addition, the special protection of sensitive data like health data, political views or sexual orientation would be significantly reduced,” noyb
+said
+. “Also, remote access to personal data on PCs or smartphones without the consent of the user would be enabled.” Max Schrems, founder of noyb, said the draft represents a massive downgrade of user privacy, while mainly benefiting Big Tech. The Commission is planning to introduce the amendments on November 19.</p>
+
+<p>Bitcoin Queen jailed in record $5.6B fraud case
+Chinese Woman Sentenced to 11 Years in Prison for Bitcoin Scam
+A U.K. court has
+sentenced
+a 47-year-old Chinese woman,
+Zhimin Qian
+(aka Yadi Zhang), to 11 years and 8 months in prison for laundering bitcoin linked to a $5.6 billion investment scheme. Until her arrest in April 2024, the defendant had been on the run since 2017 after carrying out a large-scale scam in China between 2014 and 2017, which defrauded more than 128,000 people. Qian, nicknamed Bitcoin Queen, entered Europe using fake passports and settled in Britain under a fake name — Yadi Zhang.</p>
+
+<p>She
+pleaded guilty
+to offenses related to acquiring and possessing criminal property (i.e., cryptocurrency) back in September. The investigation also led to the seizure of 61,000 bitcoin, now valued at over $6 billion, making it the largest cryptocurrency seizure in history. New malware duo drains crypto and spies on browsers
+LeakyInjector and LeakyStealer Go After Crypto Wallets and Browser History
+Cybersecurity researchers have discovered two new second-stage malware families called LeakyInjector and LeakyStealer that are designed to target cryptocurrency wallets and browser history. “LeakyInjector uses low-level APIs for injection to avoid detection and injects LeakyStealer in ‘explorer.exe,’” Hybrid Analysis
+said
+.</p>
+
+<p>“The duo performs reconnaissance on an infected machine and targets multiple crypto wallets, including browser extensions corresponding to crypto wallets. The malware also looks for browser history files from Google Chrome, Microsoft Edge, Brave, Opera, and Vivaldi.” LeakyStealer implements a polymorphic engine that modifies memory bytes using specific hard-coded values at runtime. It also beacons to an external server at regular intervals to execute Windows commands and download and run additional payloads. Experts warn against self-policing AI safety tools
+Using LLMs as Judges to Flag Prompt Injections
+Last month, OpenAI released a set of safety tools called
+Guardrails safety framework
+to detect and block potentially harmful model behavior, such as jailbreaks and prompt injections.</p>
+
+<p>This includes detectors that rely on large language models (LLMs) to determine whether an input or output poses a security risk. AI security company HiddenLayer said this approach is fundamentally flawed, as it can be exploited by an attacker to the Guardrails framework. “If the same type of model used to generate responses is also used to evaluate safety, both can be compromised in the same way,” it
+said
+. “This experiment highlights a critical challenge in AI security: self-regulation by LLMs cannot fully defend against adversarial manipulation.</p>
+
+<p>Effective safeguards require independent validation layers, red teaming, and adversarial testing to identify vulnerabilities before they can be exploited.”
+Massive leak exposes Chinese cyber arsenal
+Chinese Security Firm Knownsec Allegedly Suffers a Leak
+A
+data breach
+at a Chinese security vendor called Knownsec has led to the leak of over 12,000 classified documents, per Chinese security blog MXRN, “including information on Chinese state-owned cyber weapons, internal tools, and global target lists.” The trove is also said to have apparently included evidence of RATs that can break into Linux, Windows, macOS, iOS, and Android devices, as well as details about the company’s contracts with the Chinese government. The Android code can reportedly extract information from popular Chinese messaging apps and from Telegram. Also present in the leak data was a spreadsheet listing 80 overseas targets Knownsec has successfully attacked, plus 95GB of immigration data obtained from India, 3TB of call records stolen from South Korean telecom operator LG U-Plus, 459GB of road planning data obtained from Taiwan, passwords for Taiwanese Yahoo accounts, and data on Brazilian LinkedIn accounts. It’s currently not known who is behind the leaks.</p>
+
+<p>There are indications that the leak is from an old data breach of Knownsec from 2023, per
+NetAskari
+. The cyber world never slows down. Every fix, every patch, every new idea brings a new risk waiting to be found. Staying alert isn’t just a choice anymore — it’s a habit we all need to build.</p>
+
+<p>The good news is that defenders are learning faster than ever. Researchers, companies, and governments are sharing more knowledge, closing more gaps, and helping each other face threats head-on. Progress may be slow, but it’s steady. As we wrap up this week’s ThreatsDay Bulletin, remember — awareness is the first line of defense.</p>
+
+<p>Stay curious, stay updated, and stay safe until next time. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-flags-critical-watchguard-fireware-flaw-exposing-54000-fireboxes-to-no-login-attacks"><a id="article-6"></a>CISA Flags Critical WatchGuard Fireware Flaw Exposing 54,000 Fireboxes to No-Login Attacks</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday
+added
+a critical security flaw impacting
+WatchGuard Fireware
+to its Known Exploited Vulnerabilities (
+KEV
+) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2025-9242 (CVSS score: 9.3), an out-of-bounds write vulnerability affecting Fireware OS 11.10.2 up to and including 11.12.4_Update1, 12.0 up to and including 12.11.3 and 2025.1. It was patched by WatchGuard in September.</p>
+
+<p>“WatchGuard Firebox contains an out-of-bounds write vulnerability in the OS iked process that may allow a remote unauthenticated attacker to execute arbitrary code,” CISA said in an advisory. Details of the vulnerability were
+shared
+by watchTowr Labs last month, with the cybersecurity company stating that the issue stems from a missing length check on an identification buffer used during the IKE handshake process. “The server does attempt certificate validation, but that validation happens after the vulnerable code runs, allowing our vulnerable code path to be reachable pre-authentication,” security researcher McCaulay Hudson noted. In an
+update to its advisory
+on October 21, 2025, WatchGuard said it has evidence suggesting active exploitation of the flaw, sharing three indicators of compromise (IoCs) associated with the activity -
+An IKE_AUTH request log message with an abnormally large IKE_AUTH request IDi payload greater than 100 bytes
+During a successful exploit, the iked process will hang, interrupting VPN connections
+After a failed or successful exploit, the iked process will crash and generate a fault report on the Firebox
+According to
+data
+from the Shadowserver Foundation, more than 54,300 Firebox instances remain vulnerable to the critical bug as of November 12, 2025, down from a high of 75,955 on October 19.</p>
+
+<p>Number of exposed WatchGuard Firebox instances
+Roughly 18,500 of these devices are in the U.S., the scans reveal. Italy (5,400), the U.K. (4,000), Germany (3,600), and Canada (3,000) round up the top five. Federal Civilian Executive Branch (FCEB) agencies are advised to apply WatchGuard’s patches by December 3, 2025.</p>
+
+<p>The development comes as CISA also added
+CVE-2025-62215
+(CVSS score: 7.0), a recently disclosed flaw in Windows kernel, and
+CVE-2025-12480
+(CVSS score: 9.1), an improper access control vulnerability in Gladinet Triofox, to the KEV catalog. Google’s Mandiant Threat Defense team has attributed the exploitation of CVE-2025-12480 to a threat actor it tracks as UNC6485. (The story was updated after publication to include information from WatchGuard confirming active exploitation efforts.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-67000-fake-npm-packages-flood-registry-in-worm-like-spam-attack"><a id="article-7"></a>Over 67,000 Fake npm Packages Flood Registry in Worm-Like Spam Attack</h2>
+
+<p>Cybersecurity researchers are calling attention to a large-scale spam campaign that has flooded the npm registry with thousands of fake packages since early 2024 as part of a likely financially motivated effort. “The packages were systematically published over an extended period, flooding the npm registry with junk packages that survived in the ecosystem for almost two years,” Endor Labs researchers Cris Staicu and Kiran Raj
+said
+in a Tuesday report. The coordinated campaign has so far published as many as
+67,579 packages
+, according to SourceCodeRED security researcher Paul McCarty, who
+first flagged
+the activity. The end goal is quite unusual – It’s designed to inundate the npm registry with random packages rather than focusing on data theft or other malicious behaviors.</p>
+
+<p>The worm-life propagation mechanism and the use of a distinctive naming scheme that relies on Indonesian names and food terms for the newly created packages have lent it the moniker
+IndonesianFoods Worm
+. The bogus packages masquerade as Next.js projects. “What makes this threat particularly concerning is that the attackers took the time to craft an NPM worm, rather than a singular attack,” McCarty said. “Even worse, these threat actors have been staging this for over two years.”
+Some signs that point to a sustained, coordinated effort include the consistent naming patterns and the fact that the packages are published from a small network of over a dozen npm accounts.</p>
+
+<p>The worm is located within a single JavaScript file (e.g., “auto.js” or “publishScript.js”) in each package, staying dormant until a user manually runs the script using a command like “node auto.js.” In other words, it does not execute automatically during installation or as part of a “postinstall” hook. It’s not clear why someone would go to the extent of running the JavaScript file manually, but the existence of over 43,000 packages suggests either multiple victims executed the script – either by accident or out of curiosity – or the attackers ran it themselves to flood the registry, Henrik Plate, head of security research at Endor Labs, told The Hacker News. “We haven’t found evidence of a coordinated social engineering campaign, but the code was written with social engineering potential, possible victim scenarios include: fake blog posts, tutorials, or README entries instructing users to run ‘node auto.js’ to ‘complete setup’ or ‘fix a build issue,’ [and] CI/CD pipeline build scripts with wildcards something like node *.js that execute all JavaScript files,” Raj added. “The payload’s dormant design is intended to evade automated detection, by requiring manual execution instead of ‘autorun,’ the attackers reduce the chance of being flagged by security scanners and sandboxing systems.”
+The manual execution causes the script to initiate a series of actions in an
+infinite loop
+, including removing &lt;
+“private”: true</p>
+<blockquote>
+  <p>from the “package.json” file.</p>
+</blockquote>
+
+<p>This setting is typically used to prevent accidental publication of private repositories. It then proceeds to create a random package name using the internal dictionary and assign it a random version number to bypass npm’s duplicate version detection. In the final stage, the spam package is uploaded to npm using the “npm publish” command. The entire process is repeated in an endless loop, causing a new package to be pushed out every 7 to 10 seconds.</p>
+
+<p>This translates to about 12 packages per minute, 720 per hour, or 17,000 per day. “This floods the NPM registry with junk packages, wastes infrastructure resources, pollutes search results, and creates supply chain risks if developers accidentally install these malicious packages,” McCarty said. According to Endor Labs, the campaign is part of an attack that was first documented by
+Phylum
+(now part of Veracode) and
+Sonatype
+in April 2024 that involved the publication of thousands of spam packages to conduct a “massive automated crypto farming campaign” by abusing the
+Tea protocol
+. “What makes this campaign particularly insidious is its worm-like spreading mechanism,” the researchers said.</p>
+
+<p>“Analysis of the ‘package.json’ files reveals that these spam packages do not exist in isolation; they reference each other as dependencies, creating a self-replicating network.”
+Thus, when a user installs one of the spam packages, it causes npm to fetch the entire dependency tree, straining registry bandwidth as more dependencies are fetched exponentially. Endor Labs said some of the attacker-controlled packages, such as arts-dao and gula-dao, include a tea.yaml file listing five different TEA accounts. The Tea protocol is a decentralized framework that allows open-source developers to be
+rewarded
+for their software contributions. This likely indicates that the threat actors are using this campaign as a monetization vector by earning TEA tokens by artificially inflating their impact scores.</p>
+
+<p>It’s not clear who is behind the activity, but source code and infrastructure clues suggest it could be someone operating out of Indonesia. The application security company has also flagged a second variant that employs a different package naming scheme comprising random English words (e.g., able_crocodile-notthedevs). JFrog, which is tracking the campaign as Big Red, said the malware reuses a victim user’s stored npm credentials to publish newly generated packages relentlessly to the repository. “The code is a simple but effective npm package factory,” JFrog researcher Andrii Polkovnychenko
+said
+.</p>
+
+<p>“The result is a tight, fully automated loop that can flood the npm ecosystem with large numbers of superficially legitimate packages, all derived from the same code template and differentiated only by randomized metadata.”
+The findings also serve to highlight a security blind spot in security scanners, which are known to flag packages that execute malicious code during installation by monitoring lifecycle hooks or detecting suspicious system calls. “In this case, they found nothing because there was nothing to find at the time of installation,” Endor Labs said. “The sheer number of packages flagged in the current campaign shows that security scanners must analyze these signals in the future.”
+Garrett Calpouzos, principal security researcher at software supply chain security firm Sonatype, characterized IndonesianFoods as a self-publishing worm operating at a massive scale, overwhelming security data systems in the process. “The technical sophistication isn’t necessarily higher — interestingly, these packages do not appear to even try to infiltrate developer machines — it’s the automation and scale that are escalating at an alarming rate,” Calpouzos said.</p>
+
+<p>“Each wave of these attacks weaponizes npm’s open nature in slightly new ways. This one may not steal credentials or inject code, but it still strains the ecosystem and proves how trivial it is to disrupt the world’s largest software supply chain. While the motivation is unclear, the implications are striking.”
+When reached for comment, a GitHub spokesperson said the company has removed the packages in question from npm, and that it’s committed to detecting, analyzing, and taking down packages and accounts that go against its policies. “We have disabled malicious npm packages in accordance with
+GitHub’s Acceptable Use Policies
+which prohibit posting content that directly supports unlawful active attack or malware campaigns that are causing technical harms,” the spokesperson added.</p>
+
+<p>“We employ manual reviews and at-scale detections that use machine learning and constantly evolve to mitigate malicious usage of the platform. We also encourage customers and community members to report abuse and spam.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-sues-china-based-hackers-behind-1-billion-lighthouse-phishing-platform"><a id="article-8"></a>Google Sues China-Based Hackers Behind $1 Billion Lighthouse Phishing Platform</h2>
+
+<p>Google has filed a
+civil lawsuit
+in the U.S. District Court for the Southern District of New York (SDNY) against China-based hackers who are behind a massive Phishing-as-a-Service (PhaaS) platform called Lighthouse that has ensnared over 1 million users across 120 countries. The PhaaS kit is used to conduct large-scale SMS phishing attacks that exploit trusted brands like E-ZPass and USPS to steal people’s financial information by prompting them to click on a link using lures related to fake toll fees or package deliveries. While the scam in itself is fairly simple, it’s the industrial scale of the operation that has allowed it to illegally make more than a billion dollars over the past three years.</p>
+
+<p>“They exploit the reputations of Google and other brands by illegally displaying our trademarks and services on fraudulent websites,” Halimah DeLaine Prado, General Counsel at Google,
+said
+. “We found at least 107 website templates featuring Google’s branding on sign-in screens specifically designed to trick people into believing the sites are legitimate.”
+The company said it’s taking legal action to dismantle the underlying infrastructure under the Racketeer Influenced and Corrupt Organizations (RICO) Act, the Lanham Act, and the Computer Fraud and Abuse Act. Lighthouse, along with other PhaaS platforms like Darcula and Lucid, is part of an
+interconnected cybercrime ecosystem
+operating out of China that is known to send thousands of smishing messages via Apple iMessage and Google Messages’ RCS capabilities to users in the U.S. and beyond in hopes of stealing sensitive data.</p>
+
+<p>These kits have been put to use by a smishing syndicate tracked as Smishing Triad. In a report published in September, Netcraft revealed that Lighthouse and Lucid have been
+linked
+to more than 17,500 phishing domains targeting 316 brands from 74 countries. Phishing templates associated with Lighthouse are licensed from anywhere between $88 for a week to $1,588 for a yearly subscription. “While Lighthouse operates independently of the XinXin group, its alignment with Lucid in terms of infrastructure and targeting patterns highlights the broader trend of collaboration and innovation within the PhaaS ecosystem,” Swiss cybersecurity company PRODAFT said in a report published in April.</p>
+
+<p>It’s estimated that Chinese smishing syndicates may have
+compromised
+between 12.7 million and 115 million payment cards in the U.S. alone between July 2023 and October 2024. In recent years, cybercrime groups from China have also evolved to develop new tools like
+Ghost Tap
+to add stolen card details to digital wallets on iPhones and Android phones. As recently as last month, Palo Alto Networks Unit 42
+said
+the threat actors behind Smishing Triad have used more than 194,000 malicious domains since January 1, 2024, mimicking a wide range of services, including banks, cryptocurrency exchanges, mail and delivery services, police forces, state-owned enterprises, and electronic tolls, among others.</p>
+
+<p>“We believe all three PhaaS services (Lighthouse, Darcula, and Lucid) are utilized by Smishing Triad for a variety of technical and non-technical reasons,” Kasey Best, director of threat intelligence at Silent Push, told The Hacker News, adding the company has observed users of Lighthouse shifting back and forth between both Darcula and Lucid on an infrastructure level. “Worthy of note is that there is an entire ecosystem at play here where Chinese smishing actors discuss their fraudulent activities openly in telegram channels and share knowledge across their various lines of effort. The shared Chinese terminology used amongst those active in the channels only further reinforces the connections between these PhaaS providers and Smishing Triad.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="amazon-uncovers-attacks-exploited-cisco-ise-and-citrix-netscaler-as-zero-day-flaws"><a id="article-9"></a>Amazon Uncovers Attacks Exploited Cisco ISE and Citrix NetScaler as Zero-Day Flaws</h2>
+
+<p>Amazon’s threat intelligence team on Wednesday disclosed that it observed an advanced threat actor exploiting two then-zero-day security flaws in Cisco Identity Service Engine (ISE) and Citrix NetScaler ADC products as part of attacks designed to deliver custom malware. “This discovery highlights the trend of threat actors focusing on critical identity and network access control infrastructure – the systems enterprises rely on to enforce security policies and manage authentication across their networks,” CJ Moses, CISO of Amazon Integrated Security, said in a
+report
+shared with The Hacker News. The attacks were flagged by its
+MadPot
+honeypot network, with the activity weaponizing the following two vulnerabilities -
+CVE-2025-5777
+or Citrix Bleed 2 (CVSS score: 9.3) - An insufficient input validation vulnerability in Citrix NetScaler ADC and Gateway that could be exploited by an attacker to bypass authentication. (Fixed by Citrix in
+June 2025
+)
+CVE-2025-20337
+(CVSS score: 10.0) - An unauthenticated remote code execution vulnerability in Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) that could allow a remote attacker to execute arbitrary code on the underlying operating system as root.</p>
+
+<p>(Fixed by Cisco in
+July 2025
+)
+While both shortcomings have come under active exploitation in the wild, the report from Amazon sheds light on the exact nature of the attacks leveraging them. The tech giant said it detected exploitation attempts targeting CVE-2025-5777 as a zero-day in May 2025, and that further investigation of the threat led to the discovery of an anomalous payload aimed at Cisco ISE appliances by weaponizing CVE-2025-20337. The activity is said to have culminated in the deployment of a custom web shell disguised as a legitimate Cisco ISE component named IdentityAuditAction. “This wasn’t typical off-the-shelf malware, but rather a custom-built backdoor specifically designed for Cisco ISE environments,” Moses said.</p>
+
+<p>The web shell comes fitted with capabilities to fly under the radar, operating entirely in memory and using Java reflection to inject itself into running threads. It also registers as a listener to monitor all HTTP requests across the Tomcat server and implements DES encryption with non-standard Base64 encoding to evade detection. Amazon described the campaign as indiscriminate, characterizing the threat actor as “highly resourced” owing to its ability to leverage multiple zero-day exploits, either by possessing advanced vulnerability research capabilities or having potential access to non-public vulnerability information. On top of that, the use of bespoke tools reflects the adversary’s knowledge of enterprise Java applications, Tomcat internals, and the inner workings of Cisco ISE.</p>
+
+<p>The findings once again illustrate how threat actors are continuing to target network edge appliances to breach networks of interest, making it crucial that organizations limit access, through firewalls or layered access, to privileged management portals. “The pre-authentication nature of these exploits reveals that even well-configured and meticulously maintained systems can be affected,” Moses said. “This underscores the importance of implementing comprehensive defense-in-depth strategies and developing robust detection capabilities that can identify unusual behavior patterns.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="webinar-learn-how-leading-security-teams-reduce-attack-surface-exposure-with-dasr"><a id="article-10"></a>[Webinar] Learn How Leading Security Teams Reduce Attack Surface Exposure with DASR</h2>
+
+<p>Every day, security teams face the same problem—too many risks, too many alerts, and not enough time. You fix one issue, and three more show up. It feels like you’re always one step behind. But what if there was a smarter way to stay ahead—without adding more work or stress?</p>
+
+<p>Join The Hacker News and Bitdefender for a free cybersecurity webinar
+to learn about a new approach called
+Dynamic Attack Surface Reduction (DASR)
+—a method that helps security teams close gaps before attackers even find them. Most tools today only tell you what’s wrong. They scan, report, and give you long lists of problems. But they don’t help you fix them fast enough.</p>
+
+<p>The truth is, the attack surface keeps changing—new apps, cloud systems, remote devices, misconfigurations. It never stops. Attackers only need one open door. And that’s why traditional defenses often fail—they react too slowly.</p>
+
+<p>Meet DASR: A Smarter Way to Stay Safe
+Dynamic Attack Surface Reduction (DASR) changes how we defend. Instead of waiting for threats, DASR works quietly in the background, watching for risky changes and closing weak spots automatically. You’ll learn in this cybersecurity expert webinar:
+Why traditional scans aren’t enough anymore
+How DASR uses automation and context to reduce risks in real time
+How to safely test and use DASR in your own environment
+Save your seat now
+and see how you can turn endless alerts into lasting protection. Who You’ll Hear From
+Two experts from Bitdefender will share real stories and lessons from the front lines:
+Cristian Iordache
+, GravityZone Solutions Director, who helps companies build stronger defenses that actually work.</p>
+
+<p>Dragos Gavriluț
+, VP of Threat Research, who’s led security teams for over 20 years and built tools that stop real-world attacks. They’ll show how DASR and Bitdefender’s
+PHASR
+system help close the doors attackers rely on—before damage happens. Security shouldn’t feel like running in circles. With DASR, you can finally move from chasing problems to preventing them—calmly and confidently.</p>
+
+<p>If you want a simpler, stronger, and faster way to stay ahead of threats, this is the session you don’t want to miss. Register now
+and take your first step toward a safer, smarter way to defend your organization. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="active-directory-under-siege-why-critical-infrastructure-needs-stronger-security"><a id="article-11"></a>Active Directory Under Siege: Why Critical Infrastructure Needs Stronger Security</h2>
+
+<p>Active Directory remains the authentication backbone for
+over 90%
+of Fortune 1000 companies. AD’s importance has grown as companies adopt hybrid and cloud infrastructure, but so has its complexity. Every application, user, and device traces back to AD for authentication and authorization, making it the ultimate target. For attackers, it represents the holy grail:
+compromise Active Directory
+, and you can access the entire network.</p>
+
+<p>Why attackers target Active Directory
+AD serves as the gatekeeper for everything in your enterprise. So, when adversaries compromise AD, they gain privileged access that lets them create accounts, modify permissions, disable security controls, and move laterally, all without triggering most alerts. The
+2024 Change Healthcare breach
+showed what can happen when AD is compromised. In this attack, hackers exploited a server lacking multifactor authentication, pivoted to AD, escalated privileges, and then executed a highly costly cyberattack.</p>
+
+<p>Patient care came to a screeching halt. Health records were exposed. The organization paid millions in ransom. Once attackers control AD, they control your entire network.</p>
+
+<p>And standard security tools often struggle to detect these attacks because they look like legitimate AD operations. Common attack techniques
+Golden ticket attacks
+generate counterfeit authentication tickets granting full domain access for months. DCSync attacks
+exploit replication permissions to extract password hashes directly from domain controllers. Kerberoasting
+gains elevated rights by targeting service accounts with weak passwords.</p>
+
+<p>How hybrid environments expand the attack surface
+Organizations running
+hybrid Active Directory
+face challenges that didn’t exist five years ago. Your identity infrastructure now spans on-premises domain controllers, Azure AD Connect synchronization, cloud identity services, and multiple authentication protocols. Attackers exploit this complexity, abusing synchronization mechanisms to pivot between environments. OAuth token compromises
+in cloud services provide backdoor access to on-premises resources.</p>
+
+<p>And legacy protocols like
+NTLM
+remain enabled for backward compatibility, giving intruders easy relay attack opportunities. The fragmented security posture makes things worse. On-premises security teams use different tools than cloud security teams, allowing visibility gaps to emerge at the boundaries. Threat actors operate in these blind spots while security teams struggle to correlate events across platforms.</p>
+
+<p>Common vulnerabilities that attackers exploit
+Verizon’s Data Breach Investigation Report
+found that compromised credentials are involved in 88% of breaches. Cybercriminals harvest credentials
+through phishing, malware, brute force, and purchasing breach databases. Frequent vulnerabilities in Active Directory
+Weak passwords:
+Users
+reuse the same passwords
+across personal and work accounts, so one breach exposes multiple systems. Standard eight-character complexity rules seem secure, but hackers can crack them in seconds.</p>
+
+<p>Service account problems:
+Service accounts
+often use passwords that never expire or change, and they typically have excessive permissions that allow lateral movement once compromised. Cached credentials:
+Workstations store administrative credentials in memory, where attackers can extract them with standard tools. Poor visibility:
+Teams lack insight into who uses
+privileged accounts
+, what level of access they have, and when they use them. Stale access:
+Former employees keep privileged access long after they leave because no one audits and removes it, leading to a buildup of
+stale accounts
+that attackers can exploit.</p>
+
+<p>And the hits keep coming: April 2025 brought another critical AD flaw allowing
+privilege escalation
+from low-level access to system-level control. Microsoft released a patch, but many organizations struggle to test and deploy updates quickly across all domain controllers. Modern approaches to strengthen your Active Directory
+Defending AD requires a layered security approach that addresses credential theft, privilege management, and continuous monitoring. Strong password policies are your first defense
+Effective
+password policies
+play a critical role in protecting your environment.</p>
+
+<p>Blocking
+passwords that appear in breach databases
+stops staffers from using credentials that hackers already have. Continuous scanning detects when user passwords are compromised in new breaches, not just at password reset. And dynamic feedback shows users whether their password is strong in real time, guiding them toward secure passwords they can actually remember. Privileged access management reduces your attack surface
+Implementing privileged access management helps minimize risk by
+limiting how and when administrative privileges are used
+.</p>
+
+<p>Start by segregating administrative accounts from standard user accounts, so compromised user credentials can’t provide admin access. Enforce just-in-time access that grants elevated privileges only when needed and automatically revokes them afterward. Route all administrative tasks through privileged access workstations to prevent credential theft from regular endpoints. Zero-trust principles apply to Active Directory
+Adopting a
+zero-trust approach
+strengthens Active Directory security by verifying every access attempt rather than assuming trust within the network.</p>
+
+<p>Enforce conditional access policies that evaluate user location, device health, and behavior patterns before granting access, not just username and password. Require
+multifactor authentication
+for all privileged accounts to stop malicious actors who steal credentials. Continuous monitoring catches attacks in progress
+Deploy tools that track every significant AD change, including group membership modifications, permission grants, policy updates, and unusual replication activity between domain controllers. Then, configure alerts for suspicious patterns, like multiple authentication failures from the same account, or administrative actions happening at 3 am when your admins are asleep.</p>
+
+<p>Continuous monitoring
+provides the visibility needed to detect and stop attacks before they escalate. Patch management is a must-have for domain controllers
+Strong
+patch management practices
+are essential for maintaining secure domain controllers. Deploy security updates that close privilege escalation paths within days, not weeks, bad actors actively scan for unpatched systems. Active Directory security is a continuous process
+Active Directory security
+isn’t a one-off project you complete.</p>
+
+<p>Hackers constantly refine techniques, new vulnerabilities emerge, and your infrastructure changes. That means your security also requires ongoing attention and continuous improvement. Passwords remain the most common attack vector, making them your top priority to fix. For the highest level of protection, invest in a solution that continuously monitors for compromised credentials and blocks them in real-time.</p>
+
+<p>For example, a tool like
+Specops Password Policy
+integrates directly with Active Directory to block compromised credentials
+before
+they become a problem. Specops Password Policy continuously blocks over 4 billion compromised passwords, preventing users from creating credentials that attackers already have. Daily scans catch breached passwords in real-time instead of waiting for the next password change cycle. And when users create new passwords, dynamic feedback guides them toward strong options they can actually remember, reducing support calls while improving security.</p>
+
+<p>Book a live demo of Specops Password Policy today
+. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-fixes-63-security-flaws-including-a-windows-kernel-zero-day-under-active-attack"><a id="article-12"></a>Microsoft Fixes 63 Security Flaws, Including a Windows Kernel Zero-Day Under Active Attack</h2>
+
+<p>Microsoft on Tuesday released patches for
+63 new security vulnerabilities
+identified in its software, including one that has come under active exploitation in the wild. Of the 63 flaws, four are rated Critical and 59 are rated Important in severity. Twenty-nine of these vulnerabilities are related to privilege escalation, followed by 16 remote code execution, 11 information disclosure, three denial-of-service (DoS), two security feature bypass, and two spoofing bugs. The patches are in addition to the
+27 vulnerabilities
+the Windows maker addressed in its Chromium-based Edge browser since the release of
+October 2025’s Patch Tuesday
+update.</p>
+
+<p>The zero-day vulnerability that has been listed as exploited in Tuesday’s update is
+CVE-2025-62215
+(CVSS score: 7.0), a privilege escalation flaw in Windows Kernel. The Microsoft Threat Intelligence Center (MSTIC) and Microsoft Security Response Center (MSRC) have been credited with discovering and reporting the issue. “Concurrent execution using shared resource with improper synchronization (‘race condition’) in Windows Kernel allows an authorized attacker to elevate privileges locally,” the company said in an advisory. That said, successful exploitation hinges on an attacker who has already gained a foothold on a system to
+win a race condition
+.</p>
+
+<p>Once this criterion is satisfied, it could permit the attacker to obtain SYSTEM privileges. “An attacker with low-privilege local access can run a specially crafted application that repeatedly attempts to trigger this race condition,” Ben McCarthy, lead cybersecurity engineer at Immersive, said. “The goal is to get multiple threads to interact with a shared kernel resource in an unsynchronized way, confusing the kernel’s memory management and causing it to free the same memory block twice. This successful ‘double free’ corrupts the kernel heap, allowing the attacker to overwrite memory and hijack the system’s execution flow.”
+It’s currently not known how this vulnerability is being exploited and by whom, but it’s assessed to be used as part of a post-exploitation activity to escalate their privileges after obtaining initial access through some other means, such as social engineering, phishing, or exploitation of another vulnerability, Satnam Narang, senior staff research engineer at Tenable, said.</p>
+
+<p>“When chained with other bugs this kernel race is critical: an RCE or sandbox escape can supply the local code execution needed to turn a remote attack into a SYSTEM takeover, and an initial low‑privilege foothold can be escalated to dump credentials and move laterally,” Mike Walters, president and co-founder of Action1, said in a statement. Also patched as part of the updates are two heap-based buffer overflow flaws in Microsoft’s Graphics Component (
+CVE-2025-60724
+, CVSS score: 9.8) and Windows Subsystem for Linux GUI (
+CVE-2025-62220
+, CVSS score: 8.8) that could result in remote code execution. Another vulnerability of note is a high-severity privilege escalation flaw in Windows Kerberos (CVE-2025-60704, CVSS score: 7.5) that takes advantage of a missing cryptographic step to gain administrator privileges. The vulnerability has been codenamed CheckSum by Silverfort.</p>
+
+<p>“The attacker must inject themselves into the logical network path between the target and the resource requested by the victim to read or modify network communications,” Microsoft
+said
+. “An unauthorized attacker must wait for a user to initiate a connection.”
+Silverfort researchers Eliran Partush and Dor Segal, who discovered the shortcoming, described it as a
+Kerberos constrained delegation
+vulnerability that allows an attacker to impersonate arbitrary users and gain control over an entire domain by means of an adversary-in-the-middle (AitM) attack. An attacker who is able to successfully exploit the flaw could escalate privileges and move laterally to other machines in an organization. More concerning, threat actors could also gain the ability to impersonate any user in the company, allowing them to gain unfettered access or become a domain administrator.</p>
+
+<p>“Any organization using Active Directory, with the Kerberos delegation capability turned on, is impacted,” Silverfort
+said
+. “Because Kerberos delegation is a feature within Active Directory, an attacker requires initial access to an environment with compromised credentials.”
+Software Patches from Other Vendors
+In addition to Microsoft, security updates have also been released by other vendors over the past several weeks to rectify several vulnerabilities, including —
+Adobe
+Amazon Web Services
+AMD
+Apple
+ASUS
+Atlassian
+AutomationDirect
+Bitdefender
+Broadcom
+(including VMware)
+Cisco
+Citrix
+ConnectWise
+D-Link
+Dell
+Devolutions
+Drupal
+Elastic
+F5
+Fortinet
+GitLab
+Google Android
+Google Chrome
+Google Cloud
+Grafana
+Hitachi Energy
+HP
+HP Enterprise
+(including Aruba Networking and
+Juniper Networks
+)
+IBM
+Intel
+Ivanti
+Jenkins
+Lenovo
+Linux distributions
+AlmaLinux
+,
+Alpine Linux
+,
+Amazon Linux
+,
+Arch Linux
+,
+Debian
+,
+Gentoo
+,
+Oracle Linux
+,
+Mageia
+,
+Red Hat
+,
+Rocky Linux
+,
+SUSE
+, and
+Ubuntu
+MediaTek
+Mitsubishi Electric
+MongoDB
+Moxa
+Mozilla
+Firefox and Firefox ESR
+NVIDIA
+Oracle
+Palo Alto Networks
+QNAP
+Qualcomm
+Rockwell Automation
+Ruckus Wireless
+Samba
+Samsung
+SAP
+Schneider Electric
+Siemens
+SolarWinds
+SonicWall
+Splunk
+Spring Framework
+Supermicro
+Synology
+TP-Link
+WatchGuard
+, and
+Zoom
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-launches-private-ai-compute--secure-ai-processing-with-on-device-level-privacy"><a id="article-13"></a>Google Launches ‘Private AI Compute’ — Secure AI Processing with On-Device-Level Privacy</h2>
+
+<p>Google on Tuesday unveiled a new privacy-enhancing technology called
+Private AI Compute
+to process artificial intelligence (AI) queries in a secure platform in the cloud. The company
+said
+it has built Private AI Compute to “unlock the full speed and power of Gemini cloud models for AI experiences, while ensuring your personal data stays private to you and is not accessible to anyone else, not even Google.”
+Private AI Compute has been described as a “secure, fortified space” for processing sensitive user data in a manner that’s analogous to on-device processing but with extended AI capabilities. It’s powered by
+Trillium
+Tensor Processing Units (TPUs) and
+Titanium
+Intelligence Enclaves (TIE), allowing the company to use its frontier models without sacrificing on security and privacy. In other words, the privacy infrastructure is designed to take advantage of the computational speed and power of the cloud while retaining the security and privacy assurances that come with on-device processing.</p>
+
+<p>Google’s CPU and TPU workloads (aka trusted nodes) rely on an AMD-based hardware Trusted Execution Environment (TEE) that encrypts and isolates memory from the host. The tech giant noted that only attested workloads can run on the trusted nodes, and that administrative access to the workloads is cut off. Furthermore, the nodes are secured against potential physical data exfiltration attacks. The infrastructure also supports peer-to-peer attestation and encryption between the trusted nodes to ensure that user data is decrypted and processed only within the confines of a secure environment and is shielded from broader Google infrastructure.</p>
+
+<p>“Each workload requests and cryptographically validates the workload credentials of the other, ensuring mutual trust within the protected execution environment,” Google explained. “Workload credentials are provisioned only upon successful validation of the node’s attestation against internal reference values. Failure of validation prevents connection establishment, thus safeguarding user data from untrusted components.”
+The overall process flow works like this: A user client establishes a
+Noise protocol
+encryption connection with a frontend server and establishes bi-directional attestation. The client also validates the server’s identity using an
+Oak
+end-to-end encrypted attested session to confirm that it’s genuine and not modified.</p>
+
+<p>Following this step, the server sets up an Application Layer Transport Security (
+ALTS
+) encryption channel with other services in the scalable inference pipeline, which then communicates with model servers running on the hardened TPU platform. The entire system is “ephemeral by design,” meaning an attacker who manages to gain privileged access to the system cannot obtain past data, as the inputs, model inferences, and computations are discarded as soon as the user session is completed. Google Private AI Compute Architecture
+Google has also touted the various protections baked into the system to maintain its security and integrity and prevent unauthorized modifications. These include -
+Minimizing the number of components and entities that must be trusted for data confidentiality
+Using
+Confidential Federated Compute
+for collecting analytics and aggregate insights
+Encryption for client-server communications
+Binary authorization
+to ensure only signed, authorized code and validated configurations are running across its software supply chain
+Isolating user data in Virtual Machines (VMs) to contain compromise
+Securing systems against physical exfiltration with memory encryption and input/output memory management unit (
+IOMMU
+) protections
+Zero shell access on the TPU platform
+Using IP blinding relays operated by third-parties to tunnel all inbound traffic to the system and obscure the true origin of the request
+Isolating the system’s authentication and authorization from inference using
+Anonymous Tokens
+NCC Group, which has conducted an
+external assessment
+of Private AI Compute between April and September 2025, said it was able to discover a timing-based side channel in the IP blinding relay component that could be used to “unmask” users under certain conditions.</p>
+
+<p>However, Google has deemed it low risk due to the fact that the multi-user nature of the system introduces a “significant amount of noise” and makes it challenging for an attacker to correlate a query to a specific user. The cybersecurity company also said it identified three issues in the implementation of the attestation mechanism that could result in a denial-of-service (DoS) condition, as well as various protocol attacks. Google is currently working on mitigations for all of them. “Although the overall system relies upon proprietary hardware and is centralized on Borg Prime, […] Google has robustly limited the risk of user data being exposed to unexpected processing or outsiders, unless Google, as a whole organization, decides to do so,” it said.</p>
+
+<p>“Users will benefit from a high level of protection from malicious insiders.”
+The development mirrors similar moves from Apple and Meta, which have released Private Cloud Compute (
+PCC
+) and
+Private Processing
+to offload AI queries from mobile devices in a privacy-preserving way. “Remote attestation and encryption are used to connect your device to the hardware-secured sealed cloud environment, allowing Gemini models to securely process your data within a specialized, protected space,” Jay Yagnik, Google’s vice president for AI Innovation and Research, said. “This ensures sensitive data processed by Private AI Compute remains accessible only to you and no one else, not even Google.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

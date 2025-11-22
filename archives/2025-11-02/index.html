@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-02 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">ASD Warns of Ongoing BADCANDY Attacks Exploiting Cisco IOS XE Vulnerability</a></li>
+      
+        <li><a href="#article-2">OpenAI Unveils Aardvark: GPT-5 Agent That Finds and Fixes Code Flaws Automatically</a></li>
+      
+        <li><a href="#article-3">Nation-State Hackers Deploy New Airstalk Malware in Suspected Supply Chain Attack</a></li>
+      
+        <li><a href="#article-4">How to Remove Otter AI from Your Org</a></li>
+      
+        <li><a href="#article-5">China-Linked Hackers Exploit Windows Shortcut Flaw to Target European Diplomats</a></li>
+      
+        <li><a href="#article-6">China-Linked Tick Group Exploits Lanscope Zero-Day to Hijack Corporate Systems</a></li>
+      
+        <li><a href="#article-7">The MSP Cybersecurity Readiness Guide: Turning Security into Growth</a></li>
+      
+        <li><a href="#article-8">CISA and NSA Issue Urgent Guidance to Secure WSUS and Microsoft Exchange Servers</a></li>
+      
+        <li><a href="#article-9">Eclipse Foundation Revokes Leaked Open VSX Tokens Following Wiz Discovery</a></li>
+      
+        <li><a href="#article-10">CISA Flags VMware Zero-Day Exploited by China-Linked Hackers in Active Attacks</a></li>
+      
+        <li><a href="#article-11">A New Security Layer for macOS Takes Aim at Admin Errors Before Hackers Do</a></li>
+      
+        <li><a href="#article-12">Google's Built-In AI Defenses on Android Now Block 10 Billion Scam Messages a Month</a></li>
+      
+        <li><a href="#article-13">Russian Ransomware Gangs Weaponize Open-Source AdaptixC2 for Advanced Attacks</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-02-ai创业新闻">2025-11-02 AI创业新闻</h1>
+
+<h2 id="asd-warns-of-ongoing-badcandy-attacks-exploiting-cisco-ios-xe-vulnerability"><a id="article-1"></a>ASD Warns of Ongoing BADCANDY Attacks Exploiting Cisco IOS XE Vulnerability</h2>
+
+<p>The Australian Signals Directorate (ASD) has
+issued
+a bulletin about ongoing cyber attacks targeting unpatched Cisco IOS XE devices in the country with a previously undocumented implant known as
+BADCANDY
+. The activity, per the intelligence agency, involves the exploitation of
+CVE-2023-20198
+(CVSS score: 10.0), a critical vulnerability that allows a remote, unauthenticated attacker to create an account with elevated privileges and use it to seize control of susceptible systems. The security defect has come under active exploitation in the wild since last 2023, with China-linked threat actors like
+Salt Typhoon
+weaponizing it in recent months to breach telecommunications providers. ASD noted that variations of BADCANDY have been detected since October 2023, with a fresh set of attacks continuing to be recorded in 2024 and 2025.</p>
+
+<p>As many as 400 devices in Australia are estimated to have been compromised with the malware since July 2025, out of which 150 devices were infected in October alone. “BADCANDY is a low equity Lua-based web shell, and cyber actors have typically applied a non-persistent patch post-compromise to mask the device’s vulnerability status in relation to CVE-2023-20198,” it said. “In these instances, the presence of the BADCANDY implant indicates compromise of the Cisco IOS XE device, via CVE-2023-20198.”
+The lack of a persistence mechanism means it cannot survive across system reboots. However, if the device remains unpatched and exposed to the internet, it’s possible for the threat actor to re-introduce the malware and regain access to it.</p>
+
+<p>ASD has assessed that the threat actors are able to detect when the implant is removed and are infecting the devices again. This is based on the fact that re-exploitation has occurred on devices for which the agency has previously issued notifications to affected entities. That having said, a reboot will not undo other actions undertaken by the attackers. It’s therefore essential that system operators apply the patches, limit public exposure of the web user interface, and follow necessary
+hardening guidelines
+issued by Cisco to prevent future exploitation attempts.</p>
+
+<p>Some of the other actions outlined by the agency are listed below -
+Review the running configuration for accounts with privilege 15 and remove unexpected or unapproved accounts
+Review accounts with random strings or “cisco_tac_admin,” “cisco_support,” “cisco_sys_manager,” or “cisco” and remove them if not legitimate
+Review the running configuration for unknown tunnel interfaces
+Review TACACS+ AAA command accounting logging for configuration changes, if enabled
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="openai-unveils-aardvark-gpt-5-agent-that-finds-and-fixes-code-flaws-automatically"><a id="article-2"></a>OpenAI Unveils Aardvark: GPT-5 Agent That Finds and Fixes Code Flaws Automatically</h2>
+
+<p>OpenAI has announced the launch of an “agentic security researcher” that’s powered by its GPT-5 large language model (LLM) and is programmed to emulate a human expert capable of scanning, understanding, and patching code. Called
+Aardvark
+, the artificial intelligence (AI) company said the autonomous agent is designed to help developers and security teams flag and fix security vulnerabilities at scale. It’s currently available in private beta. “Aardvark continuously analyzes source code repositories to identify vulnerabilities, assess exploitability, prioritize severity, and propose targeted patches,” OpenAI
+noted
+.</p>
+
+<p>It works by embedding itself into the software development pipeline, monitoring commits and changes to codebases, detecting security issues and how they might be exploited, and proposing fixes to address them using LLM-based reasoning and tool-use. Powering the agent is
+GPT‑5
+, which OpenAI introduced in August 2025. The company describes it as a “smart, efficient model” that features deeper reasoning capabilities, courtesy of GPT‑5 thinking, and a “real‑time router” to decide the right model to use based on conversation type, complexity, and user intent. Aardvark, OpenAI added, analyses a project’s codebase to produce a threat model that it thinks best represents its security objectives and design.</p>
+
+<p>With this contextual foundation, the agent then scans its history to identify existing issues, as well as detect new ones by scrutinizing incoming changes to the repository. Once a potential security defect is found, it attempts to trigger it in an isolated, sandboxed environment to confirm its exploitability and leverages
+OpenAI Codex
+, its coding agent, to produce a patch that can be reviewed by a human analyst. OpenAI said it’s been running the agent across OpenAI’s internal codebases and some of its external alpha partners, and that it has helped identify at least 10 CVEs in open-source projects. The AI upstart is far from the only company to trial AI agents to tackle automated vulnerability discovery and patching.</p>
+
+<p>Earlier this month, Google announced
+CodeMender
+that it said detects, patches, and rewrites vulnerable code to prevent future exploits. The tech giant also noted that it intends to work with maintainers of critical open-source projects to integrate CodeMender-generated patches to help keep projects secure. Viewed in that light, Aardvark, CodeMender, and
+XBOW
+are being positioned as tools for continuous code analysis, exploit validation, and patch generation. It also comes close on the heels of OpenAI’s release of the
+gpt-oss-safeguard models
+that are fine-tuned for safety classification tasks.</p>
+
+<p>“Aardvark represents a new defender-first model: an agentic security researcher that partners with teams by delivering continuous protection as code evolves,” OpenAI said. “By catching vulnerabilities early, validating real-world exploitability, and offering clear fixes, Aardvark can strengthen security without slowing innovation. We believe in expanding access to security expertise.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="nation-state-hackers-deploy-new-airstalk-malware-in-suspected-supply-chain-attack"><a id="article-3"></a>Nation-State Hackers Deploy New Airstalk Malware in Suspected Supply Chain Attack</h2>
+
+<p>A suspected nation-state threat actor has been linked to the distribution of a new malware called Airstalk as part of a likely supply chain attack. Palo Alto Networks Unit 42 said it’s tracking the cluster under the moniker
+CL-STA-1009
+, where “CL” stands for cluster and “STA” refers to state-backed motivation. “Airstalk misuses the AirWatch API for mobile device management (MDM), which is now called Workspace ONE Unified Endpoint Management,” security researchers Kristopher Russo and Chema Garcia
+said
+in an analysis. “It uses the API to establish a covert command-and-control (C2) channel, primarily through the AirWatch feature to manage custom device attributes and file uploads.”
+The malware, which appears in PowerShell and .NET variants, makes use of a multi-threaded command-and-control (C2) communication protocol and is capable of capturing screenshots and harvesting cookies, browser history, bookmarks, and screenshots from web browsers.</p>
+
+<p>It’s believed that the threat actors are leveraging a stolen certificate to sign some of the artifacts. Unit 42 said the .NET variant of Airstalk is equipped with more capabilities than its PowerShell counterpart, suggesting it could be an advanced version of the malware. The PowerShell variant, for its part, utilizes the “
+/api/mdm/devices/
+“ endpoint for C2 communications. While the endpoint is designed to fetch content details of a particular device, the malware uses the custom attributes feature in the API to use it as a dead drop resolver for storing information necessary for interacting with the attacker.</p>
+
+<p>Once launched, the backdoor initializes contact by sending a “CONNECT” message and awaits a “CONNECTED” message from the server. It then receives various tasks to be executed on the compromised host in the form of a message of type “ACTIONS.” The output of the execution is sent back to the threat actor using a “RESULT” message. The backdoor supports seven different ACTIONS, including taking a screenshot, getting cookies from Google Chrome, listing all user Chrome profiles, obtaining browser bookmarks of a given profile, collecting the browser history of a given Chrome profile, enumerating all files within the user’s directory, and uninstalling itself from the host. “Some tasks require sending back a large amount of data or files after Airstalk is executed,” Unit 42 said.</p>
+
+<p>“To do so, the malware uses the blobs feature of the AirWatch MDM API to upload the content as a new blob.”
+The .NET variant of Airstalk expands on the capabilities by also targeting Microsoft Edge and Island, an enterprise-focused browser, while attempting to mimic an AirWatch Helper utility (“AirwatchHelper.exe”). Furthermore, it supports three more message types -
+MISMATCH, for flagging version mismatch errors
+DEBUG, for sending debug messages
+PING, for beaconing
+In addition, it uses three different execution threads, each of which serves a unique purpose: to manage C2 tasks, exfiltrate the debug log, and beacon to the C2 server. The malware also supports a broader set of commands, although one of them appears not to have been implemented yet -
+Screenshot, to take a screenshot
+UpdateChrome, to exfiltrate a specific Chrome profile
+FileMap, to list the contents of the specific directory
+RunUtility (not implemented)
+EnterpriseChromeProfiles, to fetch available Chrome profiles
+UploadFile, to exfiltrate specific Chrome artifacts and credentials
+OpenURL, to open a new URL in Chrome
+Uninstall, to finish the execution
+EnterpriseChromeBookmarks, to fetch Chrome bookmarks from a specific user profile
+EnterpriseIslandProfiles, to fetch available Island browser profiles
+UpdateIsland, to exfiltrate a specific Island browser profile
+ExfilAlreadyOpenChrome, to dump all cookies from the current Chrome profile
+Interestingly, while the PowerShell variant uses a scheduled task for persistence, its .NET version lacks such a mechanism. Unit 42 said some of the .NET variant samples are signed with a “likely stolen” certificate signed by a valid certificate authority (Aoteng Industrial Automation (Langfang) Co., Ltd.), with early iterations featuring a compilation timestamp of June 28, 2024.</p>
+
+<p>It’s currently not known how the malware is distributed, or who may have been targeted in these attacks. But the use of MDM-related APIs for C2 and the targeting of enterprise browsers like Island suggest the possibility of a supply chain attack targeting the business process outsourcing (BPO) sector. “Organizations specializing in BPO have become lucrative targets for both criminal and nation-state attackers,” it said. “Attackers are willing to invest generously in the resources necessary to not only compromise them but maintain access indefinitely.”
+“The evasion techniques employed by this malware allow it to remain undetected in most environments.</p>
+
+<p>This is particularly true if the malware is running within a third-party vendor’s environment. This is particularly disastrous for organizations that use BPO because stolen browser session cookies could allow access to a large number of their clients.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-to-remove-otter-ai-from-your-org"><a id="article-4"></a>How to Remove Otter AI from Your Org</h2>
+
+<h2 id="china-linked-hackers-exploit-windows-shortcut-flaw-to-target-european-diplomats"><a id="article-5"></a>China-Linked Hackers Exploit Windows Shortcut Flaw to Target European Diplomats</h2>
+
+<p>A China-affiliated threat actor known as
+UNC6384
+has been linked to a fresh set of attacks exploiting an unpatched Windows shortcut vulnerability to target European diplomatic and government entities between September and October 2025. The activity targeted diplomatic organizations in Hungary, Belgium, Italy, and the Netherlands, as well as government agencies in Serbia, Arctic Wolf
+said
+in a technical report published Thursday. “The attack chain begins with spear-phishing emails containing an embedded URL that is the first of several stages that lead to the delivery of malicious LNK files themed around European Commission meetings, NATO-related workshops, and multilateral diplomatic coordination events,” the cybersecurity company said. The files are designed to exploit ZDI-CAN-25373 to trigger a multi-stage attack chain that culminates in the deployment of the
+PlugX
+malware using DLL side-loading.</p>
+
+<p>PlugX is a
+remote access trojan
+that’s also referred to as Destroy RAT, Kaba, Korplug, SOGU, and TIGERPLUG. UNC6384 was the
+subject
+of a recent analysis by Google Threat Intelligence Group (GTIG), which described it as a cluster with tactical and tooling overlaps with a hacking group known as Mustang Panda. The threat actor has been observed delivering a memory-resident variant of PlugX called SOGU.SEC. The latest attack wave uses phishing emails with diplomatic lures to entice recipients into opening a bogus attachment that’s designed to exploit
+ZDI-CAN-25373
+, a vulnerability that has been put to use by multiple threat actors as far back as 2017 to execute hidden malicious commands on a victim’s machine.</p>
+
+<p>It’s officially tracked as
+CVE-2025-9491
+(CVSS score: 7.0)
+The existence of the bug was first reported by security researchers Peter Girnus and Aliakbar Zahravi in March 2025. A subsequent report from HarfangLab
+found
+that the shortcoming has also been abused by a cyber espionage cluster known as XDSpy to distribute a Go-based malware called XDigo in attacks targeting Eastern European governmental entities in March 2025. At that time, Microsoft told The Hacker News that Microsoft Defender has detections in place to detect and block this threat activity, and that Smart App Control provides an extra layer of protection by blocking malicious files from the Internet. Specifically, the LNK file is designed to launch a PowerShell command to decode and extract the contents of a TAR archive and simultaneously display a decoy PDF document to the user.</p>
+
+<p>The archive contains three files: A legitimate Canon printer assistant utility, a malicious DLL dubbed CanonStager that’s sideloaded using the binary, and an encrypted PlugX payload (“cnmplog.dat”) that’s launched by the DLL. “The malware provides comprehensive remote access capabilities including command execution, keylogging, file upload and download operations, persistence establishment, and extensive system reconnaissance functions,” Arctic Wolf said. “Its modular architecture allows operators to extend functionality through plugin modules tailored to specific operational requirements.”
+PlugX also implements various anti-analysis techniques and anti-debugging checks to resist efforts to unpack its internals and fly under the radar. It achieves persistence by means of a Windows Registry modification.</p>
+
+<p>Arctic Wolf said the CanonStager artifacts found in early September and October 2025 have witnessed a steady decline in size from approximately 700 KB to 4 KB, indicating active development and its evolution into a minimal tool capable of achieving its goals without leaving much of a forensic footprint. Furthermore, in what’s being perceived as a refinement of the malware delivery mechanism, UNC6384 has been found to leverage an HTML Application (HTA) file in early September to load an external JavaScript that, in turn, retrieves the malicious payloads from a cloudfront[.]net subdomain. “The campaign’s focus on European diplomatic entities involved in defense cooperation, cross-border policy coordination, and multilateral diplomatic frameworks aligns with PRC strategic intelligence requirements concerning European alliance cohesion, defense initiatives, and policy coordination mechanisms,” Arctic Wolf concluded. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="china-linked-tick-group-exploits-lanscope-zero-day-to-hijack-corporate-systems"><a id="article-6"></a>China-Linked Tick Group Exploits Lanscope Zero-Day to Hijack Corporate Systems</h2>
+
+<p>The exploitation of a recently disclosed critical security flaw in Motex Lanscope Endpoint Manager has been
+attributed
+to a cyber espionage group known as
+Tick
+. The vulnerability, tracked as
+CVE-2025-61932
+(CVSS score: 9.3), allows remote attackers to execute arbitrary commands with SYSTEM privileges on on-premise versions of the program. JPCERT/CC, in an alert issued this month, said that it has confirmed reports of active abuse of the security defect to drop a backdoor on compromised systems. Tick, also known as Bronze Butler, Daserf, REDBALDKNIGHT, Stalker Panda, Stalker Taurus, and Swirl Typhoon (formerly Tellurium), is a
+suspected
+Chinese cyber espionage actor known for its extensive targeting of East Asia, specifically Japan.</p>
+
+<p>It’s assessed to be active since at least 2006. “We’re aware of very targeted activity in Japan and believe the exploitation by Bronze Butler was limited to sectors aligned with their intelligence objectives,” Rafe Pilling, director of threat intelligence at Sophos CTU, told The Hacker News. “Since this vulnerability is now publicly disclosed, other threat actors may seek to exploit it.”
+The sophisticated campaign, observed by Sophos, involved the exploitation of CVE-2025-61932 to deliver a known backdoor referred to as
+Gokcpdoor
+that can establish a proxy connection with a remote server and act as a backdoor to execute malicious commands on the compromised host. “The 2025 variant discontinued support for the KCP protocol and added multiplexing communication using a third-party library [
+smux
+] for its C2 [command-and-control] communication,” the Sophos Counter Threat Unit (CTU) said in a Thursday report.</p>
+
+<p>The cybersecurity company said it detected two different types of Gokcpdoor serving distinct use-cases -
+A server type that listens for incoming client connections to enable remote access
+A client type that initiates connections to hard-coded C2 servers with the goal of setting up a covert communication channel
+The attack is also characterized by the deployment of the Havoc post-exploitation framework on select systems, with the infection chains relying on DLL side-loading to launch a DLL loader named OAED Loader to inject the payloads. Some of the other tools utilized in the attack to facilitate lateral movement and data exfiltration include
+goddi
+, an open-source Active Directory information dumping tool; Remote Desktop, for remote access through a backdoor tunnel; and 7-Zip. The threat actors have also been found to access cloud services such as io, LimeWire, and Piping Server via the web browser during remote desktop sessions in an effort to exfiltrate the harvested data. This is not the first time Tick has been observed leveraging a zero-day flaw in its attack campaigns.</p>
+
+<p>In October 2017, Sophos-owned Secureworks
+detailed
+the hacking group’s exploitation of a then-unpatched remote code execution vulnerability (CVE-2016-7836) in SKYSEA Client View, a Japanese IT asset management software, to compromise machines and steal data. “Organizations upgrade vulnerable Lanscope servers as appropriate in their environments,” Sophos TRU said. “Organizations should also review internet-facing Lanscope servers that have the Lanscope client program (MR) or detection agent (DA) installed to determine if there is a business need for them to be publicly exposed.”
+(The story was updated after publication to include a response from Sophos.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-msp-cybersecurity-readiness-guide-turning-security-into-growth"><a id="article-7"></a>The MSP Cybersecurity Readiness Guide: Turning Security into Growth</h2>
+
+<p>MSPs are facing rising client expectations for strong cybersecurity and compliance outcomes, while threats grow more complex and regulatory demands evolve. Meanwhile, clients are increasingly seeking comprehensive protection without taking on the burden of managing security themselves. This shift represents a major growth opportunity. By delivering advanced cybersecurity and compliance services, MSPs can build deeper relationships, generate higher-value recurring revenue streams, and stand out in a competitive market.</p>
+
+<p>However, the move from basic IT and security services to strategic cybersecurity offerings requires more than technical expertise. It demands a clear service strategy, the right internal resources, and the ability to communicate security value in business terms. Without this foundation, MSPs risk inconsistent service delivery, missed opportunities, and stalled growth. We created the guide
+Turn Security Into Growth: Is Your MSP Ready to Expand?</p>
+
+<p>to help providers pinpoint their current capabilities. It includes a structured checklist for evaluating both strategic mindset and operational readiness. Mindset Readiness: From Technical Support to Business Value
+Traditional IT services keep systems operational. Cybersecurity ensures those systems remain protected, resilient, and able to support uninterrupted business operations.</p>
+
+<p>This requires a security-first mindset that extends beyond technical execution to address risk management, compliance, and resilience as integral components of the client’s overall business strategy. Two mindset shifts are essential:
+From Checkbox Compliance to Continuous Risk Management
+Compliance is often treated as the finish line, the moment a business can pass audits and meet regulatory obligations. For MSPs aiming to deliver advanced cybersecurity and compliance services, it can be helpful to view compliance as the starting point instead. Regulations establish a baseline; Unfortunately, the reality is that threats often evolve faster than standards change.</p>
+
+<p>Viewing compliance as one part of an ongoing risk management process enables MSPs to uncover broader business risks, address them proactively, and help clients build resilience. From Technical Delivery to Strategic Outcomes
+Technical execution, such as deploying tools, configuring firewalls, and patching systems, is only part of the bigger picture. The greatest impact comes when these activities are connected to what matters most to the business: protecting revenue streams, maintaining operational continuity, safeguarding reputation, and supporting long-term growth. Framing security conversations in terms of business impact rather than technical detail can help clients better understand the value of your services.</p>
+
+<p>When security is positioned in this way, MSPs are often seen less as vendors and more as strategic partners contributing to resilience and shared success. Assessing Mindset Readiness: Are You Positioned for Strategic Security? A security-first mindset involves engaging clients in meaningful conversations, framing services in a way that aligns with their goals, and making clear connections between security initiatives and business value. Consider:
+Do you have a strong understanding of your clients’ most critical business processes and the systems that support them?</p>
+
+<p>Can you estimate the potential business impact if a critical system is unavailable for a day, a week, or longer? Is your team able to explain security risks and benefits without relying on technical jargon? Do your reports and discussions consistently link security to uptime, revenue protection, and overall resilience? If several of these questions are difficult to answer confidently, it may signal an opportunity to deepen business understanding and strengthen the way security value is communicated.</p>
+
+<p>Operational Readiness: Can You Scale? The guide
+Turn Security Into Growth: Is Your MSP Ready to Expand? doesn’t just break preparedness into categories, it provides a detailed checklist to help assess your readiness in each area. This structured approach ensures you can pinpoint strengths, identify gaps, and create a clear plan for scaling security services effectively.</p>
+
+<p>Key categories include:
+Service Definition:
+Map offerings to client needs and compliance frameworks to create packaged tiers with clear value. Staffing &amp; Expertise:
+Define and fill critical roles, whether in-house or outsourced, to cover compliance, incident response, and cybersecurity analysis. Tool Alignment &amp; Management:
+Ensure tools match the service scope and are actively managed by trained personnel. Financial Planning:
+Budget for tools, training, and liability coverage to support sustainable growth.</p>
+
+<p>Process Documentation:
+Standardize incident response, compliance workflows, and data handling procedures. Sales Capability:
+Equip sales teams to communicate business outcomes, not just technical features. Strategic Client Engagement:
+Be able to lead roadmap discussions that connect security to business goals. Assessing Operational Readiness: Are You Positioned for Strategic Security?</p>
+
+<p>If you can confidently check most of these boxes, your MSP is in a strong position to scale security services profitably. If not, this is your opportunity to strengthen operational foundations before committing to expansion. From Readiness to Revenue
+An MSP with a strong foundation in both mindset and operational capability can scale security services confidently, deliver measurable value, and unlock new revenue streams. Whether you’re laying the groundwork or ready to refine your approach, our guide
+Turn Security Into Growth: Is Your MSP Ready to Expand?</p>
+
+<p>offers a clear framework for assessing strengths, closing capability gaps, and building a profitable expansion into advanced security and compliance services. It walks you through both mindset and operational readiness, helping you identify where you can scale confidently, deliver measurable value, and unlock new revenue opportunities while avoiding the pitfalls of reactive service and competitive disadvantage. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-and-nsa-issue-urgent-guidance-to-secure-wsus-and-microsoft-exchange-servers"><a id="article-8"></a>CISA and NSA Issue Urgent Guidance to Secure WSUS and Microsoft Exchange Servers</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) and National Security Agency (NSA), along with international partners from Australia and Canada, have released guidance to harden on-premise Microsoft Exchange Server instances from potential exploitation. “By restricting administrative access, implementing multi-factor authentication, enforcing strict transport security configurations, and adopting zero trust (ZT) security model principles, organizations can significantly bolster their defenses against potential cyber attacks,” CISA
+said
+. The agencies said malicious activity aimed at Microsoft Exchange Server continues to take place, with unprotected and misconfigured instances facing the brunt of the attacks.</p>
+
+<p>Organizations are advised to decommission end-of-life on-premises or hybrid Exchange servers after transitioning to Microsoft 365. Some of the best practices outlined are listed below -
+Maintain security updates and patching cadence
+Migrate end-of-life Exchange servers
+Ensure
+Exchange Emergency Mitigation Service
+remains enabled
+Apply and maintain the Exchange Server baseline, Windows security baselines, and applicable mail client security baselines
+Enable antivirus solution, Windows Antimalware Scan Interface (AMSI), Attack Surface Reduction (ASR), and AppLocker and App Control for Business, Endpoint Detection and Response, and Exchange Server’s anti-spam and anti-malware features
+Restrict administrative access to the Exchange Admin Center (EAC) and remote PowerShell and apply the principle of least privilege
+Harden authentication and encryption by configuring Transport Layer Security (TLS), HTTP Strict Transport Security (
+HSTS
+), Extended Protection (
+EP
+),
+Kerberos
+and Server Message Block (SMB) instead of NTLM, and multi-factor authentication
+Disable remote PowerShell access by users in the Exchange Management Shell (
+EMS
+)
+“Securing Exchange servers is essential for maintaining the integrity and confidentiality of enterprise communications and functions,” the agencies noted. “Continuously evaluating and hardening the cybersecurity posture of these communication servers is critical to staying ahead of evolving cyber threats and ensuring robust protection of Exchange as part of the operational core of many organizations.”
+CISA Updates CVE-2025-59287 Alert
+The guidance comes a day after CISA
+updated
+its alert to include additional information related to
+CVE-2025-59287
+, a newly re-patched security flaw in the Windows Server Update Services (
+WSUS
+) component that could result in remote code execution. The agency is recommending that organizations identify servers that are susceptible to exploitation, apply the out-of-band security update released by Microsoft, and investigate signs of threat activity on their networks -
+Monitor and vet suspicious activity and child processes spawned with SYSTEM-level permissions, particularly those originating from wsusservice.exe and/or w3wp.exe
+Monitor and vet nested PowerShell processes using base64-encoded PowerShell commands
+The development follows a report from Sophos that threat actors are
+exploiting
+the vulnerability to harvest sensitive data from U.S.</p>
+
+<p>organizations spanning a range of industries, including universities, technology, manufacturing, and healthcare. The exploitation activity was first detected on October 24, 2025, a day after Microsoft issued the update. In these attacks, the attackers have been found to leverage vulnerable Windows WSUS servers to run a Base64-encoded PowerShell commands, and exfiltrate the results to a webhook[.]site endpoint, corroborating other reports from Darktrace, Huntress, and Palo Alto Networks Unit 42. The cybersecurity company told The Hacker News that it has identified six incidents in its customer environments to date, although further research has flagged at least 50 victims.</p>
+
+<p>“This activity shows that threat actors moved quickly to exploit this critical vulnerability in WSUS to collect valuable data from vulnerable organizations,” Rafe Pilling, director of threat intelligence at Sophos Counter Threat Unit, told The Hacker News in a statement. “It’s possible this was an initial test or reconnaissance phase, and that attackers are now analyzing the data they’ve gathered to identify new opportunities for intrusion. We’re not seeing further mass exploitation at this time, but it’s still early, and defenders should treat this as an early warning. Organizations should ensure their systems are fully patched and that WSUS servers are configured securely to reduce the risk of exploitation.”
+Michael Haag, principal threat research engineer at Cisco-owned Splunk,
+noted
+in a post on X that
+CVE-2025-59287
+“goes deeper than expected” and that they found an alternate attack chain that involves the use of the Microsoft Management Console binary (“mmc.exe”) to trigger the execution of “cmd.exe” when an admin opens WSUS Admin Console or hits “Reset Server Node.”
+“This path triggers a 7053 Event Log crash,” Haag pointed out, adding it matches the stack trace
+spotted
+by cybersecurity company Huntress at “C:\Program Files\Update Services\Logfiles\SoftwareDistribution.log.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="eclipse-foundation-revokes-leaked-open-vsx-tokens-following-wiz-discovery"><a id="article-9"></a>Eclipse Foundation Revokes Leaked Open VSX Tokens Following Wiz Discovery</h2>
+
+<p>Eclipse Foundation, which maintains the open-source Open VSX project, said it has taken steps to revoke a small number of tokens that were leaked within Visual Studio Code (VS Code) extensions published in the marketplace. The action comes following a
+report
+from cloud security company Wiz earlier this month, which found several extensions from both Microsoft’s VS Code Marketplace and Open VSX to have inadvertently exposed their access tokens within public repositories, potentially allowing bad actors to seize control and distribute malware, effectively poisoning the extension supply chain. “Upon investigation, we confirmed that a small number of tokens had been leaked and could potentially be abused to publish or modify extensions,” Mikaël Barbero, head of security at the Eclipse Foundation,
+said
+in a statement. “These exposures were caused by developer mistakes, not a compromise of the Open VSX infrastructure.”
+Open VSX said it has also introduced a token prefix format “
+ovsxp_
+“ in collaboration with the Microsoft Security Response Center (MSRC) to make it easier to scan for exposed tokens across public repositories.</p>
+
+<p>Furthermore, the registry maintainers said they have identified and removed all extensions that were recently flagged by Koi Security as part of a campaign named “
+GlassWorm
+,” while emphasizing that the malware distributed through the activity was not a “self-replicating worm” in that it first needs to steal developer credentials in order to extend its reach. “We also believe that the reported download count of 35,800 overstates the actual number of affected users, as it includes inflated downloads generated by bots and visibility-boosting tactics used by the threat actors,” Barbero added. Open VSX said it’s also in the process of enforcing a number of security changes to bolster the supply chain, including -
+Reducing the token lifetime limits by default to reduce the impact of accidental leaks
+Making token revocation easier upon notification
+Automated scanning of extensions at the time of publication to check for malicious code patterns or embedded secrets
+The new measures to strengthen the ecosystem’s cyber resilience come as the software supplier ecosystem and developers are increasingly becoming the target of attacks, allowing attackers far-reaching, persistent access to enterprise environments. “Incidents like this remind us that supply chain security is a shared responsibility: from publishers managing their tokens carefully, to registry maintainers improving detection and response capabilities,” Barbero said.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-flags-vmware-zero-day-exploited-by-china-linked-hackers-in-active-attacks"><a id="article-10"></a>CISA Flags VMware Zero-Day Exploited by China-Linked Hackers in Active Attacks</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday
+added
+a high-severity security flaw impacting Broadcom VMware Tools and VMware Aria Operations to its Known Exploited Vulnerabilities (
+KEV
+) catalog, following reports of active exploitation in the wild. The vulnerability in question is CVE-2025-41244 (CVSS score: 7.8), which could be exploited by an attacker to attain root level privileges on a susceptible system. “Broadcom VMware Aria Operations and VMware Tools contain a privilege defined with unsafe actions vulnerability,” CISA said in an alert.</p>
+
+<p>“A malicious local actor with non-administrative privileges having access to a VM with VMware Tools installed and managed by Aria Operations with SDMP enabled may exploit this vulnerability to escalate privileges to root on the same VM.”
+The vulnerability was addressed by Broadcom-owned VMware last month, but not before it was exploited as a zero-day by unknown threat actors since mid-October 2024, according to NVISO Labs. The cybersecurity company said it discovered the vulnerability earlier this May during an incident response engagement. The activity is
+attributed
+to a China-linked threat actor Google Mandiant tracks as UNC5174, with NVISO Labs describing the flaw as trivial to exploit. Details surrounding the exact payload executed following the weaponization of CVE-2025-41244 have been currently withheld.</p>
+
+<p>“When successful, exploitation of the local privilege escalation results in unprivileged users achieving code execution in privileged contexts (e.g., root),” security researcher Maxime Thiebaut said. “We can, however, not assess whether this exploit was part of UNC5174’s capabilities or whether the zero-day’s usage was merely accidental due to its trivialness.”
+Also placed in the KEV catalog is a critical eval injection vulnerability in XWiki that could permit any guest user to perform arbitrary remote code execution by means of a specially crafted request to the “/bin/get/Main/SolrSearch” endpoint. Earlier this week, VulnCheck
+revealed
+that it observed attempts by unknown threat actors to exploit the flaw and deliver a cryptocurrency miner. Federal Civilian Executive Branch (FCEB) agencies are required to apply the necessary mitigations by November 20, 2025, to secure their networks against active threats.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="a-new-security-layer-for-macos-takes-aim-at-admin-errors-before-hackers-do"><a id="article-11"></a>A New Security Layer for macOS Takes Aim at Admin Errors Before Hackers Do</h2>
+
+<p>A design firm is editing a new campaign video on a MacBook Pro. The creative director opens a collaboration app that quietly requests microphone and camera permissions. MacOS is supposed to flag that, but in this case, the checks are loose. The app gets access anyway.</p>
+
+<p>On another Mac in the same office, file sharing is enabled through an old protocol called SMB version one. It’s fast and convenient—but outdated and vulnerable. Attackers can exploit it in minutes if the endpoint is exposed to the internet. These are the kinds of configuration oversights that happen every day, even in organizations that take security seriously.</p>
+
+<p>They’re not failures of hardware or antivirus software. They’re configuration gaps that open doors to attackers, and they often go unnoticed because nobody is looking for them. That’s where
+Defense Against Configurations (DAC)
+comes in. Misconfigurations are a gift to attackers: default settings left open, remote access that should be off (like outdated network protocols such as SMB v1), or encryption that never got enabled.</p>
+
+<p>The goal of the latest release from ThreatLocker is simple. It makes those weak points visible on macOS so they can be fixed before they become incidents. Following the
+August 2025 release of DAC for Windows
+, ThreatLocker has launched DAC for macOS, which is currently in Beta. The built-in ThreatLocker feature scans Macs as many as four times per day using the existing ThreatLocker agent, surfacing risky or noncompliant settings in the same dashboard you already use for Windows.</p>
+
+<p>High value controls in the Beta
+The agent runs a configuration scan and reports results to the console. On macOS, the initial Beta focuses on high value controls:
+Disk encryption status with FileVault
+Built in firewall status
+Sharing and remote access settings, including remote login
+Local administrator accounts and membership checks
+Automatic update settings
+Gatekeeper and app source controls
+Selected security and privacy preferences that reduce attack surface
+Findings are grouped by endpoint and by category. Each item includes clear remediation guidance and mapping to major frameworks such as CIS, NIST, ISO 27001, and HIPAA. The intent is to shorten the path from discovery to fix, not to add another queue of alerts.</p>
+
+<p>Why DAC matters
+Design firms, media studios, and production teams often build their workflows around Macs for good reason. The M-series processors are powerful, quiet, and efficient for video and design software. But security visibility hasn’t always kept up. Extending configuration scanning to macOS helps these teams find weak spots before they’re exploited, things like unencrypted drives, disabled firewalls, leftover admin accounts, or permissive sharing settings.</p>
+
+<p>It closes the gaps that attackers look for and gives administrators the same level of insight they already rely on for Windows. This Beta isn’t just about macOS coverage. It’s about giving IT and security teams real insight into where they stand. When DAC shows a Mac out of compliance, it doesn’t stop there.</p>
+
+<p>It connects those findings to the ThreatLocker policies that can fix them. That visibility helps organizations align with their security frameworks, meet insurance requirements, and harden their environments without guesswork. Some users come to ThreatLocker specifically because of DAC and stay because it makes the other
+ThreatLocker controls make sense
+. Configuration visibility is the gateway to real control.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="googles-built-in-ai-defenses-on-android-now-block-10-billion-scam-messages-a-month"><a id="article-12"></a>Google’s Built-In AI Defenses on Android Now Block 10 Billion Scam Messages a Month</h2>
+
+<p>Google on Thursday revealed that the scam defenses built into Android safeguard users around the world from more than 10 billion suspected malicious calls and messages every month. The tech giant also said it has blocked over 100 million suspicious numbers from using Rich Communication Services (RCS), an evolution of the SMS protocol, thereby preventing scams before they could even be sent. In recent years, the company has
+adopted
+various safeguards
+to combat phone call scams and automatically filter known spam using on-device artificial intelligence and move them automatically to the “spam &amp; blocked” folder in the Google Messages app for Android. Earlier this month, Google also
+globally rolled out
+safer links in Google Messages, warning users when they attempt to click on any URLs in a message flagged as spam and step them visiting the potentially harmful website, unless the message is marked as “not spam.”
+Google said its analysis of user-submitted reports in August 2025 found employment fraud to be the most prevalent scam category, where individuals searching for work are lured with fake opportunities in order to steal their personal and financial information.</p>
+
+<p>Another prominent category relates to financially-motivated scams that revolve around bogus unpaid bills, subscriptions, and fees, as well as fraudulent investment schemes. Also observed to a lesser extent are scams related to package deliveries, government agency impersonation, romance, and technical support scams. In an interesting twist, Google said it has increasingly witnessed scam messages arrive in the form of a group chat with a number of potential victims, as opposed to sending them a direct message. “This shift may have happened because group messages can feel less suspicious to recipients, particularly when a scammer includes a fellow scammer in the group to validate the initial message and make it appear to be a legitimate conversation,” Google
+said
+.</p>
+
+<p>The company’s analysis also found that the malicious messages stick to a “distinct daily and weekly schedule,” with the activity commencing around 5 a.m. PT in the U.S., before peaking between 8 a.m. and 10 a.m. PT.</p>
+
+<p>The highest volume of fraudulent messages is typically sent on Mondays, coinciding with the start of the workday, when recipients are likely to be the busiest and less wary of incoming messages. Some of the common aspects that tie these scams together are that they begin with a “Spray and Pray” approach by casting a wide net in hopes of reeling in a small fraction of victims by inducing a false sense of urgency through lures related to topical events,
+package delivery notifications, or toll charges
+. The intention is to rush prospective targets into acting on the message without thinking too much, causing them to click on malicious links that are often shortened using URL shorteners to mask dangerous websites and ultimately steal their information. Alternatively, scams can also embrace what’s called as “Bait and Wait,” which refers to a more calculated, personalised targeting method where the threat actor establishes rapport with a target over time before going for the kill.</p>
+
+<p>Scams like
+romance baiting
+(aka pig butchering) fall into this category. Top three scam categories
+“The scammer engages you in a longer conversation, pretending to be a recruiter or old friend,” Google explained. “They may even include personal details gathered from public websites like your name or job title, all designed to build trust. The tactics are more patient, aiming to maximize financial loss over time.”
+Regardless of the high-pressure or slow-moving tactic employed, the end goal remains the same: to steal information or money from unsuspecting users, whose details, such as phone numbers, are often procured from dark web marketplaces that sell data stolen from security breaches.</p>
+
+<p>The operation is also supported by suppliers that provide the necessary hardware for operating phone and
+SIM farms
+that are used to blast smishing messages at scale, Phishing-as-a-Service (PhaaS) kits that deliver a turnkey solution to harvest credentials and financial information and manage the campaigns, and third-party bulk messaging services to distribute the messages themselves. “[The messaging services] are the distribution engine that connects the scammer’s infrastructure and target lists to the end victim, delivering the malicious links that lead to the PhaaS-hosted websites,” Google said. The search behemoth also described the scam message landscape as highly volatile, where fraudsters seek to purchase SIM cards in bulk from markets that present the fewest obstacles. “While it may appear that waves of scams are moving between countries, this constant churn doesn’t mean scammers are physically relocating,” it added.</p>
+
+<p>“Once enforcement tightens in one area, they simply pivot to another, creating a perpetual cycle of shifting hotspots.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="russian-ransomware-gangs-weaponize-open-source-adaptixc2-for-advanced-attacks"><a id="article-13"></a>Russian Ransomware Gangs Weaponize Open-Source AdaptixC2 for Advanced Attacks</h2>
+
+<p>The open-source command-and-control (C2) framework known as
+AdaptixC2
+is being used by a growing number of threat actors, some of whom are related to Russian ransomware gangs. AdaptixC2 is an emerging
+extensible post-exploitation and adversarial emulation framework
+designed for penetration testing. While the server component is written in Golang, the GUI Client is written in C++ QT for cross-platform compatibility. It comes with a wide range of features, including fully encrypted communications, command execution, credential and screenshot managers, and a remote terminal, among others.</p>
+
+<p>An early iteration was
+publicly released
+by a GitHub user named “
+RalfHacker
+“ (
+@HackerRalf
+on X) in August 2024, who describes themselves as a penetration tester, red team operator, and “MalDev” (short for malware developer). In recent months, AdaptixC2 has been adopted by various hacking groups, including threat actors tied to the
+Fog
+and
+Akira
+ransomware operations, as well as by an initial access broker that has leveraged
+CountLoader
+in attacks that are designed to deliver various post-exploitation tools. Palo Alto Networks Unit 42, which broke down the
+technical aspects
+of the framework last month, characterized it as a modular and versatile framework that can be used to “comprehensively control impacted machines,” and that it has been put to use as part of fake help desk support call scams via Microsoft Teams and through an artificial intelligence (AI)-generated PowerShell script. While AdaptixC2 is offered as an ethical, open-source tool for red teaming activities, it’s also clear that it has attracted the attention of cybercriminals.</p>
+
+<p>Cybersecurity company Silent Push
+said
+RalfHacker’s GitHub bio about them being a “MalDev” triggered an investigation, allowing them to find several email addresses for GitHub accounts linked to the account’s owner, in addition to a Telegram channel called
+RalfHackerChannel
+, where they re-shared messages posted on a
+dedicated channel
+for AdaptixC2. The RalfHackerChannel channel has more than 28,000 subscribers. In a message on the AdaptixFramework channel in August 2024, they mentioned their interest in starting a project about a “public C2, which is very trendy right now” and hoped “it will be like
+Empire
+,” another popular post-exploitation and adversary emulation framework. While it’s currently not known if RalfHacker has any direct involvement in malicious activity tied to AdaptixC2 or CountLoader at this stage, Silent Push said their “ties to Russia’s criminal underground, via the use of Telegram for marketing and the tool’s subsequent uptick in utilization by Russian threat actors, all raise significant red flags.”
+AdaptixC2’s developer did not immediately respond to The Hacker News’ requests for comment.</p>
+
+<p>Red-teaming tools, specifically those that are made freely available such as
+Havoc
+,
+Mythic
+, and
+Sliver
+, have long been repurposed by malicious actors to their advantage. Cracked versions of
+Cobalt Strike
+and
+Brute Ratel C4
+have also witnessed extensive abuse in recent years. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

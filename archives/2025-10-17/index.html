@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-10-17 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">North Korean Hackers Use EtherHiding to Hide Malware Inside Blockchain Smart Contracts</a></li>
+      
+        <li><a href="#article-2">Hackers Abuse Blockchain Smart Contracts to Spread Malware via Infected WordPress Sites</a></li>
+      
+        <li><a href="#article-3">LinkPro Linux Rootkit Uses eBPF to Hide and Activates via Magic TCP Packets</a></li>
+      
+        <li><a href="#article-4">Architectures, Risks, and Adoption: How to Assess and Choose the Right AI-SOC Platform</a></li>
+      
+        <li><a href="#article-5">Hackers Deploy Linux Rootkits via Cisco SNMP Flaw in "Zero Disco' Attacks</a></li>
+      
+        <li><a href="#article-6">Beware the Hidden Costs of Pen Testing</a></li>
+      
+        <li><a href="#article-7">ThreatsDay Bulletin: $15B Crypto Bust, Satellite Spying, Billion-Dollar Smishing, Android RATs & More</a></li>
+      
+        <li><a href="#article-8">CISA Flags Adobe AEM Flaw with Perfect 10.0 Score — Already Under Active Attack</a></li>
+      
+        <li><a href="#article-9">Chinese Threat Group 'Jewelbug' Quietly Infiltrated Russian IT Network for Months</a></li>
+      
+        <li><a href="#article-10">F5 Breach Exposes BIG-IP Source Code — Nation-State Hackers Behind Massive Intrusion</a></li>
+      
+        <li><a href="#article-11">Over 100 VS Code Extensions Exposed Developers to Hidden Supply Chain Risks</a></li>
+      
+        <li><a href="#article-12">How Attackers Bypass Synced Passkeys</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-10-17-ai创业新闻">2025-10-17 AI创业新闻</h1>
+
+<h2 id="north-korean-hackers-use-etherhiding-to-hide-malware-inside-blockchain-smart-contracts"><a id="article-1"></a>North Korean Hackers Use EtherHiding to Hide Malware Inside Blockchain Smart Contracts</h2>
+
+<p>A threat actor with ties to the Democratic People’s Republic of Korea (aka North Korea) has been observed leveraging the EtherHiding technique to distribute malware and enable cryptocurrency theft, marking the first time a state-sponsored hacking group has embraced the method. The
+activity
+has been attributed by Google Threat Intelligence Group (GTIG) to a threat cluster it tracks as
+UNC5342
+, which is also known as CL-STA-0240 (Palo Alto Networks Unit 42), DeceptiveDevelopment (ESET), DEV#POPPER (Securonix), Famous Chollima (CrowdStrike), Gwisin Gang (DTEX), Tenacious Pungsan (Datadog), and Void Dokkaebi (Trend Micro). The attack wave is part of a long-running campaign codenamed
+Contagious Interview
+, wherein the attackers
+approach
+potential targets on LinkedIn by posing as recruiters or hiring managers, and trick them into running malicious code under the pretext of a job assessment after shifting the conversation to Telegram or Discord. The end goal of these efforts is to gain unauthorized access to developers’ machines, steal sensitive data, and siphon cryptocurrency assets – consistent with North Korea’s twin pursuit of cyber espionage and financial gain.</p>
+
+<p>Google said it has observed UNC5342 incorporating
+EtherHiding
+– a stealthy approach that involves embedding nefarious code within a smart contract on a public blockchain like BNB Smart Chain (BSC) or Ethereum – since February 2025. In doing so, the attack turns the blockchain into a decentralized
+dead drop resolver
+that’s resilient to takedown efforts. Besides resilience, EtherHiding also abuses the pseudonymous nature of blockchain transactions to make it harder to trace who has deployed the smart contract. Complicating matters further, the technique is also flexible in that it allows the attacker who is in control of the smart contract to update the malicious payload at any time (albeit costing an average of $1.37 in gas fees), thereby opening the door to a wide spectrum of threats.</p>
+
+<p>“This development signals an escalation in the threat landscape, as nation-state threat actors are now utilizing new techniques to distribute malware that is resistant to law enforcement take-downs and can be easily modified for new campaigns,” Robert Wallace, consulting leader at Mandiant, Google Cloud, said in a statement shared with The Hacker News. The infection chain triggered following the social engineering attack is a multi-stage process that’s capable of targeting Windows, macOS, and Linux systems with three different malware families -
+An initial downloader that manifests in the form of
+npm packages
+BeaverTail, a JavaScript stealer that’s responsible for exfiltrating sensitive information, such as cryptocurrency wallets, browser extension data, and credentials
+JADESNOW, a JavaScript downloader that interacts with Ethereum to fetch InvisibleFerret
+InvisibleFerret, a JavaScript variant of the Python backdoor deployed against high-value targets to allow remote control of the compromised host, as well as long-term data theft by targeting MetaMask and Phantom wallets and credentials from password managers like 1Password
+In a nutshell, the attack coaxes the victim to run code that executes the initial JavaScript downloader that interacts with a malicious BSC smart contract to download JADESNOW, which subsequently queries the transaction history associated with an Ethereum address to fetch the third-stage payload, in this case the JavaScript version of InvisibleFerret. The malware also attempts to install a portable Python interpreter to execute an additional credential stealer component stored at a different Ethereum address. The findings are significant because of the threat actor’s use of multiple blockchains for EtherHiding activity.</p>
+
+<p>“EtherHiding represents a shift toward next-generation bulletproof hosting, where the inherent features of blockchain technology are repurposed for malicious ends,” Google said. “This technique underscores the continuous evolution of cyber threats as attackers adapt and leverage new technologies to their advantage.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-abuse-blockchain-smart-contracts-to-spread-malware-via-infected-wordpress-sites"><a id="article-2"></a>Hackers Abuse Blockchain Smart Contracts to Spread Malware via Infected WordPress Sites</h2>
+
+<p>A financially motivated threat actor codenamed
+UNC5142
+has been observed abusing blockchain smart contracts as a way to facilitate the distribution of information stealers such as Atomic (AMOS), Lumma, Rhadamanthys (aka RADTHIEF), and Vidar, targeting both Windows and Apple macOS systems. “UNC5142 is characterized by its use of compromised WordPress websites and ‘EtherHiding,’ a technique used to obscure malicious code or data by placing it on a public blockchain, such as the BNB Smart Chain,” Google Threat Intelligence Group (GTIG)
+said
+in a report shared with The Hacker News. As of June 2025, Google said it flagged about 14,000 web pages containing injected JavaScript that exhibit behavior associated with an UNC5142, indicating indiscriminate targeting of vulnerable WordPress sites. However, the tech giant noted that it has not spotted any UNC5142 activity since July 23, 2025, either signaling a pause or an operational pivot.</p>
+
+<p>EtherHiding was
+first documented
+by Guardio Labs in October 2023, when it detailed attacks that involved serving malicious code by utilizing Binance’s Smart Chain (BSC) contracts via infected sites serving fake browser update warnings. A crucial aspect that underpins the attack chains is a multi-stage JavaScript downloader dubbed CLEARSHORT that enables the distribution of the malware via the hacked sites. The first stage is a JavaScript malware that’s inserted into the websites to retrieve the second-stage by interacting with a malicious smart contract stored on the BNB Smart Chain (BSC) blockchain. The first stage malware is added to plugin-related files, theme files, and, in some cases, even directly into the WordPress database.</p>
+
+<p>The smart contract, for its part, is responsible for fetching a CLEARSHORT landing page from an external server that, in turn, employs the
+ClickFix
+social engineering tactic to deceive victims into running malicious commands on the Windows Run dialog (or the Terminal app on Macs), ultimately infecting the system with stealer malware. The landing pages, typically hosted on a Cloudflare .dev page, are retrieved in an encrypted format as of December 2024. CLEARSHORT infection chain
+On Windows systems, the malicious command entails the execution of an HTML Application (HTA) file downloaded from a MediaFire URL, which then drops a PowerShell script to sidestep defenses, fetch the encrypted final payload from either GitHub or MediaFire, or their own infrastructure in some cases, and run the stealer directly in memory without writing the artifact to disk. In attacks targeting macOS in February and April 2025, the attackers have been found to utilize ClickFix decoys to prompt the user to run a bash command on Terminal that retrieved a shell script.</p>
+
+<p>The script subsequently uses the curl command to obtain the Atomic Stealer payload from the remote server. UNC5142 final payload distribution over time
+CLEARSHORT is assessed to be a variant of
+ClearFake
+, which was the subject of an extensive analysis by French cybersecurity company Sekoia in March 2025. ClearFake is a rogue JavaScript framework deployed on compromised websites to deliver malware through the drive-by download technique. It’s known to be active since July 2023, with the attacks adopting ClickFix around May 2024.</p>
+
+<p>The abuse of blockchain offers several advantages, as the clever technique not only blends in with legitimate Web3 activity, but also increases the resiliency of UNC5142’s operations against detection and takedown efforts. Google said the threat actor’s campaigns have witnessed considerable evolution over the past year, shifting from a single-contract system to a more sophisticated three-smart contract system beginning in November 2024 for better operational agility, with further refinements observed earlier this January. “This new architecture is an adaptation of a legitimate software design principle known as the proxy pattern, which developers use to make their contracts upgradable,” it explained. “The setup functions as a highly efficient Router-Logic-Storage architecture where each contract has a specific job.</p>
+
+<p>This design allows for rapid updates to critical parts of the attack, such as the landing page URL or decryption key, without any need to modify the JavaScript on compromised websites. As a result, the campaigns are much more agile and resistant to takedowns.”
+UNC5142’s accomplishes this by taking advantage of the mutable nature of a smart contract’s data (it’s worth noting that the program code is immutable once it’s deployed) to alter the payload URL, costing them anywhere between $0.25 and $1.50 in network fees to perform these updates. Further analysis has determined the threat actor’s use of two distinct sets of smart contract infrastructures to deliver stealer malware via the CLEARSHORT downloader. The Main infrastructure is said to have been created on November 24, 2024, whereas the parallel Secondary infrastructure was funded on February 18, 2025.</p>
+
+<p>“The Main infrastructure stands out as the core campaign infrastructure, marked by its early creation and steady stream of updates,” GTIG said. “The Secondary infrastructure appears as a parallel, more tactical deployment, likely established to support a specific surge in campaign activity, test new lures, or simply build operational resilience.”
+“Given the frequent updates to the infection chain coupled with the consistent operational tempo, high volume of compromised websites, and diversity of distributed malware payloads over the past year and a half, it is likely that UNC5142 has experienced some level of success with their operations.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="linkpro-linux-rootkit-uses-ebpf-to-hide-and-activates-via-magic-tcp-packets"><a id="article-3"></a>LinkPro Linux Rootkit Uses eBPF to Hide and Activates via Magic TCP Packets</h2>
+
+<p>An investigation into the compromise of an Amazon Web Services (AWS)-hosted infrastructure has led to the discovery of a new GNU/Linux rootkit dubbed
+LinkPro
+, according to findings from Synacktiv. “This backdoor features functionalities relying on the installation of two
+eBPF
+[extended Berkeley Packet Filter] modules, on the one hand to conceal itself, and on the other hand to be remotely activated upon receiving a ‘magic packet,’” security researcher Théo Letailleur
+said
+. The infection, per the French cybersecurity company, involved the attackers exploiting an exposed Jenkins server vulnerable to CVE-2024–23897 as the starting point, following which a malicious Docker Hub image named “kvlnt/vv” (now removed) was deployed on several Kubernetes clusters. The Docker image consists of a Kali Linux base along with a folder called “app” containing three files -
+start.sh, a shell script to start the SSH service and execute the remaining two files
+link, an open-source program called
+vnt
+that acts as a VPN server and provides proxy capabilities by connecting to vnt.wherewego[.]top:29872, allowing the attacker to connect to the compromised server from anywhere and use it as a proxy to reach other servers
+app, a Rust-based downloader referred to as vGet that receives an encrypted
+VShell
+payload from an S3 bucket, which then proceeds to communicate with its own command-and-control (C2) server (56.155.98[.]37) over a WebSocket connection
+Also delivered to the Kubernetes nodes were two other malware strains, a dropper embedding another vShell backdoor and LinkPro, a rootkit written in Golang.</p>
+
+<p>The stealthy malware can operate in either passive (aka reverse) or active (aka forward) mode, depending on its configuration, allowing it to listen for commands from the C2 server only upon receiving a specific TCP packet or directly initiate contact with the server. While the forward mode supports five different communication protocols, including HTTP, WebSocket, UDP, TCP, and DNS, the reverse mode only uses the HTTP protocol. The overall sequence of events unfolds as follows -
+Install the “Hide” eBPF module, which contains eBPF programs of the Tracepoint and Kretprobe types to hide its processes and network activity
+If the “Hide” module installation fails, or if it has been disabled, install the shared library “libld.so” in /etc/ld.so.preload
+If reverse mode is used, install the “Knock” eBPF module, which contains two eBPF programs of the eXpress Data Path (XDP) and Traffic Control (TC) types to ensure that the C2 communication channel is fired only upon the receipt of the magic packet
+Achieve persistence by setting up a
+systemd service
+Execute C2 commands
+On interruption (SIGHUP, SIGINT, and SIGTERM signals), uninstall the eBPF modules and delete the modified /etc/libld.so and restore it back to its original version
+To achieve this, LinkPro modifies the “/etc/ld.so.preload” configuration file to specify the path of the libld.so shared library embedded within it with the main objective of concealing various artifacts that could reveal the backdoor’s presence. “Thanks to the presence of the /etc/libld.so path in /etc/ld.so.preload, the libld.so shared library installed by LinkPro is loaded by all programs that require /lib/ld-linux.so14,” Letailleur explained.</p>
+
+<p>“This includes all programs that use shared libraries, such as glibc.”
+“Once libld.so is loaded at the execution of a program, for example /usr/bin/ls, it hooks (before glibc) several libc functions to modify results that could reveal the presence of LinkPro.”
+The magic packet, per Synacktiv, is a TCP packet with a window size value of 54321. Once this packet is detected, the Knock module saves the source IP address of the packet and an associated expiration date of one hour as its value. The program then keeps an eye out for additional TCP packets whose source IP address matches that of the already saved IP. In other words, the core functionality of LinkPro is to wait for a magic packet to be sent, after which the threat actor has a one-hour window to send commands to a port of their choice.</p>
+
+<p>The Knock module is also designed to modify the incoming TCP packet’s header to replace the original destination port with LinkPro’s listening port (2333), and alter the outgoing packet to replace the source port (2233) with the original port. “The purpose of this maneuver is to allow the operator to activate command reception for LinkPro by going through any port authorized by the front-end firewall,” Synacktiv said. “This also makes the correlation between the front-end firewall logs and the network activity of the compromised host more complex.”
+The commands supported by LinkPro include executing /bin/bash in a pseudo-terminal, running a shell command, enumerating files and directories, performing file operations, downloading files, and setting up a SOCKS5 proxy tunnel. It’s currently not known who is behind the attack, but it’s suspected that the threat actors are financially motivated.</p>
+
+<p>“For its concealment at the kernel level, the rootkit uses eBPF programs of the tracepoint and kretprobe types to intercept the getdents (file hiding) and sys_bpf (hiding its own BPF programs) system calls. Notably, this technique requires a specific kernel configuration (CONFIG_BPF_KPROBE_OVERRIDE),” the company said. “If the latter is not present, LinkPro falls back on an alternative method by loading a malicious library via the /etc/ld.so.preload file to ensure the concealment of its activities in user space.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="architectures-risks-and-adoption-how-to-assess-and-choose-the-right-ai-soc-platform"><a id="article-4"></a>Architectures, Risks, and Adoption: How to Assess and Choose the Right AI-SOC Platform</h2>
+
+<p>Scaling the SOC with AI - Why now? Security Operations Centers (SOCs) are under unprecedented pressure. According to
+SACR’s
+AI-SOC Market Landscape 2025
+, the average organization now faces around
+960 alerts per day
+, while large enterprises manage more than
+3,000 alerts daily
+from an average of
+28 different tools
+. Nearly
+40% of those alerts go uninvestigated
+, and
+61% of security teams admit
+to overlooking alerts that later proved critical.</p>
+
+<p>The takeaway is clear: the traditional SOC model can’t keep up. AI has now moved from experimentation to execution inside the SOC. 88% of organizations
+that don’t yet run an AI-driven SOC plan to evaluate or deploy one within the next year. But as more vendors promote
+“AI-powered SOC automation,”
+the challenge for security leaders has shifted from awareness to evaluation.</p>
+
+<p>The key question is no longer
+whether
+AI belongs in the SOC, but how to measure its real impact and select a platform that delivers value without introducing significant risks. This article provides a practical framework for doing just that. It explores AI-SOC architectures, implementation models, and risks, while outlining phased adoption strategies and the essential questions every organization should ask before choosing a platform. The Mindset Shift: From Legacy to a Modern SOC
+Building an AI-augmented SOC starts with a mindset shift, not a technology purchase.</p>
+
+<p>Legacy SOCs depend on static rules, manual triage, and reactive workflows. Analysts spend hours chasing alerts and fine-tuning detections to manage noise — a model that doesn’t scale and fuels alert fatigue. Modern SOCs operate differently. Analysts move from
+doing the work
+to
+guiding the system
+—overseeing outcomes, validating AI decisions, and setting the policies that govern automation.</p>
+
+<p>Leaders must also adapt, learning to trust AI to assist analysts without replacing their judgment. The motivation for this shift is straightforward:
+Reduce alert fatigue and prevent missed incidents
+Ensure every alert is investigated
+Improve productivity and scale SOC capacity without expanding headcount
+The first step isn’t selecting a platform. It’s evolving the SOC model itself — and defining
+why
+the change is necessary. AI-SOC Architectural Models and Delivery Framework
+SACR’s
+AI-SOC Market Landscape 2025
+defines the emerging market across four key dimensions — what the platform automates, how it’s delivered, how it integrates, and where it runs.</p>
+
+<ol>
+  <li>Functional Domain - What it automates
+The first dimension describes what part of the SOC life-cycle the platform targets and how advanced its automation is. Automation / Orchestration (SOAR+) &amp; Agentic SOC
+These systems function as the SOC’s
+central nervous system
+, coordinating actions across SIEM, EDR, cloud, and ticketing tools. They combine deterministic rules with agentic AI that can reason, enrich alerts, and execute containment steps automatically.</li>
+</ol>
+
+<p>Unlike traditional SOAR tools, they move beyond static playbooks — dynamically sequencing responses across multiple systems. Their strength lies in scale and consistency, making them well-suited for complex enterprise or MSSP environments. Pure-Play Agentic Alert Triage
+Focused on the SOC’s most persistent challenge: alert overload. These platforms deploy Agentic AI analysts to triage, investigate, and prioritize alerts, filtering false positives and escalating only validated threats.</p>
+
+<p>This approach delivers immediate operational value by reducing Tier-1 workload and ensuring that every alert receives at least an initial level of investigation. For many teams, it represents the most practical starting point for adopting AI in the SOC, as it integrates easily with existing tools. Analyst Co-Pilot / Investigation Assist
+Acts as a digital assistant for human analysts. It helps generate queries, summarize evidence, and assemble context during investigations, improving speed and accuracy while keeping human judgment central.</p>
+
+<p>Workflow / Knowledge Replication
+Captures how experienced analysts investigate incidents and replays those workflows as repeatable automation. This model scales institutional knowledge and ensures consistency across teams, though it requires time and expert input to train effectively. 2. Implementation Model (How It’s Delivered)
+This dimension defines how much control an organization retains over how automation is built, tuned, and maintained.</p>
+
+<p>SACR identifies two primary implementation models. User-Defined / Configurable
+These platforms offer partial to full flexibility. Security teams can design and adjust agents, detection logic, and workflows using scripting or low-to-no-code interfaces. The result is a SOC environment customized to internal processes — but one that requires skilled personnel and ongoing maintenance.</p>
+
+<p>This model is typically favored by mature enterprises or managed service providers that value adaptability and ownership over simplicity. Pre-Packaged / Black-Box
+Delivered as ready-to-run solutions with vendor-managed agents and prebuilt workflows. These platforms can be deployed quickly, provide fast time-to-value, and benefit from continuous vendor R&amp;D. The trade-off is limited visibility into decision logic and less ability to customize.</p>
+
+<p>They are best suited for teams prioritizing ease of use and rapid modernization over granular control. 3. Architecture Type (How It Integrates)
+AI-SOC platforms differ in how they integrate into the broader SOC life-cycle and where they source and process data. SACR’s
+AI-SOC Market Landscape 2025
+identifies three primary integration models, with
+Integrated AI-SOC Platforms
+emerging as the most comprehensive approach.</p>
+
+<p>Integrated AI-SOC Platforms
+These platforms ingest and analyze raw security logs directly, functioning as both an AI-SOC and, in many cases, a SIEM alternative. By maintaining their own data stores, they enable historical baselines, anomaly detection, and retrospective investigation, all within a unified system. The key advantage is full visibility and analytical depth. Integrated platforms reduce dependence on external SIEMs, consolidate triage and response in one control plane, and significantly lower log-storage and licensing costs.</p>
+
+<p>This model aligns closely with the industry’s move toward unified operations — where detection, investigation, and response happen in a single workflow instead of across stitched-together tools. Connected &amp; Overlay Model (on Existing SOC/SIEM)
+It adds an intelligent AI layer to current systems via APIs. The platform ingests alerts from tools such as SIEMs, EDRs, and cloud services, then enriches, triages, and reports results back to analysts. Its appeal lies in speed.</p>
+
+<p>It delivers value quickly and requires no data migration or infrastructure changes. However, it relies on the quality of upstream alerts and offers limited behavioral analytics, since it typically lacks access to raw telemetry. Human &amp;Browser-Based Workflow Emulation
+This approach replicates how analysts work within existing interfaces, observing their actions and replaying investigations automatically. It helps scale expert knowledge and drive consistency, but requires initial setup and validated analyst workflows to perform effectively.</p>
+
+<ol>
+  <li>
+    <dl>
+      <dt>Deployment Model (Where It Runs)</dt>
+      <dt>Finally, deployment options determine where the AI-SOC operates and how data is managed. SaaS</dt>
+      <dd>Hosted entirely by the vendor and accessed over the internet. Fastest to deploy and easiest to maintain.</dd>
+    </dl>
+  </li>
+</ol>
+
+<dl>
+  <dt>BYOC (Bring Your Own Cloud)</dt>
+  <dd>The vendor provides the AI layer, but data and infrastructure remain in the customer’s cloud environment. This is common for teams balancing compliance with flexibility. Air-Gapped On-Prem</dd>
+  <dd>Fully isolated deployment for regulated industries or high-security environments where external connectivity is not permitted. Risks and Considerations When Adopting an AI-SOC Platform
+AI-driven SOCs promise efficiency and speed, but also introduce new categories of potential risks.</dd>
+</dl>
+
+<p>SACR highlights several, and additional considerations deserve equal attention. Lack of Standardized Benchmarks -
+There is currently no universally accepted method for measuring AI-SOC accuracy, efficiency, or ROI. Without standardized metrics, vendor comparisons often rely on marketing claims rather than validated outcomes. Opaque Decision-Making (Explainability Risk) -
+Some systems operate as black boxes, offering little visibility into how alerts are analyzed or classified.</p>
+
+<p>This limits transparency, makes auditing difficult, and can reduce analyst trust in automated outcomes. Compliance and Data Residency -
+Cloud-hosted AI systems can raise concerns about where data is processed and stored, particularly in regulated sectors. Teams should verify compliance with frameworks such as GDPR, ISO 27001, and local data residency laws. Vendor Lock-In -
+Integrated platforms that centralize data storage or detection logic can create migration challenges over time.</p>
+
+<p>Clear data export policies and open APIs are essential for maintaining flexibility. Skill Shift and Change Management -
+AI-SOCs change how analysts work. Teams shift from manual investigation to automation oversight, which can lead to uncertainty or skill gaps if retraining isn’t planned. Structured onboarding and updated workflows are critical for success.</p>
+
+<p>Integration Complexity -
+Platforms that don’t integrate cleanly with existing SIEM, EDR, and case management systems can add friction instead of reducing it. Evaluating API coverage and interoperability should be part of the selection process. Over-Reliance on Automation -
+Treating automation as infallible introduces risk. AI systems should complement, not replace, human judgment, with clear escalation and override mechanisms to prevent blind spots.</p>
+
+<p>Model Drift and Update Frequency -
+AI performance can degrade over time if models aren’t retrained regularly with new threat intelligence and environmental data. Ongoing monitoring and retraining cadence should be confirmed with vendors. Economic Risk -
+Pricing models that charge by data volume or event ingestion can quickly erode the cost benefits of automation. Evaluating the total cost of ownership across data, users, and response volume is key to long-term sustainability.</p>
+
+<p>Mitigating these risks starts with transparency — selecting solutions that provide explainability, flexible integration, strong governance, and a clear balance between automation and human control. What to Ask Your AI-SOC Vendor
+Selecting the right AI-SOC platform requires a structured, evidence-based evaluation. SACR’s
+AI-SOC Market Landscape 2025
+provides a strong foundation for due diligence, highlighting the questions that help security leaders separate proven capabilities from marketing claims. Detection and Triage
+What percentage of alerts are triaged automatically versus escalated to analysts?</p>
+
+<p>How are low-confidence or ambiguous alerts handled to avoid missed detections? Can the AI’s reasoning and verdicts be audited by analysts for validation? These questions help determine how automation interacts with human oversight and how reliably the system maintains coverage without sacrificing accuracy. Data Ownership and Privacy
+Who retains ownership of ingested data and alerts once inside the platform?</p>
+
+<p>Where is security data stored, and can customers manage retention, deletion, or export? Clarifying how data is managed, stored, and controlled ensures compliance with internal governance and external regulatory requirements. Explainability and Human Control
+Can analysts override AI verdicts or modify investigation outcomes? How is analyst feedback incorporated into system retraining or future decisions?</p>
+
+<p>What safeguards exist to prevent incorrect automated actions or over-escalation? These questions help confirm the level of transparency, explainability, and human control within the AI’s decision-making loop. Integration and Tech-stack Fit
+Does the platform integrate with existing SIEM, EDR, identity, and ticketing systems? Can it operate within the current SOC workflow without introducing additional interfaces or tool sprawl?</p>
+
+<p>Understanding how the platform fits into the existing security stack helps prevent integration friction and avoid replacing one layer of complexity with another. Pricing and Scalability
+Is pricing based on data volume, alert count, or user capacity? How does cost scale as the organization adds new log sources or increases data velocity? What is the expected time to achieve full operational value post-deployment?</p>
+
+<p>Cost structure, scalability, and deployment timelines are key to understanding both immediate and long-term return on investment. An effective vendor evaluation balances technical depth with operational realism. The most important questions are not just about
+what the AI can do,
+but also about
+how it does it
+,
+how it fits into existing workflows
+, and
+how its decisions can be understood, verified, and improved over time. AI-SOC Adoption Framework
+SACR outlines a straightforward, phased approach to AI-SOC adoption that balances speed with operational trust.</p>
+
+<p>Define the AI Strategy -
+Identify the specific challenges AI should solve, such as alert fatigue, MTTR, or staffing constraints. Align objectives with business outcomes. Select Core Capabilities -
+Prioritize triage, investigation, response automation, explainability, and data governance. Run a Proof of Concept (POC) -
+Evaluate performance using real alert data from your environment.</p>
+
+<p>Measure improvements in detection and response times. Trust-Building Phase (1–2 Months) -
+Allow AI to operate in an “assist” mode, while analysts validate its decisions. Implement feedback loops to fine-tune confidence thresholds. Gradual Automation -
+Enable autonomous response for low-risk events first, then scale up as trust grows.</p>
+
+<p>Operationalize and Iterate -
+Continuously review false positives, analyst feedback, and integration efficiency. Periodically recalibrate models and policies. Organizations treating AI as a partner, not a replacement, see the most sustainable outcomes. Measuring Success Over Time
+Short-Term (0–3 months)
+Reduction in alert triage length
+Increased alert coverage percentage
+Reduction in alerts per analyst
+Mid-Term (3–9 months)
+Shorter mean time to respond (MTTR)
+At least a 35% reduction in false positives and manual investigations
+Reduced analyst burnout and turnover
+Long-Term (9 months +)
+Stable automation performance across incident types
+Predictable SOC operating costs
+Improved auditing and compliance reporting
+Each metric should relate to a business outcome.</p>
+
+<p>Focusing on high-value work can reduce missed alerts, improve response consistency, and increase analyst productivity. Conclusion
+AI-SOC platforms are reshaping how security teams detect, investigate, and respond to threats at scale. But success depends on more than advanced technology. It requires understanding architectures, evaluating risks, and adopting automation in stages that build trust and transparency.</p>
+
+<p>Teams that balance AI-driven efficiency with explainability and human oversight will be best positioned to achieve faster, more resilient security operations. For deeper insights and vendor evaluations, read the full
+SACR AI-SOC Market Landscape 2025 Report
+. It offers detailed benchmarks, architectural comparisons, and adoption guidance for security leaders assessing AI-driven solutions. About Radiant Security
+Radiant Security
+is the unified AI-SOC platform that combines
+agentic triage
+,
+automated response
+, and
+integrated log management,
+eliminating the need to stitch tools together.</p>
+
+<p>The platform is the only AI-SOC that can triage 100% of alerts, regardless of the source, providing complete coverage over the IT infrastructure. Radiant is more like an SOC operating system than a point product, and SACR recognized it as the
+“most unique value proposition.”
+It helps security teams scale capacity, improve outcomes, and control costs with complete visibility and analyst oversight. Book a demo
+to see how Radiant enables faster, smarter, and more cost-effective security operations. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hackers-deploy-linux-rootkits-via-cisco-snmp-flaw-in-zero-disco-attacks"><a id="article-5"></a>Hackers Deploy Linux Rootkits via Cisco SNMP Flaw in “Zero Disco’ Attacks</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new campaign that exploited a recently disclosed security flaw impacting Cisco IOS Software and IOS XE Software to deploy Linux rootkits on older, unprotected systems. The activity, codenamed
+Operation Zero Disco
+by Trend Micro, involves the weaponization of
+CVE-2025-20352
+(CVSS score: 7.7), a stack overflow vulnerability in the Simple Network Management Protocol (SNMP) subsystem that could allow an authenticated, remote attacker to execute arbitrary code by sending crafted SNMP packets to a susceptible device. The intrusions have not been attributed to any known threat actor or group. The shortcoming was patched by Cisco late last month, but not before it was exploited as a zero-day in real-world attacks.</p>
+
+<p>“The operation primarily impacted Cisco 9400, 9300, and legacy 3750G series devices, with additional attempts to exploit a modified Telnet vulnerability (based on
+CVE-2017-3881
+) to enable memory access,” researchers Dove Chiu and Lucien Chuang
+said
+. The cybersecurity company also noted that the rootkits allowed attackers to achieve remote code execution and gain persistent unauthorized access by setting universal passwords and installing hooks into the Cisco IOS daemon (
+IOSd
+) memory space. IOSd is run as a software process within the Linux kernel. Another notable aspect of the attacks is that they singled out victims running older Linux systems that do not have endpoint detection response solutions enabled, making it possible to deploy the rootkits in order to fly under the radar.</p>
+
+<p>In addition, the adversary is said to have used spoofed IPs and Mac email addresses in their intrusions. Besides CVE-2025-20352, the threat actors have also been observed attempting to exploit a Telnet vulnerability that is a modified version of CVE-2017-3881 so as to allow memory read/write at arbitrary addresses. However, the exact nature of the functionality remains unclear. The name “Zero Disco” is a reference to the fact that the implanted rootkit sets a universal password that includes the word “disco” in it – a one-letter change from “Cisco.”
+“The malware then installs several hooks onto the IOSd, which results in fileless components disappearing after a reboot,” the researchers noted.</p>
+
+<p>“Newer switch models provide some protection via Address Space Layout Randomization (ASLR), which reduces the success rate of intrusion attempts; however, it should be noted that repeated attempts can still succeed.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="beware-the-hidden-costs-of-pen-testing"><a id="article-6"></a>Beware the Hidden Costs of Pen Testing</h2>
+
+<p>Penetration testing helps organizations ensure IT systems are secure, but it should never be treated in a one-size-fits-all approach. Traditional approaches can be rigid and cost your organization time and money – while producing inferior results. The benefits of pen testing are clear. By empowering “white hat” hackers to attempt to breach your system using similar tools and techniques to an adversary, pen testing can provide reassurance that your IT set-up is secure.</p>
+
+<p>Perhaps more importantly, it can also flag areas for improvement. As the UK’s National Cyber Security Centre (NCSC) notes, it’s comparable to a financial audit
+. “Your finance team tracks expenditure and income day to day. An audit by an external group ensures that your internal team’s processes are sufficient.”
+While the advantages are obvious, it’s vital to understand the true cost of the process: indeed, the classic approach can often demand significant time and effort from your team.</p>
+
+<p>You need to get your money’s worth. Pen testing hidden costs
+There’s no one set form of pen test:
+it depends on what exactly is being tested, how often the pen test occurs, and how it takes place
+. Nevertheless, there are some common elements of the classic approach that could generate significant costs, both financially and in terms of your employees’ time. Let’s take a look at some of the costs that might not be immediately obvious.</p>
+
+<p>Administrative overheads
+There can be significant admin involved in arranging a “traditional” pen test. First, you need to coordinate schedules between your own organization and the testers you’ve hired to conduct the test on your behalf. This can cause significant disruption to your employees, distracting them from their day-to-day tasks. What’s more, you’ll need to develop a clear overview of the resources and assets at your disposal before the test can occur, by gathering system inventories, for instance.</p>
+
+<p>You’ll also need to prepare access credentials for the hackers, depending on the type of pen testing approach you intend to take: for example, the testers may need these credentials to develop a scenario based on the risk of a disgruntled employee targeting your systems, for instance. Scoping complexity
+Again, determining the precise scope of the test is important – what is “in-scope” for the hackers, and what should remain out of scope? This will be determined in-house, and will be built on several factors, depending on the precise needs of the organization; there may be certain applications, for instance, that cannot be included in the test. No matter the reasons, determining the overall scope of the testing will take time.</p>
+
+<p>Of course, this isn’t set in stone: some organizations might deal with highly sophisticated environments, which change over time. You will need to devote resources to assessing the potential impact of these changes – as your environment changes, should you include new elements for the testers to target? All of this raises the risk of “scope creep”, where a pen test grows beyond its original aims, creating additional work – and costs – for both the in-house team and the external testers. Indirect costs
+As we’ve seen, pen testing by its nature can pose significant risks of disruption for your team, including operational disruptions during the testing window.</p>
+
+<p>It’s vital to keep this under control right from the outset. There’s also the time and costs associated with remediation, a somewhat ill-defined phase that could include consultation with the testers to overcome and solve any issues that might have arisen during the pen testing. This could even involve re-testing – launching yet another pen test to check that everything is now safe and secure. All of this can add up to extra time and money for your organization.</p>
+
+<p>Budget management challenges
+You’ll also need to consider how you go about paying for the work
+. For instance, do you opt for a fixed-cost pricing model, where the testers provide a set rate? Or do you go for “time and materials”, where they provide an hourly rate based on estimated hours (or through another measure), but add in anything over these estimates? “There’s a reason it’s so hard to benchmark penetration testing costs: every test with every firm is unique,” notes Network Assured, which provides independent pricing guidance on pen testing and other cybersecurity services.</p>
+
+<p>That being the case, how can you go about getting the best return on investment and optimizing cost effectiveness? Figure 1: Some factors may not be immediately obvious when talking about the overall cost of a penetration test. Pen testing as a service (PTaaS)
+To ensure you’re getting exactly the pen testing capability you need (at the right cost) an “as-a-service” approach can pay dividends. Such an approach can be customized to your needs, reducing the risks of unnecessary efforts.</p>
+
+<p>For example,
+Outpost24’s CyberFlex
+combines the strengths of our
+Pen-testing-as-a-service (PTaaS)
+and
+External Attack Surface Management (EASM)
+solutions, providing continuous coverage of the application attack service on a flexible consumption model. This enables organizations to have full insight into their costs and capabilities, all while achieving the discovery, prioritization, and reporting needs they require. Pen testing is crucial to defend your organization’s systems, but a cutting-edge capability doesn’t have to cost the world. By taking a smart approach, based on delivering the services you need at the right time, you can discover the vulnerabilities you need to address, without causing undue disruption or incurring unnecessary costs.</p>
+
+<p>Book a live CyberFlex demo today
+. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-15b-crypto-bust-satellite-spying-billion-dollar-smishing-android-rats--more"><a id="article-7"></a>ThreatsDay Bulletin: $15B Crypto Bust, Satellite Spying, Billion-Dollar Smishing, Android RATs &amp; More</h2>
+
+<p>The online world is changing fast. Every week, new scams, hacks, and tricks show how easy it’s become to turn everyday technology into a weapon. Tools made to help us work, connect, and stay safe are now being used to steal, spy, and deceive. Hackers don’t always break systems anymore — they
+use
+them.</p>
+
+<p>They hide inside trusted apps, copy real websites, and trick people into giving up control without even knowing it. It’s no longer just about stealing data — it’s about power, money, and control over how people live and communicate. This week’s ThreatsDay issue looks at how that battle is unfolding — where criminals are getting smarter, where defenses are failing, and what that means for anyone living in a connected world. Crypto empire built on slavery
+Historic Operation Targets SE Asian Scam Networks with $15B Seizure
+The U.S.</p>
+
+<p>government has seized $15 billion (approximately 127,271 bitcoin) worth of cryptocurrency assets from one of the world’s
+largest operators
+of forced-labor scam compounds across Cambodia, Myanmar, and Laos, which are known to conduct
+romance baiting
+(aka pig butchering or Shā Zhū Pán) schemes to defraud victims under the pretext of increased returns. The perpetrators, operating from the scam compounds under the threat of violence, often built relationships with their victims over time, earning their trust before stealing their funds. The Department of Justice (DoJ) unsealed an indictment against the Prince Group and its 38-year-old CEO, Chen Zhi (aka Vincent). “Individuals held against their will in the compounds engaged in cryptocurrency investment fraud schemes, known as ‘pig butchering’ scams, that stole billions of dollars from victims in the United States and around the world,” the DoJ
+said
+.</p>
+
+<p>“Trafficked workers were confined in prison-like compounds and forced to carry out online scams on an industrial scale, preying on thousands worldwide.” Zhi, the alleged kingpin behind the sprawling cybercrime empire, is at large. The department also said the seized funds represent “proceeds and instrumentalities of the defendant’s fraud and money laundering schemes” and were stored in unhosted cryptocurrency wallets whose private keys the defendant had in his possession. The compounds operated out of casinos and luxury hotels owned by the Group. Some of the stolen proceeds were spent on luxury goods, including yachts, private jets, art, and even a Picasso painting.</p>
+
+<p>In tandem, the U.S. and the U.K. designated
+Prince Group as a transnational criminal organization and
+announced sanctions
+against the defendant. Other proxy organizations targeted by the sanctions include Jin Bei Group, Golden Fortune Resorts World, and Byex Exchange.</p>
+
+<p>Elliptic
+said
+the $15 billion
+seized
+by the U.S. was “
+stolen
+“ in 2020 from LuBian, a bitcoin mining business with operations in China and Iran. LuBian, per the blockchain analytics company, was one of the ostensibly legal business enterprises overseen by Prince Group. “Pig butchering has exploded into an industrialized fraud economy generating tens of billions of dollars annually,” Infoblox
+said
+.</p>
+
+<p>“Sophisticated Asian crime syndicates have proven adept at spinning up hundreds of disposable websites in minutes, overwhelming governments that cannot detect or block them fast enough to shield victims.”
+WhatsApp worm fuels banking theft
+Maverick Banker Targets Brazil in Mass Campaign
+Kaspersky has revealed that the newly discovered banking trojan dubbed
+Maverick
+targeting Brazilian users using a WhatsApp worm named SORVEPOTEL shares many code overlaps with
+Coyote
+. “Once installed, the trojan uses the open-source project
+WPPConnect
+to automate the sending of messages in hijacked accounts via WhatsApp Web, taking advantage of the access to send the malicious message to contacts,” the Russian security vendor
+said
+. “The Maverick trojan checks the time zone, language, region, and date and time format on infected machines to ensure the victim is in Brazil; otherwise, the malware will not be installed.” The malware monitors victims’ access to 26 Brazilian bank websites, six cryptocurrency exchange websites, and one payment platform to facilitate credential theft. It also comes with capabilities to fully control the infected computer, take screenshots, install a keylogger, control the mouse, block the screen when accessing a banking website, terminate processes, and open phishing pages in an overlay.</p>
+
+<p>Kaspersky said it has blocked 62,000 infection attempts using the malicious LNK file shared via WhatsApp in the first 10 days of October, only in Brazil, indicating a large-scale campaign. Unencrypted sky leaks intelligence
+Scanning Satellites to Steal Secrets
+A
+new study
+from a team of academics from the University of Maryland and the University of California, San Diego has found that it’s possible to intercept and spy on 39 geostationary satellite communications traffic from the U.S. military, telecommunications firms, major businesses, and organizations using a consumer-grade satellite dish installed on the roof of their building. Intercepted data comprised mobile carrier calls and text messages, VoIP call audio, login credentials, corporate emails, inventory records, and ATM networking information belonging to retail, financial, and banking companies, military and government secrets associated with coastal vessel surveillance, and web browsing activities of in-flight Wi-Fi users.</p>
+
+<p>“A shockingly large amount of sensitive traffic is being broadcast unencrypted, including critical infrastructure, internal corporate and government communications, private citizens’ voice calls and SMS, and consumer Internet traffic from in-flight wifi and mobile networks,” the researchers
+said
+. “This data can be passively observed by anyone with a few hundred dollars of consumer-grade hardware.” Following disclosure, T-Mobile has moved to encrypt its satellite communications. Old protocols, new breach path
+Abusing Legacy Windows Protocols for Credential Theft
+Legacy Windows communication protocols such as NetBIOS Name Service (NBT-NS) and Link-Local Multicast Name Resolution (LLMNR), continue to expose organizations to credential theft, without the need for exploiting software vulnerabilities. “The weakness of LLMNR and NBT-NS is that they accept responses from any device without authentication,” Resecurity
+said
+.</p>
+
+<p>“This allows an attacker on the same subnet to respond to name resolution requests and trick a system into sending authentication attempts. Using tools such as Responder, the attacker can capture NTLMv2 hashes, usernames, and domain details, which can then be cracked offline or relayed to other services.” Given that Windows falls back to LLMNR or NBT-NS when it cannot resolve a hostname through DNS, it can open the door to LLMNR and NBT-NS poisoning. “By simply being on the same subnet, an attacker can impersonate trusted systems, capture NTLMv2 hashes, and potentially recover cleartext credentials,” the company added. “From there, they gain the ability to access sensitive data, move laterally, and escalate privileges without ever exploiting a software vulnerability.” To guard against the threat, it’s advised to disable LLMNR and NBT-NS, encore secure authentication methods such as Kerberos, and harden LDAP and Active Directory against NTLM relay attacks.</p>
+
+<p>Checkout code harvests payment data
+Unity Website Compromised With Skimmer
+Hundreds of users are estimated to have had their sensitive information stolen through a compromised website belonging to video game software development company Unity Technologies. The malicious skimmer, injected into the checkout page of Unity SpeedTree, was designed to harvest the information entered by individuals who made purchases on the SpeedTree site, including name, address, email address, payment card number, and access code. According to a
+filing
+with the Maine Attorney General’s Office, the incident impacted 428 individuals. The affected customers are being notified and offered free credit monitoring and identity protection services.</p>
+
+<p>The breach was discovered on August 26, 2025. Fake texts fund global fraud
+U.S. Smishing Attacks Prove to Be a Money-Spinner
+Smishing campaigns carried out by Chinese cybercrime groups that
+distribute fake SMS messages
+to U.S. users about package deliveries and toll road payments have made more than $1 billion over the last three years, The Wall Street Journal
+reported
+, citing the Department of Homeland Security.</p>
+
+<p>The scam, made possible via phishing kits sold on Telegram, is designed to steal victims’ credit card details and then
+use them
+in
+Google and Apple Wallets
+in Asia and the U.S. to make unauthorized purchases, such as gift cards, iPhones, clothing, and cosmetics. The messages are sent via SIM farms, with about 200 SIM boxes operating in at least 38 farms across the U.S. According to Proofpoint, as many as 330,000 toll scam messages were sent to Americans in a single day last month.</p>
+
+<p>A previous report from SecAlliance in August 2025
+noted
+that Chinese smishing syndicates may have compromised between 12.7 million and 115 million payment cards in the U.S. alone between July 2023 and October 2024. The criminal ecosystem has since evolved to include the sale of pre-positioned devices loaded with stolen cards, indicating an evolution of the monetization strategy. Mac users tricked by clones
+Fake Homebrew Sites Distribute Stealer Malware
+A sophisticated campaign targeting macOS users has
+employed
+fake Homebrew installer websites (homebrewfaq[.]org, homebrewclubs[.]org, and homebrewupdate[.]org) that deliver malicious payloads.</p>
+
+<p>The attack exploits the widespread trust users place in the popular Homebrew package manager by creating pixel-perfect replicas of the official brew[.]sh installation page, and combining it with deceptive clipboard manipulation techniques. The spoofed sites incorporate hidden JavaScript designed to inject additional commands into users’ clipboards without their knowledge during the installation phase when unsuspecting users attempt to copy the command to install the tool. It’s assessed that the attack chain is being used to deliver Odyssey Stealer. Previous campaigns have used fake Homebrew pages to trick users into installing Cuckoo Stealer.</p>
+
+<p>Nation-state hacks surge sharply
+U.K. Warns of Spike in Significant Cyber Incidents
+The U.K.’s National Cyber Security Centre (NCSC)
+reported
+204 “national significant” cyber incidents between September 2024 and August 2025. The number represents an 130% increase compared to the previous year, when U.K. organizations faced 89 incidents of such high impact.</p>
+
+<p>Of these, 18 were classified as highly significant incidents. The disclosure comes as Bloomberg
+revealed
+that Chinese state actors systemically and successfully compromised classified U.K. government computer systems for more than a decade, accessing low- and medium-level classified information. The data accessed included confidential documents relating to the formulation of government policy, private communications, and some diplomatic cables, the report added.</p>
+
+<p>Signed firmware enables bootkits
+Framework Systems Affected by BombShell Flaws
+Around 200,000 Linux computer systems from American computer maker Framework have been found to be shipped with signed UEFI shell components that could be exploited to bypass Secure Boot protections. An attacker could take advantage of the issues to load bootkits that can evade operating system-level security controls and survive re-installs of the operating system. The vulnerabilities have been codenamed BombShell by Eclypsium. “At the heart of this issue is a seemingly innocent command: mm (memory modify),” the firmware security company
+said
+.</p>
+
+<p>“This command, present in many UEFI shells, provides direct read and write access to system memory. While this capability is essential for legitimate diagnostics, it’s also the perfect tool for bypassing every security control in the system.” Framework has released security updates to address the vulnerabilities. Phishing uses SVGs to deliver AsyncRAT in Colombia
+Colombian Users Targeted by AsyncRAT
+Cybercriminals have
+unleashed
+a sophisticated phishing campaign targeting Colombian users through deceptive judicial notifications, deploying a complex multi-stage malware delivery system that culminates in delivery of AsyncRAT. The attack campaign employs carefully crafted Spanish-language emails impersonating official correspondence from the Colombia court system, informing recipients of purported lawsuits filed against them and tricking them into opening SVG file attachments that lead to fake landing pages so as to download the document, which is an HTML Application responsible for activating a series of interim payloads to deploy AsyncRAT.</p>
+
+<p>Smarter defenses, simpler recovery
+Google Combats Scams with New Safety Measures
+Google has
+added
+new protections to Google Messages and account recovery methods to secure people against scams. This includes the ability to block users from visiting links shared on Messages that have been flagged as spam, unless users explicitly mark the texts as “not spam.” The company has also added the option to regain access to the Google Account by means of a “Sign in with Mobile Number” option. “All you need is the lock-screen passcode from your previous device for verification, no password needed,” it said. Another new feature includes
+Recovery Contacts
+, which allows users to choose trusted friends or family members to make it easier to recover access to the account in case it gets locked out due to a device being stolen.</p>
+
+<p>Last but not least, Google said it’s also making the
+Key Verifier
+available to all Android 10+ users for an extra layer of security when chatting via Google Messages by ensuring that users are communicating with the person they intend to and not somebody else. Shipment lures drop stealth loaders
+PhantomVAI Loader Delivers Malware in Phishing Campaigns
+A C# malware loader called PhantomVAI Loader is being distributed via phishing emails bearing shipment lures to deliver stealers and remote access trojans like AsyncRAT, XWorm, Formbook, and DCRat. “The loader initially used in these campaigns was dubbed Katz Stealer Loader [aka
+VMDetectLoader
+], for the
+Katz Stealer
+malware that it delivers,” Palo Alto Networks Unit 42
+said
+. “Hackers are selling this new infostealer on underground forums as malware as a service (MaaS).” Phishing campaigns deploying PhantomVAI Loader have targeted a wide spectrum of sectors globally, including manufacturing, education, utilities, technology, healthcare, and government.</p>
+
+<p>The phishing emails contain zipped JavaScript or Visual Basic Script files that launch PowerShell, responsible for dropping the loader in the form of a GIF image, which then proceeds to run virtual machine checks, establish persistence, and inject MSBuild.exe with the next-stage payload using a technique called
+process hollowing
+. Evolving kit evades MFA
+New Whisper 2FA Phishing Kit Behind 1 Million Phishing Attempts
+A nascent toolkit named Whisper 2FA has emerged as the third most common phishing-as-a-service (PhaaS) after Tycoon and EvilProxy. Barracuda said it has detected close to a million Whisper 2FA attacks targeting Microsoft accounts in multiple huge phishing campaigns in the last month. Whisper 2FA has been found to share similarities with another PhaaS kit named
+Salty 2FA
+.</p>
+
+<p>“Whisper 2FA’s defining trait is its ability to steal credentials multiple times through a real-time credential exfiltration loop enabled by a web technology known as AJAX (Asynchronous JavaScript and XML),” security researcher Deerendra Prasad
+said
+. “The attackers keep the loop going until they obtain a valid multi-factor authentication token.” The phishing kit is assessed to be under active development, with the authors progressively adding more layers of obfuscation and protections to block debugging tools and crash browser inspection tools. “As phishing kits like this continue to evolve, organizations need to move past static defenses and adopt layered strategies: user training, phishing-resistant MFA, continuous monitoring, and threat intelligence sharing,” Prasad added. Teen extortionists plot return
+Scattered Lapsus$ Hunters Bid Adieu for Now
+The Scattered Lapsus$ Hunters (SLSH) cybercrime group, comprised primarily of English-speaking teenagers combining elements of Scattered Spider, LAPSUS$, and ShinyHunters, has announced it will go dark until 2026 following the FBI’s
+seizure of its clearnet data leak site
+.</p>
+
+<p>“As per the exceptional circumstances by which the FBI tried to obliterate our legacy, we’ve exceptionally decided to temporarily renounce to oblivion [sic] and promptly hack them back,” one member wrote on October 11. “We shall now dissolve again in the ether. Good night.” In a follow-up message, it said: “I promise you, you will feel our wrath.” The extortion crew has since
+published data
+allegedly belonging to six of the 39 targeted companies, including Qantas, Albertsons, GAP, Vietnam Airlines, Fujifilm, and Engie Resources, per DataBreaches.net. Legit software, criminal control
+How Threat Actors Abuse RMM Tools
+Cybersecurity researchers have documented a rise in cyber attacks exploiting remote monitoring and management (RMM) tools for initial access via phishing email alerts warning of fake login to recipients’ ConnectWise ScreenConnect instances.</p>
+
+<p>Advanced persistent threat (APT) groups and
+ransomware crews
+have leveraged legitimate RMM platforms, including AnyDesk, ScreenConnect, UltraViewer, AppAnywhere, RustDesk, CloneDesk, Splashtop, and TightVNC, to gain unauthorized control of systems. The researchers found that threat actors are also exploiting ScreenConnect’s legitimate features, such as unattended access and interactive desktop control, to establish persistence and move laterally within compromised networks. “Their administrative power, combined with custom installers, invite links, and public URLs, makes them high-value targets,” DarkAtlas
+said
+. Fake exchanges face global takedown
+Authorities Seize &gt;1K Domains in Connection With Crypto Fraud
+German and Bulgarian authorities have
+seized
+1,406 websites that were used for perpetrating large-scale financial scams.</p>
+
+<p>The sites, taken offline at the start of the month, lured users to invest in cryptocurrency on fraudulent trading platforms and then disappeared with their funds. Officials said the platforms did not have the necessary permission from BaFin to provide financial or securities services and banking transactions. They also said more than 866,000 attempts to access the sites were recorded over a period of ten days after they were seized on October 3, 2025, underscoring the attackers’ success in pulling off the scheme. In mid-June 2025,
+around 800 illegal domains
+were blocked as part of a similar effort.</p>
+
+<p>Kernel exploit chain neutralized
+Flaws in NVIDIA’s GPU Linux Drivers Fixed
+NVIDIA has
+rolled out
+fixes for two vulnerabilities in NVIDIA’s Display Driver for Linux (CVE-2025-23280 and CVE-2025-23330) that can be triggered by an attacker controlling a local unprivileged process to achieve kernel read and write primitives. Quarkslab, which discovered and reported the flaws in June 2025, has
+released
+a complete proof-of-concept exploit. Spyware evolves with builder tools
+Two New Android RATs Detailed
+Cyble and iVerify have detailed two new Android malware families called GhostBat RAT and HyperRat that can steal sensitive data from compromised devices. “Operators can fetch logs, send notifications, dispatch an SMS from the infected user’s SIM, download archived messages, inspect the call log, view or modify granted permissions, browse installed applications, and even establish a VNC session,” iVerify security researcher Daniel Kelley
+said
+about HyperRat.</p>
+
+<p>The web-based command-and-control (C2) panel supports the ability to create custom APK files using a builder, serve fake login overlays atop installed apps, and an option to facilitate downstream spam or phishing campaigns via a mass messaging button. GhostBat RAT, on the other hand, has been observed targeting Indian Android users via bogus apps distributed via WhatsApp and SMS messages containing links to compromised websites and GitHub. Once installed, the malware uses phishing pages to capture banking credentials and UPI PINs. It can also exfiltrate SMS messages containing banking-related keywords, with select variants including cryptocurrency mining capabilities.</p>
+
+<p>“The GhostBat RAT samples included multi-stage dropper workflows, native binary packing, deliberate corruption/manipulation of ZIP headers, runtime anti-emulation checks, and heavy string obfuscation, complicating reverse engineering,” Cyble
+noted
+. Massive laundering ring dismantled
+Brazil Dismantles $540 Million Crypto Laundering Network
+Brazilian law enforcement authorities have
+disrupted
+a sophisticated criminal network that has been accused of laundering about $540 million. The sweeping operation, codenamed Lusocoin, saw 13 searches and 11 temporary arrests, as well as the seizure of six luxury vehicles and six high-value properties. Assets totaling more than 3 billion Brazilian reais (about $540 million) have been subjected to court-ordered freezes.</p>
+
+<p>Officials said the network operated as an international money-laundering and foreign-exchange evasion scheme, converting illicit profits from drug trafficking, smuggling, tax evasion, and even terrorism financing into cryptocurrency assets to hide the source of funds. In all, the group is believed to have moved more than $9 billion through its ecosystem of shell companies, exchanges, and digital wallets. Cloud tracing repurposed for control
+Abusing AWS X-Ray for C2
+New research has found that it’s possible to leverage Amazon’s distributed application tracing service AWS X-Ray as a covert C2 server, essentially turning cloud monitoring infrastructure to establish bidirectional communication. “AWS X-Ray was designed to help developers understand application performance by collecting traces,” security researcher Dhiraj Mishra
+said
+.</p>
+
+<p>“However, X-Ray annotations can store arbitrary key-value data, and the service provides APIs to both write and query this data.” An attacker can weaponize this behavior to implant a beacon on the target system and subsequently control it by issuing an HTTP PUT request containing a Base64 command to the X-Ray service’s “
+/TraceSegments
+“ endpoint, from where the victim machine fetches the malicious trace during the polling phase and then decodes and executes the embedded command within it. The results of the command execution are exfiltrated to the X-Ray service, allowing the attacker to access the result traces by sending an HTTP GET request to the “
+/TraceSummaries
+“ endpoint. CMS bugs expose enterprise data
+Security Flaws in Adobe Experience Manager
+Seven security vulnerabilities (from CVE-2025-54246 through CVE-2025-54252) have been disclosed in Adobe Experience Manager that could result in security feature bypass and allow attackers to gain unauthorized read/write access. The issues, which were
+reported
+by Searchlight Cyber’s Assetnote team in June 2025, were
+fixed
+by Adobe last month.</p>
+
+<p>There is no evidence that they were exploited in the wild. Biometric data misuse resolved
+Google Settles Privacy Lawsuit
+Google has
+reached
+a settlement agreement over its use of an open-source dataset named
+Diversity in Faces
+that allegedly contained images of people from the U.S. state of Illinois for training its facial recognition algorithms in violation of the Biometric Information Privacy Act (BIPA). The dataset was
+created
+in 2019 by IBM to address existing biases in overwhelmingly light-skinned and male-dominated facial datasets.</p>
+
+<p>According to plaintiffs, some of the images were pulled from a Flickr dataset that featured biometric data of people from Illinois. The terms of the settlement were not disclosed. The case was originally filed in 2020, with lawsuits also filed against Amazon and Microsoft for similar violations. Dirty crypto saturates blockchain
+On-Chain Balances Tied to Criminal Activity Exceed $75B
+A new report from Chainalysis has
+revealed
+that cryptocurrency balances linked to illicit activity exceed $75 billion.</p>
+
+<p>This includes about $15 billion held directly by illicit entities and more than $60 billion in wallets with downstream exposure to those entities. “Darknet market administrators and vendors alone control over $40 billion in on-chain value,” the blockchain intelligence firm said. Earlier this year, Chainalysis
+disclosed
+that more than $40 billion in cryptocurrency was laundered in 2024 alone, most of it through wallets and mixers that leave no trace in standard compliance systems. The line between safe and exposed online is thinner than ever.</p>
+
+<p>What used to be rare, complex attacks are now everyday events, run by organized groups who treat cybercrime like a business. It’s no longer just about protecting devices — it’s about protecting people, trust, and truth in a digital world that never stops moving. Staying secure doesn’t mean chasing every headline. It means understanding how these threats work, paying attention to the small signs, and not letting convenience replace caution.</p>
+
+<p>The same tools that make life easier can turn against us — but awareness is still the best defense. Stay alert, stay curious, and don’t assume safety — build it. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-flags-adobe-aem-flaw-with-perfect-100-score--already-under-active-attack"><a id="article-8"></a>CISA Flags Adobe AEM Flaw with Perfect 10.0 Score — Already Under Active Attack</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday
+added
+a critical security flaw impacting Adobe Experience Manager to its Known Exploited Vulnerabilities (
+KEV
+) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2025-54253 (CVSS score: 10.0), a maximum-severity misconfiguration bug that could result in arbitrary code execution. According to Adobe, the shortcoming
+impacts
+Adobe Experience Manager (AEM) Forms on JEE versions 6.5.23.0 and earlier.</p>
+
+<p>It was addressed in version 6.5.0-0108 released early August 2025, alongside CVE-2025-54254 (CVSS score: 8.6). Details of the two vulnerabilities were
+disclosed
+by Searchlight Cyber researchers Adam Kues and Shubham Shah in July 2025, describing CVE-2025-54253 as an “authentication bypass to [remote code execution] chain via Struts2 devmode” and CVE-2025-54254 as an XML external entity (XXE) injection within AEM Forms web services. The flaw results from the dangerously exposed /adminui/debug servlet, which evaluates user-supplied OGNL expressions as Java code without requiring authentication or input validation,” security company FireCompass
+noted
+. “The endpoint’s misuse enables attackers to execute arbitrary system commands with a single crafted HTTP request.”
+There is currently no information publicly available on how the security flaw is being exploited in real-world attacks, although Adobe acknowledged in its advisory that “CVE-2025-54253 and CVE-2025-54254 have a publicly available proof-of-concept.”
+In light of active exploitation, Federal Civilian Executive Branch (FCEB) agencies are advised to apply the necessary fixes by November 5, 2025.</p>
+
+<p>The development comes a day after CISA also
+added
+a critical improper authentication vulnerability in SKYSEA Client View (CVE-2016-7836, CVSS score: 9.8) to the KEV catalog. Japan Vulnerability Notes (JVN), in an advisory
+released
+in late 2016, said “attacks exploiting this vulnerability have been observed in the wild.”
+“SKYSEA Client View contains an improper authentication vulnerability that allows remote code execution via a flaw in processing authentication on the TCP connection with the management console program,” the agency said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-threat-group-jewelbug-quietly-infiltrated-russian-it-network-for-months"><a id="article-9"></a>Chinese Threat Group ‘Jewelbug’ Quietly Infiltrated Russian IT Network for Months</h2>
+
+<p>A threat actor with ties to China has been attributed to a five-month-long intrusion targeting a Russian IT service provider, marking the hacking group’s expansion to the country beyond Southeast Asia and South America. The activity, which took place from January to May 2025, has been attributed by Broadcom-owned Symantec to a threat actor it tracks as
+Jewelbug
+, which it said overlaps with clusters known as
+CL-STA-0049
+(Palo Alto Networks Unit 42),
+Earth Alux
+(Trend Micro), and
+REF7707
+(Elastic Security Labs). The findings suggest Russia is not off-limits for Chinese cyber espionage operations despite
+increased
+“military, economic, and diplomatic”
+relations
+between Moscow and Beijing over the years. “Attackers had access to code repositories and software build systems that they could potentially leverage to carry out supply chain attacks targeting the company’s customers in Russia,” the Symantec Threat Hunter Team
+said
+in a report shared with The Hacker News.</p>
+
+<p>“Notably too, the attackers were exfiltrating data to Yandex Cloud.”
+Earth Alux is assessed to be active since at least the second quarter of 2023, with attacks primarily targeting government, technology, logistics, manufacturing, telecommunications, IT services, and retail in the Asia-Pacific (APAC) and Latin American (LATAM) regions to deliver malware like VARGEIT and COBEACON (aka Cobalt Strike Beacon). The attacks mounted by CL-STA-0049/REF7707, on the other hand, have been observed distributing an advanced backdoor named FINALDRAFT (aka Squidoor) that’s capable of infecting both Windows and Linux systems. The findings from Symantec mark the first time these two activity clusters have been tied together. In the attack aimed at the Russian IT service provider, Jewelbug is said to have leveraged a renamed version of Microsoft Console Debugger (“cdb.exe”), which can be used to run shellcode and bypass application allowlisting, as well as launch executables, run DLLs, and terminate security solutions.</p>
+
+<p>The threat actor has also been observed dumping credentials, establishing persistence via scheduled tasks, and attempting to conceal traces of their activity by clearing Windows Event Logs. The targeting of IT service providers is strategic as it opens the door to possible supply chain attacks, enabling threat actors to leverage the compromise to breach several downstream customers at once through malicious software updates. Furthermore, Jewelbug has also been linked to an intrusion at a large South American government organization in July 2025, deploying a previously undocumented backdoor that’s said to be under development – underscoring the group’s evolving capabilities. The malware uses Microsoft Graph API and OneDrive for command-and-control (C2), and can collect system information, enumerate files from targeted machines, and upload the information to OneDrive.</p>
+
+<p>The use of Microsoft Graph API allows the threat actor to blend in with normal network traffic and leaves minimal forensic artifacts, complicating post-incident analysis and prolonging dwell time for threat actors. Other targets include an IT provider based in South Asia and a Taiwanese company in October and November 2024, with the attack on the latter leveraging DLL side-loading techniques to drop malicious payloads, including
+ShadowPad
+, a backdoor exclusively used by Chinese hacking groups. The infection chain is also characterized by the deployment of the KillAV tool to disable security software and a publicly available tool named EchoDrv, which permits abuse of the kernel read/write vulnerability in the ECHOAC anti-cheat driver, as part of what appears to be a bring your own vulnerable driver (BYOVD) attack. Also leveraged were LSASS and Mimikatz for dumping credentials, freely available tools like PrintNotifyPotato, Coerced Potato, and Sweet Potato for discovery and privilege escalation, and a SOCKS tunneling utility dubbed
+EarthWorm
+that has been used by Chinese hacking crews like Gelsemium, Lucky Mouse, and Velvet Ant.</p>
+
+<p>The Symantec Threat Hunter Team told The Hacker News that they could not confirm the infection vector used to breach the organizations in all the incidents discussed above. “Jewelbug’s preference for using cloud services and other legitimate tools in its operations indicates that remaining under the radar and establishing a stealthy and persistent presence on victim networks is of utmost importance to this group,” Symantec said. The disclosure comes as Taiwan’s National Security Bureau
+warned
+of a rise in Chinese cyber attacks targeting its government departments, and called out Beijing’s “online troll army” for attempting to disseminate fabricated content across social networks and undermine people’s trust in the government and sow distrust in the U.S., Reuters reported. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="f5-breach-exposes-big-ip-source-code--nation-state-hackers-behind-massive-intrusion"><a id="article-10"></a>F5 Breach Exposes BIG-IP Source Code — Nation-State Hackers Behind Massive Intrusion</h2>
+
+<p>U.S. cybersecurity company F5 on Wednesday disclosed that unidentified threat actors broke into its systems and stole files containing some of BIG-IP’s source code and information related to undisclosed vulnerabilities in the product. It attributed the activity to a “highly sophisticated nation-state threat actor,” adding the adversary maintained long-term, persistent access to its network. The company said it learned of the breach on August 9, 2025, per a
+Form 8-K filing
+with the U.S.</p>
+
+<p>Securities and Exchange Commission (SEC). F5 said it delayed the public
+disclosure
+at the request of the U.S. Department of Justice (DoJ). “We have taken extensive actions to contain the threat actor,” it
+noted
+.</p>
+
+<p>“Since beginning these activities, we have not seen any new unauthorized activity, and we believe our containment efforts have been successful.”
+F5 did not say for how long the threat actors had access to its BIG-IP product development environment, but emphasized that it has not observed any indication that the vulnerabilities have been exploited in a malicious context. It also said that the attackers did not access its CRM, financial, support case management, or iHealth systems. That said, the company acknowledged that some of the exfiltrated files from its knowledge management platform contained configuration or implementation information for a small percentage of customers. Impacted customers are expected to be directly notified following a review of the files.</p>
+
+<p>Following the discovery of the incident, F5 has engaged the services of Google Mandiant and CrowdStrike, as well as rotated credentials and signing certificates and keys, strengthened access controls, deployed tooling to better monitor threats, bolstered its product development environment with extra security controls, and implemented enhancements to its network security architecture. Users are advised to apply the
+latest updates
+for BIG-IP, F5OS, BIG-IP Next for Kubernetes, BIG-IQ, and APM clients as soon as possible for optimal protection. CISA Issues Emergency Directive
+In response to F5’s disclosure, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued an emergency directive (
+ED 26-01
+) that requires Federal Civilian Executive Branch agencies to inventory F5 BIG-IP products, check if the networked management interfaces are accessible from the public internet, and apply newly released updates from F5 by October 22, 2025.</p>
+
+<p>“A nation-state affiliated cyber threat actor has compromised F5 systems and exfiltrated data, including portions of the BIG-IP proprietary source code and vulnerability information, which provides the actor with a technical advantage to exploit F5 devices and software,” the agency
+said
+. “This poses an imminent threat to federal networks using F5 devices and software.”
+“The threat actor’s access could enable the ability to conduct static and dynamic analysis for identification of logical flaws and zero-day vulnerabilities, as well as the ability to develop targeted exploits.”
+CISA is also urging organizations to harden public-facing devices, disconnect those that have reached end-of-life support date, and mitigate against a BIG-IP cookie leakage vulnerability. All agencies are further required to submit a complete inventory of F5 products and actions taken to CISA no later than October 29, 2025, 11:59 p.m. EDT.</p>
+
+<p>In a report published Thursday, Bloomberg
+revealed
+that the attackers were in the company’s network for at least 12 months, and that the intrusion involved the use of a malware family dubbed BRICKSTORM, which is attributed to a China-nexus cyber espionage group tracked as UNC5221. Last month, Mandiant and Google Threat Intelligence Group (GTIG)
+divulged
+that companies in the legal services, software-as-a-service (SaaS) providers, Business Process Outsourcers (BPOs), and technology sectors in the U.S. have been targeted by the suspected Chinese hacking group (and other related clusters) to deliver the BRICKSTORM backdoor. “Generally, if an attacker steals source code, it takes time to find exploitable issues,” Michael Sikorski, CTO and Head of Threat Intelligence for Unit 42 at Palo Alto Networks, said in a statement.</p>
+
+<p>“In this case, they also stole information on undisclosed vulnerabilities that F5 was actively working to patch.”
+“This provides the ability for threat actors to exploit vulnerabilities that have no public patch, potentially increasing speed to exploit creation. The disclosure of 45 vulnerabilities in this quarter vs. just 6 last quarter suggests F5 is moving as fast as they can to actively patch these stolen flaws before the threat actors can exploit them.”
+(The story was updated after publication with details of the emergency directive issued by CISA.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-100-vs-code-extensions-exposed-developers-to-hidden-supply-chain-risks"><a id="article-11"></a>Over 100 VS Code Extensions Exposed Developers to Hidden Supply Chain Risks</h2>
+
+<p>New research has uncovered that publishers of over 100 Visual Studio Code (VS Code) extensions leaked access tokens that could be exploited by bad actors to update the extensions, posing a critical software supply chain risk. “A leaked VSCode Marketplace or Open VSX PAT [personal access token] allows an attacker to directly distribute a malicious extension update across the entire install base,” Wiz security researcher Rami McCarthy
+said
+in a report shared with The Hacker News. “An attacker who discovered this issue would have been able to directly distribute malware to the cumulative 150,000 install base.”
+The cloud security firm noted in many cases publishers failed to account for the fact that VS Code extensions, while distributed as .vsix files, can be unzipped and inspected, exposing hard-coded secrets embedded into them. In all, Wiz said it found over 550 validated secrets, distributed across more than 500 extensions from hundreds of distinct publishers.</p>
+
+<p>The 550 secrets have been found to fall under 67 distinct types of secrets, including -
+AI provider secrets
+, such as those related to OpenAI, Gemini, Anthropic, XAI, DeepSeek, Hugging Face, and Perplexity
+Cloud service provider secrets, such as those related to Amazon Web Services (AWS), Google Cloud, GitHub, Stripe, and Auth0
+Database secrets, such as those related to MongoDB, PostgreSQL, and Supabase
+Wiz also noted in its report that more than 100 extensions leaked VS Code Marketplace PATs, which accounted for over 85,000 installs. Another 30 extensions with a cumulative install base of no less than 100,000 have been found to Open VSX Access Tokens. A significant chunk of the flagged extensions are themes. With Open VSX also integrated into artificial intelligence (AI)-powered VS Code forks like Cursor and Windsurf, extensions that leak access tokens can significantly expand the attack surface.</p>
+
+<p>In one instance, the company said it identified a VS Code Marketplace PAT that could have allowed for pushing targeted malware to the workforce of a $30 billion market cap Chinese mega corporation, indicating that the problem also extends to internal or vendor-specific extensions used by organizations. Following responsible disclosure to Microsoft in late March and April 2025, the Windows maker has revoked the leaked PATs and
+announced
+it’s adding
+secret scanning capabilities
+to block extensions with verified secrets and notify developers when secrets are detected. VS Code users are advised to limit the number of installed extensions, scrutinize extensions prior to downloading them, and weigh the pros and cons of enabling auto-updates. Organizations are recommended to develop an extension inventory to better respond to reports of malicious extensions and consider a centralized allowlist for extensions.</p>
+
+<p>“The issue highlights the continued risks of extensions and plugins, and supply chain security in general,” Wiz said. “It continues to validate the impression that any package repository carries a high risk of mass secrets leakage.”
+TigerJack Targets VS Code Marketplace with Malicious Extensions
+The development comes as Koi Security disclosed details of a threat actor codenamed TigerJack that’s been attributed to publishing at least 11 legitimate-looking malicious VS Code extensions using various publisher accounts since early 2025 as part of a “coordinated, systematic” campaign. “Operating under the identities ab-498, 498, and 498-00, Tiger-Jack has deployed a sophisticated arsenal: extensions that steal source code, mine cryptocurrency, and establish remote backdoors for complete system control,” security researcher Tuval Admoni
+said
+. Two of the malicious extensions – C++ Playground and HTTP Format – attracted over 17,000 downloads
+prior to their takedown
+.</p>
+
+<p>However, they continue to be available on Open VSX, with the threat actor also republishing the same malicious code on September 17, 2025, under new names on the VS Code Marketplace after removal. What’s notable about these extensions is that they deliver the promised functionality, which provides the perfect cover for their malicious activities to go unnoticed by unsuspecting developers who may have installed them. Specifically, the C++ Playground extension has been found to capture keystrokes in almost real-time through a listener that’s triggered after a 500-millisecond delay. The end goal is to steal C++ source code files.</p>
+
+<p>On the other hand, the HTTP Format extension harbors nefarious code to run the CoinIMP miner and stealthily mine cryptocurrency by abusing the system resources. Three other extensions published by TigerJack under the alias “498,” namely cppplayground, httpformat, and pythonformat, further escalate the risk by incorporating the ability to act as a backdoor by downloading and running arbitrary JavaScript from an external server (“ab498.pythonanywhere[.]com”) every 20 minutes. “By checking for new instructions every 20 minutes and using eval() on remotely fetched code, TigerJack can dynamically push any malicious payload without updating the extension—stealing credentials and API keys, deploying ransomware, using compromised developer machines as entry points into corporate networks, injecting backdoors into your projects, or monitoring your activity in real-time,” Admoni noted. Koi Security also pointed out that most of these extensions started off as completely benign tools before the malicious modifications were introduced, a classic case of a Trojan horse approach.</p>
+
+<p>This offers several advantages, as it allows the threat actor to establish legitimacy and gain traction among users. What’s more, it can also deceive a developer who may have vetted the extension before installation, as the threat actor could push an update later on to compromise their environment. In June 2025, Microsoft
+said
+it has a multi-step process in place to keep the VS Code marketplace free of malware. This includes an initial scan of all incoming packages for malicious run-time behavior in a sandbox environment, as well as rescanning and periodic marketplace-wide scans to “make sure everything stays safe.”
+That said, these security protections only apply to VS Code Marketplace, and not others like the Open VSX registry, meaning even if the malicious extension gets removed from Microsoft’s platform, threat actors can easily migrate to less-secure alternatives.</p>
+
+<p>“The fragmented security landscape across all marketplaces creates dangerous blind spots that sophisticated threat actors are already exploiting,” the company said. “When security operates in silos, threats simply migrate between platforms while developers remain unknowingly exposed.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-attackers-bypass-synced-passkeys"><a id="article-12"></a>How Attackers Bypass Synced Passkeys</h2>
+
+<p>TLDR
+Even if you take nothing else away from this piece, if your organization is evaluating passkey deployments, it is insecure to deploy synced passkeys. Synced passkeys inherit the risk of the cloud accounts and recovery processes that protect them, which creates material enterprise exposure. Adversary-in-the-middle (AiTM) kits can force authentication fallbacks that circumvent strong authentication all together
+Malicious or compromised browser extensions can hijack WebAuthn requests, manipulate passkey registration or sign-in, and drive autofill to leak credentials and one-time codes. Device-bound passkeys in hardware security keys offer higher assurance and better administrative control than synced passkeys, and should be mandatory for enterprise access use cases
+Synced Passkey Risks
+Synced passkey vulnerabilities
+Passkeys are credentials stored in an authenticator.</p>
+
+<p>Some are device-bound, others are synced across devices through consumer cloud services like iCloud and Google Cloud. Sync improves usability and recovery in low-security, consumer-facing scenarios, but shifts the trust boundary to cloud accounts and recovery workflows. The FIDO Alliance and Yubico, have both
+issued important advisories for enterprises to evaluate this split
+and to prefer device-bound options for higher assurance. Operationally, synced passkeys expand the attack surface in three ways:
+Cloud account takeover or recovery abuse can authorize new devices, which then erodes the integrity of the credential.</p>
+
+<p>If a user is logged in on their corporate device with their personal Apple iCloud account, then passkeys created could be synced to their personal accounts; this dramatically explodes the attack surface beyond enterprise security boundaries. Help desk and account recovery become the real control points that attackers target because they can copy the same protected keychain onto a new, unknown, and untrusted device. Authentication downgrade attacks
+See the “captured” session. (Image source: Proofpoint)
+Proofpoint researchers documented a
+practical downgrade against Microsoft Entra ID
+where a phishing proxy spoofs an unsupported browser, such as Safari on Windows, Entra disables passkeys, and the user is guided to select a weaker method, such as SMS or OTP.</p>
+
+<p>The proxy then captures credentials and the resulting session cookie and imports it to gain access. This threat vector is reliant on webAuthnpasskey’s uneven operating system and browser support and the identity provider’s (IdP) acceptance of weak authentication methods in favor of a practical UX consideration. It is a classic adversary-in-the-middle (AitM) powered by policy steering. It does not break WebAuthn origin binding because the platform never reaches a WebAuthn ceremony when a compatibility branch disables it.</p>
+
+<p>Your weakest authentication method defines your real security. Immediate mediation in WebAuthn
+is a feature that allows sites to offer an alternative authentication method when WebAuthn is not available. This is useful for UX but can also be abused by attackers to steer users toward non-webAuthn paths if policy allows them. Browser-based security vulnerable to extension and autofill threat vectors
+SquareX researchers showed that a
+compromised browser environment can hijack WebAuthn calls
+and manipulate passkey registration or sign-in.</p>
+
+<p>The technique does not break passkey cryptography. It injects or intercepts the browser-side process, for example, through a malicious extension or an XSS bug, to reinitiate registration, force a password fallback, or silently complete an assertion. Chrome documents an extension API named “webAuthenticationProxy” that can intercept navigator.credentials.create() and navigator.credentials.get() methods once attached, then supply its own responses. This capability exists for remote desktop use cases, but it demonstrates that an extension with the right permission can sit in the WebAuthn path.</p>
+
+<p>Extensions also run content scripts inside the page context, where they can read and modify the DOM and drive user interface flows, which include invoking credential APIs from the page. Independent research presented at DEF CON described DOM-based extension clickjacking that targets the UI elements injected by password manager extensions. A single user click on a crafted page can trigger autofill and exfiltration of stored data such as logins, credit cards, and one-time codes. The researcher reports that in some scenarios,
+passkey authentication can also be exploited and lists vulnerable versions across multiple vendors
+.</p>
+
+<p>Device-bound credentials are the only effective enterprise solution
+Device-bound passkeys are tied to a specific device, typically with private key generation and usage conducted in secure hardware components. In enterprise, hardware security keys provide consistent device signals, attestation, and a lifecycle you can inventory and revoke. Guidance for an enterprise-grade passkey program
+Policy
+Require phishing-resistant authentication for all users, and especially those in privileged roles. Accept only device-bound authenticators that generate non-exportable credentials at registration and never leave the device.</p>
+
+<p>Credentials should be rooted in secure hardware and verifiably tied to the physical device attempting the login. Eliminate all fallback methods such as SMS, voice calls, TOTP apps, email links, and push approvals. These exist to be exploited during social engineering and downgrade attacks. If a fallback exists, an attacker will force it.</p>
+
+<p>Make the strong path the only path. Ensure universal operating system and browser support for phishing-resistant, device-bound credentials. Don’t offer alternatives – yes this is possible, we’re happy to show you a demo with Beyond Identity’s identity defense platform. Universal coverage is necessary for complete defense because you’re only as protected as your weakest link.</p>
+
+<p>Browser and Extension Posture
+Enforce extension allowlists in managed browsers. Disallow any extension that requests webAuthenticationProxy, activeTab, or broad content script permissions. Continuously monitor extension installs and usage trends for suspicious mass removals or unexplained permission escalations. Extension-level compromise is increasingly indistinguishable from a legitimate user.</p>
+
+<p>Lock down browser behavior as tightly as you would an endpoint. Enrollment and Recovery
+Use high-assurance authenticators as the root of recovery. No help desk, email inbox, or call center should be able to bypass phishing-resistant controls. Recovery is often the attacker’s entry point.</p>
+
+<p>Eliminate social engineering vectors and force policy-compliant reproofing. Only allow for enrollment of device-bound credentials. Capture attestation metadata at registration, including device model and assurance level. Reject unrecognized or unverifiable authenticators.</p>
+
+<p>Trust begins at registration. If you don’t know what created the credential, you don’t control access. Device Hygiene &amp; Runtime Defense
+Bind sessions to trusted device context. A session cookie should never be a portable artifact.</p>
+
+<p>Runtime session enforcement should tie identity to continuous device posture, not just an initial authentication. Enforce continuous authentication. If device posture, location, or security status changes, require reauthentication or deny access. A login is not a hall pass.</p>
+
+<p>Risk is dynamic, authentication must be too. Assume authentication attempts with weak factors should be blocked by default. See how Beyond Identity customers
+instantly block identity attacks based on the simple fact that it is not a strong credential attempting access
+. What This Looks Like in Practice
+The architecture of an identity security system that offers uncompromising defense against identity, browser, and device-based attacks can be defined by these three traits:
+Device-bound credentials:
+Credentials never leave the device.</p>
+
+<p>They are non-exportable, hardware-backed, and cannot be synced or replayed elsewhere. Continuous trust:
+Authentication never stops at login. It continues throughout the session, tied to posture signals from the device. Universal endpoint hygiene enforcement:
+All endpoints are in scope.</p>
+
+<p>Even unmanaged devices must be evaluated in real time for risk posture and session integrity. The bottom line
+Synced passkeys are not a force field that is appropriate for defense. They improve usability for consumer use cases at the cost of enterprise access security. See more in-action in an upcoming webinar,
+How Attackers Bypass FIDO: Why Synced Passkeys Fail and What To Do Instead
+where Beyond Identity will review how synced passkey failures happen and how leading security teams, including Snowflake and Cornell University, close these paths.</p>
+
+<p>Even if you can’t join, register and you’ll get the recording! Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

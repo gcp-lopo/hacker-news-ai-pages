@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-10-23 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Iran-Linked MuddyWater Targets 100+ Organisations in Global Espionage Campaign</a></li>
+      
+        <li><a href="#article-2">Ukraine Aid Groups Targeted Through Fake Zoom Meetings and Weaponized PDF Files</a></li>
+      
+        <li><a href="#article-3">Chinese Threat Actors Exploit ToolShell SharePoint Flaw Weeks After Microsoft's July Patch</a></li>
+      
+        <li><a href="#article-4">Bridging the Remediation Gap: Introducing Pentera Resolve</a></li>
+      
+        <li><a href="#article-5">Fake Nethereum NuGet Package Used Homoglyph Trick to Steal Crypto Wallet Keys</a></li>
+      
+        <li><a href="#article-6">Why You Should Swap Passwords for Passphrases</a></li>
+      
+        <li><a href="#article-7">Researchers Identify PassiveNeuron APT Using Neursite and NeuralExecutor Malware</a></li>
+      
+        <li><a href="#article-8">TARmageddon Flaw in Async-Tar Rust Library Could Enable Remote Code Execution</a></li>
+      
+        <li><a href="#article-9">TP-Link Patches Four Omada Gateway Flaws, Two Allow Remote Code Execution</a></li>
+      
+        <li><a href="#article-10">Meta Rolls Out New Tools to Protect WhatsApp and Messenger Users from Scams</a></li>
+      
+        <li><a href="#article-11">PolarEdge Targets Cisco, ASUS, QNAP, Synology Routers in Expanding Botnet Campaign</a></li>
+      
+        <li><a href="#article-12">Securing AI to Benefit from AI</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-10-23-ai创业新闻">2025-10-23 AI创业新闻</h1>
+
+<h2 id="iran-linked-muddywater-targets-100-organisations-in-global-espionage-campaign"><a id="article-1"></a>Iran-Linked MuddyWater Targets 100+ Organisations in Global Espionage Campaign</h2>
+
+<p>The Iranian nation-state group known as
+MuddyWater
+has been attributed to a new campaign that has leveraged a compromised email account to distribute a backdoor called Phoenix to various organizations across the Middle East and North Africa (MENA) region, including over 100 government entities. The end goal of the campaign is to infiltrate high-value targets and facilitate intelligence gathering, Singaporean cybersecurity company Group-IB said in a technical report published today. More than three-fourths of the campaign’s targets include embassies, diplomatic missions, foreign affairs ministries, and consulates, followed by international organizations and telecommunications firms. “MuddyWater accessed the compromised mailbox through NordVPN (a legitimate service abused by the threat actor), and used it to send phishing emails that appeared to be authentic correspondence,”
+said
+security researchers Mahmoud Zohdy and Mansour Alhmoud.</p>
+
+<p>“By exploiting the trust and authority associated with such communications, the campaign significantly increased its chances of deceiving recipients into opening the malicious attachments.”
+The attack chain essentially involves the threat actor distributing weaponized Microsoft Word documents that, when opened, prompt the email recipients to enable macros in order to view the content. Once the unsuspecting user enables the feature, the document proceeds to execute malicious Visual Basic for Application (VBA) code, resulting in the deployment of version 4 of the Phoenix backdoor. The backdoor is launched by means of a loader called FakeUpdate that’s decoded and written to disk by the VBA dropper. The loader contains the Advanced Encryption Standard (AES)-encrypted Phoenix payload.</p>
+
+<p>MuddyWater, also called Boggy Serpens, Cobalt Ulster, Earth Vetala, Mango Sandstorm (formerly Mercury), Seedworm, Static Kitten, TA450, TEMP.Zagros, and Yellow Nix, is assessed to be affiliated with Iran’s Ministry of Intelligence and Security (MOIS). It’s known to be active since at least 2017. The threat actor’s use of Phoenix was
+first documented
+by Group-IB last month, describing it as a lightweight version of
+BugSleep
+, a Python-based implant linked to MuddyWater. Two different variants of Phoenix (Version 3 and Version 4) have been detected in the wild.</p>
+
+<p>The cybersecurity vendor said the attacker’s command-and-control (C2) server (“159.198.36[.]115”) has also been found hosting remote monitoring and management (RMM) utilities and a custom web browser credential stealer that targets Brave, Google Chrome, Microsoft Edge, and Opera, suggesting their likely use in the operation. It’s worth noting that MuddyWater has a history of distributing remote access software via phishing campaigns over the years. “By deploying updated malware variants such as the Phoenix v4 backdoor, the FakeUpdate injector, and custom credential-stealing tools alongside legitimate RMM utilities like PDQ and Action1, MuddyWater demonstrated an enhanced ability to integrate custom code with commercial tools for improved stealth and persistence,” the researchers said. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ukraine-aid-groups-targeted-through-fake-zoom-meetings-and-weaponized-pdf-files"><a id="article-2"></a>Ukraine Aid Groups Targeted Through Fake Zoom Meetings and Weaponized PDF Files</h2>
+
+<p>Cybersecurity researchers have disclosed details of a coordinated spear-phishing campaign dubbed
+PhantomCaptcha
+targeting organizations associated with Ukraine’s war relief efforts to deliver a remote access trojan that uses a WebSocket for command-and-control (C2). The activity, which took place on October 8, 2025, targeted individual members of the International Red Cross, Norwegian Refugee Council, United Nations Children’s Fund (UNICEF) Ukraine office, Norwegian Refugee Council, Council of Europe’s Register of Damage for Ukraine, and Ukrainian regional government administrations in the Donetsk, Dnipropetrovsk, Poltava, and Mikolaevsk regions, SentinelOne
+said
+in a new report published today. The phishing emails have been found to impersonate the Ukrainian President’s Office, carrying a booby-trapped PDF document that contains an embedded link, which, when clicked, redirects victims to a fake Zoom site (“zoomconference[.]app”) and tricks them into running a malicious PowerShell command via a
+ClickFix
+-
+style
+fake Cloudflare CAPTCHA page under the guise of a browser check. The bogus Cloudflare page acts as an intermediary by setting up a WebSocket connection with an attacker-controlled server, and transmits a JavaScript-generated clientId, with the browser taking the victim to a legitimate, password-protected Zoom meeting if the WebSocket server responds with a matching identifier.</p>
+
+<p>It’s suspected that this infection path is likely reserved for live social engineering calls with victims, although SentinelOne said it did not observe the threat actors activating this line of attack during its investigation. The PowerShell command executed after it’s pasted to the Windows Run dialog leads to an obfuscated downloader that’s primarily responsible for retrieving and executing a second-stage payload from a remote server. This second-stage malware performs reconnaissance of the compromised host and sends it to the same server, which then responds with the PowerShell remote access trojan. “The final payload is a WebSocket RAT hosted on Russian-owned infrastructure that enables arbitrary remote command execution, data exfiltration, and potential deployment of additional malware,” security researcher Tom Hegel said.</p>
+
+<p>“The WebSocket-based RAT is a remote command execution backdoor, effectively a remote shell that gives an operator arbitrary access to the host.”
+The malware connects to a remote WebSocket server at “wss://bsnowcommunications[.]com:80” and is configured to receive Base64-encoded JSON messages that include a command to be executed with Invoke-Expression or run a PowerShell payload. The results of the execution are subsequently packaged into a JSON string and sent to the server over the WebSocket. Further analysis of VirusTotal submissions has determined that the 8-page weaponized PDF has been uploaded from multiple locations, including Ukraine, India, Italy, and Slovakia, likely indicating broad targeting. SentinelOne noted that preparations for the campaign began on March 27, 2025, when the attackers registered the domain “goodhillsenterprise[.]com,” which has been used to serve the obfuscated PowerShell malware scripts.</p>
+
+<p>Interestingly, the infrastructure associated with “zoomconference[.]app” is said to have been active only for a single day on October 8. This suggests “sophisticated planning and strong commitment to operational security,” the company pointed out, adding it also uncovered fake applications hosted on the domain “princess-mens[.]click” that are aimed at collecting geolocation, contacts, call logs, media files, device information, installed apps list, and other data from compromised Android devices. The campaign has not been attributed to any known threat actor or group, although the use of ClickFix overlaps with that of recently disclosed attacks mounted by the Russia-linked
+COLDRIVER
+hacking group. “The PhantomCaptcha campaign reflects a highly capable adversary, demonstrating extensive operational planning, compartmentalized infrastructure, and deliberate exposure control,” SentinelOne said.</p>
+
+<p>“The six-month period between initial infrastructure registration and attack execution, followed by the swift takedown of user-facing domains while maintaining backend command-and-control, underscores an operator well-versed in both offensive tradecraft and defensive detection evasion.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-threat-actors-exploit-toolshell-sharepoint-flaw-weeks-after-microsofts-july-patch"><a id="article-3"></a>Chinese Threat Actors Exploit ToolShell SharePoint Flaw Weeks After Microsoft’s July Patch</h2>
+
+<p>Threat actors with ties to China exploited the
+ToolShell
+security vulnerability in Microsoft SharePoint to breach a telecommunications company in the Middle East after it was publicly disclosed and patched in July 2025. Also targeted were government departments in an African country, as well as government agencies in South America, a university in the U.S., as well as likely a state technology agency in an African country, a government department in the Middle East, and a finance company in a European country. According to Broadcom’s Symantec Threat Hunter Team, the attacks
+involved
+the exploitation of
+CVE-2025-53770
+, a now-patched security flaw in on-premise SharePoint servers that could be used to bypass authentication and achieve remote code execution. CVE-2025-53770, assessed to be a patch bypass for CVE-2025-49704 and CVE-2025-49706, has been weaponized as a zero-day by
+three Chinese threat groups
+, including Linen Typhoon (aka Budworm), Violet Typhoon (aka Sheathminer), and Storm-2603, the latter of which is linked to the deployment of
+Warlock, LockBit, and Babuk ransomware families
+in recent months.</p>
+
+<p>However, the latest findings from Symantec indicate that a much wider range of Chinese threat actors have abused the vulnerability. This includes the
+Salt Typhoon
+(aka Glowworm) hacking group, which is said to have leveraged the ToolShell flaw to deploy tools like
+Zingdoor
+,
+ShadowPad
+, and KrustyLoader against the telecom entity and the two government bodies in Africa. KrustyLoader, first
+detailed
+by Synacktiv in January 2024, is a Rust-based loader previously put to use by a China-nexus espionage group dubbed UNC5221 in attacks exploiting flaws in Ivanti Endpoint Manager Mobile (
+EPMM
+) and
+SAP NetWeaver
+. The attacks aimed at government agencies in South America and a university in the U.S., on the other hand, involved the use of unspecified vulnerabilities to obtain initial access, followed by the exploitation of SQL servers and Apache HTTP servers running the Adobe ColdFusion software to deliver the malicious payloads using DLL side-loading techniques.</p>
+
+<p>In some of the incidents, the attackers have been observed executing an exploit for
+CVE-2021-36942
+(aka PetitPotam) for privilege escalation and domain compromise, along with a number of readily available and living-off-the-land (LotL) tools to facilitate scanning, file download, and credential theft on the infected systems. “There is some overlap in the types of victims and some of the tools used between this activity and activity previously attributed to Glowworm,” Symantec said. “However, we do not have sufficient evidence to conclusively attribute this activity to one specific group, though we can say that all evidence points to those behind it being China-based threat actors.”
+“The activity carried out on targeted networks indicates that the attackers were interested in stealing credentials and in establishing persistent and stealthy access to victim networks, likely for the purpose of espionage.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="bridging-the-remediation-gap-introducing-pentera-resolve"><a id="article-4"></a>Bridging the Remediation Gap: Introducing Pentera Resolve</h2>
+
+<p>From Detection to Resolution: Why the Gap Persists
+A critical vulnerability is identified in an exposed cloud asset. Within hours, five different tools alert you about it: your vulnerability scanner, XDR, CSPM, SIEM, and CMDB each surface the issue in their own way, with different severity levels, metadata, and context. What’s missing is a system of action. How do you transition from the detection and identification of a security issue to remediation and resolution?</p>
+
+<p>The Continuous Threat Exposure Management (CTEM) framework was introduced to help organizations address this challenge, calling for a repeatable approach to scoping, discovery, validation, and ultimately, the mobilization of remediation efforts. The goal is not just to identify risk, but to act on it, continuously and at scale. In most environments, that mobilization happens, but it relies on manual processes. Findings remain fragmented across tools, each with its own format, language, and logic.</p>
+
+<p>The responsibility to consolidate, correlate, prioritize, and assign remediation tasks often falls to already stretched security operations teams. And when fixes are eventually applied, there is often no mechanism in place to validate that your actions were effective. What we’ve seen across more than 1,200 customers is that existing processes are not built to scale across the thousands of alerts enterprise security teams contend with on a weekly basis. Security and operations teams are not set up for success here.</p>
+
+<p>This disconnect between identifying risk and resolving it efficiently and reliably is the remediation gap. It is not a visibility problem. It is an operational one. Pentera Resolve: Operationalizing Validated Risk
+As the leader in Security Validation, Pentera has always focused on helping organizations understand which vulnerabilities truly matter.</p>
+
+<p>By safely emulating real-world attacks, we don’t simply identify what is potentially exposed, but rather how those exposures can be exploited within the context of your environment. Now we are extending that leadership by bridging security validation with automated remediation operations, closing the gap between insight and action. Alerts alone do not reduce risk. Their value depends entirely on the organization’s ability to act on them.</p>
+
+<p>Ten overlapping reports sitting unread on a dashboard do not make you safer. Action does. Introducing
+Pentera Resolve
+. Our new product marks a shift in what organizations should expect from a
+Security Validation platform
+, integrating remediation workflows natively into the validation lifecycle.</p>
+
+<p>Pentera Resolve automates the remediation workflow by turning validated findings into structured tasks and routing them directly to the teams responsible for fixing them. Security teams no longer need to comb through multiple reports, chase down asset owners, or track remediation progress across disconnected dashboards. Pentera Resolve removes that friction with a streamlined process embedded in the systems organizations already use. Powered by AI, it automates triage, prioritization, and ownership assignment.</p>
+
+<p>Each validated issue is enriched with business and asset context, delivered into platforms like ServiceNow, Jira, and Slack. Each ticket is tracked and cataloged, ensuring audit-ready proof-of-fix. This creates a system of record for remediation, providing security, IT, and compliance teams a shared and verifiable view of progress, all within the tools they already use. As the platform evolves, Pentera Resolve will support triggering re-tests to determine whether the original validated risk has been fully addressed.</p>
+
+<p>The result is faster, simpler, and more accountable remediation. Every issue is tied to real exploitability, verified after resolution, and fully measurable from start to finish. This level of operational integration supports something broader. It is not just about fixing what has been found.</p>
+
+<p>It is about enabling security programs to run remediation as a continuous, coordinated part of enterprise risk management. From Assessment to Resolution: A Unified Platform
+Security teams no longer spend time translating findings into tickets. IT and DevOps teams no longer need to guess which exposures to prioritize. Everyone works from the same source of validated truth, inside the systems they already use.</p>
+
+<p>This is not just about tooling. It is about changing how work gets done, with fewer gaps, clearer ownership, and full accountability from start to finish. Exposure without action is just noise. Pentera Resolve brings remediation into focus.</p>
+
+<p>It is measurable, repeatable, and fully integrated into how teams already operate. Validate. Remediate. Repeat.</p>
+
+<p>That is the loop. And now, it runs without gaps. Note:
+This article was authored by Dr. Arik Liberzon, Founder and Chief Technology Officer of Pentera.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fake-nethereum-nuget-package-used-homoglyph-trick-to-steal-crypto-wallet-keys"><a id="article-5"></a>Fake Nethereum NuGet Package Used Homoglyph Trick to Steal Crypto Wallet Keys</h2>
+
+<p>Cybersecurity researchers have uncovered a new supply chain attack targeting the NuGet package manager with malicious typosquats of
+Nethereum
+, a popular Ethereum .NET integration platform, to steal victims’ cryptocurrency wallet keys. The package,
+Netherеum.All
+, has been found to harbor functionality to decode a command-and-control (C2) endpoint and exfiltrate mnemonic phrases, private keys, and keystore data, according to security company Socket. The library was uploaded by a user named “
+nethereumgroup
+“ on October 16, 2025. It was taken down from NuGet for violating the service’s Terms of Use four days later.</p>
+
+<p>What’s notable about the NuGet package is that it swaps the last occurrence of the letter “e” with the Cyrillic homoglyph “e” (U+0435) to fool unsuspecting developers into downloading it. In a further attempt to increase the credibility of the package, the threat actors have resorted to artificially inflating the download counts, claiming it has been downloaded 11.7 million times – a huge red flag given that it’s unlikely for an entirely new library to rack up such a high count within a short span of time. “A threat actor can publish many versions, then script downloads of each .nupkg through the v3 flat-container or loop nuget.exe install and dotnet restore with no-cache options from cloud hosts,” security researcher Kirill Boychenko
+said
+. “Rotating IPs and user agents and parallelizing requests boosts volume while avoiding client caches.”
+“The result is a package that appears ‘popular,’ which boosts placement for searches sorted by relevance and lends a false sense of proof when developers glance at the numbers.”
+The main payload within the NuGet package is within a function named EIP70221TransactionService.Shuffle, which parses an XOR-encoded string to extract the C2 server (solananetworkinstance[.]info/api/gads) and exfiltrates sensitive wallet data to the attacker.</p>
+
+<p>The threat actor has been found to have previously uploaded another NuGet package called “NethereumNet” with the same deceptive functionality at the start of the month. It has already been removed by the NuGet security team. This is not the first homoglyph typosquat that has been spotted in the NuGet repository. In July 2024, ReversingLabs
+documented
+details of several packages that impersonated their legitimate counterparts by substituting certain elements with their equivalents to bypass casual inspection.</p>
+
+<p>Unlike other open-source package repositories like PyPI, npm, Maven Central, Go Module, and RubyGems that enforce restrictions on the naming scheme to ASCII, NuGet places no such constraints other than prohibiting spaces and unsafe URL characters, opening the door to abuse. To mitigate such risks, users should carefully scrutinize libraries before downloading them, including verifying publisher identity and sudden download surges, and monitor for anomalous network traffic. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="why-you-should-swap-passwords-for-passphrases"><a id="article-6"></a>Why You Should Swap Passwords for Passphrases</h2>
+
+<p>The advice didn’t change for decades: use complex passwords with uppercase, lowercase, numbers, and symbols. The idea is to make passwords harder for hackers to crack via brute force methods. But
+more recent guidance
+shows our focus should be on password length, rather than complexity. Length is the more important security factor,
+and passphrases are the simplest way
+to get your users to create (and remember!) longer passwords.</p>
+
+<p>The math that matters
+When attackers steal password hashes from a breach, they
+brute-force
+by hashing millions of guesses per second until something matches. The time this takes depends on one thing: how many possible combinations exist. A traditional 8-character “complex” password (P@ssw0rd!) offers roughly 218 trillion combinations. Sounds impressive until you realize modern GPU setups can test those combinations in months, not years.</p>
+
+<p>Increase that to 16 characters using only lowercase letters, and you’re looking at 26^16 combinations, billions of times harder to crack. This is effective entropy: the actual randomness an attacker must work through. Three or four random common words strung together (“carpet-static-pretzel-invoke”) deliver far more entropy than cramming symbols into short strings. And users can actually remember them.</p>
+
+<p>Why passphrases win on every front
+The case for passphrases isn’t theoretical, it’s operational:
+Fewer resets. When passwords are memorable, users stop writing them on Post-it notes or recycling similar variations across accounts. Your helpdesk tickets drop, which alone should justify the change. Better attack resistance.</p>
+
+<p>Attackers optimize for patterns. They test dictionary words with common substitutions (@ for a, 0 for o) because that’s what people do. A four-word passphrase sidesteps these patterns entirely – but only when the words are truly random and unrelated. Aligned with current guidance.</p>
+
+<dl>
+  <dt>NIST has been clear</dt>
+  <dd>prioritize length over forced complexity. The traditional 8-character minimum should really be a thing of the past. One rule worth following
+Stop managing 47 password requirements. Give users one clear instruction:
+Choose 3-4 unrelated common words + a separator.</dd>
+</dl>
+
+<p>Avoid song lyrics, proper names, or famous phrases. Never reuse across accounts. Examples:
+mango-glacier-laptop-furnace
+or
+cricket.highway.mustard.piano
+That’s it. No mandatory capitals, no required symbols, no complexity theater.</p>
+
+<p>Just length and randomness. Rolling it out without chaos
+Changes to authentication can spark resistance. Here’s how to minimize friction:
+Start with a pilot group, grab 50-100 users from different departments. Give them the new guidance and monitor (but don’t enforce) for two weeks.</p>
+
+<p>Watch for patterns: Are people defaulting to phrases from pop culture? Are they hitting minimum length requirements consistently? Then move to warn-only mode across the organization. Users see alerts when their new passphrase is weak or has been compromised, but they’re not blocked.</p>
+
+<p>This builds awareness without creating support bottlenecks. Enforce only after you’ve measured:
+Passphrase adoption percentage
+Helpdesk reset reduction
+Banned-password hits from your blocklist
+User-reported friction points
+Track these as KPIs. They’ll tell you whether this is working better than the old policy. Making it stick with the right policy tools
+Your Active Directory password policy needs three updates to support passphrases properly:
+Raise the minimum length.</p>
+
+<p>Move from 8 to 14+ characters. This accommodates passphrases without creating problems for users who still prefer traditional passwords. Drop forced complexity checks. Stop requiring uppercase, numbers, and symbols.</p>
+
+<p>Length delivers better security with less user friction. Block compromised credentials. This is non-negotiable. Even the strongest passphrase doesn’t help if it’s already been leaked in a breach.</p>
+
+<p>Your policy should check submissions against known-compromised lists in real time. Self-service password reset (SSPR)
+can help during the transition. Users can securely update credentials on their own time, and your helpdesk shouldn’t be the bottleneck. Password auditing gives you visibility into adoption rates.</p>
+
+<p>You can identify accounts still using short passwords or common patterns, then target those users with additional guidance. Tools like
+Specops Password Policy
+handle all three functions: extending policy minimums, blocking over 4 billion compromised passwords, and integrating with SSPR workflows. The policy updates sync to Active Directory and Azure AD without additional infrastructure, and the blocklist updates daily as new breaches emerge. What this looks like in practice
+Imagine your policy requires 15 characters but drops all complexity rules.</p>
+
+<p>A user creates
+umbrella-coaster-fountain-sketch
+during their next password change. A tool like
+Specops Password Policy
+checks it against the compromised password database – it’s clean. The user remembers it without a password manager because it’s four concrete images linked together. They don’t reuse it because they know it’s specific to this account.</p>
+
+<p>Six months later, no reset request. No Post-it note and no call to the helpdesk because they fat-fingered a symbol. Nothing revolutionary – just simple and effective. The security you actually need
+Passphrases aren’t a silver bullet.</p>
+
+<p>MFA still matters
+. Compromised credential monitoring still matters. But if you’re spending resources on password policy changes, this is where to spend it: longer minimums, simpler rules, and real protection against breached credentials. Attackers still steal hashes and brute-force them offline.</p>
+
+<p>What’s changed is our understanding of what actually slows them down, so your next password policy should reflect that. Interested in giving it a try? Book a live demo of Specops Password Policy
+. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-identify-passiveneuron-apt-using-neursite-and-neuralexecutor-malware"><a id="article-7"></a>Researchers Identify PassiveNeuron APT Using Neursite and NeuralExecutor Malware</h2>
+
+<p>Government, financial, and industrial organizations located in Asia, Africa, and Latin America are the target of a new campaign dubbed
+PassiveNeuron
+, according to
+findings
+from Kaspersky. The cyber espionage activity was
+first flagged
+by the Russian cybersecurity vendor in November 2024, when it disclosed a set of attacks aimed at government entities in Latin America and East Asia in June, using never-before-seen malware families tracked as Neursite and NeuralExecutor. It also described the operation as exhibiting a high level of sophistication, with the threat actors leveraging already compromised internal servers as an intermediate command-and-control (C2) infrastructure to fly under the radar. “The threat actor is able to move laterally through the infrastructure and exfiltrate data, optionally creating virtual networks that allow attackers to steal files of interest even from machines isolated from the internet,” Kaspersky noted at the time.</p>
+
+<p>“A plugin-based approach provides dynamic adaptation to the attacker’s needs.”
+Since then, the company said it has observed a fresh wave of infections related to PassiveNeuron since December 2024 and continuing all the way through August 2025. The campaign remains unattributed at this stage, although
+some
+signs
+point to it being the work of Chinese-speaking threat actors. In at least one incident, the adversary is said to have gained initial remote command execution capabilities on a compromised machine running Windows Server through Microsoft SQL. While the exact method by which this is achieved is not known, it’s possible that the attackers are either brute-forcing the administration account password, or leveraging an SQL injection flaw in an application running on the server, or an as-yet-undetermined vulnerability in the server software itself.</p>
+
+<p>Regardless of the method used, the attackers attempted to deploy an ASPX web shell to gain basic command execution capabilities. Failing in these efforts, the intrusion witnessed the delivery of advanced implants via a series of DLL loaders placed in the System32 directory. These include -
+Neursite
+, a bespoke C++ modular backdoor
+NeuralExecutor
+, a bespoke .NET implant used for download additional .NET payloads over TCP, HTTP/HTTPS, named pipes, or WebSockets and execute them
+Cobalt Strike
+, a legitimate adversary simulation tool
+Neursite utilizes an embedded configuration to connect to the C2 server and uses TCP, SSL, HTTP and HTTPS protocols for communications. By default, it supports the ability to gather system information, manage running processes, and proxy traffic through other machines infected with the backdoor to enable lateral movement.</p>
+
+<p>The malware also comes fitted with a component to fetch auxiliary plugins to achieve shell command execution, file system management, and TCP socket operations. Kaspersky also noted that NeuralExecutor variants spotted in 2024 were designed to retrieve the C2 server addresses straight from the configuration, whereas artifacts found this year reach out to a GitHub repository to obtain the C2 server address, effectively turning the legitimate code hosting platform into a dead drop resolver. “The PassiveNeuron campaign has been distinctive in the way that it primarily targets server machines,” researchers Georgy Kucherin and Saurabh Sharma said. “These servers, especially the ones exposed to the internet, are usually lucrative targets for [advanced persistent threats], as they can serve as entry points into target organizations.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="tarmageddon-flaw-in-async-tar-rust-library-could-enable-remote-code-execution"><a id="article-8"></a>TARmageddon Flaw in Async-Tar Rust Library Could Enable Remote Code Execution</h2>
+
+<p>Cybersecurity researchers have disclosed details of a high-severity flaw impacting the popular async-tar Rust library and its forks, including tokio-tar, that could result in remote code execution under certain conditions. The vulnerability, tracked as
+CVE-2025-62518
+(CVSS score: 8.1), has been codenamed TARmageddon by Edera, which discovered the issue in late August 2025. It impacts several widely-used projects, such as testcontainers and wasmCloud. “In the worst-case scenario, this vulnerability has a severity of 8.1 (High) and can lead to Remote Code Execution (RCE) through file overwriting attacks, such as replacing configuration files or hijacking build backends,” the Seattle-based security company
+said
+.</p>
+
+<p>The problem is compounded by the fact that tokio-tar is essentially abandonware despite attracting thousands of downloads via crates.io. Tokio-tar is a Rust library for asynchronously reading and writing TAR archives built atop the
+Tokio runtime
+for the programming language. The Rust crate was
+last updated
+on July 15, 2023. In the absence of a patch for tokio-tar, users relying on the library are advised to migrate to astral-tokio-tar, which has released
+version 0.5.6
+to remediate the flaw.</p>
+
+<p>“Versions of astral-tokio-tar prior to 0.5.6 contain a boundary parsing vulnerability that allows attackers to smuggle additional archive entries by exploiting inconsistent
+PAX/ustar header
+handling,” Astral developer William Woodruff
+said
+in an alert. “When processing archives with PAX-extended headers containing size overrides, the parser incorrectly advances stream position based on ustar header size (often zero) instead of the PAX-specified size, causing it to interpret file content as legitimate TAR headers.”
+The issue, in a nutshell, is the result of inconsistent handling when handling PAX extended headers and ustar headers when determining file data boundaries. PAX, short for portable archive interchange, is an extended version of the USTAR format used to
+store properties
+of member files in a TAR archive. The mismatch between a PAX extended headers and ustar headers – where the PAX header correctly specifies the file size, whereas the ustar header incorrectly specifies the file size as zero (instead of the PAX size) – leads to a parsing inconsistency, causing the library to interpret the inner content as additional outer archive entries.</p>
+
+<p>“By advancing 0 bytes, the parser fails to skip over the actual file data (which is a nested TAR archive) and immediately encounters the next valid TAR header located at the start of the nested archive,” Edera explained. “It then incorrectly interprets the inner archive’s headers as legitimate entries belonging to the outer archive.”
+As a result, an attacker could exploit this behavior to “smuggle” extra archives when the library is processing nested TAR files, thereby making it possible to overwrite files within extraction directories, ultimately paving the way for arbitrary code execution. In a hypothetical attack scenario, an attacker could upload a specially-crafted package to PyPI such that the outer TAR contains a legitimate pyproject.toml, whereas the hidden inner TAR contains a malicious one that hijacks the build backend and overwrites the actual file during installation. “While Rust’s guarantees make it significantly harder to introduce memory safety bugs (like buffer overflows or use-after-free), it does not eliminate logic bugs – and this parsing inconsistency is fundamentally a logic flaw,” Edera said.</p>
+
+<p>“Developers must remain vigilant against all classes of vulnerabilities, regardless of the language used.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="tp-link-patches-four-omada-gateway-flaws-two-allow-remote-code-execution"><a id="article-9"></a>TP-Link Patches Four Omada Gateway Flaws, Two Allow Remote Code Execution</h2>
+
+<p>TP-Link has released security updates to address four security flaws impacting Omada gateway devices, including two critical bugs that could result in arbitrary code execution. The
+vulnerabilities
+in
+question
+are listed below -
+CVE-2025-6541
+(CVSS score: 8.6) - An operating system command injection vulnerability that could be exploited by an attacker who can log in to the web management interface to run arbitrary commands
+CVE-2025-6542
+(CVSS score: 9.3) - An operating system command injection vulnerability that could be exploited by a remote unauthenticated attacker to run arbitrary commands
+CVE-2025-7850
+(CVSS score: 9.3) - An operating system command injection vulnerability that could be exploited by an attacker in possession of an administrator password of the web portal to run arbitrary commands
+CVE-2025-7851
+(CVSS score: 8.7) - An improper privilege management vulnerability that could be exploited by an attacker to obtain the root shell on the underlying operating system under restricted conditions
+“Attackers may execute arbitrary commands on the device’s underlying operating system,” TP-Link said in an advisory released Tuesday. The issues impact the following product models and versions -
+ER8411 &lt; 1.3.3 Build 20251013 Rel.44647
+ER7412-M2 &lt; 1.1.0 Build 20251015 Rel.63594
+ER707-M2 &lt; 1.3.1 Build 20251009 Rel.67687
+ER7206 &lt; 2.2.2 Build 20250724 Rel.11109
+ER605 &lt; 2.3.1 Build 20251015 Rel.78291
+ER706W &lt; 1.2.1 Build 20250821 Rel.80909
+ER706W-4G &lt; 1.2.1 Build 20250821 Rel.82492
+ER7212PC &lt; 2.1.3 Build 20251016 Rel.82571
+G36 &lt; 1.1.4 Build 20251015 Rel.84206
+G611 &lt; 1.2.2 Build 20251017 Rel.45512
+FR365 &lt; 1.1.10 Build 20250626 Rel.81746
+FR205 &lt; 1.0.3 Build 20251016 Rel.61376
+FR307-M2 &lt; 1.2.5 Build 20251015 Rel.76743
+While TP-Link makes no mention of the flaws being exploited in the wild, it’s advised that users move quickly to download and update to the latest firmware to fix the vulnerabilities. “Check the configurations of the device after the firmware upgrade to ensure that all settings remain accurate, secure, and aligned with their intended preferences,” it added.</p>
+
+<p>It also noted in a disclaimer that it cannot bear any responsibility for any consequences that may arise if the aforementioned recommended actions are not adhered to. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="meta-rolls-out-new-tools-to-protect-whatsapp-and-messenger-users-from-scams"><a id="article-10"></a>Meta Rolls Out New Tools to Protect WhatsApp and Messenger Users from Scams</h2>
+
+<p>Meta on Tuesday said it’s launching new tools to protect Messenger and WhatsApp users from potential scams. To that end, the company
+said
+it’s introducing new warnings on WhatsApp when users attempt to share their screen with an unknown contact during a video call so as to prevent them from giving away sensitive information like bank details or verification codes. On Messenger, users can opt to enable a setting called “Scam detection” by navigating to Privacy &amp; safety settings. Once it’s turned on, users are alerted when they receive a potentially suspicious message from an unknown connection that may contain signs of a scam.</p>
+
+<p>“Because detection happens on your device, chats with end-to-end encryption stay secure,” Meta
+said
+in a support document. “If you’re notified that a chat may contain signs of a scam, we’ll ask if you’d like to send recent messages you received to AI review. Messages that are shared with AI are no longer end-to-end encrypted.”
+If the review finds that it’s indeed a possible scam, users are given more information about common scams, such as job offers in exchange for money, opportunities promising fast cash, and work-from-home offers for jobs that can’t possibly be done remotely. Users are also provided options to block or report the account in question.</p>
+
+<p>As part of its ongoing efforts to combat scams, the social media giant said it took action on over 21,000 Facebook Pages and accounts masquerading as customer support in an attempt to trick people into sharing their personal information. In addition, Meta said it detected and disrupted close to 8 million accounts on Facebook and Instagram since the start of the year that are associated with criminal scam centers targeting people, including the elderly, across the world through messaging, dating apps, social media, crypto, and other apps. The scam compounds operated out of Myanmar, Laos, Cambodia, the United Arab Emirates, and the Philippines. These schemes, often called
+romance baiting
+(aka pig butchering), are run by cybercrime syndicates based out of Southeast Asia and refer to a type of investment fraud where criminals entice victims into depositing ever-larger sums into bogus platforms with promises of bigger returns.</p>
+
+<p>In many of the cases, the scammers – who are themselves trafficked into the region with lures of high-paying jobs and held against their will – initiate contact with victims through dating apps, social media platforms, or private messaging services like WhatsApp. Once they establish rapport, the operation moves to the next phase, with the threat actors steering victims toward supposed investment opportunities, often tied to cryptocurrencies, and deceiving them into depositing their funds and ultimately disappearing without a trace. “Central to the scam is psychological manipulation: perpetrators cultivate emotional bonds, instill confidence, and in some cases even simulate romantic relationships,” Infoblox
+noted
+in an analysis published earlier this month. “This drawn-out grooming process lowers victims’ defenses and primes them to believe in promises of extraordinary returns, leading to devastating financial losses.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="polaredge-targets-cisco-asus-qnap-synology-routers-in-expanding-botnet-campaign"><a id="article-11"></a>PolarEdge Targets Cisco, ASUS, QNAP, Synology Routers in Expanding Botnet Campaign</h2>
+
+<p>Cybersecurity researchers have shed light on the inner workings of a botnet malware called
+PolarEdge
+. PolarEdge was
+first documented
+by Sekoia in February 2025, attributing it to a campaign targeting routers from Cisco, ASUS, QNAP, and Synology with the goal of corralling them into a network for an as-yet-undetermined purpose. The TLS-based ELF implant, at its core, is designed to monitor incoming client connections and execute commands within them. Then, in August 2025, attack surface management platform Censys
+detailed
+the infrastructural backbone powering the botnet, with the company noting that PolarEdge exhibits characteristics that are consistent with an Operational Relay Box (ORB) network.</p>
+
+<p>There is evidence to suggest that the activity involving the malware may have started as far back as June 2023. In the attack chains observed in February 2025, the threat actors have been observed exploiting a known security flaw impacting Cisco routers (CVE-2023-20118) to download a shell script named “q” over FTP, which is then responsible for retrieving and executing the PolarEdge backdoor on the compromised system. “The backdoor’s primary function is to send a host fingerprint to its command-and-control server and then listen for commands over a built-in TLS server implemented with mbedTLS,” the French cybersecurity company
+said
+in a technical breakdown of the malware. PolarEdge is designed to support two modes of operation: a connect-back mode, where the backdoor acts as a TLS client to download a file from a remote server, and debug mode, where the backdoor enters into an interactive mode to modify its configuration (i.e., server information) on-the-fly.</p>
+
+<p>The configuration is embedded in the final 512 bytes of the ELF image, obfuscated by a one-byte XOR that can be decrypted with single-byte key 0x11. However, its default mode is to function as a TLS server in order to send a host fingerprint to the command-and-control (C2) server and wait for commands to be sent. The TLS server is implemented with mbedTLS v2.8.0 and relies on a custom binary protocol for parsing incoming requests matching specific criteria, including a parameter named “HasCommand.”
+Encryption algorithms used to obfuscate parts of the backdoor
+If the “HasCommand” parameter equals the ASCII character 1, the backdoor proceeds to extract and run the command specified in the “Command” field and transmits back the raw output of the executed command. Once launched, PolarEdge also moves (e.g., /usr/bin/wget, /sbin/curl) and deletes certain files (“/share/CACHEDEV1_DATA/.qpkg/CMS-WS/cgi-bin/library.cgi.bak”) on the infected device, although the exact purpose behind this step is unclear.</p>
+
+<p>Furthermore, the backdoor incorporates a wide range of anti-analysis techniques to obfuscate information related to the TLS server setup and fingerprinting logic. To evade detection, it employs process masquerading during its initialization phase by choosing from a predefined list a name at random. Some of the names included are: igmpproxy, wscd, /sbin/dhcpd, httpd, upnpd, and iapp. “Although the backdoor does not ensure persistence across reboots, it calls fork to spawn a child process that, every 30 seconds, checks whether /proc/<parent-pid> still exists," Sekoia researchers explained.</parent-pid></p>
+
+<p>“If the directory has disappeared, the child executes a shell command to relaunch the backdoor.”
+The disclosure comes as Synthient highlighted GhostSocks’ ability to convert compromised devices into SOCKS5 residential proxies. GhostSocks is said to have been first advertised under the malware-as-a-service (MaaS) model on the XSS forum in October 2023. It’s worth noting that the offering has been
+integrated
+into Lumma Stealer as of early 2024, allowing customers of the stealer malware to monetize the compromised devices post-infection. “GhostSocks provides clients with the ability to build a 32-bit DLL or executable,” Synthient
+said
+in a recent analysis.</p>
+
+<p>“GhostSocks will attempt to locate a configuration file in %TEMP%. In the scenario that the configuration file cannot be found, it will fall back to a hard-coded config.”
+The configuration contains details of the C2 server to which a connection is established for provisioning the SOCKS5 proxy and ultimately spawning a connection using the open-source
+go-socks5
+and
+yamux
+libraries. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="securing-ai-to-benefit-from-ai"><a id="article-12"></a>Securing AI to Benefit from AI</h2>
+
+<p>Artificial intelligence (AI) holds tremendous promise for improving cyber defense and making the lives of security practitioners easier. It can help teams cut through alert fatigue, spot patterns faster, and bring a level of scale that human analysts alone can’t match. But realizing that potential depends on securing the systems that make it possible. Every organization experimenting with AI in security operations is, knowingly or not, expanding its attack surface.</p>
+
+<p>Without clear governance, strong identity controls, and visibility into how AI makes its decisions, even well-intentioned deployments can create risk faster than they reduce it. To truly benefit from AI, defenders need to approach securing it with the same rigor they apply to any other critical system. That means establishing trust in the data it learns from, accountability for the actions it takes, and oversight for the outcomes it produces. When secured correctly, AI can amplify human capability instead of replacing it to help practitioners work smarter, respond faster, and defend more effectively.</p>
+
+<p>Establishing Trust for Agentic AI Systems
+As organizations begin to integrate AI into defensive workflows, identity security becomes the foundation for trust. Every model, script, or autonomous agent operating in a production environment now represents a new identity — one capable of accessing data, issuing commands, and influencing defensive outcomes. If those identities aren’t properly governed, the tools meant to strengthen security can quietly become sources of risk. The emergence of Agentic AI systems make this especially important.</p>
+
+<p>These systems don’t just analyze; they may act without human intervention. They triage alerts, enrich context, or trigger response playbooks under delegated authority from human operators. Each action is, in effect, a transaction of trust. That trust must be bound to identity, authenticated through policy, and auditable end to end.</p>
+
+<p>The same principles that secure people and services must now apply to AI agents:
+Scoped credentials and least privilege
+to ensure every model or agent can access only the data and functions required for its task. Strong authentication and key rotation
+to prevent impersonation or credential leakage. Activity provenance and audit logging
+so every AI-initiated action can be traced, validated, and reversed if necessary. Segmentation and isolation
+to prevent cross-agent access, ensuring that one compromised process cannot influence others.</p>
+
+<p>In practice, this means treating every agentic AI system as a first-class identity within your IAM framework. Each should have a defined owner, lifecycle policy, and monitoring scope just like any user or service account. Defensive teams should continuously verify what those agents can do, not just what they were intended to do, because capability often drifts faster than design. With identity established as the foundation, defenders can then turn their attention to securing the broader system.</p>
+
+<p>Securing AI: Best Practices for Success
+Securing AI begins with protecting the systems that make it possible — the models, data pipelines, and integrations now woven into everyday security operations. Just as
+we secure networks and endpoints, AI systems must be treated as mission-critical infrastructure that requires layered and continuous defense. The
+SANS Secure AI Blueprint
+outlines a
+Protect AI
+track that provides a clear starting point. Built on the
+SANS Critical AI Security Guidelines
+, the blueprint defines six control domains that translate directly into practice:
+Access Controls:
+Apply least privilege and strong authentication to every model, dataset, and API.</p>
+
+<p>Log and review access continuously to prevent unauthorized use. Data Controls:
+Validate, sanitize, and classify all data used for training, augmentation, or inference. Secure storage and lineage tracking reduce the risk of model poisoning or data leakage. Deployment Strategies:
+Harden AI pipelines and environments with sandboxing, CI/CD gating, and red-teaming before release.</p>
+
+<p>Treat deployment as a controlled, auditable event, not an experiment. Inference Security:
+Protect models from prompt injection and misuse by enforcing input/output validation, guardrails, and escalation paths for high-impact actions. Monitoring:
+Continuously observe model behavior and output for drift, anomalies, and signs of compromise. Effective telemetry allows defenders to detect manipulation before it spreads.</p>
+
+<p>Model Security:
+Version, sign, and integrity-check models throughout their lifecycle to ensure authenticity and prevent unauthorized swaps or retraining. These controls align directly
+NIST’s AI Risk
+Management
+Framework
+and the
+OWASP Top 10 for LLMs
+, which highlights the most common and consequential vulnerabilities in AI systems — from prompt injection and insecure plugin integrations to model poisoning and data exposure. Applying mitigations from those frameworks inside these six domains helps translate guidance into operational defense. Once these foundations are in place, teams can focus on using AI responsibly by knowing when to trust automation and when to keep humans in the loop.</p>
+
+<p>Balancing Augmentation and Automation
+AI systems are capable of assisting human practitioners like an intern that never sleeps. However, it is critical for security teams to differentiate what to automate from what to augment. Some tasks benefit from full automation, especially those that are repeatable, measurable, and low-risk if an error occurs. However, others demand direct human oversight because context, intuition, or ethics matter more than speed.</p>
+
+<p>Threat enrichment, log parsing, and alert deduplication are prime candidates for automation. These are data-heavy, pattern-driven processes where consistency outperforms creativity. By contrast, incident scoping, attribution, and response decisions rely on context that AI cannot fully grasp. Here, AI should assist by surfacing indicators, suggesting next steps, or summarizing findings while practitioners retain decision authority.</p>
+
+<p>Finding that balance requires maturity in process design. Security teams should categorize workflows by their tolerance for error and the cost of automation failure. Wherever the risk of false positives or missed nuance is high, keep humans in the loop. Wherever precision can be objectively measured, let AI accelerate the work.</p>
+
+<p>Join us at SANS Surge 2026! I’ll dive deeper into this topic during my keynote at
+SANS Surge 2026 (Feb. 23-28, 2026),
+where we’ll explore how security teams can ensure AI systems are safe to depend on. If your organization is moving fast on AI adoption, this event will help you move more securely.</p>
+
+<p>Join us to connect with peers, learn from experts, and see what secure AI in practice really looks like. Register for SANS Surge 2026 here
+. Note:
+This article was contributed by Frank Kim, SANS Institute Fellow. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

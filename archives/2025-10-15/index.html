@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-10-15 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</a></li>
+      
+        <li><a href="#article-2">Moving Beyond Awareness: How Threat Hunting Builds Readiness</a></li>
+      
+        <li><a href="#article-3">RMPocalypse: Single 8-Byte Write Shatters AMD's SEV-SNP Confidential Computing</a></li>
+      
+        <li><a href="#article-4">New Pixnapping Android Flaw Lets Rogue Apps Steal 2FA Codes Without Permissions</a></li>
+      
+        <li><a href="#article-5">What AI Reveals About Web Applications— and Why It Matters</a></li>
+      
+        <li><a href="#article-6">npm, PyPI, and RubyGems Packages Found Sending Developer Data to Discord Channels</a></li>
+      
+        <li><a href="#article-7">Researchers Expose TA585's MonsterV2 Malware Capabilities and Attack Chain</a></li>
+      
+        <li><a href="#article-8">⚡ Weekly Recap: WhatsApp Worm, Critical CVEs, Oracle 0-Day, Ransomware Cartel & More</a></li>
+      
+        <li><a href="#article-9">Why Unmonitored JavaScript Is Your Biggest Holiday Security Risk</a></li>
+      
+        <li><a href="#article-10">Researchers Warn RondoDox Botnet is Weaponizing Over 50 Flaws Across 30+ Vendors</a></li>
+      
+        <li><a href="#article-11">Microsoft Locks Down IE Mode After Hackers Turned Legacy Feature Into Backdoor</a></li>
+      
+        <li><a href="#article-12">Astaroth Banking Trojan Abuses GitHub to Remain Operational After Takedowns</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-10-15-ai创业新闻">2025-10-15 AI创业新闻</h1>
+
+<h2 id="chinese-hackers-exploit-arcgis-server-as-backdoor-for-over-a-year"><a id="article-1"></a>Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</h2>
+
+<p>Threat actors with ties to China have been attributed to a novel campaign that compromised an
+ArcGIS
+system and turned it into a backdoor for more than a year. The activity, per ReliaQuest, is the handiwork of a Chinese state-sponsored hacking group called
+Flax Typhoon
+, which is also tracked as Ethereal Panda and RedJuliett. According to the U.S. government, it’s
+assessed
+to be a publicly-traded, Beijing-based company known as Integrity Technology Group.</p>
+
+<p>“The group cleverly modified a geo-mapping application’s Java server object extension (SOE) into a functioning web shell,” the cybersecurity company
+said
+in a report shared with The Hacker News. “By gating access with a hardcoded key for exclusive control and embedding it in system backups, they achieved deep, long-term persistence that could survive a full system recovery.”
+Flax Typhoon is known for living up to the “stealth” in its tradecraft by extensively incorporating living-off-the-land (LotL) methods and hands-on keyboard activity, thereby turning software components into vehicles for malicious attacks, while simultaneously evading detection. The attack demonstrates how attackers increasingly abuse trusted tools and services to bypass security measures and gain unauthorized access to victims’ systems, at the same time blending in with normal server traffic. The “unusually clever attack chain” involved the threat actors targeting a public-facing ArcGIS server by compromising a portal administrator account to deploy a malicious SOE.</p>
+
+<p>“The attackers activated the malicious SOE using a standard [JavaSimpleRESTSOE] ArcGIS extension, invoking a REST operation to run commands on the internal server via the public portal—making their activity difficult to spot,” ReliaQuest said. “By adding a hard-coded key, Flax Typhoon prevented other attackers, or even curious admins, from tampering with its access.”
+The “web shell” is said to have been used to run network discovery operations, establish persistence by uploading a renamed SoftEther VPN executable (“bridge.exe”) to the “System32” folder, and then creating a service named “SysBridge” to automatically start the binary every time the server is rebooted. The “bridge.exe” process has been found to establish outbound HTTPS connections to an attacker-controlled IP address on port 443 with the primary goal of setting up a covert VPN channel to the external server. “This VPN bridge allows the attackers to extend the target’s local network to a remote location, making it appear as if the attacker is part of the internal network,” researchers Alexa Feminella and James Xiang explained.</p>
+
+<p>“This allowed them to bypass network-level monitoring, acting like a backdoor that allows them to conduct additional lateral movement and exfiltration.”
+The threat actors are said to have specifically targeted two workstations belonging to IT personnel in order to obtain credentials and further burrow into the network. Further investigation has uncovered that the adversary had access to the administrative account and was able to reset the password. “This attack highlights not just the creativity and sophistication of attackers but also the danger of trusted system functionality being weaponized to evade traditional detection,” the researchers noted. “It’s not just about spotting malicious activity; it’s about recognizing how legitimate tools and processes can be manipulated and turned against you.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="moving-beyond-awareness-how-threat-hunting-builds-readiness"><a id="article-2"></a>Moving Beyond Awareness: How Threat Hunting Builds Readiness</h2>
+
+<p>Every October brings a familiar rhythm - pumpkin-spice everything in stores and cafés, alongside a wave of reminders, webinars, and checklists in my inbox. Halloween may be just around the corner, yet for those of us in cybersecurity,
+Security Awareness Month
+is the true seasonal milestone. Make no mistake, as a security professional, I love this month. Launched by CISA and the National Cybersecurity Alliance back in 2004, it’s designed to make security a shared responsibility.</p>
+
+<p>It helps regular citizens, businesses, and public agencies build safer digital habits. And it works. It draws attention to risk in its many forms, sparks conversations that otherwise might not happen, and helps employees recognize their personal stake in and influence over the organization’s security. Security Awareness Month initiatives boost confidence, sharpen instincts, and keep security at the front of everyone’s mind…</p>
+
+<p>until the winter holiday season decorations start to go up, that is. After that, the momentum slips. Awareness without reinforcement fades quickly. People know what to do, yet daily pressure and shifting priorities let weak passwords, misconfigurations, and unused accounts slip back in.</p>
+
+<p>Real progress needs a structure that verifies what people remember and catches what they miss - systems that continuously validate identity, configuration, and privilege. In this article, I’ll take a closer look at why awareness alone can’t carry the full weight of security and how proactive threat hunting closes the gap between what we know and what we can actually prevent. The Limits of Awareness
+Security Awareness Month highlights the human side of defense. It reminds employees that every click, credential, and connection matters.</p>
+
+<p>That focus has value, and I’ve seen organizations invest heavily in creative campaigns that genuinely change employee behavior. Yet many of these same organizations still experience serious breaches. The reason is that many breaches start in places that training just cannot reach. Security misconfigurations alone account for
+more than a third
+of all cyber incidents and roughly
+a quarter of cloud security
+incidents.</p>
+
+<p>The signal is clear: awareness has its limits. It can improve decision-making, but it cannot fix what people never see. Part of the problem is that traditional defenses focus primarily on detection and response. EDR alerts on suspicious activity.</p>
+
+<p>SIEM correlates events after they occur. Vulnerability scanners identify known weaknesses. These tools operate primarily on the right side of the
+Cyber Defense Matrix
+, focusing on the reactive phases of defense. Effective defense needs to start earlier.</p>
+
+<p>The proactive left side of the Matrix - identification and protection – should be based on assurances, not assumptions. Proactive threat hunting establishes a mechanism that provides these assurances, lending power to the process that awareness initiates. Creates a mechanism that provides those assurances – lending power to the process that awareness kicks off. It searches for the misconfigurations, the exposed credentials, and the excessive privileges that create attack opportunities, then removes them before an adversary can exploit them.</p>
+
+<p>Proactive Threat Hunting Changes the Equation
+The best defense begins before the first alert. Proactive threat hunting identifies the conditions that allow an attack to form and addresses them early. It moves security from passive observation to a clear understanding of where exposure originates. This move from observation to proactive understanding forms the core of a modern security program: Continuous Threat Exposure Management (CTEM).</p>
+
+<p>Instead of a one-time project, a CTEM program provides a structured, repeatable framework to continuously model threats, validate controls, and secure the business. For organizations ready to build this capability,
+A Practical Guide to Getting Started With CTEM
+offers a clear roadmap. Attackers already follow this model. Today’s campaigns threat actors link identity misuse, credential reuse, and lateral movement across hybrid environments at machine speed.</p>
+
+<p>AI-driven automation maps and arms entire infrastructures in minutes. Teams that examine their environments through an attacker’s perspective can see how small minor oversights connect into full attack paths allowing threat actors to weave through defensive layers. This turns scattered risk data into a living picture of how compromise develops and how to stop it early. Defenders need the depth of contextual visibility that attackers already possess.</p>
+
+<p>Proactive threat hunting creates that visibility - building readiness in three stages:
+Get the Right Data
+– Collect vulnerability, network design, and each system’s connectivity, identity (both SSO, and data cached on systems), and configuration data from every part of the environment to create a single attacker-centric view. The goal is to see what an adversary would see, including weak credentials, cloud posture gaps, and privilege relationships that create entry points. A digital twin offers a practical way to safely replicate the environment and view all exposures in one place. Map the Attack Paths
+– Utilize the digital twin to connect exposures and assets, illustrating how a compromise could progress through the environment and impact critical systems.</p>
+
+<p>This mapping reveals the chains of exploitation that matter. It replaces assumptions with evidence, showing exactly how multiple small exposures converge to form an attack path. Prioritize by Business Impact
+– Link each validated path to the assets and processes that support business operations. This stage translates technical findings into business risk, focusing remediation on the exposures that could cause the greatest business disruption.</p>
+
+<p>The result is clarity - a verified, prioritized set of actions that directly strengthen resilience. Awareness is a critical building block. But proactive threat hunting gives defenders something awareness alone can never provide - proof. It shows exactly where the organization stands and how quickly it can close the gap between visibility and prevention.</p>
+
+<p>From Awareness to Readiness
+Security Awareness Month reminds us that awareness is an essential step. Yet real progress begins when awareness leads to action. Awareness is only as powerful as the systems that measure and validate it. Proactive threat hunting turns awareness into readiness by keeping attention fixed on what matters most - the weak points that form the basis for tomorrow’s attacks.</p>
+
+<p>Awareness teaches people to see risk. Threat hunting proves whether the risk still exists. Together they form a continuous cycle that keeps security viable long after awareness campaigns end. This October, the question for every organization is not how many employees completed the training, but how confident you are that your defenses would hold today if someone tested them.</p>
+
+<p>Awareness builds understanding. Readiness delivers protection. Note:
+This article was written and contributed by
+Jason Frugé
+, CISO in Residence, XM Cyber. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="rmpocalypse-single-8-byte-write-shatters-amds-sev-snp-confidential-computing"><a id="article-3"></a>RMPocalypse: Single 8-Byte Write Shatters AMD’s SEV-SNP Confidential Computing</h2>
+
+<p>Chipmaker AMD has released fixes to address a security flaw dubbed
+RMPocalypse
+that could be exploited to undermine confidential computing guarantees provided by Secure Encrypted Virtualization with Secure Nested Paging (
+SEV-SNP
+). The
+attack
+, per ETH Zürich researchers Benedict Schlüter and Shweta Shinde, exploits AMD’s incomplete protections that make it possible to perform a single memory write to the Reverse Map Paging (RMP) table, a data structure that’s used to store security metadata for all DRAM pages in the system. “The Reverse Map Table (RMP) is a structure that resides in DRAM and maps system physical addresses (sPAs) to guest physical addresses (gPAs),” according to AMD’s
+specification documentation
+. “There is only one RMP for the entire system, which is configured using x86 model-specific registers (MSRs).”
+“The RMP also contains various security attributes of each that are managed by the hypervisor through hardware-mediated and firmware-mediated controls.”
+AMD makes use of what’s called a Platform Security Processor (PSP) to initialize the RMP, which is crucial to enabling SEV-SNP on the platform.</p>
+
+<p>RMPocalypse exploits a memory management flaw in this initialization step, allowing attackers to access sensitive information in contravention of SEV-SNP’s confidentiality and integrity protections. At the heart of the problem is a lack of adequate safeguards for the security mechanism itself – something of a catch-22 situation that arises as a result of RMP not being fully protected when a virtual machine is started, effectively opening the door to RMP corruption. “This gap could allow attackers with remote access to bypass certain protective functions and manipulate the virtual machine environment, which is intended to be securely isolated,” ETH Zürich
+said
+. “This vulnerability can be exploited to activate hidden functions (such as a debug mode), simulate security checks (so-called attestation forgeries) and restore previous states (replay attacks) – and even to inject foreign code.”
+Successful exploitation of RMPocalypse can allow a bad actor to arbitrarily tamper with the execution of the confidential virtual machines (CVMs) and exfiltrate all secrets with 100% success rate, the researchers found.</p>
+
+<p>In response to the findings, AMD has assigned the CVE identifier CVE-2025-0033 (CVSS v4 score: 5.9) to the vulnerability, describing it as a race condition that can occur while the AMD Secure Processor (ASP or PSP) is initializing the RMP. As a result, it could allow a malicious hypervisor to manipulate the initial RMP content, potentially resulting in loss of SEV-SNP guest memory integrity. “Improper access control within AMD SEV-SNP could allow an admin-privileged attacker to write to the RMP during SNP initialization, potentially resulting in a loss of SEV-SNP guest memory integrity,” the chipmaker
+noted
+in its advisory released Monday. AMD has revealed that the following chipsets are impacted by the flaw -
+AMD EPYC™ 7003 Series Processors
+AMD EPYC™ 8004 Series Processors
+AMD EPYC™ 9004 Series Processors
+AMD EPYC™ 9005 Series Processors
+AMD EPYC™ Embedded 7003 Series Processors (Fix planned for release in November 2025)
+AMD EPYC™ Embedded 8004 Series Processors
+AMD EPYC™ Embedded 9004 Series Processors
+AMD EPYC™ Embedded 9004 Series Processors
+AMD EPYC™ Embedded 9005 Series Processors (Fix planned for release in November 2025)
+Microsoft
+and
+Supermicro
+have also acknowledged CVE-2025-0033, with the Windows maker stating that it’s working to remediate it in Azure Confidential Computing’s (ACC) AMD-based clusters.</p>
+
+<p>Supermicro said impacted motherboard SKUs require a BIOS update to address the flaw. “RMPocalypse shows that AMD’s platform protection mechanisms are not complete, thus leaving a small window of opportunity for the attacker to maliciously overwrite the RMP on initialization,” the researchers said. “Due to the design of the RMP, a single overwrite of 8 bytes within the RMP causes the entire RMP to become subsequently compromised.”
+“With a compromised RMP, all integrity guarantees of SEV-SNP become void. RMPocalypse case studies show that an attacker-controlled RMP not only voids the integrity but also results in a full breach of confidentiality.”
+The development comes weeks after a group of academics from KU Leuven and the University of Birmingham demonstrated a new vulnerability called
+Battering RAM
+to bypass the latest defenses on Intel and AMD cloud processors.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-pixnapping-android-flaw-lets-rogue-apps-steal-2fa-codes-without-permissions"><a id="article-4"></a>New Pixnapping Android Flaw Lets Rogue Apps Steal 2FA Codes Without Permissions</h2>
+
+<p>Android devices from Google and Samsung have been found vulnerable to a
+side-channel attack
+that could be exploited to covertly steal two-factor authentication (2FA) codes, Google Maps timelines, and other sensitive data without the users’ knowledge pixel-by-pixel. The attack has been codenamed
+Pixnapping
+by a group of academics from the University of California (Berkeley), University of Washington, University of California (San Diego), and Carnegie Mellon University. Pixnapping, at its core, is a pixel-stealing framework aimed at Android devices in a manner that bypasses browser mitigations and even siphons data from non-browser apps like Google Authenticator by taking advantage of Android APIs and a hardware side-channel, allowing a malicious app to weaponize the technique to capture 2FA codes in under 30 seconds. “Our key observation is that Android APIs enable an attacker to create an analog to
+[Paul] Stone-style attacks
+outside of the browser,” the researchers
+said
+in a paper.</p>
+
+<p>“Specifically, a malicious app can force victim pixels into the rendering pipeline via Android intents and compute on those victim pixels using a stack of semi-transparent Android activities.”
+The study specifically focused on five devices from Google and Samsung running Android versions 13 to 16, and while it’s not clear if Android devices from other original equipment manufacturers (OEMs) are susceptible to Pixnapping, the underlying methodology necessary to pull off the attack is present in all devices running the mobile operating system. What makes the novel attack significant is that any Android app can be used to execute it, even if the application does not have any special permissions attached via its manifest file. However, the attack presupposes that the victim has been convinced by some other means to install and launch the app. The side-channel that makes Pixnapping possible is
+GPU.zip
+, which was disclosed by some of the same researchers back in September 2023.</p>
+
+<p>The attack essentially takes advantage of a compression feature in modern integrated GPUs (iGPUs) to perform cross-origin pixel stealing attacks in the browser using SVG filters. Overview of our pixel stealing framework
+The latest class of attack combines this with Android’s window blur API to leak rendering data and enable theft from victim apps. In order to accomplish this, a malicious Android app is used to send victim app pixels into the rendering pipeline and overlay semi-transparent activities using
+intents
+– an Android software mechanism that allows for navigation between applications and
+activities
+. In other words, the idea is to invoke a target app containing information of interest (e.g., 2FA codes) and cause the data to be submitted for rendering, following which the rogue app installed the device isolates the coordinates of a target pixel (i.e., ones which contain the 2FA code) and induces a stack of semi-transparent activities to mask, enlarge, and transmit that pixel using the side-channel.</p>
+
+<p>This step is then repeated for every pixel pushed to the rendering pipeline. The researchers said Android is vulnerable to Pixnapping due to a combination of three factors that allow an app to -
+Send another app’s activities to the Android rendering pipeline (e.g., with intents)
+Induce graphical operations (e.g., blur) on pixels displayed by another app’s activities
+Measure the pixel color-dependent side effects of graphical operations
+Google is tracking the issue under the CVE identifier
+CVE-2025-48561
+(CVSS score: 5.5). Patches for the vulnerability were issued by the tech giant as part of its
+September 2025 Android Security Bulletin
+, with Google
+noting
+that: “An application requesting lots and lots of blurs: (1) enables pixel stealing by measuring how long it takes to perform a blur across windows, [and] (2) probably isn’t very valid anyways.”
+However, it has since come to light that there exists a workaround that can be used to re-enable Pixnapping. The company is said to be working on a fix.</p>
+
+<p>Furthermore, the study found that as a consequence of this behavior, it’s possible for an attacker to determine if an arbitrary app is installed on the device, bypassing restrictions
+implemented
+since Android 11 that prevent querying the list of all installed apps on a user’s device. The app list bypass remains unpatched, with Google marking it as “won’t fix.”
+“Like browsers at the beginning, the intentionally collaborative and multi-actor design of mobile app layering makes the obvious restrictions unappealing,” the researchers concluded. “App layering is not going away, and layered apps would be useless with a no-third-party-cookies style of restriction. A realistic response is making the new attacks as unappealing as the old ones: allow sensitive apps to opt out and restrict the attacker’s measurement capabilities so that any proof-of-concept stays just that.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="what-ai-reveals-about-web-applications-and-why-it-matters"><a id="article-5"></a>What AI Reveals About Web Applications— and Why It Matters</h2>
+
+<p>Before an attacker ever sends a payload, they’ve already done the work of understanding how your environment is built. They look at your login flows, your JavaScript files, your error messages, your API documentation, your GitHub repos. These are all clues that help them understand how your systems behave. AI is significantly accelerating reconnaissance and enabling attackers to map your environment with greater speed and precision.</p>
+
+<p>While the narrative often paints AI as running the show, we’re not seeing AI take over offensive operations end to end. AI is not autonomously writing exploits, chaining attacks, and breaching systems without the human in the loop. What it
+is
+doing is speeding up the early and middle stages of the attacker workflow: gathering information, enriching it, and generating plausible paths to execution. Think of it like AI-generated writing; AI can produce a draft quickly given the right parameters, but someone still needs to review, refine, and tune it for the result to be useful.</p>
+
+<p>The same applies to offensive security. AI can build payloads and perform a lot of functions at a higher level than traditional algorithms could, but as of yet they still require direction and context to be effective. This shift matters because it expands what we consider exposure. An outdated library used to be a liability only if it had a known CVE.</p>
+
+<p>Today, it can be a liability if it tells an attacker what framework you’re using and helps them narrow down a working attack path. That’s the difference. AI helps turn seemingly harmless details into actionable insight—not through brute force, but through better comprehension. So while AI isn’t changing how attackers get in, it’s changing how they decide where to look and what’s worth their time.</p>
+
+<p>AI’s Reconnaissance Superpowers
+That decision-making process of identifying what is relevant, what is vulnerable, and what is worth pursuing is where AI is already proving its value. Its strength lies in making sense of unstructured data at scale, which makes it well-suited to reconnaissance. AI can parse and organize large volumes of external-facing information: website content, headers, DNS records, page structures, login flows, SSL configurations, and more. It can align this data to known technologies, frameworks, and security tools, giving an attacker a clearer understanding of what’s running behind the scenes.</p>
+
+<p>Language is no longer a barrier. AI can extract meaning from error messages in any language, correlate technical documentation across regions, and recognize naming conventions or patterns that might go unnoticed by a human reviewer. It also excels at contextual matching. If an application is exposing a versioned JavaScript library, AI can identify the framework, check for associated risks, and match known techniques based on that context.</p>
+
+<p>Not because it’s inventing new methods, but because it knows how to cross-reference data quickly and thoroughly. In short, AI is becoming a highly efficient reconnaissance and enrichment layer. It helps attackers prioritize and focus, not by doing something new but by doing something familiar with far more scale and consistency. How AI is Changing Web App Attacks
+The impact of AI becomes even more visible when you look at how it shapes common web attack techniques:
+Start with brute forcing.</p>
+
+<p>Traditionally, attackers rely on static dictionaries to guess credentials. AI improves this by generating more realistic combinations using regional language patterns, role-based assumptions, and naming conventions specific to the target organization. It also recognizes the type of system it is interacting with, whether it’s a specific database, operating system, or admin panel, and uses that context to attempt the most relevant default credentials. This targeted approach reduces noise and increases the likelihood of success with fewer, more intelligent attempts.</p>
+
+<p>AI also enhances interpretation. It can identify subtle changes in login behavior, such as shifts in page structure, variations in error messages, or redirect behavior, and adjust its approach accordingly. This helps reduce false positives and enables faster pivoting when an attempt fails. For example, a traditional script might assume that a successful login is indicated by a 70 percent change in page content.</p>
+
+<p>But if the user is redirected to a temporary landing page — one that looks different but ultimately leads to an error like “Account locked after too many attempts” — the script could misclassify it as a success. AI can analyze the content, status codes, and flow more holistically, recognizing that the login did not succeed and adapting its strategy accordingly. That context awareness is what separates AI from traditional pattern-matching tools. A common false positive for traditional credential harvesting tools such is placeholder credentials:
+At first glance, it appears to contain hardcoded credentials.</p>
+
+<p>But in reality, it’s a harmless placeholder referencing the example.com domain. The traditional tool flagged it anyway. AI, by contrast, evaluates the surrounding context and recognizes that this is not a real secret. In testing, we’ve seen models label it “Sensitive: false” with “Confidence: high,” helping filter out false positives to reduce noise.</p>
+
+<p>AI also improves how attackers explore an application’s behavior. In fuzzing workflows, it can propose new inputs based on observed outcomes and refine those inputs as the application responds. This helps uncover business logic flaws, broken access controls, or other subtle vulnerabilities that don’t always trigger alerts. When it comes to execution, AI helps generate payloads based on real-time threat intelligence.</p>
+
+<p>This enables platforms to emulate newly observed techniques more quickly. These payloads are not blindly deployed. They are reviewed, adapted to the environment, and tested for accuracy and safety before being used. This shortens the gap between emerging threats and meaningful validation.</p>
+
+<p>In more advanced scenarios, AI can incorporate exposed data into the attack itself. If the platform detects personally identifiable information such as names or email addresses during a test, it can automatically apply that data in the next phase. This includes actions like credential stuffing, impersonation, or lateral movement—reflecting how a real attacker might adapt in the moment. Together, these capabilities make AI-driven attacks more efficient, more adaptive, and more convincing.</p>
+
+<p>The core techniques remain the same. The difference is in the speed, accuracy, and ability to apply context—something defenders can no longer afford to overlook. Rethinking Exposure in the Age of AI
+The impact of AI on reconnaissance workflows creates a shift in how defenders need to think about exposure. It’s no longer enough to assess only what’s reachable: IP ranges, open ports, externally exposed services.</p>
+
+<p>AI expands the definition to include what’s inferable based on context. This includes metadata, naming conventions, JavaScript variable names, error messages, and even consistent patterns in how your infrastructure is deployed. AI doesn’t need root access to get value from your environment. It just needs a few observable behaviors and a large enough training set to make sense of them.</p>
+
+<p>Exposure is a spectrum. You can be technically “secure” but still provide enough clues for an attacker to build a map of your architecture, your tech stack, or your authentication flow. That’s the kind of insight AI excels at extracting. Security tools have traditionally prioritized direct indicators of risk: known vulnerabilities, misconfigurations, unpatched components, or suspicious activity.</p>
+
+<p>But AI introduces a different dimension. It can infer the presence of vulnerable components not by scanning them directly, but by recognizing behavioral patterns, architectural clues, or API responses that match known attack paths. That inference doesn’t trigger an alert on its own, but it can guide an attacker’s decision-making and narrow the search for an entry point. In a world where AI can rapidly profile environments, the old model of “scan and patch” isn’t sufficient.</p>
+
+<p>Defenders need to reduce what can be learned and not just what can be exploited. What this changes for defenders
+As AI accelerates reconnaissance and decision-making, defenders need to respond with the same level of automation and intelligence. If attackers are using AI to study your environment, you need to use AI to understand what they’re likely to find. If they’re testing how your systems behave, you need to test them first.</p>
+
+<p>This is the new definition of exposure. It’s not just what’s accessible. It’s what can be analyzed, interpreted, and turned into action. And if you’re not validating it continuously, you’re flying blind to what your environment is actually revealing.</p>
+
+<p>Seeing your attack surface through the eyes of an attacker, and validating your defenses using the same techniques they use, is no longer a nice-to-have. It’s the only realistic way to keep up. Get an inside look at Pentera Labs’ latest AI threat research. Register for the AI Threat Research vSummit
+and stay ahead of the next wave of attacks.</p>
+
+<p>Note:
+This article was written and contributed by Alex Spivakovsky, VP of Research &amp; Cybersecurity at Pentera. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="npm-pypi-and-rubygems-packages-found-sending-developer-data-to-discord-channels"><a id="article-6"></a>npm, PyPI, and RubyGems Packages Found Sending Developer Data to Discord Channels</h2>
+
+<p>Cybersecurity researchers have identified several malicious packages across npm, Python, and Ruby ecosystems that leverage
+Discord
+as a command-and-control (C2) channel to transmit stolen data to actor-controlled webhooks. Webhooks
+on Discord are a way to
+post messages
+to channels in the platform without requiring a bot user or authentication, making them an attractive mechanism for attackers to exfiltrate data to a channel under their control. “Importantly, webhook URLs are effectively write-only,” Socket researcher Olivia Brown
+said
+in an analysis. “They do not expose channel history, and defenders cannot read back prior posts just by knowing the URL.”
+The software supply chain security company said it identified a number of packages that use Discord webhooks in various ways -
+mysql-dumpdiscord (npm), which siphons the contents of developer configuration files like config.json, .env, ayarlar.js, and ayarlar.json to a Discord webhook
+nodejs.discord (npm), which uses a Discord webhook to likely log alerts (an approach that’s not inherently malicious)
+malinssx, malicus, and maliinn (PyPI), which uses Discord as a C2 server by triggering an HTTP request to a channel every time the packages are installed using “pip install <package name="">"
+sqlcommenter_rails (RubyGems.org), which collects host information, including contents of sensitive files like "/etc/passwd" and "/etc/resolv.conf," and sends it to a hard-coded Discord webhook
+"Abuse of Discord webhooks as C2 matters because it flips the economics of supply chain attacks," Brown noted.</package></p>
+
+<p>“By being free and fast, threat actors avoid hosting and maintaining their own infrastructure. Also, they often blend in to regular code and firewall rules, allowing exfiltration even from secured victims.”
+“When paired with install-time hooks or build scripts, malicious packages with Discord C2 mechanism can quietly siphon .env files, API keys, and host details from developer machines and CI runners long before runtime monitoring ever sees the app.”
+Contagious Interview Floods npm With Fake Packages
+The disclosure comes as the company also flagged 338 malicious packages published by North Korean threat actors associated with the
+Contagious Interview
+campaign, using them to deliver malware families like
+HexEval
+,
+XORIndex
+, and encrypted loaders that deliver BeaverTail, instead of directly dropping the JavaScript stealer and downloader. The packages were collectively downloaded more than 50,000 times. “In this latest wave, North Korean threat actors used more than 180 fake personas tied to new npm aliases and registration emails, and ran over a dozen command and control (C2) endpoints,” security researcher Kirill Boychenko
+said
+.</p>
+
+<p>Targets of the campaign include Web3, cryptocurrency, and blockchain developers, as well as job seekers in the technical sector, who are approached on professional platforms like LinkedIn with lucrative opportunities. Prospective targets are then instructed to complete a coding assignment by cloning a booby-trapped repository that references a malicious package (e.g., eslint-detector) that’s already published to the npm registry. Once run locally on the machine, the package referenced in the supposed project acts as a stealer (i.e., BeaverTail) to harvest browser credentials, cryptocurrency wallet data, macOS Keychain, keystrokes, clipboard content, and screenshots. The malware is designed to download additional payloads, including a cross-platform Python backdoor codenamed InvisibleFerret.</p>
+
+<p>Of the hundreds of packages uploaded by North Korean actors, many of them are typosquats of their legitimate counterparts (e.g., dotevn vs. dotenv), especially those related to Node.js, Express, or frontend frameworks like React. Some of the identified libraries have also been found to be lookalikes of Web3 kits (e.g., ethrs.js vs. ethers.js).</p>
+
+<p>”
+Contagious Interview
+is not a cybercrime hobby, it operates like an assembly line or a factory-model supply chain threat,” Boychenko said. “It is a state-directed, quota-driven operation with durable resourcing, not a weekend crew, and removing a malicious package is insufficient if the associated publisher account remains active.”
+“The campaign’s trajectory points to a durable, factory-style operation that treats the npm ecosystem as a renewable initial access channel.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-expose-ta585s-monsterv2-malware-capabilities-and-attack-chain"><a id="article-7"></a>Researchers Expose TA585’s MonsterV2 Malware Capabilities and Attack Chain</h2>
+
+<p>Cybersecurity researchers have shed light on a previously undocumented threat actor called
+TA585
+that has been observed delivering an off-the-shelf malware called
+MonsterV2
+via phishing campaigns. The Proofpoint Threat Research Team described the threat activity cluster as sophisticated, leveraging web injections and filtering checks as part of its attack chains. “TA585 is notable because it appears to own its entire attack chain with multiple delivery techniques,” researchers Kyle Cucci, Tommy Madjar, and Selena Larson
+said
+. “Instead of leveraging other threat actors – like paying for distribution, buying access from initial access brokers, or using a third-party traffic delivery system – TA585 manages its own infrastructure, delivery, and malware installation.”
+MonsterV2 is a remote access trojan (RAT), stealer, and loader, which Proofpoint first observed being advertised on criminal forums in February 2025.</p>
+
+<p>It’s worth noting that MonsterV2 is also called
+Aurotun Stealer
+(a misspelling of “autorun”) and has been
+previously distributed
+via CastleLoader (aka CastleBot). Phishing campaigns distributing the malware have been observed using U.S. Internal Revenue Service (IRS) themed lures to trick users into clicking on fake URLs that direct to a PDF, which, in turn, links to a web page employing the ClickFix social engineering tactic to activate the infection by running a malicious command in the Windows Run dialog or PowerShell terminal. The PowerShell command is designed to execute a next-stage PowerShell script that deploys MonsterV2.</p>
+
+<p>Subsequent attack waves detected in April 2025 have resorted to malicious JavaScript injections on legitimate websites that serve fake CAPTCHA verification overlays to initiate the attack via ClickFix, ultimately leading to the delivery of the malware via a PowerShell command. Initial iterations of this campaign distributed Lumma Stealer, before TA585 switched to MonsterV2 in early 2025. Interestingly, the JavaScript inject and the associated infrastructure (intlspring[.]com) have also been linked to the distribution of Rhadamanthys Stealer. A third set of campaigns undertaken by TA585 has made use of email notifications from GitHub that are triggered when tagging GitHub users in bogus security notices that contain URLs leading to actor-controlled websites.</p>
+
+<p>Both the activity clusters – that revolve around web injects and phony GitHub alerts – have been associated with CoreSecThree, which, according to
+PRODAFT
+, is a “sophisticated framework” that’s known to be active since February 2022 and has been “consistently” used to propagate stealer malware. MonsterV2 is a full-featured malware that can steal sensitive data, act as a clipper by replacing cryptocurrency addresses in the infected systems’ clipboard with threat actor-provided wallet addresses, establish remote control using Hidden Virtual Network Computing (HVNC), receive and execute commands from an external server, and download additional payloads. The malware is sold by a Russian-speaking actor for $800 USD per month for the “Standard” edition, while the “Enterprise” version, which comes with stealer, loader, HVNC, and Chrome DevTools Protocol (CDP) support, costs $2,000 per month. A notable aspect of the stealer is that it avoids infecting Commonwealth of Independent States (CIS) countries.</p>
+
+<p>MonsterV2 is typically packed using a C++ crypter called SonicCrypt, thereby allowing it to evade detection by running a series of anti-analysis checks prior to decrypting and loading the payload. Once launched, the malware decrypts and resolves the Windows API functions crucial to its functioning, in addition to elevating its privileges. It then proceeds to decode an embedded configuration to connect to the command-and-control (C2) server, as well as determine its next course of action based on the parameters set -
+anti_dbg, if set to True, the malware attempts to detect and evade debuggers in use
+anti_sandbox, if set to True, the malware attempts to detect sandboxes and execute some rudimentary anti-sandbox techniques
+aurotun (it’s this misspelling that has given it the name Aurotun Stealer), if set to True, the malware attempts to set up persistence on the host
+priviledge_escalation, if set to True, the malware attempts to elevate its privileges
+If the malware successfully establishes contact with the C2 server, it sends basic system information and the system’s geolocation by sending a request to “api.ipify[.]org.” The response from the server contains the command to be executed on the host. Some of the supported features are listed below -
+Execute infostealer functionality and exfiltrate data to the server
+Execute an arbitrary command via cmd.exe or PowerShell
+Terminate, suspend, and resume target processes
+Establish an HVNC connection to the infected system
+Take screenshots of the desktop
+Start a keylogger
+Enumerate, manipulate, copy, and exfiltrate files
+Shut down or crash the system
+Download and execute next-stage payloads like StealC and Remcos RAT
+“This activity was not correlated with TA585, however.</p>
+
+<p>Notably, with StealC, the MonsterV2 payloads were configured to use the same C2 server as the dropped StealC payload,” Proofpoint said. “TA585 is a unique threat actor with advanced capabilities for targeting and delivery. As the cybercrime threat landscape is constantly changing, TA585 has adopted effective strategies for filtering, delivery, and malware installation.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-whatsapp-worm-critical-cves-oracle-0-day-ransomware-cartel--more"><a id="article-8"></a>⚡ Weekly Recap: WhatsApp Worm, Critical CVEs, Oracle 0-Day, Ransomware Cartel &amp; More</h2>
+
+<p>Every week, the cyber world reminds us that silence doesn’t mean safety. Attacks often begin quietly — one unpatched flaw, one overlooked credential, one backup left unencrypted. By the time alarms sound, the damage is done. This week’s edition looks at how attackers are changing the game — linking different flaws, working together across borders, and even turning trusted tools into weapons.</p>
+
+<p>From major software bugs to AI abuse and new phishing tricks, each story shows how fast the threat landscape is shifting and why security needs to move just as quickly. ⚡ Threat of the Week
+Dozens of Orgs Impacted by Exploitation of Oracle EBS Flaw
+— Dozens of organizations may have been impacted following the zero-day exploitation of a security flaw in Oracle’s E-Business Suite (EBS) software since August 9, 2025, according to Google Threat Intelligence Group (GTIG) and Mandiant. The activity, which bears some hallmarks associated with the Cl0p ransomware crew, is assessed to have fashioned together multiple distinct vulnerabilities, including a zero-day flaw tracked as CVE-2025-61882 (CVSS score: 9.8), to breach target networks and exfiltrate sensitive data. The attack chains have been found to trigger two different payload chains, dropping malware families like GOLDVEIN.JAVA, SAGEGIFT, SAGELEAF, and SAGEWAVE.</p>
+
+<p>Oracle has also released updates to EBS to address another vulnerability in the same product (
+CVE-2025-61884
+) that could lead to unauthorized access to sensitive data. The company did not mention if it was being exploited in the wild. Automated Session Termination &amp; Activity Summaries: Goodbye Manual Log Reviews
+Threats move fast. KeeperAI moves faster.</p>
+
+<p>With real-time, agentic AI threat detection and response, high-risk sessions are instantly terminated, and every action is categorized into risk levels and summarized. Automate insider threat detection and eliminate manual log reviews forever. Start a Free Trial ➝
+🔔 Top News
+Storm-1175 Linked to Exploitation of GoAnywhere MFT Flaw
+— A cybercriminal group Microsoft tracks as Storm-1175 exploited a maximum-severity vulnerability in GoAnywhere MFT (CVE-2025-10035) to initiate multi-stage attacks, including Medusa ransomware. Storm-1175’s attacks are opportunistic, and have affected organizations in the transportation, education, retail, insurance, and manufacturing sectors.</p>
+
+<p>The activity blends legitimate tools with stealthy techniques to stay under the radar and monetize access through extortion and data theft, using the access to install remote monitoring tools such as SimpleHelp and MeshAgent, drop web shells, and move laterally across networks using built-in Windows utilities. Fortra has since
+disclosed
+that it began its investigation on September 11 following a “potential vulnerability” reported by a customer, uncovering “potentially suspicious activity” related to the flaw. OpenAI Disrupted Three Clusters from China, North Korea, and Russia
+— OpenAI said it disrupted three activity clusters for misusing its ChatGPT artificial intelligence (AI) tool to facilitate malware development. This includes a Russian‑language threat actor, who is said to have used the chatbot to help develop and refine a remote access trojan (RAT), a credential stealer with an aim to evade detection.</p>
+
+<p>The second cluster of activity originated from North Korea, which used ChatGPT for malware and command-and-control (C2) development, focusing on developing macOS Finder extensions, configuring Windows Server VPNs, or converting Chrome extensions to their Safari equivalents. The third set of banned accounts shared overlaps with a cluster tracked as UNK_DropPitch (aka UTA0388), a Chinese hacking group which employed the AI chatbot to generate content for phishing campaigns in English, Chinese, and Japanese; assist with tooling to accelerate routine tasks such as remote execution and traffic protection using HTTPS; and search for information related to installing open-source tools like nuclei and fscan. Over 175 npm Packages Used for Phishing Campaign
+— In an unusual twist, threat actors have been observed to push throwaway npm packages that, once installed, are designed to create and publish an npm package of its own with the pattern “redirect-xxxxxx” or “mad-xxxxxx,” which, in turn, auto-redirects victims to credential-harvesting sites when opened from crafted HTML business documents. “Unlike the more familiar tactic of simply uploading malicious packages to compromise developers during package installation, this campaign takes a different path,” Snyk
+said
+.</p>
+
+<p>“Instead of infecting users via npm install, the attackers leverage the browser delivery path through UNPKG, turning legitimate open source hosting infrastructure into a phishing mechanism.” It’s believed that the HTML files generated through the npm packages are distributed to victims, who are then redirected to the credential phishing sites when they attempt to open them. In the packages analyzed by Snyk, the pages masquerade as Cloudflare security checks before leading victims to an attacker-controlled URL fetched from a remote GitHub-hosted file. LockBit, Qilin, and DragonForce Join Forces
+— Three of the most notorious ransomware-as-a-service operations, LockBit, Qilin, and DragonForce, have formed a criminal cartel aimed at coordinating attacks and sharing resources. The partnership was announced early last month, shortly following the emergence of LockBit 5.0.</p>
+
+<p>“Create equal competition conditions, no conflicts and no public insults,” DragonForce wrote in a post on a dark web forum. “This way, we can all increase our income and dictate market conditions. Call it whatever you like – coalition, cartel, etc. The main thing is to stay in touch, be friendly to each other, and be strong allies, not enemies.” The teaming up of the three groups comes amid mounting pressure from law enforcement disruptions, prompting them to attack sectors previously considered off-limits, such as nuclear power plants, thermal power plants, and hydroelectric power plants.</p>
+
+<p>It also follows a similar consolidation pattern among primarily English-speaking cybercrime collectives like Scattered Spider, ShinyHunters, and LAPSUS$, which began collaborating under the name Scattered LAPSUS$ Hunters. That said, the cartelization of ransomware also comes at a time of record fragmentation in the broader ecosystem, with the number of active data leak sites reaching an all-time high of 81 in the third quarter of 2025. China-Nexus Hackers Weaponize Open-Source Nezha Tool in Attacks
+— Threat actors with suspected ties to China have turned a legitimate open-source monitoring tool called Nezha into an attack weapon, using it to deliver a known malware called Gh0st RAT to targets. The campaign is said to have likely compromised more than 100 victim machines since August 2025, with a majority of the infections reported in Taiwan, Japan, South Korea, and Hong Kong.</p>
+
+<p>The activity is yet another indication of how threat actors continue to twist legitimate tools for malicious purposes and blend in with normal network traffic. In one instance observed by Huntress, the attackers targeted an exposed phpMyAdmin panel to deploy a web shell by means of a log poisoning attack. The access obtained through the web shell was then used to drop Nezha and ultimately drop Gh0st RAT, but not before laying the necessary groundwork to avoid detection. ‎️‍🔥 Trending CVEs
+Hackers move fast.</p>
+
+<p>They often exploit new vulnerabilities within hours, turning a single missed patch into a major breach. One unpatched CVE can be all it takes for a full compromise. Below are this week’s most critical vulnerabilities gaining attention across the industry. Review them, prioritize your fixes, and close the gap before attackers take advantage.</p>
+
+<p>This week’s list includes —
+CVE-2025-61884
+(Oracle E-Business Suite),
+CVE-2025-11371
+(Gladinet CentreStack and TrioFox),
+CVE-2025-5947
+(Service Finder theme),
+CVE-2025-53967
+(Framelink Figma MCP server),
+CVE-2025-49844
+(Redis),
+CVE-2025-27237
+(Zabbix Agent),
+CVE-2025-59489
+(
+Unity
+for
+Android
+and
+Windows
+),
+CVE-2025-36604
+(Dell UnityVSA),
+CVE-2025-37728
+(Elastic Kibana Connector),
+CVE-2025-56383
+(Notepad++), CVE-2025-11462 (AWS Client VPN for macOS),
+CVE-2025-42701, CVE-2025-42706
+(CrowdStrike Falcon),
+CVE-2025-11001
+,
+CVE-2025-11002
+(7-Zip),
+CVE-2025-59978
+(Juniper Networks Junos Space),
+CVE-2025-11188, CVE-2025-11189, CVE-2025-11190
+(SynchroWeb Kiwire Captive Portal),
+CVE-2025-3600
+(Progress Telerik UI for ASP.NET AJAX), a cross-site scripting (XSS) vulnerability in
+REDCap
+, and unpatched security vulnerabilities in
+Ivanti Endpoint Manager
+(from ZDI-25-935 through ZDI-25-947). 📰 Around the Cyber World
+TwoNet Targets Forescout Honeypot
+— An ICS/OT honeypot run by Forescout, designed to mimic a water treatment facility, was targeted last month by a Russia-linked group named TwoNet. The financially motivated hacktivist group subsequently attempted to deface the associated human machine interface (HMI), disrupt processes, and manipulate other ICS. Forescout’s honeypots also saw attack attempts that have been linked to Russia and Iran.</p>
+
+<p>TwoNet first emerged in January, primarily focused on DDoS attacks using the MegaMedusa Machine malware, per
+Intel471
+. Through an affiliated group, CyberTroops, TwoNet announced it was ceasing operations on September 30, 2025. “This underscores the ephemeral nature of the ecosystem where channels and groups are short-lived, while operators typically persist by rebranding, shifting alliances, joining other groups, learning new techniques, or targeting other organizations,” Forescout
+said
+. “Groups moving from DDoS/defacement to OT/ICS often misread targets, trip over honeypots, or overclaim.</p>
+
+<p>That doesn’t make them harmless; it shows where they are headed.”
+Sophos Probes WhatsApp Worm’s Links to Coyote
+— A recently disclosed campaign dubbed
+Water Saci
+involved the threat actors using self-propagating malware dubbed SORVEPOTEL that spreads via the popular messaging app WhatsApp. Sophos said it’s investigating to determine if the activity could be related to prior reported campaigns that distributed a banking trojan named
+Coyote
+targeting users in Brazil, and if the malware used in the attacks, Maverick, is an evolution of
+Coyote
+. The WhatsApp messages contain a zipped LNK file that, when launched, initiates a series of malicious PowerShell commands to drop next-stage PowerShell, which then attempts to modify local security controls. In some cases, Sophos
+said
+it observed an additional payload, the legitimate Selenium browser automation tool, that enabled control of running browser sessions on the infected host.</p>
+
+<p>It’s suspected that Selenium is delivered alongside Maverick via the same command-and-control (C2) infrastructure. North Korean IT Workers Seek Jobs in New Sectors
+— The infamous
+North Korean IT workers
+are now seeking remote jobs in the
+industrial design and architecture fields
+, according to security company KELA. “Their involvement could pose risks related to espionage, sanctions evasion, safety concerns, and access to sensitive infrastructure designs,” it
+said
+, describing the threat as a “a highly organized, state-backed network that extends far beyond IT roles.” One of IT workers, Hailong Jin, has been identified as connected to the development of a malicious game called
+DeTankZone
+, while also sharing ties with another IT worker named Lian Hung, who has claimed to be a mobile app developer in Tanzania. It’s believed that Hailong Jin and Lian Hung may be the same person, the Chollima Group said, adding Bells Inter Trading Limited is a North Korean run front company employing IT Workers in Tanzania.</p>
+
+<p>The company, for its part, has been linked to several VPN apps published on both Apple and Google’s iOS and Android app stores. “Rather than viewing them as a monolithic entity, North Korean IT Workers are more akin to individual entrepreneurs operating under the blessing of a higher-status boss,” the Chollima Group
+noted
+. “As an IT Worker gains more status and respect, they are able to climb the organization’s ranks and eventually become bosses themselves. From there they may form their own front companies and gain the status necessary to take on more malicious activity (if they so choose).</p>
+
+<p>We believe Lian Hung and Hailong Jin, both appearing to be in their 30s-40s, may be operating as middle managers or hold higher statuses in this structure, which may explain their titles of choice being ‘Project Manager.’”
+FBI Seizes Site Used by Salesforce Extortionists
+— The U.S. Federal Bureau of Investigation (FBI)
+seized
+a website (“breachforums[.]hn”) that was being used by Scattered LAPSUS$ Hunters to extort Salesforce and its customers. The action marks another chapter in the ongoing cat-and-mouse game to dismantle the
+persistent data leak site
+. That said, the
+dark web version
+of the leak site is still up and running.</p>
+
+<p>“BreachForums was seized by the FBI and international partners today. All our domains were taken from us by the U.S. Government. The era of forums is over,” the Scattered Lapsus$ Hunters group said in a PGP-encrypted statement on Telegram.</p>
+
+<p>While the groups initially claimed they were shutting down their operations, the website resurfaced merely a few days later, transitioning from a hacking forum to a dedicated extortion site. The group also admitted that the BreachForums servers and backups were destroyed, and that database archives and escrow data from as far back as 2023 were compromised. Scattered LAPSUS$ Hunters
+(aka the Trinity of Chaos) is a newly formed alliance comprising Scattered Spider (aka Muddled Libra), LAPSUS$, and ShinyHunters (aka
+Bling Libra
+). In recent weeks, the threat actors breached Salesloft’s systems and used the access to obtain customers’ Salesforce data.</p>
+
+<p>Last month, Salesloft
+revealed
+that the data breach linked to its Drift application started with the compromise of its GitHub account. BreachForums has a long and turbulent history, punctuated by numerous takedowns and resurrections since its original administrator was arrested in March 2023. NSO Group Acquired by U.S. Investment Group
+— Israeli spyware maker NSO Group has disclosed that a U.S.</p>
+
+<p>investment group has acquired the controversial company. A company’s spokesperson
+told
+TechCrunch that “an American investment group has invested tens of millions of dollars in the company and has acquired controlling ownership.”
+Apple Revises its Bug Bounty Program
+— Apple
+announced
+significant updates to its bug bounty program, with the company now offering up to $2 million for exploit chains that can achieve similar goals as sophisticated mercenary spyware attacks. It’s also rewarding one-click WebKit sandbox escapes with up to $300,000, and up to $1 million for wireless proximity exploits over any radio, broad unauthorized iCloud access, and WebKit exploit chains leading to unsigned arbitrary code execution. “Since we launched the public Apple Security Bounty program in 2020, we’re proud to have awarded over $35 million to more than 800 security researchers, with multiple individual reports earning $500,000 rewards,” the company said.</p>
+
+<p>The new payouts will go into effect in November 2025. Spanish Guardia Civil Disrupts GXC Team
+— Spanish authorities
+dismantled
+the GXC Team and arrested its alleged mastermind, a 25-year-old Brazilian national who went online as GoogleXcoder. According to Group-IB,
+GXC Team
+operated a crime-as-a-service (CaaS) platform offering AI-powered phishing kits, Android malware, and voice scam tools via Telegram and a Russian-speaking hacker forum to cybercriminals targeting banks, transportation, and e-commerce, in Spain, Slovakia, the UK, US, and Brazil.”To avoid capture, the suspect adopted a ‘digital nomad’ lifestyle, frequently relocating between Spanish provinces and using stolen identities to secure housing, phone lines, and payment cards,” Group-IB
+said
+. Inside Russian Market
+— Rapid7 said Russian Market has evolved its operations over time, pivoting from selling RDP access to stolen credit card data and, more recently, infostealer logs.</p>
+
+<p>“Stolen credentials originate from organizations worldwide, with 26% originating in the US and 23% in Argentina,” the company
+said
+. “Most sellers have adopted a multi-stealer approach over the years, leveraging various malware variants in their operations, with Lumma emerging as a widely used tool. The most common types of infostealers being used by sellers in Russian Market over the years have been Raccoon,
+Vidar
+, Lumma, RedLine, and Stealc, with
+Rhadamanthys
+and Acreed gaining popularity in the first half of 2025.” The findings came as Red Canary
+revealed
+that Atomic, Poseidon, and Odyssey have emerged as the three prominent stealer families targeting Apple macOS systems, while also sharing many tactical similarities. Odyssey Stealer is a successor to Poseidon that was first detected in March 2025.</p>
+
+<p>Austria Says Microsoft Violated E.U. Laws
+— Austria’s privacy regulator found that Microsoft violated E.U. law by illegally tracking students through Microsoft 365 Education using tracking cookies without their consent. The decision was reached following noyb’s complaint in 2024.</p>
+
+<p>The Austrian Data Protection Authority (DSB) has ordered the deletion of the relevant personal data. “The decision by the Austrian DPA really highlights the lack of transparency with Microsoft 365 Education,” noyb
+said
+. “It is almost impossible for schools to inform students, parents and teachers about what is happening with their data.”
+AI Models Can Acquire Backdoors from About 250 Malicious Documents
+— A new academic study from Anthropic, the U.K. AISI’s Safeguards team, and The Alan Turing Institute has found that it takes approximately 250 malicious documents to establish a simple “backdoor” in large language models.</p>
+
+<p>The research challenges the idea that attackers need to control or poison a large portion of the training data in order to influence an LLM’s output. “Poisoning attacks require a near-constant number of documents regardless of model and training data size,” it
+said
+. “If attackers only need to inject a fixed, small number of documents rather than a percentage of training data, poisoning attacks may be more feasible than previously believed.” A
+2024 study
+by researchers at Carnegie Mellon University, ETH Zürich, Meta, and Google DeepMind showed that attackers controlling 0.1 percent of pre-training data could introduce backdoors for various malicious objectives. “Our results suggest that injecting backdoors through data poisoning may be easier for large models than previously believed as the number of poisons required does not scale up with model size,” the researchers said, “highlighting the need for more research on defences to mitigate this risk in future models.” The disclosure coincided with OpenAI’s
+stating
+that its GPT-5 model exhibits lower levels of political bias than any previous models.</p>
+
+<p>🎥 Cybersecurity Webinars
+Drowning in Vulnerability Alerts? Here’s How to Finally Regain Control</p>
+<ul>
+  <li>Most security teams face the same problem — too many vulnerabilities and not enough time. Dynamic Attack Surface Reduction (DASR) helps fix this by finding and closing risks automatically, before attackers can use them. Instead of chasing endless alerts, teams can focus on what really matters: keeping systems safe and running smoothly.</li>
+</ul>
+
+<p>It’s a smarter, faster way to stay one step ahead. How Leading Teams Are Using AI to Simplify Compliance and Reduce Risk</p>
+<ul>
+  <li>AI is changing how organizations handle Governance, Risk, and Compliance (GRC). It can make compliance faster and smarter—but it also brings new risks and rules to follow. This session will show you how to use AI safely and effectively, with real examples, lessons from early adopters, and practical tips to prepare your team for the future of compliance.</li>
+</ul>
+
+<p>From Firefighting to Secure-by-Design: A Practical Playbook</p>
+<ul>
+  <li>AI is changing fast, but security can’t lag behind. The smartest teams now treat security controls as launchpads, not roadblocks — enabling AI agents to move quickly and safely. By shifting from reactive firefighting to a secure-by-design mindset, organizations gain both speed and confidence. With the right framework, you can control AI risks while accelerating innovation instead of slowing it down.</li>
+</ul>
+
+<p>🔧 Cybersecurity Tools
+P0LR Espresso</p>
+<ul>
+  <li>A new open-source tool from Permiso that helps security teams quickly analyze multi-cloud logs during live response. It normalizes data from platforms like AWS, Azure, and GCP to deliver clear timelines, behavioral insights, and IOC analysis—making it easier to spot compromised identities and understand what really happened. Ouroboros</li>
+  <li>A new open-source decompiler built in Rust that uses symbolic execution to recover high-level code structure from compiled binaries. Unlike traditional decompilers that rely on static assignment models, Ouroboros tracks constraints and data flow to understand how registers and memory change during execution.</li>
+</ul>
+
+<p>This approach helps it reconstruct logical code patterns such as loops, conditions, and control flow regions, making it a practical tool for reverse engineering, program analysis, and security research. Disclaimer: These tools are for educational and research use only. They haven’t been fully security-tested and could pose risks if used incorrectly. Review the code before trying them, test only in safe environments, and follow all ethical, legal, and organizational rules.</p>
+
+<p>🔒 Tip of the Week
+Don’t Leave Your Backups Unlocked —
+Backups are your safety net — but if they’re not encrypted, they can become your biggest risk. Anyone who gets access to an unencrypted backup can read everything inside: passwords, emails, financial data, customer info — all of it. The Simple Fix: Always encrypt your backups before saving or sending them anywhere (USB, cloud, or server). Encryption locks your data so only you can open it.</p>
+
+<dl>
+  <dt>🔐 Easy, Trusted Open-Source Tools:</dt>
+  <dt>Restic</dt>
+  <dd>Fast, simple, and encrypts everything automatically. Works with many cloud services. BorgBackup</dd>
+  <dd>Compresses, deduplicates, and encrypts your backups — perfect for long-term storage. Duplicity</dd>
+  <dd>Uses GPG encryption and supports encrypted backups to local or remote storage.</dd>
+  <dt>rclone</dt>
+  <dd>Syncs files securely to cloud storage with built-in encryption options. Pro Tip: Test your backup regularly — make sure you can decrypt and restore it. A locked or broken backup is as bad as no backup at all. Conclusion
+The week’s stories show both sides of cybersecurity — the creativity of attackers and the resilience of defenders.</dd>
+</dl>
+
+<p>Our strength lies in awareness, collaboration, and action. Let’s use every lesson learned to make next week’s news a little less alarming. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="why-unmonitored-javascript-is-your-biggest-holiday-security-risk"><a id="article-9"></a>Why Unmonitored JavaScript Is Your Biggest Holiday Security Risk</h2>
+
+<p>Think your WAF has you covered? Think again. This holiday season, unmonitored JavaScript is a critical oversight allowing attackers to steal payment data while your WAF and intrusion detection systems see nothing. With the 2025 shopping season weeks away, visibility gaps must close now.</p>
+
+<p>Get the complete Holiday Season Security Playbook
+here
+. Bottom Line Up Front
+The 2024 holiday season saw major attacks on website code: the
+Polyfill.io breach
+hit 500,000+ websites, and September’s
+Cisco Magecart attack
+targeted holiday shoppers. These attacks exploited third-party code and online store weaknesses during peak shopping, when attacks jumped
+690%
+. For 2025: What security steps and monitoring should online retailers take now to prevent similar attacks while still using the third-party tools they need?</p>
+
+<p>As holiday shopping traffic increases, companies strengthen their servers and networks, but a critical weak spot remains unwatched: the browser environment where malicious code runs hidden on users’ devices, stealing data and bypassing standard security. The Client-Side Security Gap
+Recent industry research reveals the concerning scope of this security gap:
+Sources:
+IBM Cost of Data Breach Report 2025
+|
+Verizon DBIR Report 2025
+|
+Reflectiz The State of Web Exposure Report 2025
+These statistics underscore a fundamental shift in the threat landscape. As organizations have strengthened server-side defenses through WAFs, intrusion detection systems, and endpoint protection, attackers have adapted by targeting the browser environment where traditional monitoring tools fall short due to the following:
+Limited Visibility:
+Server-side monitoring tools cannot observe JavaScript execution within users’ browsers. WAFs and network monitoring solutions miss attacks that operate entirely in the client environment.</p>
+
+<p>Encrypted Traffic:
+Modern web traffic is encrypted via HTTPS, making it difficult for network monitoring tools to inspect the content of data transmissions to third-party domains. Dynamic Nature:
+Client-side code can modify its behavior based on user actions, time of day, or other factors, making static analysis insufficient. Compliance Gaps:
+Although regulations like
+PCI DSS 4.0.1
+focus now more on client side risk, there’s still limited guidance on client-side data protection. Understanding Client-Side Attack Vectors
+E-skimming (Magecart)
+Perhaps the most notorious client-side threat, Magecart attacks involve injecting malicious JavaScript into e-commerce sites to steal payment card data.</p>
+
+<p>The 2018 British Airways breach, which exposed 380,000 customers’ payment details, exemplifies how a single compromised script can bypass robust server security. The attack operated for two weeks undetected, harvesting data directly from the checkout form before transmitting it to attacker-controlled servers. Supply Chain Compromises
+Modern web applications depend heavily on third-party services, analytics platforms, payment processors, chat widgets, and advertising networks. Each represents a potential entry point.</p>
+
+<p>The 2019 Ticketmaster breach occurred when attackers compromised a customer support chat tool, demonstrating how a single third-party script can expose an entire platform. Shadow Scripts and Script Sprawl
+Many organizations lack complete visibility into all JavaScript code executing on their pages. Scripts can dynamically load other scripts, creating a complex web of dependencies that security teams struggle to track. This “shadow script” phenomenon means that unauthorized code may be running without explicit approval or monitoring.</p>
+
+<p>Session and Cookie Manipulation
+Client-side attacks can intercept authentication tokens, manipulate session data, or extract sensitive information from cookies and local storage. Unlike server-side attacks that leave network logs, these operations occur entirely within the user’s browser, making detection challenging without specialized monitoring. Real-World Holiday Season Attacks: Lessons from 2024
+The 2024 holiday season provided stark examples of the escalating client-side threat. The infamous
+Polyfill.io supply chain attack
+, which began in February 2024 and impacted over 100,000 websites by the holidays, demonstrated how a compromised third-party script could redirect users to malicious sites.</p>
+
+<p>Similarly, the
+Cisco Magecart attack
+in September 2024 targeted holiday shoppers via their merchandise store, highlighting how even large organizations are vulnerable to payment data theft during peak periods. Beyond these high-profile incidents, the pervasive nature of client-side threats was evident. The
+compromised Kuwaiti e-commerce site
+Shrwaa.com hosted malicious JavaScript files throughout 2024, infecting other sites undetected and showcasing the “shadow script” problem. The
+Grelos skimmer variant
+further illustrated session and cookie manipulation, deploying fake payment forms on smaller, trusted e-commerce sites just before Black Friday and Cyber Monday.</p>
+
+<p>These incidents underscore the critical need for robust client-side security measures. The Holiday Season Amplifies Risk
+Several factors make the holiday shopping period particularly vulnerable:
+Increased Attack Motivation:
+Higher transaction volumes create lucrative targets, with Cyber Monday 2024 seeing
+5.4 trillion daily requests
+on Cloudflare’s network, with 5% blocked as potential attacks. Code Freeze Periods:
+Many organizations implement development freezes during peak seasons, limiting the ability to respond quickly to newly discovered vulnerabilities. Third-Party Dependencies:
+Holiday promotions often require integration with additional marketing tools, payment options, and analytics platforms, expanding the attack surface.</p>
+
+<p>Resource Constraints:
+Security teams may be stretched thin, with most organizations scaling back after-hours SOC staffing levels by up to
+50%
+during holidays and weekends. Implementing Effective Client-Side Security</p>
+<ol>
+  <li>Deploy Content Security Policy (CSP)
+Start with CSP in report-only mode to gain visibility into script execution without breaking functionality:
+This approach provides immediate insights into script behavior while allowing time for policy refinement. The CSP Trap to Avoid:
+When implementing CSP, you’ll likely encounter broken functionality from legacy scripts.</li>
+</ol>
+
+<p>The tempting quick fix is adding <code class="language-plaintext highlighter-rouge">'unsafe-inline'</code> to your policy, which allows all inline JavaScript to execute. However, this single directive completely undermines your CSP protection, it’s the equivalent of leaving your front door unlocked because one key doesn’t work. Instead, use nonces (cryptographic tokens) for legitimate inline scripts: <code class="language-plaintext highlighter-rouge">&lt;script nonce="random-token-here"&gt;</code>. Generate a new nonce per page load and reference it in your CSP header: <code class="language-plaintext highlighter-rouge">script-src 'nonce-random-token-here'</code>.</p>
+
+<p>This allows your approved scripts while blocking injected malicious code. Yes, it requires server-side changes, but it’s the difference between real protection and a policy that exists only on paper. 2. Implement Subresource Integrity (SRI)
+Ensure that third-party scripts haven’t been tampered with by implementing SRI tags:
+3.</p>
+
+<p>Conduct Regular Script Audits
+Maintain a comprehensive inventory of all third-party scripts, including:
+Purpose and business justification
+Data access permissions
+Update and patching procedures
+Vendor security practices
+Alternative solutions if the service becomes compromised</p>
+<ol>
+  <li>Implement Client-Side Monitoring
+Deploy specialized client-side monitoring tools, ranging from browser-based CSP validators to
+Web Exposure
+management solutions to commercial Runtime Application Self-Protection (RASP) solutions, that can observe JavaScript execution in real-time, detecting:
+Unexpected data collection or transmission
+DOM manipulation attempts
+New or modified scripts
+Suspicious network requests</li>
+  <li>Establish Incident Response Procedures
+Develop specific playbooks for client-side incidents, including:
+Script isolation and removal procedures
+Customer communication templates
+Vendor contact information and escalation paths
+Regulatory notification requirements
+Implementation Challenges and Solutions
+While the benefits of client-side security are clear, implementation can present obstacles. Here’s how to navigate common challenges:
+Legacy System Compatibility
+Implement CSP gradually, starting with highest-risk pages
+Use CSP reporting to identify problematic scripts before enforcement
+Consider deploying a reverse proxy to inject security headers without application changes
+Performance Impact
+Test thoroughly using report-only modes initially
+Monitor that SRI checks add minimal overhead (typically under 5ms per script)
+Track real user metrics like page load time during rollout
+Vendor Resistance
+Include security requirements in vendor contracts upfront
+Frame requirements as protecting both parties’ reputations
+Maintain a vendor risk register tracking security posture
+Document uncooperative vendors as highest-risk dependencies
+Resource Limitations
+Consider managed security services specializing in client-side protection
+Start with free browser-based tools and CSP report analyzers
+Prioritize automation for script inventory, monitoring, and alerts
+Dedicate 6-12 hours monthly for initial setup and ongoing monitoring, or budget 1-2 days quarterly for comprehensive audits in enterprise environments with 50+ third-party scripts
+Organizational Buy-In
+Build business case around breach costs (average Magecart attack: $3.9M) versus monitoring investment ($10K-50K annually)
+Organizations with dedicated client-side monitoring detect breaches 5.3 months faster than industry average (reducing the 7.5-month detection window to 2.2 months), significantly limiting data exposure and regulatory penalties
+Present client-side security as revenue protection, not IT overhead
+Secure executive sponsorship before holiday freeze periods
+Emphasize prevention is less disruptive than responding to an active breach during peak season
+Looking Forward
+Client-side security represents a fundamental shift in how we approach web application protection.</li>
+</ol>
+
+<p>As the attack surface continues to evolve, organizations must adapt their security strategies to include comprehensive monitoring and protection of the client environment. The holiday shopping season provides both urgency and opportunity: urgency to address these vulnerabilities before peak traffic arrives, and opportunity to implement monitoring that will provide valuable insights into normal versus suspicious script behavior. Success requires moving beyond the traditional perimeter-focused security model to embrace a more comprehensive approach that protects data wherever it travels, including within the user’s browser. The organizations that make this transition will not only protect their customers during the holiday rush but establish a more resilient security posture for the year ahead.</p>
+
+<p>Download the complete
+Holiday Season Security Playbook
+to ensure your organization is prepared for the 2025 shopping season. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-warn-rondodox-botnet-is-weaponizing-over-50-flaws-across-30-vendors"><a id="article-10"></a>Researchers Warn RondoDox Botnet is Weaponizing Over 50 Flaws Across 30+ Vendors</h2>
+
+<p>Malware campaigns distributing the
+RondoDox
+botnet have expanded their targeting focus to exploit more than 50 vulnerabilities across over 30 vendors. The activity,
+described
+as akin to an “exploit shotgun” approach, has singled out a wide range of internet-exposed infrastructure, including routers, digital video recorders (DVRs), network video recorders (NVRs), CCTV systems, web servers, and various other network devices, according to Trend Micro. The cybersecurity company said it detected a RondoDox intrusion attempt on June 15, 2025, when the attackers exploited
+CVE-2023-1389
+, a security flaw in TP-Link Archer routers that has
+come under active exploitation
+repeatedly since it was first disclosed in late 2022. RondoDox was
+first documented
+by Fortinet FortiGuard Labs back in July 2025, detailing attacks aimed at TBK digital video recorders (DVRs) and Four-Faith routers to enlist them in a botnet for carrying out distributed denial-of-service (DDoS) attacks against specific targets using HTTP, UDP, and TCP protocols.</p>
+
+<p>“More recently, RondoDox broadened its distribution by using a ‘loader-as-a-service’ infrastructure that co-packages RondoDox with Mirai/Morte payloads – making detection and remediation more urgent,” Trend Micro said. RondoDox’s expanded arsenal of exploits includes nearly five dozen security flaws, out of which 18 don’t have a CVE identifier assigned. The 56 vulnerabilities span various vendors such as D-Link, TVT, LILIN, Fiberhome, Linksys, BYTEVALUE, ASMAX, Brickcom, IQrouter, Ricon, Nexxt, NETGEAR, Apache, TBK, TOTOLINK, Meteobridge, Digiever, Edimax, QNAP, GNU, Dasan, Tenda, LB-LINK, AVTECH, Zyxel, Hytec Inter, Belkin, Billion, and Cisco. “The latest RondoDox botnet campaign represents a significant evolution in automated network exploitation,” the company added.</p>
+
+<p>“It’s a clear signal that the campaign is evolving beyond single-device opportunism into a multivector loader operation.”
+Late last month, CloudSEK
+revealed
+details of a large-scale loader-as-a-service botnet distributing RondoDox, Mirai, and Morte payloads through SOHO routers, Internet of Things (IoT) devices, and enterprise apps by weaponizing weak credentials, unsanitized inputs, and old CVEs. The development comes as security journalist Brian Krebs
+noted
+that the DDoS botnet known as
+AISURU
+is “drawing a majority of its firepower” from compromised IoT devices hosted on U.S. internet providers like AT&amp;T, Comcast, and Verizon. One of the botnet’s operators, Forky, is alleged to be
+based in Sao Paulo, Brazil,
+and is also linked to a DDoS mitigation service called Botshield.</p>
+
+<p>In recent months, AISURU has emerged as one of the largest and most disruptive botnets, responsible for some of the record-setting DDoS attacks seen to date. Built on the foundations of Mirai, the botnet controls an estimated 300,000 compromised hosts worldwide. The findings also follow the discovery of a coordinated botnet operation involving over 100,000 unique IP addresses from no less than 100 countries targeting Remote Desktop Protocol (RDP) services in the U.S., per GreyNoise. The activity is said to have commenced on October 8, 2025, with the majority of the traffic originating from Brazil, Argentina, Iran, China, Mexico, Russia, South Africa, Ecuador, and others.</p>
+
+<p>“The campaign employs two specific attack vectors –
+RD Web Access timing attacks
+and
+RDP web client login enumeration
+– with most participating IPs sharing one similar TCP fingerprint, indicating centralized control,” the threat intelligence firm
+said
+. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-locks-down-ie-mode-after-hackers-turned-legacy-feature-into-backdoor"><a id="article-11"></a>Microsoft Locks Down IE Mode After Hackers Turned Legacy Feature Into Backdoor</h2>
+
+<p>Microsoft said it has revamped the Internet Explorer (IE) mode in its Edge browser after receiving “credible reports” in August 2025 that unknown threat actors were abusing the
+backward compatibility feature
+to gain unauthorized access to users’ devices. “Threat actors were leveraging basic social engineering techniques alongside unpatched (0-day) exploits in Internet Explorer’s JavaScript engine (Chakra) to gain access to victim devices,” the Microsoft Browser Vulnerability Research team
+said
+in a report published last week. In the attack chain documented by the Windows maker, the threat actors have been found to trick unsuspecting users into visiting an seemingly legitimate website and then employ a
+flyout
+on the page to instruct them into reloading the page in IE mode. Once the page is reloaded, the attackers are said to have weaponized an unspecified exploit in the Chakra engine to obtain remote code execution.</p>
+
+<p>The infection sequence culminates with the adversary using a second exploit to elevate their privileges out of the browser in order to seize complete control of the victim’s device. The activity is concerning, not least because it subverts modern defenses baked into Chromium and Microsoft Edge by launching it in a less secure state using Internet Explorer, effectively allowing the threat actors to break out of the confines of the browser and perform various post-exploitation steps, including malware deployment, lateral movement, and data exfiltration. Microsoft did not disclose any details regarding the nature of the vulnerabilities, the identity of the threat actor behind the attacks, and the scale of the efforts. However, in response to evidence of active exploitation and the security risk posed by the feature, the company said it has taken steps to remove the dedicated toolbar button, context menu, and the hamburger menu items.</p>
+
+<p>Users who wish to enable IE mode will now have to explicitly enable it on a case-by-case basis via Edge browser settings -
+Navigate to Settings &gt; Default Browser
+Locate the option labeled Allow sites to be reloaded in Internet Explorer mode and set it to Allow
+After enabling this setting, add the specific site(s) requiring IE compatibility to the Internet Explorer mode pages list
+Reload the site
+The Windows maker noted that these restrictions to launching IE mode are necessary to balance security and the need for legacy support. “This approach ensures that the decision to load web content using legacy technology is significantly more intentional,” Microsoft said. “The additional steps required to add a site to a site list are a significant barrier for even the most determined attackers to overcome.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="astaroth-banking-trojan-abuses-github-to-remain-operational-after-takedowns"><a id="article-12"></a>Astaroth Banking Trojan Abuses GitHub to Remain Operational After Takedowns</h2>
+
+<p>Cybersecurity researchers are calling attention to a new campaign that delivers the
+Astaroth
+banking trojan that employs GitHub as a backbone for its operations to stay resilient in the face of infrastructure takedowns. “Instead of relying solely on traditional command-and-control (C2) servers that can be taken down, these attackers are leveraging GitHub repositories to host malware configurations,” McAfee Labs researchers Harshil Patel and Prabudh Chakravorty
+said
+in a report. “When law enforcement or security researchers shut down their C2 infrastructure, Astaroth simply pulls fresh configurations from GitHub and keeps running.”
+The activity, per the cybersecurity company, is primarily focused on Brazil, although the banking malware is known to target various countries in Latin America, including Mexico, Uruguay, Argentina, Paraguay, Chile, Bolivia, Peru, Ecuador, Colombia, Venezuela, and Panama. This is not the first time Astaroth campaigns have trained their sights on Brazil.</p>
+
+<p>In
+July
+and
+October 2024
+, both Google and Trend Micro warned of threat clusters dubbed PINEAPPLE and Water Makara that used phishing emails to distribute the malware. The latest attack chain is no different in that it also begins with a DocuSign-themed phishing email containing a link that downloads a zipped Windows shortcut (.lnk) file, which, when opened, installs Astaroth on the compromised host. The LNK file incorporates obfuscated JavaScript that’s responsible for fetching additional JavaScript from an external server. The newly fetched JavaScript code, for its part, downloads a number of files from one of the randomly selected hard-coded servers.</p>
+
+<p>This includes an AutoIt script that’s executed by the JavaScript payload, following which it loads and runs shellcode, which, in turn, loads a Delphi-based DLL to decrypt and inject the Astaroth malware into a newly created RegSvc.exe process. Astaroth is a Delphi malware designed to monitor victims’ visits to banking or cryptocurrency websites and steal their credentials using keylogging. The captured information is transmitted to the attackers using the Ngrok reverse proxy. It accomplishes this by checking the active browser program window every second and whether it has a banking-related site opened.</p>
+
+<p>If these conditions are met, the malware hooks keyboard events to record keystrokes. Some of the targeted websites are listed below -
+caixa.gov[.]br
+safra.com[.]br
+itau.com[.]br
+bancooriginal.com[.]br
+santandernet.com[.]br
+btgpactual[.]com
+etherscan[.]io
+binance[.]com
+bitcointrade.com[.]br
+metamask[.]io
+foxbit.com[.]br
+localbitcoins[.]com
+Astaroth also comes fitted with capabilities to resist analysis and shuts down automatically if it detects emulator, debugger, and analysis tools like QEMU Guest Agent, HookExplorer, IDA Pro, ImmunityDebugger, PE Tools, WinDbg, and Wireshark, among others. Persistence on the host is set up by dropping an LNK file in the Windows Startup folder that runs the AutoIT script to launch the malware automatically upon a system reboot. What’s more, not only is the initial URL accessed by the JavaScript within the LNK file geofenced, the malware also makes sure that the machine’s system locale is not set to English or the U.S.</p>
+
+<p>“Astaroth uses GitHub to update its configuration when the C2 servers become inaccessible, by hosting images on GitHub, which uses steganography to hide this information in plain sight,” McAfee said. In doing so, the malware leverages a legitimate platform to host configuration files and turn it into a resilient backup infrastructure when primary C2 servers become inaccessible. The company noted that it worked with the Microsoft-owned subsidiary to remove the GitHub repositories, temporarily neutralizing the operations. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

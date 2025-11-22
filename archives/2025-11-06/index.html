@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-06 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Google Uncovers PROMPTFLUX Malware That Uses Gemini AI to Rewrite Its Code Hourly</a></li>
+      
+        <li><a href="#article-2">Researchers Find ChatGPT Vulnerabilities That Let Attackers Trick AI Into Leaking Data</a></li>
+      
+        <li><a href="#article-3">Securing the Open Android Ecosystem with Samsung Knox</a></li>
+      
+        <li><a href="#article-4">Mysterious 'SmudgedSerpent' Hackers Target U.S. Policy Experts Amid Iran–Israel Tensions</a></li>
+      
+        <li><a href="#article-5">U.S. Sanctions 10 North Korean Entities for Laundering $12.7M in Crypto and IT Fraud</a></li>
+      
+        <li><a href="#article-6">Why SOC Burnout Can Be Avoided: Practical Steps</a></li>
+      
+        <li><a href="#article-7">CISA Adds Gladinet and CWP Flaws to KEV Catalog Amid Active Exploitation Evidence</a></li>
+      
+        <li><a href="#article-8">A Cybercrime Merger Like No Other — Scattered Spider, LAPSUS$, and ShinyHunters Join Forces</a></li>
+      
+        <li><a href="#article-9">European Authorities Dismantle €600 Million Crypto Fraud Network in Global Sweep</a></li>
+      
+        <li><a href="#article-10">Critical React Native CLI Flaw Exposed Millions of Developers to Remote Attacks</a></li>
+      
+        <li><a href="#article-11">Microsoft Teams Bugs Let Attackers Impersonate Colleagues and Edit Messages Unnoticed</a></li>
+      
+        <li><a href="#article-12">Ransomware Defense Using the Wazuh Open Source Platform</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-06-ai创业新闻">2025-11-06 AI创业新闻</h1>
+
+<h2 id="google-uncovers-promptflux-malware-that-uses-gemini-ai-to-rewrite-its-code-hourly"><a id="article-1"></a>Google Uncovers PROMPTFLUX Malware That Uses Gemini AI to Rewrite Its Code Hourly</h2>
+
+<p>Google on Wednesday said it discovered an unknown threat actor using an experimental Visual Basic Script (VB Script) malware dubbed
+PROMPTFLUX
+that interacts with its Gemini artificial intelligence (AI) model API to write its own source code for improved obfuscation and evasion. “PROMPTFLUX is written in VBScript and interacts with Gemini’s API to request specific VBScript obfuscation and evasion techniques to facilitate ‘just-in-time’ self-modification, likely to evade static signature-based detection,” Google Threat Intelligence Group (GTIG)
+said
+in a report shared with The Hacker News. The novel feature is part of its “Thinking Robot” component, which periodically queries the large language model (LLM),
+Gemini 1.5 Flash
+or later in this case, to obtain new code so as to sidestep detection. This, in turn, is accomplished by using a hard-coded API key to send the query to the Gemini API endpoint.</p>
+
+<p>The prompt sent to the model is both highly specific and machine-parsable, requesting VB Script code changes for antivirus evasion and instructing the model to output only the code itself. The regeneration capability aside, the malware saves the new, obfuscated version to the Windows Startup folder to establish persistence and attempts to propagate by copying itself to removable drives and mapped network shares. “Although the self-modification function (AttemptToUpdateSelf) is commented out, its presence, combined with the active logging of AI responses to ‘%TEMP%\thinking_robot_log.txt,’ clearly indicates the author’s goal of creating a metamorphic script that can evolve over time,” Google added. The tech giant also said it discovered multiple variations of PROMPTFLUX incorporating LLM-driven code regeneration, with one version using a prompt to rewrite the malware’s entire source code every hour by instructing the LLM to act as an “expert VB Script obfuscator.”
+PROMPTFLUX is assessed to be under development or testing phase, with the malware currently lacking any means to compromise a victim network or device.</p>
+
+<p>It’s currently not known who is behind the malware, but signs point to a financially motivated threat actor that has adopted a broad, geography- and industry-agnostic approach to target a wide range of users. Google also noted that adversaries are going beyond utilizing AI for simple productivity gains to create tools that are capable of adjusting their behavior in the midst of execution, not to mention developing purpose-built tools that are then sold on underground forums for financial gain. Some of the other instances of LLM-powered malware observed by the company are as follows -
+FRUITSHELL
+, a reverse shell written in PowerShell that includes hard-coded prompts to bypass detection or analysis by LLM-powered security systems
+PROMPTLOCK
+, a cross-platform ransomware written in Go that uses an LLM to dynamically generate and execute malicious Lua scripts at runtime (identified as a proof-of-concept)
+PROMPTSTEAL
+(aka LAMEHUG), a data miner used by the Russian state-sponsored actor APT28 in attacks targeting Ukraine that queries Qwen2.5-Coder-32B-Instruct to generate commands for execution via the API for Hugging Face
+QUIETVAULT
+, a credential stealer written in JavaScript that targets GitHub and NPM tokens
+From a Gemini point of view, the company said it observed a China-nexus threat actor abusing its AI tool to craft convincing lure content, build technical infrastructure, and design tooling for data exfiltration. In at least one instance, the threat actor is said to have reframed their prompts by identifying themselves as a participant in a capture-the-flag (CTF) exercise to bypass guardrails and trick the AI system into returning useful information that can be leveraged to exploit a compromised endpoint.</p>
+
+<p>“The actor appeared to learn from this interaction and used the CTF pretext in support of phishing, exploitation, and web shell development,” Google said. “The actor prefaced many of their prompts about exploitation of specific software and email services with comments such as ‘I am working on a CTF problem’ or ‘I am currently in a CTF, and I saw someone from another team say …’ This approach provided advice on the next exploitation steps in a ‘CTF scenario.’”
+Other instances of Gemini abuse by state-sponsored actors from China, Iran, and North Korea to streamline their operations, including reconnaissance, phishing lure creation, command-and-control (C2) development, and data exfiltration, are listed below -
+The misuse of Gemini by a suspected China-nexus actor on various tasks, ranging from conducting initial reconnaissance on targets of interest and phishing techniques to delivering payloads and seeking assistance on lateral movement and data exfiltration methods
+The misuse of Gemini by Iranian nation-state actor
+APT41
+for assistance on code obfuscation and developing C++ and Golang code for multiple tools, including a C2 framework called OSSTUN
+The misuse of Gemini by Iranian nation-state actor
+MuddyWater
+(aka Mango Sandstorm, MUDDYCOAST or TEMP.Zagros) to conduct research to support the development of custom malware to support file transfer and remote execution, while circumventing safety barriers by claiming to be a student working on a final university project or writing an article on cybersecurity
+The misuse of Gemini by Iranian nation-state actor
+APT42
+(aka Charming Kitten and Mint Sandstorm) to craft material for phishing campaigns that often involve impersonating individuals from think tanks, translating articles and messages, researching Israeli defense, and developing a “Data Processing Agent” that converts natural language requests into SQL queries to obtain insights from sensitive data
+The misuse of Gemini by North Korean threat actor
+UNC1069
+(aka CryptoCore or MASAN) – one of the two clusters alongside TraderTraitor (aka PUKCHONG or UNC4899) that has succeeded the now-defunct APT38 (aka BlueNoroff) – to generate lure material for social engineering, develop code to steal cryptocurrency, and craft fraudulent instructions impersonating a software update to extract user credentials
+The misuse of Gemini by
+TraderTraitor
+to develop code, research exploits, and improve their tooling
+Furthermore, GTIG said it recently observed UNC1069 employing deepfake images and video lures impersonating individuals in the cryptocurrency industry in their social engineering campaigns to distribute a backdoor called BIGMACHO to victim systems under the guise of a Zoom software development kit (SDK). It’s worth noting that some aspect of the activity shares similarities with the
+GhostCall campaign
+recently disclosed by Kaspersky. The development comes as Google said it expects threat actors to “move decisively from using AI as an exception to using it as the norm” in order to boost the speed, scope, and effectiveness of their operations, thereby allowing them to mount attacks at scale.</p>
+
+<p>“The increasing accessibility of powerful AI models and the growing number of businesses integrating them into daily operations create perfect conditions for prompt injection attacks,” it
+said
+. “Threat actors are rapidly refining their techniques, and the low-cost, high-reward nature of these attacks makes them an attractive option.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-find-chatgpt-vulnerabilities-that-let-attackers-trick-ai-into-leaking-data"><a id="article-2"></a>Researchers Find ChatGPT Vulnerabilities That Let Attackers Trick AI Into Leaking Data</h2>
+
+<p>Cybersecurity researchers have disclosed a new set of vulnerabilities impacting OpenAI’s ChatGPT artificial intelligence (AI) chatbot that could be exploited by an attacker to steal personal information from users’ memories and chat histories without their knowledge. The seven vulnerabilities and attack techniques, according to Tenable, were found in OpenAI’s GPT-4o and GPT-5 models. OpenAI has
+since
+addressed
+some of them
+. These issues expose the AI system to
+indirect prompt injection attacks
+, allowing an attacker to manipulate the expected behavior of a large language model (LLM) and trick it into performing unintended or malicious actions, security researchers Moshe Bernstein and Liv Matan
+said
+in a report shared with The Hacker News.</p>
+
+<p>The identified shortcomings are listed below -
+Indirect prompt injection vulnerability via trusted sites in Browsing Context, which involves asking ChatGPT to summarize the contents of web pages with malicious instructions added in the comment section, causing the LLM to execute them
+Zero-click indirect prompt injection vulnerability in Search Context, which involves tricking the LLM into executing malicious instructions simply by asking about a website in the form of a natural language query, owing to the fact that the site may have been indexed by search engines like Bing and OpenAI’s crawler associated with SearchGPT. Prompt injection vulnerability via one-click, which involves crafting a link in the format “chatgpt[.]com/?q={Prompt},” causing the LLM to automatically execute the query in the “q=” parameter
+Safety mechanism bypass vulnerability, which takes advantage of the fact that the domain bing[.]com is allow-listed in ChatGPT as a safe URL to set up Bing ad tracking links (bing[.]com/ck/a) to mask malicious URLs and allow them to be rendered on the chat. Conversation injection technique, which involves inserting malicious instructions into a website and asking ChatGPT to summarize the website, causing the LLM to respond to subsequent interactions with unintended replies due to the prompt being placed within the conversational context (i.e., the output from SearchGPT)
+Malicious content hiding technique, which involves hiding malicious prompts by taking advantage of a bug resulting from how ChatGPT renders markdown that causes any data appearing on the same line denoting a
+fenced code block
+opening (```) after the first word to not be rendered
+Memory injection technique, which involves poisoning a user’s
+ChatGPT memory
+by concealing hidden instructions in a website and asking the LLM to summarize the site
+The disclosure comes close on the heels of research demonstrating various kinds of prompt injection attacks against AI tools that are capable of bypassing safety and security guardrails -
+A technique called
+PromptJacking
+that exploits three remote code execution vulnerabilities in Anthropic Claude’s Chrome, iMessage, and Apple Notes connectors to achieve unsanitized command injection, resulting in prompt injection
+A technique called
+Claude pirate
+that abuses Claude’s Files API for data exfiltration by using indirect prompt injections that weaponize an oversight in Claude’s network access controls
+A technique called
+agent session smuggling
+that leverages the Agent2Agent (
+A2A
+) protocol and allows a malicious AI agent to exploit an established cross-agent communication session to inject additional instructions between a legitimate client request and the server’s response, resulting in context poisoning, data exfiltration, or unauthorized tool execution
+A technique called
+prompt inception
+that employs prompt injections to steer an AI agent to amplify bias or falsehoods, leading to disinformation at scale
+A zero-click attack called
+shadow escape
+that can be used to steal sensitive data from interconnected systems by leveraging standard Model Context Protocol (
+MCP
+) setups and default MCP permissioning through specially crafted documents containing “shadow instructions” that trigger the behavior when uploaded to AI chatbots
+An indirect prompt injection
+targeting
+Microsoft 365 Copilot that abuses the tool’s built-in support for Mermaid diagrams for data exfiltration by taking advantage of its support for CSS
+A vulnerability in GitHub Copilot Chat called
+CamoLeak
+(CVSS score: 9.6) that allows for covert exfiltration of secrets and source code from private repositories and full control over Copilot’s responses by combining a Content Security Policy (
+CSP
+) bypass and remote prompt injection using
+hidden comments
+in pull requests
+A white-box jailbreak attack called
+LatentBreak
+that generates natural adversarial prompts with low
+perplexity
+, capable of evading safety mechanisms by substituting words in the input prompt with semantically-equivalent ones and preserving the initial intent of the prompt
+The findings show that exposing AI chatbots to external tools and systems, a key requirement for building AI agents, expands the attack surface by presenting more avenues for threat actors to conceal malicious prompts that end up being parsed by models. “Prompt injection is a known issue with the way that LLMs work, and, unfortunately, it will probably not be fixed systematically in the near future,” Tenable researchers said.</p>
+
+<p>“AI vendors should take care to ensure that all of their safety mechanisms (such as url_safe) are working properly to limit the potential damage caused by prompt injection.”
+The development comes as a group of academics from Texas A&amp;M, the University of Texas, and Purdue University
+found
+that training AI models on “junk data” can lead to LLM “brain rot,” warning “heavily relying on Internet data leads LLM pre-training to the trap of content contamination.”
+Last month, a study from Anthropic, the U.K. AI Security Institute, and the Alan Turing Institute also
+discovered
+that it’s possible to successfully backdoor AI models of different sizes (600M, 2B, 7B, and 13B parameters) using just 250 poisoned documents, upending previous assumptions that attackers needed to obtain control of a certain percentage of training data in order to tamper with a model’s behavior. From an attack standpoint, malicious actors could attempt to poison web content that’s scraped for training LLMs, or they could create and distribute their own poisoned versions of open-source models. “If attackers only need to inject a fixed, small number of documents rather than a percentage of training data, poisoning attacks may be more feasible than previously believed,” Anthropic said.</p>
+
+<p>“Creating 250 malicious documents is trivial compared to creating millions, making this vulnerability far more accessible to potential attackers.”
+And that’s not all. Another research from Stanford University scientists found that optimizing LLMs for competitive success in sales, elections, and social media can inadvertently drive misalignment, a phenomenon referred to as Moloch’s Bargain. “In line with market incentives, this procedure produces agents achieving higher sales, larger voter shares, and greater engagement,” researchers Batu El and James Zou
+wrote
+in an accompanying paper published last month. “However, the same procedure also introduces critical safety concerns, such as deceptive product representation in sales pitches and fabricated information in social media posts, as a byproduct.</p>
+
+<p>Consequently, when left unchecked, market competition risks turning into a race to the bottom: the agent improves performance at the expense of safety.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="securing-the-open-android-ecosystem-with-samsung-knox"><a id="article-3"></a>Securing the Open Android Ecosystem with Samsung Knox</h2>
+
+<p>Raise your hand if you’ve heard the myth, “Android isn’t secure.”
+Android phones, such as the Samsung Galaxy, unlock new ways of working. But, as an IT admin, you may worry about the security—after all, work data is critical. However, outdated concerns can hold your business back from unlocking its full potential. The truth is, with work happening everywhere,
+every
+device connected to your network is a potential security breach point.</p>
+
+<p>As threats evolve, so must the tools to defend against them. Allow me to introduce Samsung Knox—
+a built-in security platform that combines hardware and software protections on Samsung Galaxy devices. It’s loaded with features and is designed to safeguard data, provide IT teams with deeper control, and offer a flexible foundation for enterprise needs. Let’s take a look at some myths about open source and how Samsung can get you on the right path to success.</p>
+
+<p>Myth 1: “Isn’t Android more prone to malware and attacks?”
+Common concerns around sideloading and third-party apps can be addressed through Samsung Knox’s enterprise controls, which let IT admins curate approved apps and prevent sideloading. Plus, AI-powered malware defense adds another layer of protection to help keep the Android ecosystem secure. Here’s how:
+Proactive protection at scale:
+Google Play Protect
+scans over 200 billion apps daily, ensuring threats are blocked before they spread. According to Google,
+Managed Google Play devices see an exceptionally low rate of potentially harmful app installs, even when company-published apps are included.</p>
+
+<p>Extra defense with Samsung Knox on Samsung Galaxy devices:
+Samsung Message Guard
+protects Samsung Galaxy devices from zero-click attacks by automatically isolating and scanning suspicious image files received through messaging apps. DEFEX (Defeat Exploit)
+detects abnormal app behaviours and can terminate them before they become active threats. Key point:
+Android security isn’t about being open or closed—it’s about layered, proactive protection. With Samsung Knox on Samsung Galaxy devices, enterprises get exactly that.</p>
+
+<p>Myth 2: “Aren’t modern threats about platforms, not people?”
+A growing number of breaches today actually stem from
+human
+vulnerabilities—not just the platform itself! Let’s take a look:
+According to
+Verizon’s 2025 Data Breach Investigations Report,
+an incredible
+60%
+of breaches involve the human element, including phishing and social engineering. The
+Lookout Mobile Threat Landscape Report – 2024
+found that mobile device users face phishing attacks regardless of the platform, with Android devices actually encountering
+fewer
+incidents in 2024 (surprised?). The bottom line is, the biggest risks originate from overlooked basics.</p>
+
+<p>For example, failing to update devices with the latest security patches and not implementing the necessary IT policies—this applies to
+both
+open and closed platforms! Here’s how Samsung Knox helps:
+Know which device to update, when, and why:
+Knox Asset Intelligence provides IT admins centralized visibility into such information, and
+Knox E-FOTA
+provides precise and stable version control that’s hard to match on other platforms. Manage work devices and data according to your business needs:
+Samsung Knox
+enhances the security of Samsung Galaxy devices by providing granular security controls and comprehensive visibility. Users can access these features in multiple ways, including connecting to their own Enterprise Mobility Management systems, using Knox Suite.</p>
+
+<p>Key point:
+Closed systems don’t automatically protect against human error. Enterprises need a layered defense, strong policies, and visibility into device behavior. That’s exactly what Samsung Knox delivers! Myth 3: “Android updates are slower and harder to manage, right?”
+With modern Android and Samsung Knox tools, updates are now faster, more flexible, and fully manageable at scale.</p>
+
+<p>Let’s take a look:
+Android innovations:
+Mainline
+enables critical security and system updates to be pushed directly through Google Play—no wait required for OS upgrades. Android’s managed system updates
+allow IT admins to control update timing across work devices, reducing disruption. Samsung innovations:
+The Samsung Knox platform on Samsung Galaxy devices enables hard-to-beat detailed scheduling and stable deployment. Using Knox E-FOTA, IT admins can access:
+Target specific firmware versions instead of just the latest release.</p>
+
+<p>Block all types of user updates, including over-the-air, USB, and unauthorized installations to unintended versions. Schedule updates based not only on time but also on factors like battery level and network bandwidth. Perform on-prem firmware updates without relying on a cloud network environment. Key point:
+With Knox E-FOTA, you gain a strategic level of control that turns mobile updates from a support burden into a predictable, business-aligned process!</p>
+
+<p>The reality: Samsung Knox transforms Android security
+Samsung Galaxy devices, secured by Samsung Knox, are redefining what mobile security looks like for enterprises. By addressing old vulnerabilities, tackling human-driven threats, and giving IT strategic update control, Samsung Knox shifts Android from “perceived risk” to enterprise-grade resilience. The result? Government-grade protection, centralized visibility, and smarter management.</p>
+
+<p>Don’t take my word for it;
+find out for yourself by trying Samsung Knox. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="mysterious-smudgedserpent-hackers-target-us-policy-experts-amid-iranisrael-tensions"><a id="article-4"></a>Mysterious ‘SmudgedSerpent’ Hackers Target U.S. Policy Experts Amid Iran–Israel Tensions</h2>
+
+<p>A never-before-seen threat activity cluster codenamed
+UNK_SmudgedSerpent
+has been attributed as behind a set of cyber attacks targeting academics and foreign policy experts between June and August 2025, coinciding with heightened geopolitical tensions between Iran and Israel. “UNK_SmudgedSerpent leveraged domestic political lures, including societal change in Iran and investigation into the militarization of the Islamic Revolutionary Guard Corps (IRGC),” Proofpoint security researcher Saher Naumaan
+said
+in a new report shared with The Hacker News. The enterprise security company said the campaign shares tactical similarities with that of prior attacks mounted by Iranian cyber espionage groups like
+TA455
+(aka Smoke Sandstorm or UNC1549),
+TA453
+(aka Charming Kitten or Mint Sandstorm), and
+TA450
+(aka Mango Sandstorm or MuddyWater). The email messages bear all hallmarks of a classic Charming Kitten attack, with the threat actors reeling in prospective targets by engaging with them in benign conversations before attempting to phish for their credentials.</p>
+
+<p>In some cases, the emails have been found to contain malicious URLs to trick victims into downloading an MSI installer that, while masquerading as Microsoft Teams, ultimately deploys legitimate Remote Monitoring and Management (RMM) software like PDQ Connect, a tactic often embraced by MuddyWater. Proofpoint said the digital missives have also impersonated prominent U.S. foreign policy figures associated with think tanks like Brookings Institution and Washington Institute to lend them a veneer of legitimacy and increase the likelihood of success of the attack. Targets of these efforts are over 20 subject matter experts of a U.S.-based think tank who focus on Iran-related policy matters.</p>
+
+<p>In at least one case, the threat actor, upon receiving a response, is said to have insisted on verifying the identity of the target and the authenticity of the email address before proceeding further for any collaboration. “I am reaching out to confirm whether a recent email expressing interest in our institute’s research project was indeed sent by you,” read the email. “The message was received from an address that does not appear to be your primary email, and I wanted to ensure the authenticity before proceeding further.”
+Subsequently, the attackers sent a link to certain documents that they claimed would be discussed in an upcoming meeting. Clicking the link, however, takes the victim to a bogus landing page that’s designed to harvest their Microsoft account credentials.</p>
+
+<p>In another variant of the infection chain, the URL mimics a Microsoft Teams login page along with a “Join now” button. However, the follow-on stages activated after clicking the supposed meeting button are unclear at this stage. Proofpoint noted that the adversary removed the password requirement on the credential harvesting page after the target “communicated suspicions,” instead directly taking them to a spoofed OnlyOffice login page hosted on “thebesthomehealth[.]com.”
+“UNK_SmudgedSerpent’s reference to OnlyOffice URLs and health-themed domains is reminiscent of TA455 activity,” Naumaan said. “TA455 began registering health-related domains at least since October 2024 following a consistent stream of domains with aerospace interest, with OnlyOffice becoming popular to host files more recently in June 2025.”
+Hosted on the counterfeit OnlyOffice site is a ZIP archive containing an MSI installer that, in turn, launches PDQ Connect.</p>
+
+<p>The other documents, per the company, are assessed to be decoys. There is evidence to suggest that UNK_SmudgedSerpent engaged in possible hands-on-keyboard activity to install additional RMM tools like ISL Online through PDQ Connect. The reason behind the sequential deployment of two distinct RMM programs is not known. Other phishing emails sent by the threat actor have targeted a U.S.-based academic, seeking assistance in investigating the IRGC, as well as another individual in early August 2025, soliciting a potential collaboration on researching “Iran’s Expanding Role in Latin America and U.S.</p>
+
+<p>Policy Implications.”
+“The campaigns align with Iran’s intelligence collection, focusing on Western policy analysis, academic research, and strategic technology,” Proofpoint said. “The operation hints at evolving cooperation between Iranian intelligence entities and cyber units, marking a shift in Iran’s espionage ecosystem.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="us-sanctions-10-north-korean-entities-for-laundering-127m-in-crypto-and-it-fraud"><a id="article-5"></a>U.S. Sanctions 10 North Korean Entities for Laundering $12.7M in Crypto and IT Fraud</h2>
+
+<p>The U.S. Treasury Department on Tuesday imposed sanctions against eight individuals and two entities within North Korea’s global financial network for laundering money for
+various illicit schemes
+, including cybercrime and
+information technology (IT) worker fraud
+. “North Korean state-sponsored hackers steal and launder money to fund the regime’s nuclear weapons program,”
+said
+Under Secretary of the Treasury for Terrorism and Financial Intelligence John K. Hurley.</p>
+
+<p>“By generating revenue for Pyongyang’s weapons development, these actors directly threaten U.S. and global security. The Treasury will continue to pursue the facilitators and enablers behind these schemes to cut off the DPRK’s illicit revenue streams.”
+The names of
+sanctioned individuals and entities
+are listed below -
+Jang Kuk Chol (Jang) and Ho Jong Son
+, who are said to have helped manage funds, including $5.3 million in cryptocurrency, on behalf of First Credit Bank (aka Cheil Credit Bank), which was
+previously subjected to sanctions
+in September 2017 for facilitating North Korea’s missile programs
+Korea Mangyongdae Computer Technology Company
+(KMCTC), an IT company based in North Korea that has dispatched two IT worker delegations to the Chinese cities of Shenyang and Dandong, and has used Chinese nationals as banking proxies to conceal the origin of funds generated as part of the fraudulent employment scheme
+U Yong Su
+, KMCTC’s current president
+Ryujong Credit Bank
+, which has provided financial assistance in sanctions avoidance activities between China and North Korea
+Ho Yong Chol, Han Hong Gil, Jong Sung Hyok, Choe Chun Pom, and Ri Jin Hyok
+, who are representatives of North Korean financial institutions in Russia and China and are said to have facilitated transactions worth millions of dollars on behalf of the sanctioned banks
+A portion of $5.3 million has been linked to a North Korean ransomware actor known to have targeted U.S. victims in the past and handled revenue from IT worker operations.</p>
+
+<p>Describing North Korean cyber actors as orchestrating espionage, disruptive attacks, and financial theft at a scale “unmatched” by any other country, the Treasury said the Pyongyang-affiliated cybercriminals have stolen over $3 billion, mostly in digital assets, over the past three years using sophisticated malware and social engineering. The department also accused the regime of leveraging its IT army located across the world to gain employment at companies by obfuscating their nationality and identities, and funneling back a huge chunk of their income back to the Democratic People’s Republic of Korea (DPRK). “In some instances, DPRK IT workers engage other foreign freelance programmers to establish business partnerships,” it added. “They collaborate with these non-North Korean freelance workers on projects which were originally commissioned to those workers and split the revenue.”
+According to TRM Labs, the cryptocurrency wallet addresses linked to First Credit Bank show “consistent inbound flows resembling salary payments” and that “these flows likely represent income from IT workers employed abroad under false identities.”
+In all, the wallets controlled by the bank are said to have received more than $12.7 million between June 2023 and May 2025, indicating sustained activity spanning over two years.</p>
+
+<p>“Together, these individuals and entities form a central component of Pyongyang’s sanctions-evasion architecture, enabling the regime to move millions of dollars through both traditional and digital channels, including cryptocurrency, to fund weapons programs and cyber operations,” the blockchain intelligence firm
+said
+. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="why-soc-burnout-can-be-avoided-practical-steps"><a id="article-6"></a>Why SOC Burnout Can Be Avoided: Practical Steps</h2>
+
+<p>Behind every alert is an analyst; tired eyes scanning dashboards, long nights spent on false positives, and the constant fear of missing something big. It’s no surprise that many SOCs face burnout before they face their next breach. But this doesn’t have to be the norm. The path out isn’t through working harder, but through working smarter, together.</p>
+
+<p>Here are three practical steps every SOC can take to prevent burnout and build a healthier, more resilient team. Step 1: Reduce Alert Overload with Real-Time Context
+SOC burnout often starts with alert fatigue. Analysts waste hours dissecting incomplete data because traditional systems provide only fragments of the story. By giving teams the full behavioral context behind alerts, leaders can help them prioritize faster and act with confidence.</p>
+
+<p>Leading SOCs are already turning to
+advanced solutions like ANY.RUN’s interactive sandbox
+to cut through the noise. Instead of static logs, they see the full attack chain unfold in real time, from the first process execution to network connections, registry changes, and data exfiltration attempts. Every action is visualized step by step, giving analysts instant clarity on what’s malicious and what’s safe. Check recent attack fully exposed in real-time
+Real-time analysis of Clickup abuse fully exposed in 60 seconds
+For instance, in this analysis session, analysts exposed the
+entire phishing attack chain in just 60 seconds
+, uncovering how attackers abused ClickUp to deliver a fake Microsoft 365 login page.</p>
+
+<p>This fast, real-time detection turned what could have been hours of log review into a clear, actionable case. See how your SOC can achieve
+3× higher efficiency
+and eliminate analyst burnout with real-time, connected analysis. Talk to ANY.RUN Experts
+Here’s what SOC teams gain from real-time interactive analysis:
+Safe, hands-on investigation:
+Analysts can interact with live samples inside an isolated environment, reducing the risk of human error in production systems. Full attack chain exposure:
+Visibility into every process, file, and network action helps identify the threat’s origin, intent, and lateral movement.</p>
+
+<p>IOC extraction in seconds:
+Behavioral data is automatically captured, making it easy to feed verified indicators directly into detection systems. Fewer false positives:
+Clear behavioral evidence allows teams to confirm or dismiss alerts faster, improving confidence and focus. Result: Faster triage, reduced noise, and a calmer, more efficient SOC. Step 2: Automate Repetitive Work to Protect Analyst Focus
+Even the best SOCs lose countless hours to manual, low-impact tasks, collecting logs, exporting reports, copying IOCs, and updating tickets.</p>
+
+<p>These repetitive duties might seem small, but together they drain focus, slow investigations, and feed the burnout cycle. Automation breaks this pattern. When systems take care of the routine, analysts can dedicate their time to higher-value work; investigation, detection tuning, and incident response. The real breakthrough comes from combining
+automation with interactive analysis
+.</p>
+
+<p>This pairing saves enormous time while keeping analysts in control. In fact, some sandboxes like
+ANY.RUN
+now include
+automated interactivity;
+a feature that performs human-like actions such as solving CAPTCHAs, uncovering hidden malicious links behind QR codes, and executing tasks that traditional tools can’t handle without manual input. QR code–based phishing fully exposed inside ANY.RUN sandbox; the hidden malicious link and full attack chain revealed in under 60 seconds. The sandbox behaves as an analyst would, interacting with the sample autonomously while still allowing experts to step in whenever needed.</p>
+
+<p>As a result, SOC teams gain both efficiency and flexibility, scaling their capacity without sacrificing precision. According to ANY.RUN’s latest survey, teams using this combination of automation and interactivity achieved remarkable results:
+95% of SOC teams
+sped up threat investigations. Up to 20% decrease
+in workload for Tier 1 analysts. 30% reduction
+in Tier 1 → Tier 2 escalations.</p>
+
+<p>3× higher SOC efficiency
+through faster triage and automated evidence collection. Result: A focused, high-performing SOC where automation handles the dull work, and analysts handle what truly matters. Step 3: Integrate Real-Time Threat Intelligence to Cut Manual Work
+One of the most exhausting parts of a SOC analyst’s job is chasing outdated data, verifying domains that are already inactive, checking expired IOCs, or switching between disconnected tools just to confirm what’s real. This constant context-switching drains focus and leads straight to burnout.</p>
+
+<p>The solution is
+smarter integration
+. When fresh, verified threat intelligence flows directly into existing tools, analysts spend less time hunting for context and more time acting on it. That’s why leading teams use ANY.RUN’s
+Threat Intelligence Feeds
+, which gather live IOCs from more than
+15 000 SOCs and 500 000 analysts worldwide
+. Each indicator comes straight from real-time sandbox investigations, meaning the data reflects current phishing kits, redirect chains, and active infrastructure, not last month’s reports.</p>
+
+<p>Because these feeds integrate smoothly with existing SOC platforms, analysts can:
+Access continuously updated data
+without leaving their familiar environment. See how threats actually behave
+by tracing each IOC back to its live sandbox analysis. Avoid repetitive manual checks
+for outdated domains or expired indicators. Act faster with confidence
+, using evidence backed by current global activity.</p>
+
+<p>Result: Fewer context switches, faster validation, and analysts who stay sharp instead of overwhelmed. Prevent Analyst Burnout with Real-Time Insight and Smarter Workflows
+SOC burnout doesn’t come from the workload alone; it comes from slow tools, outdated data, and constant context switching. When teams gain
+real-time visibility
+,
+automated workflows
+, and
+connected intelligence
+, they move faster, think clearer, and stay motivated longer. With these improvements, SOCs can:
+Stay ahead of evolving threats with always-fresh intelligence
+Eliminate repetitive manual work through automation
+Investigate incidents faster with full behavioral context
+Keep analysts focused, confident, and engaged
+Talk to ANY.RUN experts
+to discover how your SOC can replace fatigue with focus and transform burnout into better performance.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-adds-gladinet-and-cwp-flaws-to-kev-catalog-amid-active-exploitation-evidence"><a id="article-7"></a>CISA Adds Gladinet and CWP Flaws to KEV Catalog Amid Active Exploitation Evidence</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday
+added
+two security flaws impacting Gladinet and Control Web Panel (CWP) to its Known Exploited Vulnerabilities (
+KEV
+) catalog, citing evidence of active exploitation in the wild. The vulnerabilities in question are listed below -
+CVE-2025-11371
+(CVSS score: 7.5) - A vulnerability in files or directories accessible to external parties in Gladinet CentreStack and Triofox that could result in unintended disclosure of system files. CVE-2025-48703
+(CVSS score: 9.0) - An operating system command injection vulnerability in Control Web Panel (formerly CentOS Web Panel) that results in unauthenticated remote code execution via shell metacharacters in the t_total parameter in a filemanager changePerm request.</p>
+
+<p>The development comes weeks after cybersecurity company Huntress
+said
+it detected active exploitation attempts targeting CVE-2025-11371, with unknown threat actors leveraging the flaw to run reconnaissance commands (e.g., ipconfig /all) passed in the form of a Base64-encoded payload. However, there are currently no public reports on how CVE-2025-48703 is being weaponized in real-world attacks. However, technical details of the flaw were shared by security researcher Maxime Rinaudo in June 2025, shortly after it was patched in version 0.9.8.1205 following responsible disclosure on May 13. “It allows a remote attacker who knows a valid username on a CWP instance to execute pre-authenticated arbitrary commands on the server,” Rinaudo
+said
+.</p>
+
+<p>In light of active exploitation, Federal Civilian Executive Branch (FCEB) agencies are required to apply the necessary fixes by November 25, 2025, to secure their networks. The addition of the two flaws to the KEV catalog follows reports from Wordfence about the exploitation of critical security vulnerabilities impacting three WordPress plugins and themes -
+CVE-2025-11533
+(CVSS score: 9.8) - A privilege escalation vulnerability in WP Freeio that makes it possible for an unauthenticated attacker to grant themselves administrative privileges by specifying a user role during registration. CVE-2025-5397
+(CVSS score: 9.8) - An authentication bypass vulnerability in Noo JobMonster that makes it possible for unauthenticated attackers to sidestep standard authentication and access administrative user accounts, assuming social login is enabled on a site. CVE-2025-11833
+(CVSS score: 9.8) - A lack of authorization checks in Post SMTP that makes it possible for an unauthenticated attacker to view email logs, including password reset emails, and change the password of any user, including an administrator, allowing site takeover.</p>
+
+<p>WordPress site users relying on the aforementioned plugins and themes are recommended to update them to the latest version as soon as possible, use strong passwords, and audit the sites for signs of malware or the presence of unexpected accounts. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="a-cybercrime-merger-like-no-other--scattered-spider-lapsus-and-shinyhunters-join-forces"><a id="article-8"></a>A Cybercrime Merger Like No Other — Scattered Spider, LAPSUS$, and ShinyHunters Join Forces</h2>
+
+<p>The nascent collective that combines three prominent cybercrime groups, Scattered Spider, LAPSUS$, and ShinyHunters, has created no less than 16 Telegram channels since August 8, 2025. “Since its debut, the group’s Telegram channels have been removed and recreated at least 16 times under varying iterations of the original name – a recurring cycle reflecting platform moderation and the operators’ determination to sustain this specific type of public presence despite disruption,” Trustwave SpiderLabs, a LevelBlue company,
+said
+in a report shared with The Hacker News. Scattered LAPSUS$ Hunters (SLH)
+emerged
+in early August, launching data extortion attacks against organizations, including those using Salesforce in recent months. Chief among its offerings is an extortion-as-a-service (EaaS) that other affiliates can join to demand a payment from targets in exchange for using the “brand” and notoriety of the consolidated entity.</p>
+
+<p>All three groups are assessed to be affiliated with a loose-knit and federated cybercriminal enterprise referred to as The Com that’s marked by “fluid collaboration and brand-sharing.” The threat actors have since exhibited their associations with other adjacent clusters tracked as
+CryptoChameleon
+and
+Crimson Collective
+. Telegram, according to the cybersecurity vendor, continues to be the central place for its members to coordinate and bring visibility to the group’s operations, embracing a style akin to hacktivist groups. This serves a fold purpose: turning its channels into a megaphone for the threat actors to disseminate their messaging, as well as market their services. “As activity matured, administrative posts began to include signatures referencing the ‘SLH/SLSH Operations Centre,’ a self-applied label carrying symbolic weight that projected the image of an organized command structure that lent bureaucratic legitimacy to otherwise fragmented communications,” Trustwave noted.</p>
+
+<p>Observed Telegram channels and activity periods
+Members of the group have also used Telegram to accuse Chinese state actors of exploiting vulnerabilities allegedly targeted by them, while simultaneously taking aim at U.S. and U.K. law enforcement agencies. Furthermore, they have been found to invite channel subscribers to participate in pressure campaigns by finding the email addresses of C-suite executives and relentlessly emailing them in return for a minimum payment of $100.</p>
+
+<p>Some of the known threat clusters part of the crew are listed below, highlighting a cohesive alliance that brings together several semi-autonomous groups within The Com network and their technical capabilities under one umbrella -
+Shinycorp (aka sp1d3rhunters), who acts as a coordinator and manages brand perception
+UNC5537
+(linked to Snowflake extortion campaign)
+UNC3944
+(associated with Scattered Spider)
+UNC6040
+(linked to recent Salesforce vishing campaign)
+Also part of the group are identities like Rey and SLSHsupport, who are responsible for sustaining engagement, along with yuka (aka Yukari or Cvsp), who has a history of developing exploits and presents themselves as an initial access broker (IAB). Consolidated administrative and affiliated personas
+While data theft and extortion continue to be Scattered LAPSUS$ Hunters’ mainstay, the threat actors have hinted at a custom ransomware family named Sh1nySp1d3r (aka ShinySp1d3r) to rival LockBit and
+DragonForce
+, suggesting possible ransomware operations in the future. Trustwave has characterized the threat actors as positioned somewhere in the spectrum of financially motivated cybercrime and attention-driven hacktivism, commingling monetary incentives and social validation to fuel their activities. “Through theatrical branding, reputational recycling, cross-platform amplification, and layered identity management, the actors behind SLH have shown a mature grasp of how perception and legitimacy can be weaponized within the cybercriminal ecosystem,” it added.</p>
+
+<p>“Taken together, these behaviors illustrate an operational structure that combines social engineering, exploit development, and narrative warfare – a blend more characteristic of established underground actors than opportunistic newcomers.”
+Cartelization of Another Kind
+The disclosure comes as Acronis revealed that the threat actors behind DragonForce have unleashed a new malware variant that uses vulnerable drivers such as truesight.sys and rentdrv2.sys (part of
+BadRentdrv2
+) to disable security software and terminate protected processes as part of a bring your own vulnerable driver (
+BYOVD
+) attack. DragonForce, which
+launched
+a ransomware cartel earlier this year, has since also
+partnered
+with Qilin and LockBit in an attempt to “facilitate the sharing of techniques, resources, and infrastructure” and bolster their own individual capabilities. “Affiliates can deploy their own malware while using DragonForce’s infrastructure and operating under their own brand,” Acronis researchers
+said
+. “This lowers the technical barrier and allows both established groups and new actors to run operations without building a full ransomware ecosystem.”
+The ransomware group, per the Singapore headquartered company, is aligned with Scattered Spider, with the latter functioning as an affiliate to break into targets of interest through sophisticated social engineering techniques like spear-phishing and vishing, followed by deploying remote access tools like ScreenConnect, AnyDesk, TeamViewer, and Splashtop to conduct extensive reconnaissance prior to dropping DragonForce.</p>
+
+<p>“DragonForce used the Conti leaked source code to forge a dark successor crafted to carry its own mark,” it said. “While other groups made some changes to the code to give it a different spin, DragonForce kept all functionality unchanged, only adding an encrypted configuration in the executable to get rid of command-line arguments that were used in the original Conti code.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="european-authorities-dismantle-600-million-crypto-fraud-network-in-global-sweep"><a id="article-9"></a>European Authorities Dismantle €600 Million Crypto Fraud Network in Global Sweep</h2>
+
+<p>Nine people have been arrested in connection with a coordinated law enforcement operation that targeted a cryptocurrency money laundering network that defrauded victims of €600 million (~$688 million). According to a statement released by Eurojust today, the action took place between October 27 and 29 across Cyprus, Spain, and Germany, with the suspects arrested on charges of involvement in money laundering from fraudulent activities. In addition to the arrests of the individuals from their homes, authorities conducted searches that led to the seizure of €800,000 ($918,000) in bank accounts, €415,000 ($476,000) in cryptocurrencies, and €300,000 ($344,000) in cash. Participating nations in the “synchronized” effort alongside Eurojust were agencies from France, Belgium, Cyprus, Germany, and Spain.</p>
+
+<p>“The members of the network created dozens of fake cryptocurrency investment platforms that looked like legitimate websites and promised high returns,” Eurojust
+said
+. “They recruited their victims using a variety of methods such as social media advertising, cold calling, fake news articles, and fake testimonials from celebrities or successful investors.”
+Once victims invested their funds in the bogus platforms, the crypto assets were laundered using blockchain, netting them about €600 million in illicit revenue. Eurojust said an investigation into the money laundering and scam network was initiated after victims complained of not being able to recover their investments, eventually culminating in the raids that occurred last week. In tandem, the Paris Prosecutor’s Office
+said
+in a post on LinkedIn that the probe started in 2023 and that there were “several hundreds of victims” in France and across Europe who were lured into deporting their assets in the fake cryptocurrency platforms and promising attractive gains.</p>
+
+<p>The disclosure comes as Europol revealed that the criminal use of cryptocurrency and blockchain is becoming increasingly professionalized, sophisticated, and organized, and that countering the “borderless nature” of the threat requires a similar response. “Law enforcement, private sector partners, and academia are rapidly advancing their ability to counter the threats posed by sophisticated crypto-related crimes and money laundering,” the agency
+said
+. “Advanced tools are reducing reliance on manual tracing, while a host of successful cross-border operations show the power of collaboration.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-react-native-cli-flaw-exposed-millions-of-developers-to-remote-attacks"><a id="article-10"></a>Critical React Native CLI Flaw Exposed Millions of Developers to Remote Attacks</h2>
+
+<p>Details have emerged about a now-patched critical security flaw in the popular “
+@react-native-community/cli
+“ npm package that could be potentially exploited to run malicious operating system (OS) commands under certain conditions. “The vulnerability allows remote unauthenticated attackers to easily trigger arbitrary OS command execution on the machine running react-native-community/cli’s development server, posing a significant risk to developers,” JFrog Senior Security Researcher Or Peles
+said
+in a report shared with The Hacker News. The vulnerability, tracked as
+CVE-2025-11953,
+carries a CVSS score of 9.8 out of a maximum of 10.0, indicating critical severity. It also affects the “@react-native-community/cli-server-api” package versions 4.8.0 through 20.0.0-alpha.2, and has been
+patched
+in
+version 20.0.0
+released early last month.</p>
+
+<p>The
+command-line tools package
+, which is maintained by Meta, enables developers to build React Native mobile applications. It receives approximately 1.5 million to 2 million downloads per week. According to the software supply chain security firm, the vulnerability arises from the fact that the
+Metro development server
+used by React Native to build JavaScript code and assets binds to external interfaces by default (instead of localhost) and exposes an “/open-url” endpoint that is susceptible to OS command injection. “The server’s ‘/open-url’ endpoint handles a POST request that includes a user-input value that is passed to the unsafe open() function provided by the open NPM package, which will cause OS command execution,” Peles said.</p>
+
+<p>As a result, an unauthenticated network attacker could weaponize the flaw to send a specially crafted POST request to the server and run arbitrary commands. On Windows, the attackers can also execute arbitrary shell commands with fully controlled arguments, while on Linux and macOS, it can be abused to execute arbitrary binaries with limited parameter control. While the issue has since been addressed, developers who use React Native with a framework that doesn’t rely on Metro as the development server are not impacted. “This zero day vulnerability is particularly dangerous due to its ease of exploitation, lack of authentication requirements and broad attack surface,” Peles said.</p>
+
+<p>“It also exposes the critical risks hidden in third-party code.”
+“For developer and security teams, this underscores the need for automated, comprehensive security scanning across the software supply chain to ensure easily exploitable flaws are remediated before they impact your organization.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-teams-bugs-let-attackers-impersonate-colleagues-and-edit-messages-unnoticed"><a id="article-11"></a>Microsoft Teams Bugs Let Attackers Impersonate Colleagues and Edit Messages Unnoticed</h2>
+
+<p>Cybersecurity researchers have disclosed details of four security flaws in Microsoft Teams that could have exposed users to serious impersonation and social engineering attacks. The vulnerabilities “allowed attackers to manipulate conversations, impersonate colleagues, and exploit notifications,” Check Point
+said
+in a report shared with The Hacker News. Following responsible disclosure in March 2024, some of the issues were addressed by Microsoft in August 2024 under the CVE identifier CVE-2024-38197, with subsequent patches rolled out in September 2024 and October 2025. In a nutshell, these shortcomings make it possible to alter message content without leaving the “Edited” label and sender identity and modify incoming notifications to change the apparent sender of the message, thereby allowing an attacker to trick victims into opening malicious messages by making them appear as if they are coming from a trusted source, including high-profile C-suite executives.</p>
+
+<p>The attack, which covers both external guest users and internal malicious actors, poses grave risks, as it undermines security boundaries and enables prospective targets to perform unintended actions, such as clicking on malicious links sent in the messages or sharing sensitive data. On top of that, the flaws also made it possible to change the display names in private chat conversations by modifying the conversation topic, as well as arbitrarily modify display names used in call notifications and during the call, permitting an attacker to forge caller identities in the process. “Together, these vulnerabilities show how attackers can erode the fundamental trust that makes collaboration workspace tools effective, turning Teams from a business enabler into a vector for deception,” the cybersecurity company
+said
+. Microsoft has described
+CVE-2024-38197
+(CVSS score: 6.5) as a medium-severity spoofing issue impacting Teams for iOS, which could allow an attacker to alter the sender’s name of a Teams message and potentially trick them into disclosing sensitive information through social engineering ploys.</p>
+
+<p>The findings come as threat actors are
+abusing
+Microsoft’s enterprise communication platform in various ways, including approaching targets and persuading them to grant remote access or run a malicious payload under the guise of support personnel. Microsoft, in an
+advisory
+released last month, said the “extensive collaboration features and global adoption of Microsoft Teams make it a high-value target for both cybercriminals and state-sponsored actors” and that its messaging (chat), calls, and meetings, and video-based screen-sharing features are weaponized at different stages of the attack chain. “These vulnerabilities hit at the heart of digital trust,” Oded Vanunu, head of product vulnerability research at Check Point, told The Hacker News in a statement. “Collaboration platforms like Teams are now as critical as email and just as exposed.”
+“Our research shows that threat actors don’t need to break in anymore; they just need to bend trust.</p>
+
+<p>Organizations must now secure what people believe, not just what systems process. Seeing isn’t believing anymore, verification is.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ransomware-defense-using-the-wazuh-open-source-platform"><a id="article-12"></a>Ransomware Defense Using the Wazuh Open Source Platform</h2>
+
+<p>Ransomware is malicious software designed to block access to a computer system or encrypt data until a ransom is paid. This cyberattack is one of the most prevalent and damaging threats in the digital landscape, affecting individuals, businesses, and critical infrastructure worldwide. A ransomware attack typically begins when the malware infiltrates a system through various vectors such as phishing emails, malicious downloads, or exploiting software vulnerabilities. Once activated, the malware encrypts files using strong cryptographic algorithms, rendering them inaccessible to the legitimate owner.</p>
+
+<p>The attackers then demand payment, usually in cryptocurrency like Bitcoin, in exchange for the decryption key. Modern ransomware variants have evolved beyond simple file encryption. Some employ double extortion tactics, where attackers encrypt data, exfiltrate sensitive information, and threaten to publish it publicly if the ransom is not paid. This puts pressure on victims, particularly organizations handling confidential customer data or proprietary business information.</p>
+
+<p>Ransomware development and propagation
+Understanding ransomware creation and distribution is essential for developing effective defense strategies. The ransomware lifecycle involves sophisticated development processes and diverse propagation methods that exploit technical vulnerabilities and human behavior. Ransomware development
+Ransomware is typically developed by cybercriminal organizations or individual threat actors with programming expertise. The creation process involves:
+Malware coding:
+Developers write malicious code using various programming languages, incorporating encryption algorithms and command-and-control communication protocols.</p>
+
+<p>Ransomware-as-a-Service (RaaS):
+Some criminal groups operate subscription-based models that provide ransomware tools to affiliates in exchange for a percentage of ransom payments. Customization and testing:
+Attackers test their malware against security solutions to ensure it can evade detection. Propagation methods
+Ransomware spreads through multiple attack vectors:
+Phishing emails:
+Malicious attachments or links that appear legitimate trick users into downloading ransomware. Exploit kits:
+Automated tools that scan for and exploit known vulnerabilities in applications and operating systems.</p>
+
+<p>Remote Desktop Protocol (RDP) attacks:
+Attackers gain unauthorized access through weak or compromised RDP credentials. Malicious websites and downloads:
+Downloads from compromised or malicious websites install ransomware with or without the user’s knowledge. Supply chain attacks:
+Compromised trusted software or service providers can distribute ransomware to customers. Removable media:
+Infected USB drives and external storage devices can spread ransomware when connected to computer systems.</p>
+
+<p>Effects of a ransomware attack
+The impact of ransomware extends far beyond the immediate encryption of files. Organizations and individuals affected by ransomware experience multiple consequences that can have long-lasting repercussions on operations, finances, and reputation. Financial consequences
+Ransomware attacks inflict financial damage beyond file encryption. Victims may face ransom demands ranging from hundreds to millions of dollars, with no guarantee of data recovery even after payment.</p>
+
+<p>Additional expenses arise from incident response, forensic investigations, system restoration, and security enhancements, while regulatory non-compliance can lead to substantial legal fines and penalties for data breaches. Operational consequences
+Ransomware attacks cause significant operational disruption by crippling access to vital resources. Critical business data, customer information, and intellectual property may be lost or compromised, while essential services become unavailable, impacting customers, partners, and internal workflows. The resulting operational downtime often surpasses the ransom cost, as businesses can experience weeks or months of halted operations.</p>
+
+<p>Reputational damage
+Ransomware incidents often lead to lasting reputational damage as data breaches erode customer trust and confidence in an organization’s ability to safeguard sensitive information. Public disclosure of such attacks can weaken market position, strain business relationships, and create a competitive disadvantage. Preventing ransomware attacks
+Preventing ransomware attacks requires a multi-layered defense strategy that combines technical controls, organizational policies, and user awareness. Understanding and implementing these protective measures reduces the risk of successful ransomware infections.</p>
+
+<p>Technical defenses
+Security Information and Event Management (SIEM) and Extended Detection and Response (XDR):
+Implement continuous monitoring to detect and respond to suspicious activities and anomalous behavior. File integrity monitoring:
+Track changes to files, folders, and system configurations. This helps you identify malware behavior within your environment. Network traffic analysis:
+Monitor for unusual data exfiltration patterns or command-and-control communications.</p>
+
+<p>Regular backups:
+To ensure recovery without ransom, maintain frequent, automated backups of critical data stored offline or in immutable storage. Patch management:
+Keep operating systems, applications, and firmware up to date to remediate known vulnerabilities that ransomware exploits. Network segmentation:
+Isolate critical systems and limit lateral movement opportunities for attackers. Email filtering:
+Implement robust email security solutions to block phishing attempts and malicious attachments.</p>
+
+<p>Access controls:
+Enforce the principle of least privilege and implement strong authentication mechanisms, including multi-factor authentication. Application whitelisting:
+Allow only approved applications to execute in your environment, preventing unauthorized malware from running. Organizational practices
+Security awareness training:
+Educate employees about phishing tactics, social engineering, and safe computing practices. Incident response planning:
+Develop and regularly test comprehensive incident response procedures for ransomware scenarios.</p>
+
+<p>Security audits:
+Conduct regular vulnerability assessments and penetration testing to identify security weaknesses. Vendor risk management:
+Assess and monitor the security posture of third-party service providers. What Wazuh offers for ransomware protection
+Wazuh
+is a free and open source security platform that provides comprehensive capabilities for detecting, preventing, and responding to ransomware threats. It is a unified XDR (Extended Detection and Response) and SIEM (Security Information and Event Management) platform.</p>
+
+<p>Wazuh helps organizations build resilience against ransomware attacks through its out-of-the-box capabilities and integration with other security platforms. Threat detection and prevention
+Wazuh employs multiple detection mechanisms to identify ransomware activities. These include:
+Malware detection:
+Wazuh integrates with threat intelligence feeds and utilizes signature-based and anomaly-based detection methods to identify known ransomware variants. Vulnerability detection:
+This Wazuh capability scans systems for known vulnerabilities that ransomware commonly exploits, enabling proactive patching and reducing the likelihood of successful compromise.</p>
+
+<p>Log data analysis:
+This Wazuh capability analyzes security events collected from user endpoints, servers, cloud workloads, and network devices to detect ransomware indicators. Security configuration monitoring (SCA):
+The Wazuh SCA evaluates system configurations against security best practices and compliance frameworks. File integrity monitoring (FIM):
+This Wazuh capability monitors critical files and directories, detecting unauthorized modifications that may indicate ransomware encryption activity. Regulatory compliance monitoring:
+This Wazuh capability helps organizations maintain security standards and regulatory compliance requirements that deter ransomware attacks.</p>
+
+<p>Incident response capabilities
+Active response:
+The Wazuh Active Response capability automatically executes predefined actions when threats are detected, such as isolating infected systems, blocking malicious processes, or quarantining files. Integration with external solutions:
+Wazuh integrates with other security tools and platforms to improve organizations’ security posture. Use cases
+The following sections show some use cases of Wazuh detection and response to ransomware. Detecting and responding to DOGE Big Balls ransomware with Wazuh
+The DOGE Big Balls ransomware, a modified version of the FOG ransomware, combines technical exploits with psychological manipulation targeting enterprise environments.</p>
+
+<p>This malware variant delivers its payload through phishing campaigns or unpatched vulnerabilities. It then performs privilege escalation, reconnaissance, file encryption, and note creation on the victim’s endpoint. Detection
+Wazuh detects the DOGE Big Balls ransomware
+using threat detection rules and a Wazuh Custom Database (CBD) list to match its specific pattern. CBD list containing DOGE Big Balls reconnaissance commands.</p>
+
+<p>net  config Workstation:
+systeminfo:
+hostname:
+net  users:
+ipconfig  /all:
+route  print:
+arp  -A:
+netstat  -ano:
+netsh firewall show state:
+netsh firewall show config:
+schtasks  /query /fo LIST /v:
+tasklist  /SVC:
+net  start:
+DRIVERQUERY:
+Threat detection rules</p>
+<group name="doge_big_ball,ransomware,">
+
+  <rule id="100020" level="10">
+    <if_sid>61613</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)[C-Z]:.*\\\\.*.exe</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">(?i)[C-Z]:.*.\\\\DbgLog.sys</field>
+    <description>A log file $(win.eventdata.targetFilename) was created to log the output of the reconnaissance activities of the DOGE Big Balls ransomware. Suspicious activity detected.</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+
+  <rule id="100021" level="8" timeframe="300" frequency="2">  
+    <if_sid>61603</if_sid>  
+    <list field="win.eventdata.commandLine" lookup="match_key">etc/lists/doge-big-balls-ransomware</list>  
+    <description>The command $(win.eventdata.commandLine) is executed for reconnaissance activities. Suspicious activity detected.</description>  
+    <options>no_full_log</options>  
+  </rule>
+
+<!-- Ransom note file creation -->
+  <rule id="100022" level="15" timeframe="300" frequency="2">
+    <if_sid>61613</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)[C-Z]:.*\\\\.*.exe</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">(?i)[C-Z]:.*.\\\\readme.txt</field>
+    <description>DOGE Big Balls ransom note $(win.eventdata.targetFilename) has been created in multiple directories. Possible DOGE Big Balls ransomware detected.</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule>
+
+  
+  <rule id="100023" level="15" timeframe="300" frequency="2" ignore="100">
+    <if_matched_sid>100020</if_matched_sid>
+    <if_sid>100021</if_sid>
+    <description>Possible DOGE Big Balls ransomware detected.</description>
+    <mitre>
+      <id>T1486</id>
+    </mitre>
+  </rule> 
+
+</group>
+<p>These rules flag the execution of known reconnaissance commands and detect when multiple ransom notes appear across directories.</p>
+
+<p>These are DOGE Big Balls ransomware IOCs that indicate file encryption and other ransomware activities. Automated response
+Wazuh enables ransomware detection and removal using its File Integrity Monitoring (FIM) capability and integration with YARA. In this use case, Wazuh monitors the Downloads directory in real-time. When a new or modified file appears, it triggers the active response capability to execute a YARA scan.</p>
+
+<p>If a file matches known YARA ransomware signatures like DOGE Big Balls, the custom active response script deletes it automatically and logs the action. Custom decoders and rules on the Wazuh server parse those logs to generate alerts showing whether the file was detected and successfully removed. Detecting Gunra ransomware with Wazuh
+The
+Gunra ransomware
+is typically used by private cybercriminals to extort money from its victims. It utilizes a double-extortion model that encrypts files and exfiltrates data for publication should its victim fail to pay the ransom.</p>
+
+<p>The Gunra ransomware spreads through Windows systems by encrypting files, appending the .ENCRT extension, and leaving ransom notes named R3ADM3.txt. It deletes shadow copies, disables backup and antivirus services to block recovery, and uses Tor networks to hide its operators. These actions make data restoration difficult and help the attackers maintain anonymity during ransom negotiations. Detection
+The following Wazuh rules alert when ransom notes named R3ADM3.txt appear, system components like VSS or amsi.dll are tampered with, or suspicious modules such as urlmon.dll are loaded for network activity.</p>
+
+<p>The rules also track attempts to delete shadow copies or disable backup and admin functions, indicating behavior typical of ransomware preparing for file encryption. Threat detection rules</p>
+<group name="gunra,ransomware,">
+
+  <!--Ransom note file creation-->
+  <rule frequency="2" id="100601" ignore="100" level="15" timeframe="100">
+    <if_sid>61613</if_sid>
+    <field name="win.eventdata.Image" type="pcre2">[^"]+\.exe</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">[^"]*R3ADM3\.txt</field>
+    <description>Possible Gunra ransomware activity detected: Multiple ransom notes dropped in $(win.eventdata.targetFilename)</description>
+    <mitre>
+      <id>T1543.003</id>
+      <id>T1486</id> 
+    </mitre>
+  </rule>
+
+  <!--Antimalware Scan Interface Access Modification-->
+  <rule id="100602" level="7">
+    <if_sid>61609</if_sid>
+    <field name="win.eventdata.Image" type="pcre2">C:\\\\Windows\\\\System32\\\\VSSVC\.exe</field>
+    <field name="win.eventdata.ImageLoaded" type="pcre2">C:\\\\Windows\\\\System32\\\\amsi\.dll</field>
+    <description>Possible ransomware activity detected: Suspicious Volume Shadow copy Service (VSS) loaded amsi.dll for tampering and evasion attempt.</description>
+    <mitre>
+      <id>T1562</id>
+      <id>T1562.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100603" level="7">
+    <if_sid>61609</if_sid>
+    <field name="win.eventdata.Image" type="pcre2">(C:\\\\Windows\\\\SystemApps\\\\Microsoft\.Windows\.AppRep\.ChxApp_cw5n1h2txyewy\\\\CHXSmartScreen\.exe)</field>
+    <field name="win.eventdata.ImageLoaded" type="pcre2">C:\\\\Windows\\\\System32\\\\urlmon\.dll</field>
+    <description>Possible ransomware activity detected: Urlmon.dll was loaded, indicating network reconnaissance.</description>
+    <mitre>
+      <id>T1562.001</id>
+    </mitre>
+  </rule>
+
+  <!--Volume Shadow copy Service (VSS) deletion-->
+  <rule id="100604" level="7">
+    <if_sid>60103</if_sid>
+    <field name="win.eventdata.targetUserName" type="pcre2">Backup Operators</field>
+    <field name="win.eventdata.targetSid" type="pcre2">S-1-5-32-551</field>
+    <field name="win.eventdata.callerProcessName" type="pcre2">C:\\\\Windows\\\\System32\\\\VSSVC\.exe</field>
+    <description>Possible Gunra ransomware activity detected: Volume Shadow copy Service (VSS) deletion attempts, gearing up to disable backups.</description>
+    <mitre>
+      <id>T1562</id>
+      <id>T1562.002</id>
+    </mitre>
+  </rule>
+
+  <rule id="100605" level="7">
+    <if_sid>60103</if_sid>
+    <field name="win.eventdata.targetUserName" type="pcre2">Administrators</field>
+    <field name="win.eventdata.targetSid" type="pcre2">S-1-5-32-544</field>
+    <field name="win.eventdata.callerProcessName" type="pcre2">C:\\\\Windows\\\\System32\\\\VSSVC\.exe</field>
+    <description>Possible Gunra ransomware activity detected: Volume Shadow copy Service (VSS) deletion shadow attempts, gearing to disable local admin accounts</description>
+    <mitre>
+      <id>T1562</id>
+      <id>T1562.002</id>
+    </mitre>
+  </rule>
+
+</group>
+<p>Automated response
+Wazuh performs automated responses to Gunra ransomware malicious file activities using its FIM capability and integration with VirusTotal. In this use case, the Wazuh File Integrity Monitoring (FIM) module monitors the Downloads folder in real-time, triggering scans whenever files are added or changed. A custom active response executable, then securely deletes any file that VirusTotal flags as a threat.</p>
+
+<p>Ransomware protection on Windows with Wazuh
+Wazuh provides
+ransomware protection and file recovery on monitored Windows endpoints
+using its command module and the Windows Volume Shadow Copy Service (VSS). This integration allows administrators to automatically take snapshots of monitored endpoints to recover files to a state before they are encrypted by malware. The following image shows successful Wazuh Active Response file recovery alerts. Conclusion
+Ransomware attacks pose significant financial, operational, and reputational damage.</p>
+
+<p>They require multi-layered defenses that combine early detection with incident response. Organizations that invest in these practices are better equipped to withstand and recover from such attacks. Wazuh provides capabilities that enable early detection and rapid response to contain ransomware attacks. It offers out-of-the-box capabilities for vulnerability detection, file integrity monitoring, log data analysis, and automated responses to prevent ransomware-caused data loss and downtime.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

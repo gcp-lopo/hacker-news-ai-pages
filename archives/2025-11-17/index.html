@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-17 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">RondoDox Exploits Unpatched XWiki Servers to Pull More Devices Into Its Botnet</a></li>
+      
+        <li><a href="#article-2">Five Plead Guilty in U.S. for Helping North Korean IT Workers Infiltrate 136 Companies</a></li>
+      
+        <li><a href="#article-3">North Korean Hackers Turn JSON Services into Covert Malware Delivery Channels</a></li>
+      
+        <li><a href="#article-4">Researchers Find Serious AI Bugs Exposing Meta, Nvidia, and Microsoft Inference Frameworks</a></li>
+      
+        <li><a href="#article-5">Iranian Hackers Launch 'SpearSpecter' Spy Operation on Defense & Government Targets</a></li>
+      
+        <li><a href="#article-6">Ransomware's Fragmentation Reaches a Breaking Point While LockBit Returns</a></li>
+      
+        <li><a href="#article-7">Chinese Hackers Use Anthropic's AI to Launch Automated Cyber Espionage Campaign</a></li>
+      
+        <li><a href="#article-8">Now-Patched Fortinet FortiWeb Flaw Exploited in Attacks to Create Admin Accounts</a></li>
+      
+        <li><a href="#article-9">Russian Hackers Create 4,300 Fake Travel Sites to Steal Hotel Guests' Payment Data</a></li>
+      
+        <li><a href="#article-10">Fake Chrome Extension "Safery" Steals Ethereum Wallet Seed Phrases Using Sui Blockchain</a></li>
+      
+        <li><a href="#article-11">When Attacks Come Faster Than Patches: Why 2026 Will be the Year of Machine-Speed Security</a></li>
+      
+        <li><a href="#article-12">Operation Endgame Dismantles Rhadamanthys, Venom RAT, and Elysium Botnet in Global Crackdown</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-17-ai创业新闻">2025-11-17 AI创业新闻</h1>
+
+<h2 id="rondodox-exploits-unpatched-xwiki-servers-to-pull-more-devices-into-its-botnet"><a id="article-1"></a>RondoDox Exploits Unpatched XWiki Servers to Pull More Devices Into Its Botnet</h2>
+
+<p>The botnet malware known as
+RondoDox
+has been observed targeting unpatched XWiki instances against a critical security flaw that could allow attackers to achieve arbitrary code execution. The vulnerability in question is CVE-2025-24893 (CVSS score: 9.8), an
+eval injection bug
+that could allow any guest user to perform arbitrary remote code execution through a request to the “/bin/get/Main/SolrSearch” endpoint. It was
+patched
+by the maintainers in XWiki 15.10.11, 16.4.1, and 16.5.0RC1 in late February 2025. While there was evidence that the shortcoming had been exploited in the wild since at least March, it wasn’t until late October, when VulnCheck
+disclosed
+it had observed fresh attempts weaponizing the flaw as part of a two-stage attack chain to deploy a cryptocurrency miner.</p>
+
+<p>Subsequently, the U.S. Cybersecurity and Infrastructure Security Agency (CISA)
+added
+the vulnerability to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply necessary mitigations by November 20. In a fresh report published Friday, VulnCheck
+revealed
+that it has since observed a spike in exploitation attempts, hitting a new high on November 7, followed by another surge on November 11. This indicates broader scanning activity likely driven by multiple threat actors participating in the effort.</p>
+
+<p>This includes RondoDox, a botnet that’s rapidly adding new exploitation vectors to rope susceptible devices into a botnet for conducting distributed denial-of-service (DDoS) attacks using HTTP, UDP, and TCP protocols. The first RondoDox exploit was observed on November 3, 2025, per the cybersecurity company. Other attacks have been observed exploiting the flaw to deliver cryptocurrency miners, as well as attempts to establish a reverse shell and general probing activity using a
+Nuclei template for CVE-2025-24893
+. The findings once again illustrate the need for adopting robust patch management practices to ensure optimal protection.</p>
+
+<p>“CVE-2025-24893 is a familiar story: one attacker moves first, and many follow,” VulnCheck’s Jacob Baines said. “Within days of the initial exploitation, we saw botnets, miners, and opportunistic scanners all adopting the same vulnerability.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="five-plead-guilty-in-us-for-helping-north-korean-it-workers-infiltrate-136-companies"><a id="article-2"></a>Five Plead Guilty in U.S. for Helping North Korean IT Workers Infiltrate 136 Companies</h2>
+
+<p>The U.S. Department of Justice (DoJ) on Friday
+announced
+that five individuals have pleaded guilty to assisting North Korea’s illicit revenue generation schemes by enabling information technology (IT) worker fraud in violation of international sanctions. The five individuals are listed below -
+Audricus Phagnasay, 24
+Jason Salazar, 30
+Alexander Paul Travis, 34
+Oleksandr Didenko, 28, and
+Erick Ntekereze Prince, 30
+Phagnasay, Salazar, and Travis pleaded guilty to one count of wire fraud conspiracy for knowingly allowing IT workers located outside of the U.S. to use their U.S.</p>
+
+<p>identities between about September 2019 and November 2022 and secure jobs at American firms. The three defendants also served as facilitators, hosting the company-issued laptops at their residences and installing remote desktop software on those machines without authorization so that the IT workers could connect to them and give the impression that they were working remotely within the U.S. Furthermore, the trio is said to have aided the overseas IT workers in passing employer vetting procedures, with Salazar and Travis taking it to the next level by appearing for drug testing on behalf of them. Travis, then an active-duty member of the U.S.</p>
+
+<p>Army, received at least $51,397 for his role in the fraudulent scheme. Phagnasay and Salazar are said to have earned at least $3,450 and $4,500, respectively. Didenko, whose arrest was
+disclosed
+by the DoJ back in May 2025, has pleaded guilty to wire fraud conspiracy and aggravated identity theft for stealing the identities of U.S. citizens and selling them to IT workers so that they could land jobs at 40 U.S.</p>
+
+<p>companies. Didenko has also agreed to forfeit more than $1.4 million. “Didenko ran a website using a U.S.-based domain, ‘Upworksell.com,’ designed to help overseas IT workers buy or rent stolen or borrowed identities,” the DoJ
+said
+. “Beginning in 2021, the IT workers used the identities to get hired on online freelance work platforms based in California and Pennsylvania.”
+The Ukrainian national also paid individuals in the U.S.</p>
+
+<p>to receive and host laptops, turning their homes into laptop farms for the IT workers. One such laptop farm was operated by Christina Marie Chapman in Arizona. Didenko’s site has since been seized. Chapman was
+sentenced
+to 8.5 years in prison in July 2025.</p>
+
+<p>Didenko is estimated to have managed as many as 871 proxy identities and facilitated the operation of at least three U.S.-based laptop farms. He also enabled his overseas clients to access Money Service Transmitters rather than having to physically open an account at a U.S. bank to transfer the employment income to foreign bank accounts. Rounding off the list is Prince, who has pleaded guilty to one count of wire fraud conspiracy for allegedly operating a company called Taggcar Inc.</p>
+
+<p>from approximately June 2020 through August 2024 to supply “certified” IT workers to U.S. companies and for running a laptop at his home in Florida. Prince earned more than $89,000 for his involvement in the IT worker fraud. It’s worth noting that Prince, along with Pedro Ernesto Alonso De Los Reyes, Emanuel Ashtor, and Jin Sung-Il (진성일), Pak Jin-Song (박진성), were
+indicted
+earlier this January for allegedly allowing North Korean IT workers to obtain work at more than 64 U.S.</p>
+
+<p>companies. The scheme netted more than $943,069 in salary payments, most of which were funneled back to the IT workers overseas. Ashtor is currently awaiting trial, and De Los Reyes is pending extradition from the Netherlands. “In total, these defendants’ fraudulent employment schemes impacted more than 136 U.S.</p>
+
+<p>victim companies, generated more than $2.2 million in revenue for the [Democratic People’s Republic of Korea] regime, and compromised the identities of more than 18 U.S. persons,” the DoJ said. In a set of related actions, the DoJ said it has also filed two civil complaints to forfeit cryptocurrency valued at more than $15 million that the U.S. Federal Bureau of Investigation (FBI) seized in March 2025 from
+APT38
+(aka BlueNoroff) actors.</p>
+
+<p>The digital assets, the complaints allege, were illegally obtained through hacks at overseas virtual currency platforms -
+Theft of approximately $37 million from an Estonia-based virtual currency payments processor in July 2023
+Theft of approximately $100 million from a Panama-based virtual currency payment processor in July 2023
+Theft of approximately $138 million from a Panama-based virtual currency exchange in November 2023, and
+Theft of approximately $107 million in virtual currency from a Seychelles-based virtual currency exchange in November 2023
+“Efforts to trace, seize, and forfeit related stolen virtual currency remain ongoing, as the APT38 actors continue to launder such funds through various virtual currency bridges, mixers, exchanges, and over-the-counter traders,” the department added. The new round of guilty pleas is the latest effort on the part of the U.S. government to combat and disrupt North Korea’s IT worker and hacking schemes, which have been used to fund the regime’s priorities. For several years, North Korea has successfully infiltrated hundreds of Western companies and elsewhere, posing as remote IT workers to draw steady salaries and use them to fund its nuclear weapons program.</p>
+
+<p>A couple of weeks ago, the U.S. Treasury Department
+levied sanctions
+against eight individuals and two entities within North Korea’s global financial network for laundering money for various illicit schemes, including cybercrime and information technology (IT) worker fraud. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="north-korean-hackers-turn-json-services-into-covert-malware-delivery-channels"><a id="article-3"></a>North Korean Hackers Turn JSON Services into Covert Malware Delivery Channels</h2>
+
+<p>The North Korean threat actors behind the
+Contagious Interview
+campaign have once again tweaked their tactics by using JSON storage services to stage malicious payloads. “The threat actors have recently resorted to utilizing JSON storage services like JSON Keeper, JSONsilo, and npoint.io to host and deliver malware from trojanized code projects, with the lure,” NVISO researchers Bart Parys, Stef Collart, and Efstratios Lontzetidis
+said
+in a Thursday report. The campaign essentially involves approaching prospective targets on professional networking sites like LinkedIn, either under the pretext of conducting a job assessment or collaborating on a project, as part of which they are instructed to download a demo project hosted on platforms like GitHub, GitLab, or Bitbucket. In one such project spotted by NVISO, it has been found that a file named “server/config/.config.env” contains a Base64-encoded value that masquerades as an API key, but, in reality, is a URL to a JSON storage service like JSON Keeper where the next-stage payload is stored in obfuscated format.</p>
+
+<p>The payload is a JavaScript malware known as BeaverTail, which is capable of harvesting sensitive data and dropping a Python backdoor called InvisibleFerret. While the functionality of the backdoor has remained largely unchanged from when it was
+first documented
+by Palo Alto Networks in late 2023, one notable change involves fetching an additional payload dubbed TsunamiKit from Pastebin. It’s worth noting that the use of TsunamiKit as part of the Contagious Interview campaign was
+highlighted
+by ESET back in September 2025, with the attacks also dropping Tropidoor and AkdoorTea. The toolkit is capable of system fingerprinting, data collection, and fetching more payloads from a hard-coded .onion address that’s currently offline.</p>
+
+<p>“It’s clear that the actors behind Contagious Interview are not lagging behind and are trying to cast a very wide net to compromise any (software) developer that might seem interesting to them, resulting in exfiltration of sensitive data and crypto wallet information,” the researchers concluded. “The use of legitimate websites such as JSON Keeper, JSON Silo, and npoint.io, along with code repositories such as GitLab and GitHub, underlines the actor’s motivation and sustained attempts to operate stealthily and blend in with normal traffic.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-find-serious-ai-bugs-exposing-meta-nvidia-and-microsoft-inference-frameworks"><a id="article-4"></a>Researchers Find Serious AI Bugs Exposing Meta, Nvidia, and Microsoft Inference Frameworks</h2>
+
+<p>Cybersecurity researchers have uncovered critical remote code execution vulnerabilities impacting major artificial intelligence (AI) inference engines, including those from Meta, Nvidia, Microsoft, and open-source PyTorch projects such as vLLM and SGLang. “These vulnerabilities all traced back to the same root cause: the overlooked unsafe use of ZeroMQ (ZMQ) and Python’s pickle deserialization,” Oligo Security researcher Avi Lumelsky
+said
+in a report published Thursday. At its core, the issue stems from what has been described as a pattern called
+ShadowMQ
+, in which the insecure deserialization logic has propagated to several projects as a result of code reuse. The root cause is a vulnerability in Meta’s Llama large language model (LLM) framework (
+CVE-2024-50050
+, CVSS score: 6.3/9.3) that was patched by the company last October.</p>
+
+<p>Specifically, it involved the use of ZeroMQ’s recv_pyobj() method to deserialize incoming data using Python’s pickle module. This, coupled with the fact that the framework exposed the ZeroMQ socket over the network, opened the door to a scenario where an attacker can execute arbitrary code by sending malicious data for deserialization. The issue has also been addressed in the pyzmq Python library. Oligo has since discovered the same pattern recurring in other inference frameworks, such as NVIDIA TensorRT-LLM, Microsoft Sarathi-Serve, Modular Max Server, vLLM, and SGLang.</p>
+
+<p>“All contained nearly identical unsafe patterns: pickle deserialization over unauthenticated ZMQ TCP sockets,” Lumelsky said. “Different maintainers and projects maintained by different companies – all made the same mistake.”
+Tracing the origins of the problem, Oligo found that in at least a few cases, it was the result of a direct copy-paste of code. For example, the vulnerable file in SGLang says it’s adapted by vLLM, while Modular Max Server has borrowed the same logic from both vLLM and SGLang, effectively perpetuating the same flaw across codebases. The issues have been assigned the following identifiers -
+CVE-2025-30165
+(CVSS score: 8.0) - vLLM (While the issue is not fixed, it has been addressed by switching to the V1 engine by default)
+CVE-2025-23254
+(CVSS score: 8.8) - NVIDIA TensorRT-LLM (Fixed in version 0.18.2)
+CVE-2025-60455
+(CVSS score: N/A) - Modular Max Server (Fixed)
+Sarathi-Serve (Remains unpatched)
+SGLang (Implemented
+incomplete fixes
+)
+With inference engines acting as a crucial component within AI infrastructures, a successful compromise of a single node could permit an attacker to execute arbitrary code on the cluster, escalate privileges, conduct model theft, and even drop malicious payloads like cryptocurrency miners for financial gain.</p>
+
+<p>“Projects are moving at incredible speed, and it’s common to borrow architectural components from peers,” Lumelsky said. “But when code reuse includes unsafe patterns, the consequences ripple outward fast.”
+The disclosure comes as a new report from AI security platform Knostic has found that it’s possible to compromise Cursor’s new
+built-in browser
+via JavaScript injection techniques, not to mention leverage a malicious extension to facilitate JavaScript injection in order to take control of the developer workstation. The first attack involves registering a rogue local Model Context Protocol (
+MCP
+) server that bypasses Cursor’s controls to allow an attacker to replace the login pages within the browser with a bogus page that harvests credentials and exfiltrates them to a remote server under their control. “Once a user downloaded the MCP server and ran it, using an mcp.json file within Cursor, it injected code into Cursor’s browser that led the user to a fake login page, which stole their credentials and sent them to a remote server,” security researcher Dor Munis
+said
+.</p>
+
+<p>Given that the AI-powered source code editor is essentially a fork of Visual Studio Code, a bad actor could also craft a malicious extension to inject JavaScript into the running IDE to execute arbitrary actions, including marking harmless Open VSX extensions as “malicious.”
+“JavaScript running inside the Node.js interpreter, whether introduced by an extension, an MCP server, or a poisoned prompt or rule, immediately inherits the IDE’s privileges: full file-system access, the ability to modify or replace IDE functions (including installed extensions), and the ability to persist code that reattaches after a restart,” the company
+said
+. “Once interpreter-level execution is available, an attacker can turn the IDE into a malware distribution and exfiltration platform.”
+To counter these risks, it’s essential that users disable Auto-Run features in their IDEs, vet extensions, install MCP servers from trusted developers and repositories, check what data and APIs the servers access, use API keys with minimal required permissions, and audit MCP server source code for critical integrations. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="iranian-hackers-launch-spearspecter-spy-operation-on-defense--government-targets"><a id="article-5"></a>Iranian Hackers Launch ‘SpearSpecter’ Spy Operation on Defense &amp; Government Targets</h2>
+
+<p>The Iranian state-sponsored threat actor known as
+APT42
+has been observed targeting individuals and organizations that are of interest to the Islamic Revolutionary Guard Corps (IRGC) as part of a new espionage-focused campaign. The activity, detected in early September 2025 and assessed to be ongoing, has been codenamed
+SpearSpecter
+by the Israel National Digital Agency (INDA). “The campaign has systematically targeted high-value senior defense and government officials using personalized social engineering tactics,” INDA researchers Shimi Cohen, Adi Pick, Idan Beit-Yosef, Hila David, and Yaniv Goldman said. “These include inviting targets to prestigious conferences or arranging significant meetings.”
+What’s notable about the effort is that it also extends to the targets’ family members, creating a broader attack surface that exerts more pressure on the primary targets.</p>
+
+<p>APT42 was first publicly documented in late 2022 by Google Mandiant, detailing its overlaps with another
+IRGC threat cluster
+tracked as APT35, CALANQUE, Charming Kitten, CharmingCypress, Cobalt Illusion, Educated Manticore, GreenCharlie, ITG18, Magic Hound, Mint Sandstorm (formerly Phosphorus), TA453, and Yellow Garuda. One of the group’s hallmarks is its ability to mount convincing social engineering campaigns that can run for days or weeks in an effort build trust with the targets, in some cases masquerading as known contacts to create an illusion of authenticity, before sending a malicious payload or tricking them into clicking on booby-trapped links. As recently as June 2025, Check Point
+detailed
+an attack wave in which the threat actors approached Israeli technology and cyber security professionals by posing as technology executives or researchers in emails and WhatsApp messages. Goldman told The Hacker News that SpearSpecter and the June 2025 campaign are distinct and have been undertaken by two different sub-groups within APT42.</p>
+
+<p>“While our campaign was carried out by cluster D of APT42 (which focuses more on malware-based operations), the campaign detailed by Check Point was carried out by cluster B of the same group (which focuses more on credential harvesting),” Goldman added. INDA said SpearSpecter is flexible in that the adversary tweaks its approach based on the value of the target and operational objectives. In one set of attacks, victims are redirected to bogus meeting pages that are designed to capture their credentials. On the other hand, if the end goal is persistent long-term access, the attacks lead to the deployment of a known PowerShell backdoor dubbed TAMECAT that has been
+repeatedly
+put to use in
+recent years
+.</p>
+
+<p>To that end, the attack chains involve impersonating trusted WhatsApp contacts to send a malicious link to a supposed required document for an upcoming meeting or conference. When the link is clicked, it initiates a redirect chain to serve a WebDAV-hosted Windows shortcut (LNK) masquerading as a PDF file by
+taking advantage
+of the “search-ms:” protocol handler. The LNK file, for its part, establishes contact with a
+Cloudflare Workers subdomain
+to retrieve a batch script that functions as a loader for TAMECAT, which, in turn, employs various modular components to facilitate data exfiltration and remote control. The PowerShell framework uses three distinct channels, viz., HTTPS, Discord, and Telegram, for command-and-control (C2), highlighting the threat actor’s goal of maintaining persistent access to compromised hosts even if one pathway gets detected and blocked.</p>
+
+<p>For Telegram-based C2, TAMECAT listens for incoming commands from an attacker-controlled Telegram bot, based on which it fetches and executes additional PowerShell code from different Cloudflare Workers subdomains. In the case of Discord, a webhook URL is used to send basic system information and get commands in return from a hard-coded channel. “Analysis of accounts recovered from the actor’s Discord server suggests the command lookup logic relies on messages from a specific user, allowing the actor to deliver unique commands to individual infected hosts while using the same channel to coordinate multiple attacks, effectively creating a collaborative workspace on a single infrastructure,” INDA researchers said. Furthermore, TAMECAT comes equipped with features to conduct reconnaissance, harvest files matching a certain extensions, steal data from web browsers like Google Chrome and Microsoft Edge, collect Outlook mailboxes, and take screenshots at 15-second intervals.</p>
+
+<p>The data is exfiltrated over HTTPS or FTP. It also adopts a variety of stealthy techniques to evade detection and resist analysis efforts. These include encrypting telemetry and controller payloads, source code obfuscation, using living-off-the-land binaries (LOLBins) to hide malicious activities, and operating mostly in memory, thereby leaving little traces on disk. “The SpearSpecter campaign’s infrastructure reflects a sophisticated blend of agility, stealth, and operational security designed to sustain prolonged espionage against high-value targets,” INDA said.</p>
+
+<p>“operators leverage a multifaceted infrastructure that combines legitimate cloud services with attacker-controlled resources, enabling seamless initial access, persistent command-and-control (C2), and covert data exfiltration.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ransomwares-fragmentation-reaches-a-breaking-point-while-lockbit-returns"><a id="article-6"></a>Ransomware’s Fragmentation Reaches a Breaking Point While LockBit Returns</h2>
+
+<p>Key Takeaways:
+85 active ransomware and extortion groups
+observed in Q3 2025, reflecting the most decentralized ransomware ecosystem to date. 1,590 victims disclosed
+across 85 leak sites, showing high, sustained activity despite law-enforcement pressure. 14 new ransomware brands
+launched this quarter, proving how quickly affiliates reconstitute after takedowns. LockBit’s reappearance with version 5.0
+signals potential re-centralization after months of fragmentation.</p>
+
+<p>In Q3 2025, Check Point Research recorded
+a record 85 active ransomware and extortion groups
+, the highest ever observed. What was once a concentrated market dominated by a few ransomware-as-a-service (RaaS) giants has splintered into dozens of smaller, short-lived operations. This proliferation of leak sites represents a fundamental structural shift. The same enforcement and market pressures that disrupted large RaaS groups have fueled a wave of opportunistic, decentralized actors, many run by former affiliates now operating independently.</p>
+
+<p>Read the full Q3 2025 Ransomware Report
+A Record 85 Active Groups
+Across more than 85 monitored leak sites, ransomware operators published:
+1,592 new victims
+in Q3 2025. An average of 535 disclosures per month. A major power shift:
+the top ten groups accounted for just 56% of victims, down from 71% earlier this year. Smaller actors are now posting fewer than ten victims each, reflecting a rise in independent operations outside traditional RaaS hierarchies.</p>
+
+<p>Many emerged from the collapse of RansomHub, 8Base, and BianLian. Fourteen new groups began publishing in Q3 alone, bringing the 2025 total to 45. Fragmentation at this level erodes predictability, once the cyber security professional’s advantage. When large RaaS brands dominated, security teams could track affiliate behaviors and infrastructure reuse.</p>
+
+<p>Now, dozens of ephemeral leak sites make attribution fleeting and reputation-based intelligence far less reliable. Share of total victims by top 10 ransomware groups, Q1–Q3 2025
+Read the full Q3 2025 Ransomware Report. Law Enforcement’s Limited Impact
+Several high-profile takedowns this year targeting groups like RansomHub and 8Base have not meaningfully reduced ransomware volume. Affiliates displaced by these operations simply migrate or rebrand.</p>
+
+<p>The problem is structural. Law-enforcement efforts typically dismantle infrastructure or seize domains, not the affiliates who execute attacks. When a platform falls, those operators scatter and regroup within days. The result is a broader, more resilient ecosystem that mirrors decentralized finance or open-source communities more than a traditional criminal hierarchy.</p>
+
+<p>This diffusion also undermines the credibility of the ransomware market. Smaller, short-lived crews have no incentive to honor ransom agreements or provide decryption keys. Payment rates, estimated at just 25 to 40 percent, continue to decline as victims lose trust in attacker promises. LockBit’s Return and Re-centralization
+In September 2025,
+LockBit 5.0
+marked the return of one of cybercrime’s most enduring brands.</p>
+
+<p>Its administrator, LockBitSupp, had teased a comeback for months following the 2024 takedown under Operation Cronos. The new version delivers:
+Updated Windows, Linux, and ESXi variants. Faster encryption and improved evasion. Unique negotiation portals per victim.</p>
+
+<p>At least a dozen victims were hit in the first month. The campaign demonstrates renewed affiliate confidence and technical maturity. For attackers, joining a recognizable brand like LockBit brings something smaller crews cannot offer: reputation. Victims are more likely to pay when they believe they will actually receive decryption keys, trust that large RaaS programs carefully maintain.</p>
+
+<p>If LockBit succeeds in attracting affiliates seeking structure and credibility, it could recentralize a significant portion of the ransomware economy. Centralization has a dual effect. It makes tracking easier but increases the potential scale of coordinated attacks. LockBit 5.0 ransom note from an attack
+DragonForce and the Performance of Power
+DragonForce
+illustrates another survival strategy: visibility through branding.</p>
+
+<p>In September, the group publicly claimed coalitions with both LockBit and Qilin on underground forums. No shared infrastructure has been verified, and the alliances appear more symbolic than operational. Still, these moves highlight ransomware’s evolution toward corporate-style marketing. DragonForce promotes itself with:
+Affiliate partnership announcements.</p>
+
+<p>Data-audit services to analyze stolen data and improve extortion leverage. Public relations aimed at projecting strength and reliability. The group’s messaging reflects a competitive marketplace where image and credibility are as valuable as encryption speed. DragonForce audit example
+Geographic and Industry Trends
+Global targeting in Q3 2025 largely mirrored previous quarters but with distinct regional and sector shifts.</p>
+
+<p>The United States
+accounted for about half of all reported victims, continuing to be the prime target for financially motivated actors. South Korea
+entered the global top ten for the first time, almost entirely due to Qilin’s focused campaign against financial firms. Europe
+remained highly active, with Germany and the United Kingdom seeing sustained pressure from Safepay and INC Ransom. Read the full Q3 2025 Ransomware Report
+On the industrial side:
+Manufacturing
+and
+business services
+each represented about 10 percent of recorded cases.</p>
+
+<p>Healthcare
+held steady at 8 percent, though some groups such as Play avoid the sector to reduce scrutiny. These shifts show how ransomware is guided by business logic more than ideology. Actors pursue sectors and regions with high-value data and low tolerance for downtime. The Road Ahead
+Q3 2025 confirms ransomware’s structural resilience.</p>
+
+<p>Enforcement and market pressure no longer suppress overall volume; they simply reshape the landscape. Each takedown disperses actors who quickly resurface under new names or join emerging collectives. LockBit’s return adds another layer of complexity, raising the question of whether ransomware is entering a new consolidation cycle. If LockBit re-establishes dominance, it may restore some predictability but also re-enable large-scale, coordinated campaigns that smaller crews cannot execute.</p>
+
+<p>For cyber security professionals, the takeaway is clear. Tracking brands is no longer enough. Analysts must monitor
+affiliate mobility
+,
+infrastructure overlap
+, and
+economic incentives
+— the underlying forces that sustain ransomware even as its faces fragment. 🔗
+Read the full Q3 2025 Ransomware Report →
+Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chinese-hackers-use-anthropics-ai-to-launch-automated-cyber-espionage-campaign"><a id="article-7"></a>Chinese Hackers Use Anthropic’s AI to Launch Automated Cyber Espionage Campaign</h2>
+
+<p>State-sponsored threat actors from China used artificial intelligence (AI) technology developed by Anthropic to orchestrate automated cyber attacks as part of a “highly sophisticated espionage campaign” in mid-September 2025. “The attackers used AI’s ‘agentic’ capabilities to an unprecedented degree – using AI not just as an advisor, but to execute the cyber attacks themselves,” the AI upstart
+said
+. The activity is assessed to have manipulated Claude Code, Anthropic’s AI coding tool, to attempt to break into about 30 global targets spanning large tech companies, financial institutions, chemical manufacturing companies, and government agencies. A subset of these intrusions succeeded.</p>
+
+<p>Anthropic has since banned the relevant accounts and enforced defensive mechanisms to flag such attacks. The campaign, GTG-1002, marks the first time a threat actor has leveraged AI to conduct a “large-scale cyber attack” without major human intervention and for intelligence collection by striking high-value targets, indicating
+continued evolution
+in adversarial use of the technology. Describing the operation as well-resourced and professionally coordinated, Anthropic said the threat actor turned Claude into an “autonomous cyber attack agent” to support various stages of the attack lifecycle, including reconnaissance, vulnerability discovery, exploitation, lateral movement, credential harvesting, data analysis, and exfiltration. Specifically, it involved the use of Claude Code and Model Context Protocol (MCP) tools, with the former acting as the central nervous system to process the human operators’ instructions and break down the multi-stage attack into small technical tasks that can be offloaded to sub-agents.</p>
+
+<p>“The human operator tasked instances of Claude Code to operate in groups as autonomous penetration testing orchestrators and agents, with the threat actor able to leverage AI to execute 80-90% of tactical operations independently at physically impossible request rates,” the company added. “Human responsibilities centered on campaign initialization and authorization decisions at critical escalation points.”
+Human involvement also occurred at strategic junctures, such as authorizing progression from reconnaissance to active exploitation, approving use of harvested credentials for lateral movement, and making final decisions about data exfiltration scope and retention. The system is part of an attack framework that accepts as input a target of interest from a human operator and then leverages the power of MCP to conduct reconnaissance and attack surface mapping. In the next phases of the attack, the Claude-based framework facilitates vulnerability discovery and validates discovered flaws by generating tailored attack payloads.</p>
+
+<p>Upon obtaining approval from human operators, the system proceeds to deploy the exploit and obtain a foothold, and initiate a series of post-exploitation activities involving credential harvesting, lateral movement, data collection, and extraction. In one case targeting an unnamed technology company, the threat actor is said to have instructed Claude to independently query databases and systems and parse results to flag proprietary information and group findings by intelligence value. What’s more, Anthropic said its AI tool generated detailed attack documentation at all phases, allowing the threat actors to likely hand off persistent access to additional teams for long-term operations after the initial wave. “By presenting these tasks to Claude as routine technical requests through carefully crafted prompts and established personas, the threat actor was able to induce Claude to execute individual components of attack chains without access to the broader malicious context,” per the report.</p>
+
+<p>There is no evidence that the operational infrastructure enabled custom malware development. Rather, it has been found to rely extensively on publicly available network scanners, database exploitation frameworks, password crackers, and binary analysis suites. However, investigation into the activity has also uncovered a crucial limitation of AI tools: Their tendency to hallucinate and fabricate data during autonomous operations – cooking up fake credentials or presenting publicly available information as critical discoveries – thereby posing major roadblocks to the overall effectiveness of the scheme. The disclosure comes nearly four months after Anthropic disrupted another sophisticated operation that weaponized Claude to conduct large-scale theft and extortion of personal data in July 2025.</p>
+
+<p>Over the past two months, OpenAI and Google have also disclosed attacks mounted by threat actors leveraging
+ChatGPT
+and
+Gemini
+, respectively. “This campaign demonstrates that the barriers to performing sophisticated cyberattacks have dropped substantially,” the company said. “Threat actors can now use agentic AI systems to do the work of entire teams of experienced hackers with the right set up, analyzing target systems, producing exploit code, and scanning vast datasets of stolen information more efficiently than any human operator. Less experienced and less resourced groups can now potentially perform large-scale attacks of this nature.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="now-patched-fortinet-fortiweb-flaw-exploited-in-attacks-to-create-admin-accounts"><a id="article-8"></a>Now-Patched Fortinet FortiWeb Flaw Exploited in Attacks to Create Admin Accounts</h2>
+
+<p>Cybersecurity researchers are sounding the alert about an authentication bypass vulnerability in Fortinet Fortiweb Web Application Firewall (WAF) that could allow an attacker to take over admin accounts and completely compromise a device. “The watchTowr team is seeing active, indiscriminate in-the-wild exploitation of what appears to be a silently patched vulnerability in Fortinet’s FortiWeb product,” Benjamin Harris, watchTowr CEO and founder, said in a statement. “Patched in
+version 8.0.2
+, the vulnerability allows attackers to perform actions as a privileged user - with in-the-wild exploitation focusing on adding a new administrator account as a basic persistence mechanism for the attackers.”
+The cybersecurity company said it was able to successfully
+reproduce the vulnerability
+and create a working proof-of-concept (Poc). It has also
+released
+an artifact generator tool for the authentication bypass to help identify susceptible devices.</p>
+
+<p>According to details
+shared
+by Defused and security researcher Daniel Card of PwnDefend, the threat actor behind the exploitation has been found to send a payload to the “/api/v2.0/cmdb/system/admin%3F/../../../../../cgi-bin/fwbcgi” endpoint by means of an HTTP POST request to create an admin account. Some of the admin usernames and passwords created by the payloads detected in the wild are below -
+Testpoint / AFodIUU3Sszp5
+trader1 / 3eMIXX43
+trader / 3eMIXX43
+test1234point / AFT3$tH4ck
+Testpoint / AFT3$tH4ck
+Testpoint / AFT3$tH4ckmet0d4yaga!n
+watchTowr Labs researcher Sina Kheirkhah, in a
+follow-up analysis
+, said the vulnerability is actually a combination of two flaws: a path traversal bug within the HTTP request to reach the “fwbcgi” executable (“/api/v2.0/cmdb/system/admin%3F/../../../../../cg1-bin/fwbcgi”) and an authentication bypass via the contents of the HTTP request header CGIINFO. The “fwbcgi” binary includes a check to confirm if the body of the incoming HTTP request is a valid JSON blob, as well as invokes a function named “cgi_auth(),” which “provides a mechanism to impersonate any user based on data supplied by the client.”
+This unfolds over four steps -
+Extract a CGIINFO header from the HTTP request
+Decode the Base64-encoded value
+Parse the result as JSON
+Iterate over the all JSON keys in the blob to extract four attributes: username, profname (profile name), vdom (virtual domain), and loginname (login identifier)
+In other words, these fields passed via the HTTP request instruct “fwbcgi” the user the sender of the request wishes to impersonate. In the case of the built-in “admin” account, these values are consistent across devices and cannot be changed: username (“admin”), profname (“prof_admin”), vdom (“root”), and loginname (“admin”).</p>
+
+<p>As a result, an attacker can leverage the path traversal vulnerability by sending a specifically crafted HTTP request containing a CGIINFO header that allows them to impersonate any user, including an admin, by simply supplying the aforementioned values and inheriting their privileges. “That means an attacker can perform any privileged action simply by supplying the appropriate JSON structure,” Kheirkhah explained, adding that the vulnerability could be weaponized to create new local users with elevated privileges. The origins and identity of the threat actor behind the attacks remain unknown. The exploitation activity was
+first detected
+early last month.</p>
+
+<p>As of writing, Fortinet has not assigned a CVE identifier or published an advisory on its PSIRT feed. Rapid7, which is urging organizations running versions of Fortinet FortiWeb that predate 8.0.2 to address the vulnerability on an emergency basis,
+said
+it observed an alleged zero-day exploit targeting FortiWeb was published for sale on a popular black hat forum on November 6, 2025. It’s currently not clear if it’s the same exploit. “While we wait for a comment from Fortinet, users and enterprises are now facing a familiar process now: look for trivial signs of prior compromise, reach out to Fortinet for more information, and apply patches if you haven’t already,” Harris said.</p>
+
+<p>“That said, given the indiscriminate exploitation observed […], appliances that remain unpatched are likely already compromised.”
+Update
+Fortinet is now tracking the vulnerability as
+CVE-2025-64446
+(CVSS score: 9.1), describing it as a relative path traversal vulnerability in FortiWeb that may allow an unauthenticated attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests. The company also acknowledged that it has “observed this to be exploited in the wild.”
+The issue affects the following versions -
+FortiWeb 8.0.0 through 8.0.1 (Upgrade to 8.0.2 or above)
+FortiWeb 7.6.0 through 7.6.4 (Upgrade to 7.6.5 or above)
+FortiWeb 7.4.0 through 7.4.9 (Upgrade to 7.4.10 or above)
+FortiWeb 7.2.0 through 7.2.11 (Upgrade to 7.2.12 or above)
+FortiWeb 7.0.0 through 7.0.11 (Upgrade to 7.0.12 or above)
+As workarounds, users are advised to disable HTTP or HTTPS for internet-facing interfaces until patches can be applied. It’s also advised to review their configuration and review logs for unexpected modifications, or the addition of unauthorized administrator accounts. “We are aware of this vulnerability and activated our PSIRT response and remediation efforts as soon as we learned of this matter, and those efforts remain ongoing,” a spokesperson for the company told The Hacker News.</p>
+
+<p>“Fortinet diligently balances our commitment to the security of our customers and our culture of responsible transparency. With that goal and principle top of mind, we are communicating directly with affected customers to advise on any necessary recommended actions. We urge our customers to refer to the advisory and follow the guidance provided for
+CVE FG-IR-25-910
+.”
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has also
+added
+the vulnerability to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by November 21, 2025.</p>
+
+<p>“Limiting access to HTTP/HTTPS management interfaces to internal networks is a best practice that reduces, but does not eliminate, risk; upgrading the affected systems remains essential and is the only way to fully remediate this vulnerability,” the agency
+said
+in a separate advisory. In a similar alert, cybersecurity company VulnCheck urged FortiWeb customers to reach out to the supplier for guidance on threat hunting and other indicators of compromise (IoCs). It also criticized Fortinet’s security by obscurity approach. “Silently patching vulnerabilities is an established bad practice that enables attackers and harms defenders, particularly for devices and systems (including FortiWeb) that have previously been exploited in the wild,” VulnCheck’s Caitlin Condon
+said
+.</p>
+
+<p>“When popular technology vendors fail to communicate new security issues, they are issuing an invitation to attackers while choosing to keep that same information from defenders.”
+(The story was amended after publication to include a response from Fortinet and details of CISA’s advisory.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="russian-hackers-create-4300-fake-travel-sites-to-steal-hotel-guests-payment-data"><a id="article-9"></a>Russian Hackers Create 4,300 Fake Travel Sites to Steal Hotel Guests’ Payment Data</h2>
+
+<p>A Russian-speaking threat behind an ongoing, mass phishing campaign has registered
+more than 4,300 domain names
+since the start of the year. The
+activity
+, per Netcraft security researcher Andrew Brandt, is designed to target customers of the hospitality industry, specifically hotel guests who may have travel reservations with spam emails. The campaign is said to have begun in earnest around February 2025. Of the 4,344 domains tied to the attack, 685 domains contain the name “Booking”, followed by 18 with “Expedia,” 13 with “Agoda,” and 12 with “Airbnb,” indicating an attempt to target all popular booking and rental platforms.</p>
+
+<p>“The ongoing campaign employs a sophisticated phishing kit that customizes the page presented to the site visitor depending on a unique string in the URL path when the target first visits the website,” Brandt said. “The customizations use the logos from major online travel industry brands, including Airbnb and Booking.com.”
+The attack begins with a phishing email urging recipients to click on a link to confirm their booking within the next 24 hours using a credit card. Should they take the bait, the victims are taken to a fake site instead after initiating a chain of redirects. These bogus sites follow consistent naming patterns for their domains, featuring phrases like confirmation, booking, guestcheck, cardverify, or reservation to give them an illusion of legitimacy.</p>
+
+<p>The pages support 43 different languages, allowing the threat actors to cast a wide net. The page then instructs the victim to pay a deposit for their hotel reservation by entering their card information. In the event that any user directly attempts to access the page without a unique identifier called AD_CODE, they are greeted with a blank page. The bogus sites also feature a fake CAPTCHA check that mimics Cloudflare to deceive the target.</p>
+
+<p>“After the initial visit, the AD_CODE value is written to a cookie, which ensures that subsequent pages present the same impersonated branding appearance to the site visitor as they click through pages,” Netcraft said. This also means that changing the “AD_CODE” value in the URL produces a page targeting a different hotel on the same booking platform. As soon as the card details, along with the expiration data and CVV number, are entered, the page attempts to process a transaction in the background, while an “support chat” window appears on the screen with steps to complete a supposed “3D Secure verification for your credit card” to secure against fake bookings. The identity of the threat group behind the campaign remains unknown, but the use of Russian for source code comments and debugger output either alludes to their provenance or is an attempt to cater to prospective customers of the phishing kit who may be looking to customize it to suit their needs.</p>
+
+<p>The disclosure comes days after Sekoia
+warned
+of a large-scale phishing campaign targeting the hospitality industry that lures hotel managers to ClickFix-style pages and harvest their credentials by deploying malware like PureRAT and then approach hotel customers via WhatsApp or emails with their reservation details and confirm their booking by clicking on a link. Interestingly, one of the indicators shared by the French cybersecurity company – guestverifiy5313-booking[.]com/67122859 – matches the domain pattern registered by the threat actor (e.g., verifyguets71561-booking[.]com), raising the possibility that these two clusters of activity could be related. When reached for comment, Netcraft confirmed to The Hacker News that they appear to be the same campaign, and that it’s “seeing significant overlap.”
+In recent weeks, large-scale phishing campaigns have also
+impersonated
+multiple brands like Microsoft, Adobe, WeTransfer, FedEx, and DHL to steal credentials by distributing HTML attachments through email. The embedded HTML files, once launched, display a fake login page while JavaScript code captures credentials entered by the victim and sends them directly to attacker-controlled Telegram bots, Cyble said.</p>
+
+<p>The campaign has mainly targeted a wide range of organizations across Central and Eastern Europe, particularly in the Czech Republic, Slovakia, Hungary, and Germany. “The attackers distribute phishing emails posing as legitimate customers or business partners, requesting quotations or invoice confirmations,” the company pointed out. “This regional focus is evident through targeted recipient domains belonging to local enterprises, distributors, government-linked entities, and hospitality firms that routinely process RFQs and supplier communications.”
+Furthermore, phishing kits have been put to use in a large-scale campaign targeting customers of Aruba S.p.A, one of Italy’s largest web hosting and IT service providers, in a similar attempt to steal sensitive data and payment information by sending emails warning of expiring services or failed payments. The phishing kit is a “fully automated, multi-stage platform designed for efficiency and stealth,” Group-IB researchers Ivan Salipur and Federico Marazzi
+said
+.</p>
+
+<p>“It employs CAPTCHA filtering to evade security scans, pre-fills victim data to increase credibility, and uses Telegram bots to exfiltrate stolen credentials and payment information. Every function serves a single goal: industrial-scale credential theft.”
+These findings exemplify the growing demand for phishing-as-a-service (PhaaS) offerings in the underground economy, enabling threat actors with little to no technical expertise to pull off attacks at scale. “The automation observed in this particular kit exemplifies how phishing has become systematized – faster to deploy, harder to detect, and easier to replicate,” the Singaporean company added. “What once required technical expertise can now be executed at scale through pre-built, automated frameworks.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fake-chrome-extension-safery-steals-ethereum-wallet-seed-phrases-using-sui-blockchain"><a id="article-10"></a>Fake Chrome Extension “Safery” Steals Ethereum Wallet Seed Phrases Using Sui Blockchain</h2>
+
+<p>Cybersecurity researchers have uncovered a malicious Chrome extension that poses as a legitimate Ethereum wallet but harbors functionality to exfiltrate users’ seed phrases. The name of the extension is “Safery: Ethereum Wallet,” with the threat actor describing it as a “secure wallet for managing Ethereum cryptocurrency with flexible settings.” It was uploaded to the Chrome Web Store on September 29, 2025, and was updated as recently as November 12. It’s still
+available for download
+as of writing. “Marketed as a simple, secure Ethereum (ETH) wallet, it contains a backdoor that exfiltrates seed phrases by encoding them into Sui addresses and broadcasting microtransactions from a threat actor-controlled Sui wallet,” Socket security researcher Kirill Boychenko
+said
+.</p>
+
+<p>Specifically, the malware present within the browser add-on is designed to steal wallet mnemonic phrases by encoding them as fake Sui wallet addresses and then using micro-transactions to send 0.000001 SUI to those wallets from a hard-coded threat actor-controlled wallet. The end goal of the malware is to smuggle the seed phrase inside normal looking blockchain transactions without the need for setting up a command-and-control (C2) server to receive the information. Once the transactions are complete, the threat actor can decode the recipient addresses to reconstruct the original seed phrase and ultimately drain assets from it. “This extension steals wallet seed phrases by encoding them as fake Sui addresses and sending micro-transactions to them from an attacker-controlled wallet, allowing the attacker to monitor the blockchain, decode the addresses back to seed phrases, and drain victims’ funds,” Koi Security
+notes
+in an analysis.</p>
+
+<p>To counter the risk posed by the threat, users are advised to stick to trusted wallet extensions. Defenders are recommended to scan extensions for mnemonic encoders, synthetic address generators, and hard-coded seed phrases, as well as block those that write on the chain during wallet import or creation. “This technique lets threat actors switch chains and RPC endpoints with little effort, so detections that rely on domains, URLs, or specific extension IDs will miss it,” Boychenko said. “Treat unexpected blockchain RPC calls from the browser as high signal, especially when the product claims to be single chain.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="when-attacks-come-faster-than-patches-why-2026-will-be-the-year-of-machine-speed-security"><a id="article-11"></a>When Attacks Come Faster Than Patches: Why 2026 Will be the Year of Machine-Speed Security</h2>
+
+<p>The Race for Every New CVE
+Based on multiple 2025 industry reports: roughly 50 to 61 percent of newly disclosed vulnerabilities saw exploit code weaponized within 48 hours. Using the
+CISA Known Exploited Vulnerabilities Catalog
+as a reference, hundreds of software flaws are now confirmed as actively targeted within days of public disclosure. Each new announcement now triggers a global race between attackers and defenders. Both sides monitor the same feeds, but one moves at machine speed while the other moves at human speed.</p>
+
+<p>Major threat actors have fully industrialized their response. The moment a new vulnerability appears in public databases, automated scripts scrape, parse, and assess it for exploitation potential, and now these efforts are getting ever more streamlined through the use of AI. Meanwhile, IT and security teams often enter triage mode, reading advisories, classifying severity, and queuing updates for the next patch cycle. That delay is precisely the gap the adversaries exploit.</p>
+
+<p>The traditional cadence of quarterly or even monthly patching is no longer sustainable. Attackers now weaponize critical vulnerabilities within hours of disclosure, long before organizations have even analyzed or validated them, and usually well before they have rolled out the fix. The Exploitation Economy of Speed
+Today’s threat ecosystem is built on automation and volume. Exploit brokers and affiliate groups operate as supply chains, each specializing in one part of the attack process.</p>
+
+<p>They use vulnerability feeds, open-source scanners, and fingerprinting tools to match new CVEs against exposed software targets. Many of these targets have already been identified, and these systems know in advance which targets are most likely to be susceptible to the impending attack. This is a game of quick draw, the fastest gun wins. Research from Mandiant shows that exploitation often begins within 48 hours of public disclosure, in many organizations, IT operates on 8 hours a day, leaving the 32 hours in the attackers’ favor.</p>
+
+<p>This efficiency in operations illustrates how attackers have stripped almost every manual step from their workflow. Once a working exploit is confirmed, it’s packaged and shared within hours across dark web forums, internal channels, and malware kits. Failure at Scale is Acceptable
+Attackers also enjoy a luxury defenders can’t afford:
+failure
+. If they crash a thousand systems on the path to compromising a hundred, the effort is still a success.</p>
+
+<p>Their metrics are based on yield, not uptime. Defenders, on the other hand, must achieve near-perfect stability. A single failed update or service interruption can have a widespread impact and cause loss of customer trust. This imbalance allows adversaries to take reckless risks while defenders remain constrained, and that also helps keep the operational gap wide enough for consistent exploitation.</p>
+
+<p>From Human-Speed Defense to Machine-Speed Resilience
+Awareness is not the issue. The challenge is execution speed. Security teams know when vulnerabilities are published but cannot move fast enough without automation. Transitioning from ticket-based and or manual patching to orchestrated, policy-driven remediation is no longer optional if you want to remain competitive in this fight.</p>
+
+<p>Automated hardening and response systems can drastically shorten exposure windows. By continuously applying critical patches, enforcing configuration baselines, and using conditional rollback when needed, organizations can maintain operational safety while removing delay. And a hard lesson here that many will have to simply get over, is the damage
+you
+may cause will almost certainly be less, and easier to recover from than an attack. It is a calculated risk, and one that can be managed.</p>
+
+<p>The lesson is simple, would you rather have to roll back a browser update for 1000 systems, or recover them entirely from backup. I am not suggesting you be cavalier about this but weigh the value of your hesitance against the value of your action, and when action wins, listen to your gut. IT leaders need to begin to understand this, and business leaders need to realize that this is IT’s best strategy. Absolutely test, and factor business criticality when choosing the speed at which to proceed on critical systems but tilt the whole process towards streamlined automation and in favor of rapid action.</p>
+
+<p>Flatten the Burnout Curve
+Automation also reduces fatigue and error. Instead of chasing alerts, security teams define rules once, allowing systems to enforce them continuously. This shift turns cybersecurity into an adaptive, self-sustaining process instead of a cycle of manual triage and stitches. It takes less time to audit and review processes than it does to enact them in almost all cases.</p>
+
+<p>This new class of attack automation systems do not sleep, they do not get tired, they do not care about any consequences of their actions. They are singularly focused on a goal, gain access to as many systems as they can. No matter how many people you throw at this problem, the problem festers between departments, policies, personalities, and egos. If you aim to combat a tireless machine, you need a tireless machine in your corner of the ring.</p>
+
+<p>Changing What Can’t Be Automated
+Even the most advanced tools cannot automate everything. Some workloads are too delicate or bound by strict compliance frameworks. But those exceptions should still be examined through a single lens:
+How can they be made more automatable, if not, at least more efficient? That may mean standardizing configurations, segmenting legacy systems, or streamlining dependencies that slow patch workflows.</p>
+
+<p>Every manual step left in place represents time lost, and time is the one resource attackers exploit most effectively. We have to look at defense strategies in depth to determine which decisions, policies, or approval processes are creating drag. If the chain of command or change management is slowing remediation, it may be time for
+sweeping policy changes
+designed to eliminate those bottlenecks. Defense automation should operate at a pace commensurate with attacker behavior, not for administrative convenience.</p>
+
+<p>Accelerated Defense in Practice
+Many forward-thinking enterprises have already adopted the principle of accelerated defense, combining automation, orchestration, and controlled rollback to maintain agility without introducing chaos. Platforms such as
+Action1
+facilitate this approach by enabling security teams to identify, deploy, and verify patches automatically across entire enterprise environments. This eliminates the manual steps that slow patch deployment and closes the gap between awareness and action. IF your policies are sound, your automation is sound, and your decisions are sound in practice because they are all agreed upon in advance.</p>
+
+<p>By automating remediation and validation, Action1 and similar solutions exemplify what security at machine speed looks like: rapid, governed, and resilient. The objective isn’t simply automation, but
+policy-driven automation
+, where human judgment defines boundaries and technology executes instantly. The Future Is Automated Defense
+Both attackers and defenders draw from the same public data, but it is the automation built atop that data that decides who wins the race. Every hour between disclosure and remediation represents a potential compromise.</p>
+
+<p>Defenders cannot slow the pace of discovery, but they can close the gap through hardening, orchestration, and systemic automation. The future of cybersecurity belongs to those who make instant, informed action their standard operating mode, because in this race, the slowest responder is already compromised. Key takeaways:
+No team of humans will ever be able to outpace the sheer speed and efficiency of the automated attack systems being built. More people lead to more decisions, delays, confusion, and margins for error.</p>
+
+<p>This is a firefight: you must use equal force, automate or lose. Threat actors are building fully automated attack pipelines in which new exploit code is simply fed to the system —or even developed by it —using AI. They work 24/7/365, they do not fatigue, they do not take breaks, they seek and destroy as a reason for existence until turned off or directed otherwise. Most mass threat actors operate on body count, not precision shots.</p>
+
+<p>They are not looking “for you” as much as they are looking for “Anyone”. Your scale and value mean nothing at the initial compromise phase, which is evaluated AFTER access is gained. Threat actors think nothing about using large volumes of their ill-gotten gains on new tech to further their offensive capabilities; to them, it is an investment. At the same time, the industry sees it as a drain on profits.</p>
+
+<p>The system attacking you involved many talented devs in its construction and maintenance, and budgets beyond the wildest dream of any defender. These are not hobby crooks, they are highly organized enterprises just as capable, and more willing to invest in the resources than the business sector is. Here comes 2026. Is your network ready for it?</p>
+
+<p>Note:
+This article was written and contributed by Gene Moody, Field CTO at Action1. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="operation-endgame-dismantles-rhadamanthys-venom-rat-and-elysium-botnet-in-global-crackdown"><a id="article-12"></a>Operation Endgame Dismantles Rhadamanthys, Venom RAT, and Elysium Botnet in Global Crackdown</h2>
+
+<p>Malware families like
+Rhadamanthys Stealer
+,
+Venom RAT
+, and the Elysium botnet have been disrupted as part of a coordinated law enforcement operation led by Europol and Eurojust. The activity, which is taking place between November 10 and 13, 2025, marks the latest phase of
+Operation Endgame
+, an
+ongoing operation
+designed to take down criminal infrastructures and combat ransomware enablers worldwide. Besides dismantling the “three large cybercrime enablers,” authorities have also arrested the main suspect behind Venom RAT in Greece on November 3, more than 1,025 servers have been taken down, and 20 domains have been seized. “The dismantled malware infrastructure consisted of hundreds of thousands of infected computers containing several million stolen credentials,” Europol
+said
+in a statement.</p>
+
+<p>“Many of the victims were not aware of the infection of their systems.”
+It’s worth noting that the Elysium botnet neutralized by authorities is the same proxy botnet service RHAD security (aka Mythical Origin Labs), the threat actor associated with Rhadamanthys, was observed advertising as recently as last month. Europol also noted that the main suspect behind the infostealer had access to no less than 100,000 cryptocurrency wallets belonging to victims, potentially amounting to millions of euros. A recent analysis published by Check Point revealed that the latest version of Rhadamanthys added support for collecting device and web browser fingerprints, along with incorporating several mechanisms to fly under the radar. Rhadamanthys, according to the cybersecurity company, was offered under two paid models, a self-hosted subscription and a subscription with a rented server and additional benefits.</p>
+
+<p>It’s assessed that the impact of the crackdown will be felt differently for each of them, Sergey Shykevich, group manager at Check Point Research, told The Hacker News. Rhadamanthys infections per country
+“The takedowns of
+RedLine
+and
+Lumma
+changed the ecosystem last year, and Rhadamanthys became one of the most dominant and widely used infostealers,” Shykevich added. “The current takedown operation is another important step in fighting the big brands in the underground ecosystem.”
+“Rhadamanthys developer had many ups and downs during the last years, and nevertheless, was able to continue and even accelerate its activity. We assume that now the developer behind Rhadamanthys will try to revive its operations in a few days, likely using only the new version 0.9.3, which was launched just recently.”
+“It is important to note that Rhadamanthys may have been used to drop additional malware on infected systems, so other malware infections may also be active on these systems and require further local remediation efforts,” the Shadowserver Foundation
+said
+.</p>
+
+<p>“These victim systems may also have been used in historic or recent intrusions and ransomware incidents.”
+The non-profit, which assisted in the enforcement action, said 525,303 unique Rhadamanthys Stealer infections were identified between March and November 2025 across 226 countries and territories, representing over 86.2 million “information stealing events.” Of these, about 63,000 IP addresses are located in India. “Operation Endgame 3.0 shows what’s possible when law enforcement and the private sector work together,” Adam Meyers, head of Counter Adversary Operations at CrowdStrike, said in a statement. “Disrupting the front end of the ransomware kill chain – the initial-access brokers, loaders, and infostealers – instead of just the operators themselves has a ripple effect through the eCrime ecosystem.”
+“By targeting the infrastructure that fuels ransomware, this operation struck the ransomware economy at its source. But disruption isn’t eradication.</p>
+
+<p>Defenders should use this window to harden their environments, close visibility gaps, and hunt for the next wave of tools these adversaries will deploy.”
+Authorities that participated in the effort included law enforcement agencies from Australia, Canada, Denmark, France, Germany, Greece, Lithuania, the Netherlands, and the U.S. (The story was updated after publication to include additional insights from Check Point Research.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

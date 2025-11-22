@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025-11-20 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Hackers Actively Exploiting 7-Zip Symbolic Link–Based RCE Vulnerability (CVE-2025-11001)</a></li>
+      
+        <li><a href="#article-2">Python-Based WhatsApp Worm Spreads Eternidade Stealer Across Brazilian Devices</a></li>
+      
+        <li><a href="#article-3">WrtHug Exploits Six ASUS WRT Flaws to Hijack Tens of Thousands of EoL Routers Worldwide</a></li>
+      
+        <li><a href="#article-4">Application Containment: How to Use Ringfencing to Prevent the Weaponization of Trusted Software</a></li>
+      
+        <li><a href="#article-5">EdgeStepper Implant Reroutes DNS Queries to Deploy Malware via Hijacked Software Updates</a></li>
+      
+        <li><a href="#article-6">ServiceNow AI Agents Can Be Tricked Into Acting Against Each Other via Second-Order Prompts</a></li>
+      
+        <li><a href="#article-7">Fortinet Warns of New FortiWeb CVE-2025-58034 Vulnerability Exploited in the Wild</a></li>
+      
+        <li><a href="#article-8">Sneaky 2FA Phishing Kit Adds BitB Pop-ups Designed to Mimic the Browser Address Bar</a></li>
+      
+        <li><a href="#article-9">Meta Expands WhatsApp Security Research with New Proxy Tool and $4M in Bounties This Year</a></li>
+      
+        <li><a href="#article-10">Learn How Leading Companies Secure Cloud Workloads and Infrastructure at Scale</a></li>
+      
+        <li><a href="#article-11">Researchers Detail Tuoni C2's Role in an Attempted 2025 Real-Estate Cyber Intrusion</a></li>
+      
+        <li><a href="#article-12">Iranian Hackers Use DEEPROOT and TWOSTROKE Malware in Aerospace and Defense Attacks</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2025-11-20-ai创业新闻">2025-11-20 AI创业新闻</h1>
+
+<h2 id="hackers-actively-exploiting-7-zip-symbolic-linkbased-rce-vulnerability-cve-2025-11001"><a id="article-1"></a>Hackers Actively Exploiting 7-Zip Symbolic Link–Based RCE Vulnerability (CVE-2025-11001)</h2>
+
+<p>A recently disclosed security flaw impacting 7-Zip has come under active exploitation in the wild, according to an advisory issued by the U.K. NHS England Digital on Tuesday. The vulnerability in question is
+CVE-2025-11001
+(CVSS score: 7.0), which allows remote attackers to execute arbitrary code. It has been addressed in 7-Zip version 25.00
+released
+in July 2025.</p>
+
+<p>“The specific flaw exists within the handling of symbolic links in ZIP files. Crafted data in a ZIP file can cause the process to traverse to unintended directories,” Trend Micro’s Zero Day Initiative (ZDI) said in an alert released last month. “An attacker can leverage this vulnerability to execute code in the context of a service account.”
+Ryota Shiga of GMO Flatt Security Inc., along with the company’s artificial intelligence (AI)-powered AppSec Auditor
+Takumi
+, has been credited with discovering and reporting the vulnerability. It’s worth noting that 7-Zip 25.00 also resolves another flaw,
+CVE-2025-11002
+(CVSS score: 7.0), that allows for remote code execution by taking advantage of improper handling of symbolic links within ZIP archives, resulting in directory traversal.</p>
+
+<p>Both shortcomings were introduced in version 21.02. “Active exploitation of CVE-2025-11001 has been observed in the wild,” NHS England Digital
+said
+. However, there are currently no details available on how it’s being weaponized, by whom, and in what context. Given that there exists proof-of-concept (
+PoC
+) exploits, it’s essential that 7-Zip users move quickly to apply the necessary fixes as soon as possible, if not already, for optimal protection.</p>
+
+<p>“This vulnerability can only be exploited from the context of an elevated user / service account or a machine with developer mode enabled,” security researcher Dominik (aka pacbypass), who released the PoC,
+said
+in a post detailing the flaws. “This vulnerability can only be exploited on Windows.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="python-based-whatsapp-worm-spreads-eternidade-stealer-across-brazilian-devices"><a id="article-2"></a>Python-Based WhatsApp Worm Spreads Eternidade Stealer Across Brazilian Devices</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new campaign that leverages a combination of social engineering and WhatsApp hijacking to distribute a Delphi-based banking trojan named
+Eternidade Stealer
+as part of attacks targeting users in Brazil. “It uses Internet Message Access Protocol (IMAP) to dynamically retrieve command-and-control (C2) addresses, allowing the threat actor to update its C2 server,” Trustwave SpiderLabs researchers Nathaniel Morales, John Basmayor, and Nikita Kazymirskyi
+said
+in a technical breakdown of the campaign shared with The Hacker News. “It is distributed through a WhatsApp worm campaign, with the actor now deploying a Python script, a shift from previous PowerShell-based scripts to hijack WhatsApp and spread malicious attachments. The findings come close on the heels of another campaign dubbed
+Water Saci
+that has targeted Brazilian users with a worm that propagates via WhatsApp Web known as SORVEPOTEL, which then acts as a conduit for
+Maverick
+, a .NET banking trojan that’s assessed to be an evolution of a .NET banking malware dubbed
+Coyote
+.</p>
+
+<p>The Eternidade Stealer cluster is part of a broader activity that has abused the ubiquity of WhatsApp in the South American country to compromise target victim systems and use the messaging app as a propagation vector to launch large-scale attacks against Brazilian institutions. Another notable trend is the
+continued
+preference
+for
+Delphi-based malware
+for threat actors targeting Latin America, largely driven not only because of its technical efficiency but also by the fact that the programming language was taught and used in software development in the region. The starting point of the attack is an obfuscated Visual Basic Script, which features comments written mainly in Portuguese. The script, once executed, drops a batch script that’s responsible for delivering two payloads, effectively forking the infection chain into two -
+A Python script that triggers WhatsApp Web-based dissemination of the malware in a worm-like fashion
+An MSI installer that makes use of an AutoIt script to launch Eternidade Stealer
+The Python script, similar to SORVEPOTEL, establishes communication with a remote server and leverages the open-source project
+WPPConnect
+to automate the sending of messages in hijacked accounts via WhatsApp.</p>
+
+<p>To do this, it harvests a victim’s entire contact list, while filtering out groups, business contacts, and broadcast lists. The malware then proceeds to capture, for each contact, their WhatsApp phone number, name, and information signaling whether they are a saved contact. This information is sent to the attacker-controlled server over an HTTP POST request. In the final stage, a malicious attachment is sent to all the contacts in the form of a malicious attachment by making use of a messaging template and populating certain fields with time-based greetings and contact names.</p>
+
+<p>The second leg of the attack commences with the MSI installer dropping several payloads, including an AutoIt script that checks to see if the compromised system is based in Brazil by inspecting whether the operating system language is Brazilian Portuguese. If not, the malware self-terminates. This indicates a hyper-localized targeting effort on the part of the threat actors. The script subsequently scans running processes and registry keys to ascertain the presence of installed security products.</p>
+
+<p>It also profiles the machine and sends the details to a command-and-control (C2) server. The attack culminates with the malware injecting the Eternidade Stealer payload into “svchost.exe” using process hollowing. A Delphi-based credential stealer, Eternidade continuously scans active windows and running processes for strings related to banking portals, payment services, and cryptocurrency exchanges and wallets, such as Bradesco, BTG Pactual, MercadoPago, Stripe, Binance, Coinbase, MetaMask, and Trust Wallet, among others. “Such a behavior reflects a classic banker or overlay-stealer tactic, where malicious components lie dormant until the victim opens a targeted banking or wallet application, ensuring the attack triggers only in relevant contexts and remains invisible to casual users or sandbox environments,” the researchers said.</p>
+
+<p>Once a match is found, it contacts a C2 server, details for which are fetched from an inbox linked to a terra.com[.]br email address, mirroring a tactic recently adopted by Water Saci. This allows the threat actors to update their C2, maintain persistence, and evade detections or takedowns. In the event that the malware is unable to connect to the email account using hard-coded credentials, it uses a fallback C2 address embedded in the source code. As soon as a successful connection with the server is established, the malware awaits incoming messages that are then processed and executed on the infected hosts, enabling the attackers to record keystrokes, capture screenshots, and steal files.</p>
+
+<p>Some of the notable commands are listed below -
+&lt;|OK|&gt;, to collect system information
+&lt;|PING|&gt;, to monitor user activity and report the currently active window
+&lt;|PedidoSenhas|&gt;, to send a custom overlay for credential theft based on the active window
+Trustwave said an analysis of threat actor infrastructure led to the discovery of two panels, one for managing the Redirector System and another login panel, likely used to monitor infected hosts. The Redirector System contains logs showing the total number of visits and blocks for connections attempting to reach the C2 address. While the system only permits access to machines located in Brazil and Argentina, blocked connections are redirected to “google[.]com/error.” Statistics recorded on the panel show that 452 out of 454 visits were blocked due to the geofencing restrictions. Only the remaining two visits are said to have been redirected to the campaign’s targeted domain.</p>
+
+<p>Of the 454 communication records, 196 connections originated from the U.S., followed by the Netherlands (37), Germany (32), the U.K. (23), France (19), and Brazil (3). The Windows operating system accounted for 115 connections, although panel data indicates that connections also came from macOS (94), Linux (45), and Android (18). “Although the malware family and delivery vectors are primarily Brazilian, the possible operational footprint and victim exposure are far more global,” Trustwave said.</p>
+
+<p>“Cybersecurity defenders should remain vigilant for suspicious WhatsApp activity, unexpected MSI or script executions, and indicators linked to this ongoing campaign.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="wrthug-exploits-six-asus-wrt-flaws-to-hijack-tens-of-thousands-of-eol-routers-worldwide"><a id="article-3"></a>WrtHug Exploits Six ASUS WRT Flaws to Hijack Tens of Thousands of EoL Routers Worldwide</h2>
+
+<p>A newly discovered campaign has compromised tens of thousands of outdated or end-of-life (EoL) ASUS routers worldwide, predominantly in Taiwan, the U.S., and Russia, to rope them into a massive network. The router hijacking activity has been codenamed
+Operation WrtHug
+by SecurityScorecard’s STRIKE team. Southeast Asia and European countries are some of the other regions where infections have been recorded. Over the past six months, more than 50,000 unique IP addresses belonging to these compromised devices around the globe have been identified.</p>
+
+<p>The attacks likely involve the exploitation of six known security flaws in end-of-life ASUS WRT routers to take control of susceptible devices. All the infected routers have been found to share a unique self-signed TLS certificate with an expiration date set for 100 years from April 2022. SecurityScorecard said 99% of the services presenting the certificate are ASUS AiCloud, a proprietary service designed to enable access to local storage via the internet. “It leverages the proprietary AiCloud service with n-day vulnerabilities in order to gain high privileges on End-Of-Life ASUS WRT routers,” the company said in a
+report
+shared with The Hacker News, adding the campaign, while not exactly an Operational Relay Box (ORB), bears similarities with other China-linked ORBs and botnet networks.</p>
+
+<p>The attacks likely exploit vulnerabilities tracked as
+CVE-2023-41345
+,
+CVE-2023-41346
+,
+CVE-2023-41347
+,
+CVE-2023-41348
+,
+CVE-2023-39780
+,
+CVE-2024-12912
+, and
+CVE-2025-2492
+for proliferation. Interestingly, the exploitation of CVE-2023-39780 has also been linked to another Chinese-origin botnet dubbed
+AyySSHush
+(aka ViciousTrap). Two other ORBs that have targeted routers in recent months are
+LapDogs
+and
+PolarEdge
+. Out of all the infected devices, seven IP addresses have been flagged for exhibiting signs of compromise associated with both WrtHug and AyySSHush, potentially raising the possibility that the two clusters could be related.</p>
+
+<p>That being said, there is no evidence to back this hypothesis beyond the shared vulnerability. The list of router models targeted in the attacks is below -
+ASUS Wireless Router 4G-AC55U
+ASUS Wireless Router 4G-AC860U
+ASUS Wireless Router DSL-AC68U
+ASUS Wireless Router GT-AC5300
+ASUS Wireless Router GT-AX11000
+ASUS Wireless Router RT-AC1200HP
+ASUS Wireless Router RT-AC1300GPLUS
+ASUS Wireless Router RT-AC1300UHP
+It’s currently not clear who is behind the operation, but the extensive targeting of Taiwan and overlaps with previous tactics observed in ORB campaigns from Chinese hacking groups suggest it could be the work of an unknown China-affiliated actor. “This research highlights the growing trend of malicious threat actors targeting routers and other network devices in mass infection operations,” SecurityScorecard said. “These are commonly (but not exclusively) linked to China Nexus actors, who execute their campaigns in a careful and calculated manner to expand and deepen their global reach.”
+“By chaining command injections and authentication bypasses, threat actors have managed to deploy persistent backdoors via SSH, often abusing legitimate router features to ensure their presence survives reboots or firmware updates.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="application-containment-how-to-use-ringfencing-to-prevent-the-weaponization-of-trusted-software"><a id="article-4"></a>Application Containment: How to Use Ringfencing to Prevent the Weaponization of Trusted Software</h2>
+
+<p>The challenge facing security leaders is monumental: Securing environments where failure is not an option. Reliance on traditional security postures, such as
+Endpoint Detection and Response (EDR)
+to chase threats after they have already entered the network, is fundamentally risky and contributes significantly to the half-trillion-dollar annual cost of cybercrime. Zero Trust fundamentally shifts this approach, transitioning from reacting to symptoms to proactively solving the underlying problem. Application Control, the ability to rigorously define what software is allowed to execute, is the foundation of this strategy.</p>
+
+<p>However, even once an application is trusted, it can be misused. This is where
+ThreatLocker Ringfencing™, or granular application containment
+, becomes indispensable, enforcing the ultimate standard of least privilege on all authorized applications. Defining Ringfencing: Security Beyond Allowlisting
+Ringfencing is an advanced containment strategy applied to applications that have already been approved to run. While allowlisting ensures a fundamental deny-by-default posture for all unknown software, Ringfencing further restricts the
+capabilities
+of the permitted software.</p>
+
+<p>It operates by dictating precisely what an application can access, including files, registry keys, network resources, and other applications or processes. This granular control is vital because threat actors frequently bypass security controls by misusing legitimate, approved software, a technique commonly referred to as “living off the land.” Uncontained applications, such as productivity suites or scripting tools, can be weaponized to spawn risky child processes (like PowerShell or Command Prompt) or communicate with unauthorized external servers. The Security Imperative: Stopping Overreach
+Without effective containment, security teams leave wide open attack vectors that lead directly to high-impact incidents. Mitigating Lateral Movement:
+Ringfencing isolates application behaviors, hindering the ability of compromised processes to move across the network.</p>
+
+<p>Policies can be set to restrict outbound network traffic, a measure that would have foiled major attacks that relied on servers reaching out to malicious endpoints for instructions. Containing High-Risk Applications:
+A critical use case is reducing the risk associated with legacy files or scripts, such as Office macros. By applying containment, applications like Word or Excel, even if required by departments like Finance, are
+restricted from launching
+high-risk script engines like PowerShell or accessing high-risk directories. Preventing Data Exfiltration and Encryption:
+Containment policies can limit an application’s ability to read or write to sensitive monitored paths (such as document folders or backup directories), effectively blocking mass data exfiltration attempts and preventing ransomware from encrypting files outside its designated scope.</p>
+
+<p>Ringfencing inherently supports compliance goals by ensuring that all applications operate strictly with the permissions they truly require, aligning security efforts with best-practice standards such as CIS Controls. Mechanics: How Granular Containment Works
+Ringfencing policies provide comprehensive control over multiple vectors of application behavior, functioning as a second layer of defense after execution is permitted. A policy dictates whether an application can access certain files and folders or make changes to the system registry. Most importantly, it governs Inter-Process Communication (IPC), ensuring an approved application cannot interact with or spawn unauthorized child processes.</p>
+
+<p>For instance,
+Ringfencing blocks Word from launching PowerShell or other unauthorized child processes
+. Implementing Application Containment
+Adopting Ringfencing requires a disciplined, phased implementation focused on avoiding operational disruption and political fallout. Establishing the Baseline
+Implementation starts by deploying a monitoring agent to establish visibility. The agent should be deployed first to a small test group or isolated test organization—often affectionately called the guinea pigs—to monitor activity.</p>
+
+<p>In this initial Learning Mode, the system logs all executions, elevations, and network activity without blocking anything. Simulation and Enforcement
+Before any policy is secured, the team should utilize the Unified Audit to run simulations (simulated denies). This preemptive auditing shows precisely what actions would be blocked if the new policy was enforced, allowing security professionals to make necessary exceptions upfront and prevent tanking the IT department’s approval rating. Ringfencing policies are then typically created and enforced first on applications recognized as high-risk, such as PowerShell, Command Prompt, Registry Editor, and 7-Zip, due to their high potential for weaponization.</p>
+
+<p>Teams should ensure that they have been properly tested before moving to a secure, enforcing state. Scaling and Refinement
+Once policies are validated in the test environment, deployment is scaled gradually across the organization, typically starting with easy wins and moving slowly towards the hardest groups. Policies should be continuously reviewed and refined, including regularly removing unused policies to reduce administrative clutter. Strategic Deployment and Best Practices
+To maximize the benefits of application containment while minimizing user friction, leaders should adhere to proven strategies:
+Start Small and Phased:
+Always apply new Ringfencing policies to a non-critical test group first.</p>
+
+<p>Avoid solving all business problems at once; tackle highly dangerous software first (like Russian remote access tools), and delay political decisions (like blocking games) until later phases. Continuous Monitoring:
+Regularly review the Unified Audit and check for simulated denies before securing any policy to ensure legitimate functions are not broken. Combine Controls:
+Ringfencing is most effective when paired with Application Allowlisting (deny-by-default). It should also be combined with Storage Control to protect critical data to prevent mass data loss or exfiltration.</p>
+
+<p>Prioritize Configuration Checks:
+Utilize automated tools, like Defense Against Configurations (DAC), to verify that Ringfencing and other security measures are properly configured across all endpoints, highlighting where settings might have lapsed into monitor-only mode. Outcomes and Organizational Gains
+By implementing Ringfencing, organizations transition from a reactive model—where highly paid cybersecurity professionals spend time chasing alerts—to a proactive, hardened architecture. This approach offers significant value beyond just security:
+Operational Efficiency:
+Application control significantly reduces
+Security Operations Center (SOC) alerts
+—in some cases by up to 90%—resulting in less alert fatigue and substantial savings in time and resources. Enhanced Security:
+It stops the abuse of trusted programs, contains threats, and makes the cybercriminal’s life as difficult as possible.</p>
+
+<p>Business Value:
+It minimizes application overreach without breaking business-critical workflows, such as those required by the finance department for legacy macros. Ultimately, Ringfencing strengthens the Zero Trust mindset, ensuring that every application, user, and device operates strictly within the boundaries of its necessary function, making detection and response truly a backup plan, rather than the primary defense. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="edgestepper-implant-reroutes-dns-queries-to-deploy-malware-via-hijacked-software-updates"><a id="article-5"></a>EdgeStepper Implant Reroutes DNS Queries to Deploy Malware via Hijacked Software Updates</h2>
+
+<p>The threat actor known as
+PlushDaemon
+has been observed using a previously undocumented Go-based network backdoor codenamed EdgeStepper to facilitate adversary-in-the-middle (AitM) attacks. EdgeStepper “redirects all DNS queries to an external, malicious hijacking node, effectively rerouting the traffic from legitimate infrastructure used for software updates to attacker-controlled infrastructure,” ESET security researcher Facundo Muñoz
+said
+in a report shared with The Hacker News. Known to be active since at least 2018, PlushDaemon is assessed to be a China-aligned group that has attacked entities in the U.S., New Zealand, Cambodia, Hong Kong, Taiwan, South Korea, and mainland China. It was
+first documented
+by the Slovak cybersecurity company earlier this January, detailing a supply chain attack aimed at a South Korean virtual private network (VPN) provider named IPany to target a semiconductor company and an unidentified software development company in South Korea with a feature-rich implant dubbed SlowStepper.</p>
+
+<p>Among the adversary’s victims include a university in Beijing, a Taiwanese company that manufactures electronics, a company in the automotive sector, and a branch of a Japanese company in the manufacturing sector. Earlier this month, ESET also
+said
+it observed PlushDaemon targeting two entities in Cambodia this year, a company in the automotive sector and a branch of a Japanese company in the manufacturing sector, with SlowStepper. The primary initial access mechanism for the threat actor is to leverage AitM poisoning, a technique that has been embraced by an “ever increasing” number of China-affiliated advanced persistent threat (APT) clusters in the last two years, such as LuoYu, Evasive Panda, BlackTech, TheWizards APT, Blackwood, and FontGoblin. ESET said it’s tracking ten active China-aligned groups that have hijacked software update mechanisms for initial access and lateral movement.</p>
+
+<p>The attack essentially commences with the threat actor compromising an edge network device (e.g., a router) that its target is likely to connect to. This is accomplished by either exploiting a security flaw in the software or through weak credentials, allowing them to deploy caEdgeStepper. “Then, EdgeStepper begins redirecting DNS queries to a malicious DNS node that verifies whether the domain in the DNS query message is related to software updates, and if so, it replies with the IP address of the hijacking node,” Muñoz explained. “Alternatively, we have also observed that some servers are both the DNS node and the hijacking node; in those cases, the DNS node replies to DNS queries with its own IP address.”
+Internally, the malware consists of two moving parts: a Distributor module that resolves the IP address associated with the DNS node domain (“test.dsc.wcsset[.]com”) and invokes the Ruler component responsible for configuring IP packet filter rules using iptables.</p>
+
+<p>The attack specifically checks for several Chinese software, including Sogou Pinyin, to have their update channels hijacked by means of EdgeStepper to deliver a malicious DLL (“popup_4.2.0.2246.dll” aka LittleDaemon) from a threat actor-controlled server. A first-stage deployed through hijacked updates, LittleDaemon is designed to communicate with the attacker node to fetch a downloader referred to as DaemonicLogistics if SlowStepper is not running on the infected system. The main purpose of DaemonicLogistics is to download the SlowStepper backdoor from the server and execute it. SlowStepper supports an extensive set of features to gather system information, files, browser credentials, extract data from a number of messaging apps, and even uninstall itself.</p>
+
+<p>“These implants give PlushDaemon the capability to compromise targets anywhere in the world,” Muñoz said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="servicenow-ai-agents-can-be-tricked-into-acting-against-each-other-via-second-order-prompts"><a id="article-6"></a>ServiceNow AI Agents Can Be Tricked Into Acting Against Each Other via Second-Order Prompts</h2>
+
+<p>Malicious actors can exploit default configurations in ServiceNow’s Now Assist generative artificial intelligence (AI) platform and leverage its agentic capabilities to conduct prompt injection attacks. The second-order prompt injection, according to AppOmni, makes use of Now Assist’s agent-to-agent discovery to execute unauthorized actions, enabling attackers to copy and exfiltrate sensitive corporate data, modify records, and escalate privileges. “This discovery is alarming because it isn’t a bug in the AI; it’s expected behavior as defined by certain default configuration options,”
+said
+Aaron Costello, chief of SaaS Security Research at AppOmni. “When agents can discover and recruit each other, a harmless request can quietly turn into an attack, with criminals stealing sensitive data or gaining more access to internal company systems.</p>
+
+<p>These settings are easy to overlook.”
+The attack is made possible because of agent discovery and agent-to-agent collaboration capabilities within ServiceNow’s Now Assist. With Now Assist offering the ability to automate functions such as help-desk operations, the scenario opens the door to possible security risks. For instance, a benign agent can parse specially crafted prompts embedded into content it’s allowed access to and recruit a more potent agent to read or change records, copy sensitive data, or send emails, even when built-in prompt injection protections are enabled. The most significant aspect of this attack is that the actions unfold behind the scenes, unbeknownst to the victim organization.</p>
+
+<p>At its core, the cross-agent communication is enabled by controllable configuration settings, including the default LLM to use, tool setup options, and channel-specific defaults where the agents are deployed -
+The underlying large language model (LLM) must support agent discovery (both Azure OpenAI LLM and Now LLM, which is the default choice, support the feature)
+Now Assist agents are automatically grouped into the same team by default to invoke each other
+An agent is marked as being discoverable by default when published
+While these defaults can be useful to facilitate communication between agents, the architecture can be susceptible to prompt injections when an agent whose main task is to read data that’s not inserted by the user invoking the agent. “Through second-order prompt injection, an attacker can redirect a benign task assigned to an innocuous agent into something far more harmful by employing the utility and functionality of other agents on its team,” AppOmni said. “Critically, Now Assist agents run with the privilege of the user who started the interaction unless otherwise configured, and not the privilege of the user who created the malicious prompt and inserted it into a field.”
+Following responsible disclosure, ServiceNow said the behavior is intended to be this way, but the company has since updated its documentation to provide more clarity on the matter. The findings demonstrate the need for strengthening AI agent protection, as enterprises increasingly incorporate AI capabilities into their workflows.</p>
+
+<p>To mitigate such prompt injection threats, it’s advised to configure supervised execution mode for privileged agents, disable the autonomous override property (“sn_aia.enable_usecase_tool_execution_mode_override”), segment agent duties by team, and monitor AI agents for suspicious behavior. “If organizations using Now Assist’s AI agents aren’t closely examining their configurations, they’re likely already at risk,” Costello added. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fortinet-warns-of-new-fortiweb-cve-2025-58034-vulnerability-exploited-in-the-wild"><a id="article-7"></a>Fortinet Warns of New FortiWeb CVE-2025-58034 Vulnerability Exploited in the Wild</h2>
+
+<p>Fortinet has warned of a new security flaw in FortiWeb that it said has been exploited in the wild. The medium-severity vulnerability, tracked as
+CVE-2025-58034
+, carries a CVSS score of 6.7 out of a maximum of 10.0. “An Improper Neutralization of Special Elements used in an OS Command (‘OS Command Injection’) vulnerability [CWE-78] in FortiWeb may allow an authenticated attacker to execute unauthorized code on the underlying system via crafted HTTP requests or CLI commands,” the company
+said
+in a Tuesday advisory. In other words, successful attacks require an attacker to first authenticate themselves through some other means and chain it with CVE-2025-58034 to execute arbitrary operating system commands.</p>
+
+<p>It has been addressed in the following versions -
+FortiWeb 8.0.0 through 8.0.1 (Upgrade to 8.0.2 or above)
+FortiWeb 7.6.0 through 7.6.5 (Upgrade to 7.6.6 or above)
+FortiWeb 7.4.0 through 7.4.10 (Upgrade to 7.4.11 or above)
+FortiWeb 7.2.0 through 7.2.11 (Upgrade to 7.2.12 or above)
+FortiWeb 7.0.0 through 7.0.11 (Upgrade to 7.0.12 or above)
+The company credited Trend Micro researcher Jason McFadyen for reporting the flaw under its responsible disclosure policy. Interestingly, the development comes days after Fortinet confirmed that it silently patched another critical FortiWeb vulnerability (
+CVE-2025-64446
+, CVSS score: 9.1) in version 8.0.2. “We activated our PSIRT response and remediation efforts as soon as we learned of this matter, and those efforts remain ongoing,” a Fortinet spokesperson told The Hacker News. “Fortinet diligently balances our commitment to the security of our customers and our culture of responsible transparency.”
+It’s currently not clear why Fortinet opted to patch the flaws without releasing an advisory.</p>
+
+<p>But the move has left defenders at a disadvantage, effectively preventing them from mounting an adequate response. “When popular technology vendors fail to communicate new security issues, they are issuing an invitation to attackers while choosing to keep that same information from defenders,” VulnCheck noted last week. Update
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has
+added
+the security defect to its Known Exploited Vulnerabilities (
+KEV
+) catalog, urging Federal Civilian Executive Branch (FCEB) agencies to patch it by November 25, 2025.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="sneaky-2fa-phishing-kit-adds-bitb-pop-ups-designed-to-mimic-the-browser-address-bar"><a id="article-8"></a>Sneaky 2FA Phishing Kit Adds BitB Pop-ups Designed to Mimic the Browser Address Bar</h2>
+
+<p>The malware authors associated with a Phishing-as-a-Service (PhaaS) kit known as
+Sneaky 2FA
+have incorporated Browser-in-the-Browser (BitB) functionality into their arsenal, underscoring the continued evolution of such offerings and further making it easier for less-skilled threat actors to mount attacks at scale. Push Security, in a
+report
+shared with The Hacker News, said it observed the use of the technique in phishing attacks designed to steal victims’ Microsoft account credentials. BitB was
+first documented
+by security researcher mr.d0x in March 2022, detailing how it’s possible to leverage a combination of HTML and CSS code to create fake browser windows that can masquerade as login pages for legitimate services in order to
+facilitate credential theft
+. “BitB is principally designed to mask suspicious phishing URLs by simulating a pretty normal function of in-browser authentication – a pop-up login form,” Push Security said.</p>
+
+<p>“BitB phishing pages replicate the design of a pop-up window with an iframe pointing to a malicious server.”
+To complete the deception, the pop-up browser window shows a legitimate Microsoft login URL, giving the victim the impression that they are entering the credentials on a legitimate page, when, in reality, it’s a phishing page. In one attack chain observed by the company, users who land on a suspicious URL (“previewdoc[.]us”) are served a Cloudflare Turnstile check. Only after the user passes the bot protection check does the attack progress to the next stage, which involves displaying a page with a “Sign in with Microsoft” button in order to view a PDF document. Once the button is clicked, a phishing page masquerading as a Microsoft login form is loaded in an embedded browser using the BitB technique, ultimately exfiltrating the entered information and session details to the attacker, who can then use them to take over the victim’s account.</p>
+
+<p>Besides using bot protection technologies like CAPTCHA and Cloudflare Turnstile to prevent security tools from accessing the phishing pages, the attackers leverage
+conditional loading techniques
+to ensure that only the intended targets can access them, while filtering out the rest or redirecting them to benign sites instead. Sneaky 2FA, first highlighted by Sekoia earlier this year, is known to adopt various methods to resist analysis, including using obfuscation and disabling browser developer tools to prevent attempts to inspect the web pages. In addition, the phishing domains are
+quickly rotated
+to minimize detection. “Attackers are continuously innovating their phishing techniques, particularly in the context of an increasingly professionalized PhaaS ecosystem,” Push Security said.</p>
+
+<p>“With identity-based attacks continuing to be the leading cause of breaches, attackers are incentivized to refine and enhance their phishing infrastructure.”
+Bypassing Passkey Login via WebAuthn Process Manipulation
+The disclosure comes against the backdrop of research that
+found
+that it’s possible to employ a malicious browser extension to fake passkey registration and logins, thereby allowing threat actors to access enterprise apps without the user’s device or biometrics. The Passkey Pwned Attack, as it’s called, takes advantage of the fact that there is no secure communication channel between a device and the service and that the browser, which serves as the intermediary, can be manipulated by means of a rogue script or extension, effectively hijacking the authentication process. When registering or authenticating on websites using passkeys, the website communicates via the web browser by invoking WebAuthn APIs such as navigator.credentials.create() and navigator.credentials.get(). The attack manipulates these flows through JavaScript injection.</p>
+
+<p>“The malicious extension intercepts the call before it reaches the authenticator and generates its own attacker-controlled key pair, which includes a private key and a public key,” SquareX said. “The malicious extension stores the attacker-controlled private key locally so it can reuse it to sign future authentication challenges on the victim’s device without generating a new key.”
+A copy of the private key is also transmitted to the attacker to permit them to access enterprise apps on their own device. Similarly, during the login phase, the call to “navigator.credentials.get()” is intercepted by the extension to sign the challenge with the attacker’s private key created during registration. That’s not all.</p>
+
+<p>Threat actors have also found a way to sidestep phishing-resistant authentication methods like passkeys by means of what’s known as a downgrade attack, where adversary-in-the-middle (
+AitM
+) phishing kits like
+Tycoon
+can ask the victim to choose between a less secure option that’s phishable instead of allowing them to use a passkey. “So, you have a situation where even if a phishing-resistant login method exists, the presence of a less secure backup method means the account is still vulnerable to phishing attacks,” Push Security
+noted
+back in July 2025. As attackers continue to hone their tactics, it’s essential that users exercise vigilance before opening suspicious messages or installing extensions on the browser. Organizations can also adopt conditional access policies to prevent account takeover attacks by restricting logins that don’t meet certain criteria.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="meta-expands-whatsapp-security-research-with-new-proxy-tool-and-4m-in-bounties-this-year"><a id="article-9"></a>Meta Expands WhatsApp Security Research with New Proxy Tool and $4M in Bounties This Year</h2>
+
+<p>Meta on Tuesday said it has made available a tool called
+WhatsApp Research Proxy
+to some of its long-time bug bounty researchers to help improve the program and more effectively research the messaging platform’s network protocol. The idea is to make it easier to delve into WhatsApp-specific technologies as the application continues to be a
+lucrative attack surface
+for state-sponsored actors and commercial spyware vendors. The company also noted that it’s setting up a pilot initiative where it’s inviting research teams to focus on platform abuse with support for internal engineering and tooling. “Our goal is to lower the barrier of entry for academics and other researchers who might not be as familiar with bug bounties to join our program,” it
+added
+.</p>
+
+<p>The development comes as the social media giant said it has awarded more than
+$25 million in bug bounties
+to over 1,400 researchers from 88 countries in the last 15 years, out of which more than $4 million were paid out this year alone for almost 800 valid reports. In all, Meta said it received around 13,000 submissions. Some of the notable bug discoveries included an incomplete validation bug in WhatsApp prior to v2.25.23.73, WhatsApp Business for iOS v2.25.23.82, and WhatsApp for Mac v2.25.23.83 that could have enabled a user to trigger processing of content retrieved from an arbitrary URL on another user’s device. There is no evidence that the issue was exploited in the wild.</p>
+
+<p>Meta also released an operating system-level patch to mitigate the risk posed by a
+vulnerability
+tracked as
+CVE-2025-59489
+(CVSS score: 8.4) that could have allowed malicious applications installed on Quest devices to manipulate Unity applications to achieve arbitrary code execution. Flatt Security researcher RyotaK has been acknowledged for discovering and reporting the flaw. Simple WhatsApp Security Flaw Exposes 3.5 Billion Phone Numbers
+Lastly, Meta said it added anti-scraping protections to WhatsApp following a
+report
+that detailed a novel method to enumerate WhatsApp accounts at scale across 245 countries and build a dataset containing every user, bypassing the service’s rate-limiting restrictions. WhatsApp has about 3.5 billion active users.</p>
+
+<p>The attack takes advantage of a legitimate WhatsApp contact discovery feature that requires users to first determine whether their contacts are registered on the platform. It essentially allows an attacker to compile basic publicly accessible information, along with their profile photos, About text, and timestamps associated with key updates related to the two attributes. Meta said it found no indications that this vector was ever abused in a malicious context. Interestingly, the study found millions of phone numbers registered to WhatsApp in countries where it’s officially banned, including 2.3 million in China and 1.6 million in Myanmar.</p>
+
+<p>“Normally, a system shouldn’t respond to such a high number of requests in such a short time – particularly when originating from a single source,” Gabriel Gegenhuber, University of Vienna researcher and lead author of the study,
+said
+. “This behavior exposed the underlying flaw, which allowed us to issue an effectively unlimited requests to the server and, in doing so, map user data worldwide.”
+“We had already been working on industry-leading anti-scraping systems, and this study was instrumental in stress-testing and confirming the immediate efficacy of these new defenses,” Nitin Gupta, vice president of engineering at WhatsApp, told The Hacker News in a statement. “Importantly, the researchers have securely deleted the data collected as part of the study, and we have found no evidence of malicious actors abusing this vector. As a reminder, user messages remained private and secure thanks to WhatsApp’s default end-to-end encryption, and no non-public data was accessible to the researchers.”
+Earlier this year, Gegenhuber et al also
+demonstrated
+another research titled Careless Whisper that showed how delivery receipts can pose significant privacy risks to users, thereby allowing an attacker to send specifically crafted messages that can trigger delivery receipts without their knowledge or consent and extract their activity status.</p>
+
+<p>“By using this technique at high frequency, we demonstrate how an attacker could extract private information, such as following a user across different companion devices, inferring their daily schedule, or deducing current activities,” the researchers noted. “Moreover, we can infer the number of currently active user sessions (i.e., main and companion devices) and their operating system, as well as launch resource exhaustion attacks, such as draining a user’s battery or data allowance, all without generating any notification on the target side.”
+(The story was updated after publication to include a response from WhatsApp and make it clear that CVE-2025-59489 was patched and issued by Unity.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="learn-how-leading-companies-secure-cloud-workloads-and-infrastructure-at-scale"><a id="article-10"></a>Learn How Leading Companies Secure Cloud Workloads and Infrastructure at Scale</h2>
+
+<p>You’ve probably already moved some of your business to the cloud—or you’re planning to. That’s a smart move. It helps you work faster, serve your customers better, and stay ahead. But as your cloud setup grows, it gets harder to control who can access what.</p>
+
+<p>Even one small mistake—like the wrong person getting access—can lead to big problems. We’re talking data leaks, legal trouble, and serious damage. And with different rules in different regions like the US, UK, EU, APAC, and more, keeping up is tough. Join our free webinar: “
+Securing Cloud Workloads and Infrastructure: Balancing Innovation with Identity and Access Control
+“ with experts from CyberArk.</p>
+
+<p>You’ll learn simple, practical ways to stay secure and move fast. Cloud tools today aren’t all the same. Most companies use several cloud platforms at once—each with its own setup, rules, and risks. You want your team to stay fast and flexible, but you also need to keep everything safe.</p>
+
+<p>That’s a tricky balance. That’s why we’re bringing in two top experts from CyberArk:
+Przemek Dybowski
+, Global Solution Architect – Cloud Security
+Josh Kirkwood
+, Senior Manager – Field Technology Office
+They work with real companies every day and will share practical tips you can use right away. You’ll learn how to:
+Limit damage if someone’s login is stolen
+Set strong access rules without slowing your team down
+Stay in line with global security laws
+See how financial companies stay both secure and flexible
+Sign up now
+and take the next step in protecting your cloud, your team, and your business. Using the cloud is now part of everyday business.</p>
+
+<p>But cyber attackers are getting smarter too. They find weak spots in identity and access settings—and they don’t wait. This webinar helps you fix those weak spots, protect your systems, and stay one step ahead. You don’t have to slow down.</p>
+
+<p>You just need the right plan. Save your spot today
+. Protect your cloud. Keep your business safe and strong.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-detail-tuoni-c2s-role-in-an-attempted-2025-real-estate-cyber-intrusion"><a id="article-11"></a>Researchers Detail Tuoni C2’s Role in an Attempted 2025 Real-Estate Cyber Intrusion</h2>
+
+<p>Cybersecurity researchers have disclosed details of a cyber attack targeting a major U.S.-based real-estate company that involved the use of a nascent command-and-control (C2) and red teaming framework known as
+Tuoni
+. “The campaign leveraged the emerging Tuoni C2 framework, a relatively new, command-and-control (C2) tool (with a free license) that delivers stealthy, in-memory payloads,” Morphisec researcher Shmuel Uzan
+said
+in a report shared with The Hacker News. Tuoni is advertised as an advanced C2 framework designed for security professionals, facilitating penetration testing operations, red team engagements, and security assessments. A “Community Edition” of the software is
+freely available
+for download from GitHub.</p>
+
+<p>It was first released in early 2024. The attack, per Morphisec, unfolded in mid-October 2025, with the unknown threat actor likely leveraging social engineering via
+Microsoft Teams impersonation
+for initial access. It’s suspected that the attackers likely posed as trusted vendors or colleagues to deceive an employee at the company into running a PowerShell command. The command, for its part, downloads a second PowerShell script from an external server (“kupaoquan[.]com”), which, in turn, employs steganographic tricks to conceal the next-stage payload within a bitmap image (BMP).</p>
+
+<p>The primary goal of the embedded payload is to extract shellcode and execute it directly in memory. This results in the execution of “TuoniAgent.dll,” which corresponds to an
+agent
+that operates within the targeted machine and connects to a C2 server (in this case, “kupaoquan[.]com”), allowing for remote control. “While Tuoni itself is a sophisticated but traditional C2 framework, the delivery mechanism showed signs of AI assistance in code generation, evident from the scripted comments and modular structure of the initial loader,” Morphisec added. The attack, although ultimately unsuccessful, demonstrates continued abuse of red teaming tools for malicious purposes.</p>
+
+<p>In September 2025, Check Point
+detailed
+the use of an artificial intelligence (AI)-powered tool called HexStrike AI to rapidly accelerate and simplify vulnerability exploitation. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="iranian-hackers-use-deeproot-and-twostroke-malware-in-aerospace-and-defense-attacks"><a id="article-12"></a>Iranian Hackers Use DEEPROOT and TWOSTROKE Malware in Aerospace and Defense Attacks</h2>
+
+<p>Suspected espionage-driven threat actors from Iran have been observed deploying backdoors like TWOSTROKE and DEEPROOT as part of continued attacks aimed at aerospace, aviation, and defense industries in the Middle East. The activity has been attributed by Google-owned Mandiant to a threat cluster tracked as
+UNC1549
+(aka GalaxyGato, Nimbus Manticore, or Subtle Snail), which was
+first documented
+by the threat intelligence firm early last year. “Operating in late 2023 through 2025, UNC1549 employed sophisticated initial access vectors, including abuse of third-party relationships to gain entry (pivoting from service providers to their customers), VDI breakouts from third-parties, and highly targeted, role-relevant phishing,” researchers Mohamed El-Banna, Daniel Lee, Mike Stokkel, and Josh Goddard said. The disclosure comes about two months after Swiss cybersecurity company PRODAFT
+tied
+the hacking group to a campaign targeting European telecommunications companies, successfully breaching 11 organizations in the process as part of a recruitment-themed social engineering attack via LinkedIn.</p>
+
+<p>The infection chains, per Google, involve a combination of phishing campaigns designed to steal credentials or distribute malware and leveraging trusted relationships with third-party suppliers and partners. The second approach signals a particularly clever strategy when striking defense contractors. While these organizations tend to have robust defenses, that may not be the case with third-party partners – a weak link in the supply chain that UNC1549 weaponizes to its advantage by first gaining access to a connected entity in order to infiltrate its main targets. Often, this entails abusing credentials associated with services like Citrix, VMWare, and Azure Virtual Desktop and Application (VDA) harvested from these external entities to establish an initial foothold and subsequently break out of the confines of the virtualized sessions to gain access to the underlying host system and initiate lateral movement activities within the target network.</p>
+
+<p>Another initial access pathway concerns the use of spear-phishing emails claiming to be related to job opportunities to lure recipients into clicking on bogus links and downloading malware to their machines. UNC1549 has also been observed targeting IT staff and administrators in these attacks to obtain credentials with elevated privileges that would grant them deeper access to the network. Once the attackers have found a way inside, the post-exploitation activity spans reconnaissance, credential harvesting, lateral movement, defense evasion, and information theft, systematically gathering network/IT documentation, intellectual property, and emails. Some of the custom tools put to use by the threat actor as part of this effort are listed below -
+MINIBIKE
+(aka SlugResin), a known C++ backdoor that gathers system information and fetches additional payloads to conduct reconnaissance, log keystrokes and clipboard content, steal Microsoft Outlook credentials, collect web browser data from Google Chrome, Brave, and Microsoft Edge, and take screenshots
+TWOSTROKE
+, a C++ backdoor that allows for system information collection, DLL loading, file manipulation, and persistence
+DEEPROOT
+, a Golang-based Linux backdoor that supports shell command execution, system information enumeration, and file operations
+LIGHTRAIL
+, a custom tunneler that’s likely based on
+Lastenzug
+, an open-source Socks4a proxy that communicates using Azure cloud infrastructure
+GHOSTLINE
+, a Golang-based Windows tunneler that uses a hard-coded domain for its communication
+POLLBLEND
+, a C++ Windows tunneler that uses hard-coded command-and-control (C2) servers to register itself and download tunneler configuration
+DCSYNCER.SLICK
+, a Windows utility based on
+DCSyncer
+to conduct DCSync attacks for privilege escalation
+CRASHPAD
+, a C++ Windows utility to extract credentials saved within web browsers
+SIGHTGRAB
+, a C Windows utility, selectively deployed to capture screenshots at regular intervals and save them to disk
+TRUSTTRAP
+, a malware that serves a Windows prompt to trick the user into entering their Microsoft account credentials
+Also utilized by the adversary are publicly available programs like
+AD Explorer
+to query Active Directory; Atelier Web Remote Commander (AWRC) to establish remote connections, perform reconnaissance, credential theft, and malware deployment; and
+SCCMVNC
+for remote control.</p>
+
+<p>Furthermore, the threat actor is said to have taken steps to stymie investigation by deleting RDP connection history registry keys. “UNC1549’s campaign is distinguished by its focus on anticipating investigators and ensuring long-term persistence after detection,” Mandiant said. “They plant backdoors that beacon silently for months, only activating them to regain access after the victim has attempted eradication.”
+“They maintain stealth and command-and-control (C2) using extensive reverse SSH shells (which limit forensic evidence) and domains strategically mimicking the victim’s industry.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 
