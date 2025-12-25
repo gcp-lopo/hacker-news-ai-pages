@@ -286,169 +286,338 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/12/fake-whatsapp-api-package-on-npm-steals.html">
+         <a class="story-link" href="https://thehackernews.com/2025/12/two-chrome-extensions-caught-secretly.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Fake WhatsApp API Package on npm Steals Messages, Contacts, and Login Tokens" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivmlgJ1Ik_0R32UVEqmVu8yRjzKyNEMijqN7ox6JMNp9RQFOtpeBhDHEcgQH6eL6SgRRF3z6pH4YHh2fanPXGIIyrMJIUZ72Nm4JOWYycoqFnvzyFcbuufQHdjxdde1_MIZ0SiSsG8EyrzC0KpF-pO4Nvzpg2OtpApM_F0pZizo46YpYmU6Jj0dA1YvHiz/s790-rw-e365/whatsapp-api.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Two Chrome Extensions Caught Secretly Stealing Credentials from Over 170 Sites" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4__5ctB3AEUyx20JMtYNXVZZluGKRNFfjiUFh6x6DKegzNVsYHnd5W0aB_Khw7lDQRw5TzJak2NX5GyMwiCfOuvWMREsEwfnSrqgYnheHYUMamMNgJANAZWCKbkjlozi1ARLOWxjGOEAxaUo8_k5V2EweQQy8MBnxrSoNUGigeg5HOoPBWSSN5jHGfem5/s790-rw-e365/chrome-passwords.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Fake WhatsApp API Package on npm Steals Messages, Contacts, and Login Tokens" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivmlgJ1Ik_0R32UVEqmVu8yRjzKyNEMijqN7ox6JMNp9RQFOtpeBhDHEcgQH6eL6SgRRF3z6pH4YHh2fanPXGIIyrMJIUZ72Nm4JOWYycoqFnvzyFcbuufQHdjxdde1_MIZ0SiSsG8EyrzC0KpF-pO4Nvzpg2OtpApM_F0pZizo46YpYmU6Jj0dA1YvHiz/s790-rw-e365/whatsapp-api.jpg"/>
+             <img alt="Two Chrome Extensions Caught Secretly Stealing Credentials from Over 170 Sites" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4__5ctB3AEUyx20JMtYNXVZZluGKRNFfjiUFh6x6DKegzNVsYHnd5W0aB_Khw7lDQRw5TzJak2NX5GyMwiCfOuvWMREsEwfnSrqgYnheHYUMamMNgJANAZWCKbkjlozi1ARLOWxjGOEAxaUo8_k5V2EweQQy8MBnxrSoNUGigeg5HOoPBWSSN5jHGfem5/s790-rw-e365/chrome-passwords.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Fake WhatsApp API Package on npm Steals Messages, Contacts, and Login Tokens
+             Two Chrome Extensions Caught Secretly Stealing Credentials from Over 170 Sites
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Dec 22, 2025
+              Dec 23, 2025
              </span>
              <span class="h-tags">
-              Malware / Open Source
+              Browser Security / Enterprise Security
              </span>
             </div>
             <div class="home-desc">
-             Cybersecurity researchers have disclosed details of a new malicious package on the npm repository that works as a fully functional WhatsApp API, but also contains the ability to intercept every message and link the attacker's device to a victim's WhatsApp account.  The package, named " lotusbail ," has been downloaded over 56,000 times  since it was first uploaded to the registry by a user named "seiren_primrose" in May 2025. Of these, 711 downloads took place over the last week. The library is still available for download as of writing.  Under the cover of a functional tool, the malware "steals your WhatsApp credentials, intercepts every message, harvests your contacts, installs a persistent backdoor, and encrypts everything before sending it to the threat actor's server," Koi Security researcher Tuval Admoni said  in a report published over the weekend.  Specifically, it's equipped to capture authentication tokens and session keys, messa...
+             Cybersecurity researchers have discovered  two malicious Google Chrome extensions with the same name and published by the same developer that come with capabilities to intercept traffic and capture user credentials.  The extensions are advertised as a "multi-location network speed test plug-in" for developers and foreign trade personnel. Both the browser add-ons are available for download as of writing. The details of the extensions are as follows -   Phantom Shuttle (ID: fbfldogmkadejddihifklefknmikncaj) - 2,000 users (Published on November 26, 2017)  Phantom Shuttle (ID: ocpcmfmiidofonkbodpdhgddhlcmcofd) - 180 users (Published on April 27, 2023)   "Users pay subscriptions ranging from ¥9.9 to ¥95.9 CNY ($1.40 to $13.50 USD), believing they're purchasing a legitimate VPN service, but both variants perform identical malicious operations," Socket security researcher Kush Pandya said.  "Behind the subscription facade, the extensions execute complete traffic ...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/12/weekly-recap-firewall-exploits-ai-data.html">
+         <a class="story-link" href="https://thehackernews.com/2025/12/interpol-arrests-574-in-africa.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="⚡ Weekly Recap: Firewall Exploits, AI Data Theft, Android Hacks, APT Attacks, Insider Leaks &amp; More" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfN3ux07rPKZg1M2O3wpbUAk1rPOaoFe-zhltZduqAdK1WiIPa9z5XcYwZVKNnUem6cU5uvtG-MS9eIDolbN7t3T9nOQYNDufSeGDftevuCUxij9rVpsTegXGjdBP5H1ZjevvhRLlGqG5vD9sxJToi24IPMvAZWrRsMQHKE44iaKidp7cOXDln0xi7Hh65/s790-rw-e365/recap.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="INTERPOL Arrests 574 in Africa; Ukrainian Ransomware Affiliate Pleads Guilty" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFfCHIDoU0Y0gTgtyYOReNQ25Fbk3iSVfFgc4C2n8KtajPh773Ap4QVIdosJI0I61aVqcUprFNgBXGdjQJuZLyKzZKylPrm1HlSSKMTeyt3AL75pAULMPnxGTZFZHoCVf7iBjDH3C1tn-Qc7CH5b9PtKMTgI9Lq_86Js9aTmAq5521JepCW7D_-4VXZ0cG/s790-rw-e365/hackersss.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="⚡ Weekly Recap: Firewall Exploits, AI Data Theft, Android Hacks, APT Attacks, Insider Leaks &amp; More" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfN3ux07rPKZg1M2O3wpbUAk1rPOaoFe-zhltZduqAdK1WiIPa9z5XcYwZVKNnUem6cU5uvtG-MS9eIDolbN7t3T9nOQYNDufSeGDftevuCUxij9rVpsTegXGjdBP5H1ZjevvhRLlGqG5vD9sxJToi24IPMvAZWrRsMQHKE44iaKidp7cOXDln0xi7Hh65/s790-rw-e365/recap.jpg"/>
+             <img alt="INTERPOL Arrests 574 in Africa; Ukrainian Ransomware Affiliate Pleads Guilty" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFfCHIDoU0Y0gTgtyYOReNQ25Fbk3iSVfFgc4C2n8KtajPh773Ap4QVIdosJI0I61aVqcUprFNgBXGdjQJuZLyKzZKylPrm1HlSSKMTeyt3AL75pAULMPnxGTZFZHoCVf7iBjDH3C1tn-Qc7CH5b9PtKMTgI9Lq_86Js9aTmAq5521JepCW7D_-4VXZ0cG/s790-rw-e365/hackersss.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             ⚡ Weekly Recap: Firewall Exploits, AI Data Theft, Android Hacks, APT Attacks, Insider Leaks &amp; More
+             INTERPOL Arrests 574 in Africa; Ukrainian Ransomware Affiliate Pleads Guilty
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Dec 22, 2025
+              Dec 23, 2025
              </span>
              <span class="h-tags">
-              Hacking News / Cybersecurity
+              Cybercrime / Data Breach
              </span>
             </div>
             <div class="home-desc">
-             Cyber threats last week showed how attackers no longer need big hacks to cause big damage. They're going after the everyday tools we trust most — firewalls, browser add-ons, and even smart TVs — turning small cracks into serious breaches.  The real danger now isn't just one major attack, but hundreds of quiet ones using the software and devices already inside our networks. Each trusted system can become an entry point if it's left unpatched or overlooked.  Here's a clear look at the week's biggest risks, from exploited network flaws to new global campaigns and fast-moving vulnerabilities.  ⚡ Threat of the Week  Flaws in Multiple Network Security Products Come Under Attack — Over the past week, Fortinet , SonicWall , Cisco , and WatchGuard  said vulnerabilities in their products have been exploited by threat actors in real-world attacks. Cisco said attacks exploiting CVE-2025-20393, a critical flaw in AsyncOS, have been abused by a China-nexus advanced persistent threat (APT) actor cod...
+             A law enforcement operation coordinated by INTERPOL has led to the recovery of $3 million and the arrest of 574 suspects by authorities from 19 countries, amidst a continued crackdown on cybercrime networks in Africa.  The coordinated effort, named Operation Sentinel, took place  between October 27 and November 27, 2025, and mainly focused on business email compromise (BEC), digital extortion, and ransomware on the continent.  Participating nations included Benin, Botswana, Burkina Faso, Cameroon, Chad, Congo, Djibouti, Democratic Republic of the Congo, Gabon, Ghana, Kenya, Malawi, Nigeria, Senegal, South Africa, South Sudan, Uganda, Zambia, and Zimbabwe.  Over the course of the initiative, more than 6,000 malicious links were taken down and six distinct ransomware variants were decrypted. The names of the ransomware families were not disclosed. The investigated incidents were linked to estimated financial losses exceeding $21 million, INTERPOL added.   Multiple suspects have been arr...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/12/how-to-browse-sustainably-with-a-green-browser.html">
+         <a class="story-link" href="https://thehackernews.com/2025/12/passwd-walkthrough-of-google-workspace.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="How to Browse the Web More Sustainably With a Green Browser" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDqayh8eTBNeu3P7DDfaRLyYy7oXoTFadgcbgmSHwjlUYyGh8ZxACjv52OqcE-BjUZkFVjd8Fj-Vo49W4o6b2uXa4OkNR1vAB3LOCsrp5SptD9HhO_9dNvOfxH2Zp-QUBUFz94h9mKNDB_lIUvdDMu1v2Pf_ETEGWvYNqfetmTIN0Jppl_QU1M7ycBUAI/s2600/1.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Passwd: A walkthrough of the Google Workspace Password Manager" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLhfDeq_7RfPzgo2DCfamOFNy5Am9tnj1DD30TuuoStmiD8t12kh21heOGP1BvCX1ggrZe6UydxBkRH9KsK8hx-kJ09pGJ86aWrMqwQmuc1HdQEtnCwf5XtNb4Utdz6nnrLi1MgWBfxo196GOEVdA1UAG1bRHot3WHSRtgqbvnqW54gWh9_z60x-Pel-Q/s2800/passwd-main.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="How to Browse the Web More Sustainably With a Green Browser" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDqayh8eTBNeu3P7DDfaRLyYy7oXoTFadgcbgmSHwjlUYyGh8ZxACjv52OqcE-BjUZkFVjd8Fj-Vo49W4o6b2uXa4OkNR1vAB3LOCsrp5SptD9HhO_9dNvOfxH2Zp-QUBUFz94h9mKNDB_lIUvdDMu1v2Pf_ETEGWvYNqfetmTIN0Jppl_QU1M7ycBUAI/s2600/1.jpg"/>
+             <img alt="Passwd: A walkthrough of the Google Workspace Password Manager" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLhfDeq_7RfPzgo2DCfamOFNy5Am9tnj1DD30TuuoStmiD8t12kh21heOGP1BvCX1ggrZe6UydxBkRH9KsK8hx-kJ09pGJ86aWrMqwQmuc1HdQEtnCwf5XtNb4Utdz6nnrLi1MgWBfxo196GOEVdA1UAG1bRHot3WHSRtgqbvnqW54gWh9_z60x-Pel-Q/s2800/passwd-main.png"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             How to Browse the Web More Sustainably With a Green Browser
+             Passwd: A walkthrough of the Google Workspace Password Manager
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Dec 22, 2025
+              Dec 23, 2025
              </span>
              <span class="h-tags">
-              Privacy / Web Browser
+              Password Security / Enterprise Software
              </span>
             </div>
             <div class="home-desc">
-             As the internet becomes an essential part of daily life, its environmental footprint continues to grow.   Data centers, constant connectivity, and resource-heavy browsing habits all contribute to energy consumption and digital waste. While individual users may not see this impact directly, the collective effect of everyday browsing is significant.  Choosing a  browser designed with sustainability in mind  is one practical way to reduce that impact, without changing how you work online.  This article explains what eco-friendly browsing means, why it matters, and how a green browser like Wave Browser  pairs a modern, secure browsing experience with a mission to help protect our ocean through verified cleanup efforts.  Why Eco-Friendly Browsing Matters  Most people think of environmental impact in terms of transportation, food, or physical products. Digital activity is often overlooked. However:   Browsers run continuously throughout the day  Heavy tabs and background processes incre...
+             Passwd  is designed specifically for organizations operating within Google Workspace. Rather than competing as a general consumer password manager, its purpose is narrow, and business-focused: secure credential storage, controlled sharing, and seamless Workspace integration. The platform emphasizes practicality over feature overload, aiming to provide a reliable system for teams that already rely on Google's tools.   Security as the starting point  Encryption and data protection are the basic building blocks of Passwd. Every credential, file, or sensitive asset gets encrypted with AES-256, an extremely secure encryption standard that is widely recognized. Encryption happens before storage, keeping data protected throughout its lifecycle.   Passwd is based on a zero-knowledge architecture; only the users, not Passwd, are able to access decrypted data. It does not have any visibility of the stored passwords or secrets.  The structure reflects an enterprise mindset:   Centralize...
             </div>
            </div>
           </div>
          </a>
         </div>
         <section class="body-post clear newsfeed nf1">
-         <a class="story-link" href="https://thehackernews.uk/cyber-eval-2025" rel="nofollow noopener" target="_blank" title="cyber security">
+         <a class="story-link" href="https://thehackernews.uk/cyber-breach-insights" rel="nofollow noopener" target="_blank" title="cyber security">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuQTL9ljmrxdfxPENB1PjaG_9BAM5cZCyZ7ns4vxN5HzD40fjqzofv_6LSs6AY9IjC4rCfBgKPGAlcCUzBuu7x-xFLGax7uPG_o3smShw1l9Yxy8U79_OIuGmkc3HEwFHnHMc7iSh4lOjp7V9IU3vbybPhK2cOk_wcgOvG7YjgeInRMeQxCXaMUBv-QQWv/s450-e100/picus-light.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgZ55C_XAxxymeZotyn0oPNLRH_cwn0kpfUkmUEzzN_38nGee53wNNtfUE-HnvSPhcTZ5nEjxe4E1bkYCW8Lnzo-z1yz5ol3yKU2D-_ZPZ5oFwIGASDjVmcSHjcKC3Go9_kRA_TNVkTmJeqMEOjAiLXGQGomoVbgigGe_xaxJDGyOV16qxMlN42e0_OWPc/s450-e100/JFrog.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             10 Must-Have Features Your BAS Should Deliver
+             The Breach You Didn't Expect: Your AppSec Stack
             </h2>
             <div class="item-label">
              <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style=" display-block; max-width: 12px; margin-right: 8px; "/>
-             Picus Security
+             JFrog
              <span class="h-tags">
-              Breach and Attack Simulation
+              AppSec / DevSecOps
              </span>
             </div>
             <div class="home-desc">
-             Evaluating Breach and Attack Simulation? Use this guide to distinguish marketing claims from real proof.
+             In a market undergoing mergers and acquisitions, vendor instability can put you in serious risk.
             </div>
            </div>
           </div>
          </a>
         </section>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/12/android-malware-operations-merge.html">
+         <a class="story-link" href="https://thehackernews.com/2025/12/us-doj-seizes-fraud-domain-behind-146.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Android Malware Operations Merge Droppers, SMS Theft, and RAT Capabilities at Scale" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWVgGSYLL-YP_SSvlO7Ggd4xXBMYcq1VWwMSfYjL9s9_o6ewyRXjm9RP0L5EgFMKw8b5azDKhpu66hiT10OeIa54lrYOMcZtk8c8MfbNcq4NSWE4T9pkOyxN6P_yt4sGBdqI6XEFKbLboV1irfJsJO79eyzrN8JavCACeRUv7IoTujepK4K6G9-0S2ua4m/s790-rw-e365/android-malware.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="U.S. DoJ Seizes Fraud Domain Behind $14.6 Million Bank Account Takeover Scheme" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxgSipnO1JBRGQ3pPkg6-wpwn7iiEERxPO37SJuXCWagEsDSQeMts_6ZrP-b08mlBs4p4Gaa1pNj-VKDdt4gPr1VObwse-z6wHsSXct3TdJXbOhSJ7ZmG8BpC1uFp64KPMrK1lUNTdmAcObxY_v67D0Zs8XsYQJ2MXik_NduT1zGdxVXI-h-bn4wMCYdM9/s790-rw-e365/fraud-domain.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Android Malware Operations Merge Droppers, SMS Theft, and RAT Capabilities at Scale" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWVgGSYLL-YP_SSvlO7Ggd4xXBMYcq1VWwMSfYjL9s9_o6ewyRXjm9RP0L5EgFMKw8b5azDKhpu66hiT10OeIa54lrYOMcZtk8c8MfbNcq4NSWE4T9pkOyxN6P_yt4sGBdqI6XEFKbLboV1irfJsJO79eyzrN8JavCACeRUv7IoTujepK4K6G9-0S2ua4m/s790-rw-e365/android-malware.jpg"/>
+             <img alt="U.S. DoJ Seizes Fraud Domain Behind $14.6 Million Bank Account Takeover Scheme" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxgSipnO1JBRGQ3pPkg6-wpwn7iiEERxPO37SJuXCWagEsDSQeMts_6ZrP-b08mlBs4p4Gaa1pNj-VKDdt4gPr1VObwse-z6wHsSXct3TdJXbOhSJ7ZmG8BpC1uFp64KPMrK1lUNTdmAcObxY_v67D0Zs8XsYQJ2MXik_NduT1zGdxVXI-h-bn4wMCYdM9/s790-rw-e365/fraud-domain.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Android Malware Operations Merge Droppers, SMS Theft, and RAT Capabilities at Scale
+             U.S. DoJ Seizes Fraud Domain Behind $14.6 Million Bank Account Takeover Scheme
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Dec 22, 2025
+              Dec 23, 2025
              </span>
              <span class="h-tags">
-              Mobile Security / Malware
+              Financial Crime / Law Enforcement
              </span>
             </div>
             <div class="home-desc">
-             Threat actors have been observed leveraging malicious dropper apps masquerading as legitimate applications to deliver an Android SMS stealer dubbed Wonderland  in mobile attacks targeting users in Uzbekistan.  "Previously, users received 'pure' Trojan APKs that acted as malware immediately upon installation," Group-IB said  in an analysis published last week. "Now, adversaries increasingly deploy droppers disguised as legitimate applications. The dropper looks harmless on the surface but contains a built-in malicious payload, which is deployed locally after installation – even without an active internet connection."  Wonderland (formerly WretchedCat), according to the Singapore-headquartered cybersecurity company, facilitates bidirectional command-and-control (C2) communication to execute commands in real-time, allowing for arbitrary USSD requests and SMS theft. It masquerades as Google Play, or files of other formats, such as videos, photos, and wedding in...
+             The U.S. Justice Department (DoJ) on Monday announced the seizure of a web domain and database that it said was used to further a criminal scheme designed to target and defraud Americans by means of bank account takeover fraud.  The domain in question, web3adspanels[.]org, was used as a backend web panel to host and manipulate illegally harvested bank login credentials. Users to the website are now greeted by a seizure banner that says the domain was taken down in an international law enforcement operation led by authorities from the U.S. and Estonia.  "The criminal group perpetrating the bank account takeover fraud delivered fraudulent advertisements through search engines, including Google and Bing," the DoJ said . "These fraudulent advertisements imitate the sponsored search engine advertisements used by legitimate banking entities."  The ads served as a conduit to redirect unsuspecting users to fake bank websites operated by the threat actors, who harvested log...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2025/12/iranian-infy-apt-resurfaces-with-new.html">
+         <a class="story-link" href="https://thehackernews.com/2025/12/critical-n8n-flaw-cvss-99-enables.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Iranian Infy APT Resurfaces with New Malware Activity 
+             <img alt="Critical n8n Flaw (CVSS 9.9) Enables Arbitrary Code Execution Across Thousands of In
+
+[DEBUG] https://thehackernews.com/2025/12/two-chrome-extensions-caught-secretly.html content length: 5418
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2025/12/interpol-arrests-574-in-africa.html content length: 4345
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2025/12/passwd-walkthrough-of-google-workspace.html content length: 7889
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.uk/cyber-breach-insights content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://jfrog.com/blog/the-breach-you-didnt-expect-your-appsec-stack/?utm_source=hacker_news&amp;utm_medium=cpm_referral&amp;utm_campaign=security_takeout_awareness_banner_ad&amp;utm_content=u-sec" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   The Hidden Threat of Security Vendor Acquisitions
+  </title>
+  <meta content="The Hidden Threat of Security Vendor Acquisitions" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2025/12/us-doj-seizes-fraud-domain-behind-146.html content length: 2377
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2025/12/critical-n8n-flaw-cvss-99-enables.html content length: 1771
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehacker.news/proactive-cloud-security?source=newsfeed content length: 3150
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <!-- page and OG meta -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+  <!--<meta property="fb:app_id" content="189490358278068" />-->
+  <meta content="543385060019940" property="fb:app_id"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://thehacker.news/proactive-cloud-security" property="og:url"/>
+  <meta content="Defining Proactive Cloud Security with New Layers of Defense" property="og:title"/>
+  <meta content="Learn how security and cloud operations teams can leverage preventative tooling and visibility across their endpoints, developer environments, and crypto stack so they can effectively defend against emerging threats and fortify their organizations’ security posture to protect users, devices and data." property="og:description"/>
+  <meta content="https://mini-saas.easywebinar.com/1041531764859468.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://thehacker.news/proactive-cloud-security" name="twitter:url"/>
+  <meta content="Defining Proactive Cloud Security with New Layers of Defense" property="twitter:title">
+   <meta content="Learn how security and cloud operations teams can leverage preventative tooling and visibility across their endpoints, developer environments, and crypto stack so they can effectively defend against emerging threats and fortify their organizations’ security posture to protect users, devices and data." property="twitter:description">
+    <meta content="https://mini-saas.easywebinar.com/1041531764859468.jpg" property="twitter:image"/>
+    <meta content="Defining Proactive Cloud Security with New Layers of Defe
+
+[DEBUG] https://thehackernews.com/2025/12/fcc-bans-foreign-made-drones-and-key.html content length: 2946
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
 [DEBUG] https://thehackernews.com/2025/12/fake-whatsapp-api-package-on-npm-steals.html content length: 5102
 <!DOCTYPE html>
@@ -472,7 +641,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.com/2025/12/weekly-recap-firewall-exploits-ai-data.html content length: 29452
+[DEBUG] https://thehackernews.com/2025/12/weekly-recap-firewall-exploits-ai-data.html content length: 29596
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -515,21 +684,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.uk/cyber-eval-2025 content length: 0
-<html>
- <head>
-  <meta content="0; url=https://hubs.li/Q03XBsnX0" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   10 Criteria for Choosing the Right BAS Tool for Your Organization in 2025
-  </title>
-  <meta content="10 Criteria for Choosing the Right BAS Tool for Your Organization in 2025" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
 
 [DEBUG] https://thehackernews.com/2025/12/android-malware-operations-merge.html content length: 8641
 <!DOCTYPE html>
@@ -575,21 +729,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.uk/zero-day-testing content length: 0
-<html>
- <head>
-  <meta content="0; url=https://xbow.com/pentest?utm_source=hackernews&amp;utm_medium=display&amp;utm_campaign=zero-day-zero-pay" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   Web Application Penetration Testing at AI Speed | XBOW
-  </title>
-  <meta content="Web Application Penetration Testing at AI Speed | XBOW" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
 [DEBUG] https://thehackernews.com/2025/12/us-doj-charges-54-in-atm-jackpotting.html content length: 4501
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -613,138 +752,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
 [DEBUG] https://thehackernews.com/2025/12/russia-linked-hackers-use-microsoft-365.html content length: 3528
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/cracked-software-and-youtube-videos.html content length: 6114
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/watchguard-warns-of-active-exploitation.html content length: 3265
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/nigeria-arrests-raccoono365-phishing.html content length: 4211
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/new-uefi-flaw-enables-early-boot-dma.html content length: 5307
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/china-aligned-threat-group-uses-windows.html content length: 3639
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2025/12/hpe-oneview-flaw-rated-cvss-100-allows.html content length: 1780
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
