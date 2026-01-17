@@ -286,99 +286,99 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/kimwolf-botnet-infected-over-2-million.html">
+         <a class="story-link" href="https://thehackernews.com/2026/01/aws-codebuild-misconfiguration-exposed.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Researchers Null-Route Over 550 Kimwolf and Aisuru Botnet Command Servers" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjd8LcAq2Eh4FGdeubIWyG99KZTiImVy-_8pLP_ooz55oOJQbiUnFXUS8yQ9Zg_XOj1eqw-qCII4_ZeoQqYlCou4ELHCWcqE1Fkkpr7y0CiCV0phTdYcTxGB-Q66Vjedk9f5svf8bB3eGyGVvI-iYmAZhGsDuJujVaAY9tsjsJ5xDjIJabN_4MagL4jnG63/s790-rw-e365/sep.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="AWS CodeBuild Misconfiguration Exposed GitHub Repos to Potential Supply Chain Attacks" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtz1db4ZW0v9IOmiEDYea5iRhI0pJ5FDJ1MjpzJMDkqBQVUR49G7UA9mmPRPG_tCtFMNFz_8K7nCdBsW_-V85RH4tgLY4jKk5Z0JGAVbcApWgXVb4TwmW1G5kHzydowLYHm36xV6XjcKQK5K1384NfjskWh54_MGL2J_FNx5aFTRUBuV3wxbp_DHaiy6mo/s790-rw-e365/wiz.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Researchers Null-Route Over 550 Kimwolf and Aisuru Botnet Command Servers" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjd8LcAq2Eh4FGdeubIWyG99KZTiImVy-_8pLP_ooz55oOJQbiUnFXUS8yQ9Zg_XOj1eqw-qCII4_ZeoQqYlCou4ELHCWcqE1Fkkpr7y0CiCV0phTdYcTxGB-Q66Vjedk9f5svf8bB3eGyGVvI-iYmAZhGsDuJujVaAY9tsjsJ5xDjIJabN_4MagL4jnG63/s790-rw-e365/sep.jpg"/>
+             <img alt="AWS CodeBuild Misconfiguration Exposed GitHub Repos to Potential Supply Chain Attacks" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtz1db4ZW0v9IOmiEDYea5iRhI0pJ5FDJ1MjpzJMDkqBQVUR49G7UA9mmPRPG_tCtFMNFz_8K7nCdBsW_-V85RH4tgLY4jKk5Z0JGAVbcApWgXVb4TwmW1G5kHzydowLYHm36xV6XjcKQK5K1384NfjskWh54_MGL2J_FNx5aFTRUBuV3wxbp_DHaiy6mo/s790-rw-e365/wiz.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Researchers Null-Route Over 550 Kimwolf and Aisuru Botnet Command Servers
+             AWS CodeBuild Misconfiguration Exposed GitHub Repos to Potential Supply Chain Attacks
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Jan 14, 2026
+              Jan 15, 2026
              </span>
              <span class="h-tags">
-              Botnet / Network Security
+              Cloud Security / Vulnerability
              </span>
             </div>
             <div class="home-desc">
-             The Black Lotus Labs team at Lumen Technologies said  it null-routed traffic to more than 550 command-and-control (C2) nodes associated with the AISURU/Kimwolf botnet since early October 2025.  AISURU and its Android counterpart, Kimwolf, have emerged as some of the biggest botnets in recent times, capable of directing enslaved devices to participate in distributed denial-of-service (DDoS) attacks and relay malicious traffic for residential proxy services .  Details about Kimwolf emerged last month  when QiAnXin XLab published an exhaustive analysis of the malware, which turns compromised devices – mostly unsanctioned Android TV streaming devices – into a residential proxy by delivering a software development kit (SDK) called ByteConnect either directly or through sketchy apps that come pre-installed on them.  The net result is that the botnet has expanded to infect more than 2 million Android devices  with an exposed Android Debug Bridge (ADB) service by tunneling through residentia...
+             A critical misconfiguration in Amazon Web Services (AWS) CodeBuild  could have allowed complete takeover of the cloud service provider's own GitHub repositories, including its AWS JavaScript SDK, putting every AWS environment at risk.  The vulnerability has been codenamed CodeBreach  by cloud security company Wiz. The issue was fixed by AWS in September 2025 following responsible disclosure on August 25, 2025.  "By exploiting CodeBreach, attackers could have injected malicious code to launch a platform-wide compromise, potentially affecting not just the countless applications depending on the SDK, but the Console itself, threatening every AWS account," researchers Yuval Avrahami and Nir Ohfeld said  in a report shared with The Hacker News.  The flaw, Wiz noted, is the result of a weakness in the continuous integration (CI) pipelines that could have enabled unauthenticated attackers to breach the build environment, leak privileged credentials like GitHub admin tokens, and...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/ai-agents-are-becoming-privilege.html">
+         <a class="story-link" href="https://thehackernews.com/2026/01/critical-wordpress-modular-ds-plugin.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="AI Agents Are Becoming Privilege Escalation Paths" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMG-WeRkxqHYVKqOELWCDkbIiI6lTEWqGIAkOQlI3kVCdVPQtCyH3kOcBXxxscPd6Hj0V4xyKku6WmGYKhyphenhyphenYxRP_d4lzh4ddOwG0ySAz6zQQoNGiacBA4jKuvoNRqA1ChEFjekiSQZsmH6hKo-GQhXK6hyphenhyphenrk4jE50dWybCMTS_Dahxvv6WbEYeA6F0A1s/s790-rw-e365/ai-agent-wing.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Critical WordPress Modular DS Plugin Flaw Actively Exploited to Gain Admin Access" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIrX01QDd37hdy-1O44aRlrR6Td_bOz5czKroO7QmjA75gR74sBpq0Ew6MSiV2eyQWeJIhzlk58MJ5XHuN5q50DGNLT81pBcLeKs1IUV9PM9_pcCpY_wCTpabTaMo4m40rd_UkRWfsTyyhyphenhyphenMKy-u2eVMrPxDsu1qsZGnZKwWbcKvLJAlnQQda-k0aiQDSU/s790-rw-e365/wordpress-exploit.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="AI Agents Are Becoming Privilege Escalation Paths" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMG-WeRkxqHYVKqOELWCDkbIiI6lTEWqGIAkOQlI3kVCdVPQtCyH3kOcBXxxscPd6Hj0V4xyKku6WmGYKhyphenhyphenYxRP_d4lzh4ddOwG0ySAz6zQQoNGiacBA4jKuvoNRqA1ChEFjekiSQZsmH6hKo-GQhXK6hyphenhyphenrk4jE50dWybCMTS_Dahxvv6WbEYeA6F0A1s/s790-rw-e365/ai-agent-wing.jpg"/>
+             <img alt="Critical WordPress Modular DS Plugin Flaw Actively Exploited to Gain Admin Access" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIrX01QDd37hdy-1O44aRlrR6Td_bOz5czKroO7QmjA75gR74sBpq0Ew6MSiV2eyQWeJIhzlk58MJ5XHuN5q50DGNLT81pBcLeKs1IUV9PM9_pcCpY_wCTpabTaMo4m40rd_UkRWfsTyyhyphenhyphenMKy-u2eVMrPxDsu1qsZGnZKwWbcKvLJAlnQQda-k0aiQDSU/s790-rw-e365/wordpress-exploit.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             AI Agents Are Becoming Privilege Escalation Paths
+             Critical WordPress Modular DS Plugin Flaw Actively Exploited to Gain Admin Access
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Jan 14, 2026
+              Jan 15, 2026
              </span>
              <span class="h-tags">
-              Artificial Intelligence / SaaS Security
+              Web Security /Vulnerability
              </span>
             </div>
             <div class="home-desc">
-             AI agents have quickly moved from experimental tools to core components of daily workflows across security, engineering, IT, and operations. What began as individual productivity aids, like personal code assistants , chatbots, and copilots, has evolved into shared, organization-wide agents embedded in critical processes. These agents can orchestrate workflows across multiple systems, for example:   An HR Agent that provisions or deprovisions accounts across IAM, SaaS apps, VPNs, and cloud platforms based on HR system updates.  A Change Management Agent that validates a change request, updates configuration in production systems, logs approvals in ServiceNow, and updates documentation in Confluence.  A Customer Support Agent that retrieves customer context from CRM, checks account status in billing systems, triggers fixes in backend services, and updates the support ticket.   To deliver value at scale, organizational AI agents are designed to serve many users and roles. They are grante...
+             A maximum-severity security flaw in a WordPress plugin called Modular DS  has come under active exploitation in the wild, according to Patchstack.  The vulnerability, tracked as CVE-2026-23550 (CVSS score: 10.0), has been described as a case of unauthenticated privilege escalation impacting all versions of the plugin prior to and including 2.5.1. It has been patched in version 2.5.2. The plugin has more than 40,000 active installs.  "In versions 2.5.1 and below, the plugin is vulnerable to privilege escalation, due to a combination of factors including direct route selection, bypassing of authentication mechanisms, and auto-login as admin," Patchstack said .  The problem is rooted in its routing mechanism, which is designed to put certain sensitive routes behind an authentication barrier. The plugin exposes its routes under the "/api/modular-connector/" prefix.   However, it has been found that this security layer can be bypassed every time the "direct request...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/hackers-exploit-c-ares-dll-side-loading.html">
+         <a class="story-link" href="https://thehackernews.com/2026/01/researchers-reveal-reprompt-attack.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Hackers Exploit c-ares DLL Side-Loading to Bypass Security and Deploy Malware" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZpmrWdjziw_EBxzQs9lPcsMwRp6OICCFmo0QhzZoHdyE5WgEjcM2Y90QbmkJegSh19-ho2EsdkKwoEVKiSnM1ODN-8e5XJrw1cgjUHGm_ZAM6pYLaHSHa8TTJA8-ALLBty_JtK073FvqZFSjnuW7cEFGXNDQrGL12QRsuGJUl0Oc2QzoM-aMBVCatJLjc/s2600/cert.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Researchers Reveal Reprompt Attack Allowing Single-Click Data Exfiltration From Microsoft Copilot" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgelJLIOXilR0ZhvHXIMgpwmfmM8lxwESCRh5ed9PgQlszys5RGymi8XE24cwjLmz0yP3DNWgGpQE8xB9z9jRP9I3GKSKxXVnw_ius4ZL-ax4ILenljtYCJxWVqgMVwCWBjpHTWfLrY3oD8MCh3XmCFkpPIwgiiPlBKEs-hoUz7PoMQKdEu_u4PYXRfZO6l/s2600/copilot-prompt-injection.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Hackers Exploit c-ares DLL Side-Loading to Bypass Security and Deploy Malware" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZpmrWdjziw_EBxzQs9lPcsMwRp6OICCFmo0QhzZoHdyE5WgEjcM2Y90QbmkJegSh19-ho2EsdkKwoEVKiSnM1ODN-8e5XJrw1cgjUHGm_ZAM6pYLaHSHa8TTJA8-ALLBty_JtK073FvqZFSjnuW7cEFGXNDQrGL12QRsuGJUl0Oc2QzoM-aMBVCatJLjc/s2600/cert.jpg"/>
+             <img alt="Researchers Reveal Reprompt Attack Allowing Single-Click Data Exfiltration From Microsoft Copilot" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgelJLIOXilR0ZhvHXIMgpwmfmM8lxwESCRh5ed9PgQlszys5RGymi8XE24cwjLmz0yP3DNWgGpQE8xB9z9jRP9I3GKSKxXVnw_ius4ZL-ax4ILenljtYCJxWVqgMVwCWBjpHTWfLrY3oD8MCh3XmCFkpPIwgiiPlBKEs-hoUz7PoMQKdEu_u4PYXRfZO6l/s2600/copilot-prompt-injection.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Hackers Exploit c-ares DLL Side-Loading to Bypass Security and Deploy Malware
+             Researchers Reveal Reprompt Attack Allowing Single-Click Data Exfiltration From Microsoft Copilot
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Jan 14, 2026
+              Jan 15, 2026
              </span>
              <span class="h-tags">
-              Malware / Threat Intelligence
+              Prompt Injection / Enterprise Security
              </span>
             </div>
             <div class="home-desc">
-             Security experts have disclosed details of an active malware campaign that's exploiting a DLL side-loading vulnerability  in a legitimate binary associated  with the open-source c-ares library  to bypass security controls and deliver a wide range of commodity trojans and stealers.  "Attackers achieve evasion by pairing a malicious libcares-2.dll with any signed version of the legitimate ahost.exe (which they often rename) to execute their code," Trellix said  in a report shared with The Hacker News. "This DLL side-loading technique allows the malware to bypass traditional signature-based security defenses."  The campaign has been observed distributing a wide assortment of malware, such as Agent Tesla , CryptBot , Formbook , Lumma Stealer , Vidar Stealer , Remcos RAT , Quasar RAT , DCRat , and XWorm .  Targets of the malicious activity include employees in finance, procurement, supply chain, and administration roles within commercial and industrial sectors like ...
+             Cybersecurity researchers have disclosed details of a new attack method dubbed Reprompt  that could allow bad actors to exfiltrate sensitive data from artificial intelligence (AI) chatbots like Microsoft Copilot in a single click, while bypassing enterprise security controls entirely.  "Only a single click on a legitimate Microsoft link is required to compromise victims," Varonis security researcher Dolev Taler said  in a report published Wednesday. "No plugins, no user interaction with Copilot."  "The attacker maintains control even when the Copilot chat is closed, allowing the victim's session to be silently exfiltrated with no interaction beyond that first click."  Following responsible disclosure, Microsoft has addressed the security issue. The attack does not affect enterprise customers using Microsoft 365 Copilot. At a high level, Reprompt employs three techniques to achieve a data‑exfiltration chain -   Using the "q" URL parameter  i...
             </div>
            </div>
           </div>
@@ -411,44 +411,241 @@
          </a>
         </section>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/fortinet-fixes-critical-fortisiem-flaw.html">
+         <a class="story-link" href="https://thehackernews.com/2026/01/threatsday-bulletin-ai-voice-cloning.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Fortinet Fixes Critical FortiSIEM Flaw Allowing Unauthenticated Remote Code Execution" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimc7gjS2ZNi7kOnZXqH-FOYhQ5snGQ-zfhTA1NvxSNOo0dFaX62BEJSqr0qVmPJ9wY4jNffKZ8P5mciZC34btvRAJ4KH6dKXmcOOZpmFUZOU0cOtyJxNf-eImO9Gq8CIc3aVPlNo267-_RSUqTHyrjTkkfSbCnLb2lqjECHgqqo78Y-2Gib0Pxy8m3D-S9/s790-rw-e365/fort.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="ThreatsDay Bulletin: AI Voice Cloning Exploit, Wi-Fi Kill Switch, PLC Vulns, and 14 More Stories" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzvvHEqTEOReDITlWAubNSlpgKNjcExRCQaCh0X8XHhNVEE2Z7R4puzJjK_UZ14TUS-XkFH1d3_IGJm3vBbEo4LVB_onEDCCNF-19h0NKMQug88rD_Apz8SxCm62hPo4j3WVdmTvJWSlKGDiPT7A7Ae4G5aSq9mbC2t62vLoNORmK8w821nNMVOaNlbpMn/s2600/th.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Fortinet Fixes Critical FortiSIEM Flaw Allowing Unauthenticated Remote Code Execution" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimc7gjS2ZNi7kOnZXqH-FOYhQ5snGQ-zfhTA1NvxSNOo0dFaX62BEJSqr0qVmPJ9wY4jNffKZ8P5mciZC34btvRAJ4KH6dKXmcOOZpmFUZOU0cOtyJxNf-eImO9Gq8CIc3aVPlNo267-_RSUqTHyrjTkkfSbCnLb2lqjECHgqqo78Y-2Gib0Pxy8m3D-S9/s790-rw-e365/fort.jpg"/>
+             <img alt="ThreatsDay Bulletin: AI Voice Cloning Exploit, Wi-Fi Kill Switch, PLC Vulns, and 14 More Stories" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzvvHEqTEOReDITlWAubNSlpgKNjcExRCQaCh0X8XHhNVEE2Z7R4puzJjK_UZ14TUS-XkFH1d3_IGJm3vBbEo4LVB_onEDCCNF-19h0NKMQug88rD_Apz8SxCm62hPo4j3WVdmTvJWSlKGDiPT7A7Ae4G5aSq9mbC2t62vLoNORmK8w821nNMVOaNlbpMn/s2600/th.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Fortinet Fixes Critical FortiSIEM Flaw Allowing Unauthenticated Remote Code Execution
+             ThreatsDay Bulletin: AI Voice Cloning Exploit, Wi-Fi Kill Switch, PLC Vulns, and 14 More Stories
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Jan 14, 2026
+              Jan 15, 2026
              </span>
              <span class="h-tags">
-              Vulnerability / Patch Management
+              Cybersecurity / Hacking News
              </span>
             </div>
             <div class="home-desc">
-             Fortinet has released updates to fix a critical security flaw impacting FortiSIEM that could allow an unauthenticated attacker to achieve code execution on susceptible instances.  The operating system (OS) injection vulnerability, tracked as CVE-2025-64155 , is rated 9.4 out of 10.0 on the CVSS scoring system.  "An improper neutralization of special elements used in an OS command ('OS command injection') vulnerability [CWE-78] in FortiSIEM may allow an unauthenticated attacker to execute unauthorized code or commands via crafted TCP requests," the company said  in a Tuesday bulletin.  Fortinet said the vulnerability affects only Super and Worker nodes, and that it has been addressed in the following versions -   FortiSIEM 6.7.0 through 6.7.10 (Migrate to a fixed release)  FortiSIEM 7.0.0 through 7.0.4 (Migrate to a fixed release)  FortiSIEM 7.1.0 through 7.1.8 (Upgrade to 7.1.9 or above)  FortiSIEM 7.2.0 through 7.2.6 (Upgrade to 7.2.7 or above)  FortiSIEM 7.3.0 thr...
+             The internet never stays quiet. Every week, new hacks, scams, and security problems show up somewhere.  This week's stories show how fast attackers change their tricks, how small mistakes turn into big risks, and how the same old tools keep finding new ways to break in.  Read on to catch up before the next wave hits.                     Unauthenticated RCE risk             Security Flaw in Redis                  A high-severity security flaw has been disclosed in Redis (CVE-2025-62507, CVSS score: 8.8) that could potentially lead to remote code execution by means of a stack buffer overflow. It was fixed in version 8.3.2. JFrog's analysis of the flaw has revealed  that the vulnerability is triggered when using the new Redis 8.2 XACKDEL command, which was introduced to simplify and optimize stream cleanup. Specifically, it resides in the implementation of xackdelCommand(), a function responsible for parsing and processing the list of stream IDs supplied by the user. "The core ...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/new-research-64-of-3rd-party.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="New Research: 64% of 3rd-Party Applications Access Sensit
+         <a class="story-link" href="https://thehackernews.com/2026/01/model-security-is-wrong-frame-real-risk.html">
+          
+
+[DEBUG] https://thehackernews.com/2026/01/aws-codebuild-misconfiguration-exposed.html content length: 6003
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2026/01/critical-wordpress-modular-ds-plugin.html content length: 3024
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2026/01/researchers-reveal-reprompt-attack.html content length: 6877
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.uk/finserv-insights content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://filigran.ondemand.goldcast.io/on-demand/2ef5d8e7-d215-49e4-95fb-412f11ddd299?utm_source=hackernews&amp;utm_medium=contentsyndication&amp;utm_campaign=finserv-2026" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   Goldcast Maintenance
+  </title>
+  <meta content="Goldcast Maintenance" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2026/01/threatsday-bulletin-ai-voice-cloning.html content length: 16681
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2026/01/model-security-is-wrong-frame-real-risk.html content length: 5960
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.uk/security-event-2026 content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.sans.org/cyber-security-training-events/sans-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_SANS26_Jan_HomepageNews2&amp;utm_campaign=SANS_2026" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   SANS 2026 | Cybersecurity Training
+  </title>
+  <meta content="SANS 2026 | Cybersecurity Training" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2026/01/4-outdated-habits-destroying-your-socs.html content length: 7452
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2026/01/microsoft-legal-action-disrupts-redvds.html content length: 7663
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <style type="text/css">
+   @font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek/400/normal.woff2);unicode-range:U+0370-03FF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/greek-ext/400/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Roboto;font-style:normal;font-weight:400;src:url(/cf-fonts/s/roboto/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U
+
+[DEBUG] https://thehackernews.com/2026/01/palo-alto-fixes-globalprotect-dos-flaw.html content length: 1805
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
 [DEBUG] https://thehackernews.com/2026/01/kimwolf-botnet-infected-over-2-million.html content length: 5569
 <!DOCTYPE html>
@@ -472,7 +669,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.com/2026/01/ai-agents-are-becoming-privilege.html content length: 7760
+[DEBUG] https://thehackernews.com/2026/01/ai-agents-are-becoming-privilege.html content length: 6967
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -516,22 +713,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.uk/finserv-insights content length: 0
-<html>
- <head>
-  <meta content="0; url=https://filigran.ondemand.goldcast.io/on-demand/2ef5d8e7-d215-49e4-95fb-412f11ddd299?utm_source=hackernews&amp;utm_medium=contentsyndication&amp;utm_campaign=finserv-2026" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   Goldcast Maintenance
-  </title>
-  <meta content="Goldcast Maintenance" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
-[DEBUG] https://thehackernews.com/2026/01/fortinet-fixes-critical-fortisiem-flaw.html content length: 3569
+[DEBUG] https://thehackernews.com/2026/01/fortinet-fixes-critical-fortisiem-flaw.html content length: 3814
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -575,198 +757,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.uk/infosec-training content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.sans.org/cyber-security-training-events/surge-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_Surge26_Jan_HomepageNews1&amp;utm_campaign=SANS_Surge_2026" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   SANS Surge 2026 | Cybersecurity Training
-  </title>
-  <meta content="SANS Surge 2026 | Cybersecurity Training" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
 [DEBUG] https://thehackernews.com/2026/01/microsoft-fixes-114-windows-flaws-in.html content length: 7592
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/critical-nodejs-vulnerability-can-cause.html content length: 3715
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/pluggyape-malware-uses-signal-and.html content length: 3685
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/long-running-web-skimming-campaign.html content length: 3876
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/malicious-chrome-extension-steals-mexc.html content length: 3942
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/webinar-t-from-mcps-and-tool-access-to.html content length: 2369
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/new-advanced-linux-voidlink-malware.html content length: 5342
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/what-should-we-learn-from-how-attackers.html content length: 4203
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/servicenow-patches-critical-ai-platform.html content length: 3018
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
