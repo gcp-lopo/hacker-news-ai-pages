@@ -1,7 +1,7 @@
 [DEBUG] Debug start.
 [DEBUG] Homepage <body> preview:
 <body>
- <header class="header clear" data-pjax-root="">
+ <header class="header clear">
   <div class="top-bar cf">
    <div class="top-bar-box cf">
     <div class="slogan-container">
@@ -270,8 +270,8 @@
  <div class="rocking cf">
   <div class="header-cn">
   </div>
-  <script type="f8870ee356db17323287e6f3-text/javascript">
-   document.querySelector('.header-cn').innerHTML=[`<a href='https://thehackernews.uk/control-shadow-ai-d' rel='noopener' target='_blank'><img alt='Control Shadow AI' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjx270iG6HiRMtpIUKVWL63OBma236aD1cXgDbnfnf5a4dPD10L0ZcFe_MEfeALdOutQWdQk4PoBzO9BvcHcUyDQL0KrDoddCo-Nt_Ko4dVM1VGoGTn8qQFNKZSMALotF_S1XfObK1Hq_hQBZbq590VUiXcXpFLetSQ6cIiVBouaJsu28RzvoIHEQSIYQ/s790-rw-e365/control-shadow-ai-d.jpg' width='729'/></a>`,`<a href='https://thehackernews.uk/teams-oversharing-d' rel='noopener' target='_blank'><img alt='Teams Oversharing' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJqPzzvdgxONRj7UZYeO9E1OjbRWAhmeWyqmDCGHgJ1t3xQkfJzgSb19-NleYFnAUFxTWJ4hltZewBvEw1bRkK5BcVhSFo8hLt2JYhnH9YoWXd0P3bE46axQhj_wd_SmZupK2W3p5q7wQrg4V4xBQn7o0x3ruNyvSYwf8DvmvVKdbuKw0pZOH6Az2xt2I/s790-rw-e365/teams-oversharing-d.jpg' width='729'/></a>`,`<a href='https://thehackernews.uk/viral-ai-notetakers-d' rel='noopener' target='_blank'><img alt='Viral AI Notetakers' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1mvbKa2RuwtdZhbZ99mGzIl7mW0Hm8ZDljyipG4X2ZGZJSL-MvtD1qRaSy_OjXCs_ZWDdIFIW9vgcqtfZNmVdOCCldvARw0ylD1UYzn2p99uyb2pEIttBoI4ONrupzpfiy50KiD1wctvGrDc7eOyTZ6yS-jLL3DPM7UI7WSlB1xGlAK3uYfvhaojPOSQ/s790-rw-e365/viral-ai-notetakers-d.jpg' width='729'/></a>`][Math.random()*3|0]
+  <script>
+   document.querySelector('.header-cn').innerHTML=[`<a href='https://thehackernews.uk/control-shadow-ai-d' rel='noopener' target='_blank'><img alt='Control Shadow AI' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjx270iG6HiRMtpIUKVWL63OBma236aD1cXgDbnfnf5a4dPD10L0ZcFe_MEfeALdOutQWdQk4PoBzO9BvcHcUyDQL0KrDoddCo-Nt_Ko4dVM1VGoGTn8qQFNKZSMALotF_S1XfObK1Hq_hQBZbq590VUiXcXpFLetSQ6cIiVBouaJsu28RzvoIHEQSIYQ/s728-e365/control-shadow-ai-d.jpg' width='729'/></a>`,`<a href='https://thehackernews.uk/teams-oversharing-d' rel='noopener' target='_blank'><img alt='Teams Oversharing' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJqPzzvdgxONRj7UZYeO9E1OjbRWAhmeWyqmDCGHgJ1t3xQkfJzgSb19-NleYFnAUFxTWJ4hltZewBvEw1bRkK5BcVhSFo8hLt2JYhnH9YoWXd0P3bE46axQhj_wd_SmZupK2W3p5q7wQrg4V4xBQn7o0x3ruNyvSYwf8DvmvVKdbuKw0pZOH6Az2xt2I/s728-e365/teams-oversharing-d.jpg' width='729'/></a>`,`<a href='https://thehackernews.uk/viral-ai-notetakers-d' rel='noopener' target='_blank'><img alt='Viral AI Notetakers' height='91' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1mvbKa2RuwtdZhbZ99mGzIl7mW0Hm8ZDljyipG4X2ZGZJSL-MvtD1qRaSy_OjXCs_ZWDdIFIW9vgcqtfZNmVdOCCldvARw0ylD1UYzn2p99uyb2pEIttBoI4ONrupzpfiy50KiD1wctvGrDc7eOyTZ6yS-jLL3DPM7UI7WSlB1xGlAK3uYfvhaojPOSQ/s728-e365/viral-ai-notetakers-d.jpg' width='729'/></a>`][Math.random()*3|0]
   </script>
  </div>
  <main class="main clear" id="app">
@@ -286,14 +286,80 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/01/black-basta-ransomware-hacker-leader.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Black Basta Ransomware Leader Added to EU Most Wanted and INTERPOL Red Notice" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3VY2I87McGcsRT2S52vO2sa1A9ZvLo_H6YYLk5sCypOvjoX1H4Ee9QkvAiFJIvy0qW0dvgi_db78HgDvWHJKW9Fkaf5sLOt-RA2sP8fooQrHtv0qFf6Cazo7YjXAKY7NXJdNotK4w8aiiuz1nzNzmGbiJ6l81rbrU5-Sa7oOlMiRl08-4_4p9XtsjB1Am/s900-e365/Ukrainian-hacker.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Black Basta Ransomware Leader Added to EU Most Wanted and INTERPOL Red Notice" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3VY2I87McGcsRT2S52vO2sa1A9ZvLo_H6YYLk5sCypOvjoX1H4Ee9QkvAiFJIvy0qW0dvgi_db78HgDvWHJKW9Fkaf5sLOt-RA2sP8fooQrHtv0qFf6Cazo7YjXAKY7NXJdNotK4w8aiiuz1nzNzmGbiJ6l81rbrU5-Sa7oOlMiRl08-4_4p9XtsjB1Am/s900-e365/Ukrainian-hacker.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Black Basta Ransomware Leader Added to EU Most Wanted and INTERPOL Red Notice
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jan 17, 2026
+             </span>
+             <span class="h-tags">
+              Law Enforcement / Cybercrime
+             </span>
+            </div>
+            <div class="home-desc">
+             Ukrainian and German law enforcement authorities have identified  two Ukrainians suspected of working for the Russia-linked ransomware-as-a-service (RaaS) group Black Basta.  In addition, the group's alleged leader, a 35-year-old Russian national named Oleg Evgenievich Nefedov (Нефедов Олег Евгеньевич), has been added  to the European Union's Most Wanted  and INTERPOL's Red Notice  lists, authorities noted.  "According to the investigation, the suspects specialized in technical hacking of protected systems and were involved in preparing cyberattacks using ransomware," the Cyber Police of Ukraine said in a statement.   The agency said the accused individuals functioned as "hash crackers," who specialize in extracting passwords from information systems using specialized software. Once the credential information was obtained, members of the ransomware group broke into corporate networks and ultimately deployed ransomware and extorted money to recover the e...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/01/openai-to-show-ads-in-chatgpt-for.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="OpenAI to Show Ads in ChatGPT for Logged-In U.S. Adults on Free and Go Plans" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSamhve9k7iL2Jd0BpqUkreaa3K7itkI4XIHJVBxqZ6l07U24t76eNbuhKMnRtu7eJ66TmiqgVQbAATH-pHha8jEcBz2PePIWaQDrWPky4mT6KFKVxjxe0N-yTFVEjXa3263Nt2IO_jmvJOjld503G-i99zT-7xeNf-BiAYFtyVdzV8QOu6tMvRyQbvYtn/s900-e365/chatgpt.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="OpenAI to Show Ads in ChatGPT for Logged-In U.S. Adults on Free and Go Plans" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSamhve9k7iL2Jd0BpqUkreaa3K7itkI4XIHJVBxqZ6l07U24t76eNbuhKMnRtu7eJ66TmiqgVQbAATH-pHha8jEcBz2PePIWaQDrWPky4mT6KFKVxjxe0N-yTFVEjXa3263Nt2IO_jmvJOjld503G-i99zT-7xeNf-BiAYFtyVdzV8QOu6tMvRyQbvYtn/s900-e365/chatgpt.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             OpenAI to Show Ads in ChatGPT for Logged-In U.S. Adults on Free and Go Plans
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jan 17, 2026
+             </span>
+             <span class="h-tags">
+              Artificial Intelligence / Data Privacy
+             </span>
+            </div>
+            <div class="home-desc">
+             OpenAI on Friday said it would start showing ads in ChatGPT to logged-in adult U.S. users in both the free and ChatGPT Go tiers in the coming weeks, as the artificial intelligence (AI) company expanded access  to its low-cost subscription globally.  "You need to know that your data and conversations are protected and never sold to advertisers," OpenAI said . "And we need to keep a high bar and give you control over your experience, so you see truly relevant, high-quality ads—and can turn off personalization if you want."   The company has positioned advertising as a way to ensure that the benefits of artificial general intelligence – a term used to describe a stage in machine learning when an AI system can reach or surpass human-level intelligence – can be made more accessible to the masses. In addition, it can be "transformative" for small businesses and emerging brands trying to compete, it added.   It also emphasized that ads do not influence responses...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/01/gootloader-malware-uses-5001000.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="GootLoader Malware Uses 500–1,000 Concatenated ZIP Archives to Evade Detection" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9KFkvTcZ_PkWZffX2HE8olvWbZAOrsco48R3JqZQsB4hUc2GGS7xh9a6suu7I_eIe4NU8M5sjecperqY7v7V4nSuAffVy024xnlN38Ig-LPae-RiwXXxMUnf8FvvNX9HVjsf1yHr4cZaDxww_pa53yqGlSNfQtnsA6NZGwELbUyE5pPKOp96QK-BQI3GB/s790-rw-e365/code.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="GootLoader Malware Uses 500–1,000 Concatenated ZIP Archives to Evade Detection" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9KFkvTcZ_PkWZffX2HE8olvWbZAOrsco48R3JqZQsB4hUc2GGS7xh9a6suu7I_eIe4NU8M5sjecperqY7v7V4nSuAffVy024xnlN38Ig-LPae-RiwXXxMUnf8FvvNX9HVjsf1yHr4cZaDxww_pa53yqGlSNfQtnsA6NZGwELbUyE5pPKOp96QK-BQI3GB/s900-e365/code.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="GootLoader Malware Uses 500–1,000 Concatenated ZIP Archives to Evade Detection" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9KFkvTcZ_PkWZffX2HE8olvWbZAOrsco48R3JqZQsB4hUc2GGS7xh9a6suu7I_eIe4NU8M5sjecperqY7v7V4nSuAffVy024xnlN38Ig-LPae-RiwXXxMUnf8FvvNX9HVjsf1yHr4cZaDxww_pa53yqGlSNfQtnsA6NZGwELbUyE5pPKOp96QK-BQI3GB/s790-rw-e365/code.jpg"/>
+             <img alt="GootLoader Malware Uses 500–1,000 Concatenated ZIP Archives to Evade Detection" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9KFkvTcZ_PkWZffX2HE8olvWbZAOrsco48R3JqZQsB4hUc2GGS7xh9a6suu7I_eIe4NU8M5sjecperqY7v7V4nSuAffVy024xnlN38Ig-LPae-RiwXXxMUnf8FvvNX9HVjsf1yHr4cZaDxww_pa53yqGlSNfQtnsA6NZGwELbUyE5pPKOp96QK-BQI3GB/s900-e365/code.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
@@ -318,15 +384,41 @@
           </div>
          </a>
         </div>
+        <section class="body-post clear newsfeed nf1">
+         <a class="story-link" href="https://thehackernews.uk/filigran-insights" rel="nofollow noopener" target="_blank" title="cyber security">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjk-bmKPd7m9Ytct9lNpTzz9h9m9jclprsPlb6ggYqi7Xhyg6ulsz4b1yn-g79dMndqrGWJT1n65IwHu_pyTcJUoB5iWnbLOU3KDLrC5OQ9OBWb7bZjHP2r5xoFnIbYuXsp-Z-TR2A3eAxhujzm_uFMkLXIN5JGnkRt5YJ-tsLaGMpnJ9CKr5Yw1Hm4e_l_/s728-e300/fin.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Compliance-Ready Tabletop Exercises to Elevate Incident Response
+            </h2>
+            <div class="item-label">
+             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
+             Filigran
+             <span class="h-tags">
+              Incident Response / Exposure Validation
+             </span>
+            </div>
+            <div class="home-desc">
+             Standardize tabletop drills at scale. improving real-world team response and decision-making.
+            </div>
+           </div>
+          </div>
+         </a>
+        </section>
         <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/01/five-malicious-chrome-extensions.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Five Malicious Chrome Extensions Impersonate Workday and NetSuite to Hijack Accounts" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7kvgFz8ELXceV5_LsBgcodkjSM6meRhVnuxiijpgc1_2XcMb9Gh660H5HEknLGskzkx9L81bbOM651BUVAzu2u6bf36gf5r2x3ndhltKVFZAforGzT-dQhny2-zEk3cih03DU1pfyRFiJLlNXuv_Ml-glQC1dGl95L1KpYHBXnMOfXZwfd4bWGaUH3uel/s790-rw-e365/chrome.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Five Malicious Chrome Extensions Impersonate Workday and NetSuite to Hijack Accounts" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7kvgFz8ELXceV5_LsBgcodkjSM6meRhVnuxiijpgc1_2XcMb9Gh660H5HEknLGskzkx9L81bbOM651BUVAzu2u6bf36gf5r2x3ndhltKVFZAforGzT-dQhny2-zEk3cih03DU1pfyRFiJLlNXuv_Ml-glQC1dGl95L1KpYHBXnMOfXZwfd4bWGaUH3uel/s900-e365/chrome.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Five Malicious Chrome Extensions Impersonate Workday and NetSuite to Hijack Accounts" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7kvgFz8ELXceV5_LsBgcodkjSM6meRhVnuxiijpgc1_2XcMb9Gh660H5HEknLGskzkx9L81bbOM651BUVAzu2u6bf36gf5r2x3ndhltKVFZAforGzT-dQhny2-zEk3cih03DU1pfyRFiJLlNXuv_Ml-glQC1dGl95L1KpYHBXnMOfXZwfd4bWGaUH3uel/s790-rw-e365/chrome.jpg"/>
+             <img alt="Five Malicious Chrome Extensions Impersonate Workday and NetSuite to Hijack Accounts" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7kvgFz8ELXceV5_LsBgcodkjSM6meRhVnuxiijpgc1_2XcMb9Gh660H5HEknLGskzkx9L81bbOM651BUVAzu2u6bf36gf5r2x3ndhltKVFZAforGzT-dQhny2-zEk3cih03DU1pfyRFiJLlNXuv_Ml-glQC1dGl95L1KpYHBXnMOfXZwfd4bWGaUH3uel/s900-e365/chrome.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
@@ -345,99 +437,51 @@
              </span>
             </div>
             <div class="home-desc">
-             Cybersecurity researchers have discovered five new malicious Google Chrome web browser extensions that masquerade as human resources (HR) and enterprise resource planning (ERP) platforms like Workday, NetSuite, and SuccessFactors to take control of victim accounts.  "The extensions work in concert to steal authentication tokens, block incident response capabilities, and enable complete account takeover through session hijacking," Socket security researcher Kush Pandya said  in a Thursday report.  The names of the extensions are listed below -   DataByCloud Access (ID: oldhjammhkghhahhhdcifmmlefibciph, Published by: databycloud1104) - 251 Installs  Tool Access 11 (ID: ijapakghdgckgblfgjobhcfglebbkebf, Published by: databycloud1104) - 101 Installs  DataByCloud 1 (ID: mbjjeombjeklkbndcjgmfcdhfbjngcam, Published by: databycloud1104) - 1,000 Installs  DataByCloud 2 (ID: makdmacamkifdldldlelollkkjnoiedg, Published by: databycloud1104) - 1,000 Installs  Software Access (ID: bmodapc...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/your-digital-footprint-can-lead-right.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="Your Digital Footprint Can Lead Right to Your Front Door" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_20kAAwaCZD2Lh6-cSZ4bMJ5QJq16p3GRg-tw994MYxsXjW6EikJ7cJbFhb-I6H3hZQRN0blLVlY_zd1993WBJixaFKtO0eXeskqu6HKzE25lZWtfHQckAbh-doxDoBQkcuEazU3GkBSXWP-uNKXvjXdK9NSAGo_BEOPYD7vntOgaSAjVuRI0_lOSwRU/s790-rw-e365/Incogni.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="Your Digital Footprint Can Lead Right to Your Front Door" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_20kAAwaCZD2Lh6-cSZ4bMJ5QJq16p3GRg-tw994MYxsXjW6EikJ7cJbFhb-I6H3hZQRN0blLVlY_zd1993WBJixaFKtO0eXeskqu6HKzE25lZWtfHQckAbh-doxDoBQkcuEazU3GkBSXWP-uNKXvjXdK9NSAGo_BEOPYD7vntOgaSAjVuRI0_lOSwRU/s790-rw-e365/Incogni.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Your Digital Footprint Can Lead Right to Your Front Door
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              Jan 16, 2026
-             </span>
-             <span class="h-tags">
-              Privacy / Data Protection
-             </span>
-            </div>
-            <div class="home-desc">
-             You lock your doors at night. You avoid sketchy phone calls. You're careful about what you post on social media.  But what about the information about you that's already out there—without your permission?  Your name. Home address. Phone number. Past jobs. Family members. Old usernames.  It's all still online, and it's a lot easier to find than you think.  The hidden safety threat lurking online  Most people don't realize how much of their personal life is sitting on public websites, data broker platforms, and sketchy directories.  These sites don't just sell your info to marketers—they make it available to anyone with internet access.  And that's when things can get dangerous. Exposed personal information can lead to:   Doxxing incidents where personal info is leaked online  Harassment that moves from your inbox to your doorstep  Stalkers and scammers are building a profile on you using old addresses and phone numbers  Strangers showing up where you live or work.   It's not just creep...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <section class="body-post clear newsfeed nf1">
-         <a class="story-link" href="https://thehackernews.uk/finserv-insights" rel="nofollow noopener" target="_blank" title="cyber security">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwnXLMiTPxg0l-9vWUbCYrEqqJbpmCIaxrSU44POseMxsMYQd7lthvavjh1PDegvuEqZFCQ4dd_QxjCE5B5i-0RHwXyOBIiyqGTD6UaGzxJprlAlOhNbdWFOM5csKKjvdv63VDlftENvGmVvVxlkhZVhY1L5VMD1rIZJcoagIJ1Q4UWrsyMfE2LITCHHso/s400-e30/Option1.png" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Operationalize Incident Response: Scale Tabletop Exercises with AEV
-            </h2>
-            <div class="item-label">
-             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style=" display-block; max-width: 12px; margin-right: 8px; "/>
-             Filigran
-             <span class="h-tags">
-              Incident Response / Exposure Validation
-             </span>
-            </div>
-            <div class="home-desc">
-             Learn how to standardize, automate, and scale IR tabletop drills for compliance and team readiness.
-            </div>
-           </div>
-          </div>
-         </a>
-        </section>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/01/lotuslite-backdoor-targets-us-policy.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="LOTUSLITE Backdoor Targets U.S. Policy Entities Using Venezuela-Themed Spear Phishing" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVK3A2yZNeTmDZQnzYo5bTA8R87lnRUIqYSSxOoyKUkAqFH97mjhNJ2LiAT64bsC9ExwqhQnDHhAfs5RJUIUbPGPp5E7h-L3efaT-216BWjYgGsZfZbe46N3BaIR7pxOusAcaJV7a9HHm6RyV3ZAvuz9ECIJPnBnrCuXimEH___3cbJkTefgy8dtfPx9mE/s790-rw-e365/policy-malware.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="LOTUSLITE Backdoor Targets U.S. Policy Entities Using Venezuela-Themed Spear Phishing" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVK3A2yZNeTmDZQnzYo5bTA8R87lnRUIqYSSxOoyKUkAqFH97mjhNJ2LiAT64bsC9ExwqhQnDHhAfs5RJUIUbPGPp5E7h-L3efaT-216BWjYgGsZfZbe46N3BaIR7pxOusAcaJV7a9HHm6RyV3ZAvuz9ECIJPnBnrCuXimEH___3cbJkTefgy8dtfPx9mE/s790-rw-e365/policy-malware.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             LOTUSLITE Backdoor Targets U.S. Policy Entities Using Venezuela-Themed Spear Phishing
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              Jan 16, 2026
-             </span>
-             <span class="h-tags">
-              Malware / Cyber Espionage
-             </span>
-            </div>
-            <div class="home-desc">
-             Security experts have disclosed details of a new campaign that has targeted U.S. government and policy entities using politically themed lures to deliver a backdoor known as LOTUSLITE .  The targeted malware campaign leverages decoys related to the recent geopolitical developments  between the U.S. and Venezuela to distribute a ZIP archive ("US now deciding what's next for Venez
+             Cybersecurity researchers have discovered five new malicious Google Chrome web browser extensions that masquerade as human resources (HR) and enterprise resource planning (ERP) platforms like Workday, NetSuite, and SuccessFactors to take control of victim accounts.  "The extensions work in concert to steal authentication tokens, block incident response capabilities, and enable complete account takeover through session hijacking," Socket security researcher Kush Pandya said  in a Thursday report.  The 
+
+[DEBUG] https://thehackernews.com/2026/01/black-basta-ransomware-hacker-leader.html content length: 4223
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
+
+[DEBUG] https://thehackernews.com/2026/01/openai-to-show-ads-in-chatgpt-for.html content length: 2796
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3732b3" name="theme-color"/>
+  <meta content="#3732b3" name="msapplication-navbutton-color"/>
+  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
 [DEBUG] https://thehackernews.com/2026/01/gootloader-malware-uses-5001000.html content length: 4159
 <!DOCTYPE html>
@@ -461,7 +505,21 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.com/2026/01/five-malicious-chrome-extensions.html content length: 5240
+[DEBUG] https://thehackernews.uk/filigran-insights content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://filigran.ondemand.goldcast.io/on-demand/2ef5d8e7-d215-49e4-95fb-412f11ddd299?utm_source=hackernews&amp;utm_medium=contentsyndication&amp;utm_campaign=finserv-2026" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+  </title>
+  <meta content="" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2026/01/five-malicious-chrome-extensions.html content length: 5339
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -505,15 +563,15 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
-[DEBUG] https://thehackernews.uk/finserv-insights content length: 0
+[DEBUG] https://thehackernews.uk/security-event-2026 content length: 0
 <html>
  <head>
-  <meta content="0; url=https://filigran.ondemand.goldcast.io/on-demand/2ef5d8e7-d215-49e4-95fb-412f11ddd299?utm_source=hackernews&amp;utm_medium=contentsyndication&amp;utm_campaign=finserv-2026" http-equiv="refresh"/>
+  <meta content="0; url=https://www.sans.org/cyber-security-training-events/sans-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_SANS26_Jan_HomepageNews2&amp;utm_campaign=SANS_2026" http-equiv="refresh"/>
   <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
   <title>
-   Goldcast Maintenance
+   SANS 2026 | Cybersecurity Training
   </title>
-  <meta content="Goldcast Maintenance" property="og:title">
+  <meta content="SANS 2026 | Cybersecurity Training" property="og:title">
    <meta content="website" property="og:type"/>
   </meta>
  </head>
@@ -563,21 +621,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.uk/security-event-2026 content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.sans.org/cyber-security-training-events/sans-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_SANS26_Jan_HomepageNews2&amp;utm_campaign=SANS_2026" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   SANS 2026 | Cybersecurity Training
-  </title>
-  <meta content="SANS 2026 | Cybersecurity Training" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
 
 [DEBUG] https://thehackernews.com/2026/01/cisco-patches-zero-day-rce-exploited-by.html content length: 2718
 <!DOCTYPE html>
@@ -690,72 +733,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
 
 [DEBUG] https://thehackernews.com/2026/01/model-security-is-wrong-frame-real-risk.html content length: 5960
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/4-outdated-habits-destroying-your-socs.html content length: 7452
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/microsoft-legal-action-disrupts-redvds.html content length: 7663
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" http-equiv="X-UA-Compatible"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3732b3" name="theme-color"/>
-  <meta content="#3732b3" name="msapplication-navbutton-color"/>
-  <meta content="#3732b3" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s96-e365/thn
-
-[DEBUG] https://thehackernews.com/2026/01/palo-alto-fixes-globalprotect-dos-flaw.html content length: 1805
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
