@@ -269,12 +269,10 @@
  </aside>
  <div class="rocking cf">
   <div class="header-cn">
+   <a href="https://thehackernews.uk/sse-awards-insight-d" rel="noopener" target="_blank">
+    <img alt="Security Service Edge" decoding="async" fetchpriority="high" height="91" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5Ij_-TeqFMEsRFzgRRFzSRlVK6oHCncN_eJ2fkOdsA_1tN9HQbAlEEife2Z2JUt1lPv4st5n9KZP84jGEYY9Up6BQ7QE-N5rs6OhzL5thxGzVxnMx3JH9cGRLi9S5Kl-iV5PgjBeTdkBLnv_inF8UUAo88iqdmgJuPIc_6qiPyUMXwFyZWbZvkZkcRXSw/s728-e100/gartner-d.jpg" width="729"/>
+   </a>
   </div>
-  <script type="e845f92d6c2ab81b35a7cb16-text/javascript">
-   //<![CDATA[
-!function(){var b=[`<a href="https://thehackernews.uk/shadow-ai-d" rel="noopener" target="_blank"><img data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2FpzxsUD8und5p47FpAOy8xjG9EJknLlJb70dtG50LAcnPQ_q0zQQGpFWqKhIf4nWFk1rH_W1n_rAfDf_eMWmno57PKQ8IMBUFi9Mgl3K9am3-04OW9Ow3w-hRp7a4AQFUJrgqYDbCySwoShNh_5vRlRRBvB0IqyOKusPANN66qN4giVIDQ7LQA5FEqm0/s728-e365/shadow-ai-d.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="  decoding="async" fetchpriority="high" alt="Uncover shadow AI" width="729" height="91"></a>`,`<a href="https://thehackernews.uk/shadow-saas-d" rel="noopener" target="_blank"><img data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg67tu9Gn8m9yCxCoYhYl1l5N_pwM-peIUcVre3Pm2uUoviLy6BjAE77faN3ipgEvegy82G1EasWvAjPflp-nUwjXJaph4oweoqb-Yc_ul4lvIC5nZKYQNHpXP_Xm-FDPFTFDsirh4Hh3FlU9KT-EOd4Oifpk9ga-xWj5UBqS0kNC__-US-mEQzMufXB5JQ/s728-e365/shadow-saas-d.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="  decoding="async" fetchpriority="high" alt="free shadow SaaS inventory" width="729" height="91"></a>`,`<a href="https://thehackernews.uk/wasted-saas-d" rel="noopener" target="_blank"><img data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiehtmDfaGjrYftNoVC_j3BxYkUZ9eUUusWmiHxdjIP9YYnysRIPNUSc0qnMIUFbg65gYMknDXGVtOkGUeVPZiwBPQKu0SGvNBHlZrpUf0XA17DV1EpnNcybJYI8GQi5ahKDf2KL9uD8iqOcvcwFE9l5OeE7Kz_CQlGjzKjlbbdKK2BpziZCeKzXQUgXgyR/s728-e365/wasted-saas-d.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="  decoding="async" fetchpriority="high" alt="Regain control of SaaS spend" width="729" height="91"></a>`],h=document.querySelector(".header-cn");h&&(h.innerHTML=b[0|Math.random()*3])}();
-//]]>
-  </script>
  </div>
  <main class="main clear" id="app">
   <div class="main-box clear">
@@ -434,9 +432,25 @@
               </i>
               Jan 30, 2026
              </span>
-     
+             <span class="h-tags">
+              Malware / AI Security
+             </span>
+            </div>
+            <div class="home-desc">
+             Cybersecurity researchers have discovered malicious Google Chrome extensions that come with capabilities to hijack affiliate links, steal data, and collect OpenAI ChatGPT authentication tokens.  One of the extensions in question is Amazon Ads Blocker (ID: pnpchphmplpdimbllknjoiopmfphellj), which claims to be a tool to browse Amazon without any sponsored content. It was uploaded to the Chrome Web Store by a publisher named "10Xprofit" on January 19, 2026.  "The extension does block ads as advertised, but its primary function is hidden: it automatically injects the developer's affiliate tag (10xprofit-20) into every Amazon product link and replaces existing affiliate codes from content creators," Socket security researcher Kush Pandya said .  Further analysis has determined that Amazon Ads Blocker is part of a larger cluster of 29 browser add-ons that target several e-commerce platforms like AliExpress, Amazon, Best Buy, Shein, Shopify, and Walmart. The complet...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/01/china-linked-uat-8099-targets-iis.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+        
 
-[DEBUG] https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html content length: 7607
+[DEBUG] https://thehackernews.com/2026/01/iran-linked-redkitten-cyber-campaign.html content length: 8063
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
  <head>
@@ -445,8 +459,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="880312267e4f79f0409ff251-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -460,7 +472,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html content length: 4646
 <!DOCTYPE html>
@@ -471,8 +484,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="f31ef8872134257c46718afa-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -486,7 +497,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/poland-attributes-december-cyber.html content length: 4931
 <!DOCTYPE html>
@@ -497,8 +509,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="cad0cfc6c270dcba70f94af3-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -512,7 +522,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.uk/images-101-poster content length: 0
 <html>
@@ -538,8 +549,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="460cc81cd537d3f3d8ff6365-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -553,7 +562,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/china-linked-uat-8099-targets-iis.html content length: 5711
 <!DOCTYPE html>
@@ -564,8 +574,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="f15e356ba1ff23d337749747-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -579,7 +587,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.uk/toad-threat-guide content length: 0
 <html>
@@ -605,8 +614,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="46957f68e131d3a2c345c5e1-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -620,7 +627,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html content length: 4797
 <!DOCTYPE html>
@@ -631,8 +639,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="19ec0283d18d6163912e81f6-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -646,7 +652,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/smartermail-fixes-critical.html content length: 2237
 <!DOCTYPE html>
@@ -657,8 +664,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="b24abfeb04a7c99e70f9ca01-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -672,7 +677,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/two-ivanti-epmm-zero-day-rce-flaws.html content length: 5743
 <!DOCTYPE html>
@@ -683,8 +689,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="00484e9c09c2e6b9c9aaa095-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -698,7 +702,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/researchers-find-175000-publicly.html content length: 4867
 <!DOCTYPE html>
@@ -709,8 +714,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="962412c8d1b487d231dee20e-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -724,7 +727,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/threatsday-bulletin-new-rces-darknet.html content length: 33804
 <!DOCTYPE html>
@@ -735,8 +739,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="376ba3f3a36d8fd59caffe91-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -750,7 +752,8 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html content length: 8990
 <!DOCTYPE html>
@@ -761,8 +764,6 @@
   <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
   <link href="https://thehackernews.uk" rel="dns-prefetch"/>
   <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <script data-cf-settings="190f5987db40d429c97325a8-|49" src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js">
-  </script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" media="print" onload='this.media="all"' rel="stylesheet"/>
   <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
   <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
@@ -776,6 +777,7 @@
   <meta content="The Hacker News" property="og:site_name"/>
   <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleuse
 
 [DEBUG] Failed to fetch list page: https://thehackernews.com/search/label/Artificial%20Intelligence?updated-max=&max-results=10, status: 404
