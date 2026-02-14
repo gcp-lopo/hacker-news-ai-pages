@@ -98,18 +98,18 @@
      </a>
     </li>
     <li class="eight_plus">
-     <a href="/search/label/data%20breach">
-      Data Breaches
-     </a>
-    </li>
-    <li class="show-menu">
-     <a href="/search/label/Cyber%20Attack">
-      Cyber Attacks
+     <a href="/search/label/Threat%20Intelligence">
+      Threat Intelligence
      </a>
     </li>
     <li class="show-menu">
      <a href="/search/label/Vulnerability">
       Vulnerabilities
+     </a>
+    </li>
+    <li class="show-menu">
+     <a href="/search/label/Cyber%20Attack">
+      Cyber Attacks
      </a>
     </li>
     <li class="eight_plus">
@@ -123,8 +123,8 @@
      </a>
     </li>
     <li class="show-menu">
-     <a href="/p/submit-news.html">
-      Contact
+     <a href="https://awards.thehackernews.com/">
+      Awards
      </a>
     </li>
    </ul>
@@ -170,6 +170,11 @@
       <li>
        <a href="/p/upcoming-hacker-news-webinars.html" rel="noopener">
         Webinars
+       </a>
+      </li>
+      <li>
+       <a href="https://awards.thehackernews.com/" rel="noopener">
+        Awards
        </a>
       </li>
       <li>
@@ -286,99 +291,99 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/02/first-malicious-outlook-add-in-found.html">
+         <a class="story-link" href="https://thehackernews.com/2026/02/google-reports-state-backed-hackers.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="First Malicious Outlook Add-In Found Stealing 4,000+ Microsoft Credentials" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGH5OFCdEH8WLDQvMuU6qAbaI73kVMtx4uASqujZ12UAb3Q-yJX3ZsFCpc1uJuUE4ah_z24WgRv_1JhOem_ISHdoYtPzZPy6o5HwRuoBGjThyru3WAtrcOqyA9hDvSNgSKIgaYUTdIOUJHL7HCRUEZgt9Z8fP6F8oINDt4LkeziTnTW6cx_Qw_DJ2FLMmo/s1600/outlook.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Google Reports State-Backed Hackers Using Gemini AI for Recon and Attack Support" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH-X2QIhuzxjBzIZ8BlpGUbA-K-Wr-eqGI4bYJD_BMYP8z3FHI65tVA3Oe5vVANpMVHx1f6f3i0sKT-yjmYq9SmCkixMEQVbhRn2PjPEaYnauJYX_wi0i-3phvUCBWW4IQ2KI9o417JKW6h9z5coqLQAiEUCZSk_Bq5nEAqPqSEpVPH2Q46JQU4RTBuNcf/s1600/google-ai.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="First Malicious Outlook Add-In Found Stealing 4,000+ Microsoft Credentials" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGH5OFCdEH8WLDQvMuU6qAbaI73kVMtx4uASqujZ12UAb3Q-yJX3ZsFCpc1uJuUE4ah_z24WgRv_1JhOem_ISHdoYtPzZPy6o5HwRuoBGjThyru3WAtrcOqyA9hDvSNgSKIgaYUTdIOUJHL7HCRUEZgt9Z8fP6F8oINDt4LkeziTnTW6cx_Qw_DJ2FLMmo/s1600/outlook.jpg"/>
+             <img alt="Google Reports State-Backed Hackers Using Gemini AI for Recon and Attack Support" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhH-X2QIhuzxjBzIZ8BlpGUbA-K-Wr-eqGI4bYJD_BMYP8z3FHI65tVA3Oe5vVANpMVHx1f6f3i0sKT-yjmYq9SmCkixMEQVbhRn2PjPEaYnauJYX_wi0i-3phvUCBWW4IQ2KI9o417JKW6h9z5coqLQAiEUCZSk_Bq5nEAqPqSEpVPH2Q46JQU4RTBuNcf/s1600/google-ai.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             First Malicious Outlook Add-In Found Stealing 4,000+ Microsoft Credentials
+             Google Reports State-Backed Hackers Using Gemini AI for Recon and Attack Support
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Feb 11, 2026
+              Feb 12, 2026
              </span>
              <span class="h-tags">
-              Cloud Security / Identity Security
+              Cyber Espionage / Artificial Intelligence
              </span>
             </div>
             <div class="home-desc">
-             Cybersecurity researchers have discovered what they said is the first known malicious Microsoft Outlook add-in detected in the wild.  In this unusual supply chain attack detailed  by Koi Security, an unknown attacker claimed the domain associated with a now-abandoned legitimate add-in to serve a fake Microsoft login page, stealing over 4,000 credentials in the process. The activity has been codenamed AgreeToSteal  by the cybersecurity company.  The Outlook add-in in question is AgreeTo , which is advertised by its developer as a way for users to connect different calendars in a single place and share their availability through email. The add-in was last updated in December 2022.  Idan Dardikman, co-founder and CTO of Koi, told The Hacker News that the incident represents a broadening of supply chain attack vectors.  "This is the same class of attack we've seen in browser extensions, npm packages, and IDE plugins: a trusted distribution channel where the content can change aft...
+             Google on Thursday said it observed the North Korea-linked threat actor known as UNC2970  using its generative artificial intelligence (AI) model Gemini to conduct reconnaissance on its targets, as various hacking groups continue  to weaponize the tool for accelerating various phases of the cyber attack life cycle, enabling information operations, and even conducting model extraction attacks.  "The group used Gemini to synthesize OSINT and profile high-value targets to support campaign planning and reconnaissance," Google Threat Intelligence Group (GTIG) said  in a report shared with The Hacker News. "This actor's target profiling included searching for information on major cybersecurity and defense companies and mapping specific technical job roles and salary information."  The tech giant's threat intelligence team characterized this activity as a blurring of boundaries between what constitutes routine professional research and malicious reconnaissance, al...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/02/apt36-and-sidecopy-launch-cross.html">
+         <a class="story-link" href="https://thehackernews.com/2026/02/lazarus-campaign-plants-malicious.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="APT36 and SideCopy Launch Cross-Platform RAT Campaigns Against Indian Entities" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbazpuuwU1rJbldu2fNhcDhnmgmpygU-Ci4lvjJXXo3TlmbV06oWZJ-FEJjMtQnkzg9-cBOt9h8aCA5d2EuO3gRaDlbzzc1w4cZRsdDUY1YwMTXv9f3ebp4CrZ-0jIar70HO_pyuhzHdClzTo85wpHJF8wiabXv8ko9fxQbp5WFmWdVwvtqqAkh5mk2_hv/s1600/india.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="Lazarus Campaign Plants Malicious Packages in npm and PyPI Ecosystems" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg48-Bb1617Je211tmVOc4BKdYLJjIst0IBibAqJyCaHUi1ZpHQd0EW_idmBrAbIlMm8fDx9yciZ0HiC4WdvabpudTHGJsa_5sOEfHf6idS0Lwv86Zk3Bb9tVvyQJrJ5d0PkByBASbHpjWr5hLU5aWWBeUH3pjMyPhEZtE5WxbpQNRbzhWTSUSSCFGwg1mU/s1600/nkorea-hacker-code.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="APT36 and SideCopy Launch Cross-Platform RAT Campaigns Against Indian Entities" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbazpuuwU1rJbldu2fNhcDhnmgmpygU-Ci4lvjJXXo3TlmbV06oWZJ-FEJjMtQnkzg9-cBOt9h8aCA5d2EuO3gRaDlbzzc1w4cZRsdDUY1YwMTXv9f3ebp4CrZ-0jIar70HO_pyuhzHdClzTo85wpHJF8wiabXv8ko9fxQbp5WFmWdVwvtqqAkh5mk2_hv/s1600/india.jpg"/>
+             <img alt="Lazarus Campaign Plants Malicious Packages in npm and PyPI Ecosystems" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg48-Bb1617Je211tmVOc4BKdYLJjIst0IBibAqJyCaHUi1ZpHQd0EW_idmBrAbIlMm8fDx9yciZ0HiC4WdvabpudTHGJsa_5sOEfHf6idS0Lwv86Zk3Bb9tVvyQJrJ5d0PkByBASbHpjWr5hLU5aWWBeUH3pjMyPhEZtE5WxbpQNRbzhWTSUSSCFGwg1mU/s1600/nkorea-hacker-code.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             APT36 and SideCopy Launch Cross-Platform RAT Campaigns Against Indian Entities
+             Lazarus Campaign Plants Malicious Packages in npm and PyPI Ecosystems
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Feb 11, 2026
+              Feb 12, 2026
              </span>
              <span class="h-tags">
-              Cyber Espionage / Threat Intelligence
+              Vulnerability / Threat Intelligence
              </span>
             </div>
             <div class="home-desc">
-             Indian defense sector and government-aligned organizations have been targeted by multiple campaigns that are designed to compromise Windows and Linux environments with remote access trojans capable of stealing sensitive data and ensuring continued access to infected machines.  The campaigns are characterized by the use of malware families like Geta RAT , Ares RAT , and DeskRAT , which are often attributed to Pakistan-aligned threat clusters tracked as SideCopy and APT36 (aka Transparent Tribe). SideCopy, active since at least 2019, is assessed to operate as a subdivision of Transparent Tribe.  "Taken together, these campaigns reinforce a familiar but evolving narrative," Aditya K. Sood, vice president of Security Engineering and AI Strategy at Aryaka, said . "Transparent Tribe and SideCopy are not reinventing espionage – they are refining it."   "By expanding cross-platform coverage, leaning into memory-resident techniques, and experimenting with new delivery ...
+             Cybersecurity researchers have discovered a fresh set of malicious packages across npm and the Python Package Index (PyPI) repository linked to a fake recruitment-themed campaign orchestrated by the North Korea-linked Lazarus Group.  The coordinated campaign has been codenamed graphalgo in reference to the first package published in the npm registry. It's assessed to be active since May 2025.  "Developers are approached via social platforms like LinkedIn and Facebook, or through job offerings on forums like Reddit," ReversingLabs researcher Karlo Zanki said  in a report. "The campaign includes a well-orchestrated story around a company involved in blockchain and cryptocurrency exchanges."  Notably, one of the identified npm packages, bigmathutils, attracted more than 10,000 downloads after the first, non-malicious version was published, and before the second version containing a malicious payload was released. The names of the packages are listed below -  npm...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/02/over-60-software-vendors-issue-security.html">
+         <a class="story-link" href="https://thehackernews.com/2026/02/threatsday-bulletin-ai-prompt-rce.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Over 60 Software Vendors Issue Security Fixes Across OS, Cloud, and Network Platforms" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn9BjSz22uW2NPDNZhkDs7Ygjb5lTP5jFhXbGlk3oBRgpncWsp6pu42-c0T7TXDPviwihS5GuwedI6ULAmI6Zp8NKWOMzS-wJlSjVkd02cB6rM0uLbi-ZU1oxKsSQIpesNLkaA13EDcht62GZgjQbG2nffYeQPhXOWJHUBKhRwKm4s_-_ukeKZuno8I7Iv/s1600/patches.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days &amp; 25+ Stories" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Nc_7NCkh6b_GnhFP3euTAuace33F0nRMsZfDoe-xx5pN0Wm5kDPdUQhqxqfMIs_Y7MgXIBUAqAeRIk8lwfY8CsOqC27RxU9MH03DMNRpt56mJGU_okNrnEwdqFkaApUrObEBFmDnCHQXXJe_VdkUMbMXsa356WODvfsU4FPvciKR2CcIpNAHsrWGSe0a/s1600/threatsday-main-1.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Over 60 Software Vendors Issue Security Fixes Across OS, Cloud, and Network Platforms" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn9BjSz22uW2NPDNZhkDs7Ygjb5lTP5jFhXbGlk3oBRgpncWsp6pu42-c0T7TXDPviwihS5GuwedI6ULAmI6Zp8NKWOMzS-wJlSjVkd02cB6rM0uLbi-ZU1oxKsSQIpesNLkaA13EDcht62GZgjQbG2nffYeQPhXOWJHUBKhRwKm4s_-_ukeKZuno8I7Iv/s1600/patches.jpg"/>
+             <img alt="ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days &amp; 25+ Stories" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4Nc_7NCkh6b_GnhFP3euTAuace33F0nRMsZfDoe-xx5pN0Wm5kDPdUQhqxqfMIs_Y7MgXIBUAqAeRIk8lwfY8CsOqC27RxU9MH03DMNRpt56mJGU_okNrnEwdqFkaApUrObEBFmDnCHQXXJe_VdkUMbMXsa356WODvfsU4FPvciKR2CcIpNAHsrWGSe0a/s1600/threatsday-main-1.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Over 60 Software Vendors Issue Security Fixes Across OS, Cloud, and Network Platforms
+             ThreatsDay Bulletin: AI Prompt RCE, Claude 0-Click, RenEngine Loader, Auto 0-Days &amp; 25+ Stories
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Feb 11, 2026
+              Feb 12, 2026
              </span>
              <span class="h-tags">
-              Patch Tuesday / Vulnerability
+              Cybersecurity / Hacking News
              </span>
             </div>
             <div class="home-desc">
-             It's Patch Tuesday, which means a number of software vendors have released patches for various security vulnerabilities impacting their products and services.  Microsoft issued  fixes for 59 flaws, including six actively exploited zero-days in various Windows components that could be abused to bypass security features, escalate privileges, and trigger a denial-of-service (DoS) condition.  Elsewhere, Adobe released  updates for Audition, After Effects, InDesign Desktop, Substance 3D, Bridge, Lightroom Classic, and DNG SDK. The company said it's not aware of in-the-wild exploitation of any of the shortcomings.  SAP shipped  fixes for two critical-severity vulnerabilities, including a code injection bug in SAP CRM and SAP S/4HANA (CVE-2026-0488, CVSS score: 9.9) that an authenticated attacker could use to run an arbitrary SQL statement and lead to a full database compromise.  The second critical vulnerability is a case of a missing authorization check in SAP NetWeaver Application...
+             Threat activity this week shows one consistent signal — attackers are leaning harder on what already works. Instead of flashy new exploits, many operations are built around quiet misuse of trusted tools, familiar workflows, and overlooked exposures that sit in plain sight.  Another shift is how access is gained versus how it’s used. Initial entry points are getting simpler, while post-compromise activity is becoming more deliberate, structured, and persistent. The objective is less about disruption and more about staying embedded long enough to extract value.  There’s also growing overlap between cybercrime, espionage tradecraft, and opportunistic intrusion. Techniques are bleeding across groups, making attribution harder and defense baselines less reliable.  Below is this week’s ThreatsDay Bulletin — a tight scan of the signals that matter, distilled into quick reads. Each item adds context to where threat pressure is building next.                          Notepad RCE via Markdown L...
             </div>
            </div>
           </div>
@@ -411,44 +416,214 @@
          </a>
         </section>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html">
+         <a class="story-link" href="https://thehackernews.com/2026/02/the-ctem-divide-why-84-of-security.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQeF3lExyDyGEAtnZylF2A30qkeG6Yoa-GxL_guF46TWzDUEyX7jg-j-PSO7VwdSUlFIalEmV2nCGE4KyntCePcUgW6qEBX6Mmj3rOpo5iTEqIjkQYd0YdeEOWjnpg5AWhfK0jO0wDksHchtMgjF8pq-lwcO-eHoyw2EqAGGqc48_UZRQsZ2R4ZxFG0bc/s1600/pentera.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+             <img alt="The CTEM Divide: Why 84% of Security Programs Are Falling Behind" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Y-YsMsEZEaAST2HjBLPOIzmYNnp_eVs86gMuTbqJbVwF158EvQL9q9rL1a70OEUBIjCdDVnxDplv4zCXMSdqauKR-t_qENqr8G3yNCXQH5Mbq8H4CsPD2vLXMBq3iwoInmaKtvKbGs-TC0SiL0q1-4VoWxGpl7CTarAuQNInAaRieusoULkPAKgTU5g/s1600/ctem.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
             </div>
             <noscript>
-             <img alt="Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQeF3lExyDyGEAtnZylF2A30qkeG6Yoa-GxL_guF46TWzDUEyX7jg-j-PSO7VwdSUlFIalEmV2nCGE4KyntCePcUgW6qEBX6Mmj3rOpo5iTEqIjkQYd0YdeEOWjnpg5AWhfK0jO0wDksHchtMgjF8pq-lwcO-eHoyw2EqAGGqc48_UZRQsZ2R4ZxFG0bc/s1600/pentera.jpg"/>
+             <img alt="The CTEM Divide: Why 84% of Security Programs Are Falling Behind" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Y-YsMsEZEaAST2HjBLPOIzmYNnp_eVs86gMuTbqJbVwF158EvQL9q9rL1a70OEUBIjCdDVnxDplv4zCXMSdqauKR-t_qENqr8G3yNCXQH5Mbq8H4CsPD2vLXMBq3iwoInmaKtvKbGs-TC0SiL0q1-4VoWxGpl7CTarAuQNInAaRieusoULkPAKgTU5g/s1600/ctem.jpg"/>
             </noscript>
            </div>
            <div class="clear home-right">
             <h2 class="home-title">
-             Exposed Training Open the Door for Crypto-Mining in Fortune 500 Cloud Environments
+             The CTEM Divide: Why 84% of Security Programs Are Falling Behind
             </h2>
             <div class="item-label">
              <span class="h-datetime">
               <i class="icon-font icon-calendar">
                
               </i>
-              Feb 11, 2026
+              Feb 12, 2026
              </span>
              <span class="h-tags">
-              Identity Security / Threat Exposure
+              Enterprise Security / Breach Prevention
              </span>
             </div>
             <div class="home-desc">
-             Intentionally vulnerable training applications are widely used for security education, internal testing, and product demonstrations. Tools such as OWASP Juice Shop, DVWA, Hackazon, and bWAPP are designed to be insecure by default, making them useful for learning how common attack techniques work in controlled environments.  The issue is not the applications themselves, but how they are often deployed and maintained in real-world cloud environments.  Pentera Labs examined how training and demo applications are being used across cloud infrastructures and identified a recurring pattern: applications intended for isolated lab use were frequently found exposed to the public internet, running inside active cloud accounts, and connected to cloud identities with broader access than required.  Deployment Patterns Observed in the Research  Pentera Labs research  found that these applications were often deployed with default configurations, minimal isolation, and overly permissive cloud roles. T...
+             A new 2026 market intelligence study of 128 enterprise security decision-makers ( available here ) reveals a stark divide forming between organizations – one that has nothing to do with budget size or industry and everything to do with a single framework decision. Organizations implementing Continuous Threat Exposure Management (CTEM) demonstrate 50% better attack surface visibility, 23-point higher solution adoption, and superior threat awareness across every measured dimension. The 16% who've implemented it are pulling away. The 84% who haven't are falling behind.  The Demographics of the Divide  The research surveyed a senior cohort: 85% of respondents are Manager-level or above, representing organizations where 66% employ 5,000+ people across finance, healthcare, and retail sectors.  Download the full research here →   What is CTEM?  If you aren’t familiar, CTEM involves shifting from "patch everything reactively" to "continuously discover, validate, and pr...
             </div>
            </div>
           </div>
          </a>
         </div>
         <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/02/microsoft-patches-59-vulnerabilities.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-      
+         <a class="story-link" href="https://thehackernews.com/2026/02/83-of-ivanti-epmm-exploits-linked-to.html"
+
+[DEBUG] https://thehackernews.com/2026/02/google-reports-state-backed-hackers.html content length: 5628
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
+
+[DEBUG] https://thehackernews.com/2026/02/lazarus-campaign-plants-malicious.html content length: 6656
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
+
+[DEBUG] https://thehackernews.com/2026/02/threatsday-bulletin-ai-prompt-rce.html content length: 31548
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
+
+[DEBUG] https://thehackernews.uk/board-template-wiz content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.wiz.io/lp/ai-security-board-report-template?utm_source=hackernews&amp;utm_medium=display&amp;utm_campaign=FY26Q4_INB_FORM_AI-Security-Board-Report-Template&amp;sfcid=701Vh00000Wn7E1IAJ&amp;utm_term=FY27Q1-hackernews-newsfeed&amp;utm_content=AI-Board-Report" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   AI Security Board Report Template | Wiz
+  </title>
+  <meta content="AI Security Board Report Template | Wiz" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2026/02/the-ctem-divide-why-84-of-security.html content length: 4681
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
+
+[DEBUG] https://thehackernews.com/2026/02/83-of-ivanti-epmm-exploits-linked-to.html content length: 4497
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
+
+[DEBUG] https://thehackernews.uk/sans-secwest-26 content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.sans.org/cyber-security-training-events/security-west-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_SecWest26_Feb_HomepageNews2&amp;utm_campaign=SANS_Security_West_2026" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   SANS Security West 2026 | Cybersecurity Training
+  </title>
+  <meta content="SANS Security West 2026 | Cybersecurity Training" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
+[DEBUG] https://thehackernews.com/2026/02/apple-fixes-exploited-zero-day.html content length: 2649
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.g
 
 [DEBUG] https://thehackernews.com/2026/02/first-malicious-outlook-add-in-found.html content length: 5645
 <!DOCTYPE html>
@@ -522,21 +697,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.g
 
-[DEBUG] https://thehackernews.uk/board-template-wiz content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.wiz.io/lp/ai-security-board-report-template?utm_source=hackernews&amp;utm_medium=display&amp;utm_campaign=FY26Q4_INB_FORM_AI-Security-Board-Report-Template&amp;sfcid=701Vh00000Wn7E1IAJ&amp;utm_term=FY27Q1-hackernews-newsfeed&amp;utm_content=AI-Board-Report" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   AI Security Board Report Template | Wiz
-  </title>
-  <meta content="AI Security Board Report Template | Wiz" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
 [DEBUG] https://thehackernews.com/2026/02/exposed-training-open-door-for-crypto.html content length: 4514
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
@@ -585,166 +745,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.g
 
-[DEBUG] https://thehackernews.uk/sans-2026-event content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.sans.org/cyber-security-training-events/sans-2026?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_SANS26_Feb_HomepageNews1&amp;utm_campaign=SANS_2026" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   SANS 2026 | Cybersecurity Training
-  </title>
-  <meta content="SANS 2026 | Cybersecurity Training" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
 [DEBUG] https://thehackernews.com/2026/02/sshstalker-botnet-uses-irc-c2-to.html content length: 4081
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/north-korea-linked-unc1069-uses-ai.html content length: 5734
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/dprk-operatives-impersonate.html content length: 7705
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/reynolds-ransomware-embeds-byovd-driver.html content length: 8329
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/from-ransomware-to-residency-inside.html content length: 9534
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/fortinet-patches-critical-sqli-flaw.html content length: 1702
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.g
-
-[DEBUG] https://thehackernews.com/2026/02/zastai-raises-6m-pre-to-scale-zero.html content length: 4386
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
