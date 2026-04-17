@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-09 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">New Chaos Variant Targets Misconfigured Cloud Deployments, Adds SOCKS Proxy</a></li>
+      
+        <li><a href="#article-2">Masjesu Botnet Emerges as DDoS-for-Hire Service Targeting Global IoT Devices</a></li>
+      
+        <li><a href="#article-3">APT28 Deploys PRISMEX Malware in Campaign Targeting Ukraine and NATO Allies</a></li>
+      
+        <li><a href="#article-4">Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)</a></li>
+      
+        <li><a href="#article-5">Anthropic's Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems</a></li>
+      
+        <li><a href="#article-6">Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</a></li>
+      
+        <li><a href="#article-7">N. Korean Hackers Spread 1,700 Malicious Packages Across npm, PyPI, Go, Rust</a></li>
+      
+        <li><a href="#article-8">Iran-Linked Hackers Disrupt U.S. Critical Infrastructure by Targeting Internet-Exposed PLCs</a></li>
+      
+        <li><a href="#article-9">Russian State-Linked APT28 Exploits SOHO Routers in Global DNS Hijacking Campaign</a></li>
+      
+        <li><a href="#article-10">[Webinar] How to Close Identity Gaps in 2026 Before AI Exploits Enterprise Risk</a></li>
+      
+        <li><a href="#article-11">Docker CVE-2026-34040 Lets Attackers Bypass Authorization and Gain Host Access</a></li>
+      
+        <li><a href="#article-12">Over 1,000 Exposed ComfyUI Instances Targeted in Cryptomining Botnet Campaign</a></li>
+      
+        <li><a href="#article-13">The Hidden Cost of Recurring Credential Incidents</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-04-09-ai创业新闻">2026-04-09 AI创业新闻</h1>
+
+<h2 id="new-chaos-variant-targets-misconfigured-cloud-deployments-adds-socks-proxy"><a id="article-1"></a>New Chaos Variant Targets Misconfigured Cloud Deployments, Adds SOCKS Proxy</h2>
+
+<p>Cybersecurity researchers have flagged a new variant ofmalware called
+Chaos
+that’scapable of hitting misconfigured cloud deployments, marking an expansion of the botnet’s targeting infrastructure. “Chaos malware is increasingly targeting misconfigured cloud deployments, expanding beyond its traditional focus on routers and edge devices,” Darktrace
+said
+in a new report. Chaos was
+first documented
+by Lumen Black Lotus Labs in September 2022, describing it as a cross-platform malware capable of targeting Windows and Linux environments to run remote shell commands, drop additional modules, propagate to other hosts by brute-forcing SSH keys, mine cryptocurrency, and launch distributed denial-of-service (DDoS) attacks via HTTP, TLS, TCP, UDP, and WebSocket. The malware is assessed to be an evolution of another DDoS malware known as
+Kaiji
+that has singled out misconfigured Docker instances.It’s currently not known who is behind the operation, but the presence of Chinese language characters and the use of China-based infrastructure suggest that the threat actor could be of Chinese origin.</p>
+
+<p>Darktrace said it identified the new variant targeting its honeypot network last month, a deliberately misconfigured Hadoop instance that enables remote code execution on the service. In the attack spotted by the cybersecurity company, the intrusion commenced with an HTTP request to the Hadoop deployment to create a new application. The application, for its part, embedded a sequence of shell commands to retrieve a Chaos agent binary from an attacker-controlled server (“pan.tenire[.]com”), set permissions to allow all users to read, modify, or run it (“chmod 777”), and then actually execute the binary and delete the artifact from disk to minimize the forensic trail. An interesting aspect of the attack is that the domain was previously put to use in connection with an email phishing campaign carried out by the Chinese cybercrime group Silver Fox to deliver decoy documents and ValleyRAT malware.</p>
+
+<p>The campaign was codenamed
+Operation Silk Lure
+by Seqrite Labs in October 2025. The 64-bit ELF binary is a restructured and updated version of Chaos that reworks several of its functions, while keeping most of its core feature set intact. One of the more significant changes, however, concerns the removal of functions that enabled it to spread via SSH and exploit router vulnerabilities. Taking their place is a new SOCKS proxy feature that allows the compromised system to be used for ferrying traffic, thereby concealing the true origins of malicious activity and making it harder for defenders to detect and block the attack.</p>
+
+<p>“In addition, several functions that were previously believed to be inherited from Kaiji have also been changed, suggesting that the threat actors have either rewritten the malware or refactored it extensively,” Darktrace added. The addition of the proxy feature is likely a sign that threat actors behind the malware are lookingto further monetize the botnet beyond cryptocurrency mining and
+DDoS-for-hire
+, and keep up with their competitors in the cybercrime market by offering a diverse slate of illicit services. “While Chaos is not a new malware, its continued evolution highlights the dedication of cybercriminals to expand their botnets and enhance the capabilities at their disposal,” Darktrace concluded. “The recent shift in botnets such as
+AISURU
+and Chaos to include proxy services as core features demonstrates that denial-of-service is no longer the only risk these botnets pose to organizations and their security teams.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="masjesu-botnet-emerges-as-ddos-for-hire-service-targeting-global-iot-devices"><a id="article-2"></a>Masjesu Botnet Emerges as DDoS-for-Hire Service Targeting Global IoT Devices</h2>
+
+<p>Cybersecurity researchers have lifted the curtain on a stealthy botnet that’s designed for distributed denial-of-service (DDoS) attacks. Called
+Masjesu
+, the botnet has been advertised via Telegram as a DDoS-for-hire service since it first surfaced in 2023. It’s capable of targeting a wide range of IoT devices, such as routers and gateways, spanning multiple architectures. “Built for persistence and low visibility, Masjesu favors careful, low-key execution over widespread infection, deliberately avoiding blocklisted IP ranges such as those belonging to the Department of Defense (DoD) to ensure long-term survival,” Trellix security researcher Mohideen Abdul Khader F
+said
+in a Tuesday report.</p>
+
+<p>It’s worth noting that the commercial offering also goes by the moniker XorBot owing to its use of XOR-based encryption to conceal strings, configurations, and payload data. It was
+first documented
+by Chinese security vendor NSFOCUS in December 2023, linking it to an operator named “synmaestro.”
+A
+subsequent iteration
+of the botnet observed a year later was found to have added 12 different command injection and code execution exploits to target routers, cameras, DVRs, and NVRs from D-Link, Eir, GPON, Huawei, Intelbras, MVPower, NETGEAR, TP-Link, and Vacron, and obtain initial access. Also added were new modules to conduct DDoS flood attacks. “As an emerging botnet family, XorBot is showing a strong growth momentum, continuously infiltrating and controlling new IoT devices,” NSFOCUS said in November 2024.</p>
+
+<p>“Notably, these controllers are increasingly inclined to use social media platforms such as Telegram as the main channels for recruitment and promotion, attracting target ‘customers’ through initial active promotional activities, laying a solid foundation for the subsequent expansion and development of the botnet.”
+The latest findings from Trellix show that Masjesu has marketed the ability to carry out volumetric DDoS attacks, emphasizing its diverse botnet infrastructure and its suitability for targeting content delivery networks (CDNs), game servers, and enterprises. Attacks mounted by the botnet primarily originate from Vietnam, Ukraine, Iran, Brazil, Kenya, and India, with Vietnam accounting for nearly 50% of the observed traffic. Once deployed on a compromised device, the malware moves to create and bind a socket with a hard-coded TCP port (55988) to enable the attacker to connect directly. If this operation fails, the attack chain is immediately killed.</p>
+
+<p>Otherwise, the malware proceeds to set up persistence, ignore termination-related signals, stop commonly used processes like wget and curl, possibly to disrupt competing botnets, and then connects to an external server to receive DDoS attack commands for executing them against targets of interest. Masjesu also boasts of self-propagating capabilities, allowing it to probe random IP addresses for open ports and wrangle successfully compromised devices into its infrastructure. One notable addition to the list of exploitation targets is Realtek routers, which is carried out by scanning for 52869 – a port associated with
+Realtek SDK’s
+miniigd
+daemon. Multiple DDoS botnets, such as
+JenX
+and
+Satori
+, have embraced the
+same approach
+in the past.</p>
+
+<p>“The botnet continues to expand by infecting a broad range of IoT devices across multiple architectures and manufacturers,” Trellix said. “Notably, Masjesu appears to avoid targeting sensitive critical organizations that could trigger significant legal or law-enforcement attention, a strategy that likely improves its long-term survivability.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="apt28-deploys-prismex-malware-in-campaign-targeting-ukraine-and-nato-allies"><a id="article-3"></a>APT28 Deploys PRISMEX Malware in Campaign Targeting Ukraine and NATO Allies</h2>
+
+<p>The Russian threat actor known as
+APT28
+(aka Forest Blizzard and Pawn Storm) has been linked to a fresh spear-phishing campaign targeting Ukraine and its allies to deploy a previously undocumented malware suite codenamed
+PRISMEX
+. “PRISMEX combines advanced steganography, component object model (COM) hijacking, and legitimate cloud service abuse for command-and-control,” Trend Micro researchers Feike Hacquebord and Hiroyuki Kakara
+said
+in a technical report. The campaign is believed to be active since at least  September 2025. The activity has targeted various sectors in Ukraine, including central executive bodies, hydrometeorology, defense, and emergency services, as well as rail logistics (Poland), maritime and transportation (Romania, Slovenia, Turkey), and logistical support partners involved in ammunition initiatives (Slovakia, Czech Republic), and military and NATO partners.</p>
+
+<p>The campaign is notable for the rapid weaponization of newly disclosed flaws, such as
+CVE-2026-21509
+and
+CVE-2026-21513
+, to breach targets of interest, with infrastructure preparation observed on January 12, 2026, exactly two weeks before the former was publicly disclosed. In late February 2025, Akamai also disclosed that APT28 may have weaponized CVE-2026-21513 as a zero-day based on a Microsoft Shortcut (LNK) exploit that was uploaded to VirusTotal on January 30, 2026, well before the Windows maker pushed out a fix as part of its Patch Tuesday update on February 10, 2026. This pattern of zero-day exploitation indicates that the threat actor had advanced knowledge of the vulnerabilities prior to them being revealed by Microsoft. An interesting overlap between campaigns exploiting the two vulnerabilities is the domain “wellnesscaremed[.]com.” This commonality, combined with the timing of the two exploits, has raised the possibility that the threat actors are stringing together CVE-2026-21513 and CVE-2026-21509 into a sophisticated two-stage attack chain.</p>
+
+<p>“The first vulnerability (CVE-2026-21509) forces the victim’s system to retrieve a malicious .LNK file, which then exploits the second vulnerability (CVE-2026-21513) to bypass security features and execute payloads without user warnings,” Trend Micro theorized. The attacks culminate in the deployment of either
+MiniDoor
+, an Outlook email stealer, or a collection of interconnected malware components collectively known as PRISMEX, so named for the use of a steganographic technique to conceal payloads within image files. These include -
+PrismexSheet
+, a malicious Excel dropper with VBA macros that extracts payloads embedded within the file using steganography, establishes persistence via
+COM hijacking
+, and displays a decoy document related to drone inventory lists and drone prices after macros are enabled. PrismexDrop
+, a native dropper that readies the environment for follow-on exploitation and uses scheduled tasks and COM DLL hijacking for persistence.</p>
+
+<p>PrismexLoader
+(aka PixyNetLoader), a proxy DLL that extracts the next-stage .NET payload scattered across a PNG image’s (“SplashScreen.png”) file structure using a bespoke “Bit Plane Round Robin” algorithm and runs it entirely in memory. PrismexStager
+, a COVENANT Grunt implant that abuses Filen.io cloud storage for C2. It’s worth mentioning here that some aspects of the campaign were previously documented by Zscaler ThreatLabz under the moniker
+Operation Neusploit
+. APT28’s use of
+COVENANT
+, an open-source command-and-control (C2) framework, was first highlighted by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2025.</p>
+
+<p>PrismexStager is assessed to be an expansion of MiniDoor and
+NotDoor
+(aka GONEPOSTAL), a Microsoft Outlook backdoor deployed by the hacking group in late 2025. In at least one incident in October 2025, the COVENANT Grunt payload was found to not only facilitate information gathering, but also run a destructive wiper command that erases all files under the “%USERPROFILE%” directory. This dual capability lends weight to the hypothesis that these campaigns could be designed for both espionage and sabotage. “This operation demonstrates that Pawn Storm remains one of the most aggressive Russia-aligned intrusion sets,” Trend Micro said.</p>
+
+<p>“The targeting pattern reveals a strategic intent to compromise the supply chain and operational planning capabilities of Ukraine and its NATO partners.”
+“The strategic focus on targeting the supply chains, weather services, and humanitarian corridors supporting Ukraine represents a shift toward operational disruption that may presage more destructive activities.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="shrinking-the-iam-attack-surface-through-identity-visibility-and-intelligence-platforms-ivip"><a id="article-4"></a>Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)</h2>
+
+<p>The Fragmented State of Modern Enterprise Identity
+Enterprise IAM is approaching a breaking point. As organizations scale, identity becomes increasingly fragmented across thousands of applications, decentralized teams, machine identities, and autonomous systems. The result is Identity Dark Matter: identity activity that sits outside the visibility of centralized IAM and beyond the reach of security teams. According to
+Orchid Security
+’s
+analysis
+, 46% of enterprise identity activity occurs outside centralized IAM visibility.</p>
+
+<p>In other words, nearly half of the enterprise identity surface may be operating unseen. This hidden layer includes unmanaged applications, local accounts, opaque authentication flows, and over-permissioned non-human identities. It is further amplified by disconnected tools, siloed ownership, and the rapid rise of Agentic AI. The consequence is a widening gap between what the security organizations think they have and the access that actually exists.</p>
+
+<p>That gap is where modern identity risk now lives. Defining the IVIP Category: The Visibility &amp; Observability Layer
+To close these gaps, Gartner has introduced the Identity Visibility and Intelligence Platform (IVIP) as a fundamental “System of Systems.” Within the Identity Fabric framework, IVIPs occupy Layer 5: Visibility and Observability, providing an independent layer of oversight above access management and governance. By formal definition, an IVIP solution rapidly ingests and unifies IAM data, leveraging AI-driven analytics to provide a single window into identity events, user-resource relationships, and posture. Feature
+Traditional IAM / IGA
+IVIP / Observability
+Visibility Scope
+Integrated and governed applications only
+Comprehensive: managed, unmanaged, and disconnected systems
+Data Source
+Owner attestations and manual documentation
+Continuous runtime insight and application-level telemetry
+Analysis Method
+Static configuration reviews and “Inference”
+Continuous discovery and evidence-based proof
+Intelligence
+Basic rule-based logic
+LLM-powered intent discovery and behavior analysis
+What an IVIP Must Actually Do
+A credible IVIP cannot be just another identity repository.</p>
+
+<p>It has to serve as an active intelligence engine for the enterprise identity ecosystem. First, it must provide
+continuous
+discovery
+of both human and non-human identities across every relevant system, including those that sit outside formal IAM onboarding. Second, it must act as an
+identity data platform
+, unifying fragmented information from directories, applications, and infrastructure into a more coherent source of truth. Third, it must deliver
+intelligence
+, using analytics and AI to convert scattered identity signals into meaningful security insight.</p>
+
+<p>From a technical standpoint, that means supporting capabilities such as
+automated
+remediation
+, so posture gaps can be corrected directly across the IAM stack;
+real-time signal sharing
+, using standards like CAEP to trigger immediate security actions; and
+intent-based intelligence
+, where LLMs help interpret the purpose behind identity activity and separate normal operational behavior from truly risky patterns. This is the shift from identity visibility to identity understanding and ultimately, to identity control. Orchid Security: Delivering the IVIP Control Plane
+Orchid Security operationalizes the Identity Visibility and Intelligence Platform (IVIP) model by transforming fragmented identity signals into continuous, application-level intelligence. Rather than relying solely on centralized IAM integrations, Orchid builds visibility directly from the application estate itself, allowing organizations to discover, unify, and analyze identity activity across systems that traditional tools cannot see.</p>
+
+<ol>
+  <li>Visibility and Data Scope: Seeing the Full Application and Identity Estate
+A core IVIP requirement is
+continuous discovery
+of identities and the systems they operate in. Orchid achieves this through binary analysis and dynamic instrumentation, enabling it to inspect
+native authentication and authorization logic directly inside applications and infrastructure
+without requiring APIs, source-code changes, or lengthy integrations. This approach provides a critical advantage in application estate discovery.</li>
+</ol>
+
+<p>Many enterprises cannot govern identities across applications that central security teams do not even know exist. Orchid surfaces these systems first, because you cannot assess, govern, or secure what you cannot see. By identifying the real application estate, including custom apps, COTS, legacy systems, and shadow IT, Orchid reveals the identity dark matter embedded within them, such as local accounts, undocumented authentication paths, and unmanaged machine identities. 2.</p>
+
+<p>Data Unification: Building the Identity Evidence Layer
+IVIP platforms must unify fragmented identity data into a consistent operational picture. Orchid accomplishes this by capturing
+proprietary audit telemetry from inside applications
+and combining it with logs and signals from centralized IAM systems. The result is an
+evidence-based identity data layer
+that shows how identities actually behave across the environment. Instead of relying on configuration assumptions or incomplete integrations, organizations gain a unified view of:
+Identities across applications and infrastructure
+Authentication and authorization flows
+Privilege relationships and external access paths
+This unified evidence allows security teams to reconcile the gap between documented policy and real operational access.</p>
+
+<ol>
+  <li>Intelligence: Converting Telemetry into Actionable Insight
+An IVIP must transform identity telemetry into actionable intelligence. Orchid’s cross-estate identity audits demonstrate how powerful this layer becomes when identity activity is analyzed directly at the application level. Across enterprise environments,
+Orchid observes
+that:
+85% of applications contain accounts from legacy or external domains
+, with
+20% using consumer email domains
+, creating major data-exfiltration risk.</li>
+</ol>
+
+<p>70% of applications contain excessive privileges
+, with
+60% granting broad administrative or API access to third parties
+. 40% of all accounts are orphaned
+, rising to
+60% in some legacy environments
+. These insights are not inferred from policy; they are observed directly from identity behavior inside applications. This moves organizations from a posture of configuration-based inference to
+evidence-driven identity intelligence
+.</p>
+
+<p>Extending IVIP to the Next Identity Frontier: AI Agents
+Autonomous AI agents represent the next wave of identity dark matter, often operating with independent identities and permissions that fall outside traditional governance models. Orchid extends the IVIP framework to these emerging identities through its
+Guardian Agent
+architecture, enabling organizations to apply Zero Trust governance to AI-driven activity. Secure AI-agent adoption is guided by five principles:
+Human-to-Agent Attribution:
+Every agent action is linked to a responsible human owner. Activity Audit:
+A complete chain of custody is recorded (Agent → Tool/API → Action → Target).</p>
+
+<p>Context-Aware Guardrails:
+Access decisions are evaluated dynamically based on the sensitivity of the resource and the human owner’s entitlements. Least Privilege:
+Just-in-Time access replaces persistent privileged credentials. Automated Remediation:
+Risky behavior can trigger automated responses such as credential rotation or session termination. By combining
+application estate discovery, identity telemetry, and AI-driven intelligence
+, Orchid fulfills the core IVIP mission: turning invisible identity activity into a governed, observable, and controllable security surface.</p>
+
+<p>Measuring Success: Outcome-Driven Metrics (ODMs) and Remediation
+Identity decisions are only as good as the data behind them. CISOs must pivot from “deployed controls” to Outcome-Driven Metrics (ODMs). ODM Example:
+Instead of counting IGA licenses, measure the reduction of unused (dormant) entitlements from 70% to 10% within a fiscal quarter. Protection-Level Agreements (PLAs):
+Negotiate target outcomes with the business.</p>
+
+<p>A PLA might mandate the revocation of critical access within 24 hours for a leaver, significantly shrinking the attacker’s window of opportunity. Business ROI:
+By moving to continuous observability, organizations can shrink audit preparation from months to minutes through automated compliance evidence generation. Strategic Implementation Roadmap for IAM Leaders
+To reduce the attack surface, we recommend the following prioritized actions:
+Form a Cross-Disciplinary Task Force:
+Align IT operations, app owners, IAM owners and GRC to break down technical silos. Perform Risk-Quantified Gap Analysis:
+Begin with machine identities, as these often represent the highest risk and lowest visibility.</p>
+
+<p>Implement No-Code Remediation:
+Close posture drift (e.g., suspending orphaned accounts, weak password complexity) automatically as it is discovered. Leverage Unified Visibility for High-Stakes Events:
+Utilize IVIP telemetry during M&amp;A or growth events to audit the identity posture of acquired assets before they are integrated into the primary network. Audit for Business Risk:
+Use continuous visibility to detect violations at the application level that traditional tools miss. Final Statement
+Unified visibility is no longer a secondary feature; it is the essential control plane.</p>
+
+<p>Organizations must move beyond the “locked front door” and implement identity observability to govern the dark matter where modern attackers hide. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="anthropics-claude-mythos-finds-thousands-of-zero-day-flaws-across-major-systems"><a id="article-5"></a>Anthropic’s Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems</h2>
+
+<p>Artificial Intelligence (AI) company Anthropic announced a new cybersecurity initiative called
+Project Glasswing
+that will use a preview version of its new frontier model,
+Claude Mythos
+, to find and address security vulnerabilities. The model will be
+used
+by a small set of organizations, including Amazon Web Services, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks, along with Anthropic, to secure critical software. The company said it’s forming this initiative in response to capabilities observed in its general-purpose frontier model that demonstrate a “level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities.” Because of its cybersecurity capabilities and concerns that they could be abused, Anthropic has opted not to make the model generally available. Mythos Preview, Anthropic claimed, has already
+discovered
+thousands of high-severity zero-day vulnerabilities in every major operating system and web browser.</p>
+
+<p>Some of these include a now-patched 27-year-old bug in OpenBSD, a 16-year-old flaw in FFmpeg, and a memory-corrupting vulnerability in a memory-safe virtual machine monitor. In one instance highlighted by the company, Mython Preview is said to have autonomously come with a web browser exploit that chained together four vulnerabilities to escape the renderer and operating system sandboxes. Anthropic also
+noted
+in the preview’s system card that the model solved a corporate network attack simulation that would have taken a human expert more than 10 hours. In perhaps what’s one of the most eyebrow-raising findings, Mythos Preview managed to follow instructions from a researcher running an evaluation to escape a secured “sandbox” computer it was provided with, indicating a “potentially dangerous capability” to bypass its own safeguards.</p>
+
+<p>The model did not stop there. It further went on to perform a series of additional actions, including devising a multi-step exploit to gain broad internet access from the sandbox system and send an email message to the researcher, who was eating a sandwich in a park. “In addition, in a concerning and unasked-for effort to demonstrate its success, it posted details about its exploit to multiple hard-to-find, but technically public-facing, websites,” Anthropic said. The company pointed out that
+Project Glasswing
+is an “urgent attempt” to employ frontier model capabilities for defensive purposes before those same capabilities are adopted by hostile actors.</p>
+
+<p>It’s also committing up to $100 million in usage credits for Mythos Preview, as well as $4 million in direct donations to open-source security organizations. “We did not explicitly train Mythos Preview to have these capabilities,” Anthropic said. “Rather, they emerged as a downstream consequence of general improvements in code, reasoning, and autonomy. The same improvements that make the model substantially more effective at patching vulnerabilities also make it substantially more effective at exploiting them.”
+News of Mythos
+leaked
+last month after details about the model were inadvertently stored in a publicly accessible data cache due to human error.</p>
+
+<p>The draft material described it as the most powerful and capable AI model built to date. Days later, Anthropic suffered a second security lapse that accidentally exposed nearly 2,000 source code files and over half a million lines of code associated with Claude Code for about three hours. The leak also led to the discovery of a security issue that bypasses certain safeguards when the AI coding agent is presented with a command composed of more than 50 subcommands. The issue has since been formally addressed by Anthropic in Claude Code
+version 2.1.90
+, released last week.</p>
+
+<p>“Claude Code, Anthropic’s flagship AI coding agent that executes shell commands on developers’ machines, silently ignores user-configured security deny rules when a command contains more than 50 subcommands,” AI security company Adversa
+said
+. “A developer who configures ‘never run rm’ will see rm blocked when run alone, but the same ‘rm’ runs without restriction if preceded by 50 harmless statements. The security policy silently vanishes.”
+“Security analysis costs tokens. Anthropic’s engineers hit a performance problem: checking every subcommand froze the UI and burned compute.</p>
+
+<p>Their fix: stop checking after 50. They traded security for speed. They traded safety for cost.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="inside-the-2026-cyber-workforce-skills-shortages-and-shifts-in-the-age-of-ai"><a id="article-6"></a>Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</h2>
+
+<h2 id="n-korean-hackers-spread-1700-malicious-packages-across-npm-pypi-go-rust"><a id="article-7"></a>N. Korean Hackers Spread 1,700 Malicious Packages Across npm, PyPI, Go, Rust</h2>
+
+<p>The North Korea-linked persistent campaign known as
+Contagious Interview
+has spread its tentacles by publishing malicious packages targeting the Go, Rust, and PHP ecosystems. “The threat actor’s packages were designed to impersonate legitimate developer tooling […], while quietly functioning as malware loaders, extending Contagious Interview’s established playbook into a coordinated cross-ecosystem supply chain operation,” Socket security researcher Kirill Boychenko
+said
+in a Tuesday report. The complete list of identified packages is as follows -
+npm: dev-log-core, logger-base, logkitx, pino-debugger, debug-fmt, debug-glitz
+PyPI: logutilkit, apachelicense, fluxhttp, license-utils-kit
+Go: github[.]com/golangorg/formstash, github[.]com/aokisasakidev/mit-license-pkg
+Rust: logtrace
+Packagist: golangorg/logkit
+These loaders are designed to fetch platform-specific second-stage payloads, which turn out to be a piece of malware with infostealer and remote access trojan (RAT) capabilities. It’s primarily focused on gathering data from web browsers, password managers, and cryptocurrency wallets.</p>
+
+<p>However, a Windows version of the malware delivered via “license-utils-kit” incorporates what’s described by Socket as a “full post-compromise implant” that’s equipped to run shell commands, log keystrokes, steal browser data, upload files, terminate web browsers, deploy AnyDesk for remote access, create an encrypted archive, and download additional modules. “That makes this cluster notable not just for its cross-ecosystem reach, but for the depth of post-compromise functionality embedded in at least part of the campaign,” Boychenko added. What makes the latest set of libraries noteworthy is that the malicious code is not triggered during installation.Rather, it’s embedded into seemingly legitimate functions that align with the package’s advertised purpose. For instance, in the case of “logtrace,” the code is concealed within “Logger::trace(i32),” a method that’s unlikely to raise a developer’s suspicion.</p>
+
+<p>The expansion of Contagious Interview across five open-source ecosystems is a further sign that the campaign is a well-resourced and persistent supply chain threat engineered to systematically infiltrate these platforms as initial access pathways to breach developer environments for espionage and financial gain. In all, Socket said it has identified
+more than 1,700 malicious packages
+linked to the activity since the start of January 2025. The discovery is part of a broader software supply chain compromise campaign undertaken by North Korean hacking groups. This includes the
+poisoning
+of the popular Axios npm package to distribute an implant called WAVESHAPER.V2 after taking control of the package maintainer’s npm account via a tailored social engineering campaign.</p>
+
+<p>The attack has been attributed to a financially motivated threat actor known as UNC1069, which overlaps with BlueNoroff, Sapphire Sleet, and Stardust Chollima. Security Alliance (SEAL), in a report published today, said it blocked 164 UNC1069-linked domains impersonating services like Microsoft Teams and Zoom between February 6 and April 7, 2026. “UNC1069 operates multi-week, low-pressure social engineering campaigns across Telegram, LinkedIn, and Slack – either impersonating known contacts or credible brands or by leveraging access to previously compromised company and individual accounts – before delivering a fraudulent Zoom or Microsoft Teams meeting link,” SEAL
+said
+. These fake meeting links are used to serve ClickFix-like lures, resulting in the execution of malware that contacts an attacker-controlled server for data theft and targeted post-exploitation activity across Windows, macOS, and Linux.</p>
+
+<p>“Operators deliberately do not act immediately following initial access. The implant is left dormant or passive for a period following compromise,” SEAL added. “The target typically reschedules the failed call and continues normal operations, unaware that the device is compromised. This patience extends the operational window and maximizes the value extracted before any incident response is triggered.”
+In a statement shared with The Hacker News, Microsoft said financially-driven North Korean threat actors are actively evolving their toolset and infrastructure, using domains masquerading as U.S.-based financial institutions and video conferencing applications for social engineering.</p>
+
+<p>“What we are seeing consistently is ongoing evolution in how DPRK-linked, financially motivated actors operate, shifts in tooling, infrastructure, and targeting, but with clear continuity in behavior and intent,” Sherrod DeGrippo, general manager for threat intelligence at Microsoft, said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="iran-linked-hackers-disrupt-us-critical-infrastructure-by-targeting-internet-exposed-plcs"><a id="article-8"></a>Iran-Linked Hackers Disrupt U.S. Critical Infrastructure by Targeting Internet-Exposed PLCs</h2>
+
+<p>Iran-affiliated cyber actors are targeting internet-facing operational technology (OT) devices across critical infrastructures in the U.S., including programmable logic controllers (PLCs), cybersecurity and intelligence agencies
+warned
+Tuesday. “These attacks have led to diminished PLC functionality, manipulation of display data and, in some cases, operational disruption and financial loss,” the U.S. Federal Bureau of Investigation (FBI)
+said
+in a post on X. The agencies said the
+campaign
+is part of a
+recent escalation
+in cyber attacks orchestrated by Iranian hacking groups against U.S.</p>
+
+<p>organizations in response to the ongoing conflict between Iran, and the U.S. and Israel. Specifically, the activity has led to PLC disruptions across several U.S. critical infrastructure sectors via what the authoring agencies described as malicious interactions with the project file and manipulation of data on human-machine interface (HMI) and supervisory control and data acquisition (SCADA) displays.</p>
+
+<p>These attacks have singled out Rockwell Automation and Allen-Bradley PLCs deployed in government services and facilities, Water and Wastewater Systems (WWS), and energy sectors. “The actors used leased, third-party hosted infrastructure with configuration software, such as Rockwell Automation’s Studio 5000 Logix Designer software, to create an accepted connection to the victim’s PLC,” the advisory said. “Targeted devices include CompactLogix and Micro850 PLC devices.”
+Upon obtaining initial access, the threat actors established command-and-control by deploying Dropbear, a Secure Shell (SSH) software, on victim endpoints to enable remote access through port 22 and facilitate the extraction of the device’s project file and data manipulation on HMI and SCADA displays. To combat the threat, organizations are advised to avoid exposing the PLC to the internet, take steps to prevent remote modification either via a physical or software switch, implement multi-factor authentication (MFA), and erect a firewall or network proxy in front of the PLC to control network access, keep PLC devices up-to-date, disable any unused authentication features, and monitor for unusual traffic.</p>
+
+<p>This is not the first time Iranian threat actors have targeted OT networks and PLCs. In late 2023, Cyber Av3ngers (aka Hydro Kitten, Shahid Kaveh Group, and UNC5691) was
+linked
+to the active exploitation of Unitronics PLCs to target the Municipal Water Authority of Aliquippa in western Pennsylvania. These attacks compromised at least 75 devices. “This advisory confirms what we’ve observed for months: Iran’s cyber escalation follows a known playbook.</p>
+
+<p>Iranian threat actors are now moving faster and broader and targeting both IT and OT infrastructure,” Sergey Shykevich, threat intelligence group manager at Check Point Research, said in a statement shared with The Hacker News. “We documented identical targeting patterns against Israeli PLCs in March. It is not the first time Iranian actors are targeting operational technology in the US for disruption purposes, so organizations shouldn’t treat this as a new threat, but as an accelerating one.”
+The development comes amid a
+new-found surge
+in distributed denial-of-service (DDoS) attacks and claims of hack-and-leak operations carried out by cyber proxy groups and hacktivists targeting Western and Israeli entities, according to Flashpoint. In a report published this week, DomainTools Investigations (DTI) described activity attributed to Homeland Justice, Karma/KarmaBelow80, and Handala Hack as a “single, coordinated cyber influence ecosystem” aligned with Iran’s Ministry of Intelligence and Security (MOIS) rather than a set of distinct hacktivist groups.</p>
+
+<p>“These personas function as interchangeable operational veneers applied to a consistent underlying capability,” DTI
+said
+. “Their purpose is not to reflect organizational separation, but to enable segmentation of messaging, targeting, and attribution while preserving continuity of infrastructure and tradecraft.”
+Public-facing domains and Telegram channels serve as the primary dissemination and amplification hub, with the messaging platform also playing a huge role in command-and-control (C2) operations by allowing the malware to communicate with threat actor-controlled bots, reduce infrastructure overhead, and blend in with normal operations. “This ecosystem represents a state-directed instrument of cyber-enabled influence, in which technical operations are tightly integrated with narrative manipulation and media amplification dynamics to achieve coercive and strategic effects,” DTI added. MuddyWater aș a CastleRAT Affiliate
+The development comes as JUMPSEC
+detailed
+MuddyWater’s ties with the criminal ecosystem, stating that the Iranian state-sponsored threat actor operates at least two CastleRAT builds against Israeli targets.</p>
+
+<p>It’s worth noting that CastleRAT is a remote access trojan that’s part of the
+CastleLoader framework
+attributed by Recorded Future to a group it tracks under the moniker GrayBravo (aka TAG-150). Central to the operations is a PowerShell deployer (“reset.ps1”) that deploys a previously undocumented JavaScript-based malware called ChainShell, which then contacts a smart contract on the Ethereum blockchain to retrieve a C2 address and use it to fetch next-stage JavaScript code for execution on compromised hosts. Some aspects of these connections between MOIS and the cybercrime ecosystem were also flagged by
+Ctrl-Alt-Intel
+,
+Broadcom
+, and
+Check Point
+, highlighting the increasing engagement as evidence of a growing reliance on off-the-shelf tools to support state objectives and complicate attribution efforts. The same PowerShell loader has also been found to deliver a botnet malware referred to as Tsundere (aka Dindoor).</p>
+
+<p>According to JUMPSEC, both ChainShell and Tsundere are separate TAG-150 platform components that are deployed along with CastleRAT. “The adoption of a Russian criminal MaaS by an Iranian state actor has direct implications for defenders,” JUMPSEC said in a report shared with The Hacker News. “Organizations targeted by MuddyWater, especially in the defence, aerospace, energy, and government sectors, now face threats that combine state-level targeting with commercially developed offensive tools.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="russian-state-linked-apt28-exploits-soho-routers-in-global-dns-hijacking-campaign"><a id="article-9"></a>Russian State-Linked APT28 Exploits SOHO Routers in Global DNS Hijacking Campaign</h2>
+
+<p>The Russia-linked threat actor known as
+APT28
+(aka Forest Blizzard) has been linked to a new campaign that has compromised insecure MikroTik and TP-Link routers and modified their settings to turn them into malicious infrastructure under their control as part of a cyber espionage campaign since at least May 2025. The large-scale exploitation campaign has been
+codenamed
+FrostArmada
+by Lumen’s Black Lotus Labs, with Microsoft
+describing
+it as an effort to exploit vulnerable home and small office (SOHO) internet devices to hijack DNS traffic and enable passive collection of network data. “Their technique modified DNS settings on compromised routers to hijack local network traffic to capture and exfiltrate authentication credentials,” Black Lotus Labs said in a report shared with The Hacker News. “When targeted domains were requested by a user, the actor redirected traffic to an attacker-in-the-middle (AitM) node, where those credentials were harvested and exfiltrated.</p>
+
+<p>This approach enabled a nearly invisible attack that required no interaction from the end user.”
+The infrastructure associated with the campaign has been disrupted and taken offline as part of a joint operation in collaboration with the U.S. Department of Justice (DoJ), Federal Bureau of Investigation (FBI), and other international partners. In a press statement announcing the court-authorized technical operation neutralizing the U.S. portion of the network, the U.S.</p>
+
+<p>DoJ said the DNS hijacking operation allowed Russian intelligence agencies to target individuals of interest to the Kremlin, including those in the military, government, and critical infrastructure sectors. The law enforcement effort has been codenamed Operation Masquerade. The activity is assessed to have commenced as far back as May 2025 in a limited capacity, followed by widespread router exploitation and DNS redirection commencing in early August. At its peak in December 2025, more than 18,000 unique IP addresses from no less than 120 countries were found communicating with APT28 infrastructure.</p>
+
+<p>These efforts primarily singled out government agencies, such as ministries of foreign affairs, law enforcement, and third-party email and cloud service providers across North African, Central American, Southeast Asian, and European countries. The Microsoft Threat Intelligence team, in its analysis of the campaign, attributed the activity to APT28 and its sub-group tracked as Storm-2754. The tech giant said it identified more than 200 organizations and 5,000 consumer devices impacted by the threat actor’s malicious DNS infrastructure. “For nation-state actors like Forest Blizzard, DNS hijacking enables persistent, passive visibility and reconnaissance at scale,” Redmond said.</p>
+
+<p>“By compromising edge devices that are upstream of larger targets, threat actors can take advantage of less closely monitored or managed assets to pivot into enterprise environments.”
+The DNS hijacking activity has also facilitated AitM attacks that made it possible to facilitate the theft of passwords, OAuth tokens, and other credentials for web and email-related services, putting organizations at risk of broader compromise. The development marks the first time the adversarial collective has been observed using DNS hijacking at scale to support AiTM of Transport Layer Security (TLS) connections after exploiting edge devices, Microsoft added. At a high level, the attack chain involves APT28 gaining remote administrative access to SOHO devices and changing default network configurations to use DNS resolvers under its control. The malicious reconfiguration causes the devices to send their DNS requests to actor-controlled servers.</p>
+
+<p>This, in turn, causes DNS lookups for email applications or login pages to be resolved by the malicious DNS server. The threat actor then attempts to conduct AitM attacks against those connections to steal user account credentials by tricking the victims into connecting to malicious infrastructure. Some of these domains are associated with Microsoft Outlook on the web. Microsoft said it also identified AitM activity aimed at non-Microsoft hosted servers in at least three government organizations in Africa.</p>
+
+<p>“It is believed that the DNS hijacking operations are opportunistic in nature, with the actor gaining visibility of a large pool of candidate target users then filtering down users at each stage in the exploitation chain to triage for victims of likely intelligence value,” the U.K. National Cyber Security Centre (NCSC)
+said
+. APT28 is said to have exploited TP-Link WR841N routers for its DNS poisoning operations by likely taking advantage of
+CVE-2023-50224
+(CVSS score: 6.5), an authentication bypass vulnerability that could be used to extract stored credentials via specially crafted HTTP GET requests. Per the DoJ, threat actors affiliated with Military Unit 26165 of the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU) have exploited known security vulnerabilities to steal credentials for thousands of TP-Link routers worldwide since at least 2024, using them to redirect DNS requests to GRU-controlled servers.</p>
+
+<p>“The actors then implemented an automated filtering process to determine which DNS requests were of interest and warranted interception,” the DoJ
+said
+. “For select targets, the GRU’s DNS resolvers provided fraudulent DNS records for specific domains that mimicked legitimate services – including Microsoft Outlook Web Access – to facilitate Actor-in-the-Middle attacks against encrypted victim network traffic.”
+According to the FBI, APT28 ”
+indiscriminately compromised
+“ a broad set of U.S. and global victims and then filtered down impacted users, particularly targeting information related to military, government, and critical infrastructure. A second cluster of servers has been found to receive DNS requests via compromised routers and subsequently forward them to remote actor-owned servers.</p>
+
+<p>This cluster is also assessed to have engaged in interactive operations targeting a small number of MikroTik routers located in Ukraine. “Forest Blizzard’s DNS hijacking and AitM activity allows the actor to conduct DNS collection on sensitive organizations worldwide and is consistent with the actor’s longstanding remit to collect espionage against priority intelligence targets,” Microsoft said. “Although we have only observed Forest Blizzard utilizing their DNS hijacking campaign for information collection, an attacker could use an AiTM position for additional outcomes, such as malware deployment or denial of service.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="webinar-how-to-close-identity-gaps-in-2026-before-ai-exploits-enterprise-risk"><a id="article-10"></a>[Webinar] How to Close Identity Gaps in 2026 Before AI Exploits Enterprise Risk</h2>
+
+<p>In the rapid evolution of the 2026 threat landscape, a frustrating paradox has emerged for CISOs and security leaders:
+Identity programs are maturing, yet the risk is actually increasing
+. According to new research from the
+Ponemon Institute
+, hundreds of applications within the typical enterprise remain disconnected from centralized identity systems. These ”dark matter” applications operate outside the reach of standard governance, creating a massive, unmanaged attack surface that is now being aggressively exploited—not just by human threat actors, but by
+autonomous AI agents
+. The Invisible Threat: Disconnected Apps &amp; AI Amplification
+Modern enterprises have invested heavily in IAM and Zero Trust, but the ”last mile” of identity—legacy apps, localized accounts, and siloed SaaS—remains a stubborn blind spot.</p>
+
+<p>The entry of AI into the workforce has turned this gap from a compliance headache into a critical vulnerability. As organizations deploy AI copilots and autonomous agents to increase productivity, these agents often require access to the very systems that sit outside your centralized control. The result? AI agents are inadvertently amplifying credential risks, reusing stale tokens, and navigating paths of least resistance that your security team can’t even see.</p>
+
+<p>Join the 2026 Identity Maturity Briefing
+To help security leaders navigate this ”Confidence Gap,”
+The Hacker News
+is
+hosting an exclusive webinar featuring
+Mike Fitzpatrick (Ponemon Institute)
+and
+Matt Chiodi (CSO, Cerby)
+. They will break down the latest findings from over
+600 IT and security leaders
+and provide a tactical roadmap for closing the identity gaps that lead to audit friction and stalled digital initiatives. In this session, you will uncover:
+Exclusive 2026 Benchmark Data:
+See how your identity maturity compares to your peers. The “Shadow AI” Factor:
+Understand how AI agents are expanding your disconnected surface area.</p>
+
+<p>The Cost of Manual Management:
+Why relying on manual password and credential fixes is a losing strategy in 2026. Practical Remediation Steps:
+Learn exactly what leading organizations are doing now to regain control of every application. Why You Should Attend
+If you are leading an identity, security, or compliance strategy, ”doing more of the same” is no longer an option. This conversation is designed to move you beyond theoretical maturity and into
+operational control
+.</p>
+
+<p>Secure your spot now
+to get the data-driven insights you need to protect your organization’s most fragmented—and most targeted—asset:
+Identity. Register for the Webinar: Identity Maturity Under Pressure
+→
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="docker-cve-2026-34040-lets-attackers-bypass-authorization-and-gain-host-access"><a id="article-11"></a>Docker CVE-2026-34040 Lets Attackers Bypass Authorization and Gain Host Access</h2>
+
+<p>A high-severity security vulnerability has been disclosed in Docker Engine that could permit an attacker to bypass authorization plugins (
+AuthZ
+) under specific circumstances. The vulnerability, tracked as
+CVE-2026-34040
+(CVSS score: 8.8), stems from an incomplete fix for
+CVE-2024-41110
+, a maximum-severity vulnerability in the same component that came to light in July 2024. “Using a specially-crafted API request, an attacker could make the Docker daemon forward the request to an authorization plugin without the body,” Docker Engine maintainers
+said
+in an advisory released late last month. “The authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.”
+“Anyone who depends on authorization plugins that introspect the request body to make access control decisions is potentially impacted.”
+Multiple security vulnerabilities, including Asim Viladi Oglu Manizada, Cody, Oleh Konko, and Vladimir Tokarev, have been credited with independently discovering and reporting the bug.</p>
+
+<p>The issue has been patched in Docker Engine version 29.3.1. According to a report published by Cyera Research Labs researcher Tokarev, the vulnerability stems from the fact that the fix for CVE-2024-41110 did not properly handle oversized HTTP request bodies, thereby opening the door to a scenario where a single padded HTTP request can be used to create a privileged container with host file system access. In a hypothetical attack scenario, an attacker who has Docker API access restricted by an AuthZ plugin can undermine the mechanism by padding a container creation request to more than 1MB, causing it to be dropped before reaching the plugin. “The plugin allows the request because it sees nothing to block,” Tokarev
+said
+in a report shared with The Hacker News.</p>
+
+<p>“The Docker daemon processes the full request and creates a privileged container with root access to the host: your AWS credentials, SSH keys, Kubernetes configs, and everything else on the machine. This works against every AuthZ plugin in the ecosystem.”
+What’s more, an artificial intelligence (AI) coding agent like
+OpenClaw running inside a Docker-based sandbox
+can be tricked into executing a prompt injection concealed within a specifically crafted GitHub repository as part of a regular developer workflow, resulting in the execution of malicious code that exploits CVE-2026-34040 to bypass authorization using the above approach and create a privileged container and mount the host file system. With this level of access in place, the attacker can extract credentials for cloud services, and abuse them to take control of cloud accounts, Kubernetes clusters, and even SSH into production servers. It doesn’t end there.</p>
+
+<p>Cyera also cautioned that AI agents can
+figure out the bypass on their own
+and trigger it by constructing a padded HTTP request upon encountering errors when attempting to access files like
+kubeconfig
+as part of a legitimate debugging task issued by a developer (e.g., debug the K8s out-of-memory issue). This approach eliminates the need for planting a poisoned repository containing the malicious instructions. “AuthZ plugin denied the mount request,” Cyera explained. “The agent has access to the Docker API and knows how HTTP works.</p>
+
+<p>CVE-2026-34040 doesn’t require any exploit code, privilege, or special tools. It’s a single HTTP request with extra padding. Any agent that can read Docker API documentation can construct it.”
+As temporary workarounds, it’s recommended to avoid using AuthZ plugins that rely on request body inspection for security decisions, limit access to the Docker API to trusted parties by following the principle of least privilege, or run Docker in
+rootless mode
+. “In rootless mode, even a privileged container’s ‘root’ maps to an unprivileged host UID,” Tokarev said.</p>
+
+<p>“The blast radius drops from ‘full host compromise’ to ‘compromised unprivileged user.’ For environments that can’t go fully rootless, –userns-remap provides similar UID mapping.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-1000-exposed-comfyui-instances-targeted-in-cryptomining-botnet-campaign"><a id="article-12"></a>Over 1,000 Exposed ComfyUI Instances Targeted in Cryptomining Botnet Campaign</h2>
+
+<p>An active campaign has been observed targeting internet-exposed instances running ComfyUI, a popular stable diffusion platform, to enlist them into a cryptocurrency mining and proxy botnet. “A purpose-built Python scanner continuously sweeps major cloud IP ranges for vulnerable targets, automatically installing malicious nodes via
+ComfyUI-Manager
+if no exploitable node is already present,” Censys security researcher Mark Ellzey
+said
+in a report published Monday. The attack activity, at its core, systemically scans for exposed ComfyUI instances and exploits a misconfiguration that allows remote code execution on unauthenticated deployments through
+custom nodes
+. Upon successful exploitation, the compromised hosts are added to a cryptomining operation that mines Monero via XMRig and Conflux via lolMiner, as well as to a Hysteria V2 botnet.</p>
+
+<p>Both of them are centrally managed through a Flask-based command-and-control (C2) dashboard. Data from the attack surface management platforms shows that there are more than
+1,000 publicly-accessible ComfyUI instances
+. While not a huge number, it’s sufficient for a threat actor to run opportunistic campaigns to reap financial gains. Censys said it discovered the campaign last month after identifying an open directory on
+77.110.96[.]200
+, an IP address associated with a bulletproofing hosting services provider,
+Aeza Group
+.</p>
+
+<p>The directory is said to have contained a previously undocumented set of tools to pull off the attacks. This includes two reconnaissance tools to enumerate exposed ComfyUI instances across cloud infrastructure, identify those that have ComfyUI-Manager installed, and shortlist those that are susceptible to the code execution exploit. One of the two scanner Python scripts also functions as an exploitation framework that weaponizes ComfyUI’s custom nodes to achieve code execution. This technique, some aspects of which were
+documented
+by Snyk in December 2024, takes advantage of the fact that some custom nodes accept raw Python code as input and run it directly without requiring any authentication.</p>
+
+<p>As a result, an attacker can scan exposed ComfyUI instances for specific custom node families that support arbitrary code execution, effectively turning the service into a channel for delivering attacker-controlled Python payloads. Some of the custom node families that the attack particularly looks for are listed below -
+Vova75Rus/ComfyUI-Shell-Executor
+filliptm/ComfyUI_Fill-Nodes
+seanlynch/srl-nodes
+ruiqutech/ComfyUI-RuiquNodes
+“If none of the target nodes are present, the scanner checks whether ComfyUI-Manager is installed,” Censys said. “If available, it installs a vulnerable node package itself, then retries exploitation.”
+It’s worth noting that “ComfyUI-Shell-Executor” is a malicious package created by the attacker to fetch a next-stage shell script (“ghost.sh”) from the aforementioned IP address. Once code execution is obtained, the scanner removes evidence of the exploit by clearing the ComfyUI prompt history.</p>
+
+<p>A newer version of the scanner also incorporates persistence mechanisms that cause the shell script to be downloaded every six hours and the exploit workflow to be re-executed every time ComfyUI is started. The shell script, for its part, disables shell history, kills competing miners, launches the miner process, anduses the
+LD_PRELOAD
+hook to hide a watchdog process that ensures the miner process is revived in the event it gets terminated. In addition, the miner program is copied to multiple locations so that even if the primary install directory gets wiped, it can be launched from one of the fallback locations. A third mechanism the malware uses to ensure persistence is the use of the ”
+chattr +i
+“ command to lock the miner binaries and prevent them from being deleted, modified, or renamed, even by the root user.</p>
+
+<p>“There is also dedicated code targeting a specific competitor, ‘Hisana’ (which is referenced throughout the code), which appears to be another mining botnet,” Censys explained. “Rather than just killing it, ghost.sh overwrites its configuration to redirect Hisana’s mining output to its own wallet address, then occupies Hisana’s C2 port (10808) with a dummy Python listener so Hisana can’t restart.”
+The infected hosts are commandeered by means of a Flask-based C2 panel, which allows the operator to push instructions or deploy additional payloads, including a shell script that installs Hysteria V2 with the likely goal of selling compromised nodes as proxies. Further analysis of the attacker’s shell command history has revealed an SSH login attempt as root to the IP address
+120.241.40[.]237
+, which has been linked to an
+ongoing worm campaign
+targeting exposed Redis database servers. “Much of the tooling in this repository appears hastily assembled, and the overall tactics and techniques might initially suggest unsophisticated activity,” Censys said.</p>
+
+<p>“Specifically, the operator identifies exposed ComfyUI instances running custom nodes, determines which of those nodes expose unsafe functionality, and then uses them as a pathway to remote code execution.”
+“The infrastructure accessed by the operator further supports the idea that this activity is part of a broader campaign focused on discovering and exploiting exposed services, followed by the deployment of custom tooling for persistence, scanning, or monetization.”
+The discovery coincides with the emergence of multiple botnet campaigns in recent weeks -
+Exploitation of
+command injection vulnerabilities
+in n8n (
+CVE-2025-68613
+) and Tenda AC1206 routers (
+CVE-2025-7544
+) to
+add them
+to a Mirai-based botnet known as
+Zerobot
+. Exploitation of
+vulnerabilities
+in Apache ActiveMQ (
+CVE-2023-46604
+), Metabase (
+CVE-2023-38646
+), and React Server Components (
+CVE-2025-55182
+aka React2Shell) to deliver
+Kinsing
+, a persistent malware used for cryptocurrency mining and launching Distributed Denial of Service (DDoS) attacks. Exploitation of a suspected zero-day vulnerability in fnOS Network Attached Storage (NAS) to target internet-exposed systems and implant them with a DDoS malware called
+Netdragon
+. “NetDragon establishes an HTTP backdoor interface on compromised devices, enabling attackers to remotely access and control the infected systems,” QiAnXin XLab said.</p>
+
+<p>“It tampers with the ‘hosts’ file to hijack the official Feiniu NAS system update domains, effectively preventing devices from obtaining system updates and security patches.”
+Expansion of
+RondoDox
+‘s exploit list to 174 different vulnerabilities, while shifting the attack methodology from a “shotgun approach” to more targeted and recent flaws that are more likely to lead to infections. Exploitation of
+known security vulnerabilities
+to deploy a new variant of
+Condi
+, a Linux malware that turns compromised linux devices into bots capable of conducting DDoS attacks. The binary references a string “QTXBOT,” either indicating the name of the forked version or the internal project name. Brute-force attacks against SSH servers to launch an XMRig miner and generate illicit cryptocurrency revenue as part of an active cryptojacking operation called Monaco.</p>
+
+<p>Weak SSH passwords have also been
+used as attack pathways
+to deploy malware that establishes persistence, kills competing miners, connects to an external server, and performs a ZMap scan to propagate the malware in a worm-like fashion to other vulnerable hosts. “Botnet activity has surged over the last year, with Spauhaus noting 26% and 24% increases in the two six-month periods Jan - Jun 2025 and Jul - Dec 2025, respectively,” Pulsedive
+said
+. “This increase is associated with bots and nodes appearing in the United States. The increase also stems from the availability of source code for botnets such as Mirai.</p>
+
+<p>Mirai offshoots and variants are responsible for some of the largest DDoS attacks by volume.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-hidden-cost-of-recurring-credential-incidents"><a id="article-13"></a>The Hidden Cost of Recurring Credential Incidents</h2>
+
+<p>When talking about credential security, the focus usually lands on breach prevention. This makes sense when
+IBM’s 2025 Cost of a Data Breach Report
+puts the average cost of a breach at $4.4 million. Avoiding even one major incident is enough to justify most security investments, but that headline figure obscures the more persistent problems caused by recurring credential incidents. Account lockouts and compromised credentials don’t make the news.</p>
+
+<p>They show up as repeated helpdesk tickets, interrupted workflows, and time pulled away from higher-value work. Individually, each incident seems minor, but collectively they place a constant
+burden on IT teams
+and the wider business. The real cost doesn’t just sit in the breach you might prevent, but in the day-to-day disruption you’re already dealing with. Repeated incidents equal repeated costs
+If an organization finds itself suffering from credential-based attacks or repeated account compromises, the obvious response is to tighten password policies.</p>
+
+<p>However, many organizations struggle to balance security with usability. And when something doesn’t work, the helpdesk gets the call. Forrester estimates
+that password resets account for up to 30% of all helpdesk tickets, with each one costing around $70 when you factor in staff time and lost productivity. For a mid-sized organization, that’s a significant, ongoing operational cost tied directly to credential incidents.</p>
+
+<p>Disruptions like these build up and mean IT teams spend most of their time firefighting while end users lose momentum. The organization absorbs the cost in ways that are easy to overlook, but hard to eliminate. How poor password policies contribute to credential incidents
+When users are met with vague error messages like “does not meet complexity requirements,” they’re left guessing. Which rule did they break?</p>
+
+<p>What is missing? After a few failed attempts, most users stop trying to understand the policy and start looking for the quickest way through it. People fall back to reusing old passwords with minor tweaks or storing credentials insecurely just to avoid going through the process again. None of this is malicious, but it increases the likelihood of repeated
+credential-related incidents
+, from lockouts to account compromise.</p>
+
+<p>Without any form of breached password screening, organizations rely on time-based resets to manage risk. But a password doesn’t become unsafe because it’s old. It becomes unsafe when it’s exposed. Even with short expiry periods, users can continue logging in with credentials that have already been exposed in breaches.</p>
+
+<p>Those accounts are vulnerabilities waiting to be exploited, but without visibility into that, you’re effectively leaving it to chance. At the same time, IT teams are still dealing with the operational impact of unnecessary resets without addressing the underlying risk. Without the ability to detect exposed credentials, organizations are left managing symptoms instead of the root cause, and the cycle of incidents continues. It’s here that tools like
+Specops Password Policy
+help.</p>
+
+<p>Its Breached Password Protection feature continuously scans your user accounts against a database of more than 5.8 billion compromised passwords. If a password appears in our database, customizable alerts prompt users to reset, shortening the window of opportunity for attackers to abuse those credentials. Specops Password Policy
+Mandatory periodic resets compound password issues
+For many years, forced password resets were treated as a baseline security measure. In practice, they tend to create more problems than they solve.</p>
+
+<p>When users are required to change passwords every 60 or 90 days, behavior becomes
+predictable
+. People make small, incremental changes to existing passwords or choose something easy to remember under time pressure. The result isn’t stronger credentials, but more vulnerable ones. Beyond creating weaker passwords, these fixed expiration intervals introduce regular disruption into the working day.</p>
+
+<p>Every reset is a potential lockout, adding to the mounting pile of helpdesk tickets that drain your resources without actually improving your security posture. This is why guidance from bodies like
+NIST
+has moved away from mandatory periodic changes towards only resetting passwords when there is evidence of a breach. While removing password resets entirely requires careful consideration, updated guidance should prompt a rethink of arbitrary expiration dates. Strong password policies set the baseline for identity security
+It’s easy to treat passwords as a legacy problem and something to minimize as you move towards
+passwordless authentication
+.</p>
+
+<p>However, passwords still underpin identity security. If that foundation is weak, the impact shows up everywhere. Compromised or simplistic passwords introduce risk at the identity layer, where attackers can gain legitimate access and move laterally without raising immediate alarms. By enforcing robust, user-friendly requirements and identifying exposed credentials early, you reduce the number of weak entry points across your environment.</p>
+
+<p>This becomes especially important as organizations evolve their authentication strategies. Specops Breached Password Protection continuously blocks over 5 billion breached passwords
+Passwordless still depends on strong underlying credentials. Without a solid baseline, you risk carrying existing weaknesses into new systems. Fewer compromised accounts mean fewer incidents, less time spent on remediation, and less disruption to day-to-day operations.</p>
+
+<p>Beat the cost of repeated credential incidents
+Strong password controls will help reduce risk. But the true operational payoff lies in reducing the time and resources spent resolving a constant flow of incidents across the organization. When you factor in fewer lockouts, fewer reset requests, and less time spent dealing with compromised credentials, you’ll see the impact in reduced day-to-day disruption for both IT teams and end users. If recurring credential incidents are becoming all too common in your environment, it’s worth taking a closer look.</p>
+
+<p>Want to see how Specops can help strengthen your identity security? Book a demo
+to see our solutions in action. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

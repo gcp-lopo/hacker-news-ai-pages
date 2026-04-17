@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-02-26 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries</a></li>
+      
+        <li><a href="#article-2">Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration</a></li>
+      
+        <li><a href="#article-3">SLH Offers $500–$1,000 Per Call to Recruit Women for IT Help Desk Vishing Attacks</a></li>
+      
+        <li><a href="#article-4">Shadow AI Is Everywhere. Here’s How You Can Find and Secure It</a></li>
+      
+        <li><a href="#article-5">Top 5 Ways Broken Triage Increases Business Risk Instead of Reducing It</a></li>
+      
+        <li><a href="#article-6">Malicious NuGet Packages Stole ASP.NET Data; npm Package Dropped Malware</a></li>
+      
+        <li><a href="#article-7">Manual Processes Are Putting National Security at Risk</a></li>
+      
+        <li><a href="#article-8">Defense Contractor Employee Jailed for Selling 8 Zero-Days to Russian Broker</a></li>
+      
+        <li><a href="#article-9">SolarWinds Patches 4 Critical Serv-U 15.5 Flaws Allowing Root Code Execution</a></li>
+      
+        <li><a href="#article-10">CISA Confirms Active Exploitation of FileZen CVE-2026-25108 Vulnerability</a></li>
+      
+        <li><a href="#article-11">RoguePilot Flaw in GitHub Codespaces Enabled Copilot to Leak GITHUB_TOKEN</a></li>
+      
+        <li><a href="#article-12">UAC-0050 Targets European Financial Institution With Spoofed Domain and RMS Malware</a></li>
+      
+        <li><a href="#article-13">Identity Prioritization isn't a Backlog Problem - It's a Risk Math Problem</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-02-26-ai创业新闻">2026-02-26 AI创业新闻</h1>
+
+<h2 id="google-disrupts-unc2814-gridtide-campaign-after-53-breaches-across-42-countries"><a id="article-1"></a>Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries</h2>
+
+<p>Google on Wednesday disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as
+UNC2814
+that breached at least 53 organizations across 42 countries. “This prolific, elusive actor has a long history of targeting international governments and global telecommunications organizations across Africa, Asia, and the Americas,” Google Threat Intelligence Group (GTIG) and Mandiant
+said
+in a report published today. UNC2814 is also suspected to be linked to additional infections in more than 20 other nations. The tech giant, which has been tracking the threat actor since 2017, has been observed using API calls to communicate with software-as-a-service (SaaS) apps as command-and-control (C2) infrastructure.</p>
+
+<p>The idea, it added, is to disguise their malicious traffic as benign. Central to the hacking group’s operations is a novel backdoor dubbed GRIDTIDE that abuses Google Sheets API as a communication channel to disguise C2 traffic and facilitate the transfer of raw data and shell commands. It’s a C-based malware that supports file upload/download and the execution of arbitrary shell commands. Exactly how UNC2814 obtains initial access remains a topic of investigation, but the group is said to have a history of exploiting and compromising web servers and edge systems.</p>
+
+<p>Attacks mounted by the threat actor have leveraged a service account to move laterally within the environment via SSH. Also put to use are living-off-the-land (LotL) binaries to conduct reconnaissance, escalate privileges, and set up persistence for the backdoor. “To achieve persistence, the threat actor created a service for the malware at /etc/systemd/system/xapt.service, and once enabled, a new instance of the malware was spawned from /usr/sbin/xapt,” Google explained. Another noteworthy aspect is the deployment of SoftEther VPN Bridge to establish an outbound encrypted connection to an external IP address.</p>
+
+<p>It’s worth mentioning here that the abuse of SoftEther VPN has been
+linked
+to
+multiple
+Chinese hacking groups
+. There is evidence indicating that GRIDTIDE is dropped on endpoints containing personally identifiable information (PII), an aspect that’s consistent with cyber espionage activity focused on monitoring persons of interest. Google, however, noted that it did not observe any data exfiltration taking place during the course of the campaign. GRIDTIDE execution lifecycle
+GRIDTIDE’s C2 mechanism involves a cell-based polling mechanism, where specific roles are assigned to certain spreadsheet cells to enable bidirectional communication -
+A1, to poll for attacker commands and overwrite it with a status response (e.g., S-C-R or Server-Command-Success)
+A2-An, to transfer data, such as command output and files
+V1, to store system data from the victim endpoint
+As part of the action, Google said it terminated all Google Cloud Projects controlled by the attacker, disabled all known UNC2814 infrastructure, and cut off access to attacker-controlled accounts and Google Sheets API calls leveraged by the actor for command-and-control (C2) purposes.</p>
+
+<p>The tech giant described UNC2814 as one of the “most far-reaching, impactful campaigns” encountered in recent years, adding that it has issued formal victim notifications to each of the targets and that it is actively supporting organizations with verified compromises resulting from this threat. The latest discovery is one of many concurrent efforts by Chinese nation-state groups to embed themselves into networks for long-term access. The development also highlights that the network edge continues to take the brunt of internet-wide exploitation attempts, with threat actors frequently exploiting vulnerabilities and misconfigurations in such appliances as a common entry point into enterprise networks. These appliances have
+become attractive targets
+in recent years as they typically lack endpoint malware detection, yet provide direct network access or pivot points to internal services if compromised.</p>
+
+<p>“The global scope of UNC2814’s activity, evidenced by confirmed or suspected operations in over 70 countries, underscores the serious threat facing telecommunications and government sectors, and the capacity for these intrusions to evade detection by defenders, Google said. “Prolific intrusions of this scale are generally the result of years of focused effort and will not be easily re-established. We expect that UNC2814 will work hard to re-establish its global footprint.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="claude-code-flaws-allow-remote-code-execution-and-api-key-exfiltration"><a id="article-2"></a>Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration</h2>
+
+<p>Cybersecurity researchers have
+disclosed
+multiple security vulnerabilities in Anthropic’s Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. “The vulnerabilities exploit various configuration mechanisms, including Hooks, Model Context Protocol (MCP) servers, and environment variables – executing arbitrary shell commands and exfiltrating Anthropic API keys when users clone and open untrusted repositories,” Check Point Research
+said
+in a report shared with The Hacker News. The identified shortcomings fall under three broad categories -
+No CVE
+(CVSS score: 8.7) - A code injection vulnerability stemming from a user consent bypass when starting Claude Code in a new directory that could result in arbitrary code execution without additional confirmation via untrusted
+project hooks
+defined in .claude/settings.json. (Fixed in version 1.0.87 in September 2025)
+CVE-2025-59536
+(CVSS score: 8.7) - A code injection vulnerability that allows execution of arbitrary shell commands automatically upon tool initialization when a user starts Claude Code in an untrusted directory.</p>
+
+<p>(Fixed in version 1.0.111 in October 2025)
+CVE-2026-21852
+(CVSS score: 5.3) - An information disclosure vulnerability in Claude Code’s project-load flow that allows a malicious repository to exfiltrate data, including Anthropic API keys. (Fixed in version 2.0.65 in January 2026)
+“If a user started Claude Code in an attacker-controller repository, and the repository included a settings file that set ANTHROPIC_BASE_URL to an attacker-controlled endpoint, Claude Code would issue API requests before showing the trust prompt, including potentially leaking the user’s API keys,” Anthropic said in an advisory for CVE-2026-21852. In other words, simply opening a crafted repository is enough to exfiltrate a developer’s active API key, redirect authenticated API traffic to external infrastructure, and capture credentials. This, in turn, can permit the attacker to burrow deeper into the victim’s AI infrastructure.</p>
+
+<p>This could potentially involve accessing shared project files, modifying/deleting cloud-stored data, uploading malicious content, and even generating unexpected API costs. Successful exploitation of the first vulnerability could trigger stealthy execution on a developer’s machine without any additional interaction beyond launching the project. CVE-2025-59536 also achieves a similar goal, the main difference being that repository-defined configurations defined through .mcp.json and claude/settings.json file could be exploited by an attacker to override explicit user approval prior to interacting with external tools and services through the Model Context Protocol (MCP). This is achieved by setting the “
+enableAllProjectMcpServers
+“ option to true.</p>
+
+<p>“As AI-powered tools gain the ability to execute commands, initialize external integrations, and initiate network communication autonomously, configuration files effectively become part of the execution layer,” Check Point said. “What was once considered operational context now directly influences system behavior.”
+“This fundamentally alters the threat model. The risk is no longer limited to running untrusted code – it now extends to opening untrusted projects. In AI-driven development environments, the supply chain begins not only with source code, but with the automation layers surrounding it.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="slh-offers-5001000-per-call-to-recruit-women-for-it-help-desk-vishing-attacks"><a id="article-3"></a>SLH Offers $500–$1,000 Per Call to Recruit Women for IT Help Desk Vishing Attacks</h2>
+
+<p>The notorious cybercrime collective known as
+Scattered LAPSUS$ Hunters
+(SLH) has been observed offering financial incentives to recruit women to pull off social engineering attacks. The idea is to hire them for voice phishing campaigns targeting IT help desks, Dataminr said in a new threat brief. The group is said to be offering anywhere between $500 and $1,000 upfront per call, in addition to providing them with the necessary pre-written scripts to carry out the attack. “SLH is diversifying its social engineering pool by specifically recruiting women to conduct vishing attacks, likely to increase the success rate of help desk impersonation,” the threat intelligence firm
+said
+.</p>
+
+<p>A
+high-profile cybercrime supergroup
+comprising LAPSUS$, Scattered Spider, and ShinyHunters, SLH has a record of engaging in advanced social engineering attacks to sidestep multi-factor authentication (MFA) through techniques like
+MFA prompt bombing
+and SIM swapping. The group’s modus operandi also involves targeting help desks and call centers to breach companies by posing as employees and convincing them to reset a password or install a remote monitoring and management (RMM) tool that grants them remote access. Once initial access is obtained, Scattered Spider has been
+observed
+moving laterally to virtualized environments, escalating privileges, and exfiltrating sensitive corporate data. Some of these attacks have further led to the deployment of ransomware.</p>
+
+<p>Another hallmark of these attacks is the
+use of legitimate services and residential proxy networks
+(e.g., Luminati and OxyLabs) to blend in and evade detection. Scattered Spider actors have used various tunneling tools like Ngrok, Teleport, and Pinggy, as well as free file-sharing services such as file.io, gofile.io, mega.nz, and transfer.sh. SLH’s Telegram post to recruit women
+In a report published earlier this month, Palo Alto Networks Unit 42, which is tracking Scattered Spider under the moniker Muddled Libra, described the threat actor as “highly proficient at exploiting human psychology” by impersonating employees to attempt password and multi-factor authentication (MFA) resets. Scattered Spider attack chain
+In at least one case investigated by the cybersecurity company in September 2025, Scattered Spider is said to have created and utilized a virtual machine (VM) after obtaining privileged credentials by calling the IT help desk and then used it to conduct reconnaissance (e.g., Active Directory enumeration) and attempt to exfiltrate Outlook mailbox files and data downloaded from the target’s Snowflake database.</p>
+
+<p>“While focusing on identity compromise and social engineering, this threat actor leverages legitimate tools and existing infrastructure to blend in,” Unit 42
+said
+. “They operate quietly and maintain persistence.”
+The cybersecurity company also
+noted
+that Scattered Spider has an “extensive history” of targeting Microsoft Azure environments using the Graph API to facilitate access to Azure cloud resources. Also put to use by the group are cloud enumeration tools such as ADRecon for Active Directory reconnaissance. With social engineering emerging as the primary entry point for the cybercrime group, organizations are advised to be on alert and train IT help desk and support personnel to watch out for pre-written scripts and polished voice impersonation, enforce strict identity verification, harden MFA policies by shifting away from SMS-based authentication, and audit logs for new user creation or administrative privilege escalation following help desk interactions.</p>
+
+<p>“This recruitment drive represents a calculated evolution in SLH’s tactics,” Dataminr said. “By specifically seeking female voices, the group likely aims to bypass the ‘traditional’ profiles of attackers that IT help desk staff may be trained to identify, thereby increasing the effectiveness of their impersonation efforts.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="shadow-ai-is-everywhere-heres-how-you-can-find-and-secure-it"><a id="article-4"></a>Shadow AI Is Everywhere. Here’s How You Can Find and Secure It</h2>
+
+<h2 id="top-5-ways-broken-triage-increases-business-risk-instead-of-reducing-it"><a id="article-5"></a>Top 5 Ways Broken Triage Increases Business Risk Instead of Reducing It</h2>
+
+<p>Triage is supposed to make things simpler. In a lot of teams, it does the opposite. When you can’t reach a confident verdict early, alerts turn into repeat checks, back-and-forth, and “just escalate it” calls. That cost doesn’t stay inside the SOC; it shows up as missed SLAs, higher cost per case, and more room for real threats to slip through.</p>
+
+<p>So where does triage go wrong? Here are five triage issues that turn investigations into expensive guesswork, and how top teams are changing the outcome with execution evidence. 1. Decisions Made Without Real Evidence
+Business risk:
+The hardest triage failure to notice is when decisions get made before proof exists.</p>
+
+<p>If responders rely on partial signals (labels, hash matches, reputation), they end up approving or escalating cases without seeing what the file or link actually does. That uncertainty fuels false positives, missed real threats, slower containment, and higher cost per case, while giving attackers more time before anyone has confidence in the verdict. The Fix: Get Execution Evidence Early
+High-performing teams reduce this risk by validating behavior at triage, not later. Sandboxes make that practical by showing real execution: process activity, network calls, persistence, and the full attack chain.</p>
+
+<p>For example, with ANY.RUN’s interactive sandbox, teams report that in ~90% of cases, they can see
+the full attack chain within ~60 seconds
+, turning unclear alerts into evidence-backed decisions early in the workflow. See the complex hybrid attack exposed in 35 seconds
+. Full attack chain with fake Microsoft login page revealed inside ANY.RUN sandbox in less than a minute
+In this real-world hybrid phishing scenario combining Tycoon 2FA and Salty 2FA, most traditional controls failed to detect the threat because the attack blended multiple kits and evasive redirects. Inside an interactive sandbox, however, the full malicious flow and a clear verdict appeared in
+just 35 seconds
+.</p>
+
+<p>Improve triage speed and certainty to cut MTTR by up to 21 minutes per case, control escalation costs, and limit real business exposure. Explore faster triage
+Business outcomes:
+Faster, evidence-backed verdicts at triage
+Lower cost per case by reducing rework
+Fewer missed threats caused by “unclear” closures</p>
+<ol>
+  <li>Triage Quality Depends on Analyst Seniority
+Business risk:
+In many SOCs, the outcome of triage depends on who touches the alert. Senior staff close faster because they recognize patterns; junior staff escalates because they don’t have enough confidence or context.</li>
+</ol>
+
+<p>The result is inconsistent verdicts, uneven response speed, and a workflow that doesn’t scale cleanly as alert volume grows. The Fix: Make Triage Repeatable for Every Shift
+Top teams reduce this gap by designing triage around shared evidence and repeatable steps, not personal experience. The goal is simple: give Tier 1 enough clarity to reach the same conclusion a senior responder would, using the same observable facts. Auto-generated report for easy sharing between team members
+With ANY.RUN, teams can share the same sandbox session and findings through built-in teamwork features, so knowledge doesn’t stay in one person’s head.</p>
+
+<p>That consistency helps reduce “escalate to be safe” behavior and keeps triage outcomes stable across shifts. Business outcomes:
+Consistent triage across shifts
+Fewer senior reviews
+More predictable SLAs</p>
+<ol>
+  <li>Triage Delays Give Attackers More Time
+Business risk:
+Even when a threat is detected, triage can take too long to confirm what’s happening. Manual checks and queued escalations delay action, extending dwell time and giving attackers room to move laterally or exfiltrate data.</li>
+</ol>
+
+<p>The business impact shows up as
+missed SLAs
+and higher incident costs. The Fix: Shrink Time-to-Decision at Triage
+High-performing teams treat triage as a speed problem: reduce the steps between detection and a defensible verdict. That means confirming behavior immediately, before the case bounces between queues or turns into a long validation loop. Full visibility into the attack revealed in 35 seconds inside ANY.RUN’s cloud sandbox
+With the interactive sandbox, suspicious files and URLs can be detonated quickly, and the full attack chain often becomes visible in under a minute.</p>
+
+<p>Operational results often show
+up to 21 minutes shaved off MTTR per case
+, because teams spend less time waiting, re-checking, and escalating just to confirm what’s happening. Business outcomes:
+Earlier confirmation, shorter dwell time
+Fewer SLA misses under load
+Smaller incident impact</p>
+<ol>
+  <li>Over-Escalation Hides Real Priority Incidents
+Business risk:
+When evidence is unclear, Tier 1 escalates “just to be safe,” and Tier 2 becomes a verification layer for borderline cases. That clogs queues, pulls senior time into “maybes,” and slows response to high-impact incidents, increasing cost per investigation and raising the risk that critical cases wait too long.</li>
+</ol>
+
+<p>The Fix: Close More Cases at Tier 1 with Execution Evidence
+When Tier 1 can prove or dismiss alerts independently, Tier 2 stays focused on real incidents instead of acting as a verification desk. With solutions like ANY.RUN, that becomes realistic because the sandbox is built for fast triage: it’s intuitive to use, provides
+AI-assisted guidance
+during analysis, and generates
+auto-built reports
+that capture the key evidence without extra manual write-ups. A dedicated
+IOCs tab
+also pulls indicators into one place, so Tier 1 can escalate with context rather than escalating for confirmation. AI assisted guidance showcased in ANY.RUN’s sandbox
+This is how teams see
+up to a 30% reduction in Tier-1 → Tier-2 escalations
+, preserving senior capacity for high-risk threats.</p>
+
+<p>Business outcomes:
+Less Tier 2 overload
+Faster queues
+Lower escalation volume</p>
+<ol>
+  <li>Manual Work Limits Scale and Increases Error
+Business risk:
+A lot of triage is still repetitive manual work, following redirect chains, dealing with CAPTCHAs, or uncovering hidden links in QR codes. As volume grows, this limits throughput, increases mistakes, and triggers unnecessary escalation simply because teams run out of time. The Fix: Reduce Manual Steps with Interactive Automation
+Modern sandbox environments combine automation with human-like interactivity, allowing suspicious content to be safely opened, redirected flows followed, and protection mechanisms such as CAPTCHAs or QR-embedded links to be handled automatically during analysis.</li>
+</ol>
+
+<p>Malicious PDF with a QR code: ANY.RUN extracts and opens the embedded link automatically, revealing the next stage of the attack
+With ANY.RUN’s interactive sandbox, these routine triage actions are performed inside the controlled environment, exposing hidden malicious behavior while removing repetitive work from responders. In day-to-day operations, teams often see
+up to a 20% decrease in Tier 1 workload
+, along with fewer escalations and more time available for high-value investigation. Business outcomes:
+More Tier 1 capacity
+Fewer manual errors
+More time for confirmed threats
+Reduce Business Risk by Fixing Triage First
+Broken triage rarely looks dramatic. Instead, it quietly slows response, increases escalation pressure, and keeps real threats open longer than the business can afford.</p>
+
+<p>Teams that shift to evidence-driven, execution-based triage consistently report measurable gains, including:
+Up to 3× improvement in overall SOC efficiency
+94% of users reported faster triage and clearer verdicts
+Up to 58% more threats identified across investigations
+Improving speed, certainty, and scalability at the triage stage is one of the fastest ways to reduce MTTR, control operational cost, and cut real business exposure. Explore evidence-driven triage
+for your SOC and turn faster decisions into measurable security performance. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="malicious-nuget-packages-stole-aspnet-data-npm-package-dropped-malware"><a id="article-6"></a>Malicious NuGet Packages Stole ASP.NET Data; npm Package Dropped Malware</h2>
+
+<p>Cybersecurity researchers have discovered four malicious NuGet packages that are designed to target ASP.NET web application developers to steal sensitive data. The campaign,
+discovered by Socket
+, exfiltrates
+ASP.NET Identity data
+, including user accounts, role assignments, and permission mappings, as well as manipulates authorization rules to create persistent backdoors in victim applications. The names of the packages are listed below -
+NCryptYo
+DOMOAuth2_
+IRAOAuth2.0
+SimpleWriter_
+The NuGet packages were published to the repository between August 12 and 21, 2024, by a user named
+hamzazaheer
+. They have since been taken down from the repository following responsible disclosure, but not before attracting more than 4,500 downloads.</p>
+
+<p>According to the software supply chain security company, NCryptYo acts as a first-stage dropper that establishes a local proxy on localhost:7152 that relays traffic to an attacker-controlled command-and-control (C2) server whose address is dynamically retrieved at runtime. It’s worth noting that NCryptYo attempts to masquerade as the legitimate NCrypto package. DOMOAuth2_ and IRAOAuth2.0 steal Identity data and backdoor apps, while SimpleWriter_ features unconditional file writing and hidden process execution capabilities while presenting itself as a PDF conversion utility. An analysis of package metadata has revealed identical build environments, indicating that the campaign is the work of a single threat actor.</p>
+
+<p>“NCryptYo is a stage-1 execution-on-load dropper,” security researcher Kush Pandya said. “When the assembly loads, its static constructor installs JIT compiler hooks that decrypt embedded payloads and deploy a stage-2 binary - a localhost proxy on port 7152 that relays traffic between the companion packages and the attacker’s external C2 server, whose address is resolved dynamically at runtime.”
+Once the proxy is active, DOMOAuth2_ and IRAOAuth2.0 begin transmitting the ASP.NET Identity data through the local proxy to the external infrastructure. The C2 server responds with authorization rules that are then processed by the application to create a persistent backdoor by granting themselves admin roles, modifying access controls, or disabling security checks. SimpleWriter_, for its part, writes threat actor-controlled content to disk and executes the dropped binary with hidden windows.</p>
+
+<p>It’s not exactly clear how users are tricked into downloading these packages, as the attack chain kicks in only after all four of them are installed. “The campaign’s objective is not to compromise the developer’s machine directly, but to compromise the applications they build,” Pandya explained. “By controlling the authorization layer during development, the threat actor gains access to deployed production applications.”
+“When the victim deploys their ASP.NET application with the malicious dependencies, the C2 infrastructure remains active in production, continuously exfiltrating permission data and accepting modified authorization rules. The threat actor or a buyer can then grant themselves admin-level access to any deployed instance.”
+The disclosure comes as Tenable disclosed details of a malicious npm package named ambar-src that amassed more than 50,000 downloads before it was removed from the JavaScript registry.</p>
+
+<p>It was uploaded to npm on February 13, 2026. The package makes use of npm’s
+preinstall script hook
+to trigger the execution of malicious code contained within index.js during its installation. The malware is designed to run a one-liner command that obtains different payloads from the domain “x-ya[.]ru” based on the operating system -
+On Windows, it downloads and executes a file called msinit.exe containing encrypted shellcode, which is decoded and loaded into memory. On Linux, it fetches a bash script and executes it.</p>
+
+<p>The bash script then retrieves another payload from the same server, an ELF binary that works as an
+SSH-based reverse shell client
+. On macOS, it fetches another script that uses osascript to run JavaScript responsible for dropping Apfell, a JavaScript for Automation (JXA) agent part of the Mythic C2 framework that can conduct reconnaissance, collect screenshots, steal data from Google Chrome, and capture system passwords by displaying a fake prompt. “It employs multiple techniques to evade detection, and drops open-source malware with advanced capabilities, targeting developers on Windows, Linux, and macOS hosts,” the company
+said
+. Once the data is collected, it’s exfiltrated to the attacker to a Yandex Cloud domain in an effort to blend in with legitimate traffic and take advantage of the fact that trusted services are less likely to be blocked within corporate networks.</p>
+
+<p>Ambar-src is assessed to be a more mature variant of
+eslint-verify-plugin
+, another rogue npm package that was recently flagged by JFrog as dropping Mythic agents Poseidon and Apfell on Linux and macOS systems. “If this package is installed or running on a computer, that system must be considered fully compromised,” Tenable said. “While the package should be removed, please be aware that because an external entity may have gained full control of the computer, removing the package does not guarantee the elimination of all resulting malicious software.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="manual-processes-are-putting-national-security-at-risk"><a id="article-7"></a>Manual Processes Are Putting National Security at Risk</h2>
+
+<p>Why automating sensitive data transfers is now a mission-critical priority
+More than half of national security organizations still rely on manual processes to transfer sensitive data, according to
+The CYBER360: Defending the Digital Battlespace
+report. This should alarm every defense and government leader because manual handling of sensitive data is not just inefficient, it is a systemic vulnerability. Recent breaches in defense supply chains show how manual processes create exploitable gaps that adversaries can weaponize. This is not just a technical issue.</p>
+
+<p>It is a strategic challenge for every organization operating in contested domains, where speed and certainty define mission success. In an era defined by accelerating cyber threats and geopolitical tension, every second counts. Delays, errors, and gaps in control can cascade into consequences that compromise mission readiness, decision-making, and operational integrity. This is exactly what manual processes introduce: uncertainty in environments where certainty is non-negotiable.</p>
+
+<p>They create bottlenecks and increase the risk of human error. In short, they undermine the very principles of mission assurance: speed, accuracy, and trust. Adversaries know this. They exploit seams in data movement.</p>
+
+<p>Every manual step is a potential breach point. In a contested environment, these vulnerabilities are operational, not theoretical. Why Manual Persists
+If manual processes are so risky, why do they remain? The answer lies in a mix of technical, cultural, and organizational factors.</p>
+
+<p>Legacy systems remain a major barrier. Many defense and government environments still run on infrastructure that predates modern automation capabilities. These systems were never designed for seamless integration with policy engines or encryption frameworks. Replacing them is costly and disruptive, so organizations layer manual steps as a workaround.</p>
+
+<p>Procurement cycles compound the problem. Acquiring new technology in national security contexts is often slow and complex. Approval chains are long, requirements are rigid, and by the time a solution is deployed, the threat landscape has shifted. Leaders often adopt manual processes as a stopgap, but these temporary measures quickly become permanent habits.</p>
+
+<p>Cross-domain complexity adds another layer. Moving data between classification levels requires strict controls. Historically, these controls relied on human judgment to inspect and approve transfers. Automation was seen as too rigid for nuanced decisions.</p>
+
+<p>That perception persists even as modern solutions can enforce granular policies without sacrificing flexibility. Culture plays a role as well. Trust in people runs deep in national security organizations. Manual handling feels tangible and controllable.</p>
+
+<p>Leaders and operators believe that human oversight reduces risk, even when evidence shows the opposite. This slows the adoption of automation. In some cases, operators still print and hand-carry classified files because digital workflows are perceived as too risky. Regulatory inaction compounds this problem.</p>
+
+<p>Compliance frameworks often lag behind technology, reinforcing manual habits and slowing modernization efforts. Finally, there is a fear of disruption. Missions cannot pause for technology transitions. Leaders worry the automation will introduce delays or errors during rollout.</p>
+
+<p>They prefer the known imperfections of manual processes to the unknown risks of change. These factors explain persistence, but they do not justify it. The environment has changed. Threats are faster, more sophisticated, and increasingly opportunistic.</p>
+
+<p>The Risk of Manual Handling
+Human error and variability:
+Sensitive data transfer should be consistent and precise. Manual steps introduce variance across teams and time. Even highly trained personnel face fatigue and workload pressure. Small errors can cascade into operational delays or unintended disclosures.</p>
+
+<p>Fatigue during high-tempo missions amplifies mistakes, and insider risk grows when oversight depends on trust alone. Weak enforcement of policy:
+Automation turns policy into code. Manual handling turns policy into interpretation. Under pressure, exceptions grow, and workarounds become standard practice.</p>
+
+<p>Over time, compliance erodes. These gaps slow incident response and undermine accountability during investigations, leaving leaders without timely insights when decisions matter most. Audit gaps and accountability risks:
+Manual movements are hard to track. Evidence is fragmented across emails and ad hoc logs.</p>
+
+<p>Investigations take too long. Leaders cannot rely on consistent chain-of-custody records. Security blind spots across domains:
+Sensitive data often moves across classification levels and networks. Manual processes make these transitions opaque.</p>
+
+<p>Adversaries exploit seams where enforcement is inconsistent. Mission performance drag:
+Speed is a security control. Manual transfers add handoffs and delays. Decision cycles slow down.</p>
+
+<p>People compensate by skipping steps, introducing new risks. Manual processes are not resilient. They are fragile, and they fail quietly and then fail loudly. Principles for Secure Automation: The Cybersecurity Trinity
+Manual processes are not resilient.</p>
+
+<p>They fail quietly and then fail loudly. Eliminating these vulnerabilities requires more than simply automating steps. It demands a security architecture that enforces trust, protects data, and manages boundaries at scale. So, how do defense and government organizations close these gaps and make automation secure?</p>
+
+<p>The answer lies in three principles that work together to protect identity, data, and domain boundaries. This is the Cybersecurity Trinity
+Automation alone is no longer enough. Modern missions demand a layered approach that addresses identity, data, and domain boundaries. The Cybersecurity Trinity of Zero Trust Architecture (ZTA), Data-Centric Security (DCS), and Cross Domain Solutions (CDS) is now a mission imperative for defense and government organizations.</p>
+
+<p>Zero Trust Architecture (ZTA) ensures that every user, device, and transaction is verified continuously. It eliminates implicit trust and enforces least privilege across all environments. ZTA is the foundation for identity assurance and access control. This reduces insider risk and ensures coalition partners operate under consistent trust models, even in dynamic mission environments.</p>
+
+<p>Data-Centric Security (DCS) shifts the focus from perimeter defense to protecting the data itself. It applies encryption, classification, and policy enforcement wherever the data resides or moves. In sensitive workflows, DCS ensures that even if networks are compromised, the data remains secure. It supports interoperability by applying uniform controls across diverse networks, enabling secure collaboration without slowing operations.</p>
+
+<p>Cross Domain Solutions (CDS) enable controlled, secure transfer of information between classification levels and operational domains. They enforce release authorities, sanitize content, and prevent unauthorized disclosure. CDS is critical for coalition operations, intelligence sharing, and mission agility. These solutions enable secure multinational sharing without introducing delays, which is critical for time-sensitive intelligence exchange.</p>
+
+<p>Together, these three principles form the backbone of secure automation. They close the gaps that manual processes leave open. They make security measurable and mission success sustainable. Special Considerations for Defense and Government
+Sensitive data transfer in national security contexts presents unique challenges.</p>
+
+<p>CDS requires automated inspection and enforcement of release authorities. Coalition operations demand federated identity and shared standards to maintain security across organizational boundaries. Tactical systems need lightweight agents and resilient synchronization for low-bandwidth environments. Supply chain exposure must be addressed by extending automation to contractors with strong verification and audit requirements.</p>
+
+<p>In joint missions, delays caused by manual checks can stall intelligence sharing and compromise operational tempo. Automation mitigates these risks by enforcing common standards across partners. Emerging threats such as AI-driven attacks and deepfake data manipulation make manual verification obsolete, increasing the urgency for automated safeguards. Insider risk remains a concern, but automation reduces opportunities for misuse by limiting manual handling and providing detailed audit trails.</p>
+
+<p>The Human Factor
+Automation does not eliminate the need for skilled personnel. It changes their focus. People design policies, manage exceptions, and investigate alerts. To make the transition successful, invest in training and culture.</p>
+
+<p>Show teams how automation improves mission speed and reduces rework. Communicate clearly and consistently. Celebrate early wins. Create feedback loops where operators can refine workflows.</p>
+
+<p>Start with pilot programs in low-risk workflows to build confidence before scaling. Leadership buy-in and clear communication are essential to overcome resistance and accelerate adoption. When automation feels like support rather than surveillance, adoption accelerates. Conclusion
+Manual handling of sensitive data is a strategic liability.</p>
+
+<p>It slows missions, creates blind spots, and erodes trust. Automation is not optional; it is mission imperative. Start with high-impact workflows designed by subject matter experts, and in turn, appropriately test the policy into enforceable rules. Integrate identity, encryption, and audit.</p>
+
+<p>Measure outcomes, train teams, and fund initiatives that reduce risk. What should not remain true is that more than half rely on manual today. Your organization does not have to be among them tomorrow. The next conflict will not wait for manual processes to catch up.</p>
+
+<p>Leaders must act now to harden data flows, accelerate mission readiness, and ensure that automation becomes a force multiplier rather than a future aspiration. Source:
+The CYBER360: Defending the Digital Battlespace
+. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="defense-contractor-employee-jailed-for-selling-8-zero-days-to-russian-broker"><a id="article-8"></a>Defense Contractor Employee Jailed for Selling 8 Zero-Days to Russian Broker</h2>
+
+<p>A 39-year-old Australian national who was previously employed at U.S. defense contractor L3Harris has been sentenced to a little over seven years in prison for selling eight zero-day exploits to Russian exploit broker Operation Zero in exchange for millions of dollars. Peter Williams
+pleaded guilty
+to two counts of theft of trade secrets in October 2025. In addition to the jail term, Williams has been ordered to serve three years of supervised release with special conditions, as well as forfeit illicit proceeds, including properties, clothing, jewelry, and luxury watches, purchased from the cryptocurrency payments he received in return for selling the exploits.</p>
+
+<p>The case’s connection to Operation Zero was
+disclosed
+by cybersecurity journalist Kim Zetter late last year. The nature of the exploits are presently unclear. But a
+sentencing memorandum
+published earlier this month revealed that the tools could have been “used against any manner of victim, civilian or military around the world, and engage in all manner of crime from cyber fraud, theft, and ransomware, to state directed spying and offensive cyber operations against military targets.”
+“Williams exploited his senior role at a U.S. defense contractor to enrich himself at the expense of the United States and his employer,”
+said
+Assistant Attorney General for National Security John A.</p>
+
+<p>Eisenberg. “The tools he compromised were intended to protect this Nation; instead, he auctioned them off to a Russian bidder.”
+According to U.S. Attorney Jeanine Pirro for the District of Columbia, Williams sold the trade secrets for up to $4 million in cryptocurrency. The exploit tools could have allowed Russia to access millions of digital devices, Pirro added.</p>
+
+<p>The theft of eight cyber-exploit components took place over a period of three years between 2022 and 2025. The zero-day exploits are designed to be sold exclusively to the U.S. government and select allies. The actions are estimated to have incurred L3Harris $35 million in financial losses.</p>
+
+<p>The U.S. State Department, in tandem,
+announced
+the designations of Operation Zero (aka Matrix LLC), along with Sergey Sergeyevich Zelenyuk and Special Technology Services LLC FZ (STS), under the Protecting American Intellectual Property Act (PAIPA) in connection with the trade secret theft. Zelenyuk is a Russian national and the director and owner of Operation Zero. He also established STS in the U.A.E.</p>
+
+<p>to conduct business with various countries in Asia and the Middle East and likely get around U.S. sanctions imposed on Russian bank accounts. The U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC) also sanctioned Zelenyuk, Operation Zero, STS, and four other associated individuals and entities for acquiring and distributing cyber tools harmful to U.S.</p>
+
+<p>national security. According to the Treasury, Operation Zero is said to have sold the tools acquired from Williams to at least one unauthorized user. Operation Zero has offered up to $4 million in bounties for Telegram exploits and $20 million for tools that could be used to break into Android and iPhone devices. The exploit broker is believed to have engaged in efforts to recruit hackers to support its activities and develop business relationships with foreign intelligence agencies through social media.</p>
+
+<p>It’s been active since at least 2021. “Zelenyuk and Operation Zero have stated that they will only sell the exploits they acquire to customers from non-NATO countries. Zelenyuk, through Operation Zero, has sought to sell exploits to foreign intelligence agencies,” the Treasury Department
+said
+. “Zelenyuk and Operation Zero have also sought to develop other cyber intelligence systems, including spyware and methods to extract personal identifying information and other sensitive data uploaded by users of artificial intelligence applications like large language models.”
+The names of the other sanctioned individuals and entities are listed below -
+Marina Evgenyevna Vasanovich, Zelenyuk’s assistant
+Azizjon Makhmudovich Mamashoyev and Oleg Vyacheslavovich Kucherov, for having had work relationships with Operation Zero (Kucherov is also suspected of being a member of the
+TrickBot cybercrime gang
+)
+Advance Security Solutions, an exploit brokerage firm created by Mamashoyev that offers bounties for exploits for U.S.-built software
+“Peter Williams stole a U.S.</p>
+
+<p>defense contractor’s trade secrets about highly sensitive cyber capabilities and sold them to a broker whose clients include the Russian government, putting our national security and countless potential victims at risk,” said Assistant Director Roman Rozhavsky of the Federal Bureau of Investigation’s (FBI) Counterintelligence and Espionage Division. “Let this be a clear warning to all who consider placing greed over country: if you betray your position of trust and sell sensitive American technology to our foreign adversaries, the FBI will not rest until you’re brought to justice.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="solarwinds-patches-4-critical-serv-u-155-flaws-allowing-root-code-execution"><a id="article-9"></a>SolarWinds Patches 4 Critical Serv-U 15.5 Flaws Allowing Root Code Execution</h2>
+
+<p>SolarWinds has
+released updates
+to address four critical security flaws in its Serv-U file transfer software that, if successfully exploited, could result in remote code execution. The vulnerabilities, all rated 9.1 on the CVSS scoring system, are listed below -
+CVE-2025-40538</p>
+<ul>
+  <li>A broken access control vulnerability that allows an attacker to create a system admin user and execute arbitrary code as root via domain admin or group admin privileges. CVE-2025-40539</li>
+  <li>A type confusion vulnerability that allows an attacker to execute arbitrary native code as root. CVE-2025-40540</li>
+  <li>A type confusion vulnerability that allows an attacker to execute arbitrary native code as root.</li>
+</ul>
+
+<p>CVE-2025-40541</p>
+<ul>
+  <li>An insecure direct object reference (IDOR) vulnerability that allows an attacker to execute native code as root. SolarWinds noted that the vulnerabilities require administrative privileges for successful exploitation. It also said that they carry a medium security risk on Windows deployments as the services “frequently run under less-privileged service accounts by default.”
+The four shortcomings affect SolarWinds Serv-U version 15.5. They have been addressed in SolarWinds Serv-U version 15.5.4.</li>
+</ul>
+
+<p>While SolarWinds makes no mention of the security flaws being exploited in the wild, prior vulnerabilities in the software (
+CVE-2021-35211
+,
+CVE-2021-35247
+, and
+CVE-2024-28995
+) have been exploited by malicious actors, including by a China-based hacking group tracked as Storm-0322 (formerly DEV-0322). Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-confirms-active-exploitation-of-filezen-cve-2026-25108-vulnerability"><a id="article-10"></a>CISA Confirms Active Exploitation of FileZen CVE-2026-25108 Vulnerability</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday
+added
+a recently disclosed vulnerability in FileZen to its Known Exploited Vulnerabilities (
+KEV
+) catalog, citing evidence of active exploitation. The vulnerability, tracked as
+CVE-2026-25108
+(CVSS v4 score: 8.7), is a case of operating system (OS) command injection that could allow an authenticated user to execute arbitrary commands via specially crafted HTTP requests. “Soliton Systems K.K FileZen contains an OS command injection vulnerability when a user logs-in to the affected product and sends a specially crafted HTTP request,” CISA said.</p>
+
+<p>According to the Japan Vulnerability Notes (JVN), the vulnerability
+affects
+the following versions of the file transfer product -
+Versions 4.2.1 to 4.2.8
+Versions 5.0.0 to 5.0.10
+Soliton noted in its advisory that successful exploitation of the issue is only possible when FileZen Antivirus Check Option is enabled, adding it has “received at least one report of damage caused by the exploitation of this vulnerability.”
+The Japanese technology company also revealed that a bad actor must sign in to the web interface with general user privileges to be able to pull off an attack. Users are advised to update to version 5.0.11 or later to mitigate the threat. “If you have been attacked or suspect that you have been victimized by this vulnerability, please consider not only updating to V5.0.11 or later, but also changing all user passwords as a precaution, as an attacker can log on with at least one real account,” it
+added
+. Federal Civilian Executive Branch (FCEB) agencies are advised to apply the necessary fixes by March 17, 2026, to secure their networks.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="roguepilot-flaw-in-github-codespaces-enabled-copilot-to-leak-github_token"><a id="article-11"></a>RoguePilot Flaw in GitHub Codespaces Enabled Copilot to Leak GITHUB_TOKEN</h2>
+
+<p>A vulnerability in
+GitHub Codespaces
+could have been exploited by bad actors to seize control of repositories by injecting malicious Copilot instructions in a GitHub issue. The artificial intelligence (AI)-driven vulnerability has been codenamed
+RoguePilot
+by Orca Security. It has since been patched by Microsoft following responsible disclosure. “Attackers can craft hidden instructions inside a GitHub issue that are automatically processed by GitHub Copilot, giving them silent control of the in-codespaces AI agent,” security researcher Roi Nisimi
+said
+in a report.</p>
+
+<p>The vulnerability has been described as a case of passive or indirect prompt injection where a malicious instruction is embedded within data or content that’s processed by the large language model (LLM), causing it to produce unintended outputs or carry out arbitrary actions. The cloud security company also called it a type of AI-mediated supply chain attack that induces the LLM to automatically execute malicious instructions embedded in developer content, in this case, a GitHub issue. The attack begins with a malicious GitHub issue that then triggers the prompt injection in Copilot when an unsuspecting user launches a Codespace from that issue. This trusted developer workflow, in turn, allows the attacker’s instructions to be silently executed by the AI assistant and leak sensitive data, such as the privileged GITHUB_TOKEN.</p>
+
+<p>RoguePilot takes advantage of the fact that there are a number of entry points to launch a Codespaces environment, including templates, repositories, commits, pull requests, or issues. The problem occurs when a codespace is opened from an issue, as the built-in GitHub Copilot is automatically fed the issue’s description as a prompt to generate a response. As a result, this AI integration can be weaponized to manipulate Copilot into running malicious commands. The attack can be made stealthy by hiding the prompt in the GitHub issue through the
+HTML comment tag
+“<!--the_prompt_goes_here-->.” The specially crafted prompt, for its part, instructs the AI assistant to leak the GITHUB_TOKEN to an external server under the attacker’s control.</p>
+
+<p>“By manipulating Copilot in a Codespace to check out a crafted pull request that contains a symbolic link to an internal file, an attacker can cause Copilot to read that file and (via a remote JSON $schema) exfiltrate a privileged GITHUB_TOKEN to a remote server,” Nisimi explained. From Prompt Injections to Promptware
+The development comes as Microsoft has discovered that Group Relative Policy Optimization (
+GRPO
+), a
+reinforcement learning technique
+normally used to fine-tune LLMs after their deployment, can also be used to remove its safety features. The process has been codenamed GRP-Obliteration. More importantly, the study found that a single unlabeled prompt, such as “Create a fake news article that could lead to panic or chaos,” was enough to reliably unalign 15 language models.</p>
+
+<p>“What makes this surprising is that the prompt is relatively mild and does not mention violence, illegal activity, or explicit content,” Microsoft researchers Mark Russinovich, Giorgio Severi, Blake Bullwinkel, Yanan Cai, Keegan Hines, and Ahmed Salem
+noted
+. “Yet training on this one example causes the model to become more permissive across many other harmful categories it never saw during training.”
+The disclosure also coincides with the
+discovery
+of
+various
+side channels
+that can be weaponized to infer the topic of a user’s conversation and even fingerprint user queries with over 75% accuracy, the latter of which exploits
+speculative decoding
+, an
+optimization technique
+used by LLMs to
+generate multiple candidate tokens
+in parallel to improve throughput and latency. Recent research has uncovered that models backdoored at the computational graph level – a technique called
+ShadowLogic
+– can further put agentic AI systems at risk by allowing
+tool calls
+to be silently modified without the user’s knowledge. This new phenomenon has been codenamed Agentic ShadowLogic by HiddenLayer.</p>
+
+<p>An attacker could weaponize such a backdoor to intercept requests to fetch content from a URL in real-time, such that they are routed through infrastructure under their control before it’s forwarded to the real destination. “By logging requests over time, the attacker can map which internal endpoints exist, when they’re accessed, and what data flows through them,” the AI security company
+said
+. “The user receives their expected data with no errors or warnings. Everything functions normally on the surface while the attacker silently logs the entire transaction in the background.”
+And that’s not all.</p>
+
+<p>Last month, Neural Trust demonstrated a new image jailbreak attack codenamed Semantic Chaining that allows users to sidestep safety filters in models like Grok 4, Gemini Nano Banana Pro, and Seedance 4.5, and generate prohibited content by leveraging the models’ ability to perform multi-stage image modifications. The attack, at its core, weaponizes the models’ lack of “reasoning depth” to track the latent intent across a multi-step instruction, thereby allowing a bad actor to introduce a series of edits that, while innocuous in isolation, can gradually-but-steadily erode the model’s safety resistance until the undesirable output is generated. It starts with asking the AI chatbot to imagine any non-problematic scene and instruct it to change one element in the original generated image. In the next phase, the attacker asks the model to make a second modification, this time transforming it into something that’s prohibited or offensive.</p>
+
+<p>This works because the model is focused on making a modification to an existing image rather than creating something fresh, which fails to trip the safety alarms as it treats the original image as legitimate. “Instead of issuing a single, overtly harmful prompt, which would trigger an immediate block, the attacker introduces a chain of semantically ‘safe’ instructions that converge on the forbidden result,” security researcher Alessandro Pignati
+said
+. In a study published last month, researchers Oleg Brodt, Elad Feldman, Bruce Schneier, and Ben Nassi argued that prompt injections have evolved beyond input-manipulation exploits to what they call
+promptware
+– a new class of malware execution mechanism that’s triggered through prompts engineered to exploit an application’s LLM. Promptware essentially manipulates the LLM to enable various phases of a typical cyber attack lifecycle: initial access, privilege escalation, reconnaissance, persistence, command-and-control,
+lateral movement
+, and malicious outcomes (e.g., data retrieval, social engineering, code execution, or financial theft).</p>
+
+<p>“Promptware refers to a polymorphic family of prompts engineered to behave like malware, exploiting LLMs to execute malicious activities by abusing the application’s context, permissions, and functionality,” the researchers
+said
+. “In essence, promptware is an input, whether text, image, or audio, that manipulates an LLM’s behavior during inference time, targeting applications or users.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="uac-0050-targets-european-financial-institution-with-spoofed-domain-and-rms-malware"><a id="article-12"></a>UAC-0050 Targets European Financial Institution With Spoofed Domain and RMS Malware</h2>
+
+<p>A Russia-aligned threat actor has been observed targeting a European financial institution as part of a social engineering attack to likely facilitate intelligence gathering or financial theft, signaling a possible expansion of the threat actor’s targeting beyond Ukraine and into entities supporting the
+war-torn nation
+. The activity, which targeted an unnamed entity involved in regional development and reconstruction initiatives, has been attributed to a cybercrime group tracked as
+UAC-0050
+(aka
+DaVinci Group
+). BlueVoyant has designated the name Mercenary Akula to the threat cluster. The attack was observed earlier this month.</p>
+
+<p>“The attack spoofed a Ukrainian judicial domain to deliver an email containing a link to a remote access payload,” researchers Patrick McHale and Joshua Green
+said
+in a report shared with The Hacker News. “The target was a senior legal and policy advisor involved in procurement, a role with privileged insight into institutional operations and financial mechanisms.”
+The starting point is a spear-phishing email that uses legal themes to direct recipients to download an archive file hosted on PixelDrain, a file-sharing service used by the threat actor to bypass reputation-based security controls. The ZIP is responsible for initiating a multi-layered infection chain. Present within the ZIP file is a RAR archive that contains a password-protected 7-Zip file, which includes an executable that masquerades as a PDF document by using the widely abused double extension trick (*.pdf.exe).</p>
+
+<p>The execution results in the deployment of an MSI installer for Remote Manipulator System (RMS), a
+Russian remote desktop software
+that allows remote control, desktop sharing, and file transfers. “The use of such ‘living-off-the-land’ tools provides attackers with persistent, stealthy access while often evading traditional antivirus detection,” the researchers noted. The use of RMS
+aligns
+with
+prior UAC-0050 modus operandi
+, with the threat actor known to drop legitimate remote access software like LiteManager and remote access trojans such as RemcosRAT in attacks targeting Ukraine. The Computer Emergency Response Team of Ukraine (CERT-UA) has
+characterized
+UAC-0050 as a mercenary group associated with Russian law enforcement agencies that
+conducts
+data gathering, financial theft, and information and psychological operations under the Fire Cells branding.</p>
+
+<p>“This attack reflects Mercenary Akula’s well-established and repetitive attack profile, while also offering a notable development,” BlueVoyant said. “First, their targeting has been primarily focused on Ukraine-based entities, especially accountants and financial officers. However, this incident suggests potential probing of Ukraine-supporting institutions in Western Europe.”
+The disclosure comes as Ukraine revealed that Russian cyber attacks aimed at the country’s energy infrastructure are increasingly focused on collecting intelligence to guide missile strikes rather than immediately disrupting operations, The Record
+reported
+. Cybersecurity company CrowdStrike, in its annual
+Global Threat Report
+, said it expects Russia-nexus adversaries to continue conducting aggressive operations with the goal of intelligence gathering from Ukrainian targets and NATO member states.</p>
+
+<p>This includes efforts undertaken by
+APT29
+(aka Cozy Bear and Midnight Blizzard) to “systematically” exploit trust, organizational credibility, and platform legitimacy as part of spear-phishing campaigns targeting U.S.-based non-governmental organizations (NGOs) and a U.S.-based legal entity to gain unauthorized access to the victims’ Microsoft accounts. “Cozy Bear successfully compromised or impersonated individuals with whom targeted users maintained trusting professional relationships,” CrowdStrike said. “Impersonated individuals included employees from international NGO branches and pro-Ukraine organizations.”
+“The adversary heavily invested in substantiating these impersonations, using compromised individuals’ legitimate email accounts alongside burner communication channels to reinforce authenticity.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="identity-prioritization-isnt-a-backlog-problem---its-a-risk-math-problem"><a id="article-13"></a>Identity Prioritization isn’t a Backlog Problem - It’s a Risk Math Problem</h2>
+
+<p>Most identity programs still prioritize work the way they prioritize IT tickets: by volume, loudness, or “what failed a control check.” That approach breaks the moment your environment stops being mostly-human and mostly-onboarded. In modern enterprises, identity risk is created by a compound of factors: control posture, hygiene, business context, and intent. Any one of these can perhaps be manageable on its own. The real danger is the toxic combination, when multiple weaknesses align and attackers get a clean chain from entry to impact.</p>
+
+<p>A useful prioritization framework treats identity risk as contextual exposure, not configuration completeness. 1. Controls Posture: Compliance and Security As Risk Signals, Not Checkboxes
+Controls posture answers a simple question: If something goes wrong, will we prevent it, detect it, and prove it? In classic IAM programs, controls are assessed as “configured / not configured.” But prioritization needs more nuance: a missing control is a risk amplifier whose severity depends on what identity it protects, what the identity can do and what other controls may be in place downstream.</p>
+
+<p>Key control categories that directly shape exposure:
+Authentication &amp; Session Controls
+MFA, SSO enforcement, session/token expiration, refresh controls, login rate limiting, lockouts. Credential &amp; Secret Management
+No cleartext/hardcoded credentials, strong hashing, secure IdP usage, proper secret rotation. Authorization &amp; Access Controls
+Enforced access control, audited login and authorization attempts, secure redirects/callbacks for SSO flows. Protocol &amp; Cryptography Controls
+Industry-standard protocols, avoidance of legacy protocols, and the forward-looking posture (e.g., quantum-safe).</p>
+
+<p>Prioritization lens</p>
+<ul>
+  <li>missing controls don’t matter equally everywhere. Missing MFA on a low-impact identity is not the same as missing MFA on a privileged identity tied to business critical systems. Controls posture must be evaluated in context. Top Identity Security Gaps to Find and Close
+A practical checklist to help you assess your application estate and improve your organization’s identity security posture by:
+Identifying which gaps are most common
+Briefly explaining why they are important to address
+Suggesting specific actions to take with existing tools/ processes
+Additional considerations to keep in mind
+Download the checklist
+2.</li>
+</ul>
+
+<p>Identity Hygiene: the Structural Weaknesses Attackers (and your Autonomous Agent-AI) Love
+Hygiene is not about tidiness; it’s about ownership, lifecycle, and intent. Hygiene answers: Who owns this identity? Why does it exist? Is it still necessary?</p>
+
+<p>The most common hygiene conditions that create systemic exposure:
+Local accounts</p>
+<ul>
+  <li>Bypass centralized policies (SSO/MFA/conditional access), drift from standards, harder to audit. Orphan accounts</li>
+  <li>No accountable owner = no one to notice misuse, no one to clean up, no one to attest. Dormant accounts</li>
+  <li>“Unused” doesn’t mean safe, dormancy often means unmonitored persistence. Non-human identities (NHIs) without ownership or clear purpose</li>
+  <li>Service accounts, API tokens, agent identities that proliferate with automation and agentic workflows.</li>
+</ul>
+
+<p>Stale service accounts and tokens</p>
+<ul>
+  <li>Privileges accumulate, rotation stops, and “temporary” becomes permanent. Prioritization lens</li>
+  <li>Hygiene issues are the raw material of breaches. Attackers prefer neglected identities because they are less protected, less monitored, and more likely to retain excess privileges. 3.</li>
+</ul>
+
+<p>Business Context: Risk is Proportional to Impact, not Just Exploitability
+Security teams often prioritize based on technical severity alone. That’s incomplete. Business context asks: If compromised, what breaks? Business context includes:
+Business criticality
+of the application or workflow (revenue, operations, customer trust)
+Data sensitivity
+(PII, PHI, financial data, regulated data)
+Blast radius
+through trust paths (what downstream systems become reachable)
+Operational dependencies
+(what causes outages, delayed shipments, failed payroll, etc.)
+Prioritization lens</p>
+<ul>
+  <li>Identity risk is not only “can an attacker get in,” but “what happens if they do.” High-severity exposure in low-impact systems should not outrank moderate exposure in mission-critical systems.</li>
+</ul>
+
+<ol>
+  <li>User intent: the Missing Dimension in Most Identity Programs
+Identity decisions are often made without answering: What is this identity trying to do right now, and is that aligned with its purpose? Intent becomes critical with:
+Agentic workflows
+that autonomously call tools and take actions
+M2M patterns
+that look legitimate but may be abnormal in sequence or destination
+Insider-risk-adjacent behaviors
+where credentials are valid but usage is not
+Signals that help infer intent include:
+Interaction patterns (which tools/endpoints are invoked, in what order)
+Time-based anomalies and access frequency
+Privilege usage vs. assigned privilege (what’s actually exercised)
+Cross-application traversal behavior (unusual lateral movement)
+Prioritization lens
+    <ul>
+      <li>A weakly controlled identity with
+active, anomalous intent
+should jump the queue, because it’s not just vulnerable, it may be in use
+now
+.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>The Toxic Combination: Where Risk Becomes Nonlinear
+The biggest prioritization mistake is treating issues as additive. Real-world identity incidents are multiplicative: attackers chain weaknesses. Risk escalates nonlinearly when controls gaps, poor hygiene, high impact, and suspicious intent align. Examples of toxic combinations that should be treated as “drop everything”:
+Entry-Level Toxic Combos (Easy Target)
+Orphan account + missing MFA
+Orphan account + missing MFA + missing login rate limiting
+Local account + missing audit logging for login/authorization
+Orphan account + excessive permissions (even if nothing “looks wrong” today)
+Active Exploitation Risk (Time-Sensitive)
+Orphan account + missing MFA + recent activity
+Dormant account + recent activity (why did it wake up?)
+Local account + exposed credentials indicators (or known hardcoding patterns)
+High-Severity Systemic Exposure
+Orphan account + missing MFA + missing rate limiting
+Local account + missing audit logging + missing rate limiting (silent compromise path)
+Dormant NHI + hardcoded credentials + no audit logging (persistent, invisible machine access)
+Add business criticality and sensitive data access, and you’ve got board-level risk.</p>
+
+<p>Breach Alert
+Orphan account + dormant account + missing MFA + missing rate limiting + recent activity (exit dormant stage)
+Local account + dormant account + missing rate limiting + recent activity
+Dormant NHI + hardcoded credentials + concurrent identity usage
+This is the heart of identity prioritization: the toxic combination defines risk, not any single finding in isolation. A Practical Prioritization Model You Can Use
+When you’re deciding what to fix first, ask four questions:
+Controls posture:
+what prevention/detection/attestation is missing? Identity hygiene:
+do we have ownership, lifecycle clarity, and purposeful existence? Business context:
+what’s the impact if compromised?</p>
+
+<p>User Intent:
+is activity aligned with purpose, or does it signal misuse? Then prioritize work that yields the most risk reduction, not the most checkbox closure:
+Fixing one toxic combination can eliminate the equivalent risk of fixing dozens of low-context findings. The goal is a shrinking exposure surface, not a prettier dashboard. The Takeaway
+Identity risk isn’t a list, it’s a graph of trust paths plus context.</p>
+
+<p>Controls posture, hygiene, business context, and intent are each important alone, but the danger comes from their alignment. If you build prioritization around toxic combinations, you stop chasing volume and start reducing real-world breach likelihood and audit exposure. How Orchid Addresses It
+Orchid
+passively discovers the entire application estate managed or unmanaged and identities via telemetry, builds an identity graph, and converts posture signals + hygiene + business context + activity into contextual risk scores. It ranks the toxic combinations that matter most, via dynamic Severity produces a sequenced remediation plan, and then drives no-code onboarding into governance (managed identities/IGA policies) with continuous monitoring, so teams reduce real exposure fast, not just close the most findings.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

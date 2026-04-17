@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-07 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Iran-Linked Password-Spraying Campaign Targets 300+ Israeli Microsoft 365 Organizations</a></li>
+      
+        <li><a href="#article-2">DPRK-Linked Hackers Use GitHub as C2 in Multi-Stage Attacks Targeting South Korea</a></li>
+      
+        <li><a href="#article-3">Multi-OS Cyberattacks: How SOCs Close a Critical Risk in 3 Steps</a></li>
+      
+        <li><a href="#article-4">⚡ Weekly Recap: Axios Hack, Chrome 0-Day, Fortinet Exploits, Paragon Spyware and More</a></li>
+      
+        <li><a href="#article-5">How LiteLLM Turned Developer Machines Into Credential Vaults for Attackers</a></li>
+      
+        <li><a href="#article-6">Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</a></li>
+      
+        <li><a href="#article-7">Qilin and Warlock Ransomware Use Vulnerable Drivers to Disable 300+ EDR Tools</a></li>
+      
+        <li><a href="#article-8">BKA Identifies REvil Leaders Behind 130 German Ransomware Attacks</a></li>
+      
+        <li><a href="#article-9">$285 Million Drift Hack Traced to Six-Month DPRK Social Engineering Operation</a></li>
+      
+        <li><a href="#article-10">36 Malicious npm Packages Exploited Redis, PostgreSQL to Deploy Persistent Implants</a></li>
+      
+        <li><a href="#article-11">Fortinet Patches Actively Exploited CVE-2026-35616 in FortiClient EMS</a></li>
+      
+        <li><a href="#article-12">China-Linked TA416 Targets European Governments with PlugX and OAuth-Based Phishing</a></li>
+      
+        <li><a href="#article-13">Microsoft Details Cookie-Controlled PHP Web Shells Persisting via Cron on Linux Servers</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-04-07-ai创业新闻">2026-04-07 AI创业新闻</h1>
+
+<h2 id="iran-linked-password-spraying-campaign-targets-300-israeli-microsoft-365-organizations"><a id="article-1"></a>Iran-Linked Password-Spraying Campaign Targets 300+ Israeli Microsoft 365 Organizations</h2>
+
+<p>An Iran-nexus threat actor is suspected to be behind a password-spraying campaign targeting Microsoft 365 environments in Israel and the U.A.E. amid ongoing conflict in the Middle East. The activity, assessed to be ongoing, was carried out in three distinct attack waves that took place on March 3, March 13, and March 23, 2026, per Check Point. “The campaign is primarily focused on Israel and the U.A.E., impacting more than 300 organizations in Israel and over 25 in the U.A.E.,” the Israeli cybersecurity company
+said
+.</p>
+
+<p>“Activity associated with the same actor was also observed against a limited number of targets in Europe, the United States, the United Kingdom, and Saudi Arabia.”
+The campaign is assessed to have targeted the cloud environments of government entities, municipalities, technology, transportation, energy sector organizations, and private-sector companies in the region. Password spraying is a form of brute-force attack where a threat actor attempts to use a single common password against multiple usernames on the same application. It’s also considered a more effective way to discover weak credentials at scale without triggering rate-limiting defenses. Check Point said the technique is known to be adopted by Iranian hacking groups like
+Peach Sandstorm
+and
+Gray Sandstorm
+(formerly DEV-0343) in the past to infiltrate target networks.</p>
+
+<p>The campaign essentially unfolds over three phases: aggressive scanning or password-spraying conducted from Tor exit nodes, followed by conducting the login process, and exfiltrating sensitive data, such as mailbox content. “Analysis of M365 logs suggests similarities to
+Gray Sandstorm
+, including the use of red-team tools to conduct these attacks via Tor exit nodes,” Check Point said. “The threat actor used commercial VPN nodes hosted at AS35758 (Rachamim Aviel Twito), which aligns with recent activity tied to Iran-nexus operations in the Middle East.”
+To counter the threat, organizations are advised to monitor sign-in logs for signs of password spraying, apply conditional access controls to limit authentication to approved geographic locations, enforce multi-factor authentication (MFA) for all users, and enable audit logs for post-compromise investigation. Iran Revives Pay2Key Operations
+The disclosure comes as a U.S.</p>
+
+<p>healthcare organization was targeted in late February 2026 by
+Pay2Key
+, an Iranian ransomware gang with ties to the country’s government. The ransomware-as-a-service (RaaS) operation, which has ties to the Fox Kitten group, first emerged in 2020. The variant deployed in the attack is an upgrade from prior campaigns
+observed
+in July 2025, using improved evasion, execution, and anti-forensics techniques to achieve its goals. According to Beazley Security and Halcyon, no data was exfiltrated during the attack, a shift from the group’s double extortion playbook.</p>
+
+<p>The attack is said to have leveraged an undetermined access route to breach the organization, using a legitimate remote access tool like TeamViewer to establish a foothold, then harvest credentials for lateral movement, disarm Microsoft Defender Antivirus by falsely signaling that a third-party antivirus product is active, inhibit recovery, deploy ransomware, drop a ransom note, and clear logs to cover up the tracks. “By clearing logs at the end of execution rather than the beginning, the actors ensure that even the ransomware’s own activity is wiped, not just whatever preceded it,” Halcyon
+said
+. Among the
+key changes
+the group enacted following its return last year was offering affiliates an 80% cut of ransom proceeds, up from 70%, for participating in attacks targeting Iran’s enemies. A month later, a Linux variant of the Pay2Key ransomware was detected in the wild.</p>
+
+<p>“The sample is configuration-driven, requires root-level privileges to execute, and is engineered to traverse broad file system scope, classify mounts, and encrypt data using ChaCha20 in full or partial modes,” Morphisec researcher Ilia Kulmin
+said
+in a report published last month. “Before encryption, it weakens defenses and removes friction by stopping services, killing processes, disabling SELinux and AppArmor, and installing a reboot-time cron entry. This lets the encryptor run faster and survive restarts.”
+In March 2026, Halcyon also
+revealed
+that the administrator of
+Sicarii
+ransomware, Uke, urged pro-Iranian operators to use Baqiyat 313 Locker (aka BQTlock) due to the influx of affiliate requests. BQTLock, which operates with pro-Palestinian motives, has targeted the U.A.E., the U.S., and Israel since July 2025.</p>
+
+<p>“Iran has a long track record of using cyber operations to retaliate against perceived political slights,” the cybersecurity company
+said
+. “Ransomware is increasingly incorporated into these operations, with ransomware campaigns that blur the line between criminal extortion and state-sponsored sabotage.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="dprk-linked-hackers-use-github-as-c2-in-multi-stage-attacks-targeting-south-korea"><a id="article-2"></a>DPRK-Linked Hackers Use GitHub as C2 in Multi-Stage Attacks Targeting South Korea</h2>
+
+<p>Threat actors likely associated with the Democratic People’s Republic of Korea (DPRK) have been observed using GitHub as command-and-control (C2) infrastructure in multi-stage attacks targeting organizations in South Korea. The attack chain, per
+Fortinet FortiGuard Labs
+, involves obfuscated Windows shortcut (LNK) files acting as the starting point to drop a decoy PDF document and a PowerShell script that sets the stage for the next phase of the attack. It’s assessed that these LNK files are distributed via phishing emails. As soon as the payloads are downloaded, the victim is displayed the PDF document, while the malicious PowerShell script runs silently in the background.</p>
+
+<p>The PowerShell script performs checks to resist analysis by scanning for running processes related to virtual machines, debuggers, and forensic tools. If any of those processes are detected, the script immediately terminates. Otherwise, it extracts a Visual Basic Script (VBScript) and sets up persistence using a scheduled task that launches the PowerShell payload every 30 minutes in a hidden window to sidestep detection. This ensures that the PowerShell script is executed automatically after every system reboot.</p>
+
+<p>The PowerShell script then profiles the compromised host, saves the result to a log file, and exfiltrates it to a GitHub repository created under the account “motoralis” using a hard-coded access token. Some of the GitHub accounts created as part of the campaign include “God0808RAMA,” “Pigresy80,” “entire73,” “pandora0009,” and “brandonleeodd93-blip.”
+The script then parses a specific file in the same GitHub repository to fetch additional modules or instructions, thus allowing the operator to weaponize the trust associated with a platform like GitHub to blend in and maintain persistent control over the infected host. Fortinet said that earlier iterations of the campaign relied on LNK files to spread malware families like Xeno RAT. It’s worth noting that the use of GitHub C2 to distribute Xeno RAT and its variant MoonPeak was documented by
+ENKI
+and
+Trellix
+last year.</p>
+
+<p>These attacks were attributed to a North Korean state-sponsored group known as Kimsuky. “Instead of depending on complex custom malware, the threat actor uses native Windows tools for deployment, evasion, and persistence,” security researcher Cara Lin said. “By minimizing the use of dropped PE files and leveraging LolBins, the attacker can target a broad audience with a low detection rate.”
+The disclosure comes as AhnLab
+detailed
+a similar LNK-based infection chain from Kimsuky that ultimately results in the deployment of a Python-based backdoor. The LNK files, as before, execute a PowerShell script and create a hidden folder in the ”C:\windirr” path to stage the payloads, including a decoy PDF and another LNK file that mimics a Hangul Word Processor (HWP) document.</p>
+
+<p>Also deployed are intermediate payloads to set up persistence and launch a PowerShell script, which then uses Dropbox as a C2 channel to fetch a batch script. The batch file then downloads two separate ZIP file fragments from a remote server (“quickcon[.]store”) and combines them together to create a single archive and extracts from it an XML task scheduler and a Python backdoor. The task scheduler is used to launch the implant. The Python-based malware supports the ability to download additional payloads and execute commands issued from the C2 server.</p>
+
+<p>The instructions allow it to run shell scripts, list directories, upload/download/delete files, and run BAT, VBScript, and EXE files. The findings also coincide with
+ScarCruft
+‘s shift from traditional LNK-based attack chains to an HWP OLE-based dropper to deliver
+RokRAT
+, a remote access trojan exclusively used by the North Korean hacking group, per S2W. Specifically, the malware is embedded as an OLE object within an HWP document and executed via DLL side-loading. “Unlike previous attack chains that progressed from LNK-dropped BAT scripts to shellcode, this case confirms the use of newly developed dropper and downloader malware to deliver shellcode and the ROKRAT payload,” the South Korean security company
+said
+.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="multi-os-cyberattacks-how-socs-close-a-critical-risk-in-3-steps"><a id="article-3"></a>Multi-OS Cyberattacks: How SOCs Close a Critical Risk in 3 Steps</h2>
+
+<dl>
+  <dt>Your attack surface no longer lives on one operating system, and neither do the campaigns targeting it. In enterprise environments, attackers move across Windows endpoints, executive MacBooks, Linux infrastructure, and mobile devices, taking advantage of the fact that many SOC workflows are still fragmented by platform. For security leaders, this creates a</dt>
+  <dt>costly operational gap</dt>
+  <dd>slower validation, limited early-stage visibility, more escalations, and more time for attackers to steal credentials, establish persistence, or move deeper before the response fully begins. The Multi-OS Attack Problem SOCs Aren’t Ready For
+A multi-OS attack can turn one threat into several different investigations at once.</dd>
+</dl>
+
+<p>The campaign may follow a different path depending on the system it reaches, which breaks the speed and consistency SOC teams rely on during early triage. Instead of moving through one clear validation process, the team ends up jumping between tools, reconstructing behavior across environments, and trying to catch up while the attack keeps moving. That quickly leads to familiar problems inside the SOC:
+Validation delays increase business exposure
+by slowing the moment when the team can confirm risk and contain it. Fragmented evidence reduces incident clarity
+when fast decisions are needed on scope, priority, and impact.</p>
+
+<p>Escalation volume grows
+because too many cases cannot be closed confidently at the earliest stage. Response consistency breaks down
+across teams and environments, making investigations harder to manage at scale. Attackers get more time to move
+before the organization has a clear picture of what is unfolding. SOC efficiency drops
+as time is lost to tool-switching, duplicated effort, and slower decision-making.</p>
+
+<p>How Top SOCs Turn Multi-OS Complexity into Faster Response
+The teams that handle this well usually do one thing differently: they make cross-platform investigation faster, clearer, and more consistent from the start. With solutions like
+ANY.RUN Sandbox
+, that becomes much easier to do across enterprise operating systems. Here are three practical steps to make that happen:
+Step 1: Make Cross-Platform Analysis Part of Early Triage
+Early triage gets slower the moment teams assume the same threat will behave the same way everywhere. It often does not.</p>
+
+<p>A suspicious file, script, or link that reveals one pattern in Windows may take a different path on macOS, rely on different native components, and create a different level of risk. That makes cross-platform validation essential from the start. For instance, macOS is often treated as the safer side of the enterprise environment, which can make it an
+easier place for threats to go unnoticed early. As adoption grows among executives, developers, and other high-value users, attackers have more reason to tailor campaigns for that environment.</p>
+
+<p>A recent ClickFix campaign was analyzed by ANY.RUN experts is a good example. Check its full attack chain below:
+See the recent attack targeting Claude Code users
+. Attackers exploited a Google ad redirect to lure victims to a fake Claude Code documentation page, then used a ClickFix flow to push a malicious Terminal command. That command downloaded an encoded script, installed AMOS Stealer, collected browser data, credentials, Keychain contents, and sensitive files, then deployed a backdoor for persistent access.</p>
+
+<p>Give your team a faster way to detect multi-OS threat behavior before hidden execution paths turn into credential theft, persistence, and deeper compromise. Close Multi-OS Security Gaps
+When cross-platform analysis starts early, teams can:
+Recognize
+how one campaign changes across operating systems before the investigation splits
+Validate
+suspicious activity earlier in the environment actually being targeted
+Reduce
+the chance of missing platform-specific behavior during early triage
+Step 2: Keep Cross-Platform Investigations in One Workflow
+Multi-OS attacks become harder to contain when one case forces the team into several disconnected workflows.A suspicious link on one system, a script on another, and a different execution path somewhere else can quickly turn a single incident into a messy investigation spread across multiple tools. That slows down validation, makes evidence harder to follow, and creates more room for the threat to keep moving. ClickFix campaigns, for instance, show why this matters.</p>
+
+<p>The same technique has been used to target different operating systems, from Windows to macOS, while following different execution paths depending on the environment. If each version has tobe analyzed in a separate tool, the investigation takes longer, requires more effort, and becomes much harder to keep consistent. With
+ANY.RUN Sandbox
+, teams can investigate these threats within a single workflow across major enterprise operating systems, making it easier to compare behavior, follow the attack chain, and understand how the campaign changes from one environment to another without constantly switching context. When investigations stay in one workflow, teams:
+Cut the operational overhead
+that multi-OS investigations create
+Keep
+one connected view
+of campaign activity instead of managing separate case fragments
+Support a
+more standardized response
+process as the attack scope expands across the enterprise
+Step 3: Turn Cross-Platform Visibility into Faster Response
+Seeing activity across operating systems only helps if the team can quickly understand what matters and act on it.</p>
+
+<p>In multi-OS attacks, that is often where the response starts to slow down. One behavior appears in one environment, other artifacts show up somewhere else, and the team is left trying to piece everything together before it can make a confident decision. What helps is having the right information presented in a way that is easier to work through under pressure. With ANY.RUN Sandbox, teams can review auto-generated reports, follow attacker behavior, examine IOCs in dedicated tabs, and use the built-in AI Assistant to speed up analysis and understand suspicious activity faster.</p>
+
+<p>That makes it easier to move from raw activity to a clearer view of what the threat is doing, how serious it is, and what needs to happen next. When cross-platform visibility is easier to work through, teams can:
+Make
+faster decisions with evidence
+that is easier to review and act on
+Reduce delays
+caused by scattered findings and manual reconstruction
+Move into containment with
+more confidence
+even when the attack behaves differently across environments
+Stop Giving Multi-OS Attacks Room to Move
+Multi-OS attacks win when defenders lose time. Every extra workflow, every delayed validation, and every missing piece of context gives the threat more room to spread before the team can contain it. With
+ANY.RUN’s cloud-based sandbox
+, teams can reduce that delay by bringing cross-platform analysis into a more consistent workflow across major enterprise operating systems.</p>
+
+<p>That gives SOC teams clearer context, faster decisions, and measurable operational gains:
+Up to 3× stronger SOC efficiency
+across investigation workflows
+21 minutes less MTTR per case
+when threats are validated faster
+94% of users reporting faster triage
+in daily operations
+Up to 20% lower Tier 1 workload
+from reduced manual effort
+30% fewer escalations from Tier 1 to Tier 2
+during early analysis
+Lower breach exposure
+through earlier detection and response
+Less alert fatigue
+with faster access to threat insights
+Expand cross-platform visibility
+to reduce investigation delays, limit business exposure, and give your SOC more control over multi-OS threats. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-axios-hack-chrome-0-day-fortinet-exploits-paragon-spyware-and-more"><a id="article-4"></a>⚡ Weekly Recap: Axios Hack, Chrome 0-Day, Fortinet Exploits, Paragon Spyware and More</h2>
+
+<p>This week had real hits. The key software got tampered with. Active bugs showed up in the tools people use every day. Some attacks didn’t even need much effort because the path was already there.</p>
+
+<p>One weak spot now spreads wider than before. What starts small can reach a lot of systems fast. New bugs, faster use, less time to react. That’s this week.</p>
+
+<p>Read through it. ⚡ Threat of the Week
+Axios npm Package Compromised by N. Korean Hackers
+—Threat actors with ties to North Korea seized control of the npm account belonging to the lead maintainer of Axios, a popular npm package with nearly 100 million weekly downloads, to push malicious versions containing a cross-platform malware dubbed WAVESHAPER.V2. The activity has been attributed to a financially motivated threat actor known as UNC1069.</p>
+
+<p>The incident demonstrates how quickly the compromise of a popular npm package can have ripple effects through the ecosystem. The malware’s self-deleting anti-forensic cleanup points to a deliberate, planned operation. “The build pipeline is becoming the new front line. Attackers know that if they can compromise the systems that build and distribute software, they can inherit trust at scale,” Avital Harel, Security Researcher at Upwind, said.</p>
+
+<p>“That’s what makes these attacks so dangerous – they’re not just targeting one application, they’re targeting the process behind many of them. Organizations should be looking much more closely at CI/CD systems, package dependencies, and developer environments, because that’s increasingly where attackers are placing their bets.” Ismael Valenzuela, vice president of Labs, Threat Research, and Intelligence at Arctic Wolf, said the Axios npm compromise reflects a broader trend where attackers infiltrate trusted, widely used software components to obtain access to downstream customers at scale. “Even though the malicious versions were available for only a few hours, Axios is so deeply embedded across enterprise applications that organizations may have unknowingly pulled the compromised code into their environments through build pipelines or downstream dependencies,” Valenzuela added. “That downstream exposure is what makes these incidents particularly difficult to spot and contain, especially for teams that never directly chose to install Axios themselves.</p>
+
+<p>This incident reinforces that security teams need to treat build‑time tools and dependencies as part of the attack surface and not just trust tools by default.”
+Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI
+Insights to help leaders make informed decisions and show practitioners where careers are heading. Download Now ➝
+🔔 Top News
+Google Patches Actively Exploited Chrome 0-Day
+—Google released security updates for its Chrome web browser to address 21 vulnerabilities, including a zero-day flaw that it said has been exploited in the wild. The high-severity vulnerability, CVE-2026-5281 (CVSS score: N/A), concerns a use-after-free bug in Dawn, an open-source and cross-platform implementation of the WebGPU standard. Users are advised to update their Chrome browser to versions 146.0.7680.177/178 for Windows and Apple macOS, and 146.0.7680.177 for Linux.</p>
+
+<p>Google did not reveal how the vulnerability is being exploited and who is behind the exploitation effort. TrueConf 0-Day Exploited in Attacks Targeting Government Entities in Southeast Asia
+—Chinese hackers have exploited a zero-day vulnerability in the TrueConf video conferencing software in attacks against government entities in Southeast Asia. The exploited flaw, tracked as CVE-2026-3502 (CVSS score of 7.8), exists because of a lack of integrity checks when fetching application update code, allowing an attacker to distribute a tampered update. “The compromised TrueConf on-premises server was operated by the governmental IT department and served as a video conferencing platform for dozens of government entities across the country, which were all supplied with the same malicious update,” Check Point said.</p>
+
+<p>The activity, which began in January 2026, involved the deployment of the Havoc framework. Most infections likely began with a link sent to the victims. TrueConf is used widely across organizations in Asia, Europe, and the Americas, serving about 100,000 organizations globally. Fortinet FortiClient EMS Flaw Under Attack
+—Fortinet released out-of-band patches for a critical security flaw impacting FortiClient EMS (CVE-2026-35616) that it said has been exploited in the wild.</p>
+
+<p>The vulnerability has been described as a pre-authentication API access bypass leading to privilege escalation. Exploitation efforts against CVE-2026-35616 were first recorded against its honeypots on March 31, 2026, per watchTowr. The development comes days after another recently patched, critical vulnerability in FortiClient EMS (CVE-2026-21643) came under active exploitation. Apple Backports DarkSword Fixes to More Devices
+—Apple expanded the availability of iOS 18.7.7 and iPadOS 18.7.7 to a broader range of devices to protect users from the risk posed by a recently disclosed exploit kit known as DarkSword.</p>
+
+<p>The update targets customers whose devices are capable of upgrading to the newest operating system (iOS 26), but have chosen to remain on iOS 18. Apple has taken the unprecedented step to counter risks posed by an exploit kit called DarkSword. The broader availability of the patches underscores the level of threat that malware like DarkSword poses. The fact that a large number of users were still using iOS 18, combined with the leak of a new version of DarkSword on GitHub, has pushed Apple towards releasing the fix so that they can stay protected without the need for updating to iOS 26.</p>
+
+<p>The leak is significant as it puts it within reach of less technically savvy cybercriminals out there. ClickFix Attack Leads to DeepLoad Malware
+—The ClickFix technique is being used to deliver a stealthy malware named DeepLoad that’s capable of stealing credentials and intercepting browser interactions. The malware first emerged on a dark web cybercrime forum in early February 2026, when a threat actor, using the alias “MysteryHack,” advertised it as a “centralized panel for multiple types of malware.” According to
+ZeroFox
+, “DeepLoad’s design is explicitly focused on actively facilitating real-time cryptocurrency theft, which almost certainly makes it an attractive malware suite in the cybercrime-as-a-service (CaaS) environment.” The malware has since been distributed to Windows systems through ClickFix under the guise of resolving fake browser error messages. Besides stealing credentials, the malware drops a rogue browser extension to intercept sensitive data and spreads via removable USB drives.</p>
+
+<p>DeepLoad’s actual attack logic is buried under layers of obfuscation, raising the possibility that some parts of the malware were developed using an artificial intelligence (AI) model. Claude Code Source Code Leaks
+—Anthropic acknowledged that internal code for its popular artificial intelligence (AI) coding assistant, Claude Code, had been inadvertently released due to a human error. Essentially, what happened was this: When Anthropic pushed out version 2.1.88 of its Claude Code npm package, it accidentally included a map file that exposed nearly 2,000 source code files and more than 512,000 lines of code. The
+source code leak
+has since
+revealed
+various features the company appears to be working on or that are built into the service, including an Undercover mode to hide AI authorship from contributions to public code repositories, a persistent background agent called KAIROS, combat distillation attacks, and
+active monitoring
+of words and phrases that show signs of user frustration.</p>
+
+<p>The leak also quickly escalated into a cybersecurity threat, as attackers pounced on the surge in interest to lure developers into downloading stealer malware. 🔥 Trending CVEs
+New vulnerabilities show up every week, and the window between disclosure and exploitation keeps getting shorter. The flaws below are this week’s most critical — high-severity, widely used software, or already drawing attention from the security community. Check these first, patch what applies, and don’t wait on the ones marked urgent —
+CVE-2026-35616
+(Fortinet FortiClient EMS),
+CVE-2026-20093
+(Cisco Integrated Management Controller),
+CVE-2026-20160
+(Cisco Smart Software Manager On-Prem),
+CVE-2026-5281
+(Google Chrome),
+CVE-2026-3502
+(TrueConf),
+CVE-2026-27876, CVE-2026-27880
+(Grafana),
+CVE-2026-4789
+(Kyverno),
+CVE-2026-2275, CVE-2026-2285, CVE-2026-2286, CVE-2026-2287
+(CrewAI),
+CVE-2025-14819
+(Notepad++),
+CVE-2026-34714
+,
+CVE-2026-34982
+(
+Vim
+),
+CVE-2026-33660
+,
+CVE-2026-33696
+(n8n),
+CVE-2026-25639
+(Axios),
+CVE-2026-25075
+(
+strongSwan
+),
+CVE-2026-34156
+(NocoBase),
+CVE-2026-3308
+(Artifex MuPDF),
+CVE-2026-1579
+(PX4 Autopilot),
+CVE-2026-3991
+(Symantec Data Loss Prevention Agent for Windows),
+CVE-2026-33026
+(nginx-ui),
+CVE-2026-33416
+,
+CVE-2026-33636
+(libpng),
+CVE-2026-3775, CVE-2026-3779
+(Foxit PDF Editor),
+CVE-2026-34980, CVE-2026-34990
+(CUPS), and
+CVE-2026-34121
+(TP-Link).</p>
+
+<p>🎥 Cybersecurity Webinars
+Learn How to Close Identity Gaps Using Insights from IT Leaders
+→ Identity programs face rising risk from disconnected apps, manual credentials, and expanding AI access. Based on 2026 insights from 600+ IT and security leaders, this session shows what to measure, fix, and do now to close identity gaps and regain control. Learn How to Build Secure AI Agents Using Identity, Visibility, and Control
+→ AI agents are already being used, but most teams don’t know how to secure them properly. This session shows a clear, practical way to do it using three key ideas: identity, visibility, and control.You will see what real deployment looks like, how to track what agents do, and how to manage their behavior safely.It also explains how to secure AI systems today without waiting for standards to settle.</p>
+
+<p>📰 Around the Cyber World
+Device Code Phishing Attacks Surge
+—
+Device code phishing attacks
+, which abuse the OAuth device authorization grant flow to hijack accounts, have surged more than 37.5x this year. Push Security said it detected a 15x increase in device code phishing pages at the start of March 2026, indicating that the technique has finally entered mainstream adoption. “The technique tricks a user into issuing access tokens for an attacker-controlled application (not a device, confusingly),” the company
+said
+. “Any app that supports device code logins can be a target.</p>
+
+<p>Popular examples include Microsoft, Google, Salesforce, GitHub, and AWS. That said, Microsoft is, as always, much more heavily targeted at scale now than any other app.” This has been fueled by the emergence of EvilTokens (aka ANTIBOT), the first reported criminal PhaaS (Phishing-as-a-Service) toolkit that supports device code pushing. EvilTokens features a Cloudflare Workers frontend and a Railway backend for authentication. Early iterations of the PhaaS kit emerged in January 2026.</p>
+
+<p>Another closed-source PhaaS kit called Venom offers device code phishing capabilities similar to EvilTokens. Some of the other PhaaS kits that have incorporated this technique include SHAREFILE, CLURE, LINKID, AUTHOV, DOCUPOLL, FLOW_TOKEN, PAPRIKA, DCSTATUS, and DOLCE. LinkedIn Comes Under Scanner for BrowserGate
+—A newly published report called BrowserGate alleged that Microsoft’s LinkedIn is using hidden JavaScript scripts on its website to scan visitors’ browsers for thousands of installed Google Chrome extensions and collect device data without users’ consent. “LinkedIn scans for over 200 products that directly compete with its own sales tools, including Apollo, Lusha, and ZoomInfo,” the report
+said
+.</p>
+
+<p>“Because LinkedIn knows each user’s employer, it can map which companies use which competitor products. It is extracting the customer lists of thousands of software companies from their users’ browsers without anyone’s knowledge. Then it uses what it finds. LinkedIn has already sent enforcement threats to users of third-party tools, using data obtained through this covert scanning to identify its targets.” The report also claimed LinkedIn loads an invisible tracking pixel from HUMAN Security, along with a separate fingerprinting script that runs from LinkedIn’s servers and a third script from Google that runs silently on every page load.</p>
+
+<p>In response to the findings, LinkedIn
+told
+Bleeping Computer it scans for certain extensions that scrape data without members’ consent in violation of its terms of service. The company also claimed the report is from an individual who is “subject to an account restriction for scraping and other violations of LinkedIn’s Terms of Service.”
+ICE Confirms Use of Paragon Spyware
+—The U.S. Immigration and Customs Enforcement (ICE)
+confirmed
+it uses spyware developed by Paragon to “identify, disrupt, and dismantle Foreign Terrorist Organizations, addressing the escalating fentanyl epidemic and safeguarding national security.” Paragon’s Graphite spyware has been found on the phones of journalists. WhatsApp last year
+said
+it disrupted a campaign that deployed the spyware against its users.</p>
+
+<p>The governments of Australia, Canada, Cyprus, Denmark, Israel, and Singapore are
+suspected
+to be customers of the Israeli company. Ex-Engineer Pleads Guilty to Extortion Campaign
+—Daniel Rhyne, 59, of Kansas City, Missouri,
+pleaded guilty
+to a failed data extortion campaign that targeted his former employer. Rhyne was
+arrested
+in September 2024. According to court documents, Rhyne worked as a core infrastructure engineer at a U.S.-based industrial company headquartered in New Jersey.</p>
+
+<p>In November 2023, the defendant executed a ransomware attack against the company and sent an extortion email to its employees, threatening to continue shutting down the firm’s servers unless he was paid about 20 Bitcoin, which was valued at $750,000 at the time. Last month, the U.S. Justice Department (DoJ) announced the conviction of Cameron Curry (aka Loot), a 27-year-old from Charlotte, North Carolina, for carrying out a cyber extortion scheme against a D.C.-based international technology company called Brightly Software. “Trial evidence established that Curry misused his position to access the victim company’s personnel and other sensitive corporate records, which he then used to carry out the cyber extortion scheme after he learned that his contract was not going to be renewed and that he would no longer be employed by the company,” the DoJ
+said
+.</p>
+
+<p>Between December 11, 2023, and January 24, 2024, Curry sent more than 60 emails to company executives and employees, stating he would disclose sensitive information unless he was paid $2.5 million in cryptocurrency. Brightly ended up paying $7,540 in Bitcoin. Residential Proxies Bypass Reputation Systems
+—Threat intelligence firm GreyNoise’s analysis of 4 billion sessions targeting the edge over a 90-day period from November 29, 2025, to February 27, 2026, found that 39% of unique IP addresses targeting the edge originated from home internet connections, and that 78% vanish before any reputation system can flag them. “78% of residential IPs appear in only 1–2 sessions and are never observed again,” it
+said
+.</p>
+
+<p>“IP reputation is structurally broken against residential proxies. The rotation rate exceeds the update cycle of any feed-based defense.” This behavior also makes source IPs indistinguishable from a legitimate user’s connection. The data also showed that 0.1% of residential sessions carry exploitation payloads, in contrast to 1.0% from hosting infrastructure, indicating that they are primarily used for network scanning and reconnaissance. The residential proxy traffic is generated by IoT botnets and infected computers, with the networks also resilient against takedown efforts.</p>
+
+<p>“After IPIDEA lost 40% of its nodes, operators backfilled within weeks,” GreyNoise said. “Every major takedown produces the same result – temporary disruption, then regeneration.” The company also recommended that “Detection must shift from ‘where is the traffic from?’ to ‘what is the traffic doing?” Device fingerprinting provides more durable detection because fingerprints survive IP rotation.”
+Suspected N. Korea Campaign Targets Cryptocurrency Companies Using React2Shell
+—A new campaign has been observed systematically compromising cryptocurrency organizations by exploiting web application vulnerabilities such as
+React2Shell
+(CVE-2025-55182), pillaging AWS tenants with valid credentials, and exfiltrating proprietary exchange software containing hardcoded secrets. “Their targeting spans the crypto supply chain, from staking platforms, to exchange software providers, to the exchanges themselves,” Ctrl-Alt-Intel
+said
+.</p>
+
+<p>The threat intelligence firm has assessed the activity with moderate confidence to be aligned with North Korean cryptocurrency theft operations. India Extends SIM-Binding Mandate
+—The Indian government has extended its
+SIM-binding mandate
+through December 31, 2026, while shelving plans to require messaging apps to forcibly log out web-based sessions like WhatsApp Web every six hours. The decision
+comes
+after the Broadband India Forum, which represents Meta and Google, warned the Department of Telecommunications (DoT) that the directions were unconstitutional. Under the framework announced in November 2025, a messaging app account would be tied exclusively to the physical SIM card during registration.</p>
+
+<p>This meant that the users could access the messages and other content only when that SIM is present in the device. Companies were given 90 days (i.e., until the end of February 2026) to comply. While SIM binding has been proposed as a way to combat spammers and conduct cross‑border fraud, the move has raised feasibility and user experience concerns. According to Moneycontrol, WhatsApp is
+said
+to be beta testing SIM binding on Android.</p>
+
+<p>Russian Threat Actors Looking to Regain Access Through Compromised Infrastructure
+—Russian threat actors like APT28 and Void Blizzard are attempting to regain access to computer systems they previously compromised to check if access is still available and whether the obtained credentials remain valid, CERT-UA has warned. “Unfortunately, these attempts sometimes succeed if the root cause of the initial incident has not been completely eliminated,” the agency
+said
+. OkCupid Settles with FTC for Privacy Violations
+—OkCupid and its owner, Match Group,
+reached
+a settlement with the U.S. Federal Trade Commission over allegations that it did not inform its customers that nearly three million user photos were shared with Clarifai, a company that develops AI systems to identify and analyze images and videos.</p>
+
+<p>The complaint also accused the dating site of sharing users’ location information and other details without their consent. As part of the settlement, OkCupid and Match did not admit or deny the allegations but agreed to a permanent prohibition that prevents them from misrepresenting how they use and share personal data. New Android Malware Mirax Advertised
+—A sophisticated new Android banking trojan named
+Mirax
+is being advertised as a private malware-as-a-service (MaaS) offering for up to $2,500 per month. The malware enables customers to gain remote control over devices and includes specialized overlays for more than 700 different financial applications to steal credentials and other sensitive information.</p>
+
+<p>It can also capture keystrokes, intercept SMS messages, record lock screen patterns, and use the infected device as a SOCKS5 proxy. Venom Stealer Spreads via ClickFix
+—A new malware-as-a-service (MaaS) platform dubbed
+Venom Stealer
+is being sold on cybercrime forums as a subscription ($250/month to $1,800 for lifetime access). It’s marketed as “the Apex Predator of Wallet Extraction.” Unlike other stealers, it automates credential theft and enables continuous data exfiltration. “It builds
+ClickFix
+social engineering directly into the operator panel, automates every step after initial access, and creates a continuous exfiltration pipeline that does not end when the initial payload finishes running,” BlackFog said.</p>
+
+<p>The development coincides with a new
+ClickFix variant
+that replaces PowerShell with a “rundll32.exe” command to download a DLL from an attacker-controlled WebDAV resource. The attack leads to the execution of a secondary loader called SkimokKeep, which then downloads additional payloads, while incorporating anti-sandboxing and anti-debugging mechanisms. In the meantime,
+recent ClickFix campaigns
+have also leveraged searches for installation tutorials for OpenClaw, Claude, and other AI tools, as well as for common macOS issues to push stealer malware like
+MacSync
+. More Information Stealers Spotted
+—Speaking of stealers, recent campaigns have also been observed using procurement-themed email lures and fake Homebrew install guides served via sponsored search results to deliver
+Phantom Stealer
+and
+SHub Stealer
+.</p>
+
+<p>Some other newly discovered infostealer malware families include
+Storm
+,
+MioLab
+, and
+Torg Grabber
+. In a related development, CyberProof
+said
+it observed a surge in
+PXA Stealer
+activity targeting global financial institutions during Q1 2026. Another malware that has
+gained notoriety
+is BlankGrabber, which is distributed through social engineering and phishing campaigns. Data gathered by Flare
+shows
+that a single stealer log can be devastating, with individual logs containing up to 1,381 pieces of personally identifiable information.</p>
+
+<p>In an analysis published by Whiteintel last month, the company found that a single careless download of cracked software by one employee can hand criminal groups direct access to an entire corporate network in under two days. “An employee downloads cracked software on Tuesday afternoon,” it
+said
+. “By Thursday morning, their credentials are listed on the Russian Market for $15. Corporate VPN access, AWS credentials, session tokens that bypass MFA – all packaged and ready for purchase.”
+Phishing Campaign Targets Philippine Banking Users
+—An ongoing phishing campaign targeting major banks in the Philippines is using email phishing via compromised accounts as the initial vector to harvest online banking credentials and one-time passwords (OTPs) for financial fraud.</p>
+
+<p>According to Group-IB, the campaign began in early 2024, distributing over 900 malicious links as part of the coordinated scheme. Clicking on the link embedded in the email message triggers a redirection chain that uses trusted services like Google Business, AMP CDN, Cloudflare Workers, and URL shorteners before taking the victims to the final landing page. “The campaign enables real-time financial fraud by bypassing MFA mechanisms through the theft of valid One-Time Passwords (OTP), allowing attackers to perform unauthorized fund transfers,” the company
+said
+. “Telegram bots were used as exfiltration channels, enabling threat actors to automatically collect victims’ login information in real time.” The activity has been attributed to a threat group called PHISLES.</p>
+
+<p>Chrome Extensions Harvests ChatGPT Conversations
+—A malicious Chrome extension, named “ChatGPT Ad Blocker” (ID: ipmmidjikiklckbngllogmggoofbhjikgb), found on the Chrome Web Store masquerades as an ad-blocking tool for the AI chatbot, but contains functionality to “steal the user’s ChatGPT conversations data by systematically copying the HTML page and sending to it to a webhook on a private Discord channel,” DomainTools
+said
+. Iran Conflict Triggers Espionage Activity in Middle East
+—In the aftermath of the U.S.-Israel-Iran conflict, Proofpoint
+said
+it has recorded an increase in campaigns from state-sponsored threat actors likely affiliated with China (UNK_InnerAmbush, which uses phishing emails to deliver
+Cobalt Strike
+payload), Belarus (
+TA473
+, which has used HTML attachments in emails for reconnaissance), Pakistan (UNK_RobotDreams, which has sent spear-phishing emails to India-based offices of Middle East government entities to deliver a
+Rust backdoor
+), and Hamas (
+TA402
+, which has used compromised Iraq government email addresses to conduct Microsoft account credential harvesting) targeting Middle East government organizations. The enterprise security company said it also identified the Charming Kitten actor targeting a think tank in the U.S. to trick recipients into entering their Microsoft account credentials.</p>
+
+<p>One activity cluster that remains unattributed is UNK_NightOwl. The email messages include a domain that spoofed Microsoft OneDrive, leading the victim to a credential harvesting page. If the user enters credentials and clicks the sign-in button, the target is redirected to “hxxps://iran.liveuamap[.]com/,” a legitimate open-source platform called Liveuamap with news updates on the Middle East conflict. U.K.</p>
+
+<p>Warns of Messaging App Targeting
+—The U.K. National Cyber Security Centre (NCSC) became the latest cybersecurity agency to warn of
+malicious activity
+from messaging apps like WhatsApp, Messenger, and Signal, where threat actors could trick high-risk individuals into
+sharing their login or account recovery codes
+, or linking an attacker-controlled device under their accounts. 🔧 Cybersecurity Tools
+Dev Machine Guard
+→ It is an open-source script that scans a developer machine to list installed tools and detect security risks across IDEs, AI agents, extensions, and configurations, without accessing source code or secrets, helping expose gaps traditional tools miss in developer environments. Pius
+→ It is an open-source tool that maps a company’s external attack surface by discovering and cataloging internet-facing assets, helping security teams identify exposure and reconnaissance risks that could be targeted by attackers.</p>
+
+<p>Disclaimer: For research and educational use only. Not security-audited. Review all code before use, test in isolated environments, and ensure compliance with applicable laws. Conclusion
+The lesson is simple.</p>
+
+<p>Small things matter. Most issues now start from normal parts of the system, not big, obvious gaps. Don’t trust anything just because it looks routine. Updates, tools, and background systems can all be used in the wrong way.</p>
+
+<p>If it seems low risk, check it again. That’s where the problems are starting now. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-litellm-turned-developer-machines-into-credential-vaults-for-attackers"><a id="article-5"></a>How LiteLLM Turned Developer Machines Into Credential Vaults for Attackers</h2>
+
+<p>The most active piece of enterprise infrastructure in the company is the developer workstation. That laptop is where credentials are created, tested, cached, copied, and reused across services, bots, build tools, and now local AI agents. In March 2026, the TeamPCP threat actor proved just how valuable developer machines are. Their supply chain attack on LiteLLM, a popular AI development library downloaded millions of times daily, turned developer endpoints into systematic credential harvesting operations.</p>
+
+<p>The malware only needed access to the plaintext secrets already sitting on disk. The LiteLLM Attack: A Case Study in Developer Endpoint Compromise
+The attack was straightforward in execution but devastating in scope. TeamPCP compromised LiteLLM packages versions 1.82.7 and 1.82.8 on PyPI, injecting infostealer malware that activated when developers installed or updated the package. The malware systematically harvested SSH keys, cloud credentials for AWS, Azure, and GCP, Docker configurations, and other sensitive data from developer machines.</p>
+
+<p>PyPI removed the malicious packages within hours of detection, but the damage window was significant. GitGuardian’s analysis found that 1,705 PyPI packages were configured
+to automatically pull the compromised LiteLLM versions as dependencies. Popular packages like dspy (5 million monthly downloads), opik (3 million), and crawl4ai (1.4 million) would have triggered malware execution during installation. The cascade effect meant organizations that never directly used LiteLLM could still be compromised through transitive dependencies.</p>
+
+<p>Why Developer Machines Are Attractive Targets
+This attack pattern isn’t new; it’s just more visible. The
+Shai-Hulud campaigns
+demonstrated similar tactics at scale. When GitGuardian analyzed 6,943 compromised developer machines from that incident, researchers found 33,185 unique secrets, with at least 3,760 still valid. More striking: each live secret appeared in roughly eight different locations on the same machine, and 59% of compromised systems were CI/CD runners rather than personal laptops.</p>
+
+<p>Adversaries now slip into the toolchain through compromised dependencies, malicious plugins, or poisoned updates. Once there, they harvest local environment data with the same systematic approach security teams use to scan for vulnerabilities, except they’re looking for credentials stored in .env files, shell profiles, terminal history, IDE settings, cached tokens, build artifacts, and AI agent memory stores. Secrets Live Everywhere in Plaintext
+The LiteLLM malware succeeded because developer machines are dense concentration points for plaintext credentials. Secrets end up in source trees, local config files, debug output, copied terminal commands, environment variables, and temporary scripts.</p>
+
+<p>They accumulate in .env files that were supposed to be local-only but became a permanent part of the codebase. Convenience turns into residue, which becomes opportunity. Developers are running agents, local MCP servers, CLI tools, IDE extensions, build pipelines, and retrieval workflows, all requiring credentials. Those credentials spread across predictable paths where malware knows to look: ~/.aws/credentials, ~/.config/gh/config.yml, project .env files, shell history, and agent configuration directories.</p>
+
+<p>Protecting Developer Endpoints at Scale
+It’s important to build continuous protection across every developer endpoint where credentials accumulate.GitGuardian approaches this by extending secrets security beyond code repositories to the developer machine itself. The LiteLLM attack demonstrated what happens when credentials accumulate in plaintext across developer endpoints. Here’s what you can do to reduce that exposure. Understand Your Exposure
+Start with visibility.</p>
+
+<p>Treat the workstation as the primary environment for secrets scanning, not an afterthought. Use ggshield to scan local repositories for credentials that slipped into code or linger in Git history. Scan filesystem paths where secrets accumulate outside Git: project workspaces, dotfiles, build output, and agent folders where local AI tools generate logs, caches, and ”memory” stores. ggshield detecting a secret in a specific file from a path
+Don’t assume environment variables are safe just because they’re not in files.</p>
+
+<p>Shell profiles, IDE settings, and generated artifacts often persist environment values on disk indefinitely. Scan these locations the same way you scan repos. Add ggshield pre-commit hooks to stop creating new leaks in commits while cleaning up old ones. This turns secret detection into a default guardrail that catches mistakes before they become incidents.</p>
+
+<p>ggshield pre-commit command catching a secret
+Move Secrets Into Vaults
+Detection without remediation is just noise. When a credential leaks, remediation typically requires coordination across multiple teams: security identifies the exposure, infrastructure owns the service, the original developer may have left the company, and product teams worry about production breaks. Without clear ownership and workflow automation, remediation becomes a manual process that gets deprioritized. The solution is treating secrets as managed identities with defined ownership, lifecycle policies, and automated remediation paths.</p>
+
+<p>Move credentials into a centralized vault infrastructure where security teams can enforce rotation schedules, access policies, and usage monitoring. Integrate incident management with your existing ticketing systems so remediation happens in context rather than requiring constant tool-switching. GitGuardian Analytics showing the state of secrets being monitored
+Treat AI Agents as Credential Risks
+Agentic tools can read files, run commands, and move data. With OpenClaw-style agents, “memory” is literally files on disk (SOUL.md, MEMORY.md) stored in predictable locations.</p>
+
+<p>Never paste credentials into agent chats, never teach agents secrets “for later,” and routinely scan agent memory files as sensitive data stores. Eliminate Whole Classes of Secrets
+The fastest way to reduce secret sprawl is by removing the need for entire categories of shared secrets. On the human side, adopt WebAuthn (passkeys) to replace passwords. On the workload side, migrate to OIDC federation, so pipelines stop relying on stored cloud keys and service account secrets.</p>
+
+<p>Start with the highest-risk paths where leaked credentials hurt most, then expand. Move developer access to passkeys and migrate CI/CD workflows to OIDC-based auth. Use Ephemeral Credentials
+If you can’t eliminate secrets yet, make them short-lived and automatically replaced. Use SPIFFE to issue cryptographic identity documents (SVIDs) that rotate automatically instead of relying on static API keys.</p>
+
+<p>Start with long-lived cloud keys, deployment tokens, and service credentials that developers keep locally for convenience. Shift to short-lived tokens, automatic rotation, and workload identity patterns. Each migration is one less durable secret that can be stolen and weaponized. The goal is to reduce the value an attacker can extract from any successful foothold on a developer machine.</p>
+
+<p>Honeytokens as early warning systems
+Honeytokens provide interim protection. Place decoy credentials in locations attackers systematically target: developer home directories, common configuration paths, and agent memory stores. When harvested and validated, these tokens generate immediate alerts, compressing detection time from “discovering damage weeks later” to “catching attacks while unfolding.” This isn’t the end state, but it changes the response window while systematic cleanup continues. Developer endpoints are now part of your critical infrastructure.</p>
+
+<p>They sit at the intersection of privilege, trust, and execution. The LiteLLM incident proved that adversaries understand this better than most security programs. Organizations that treat developer machines with the same governance discipline already applied to production systems will be the ones that survive the next supply chain compromise. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="inside-the-2026-cyber-workforce-skills-shortages-and-shifts-in-the-age-of-ai"><a id="article-6"></a>Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</h2>
+
+<h2 id="qilin-and-warlock-ransomware-use-vulnerable-drivers-to-disable-300-edr-tools"><a id="article-7"></a>Qilin and Warlock Ransomware Use Vulnerable Drivers to Disable 300+ EDR Tools</h2>
+
+<p>Threat actors associated with
+Qilin
+and
+Warlock
+ransomware operations have been observed using the bring your own vulnerable driver (
+BYOVD
+) technique to silence security tools running on compromised hosts, according to findings from Cisco Talos and Trend Micro. Qilin attacks analyzed by Talos have been found to deploy a malicious DLL named “msimg32.dll,” which initiates a multi-stage infection chain to disable endpoint detection and response (EDR) solutions. The DLL, launched via DLL side-loading, is capable of terminating more than 300 EDR drivers from almost every security vendor in the market. “The first stage consists of a PE loader responsible for preparing the execution environment for the EDR killer component,” Talos researchers Takahiro Takeda and Holger Unterbrink
+said
+.</p>
+
+<p>“This secondary payload is embedded within the loader in an encrypted form.”
+The DLL loader implements an array of techniques to evade detection. It neutralizes user-mode hooks, suppresses Event Tracing for Windows (ETW) event logs, and takes steps to conceal control flow and API invocation patterns. As a result, it allows the main EDR killer payload to be decrypted, loaded, and executed entirely in memory while entirely flying under the radar. Once launched, the malware makes use of two drivers -
+rwdrv.sys, a renamed version of “ThrottleStop.sys” that’s used to gain access to the system’s physical memory and act as a kernel-mode hardware access layer.</p>
+
+<p>hlpdrv.sys, to terminate processes associated with over 300 different EDR drivers belonging to various security solutions. It’s worth noting that both drivers have been used as part of BYOVD attacks carried out in conjunction with
+Akira
+and
+Makop
+ransomware intrusions. “Prior to loading the second driver, the EDR killer component unregisters monitoring callbacks established by the EDR, ensuring that process termination can proceed without interference,” Talos said. “It demonstrates the sophisticated tricks the malware is employing to circumvent or completely disable modern EDR protection features on compromised systems.”
+According to statistics compiled by
+CYFIRMA
+and
+Cynet
+, Qilin has
+emerged
+as the most active ransomware group in recent months, claiming hundreds of victims.</p>
+
+<p>The group has been linked to 22 out of 134 ransomware incidents that were reported in Japan in 2025, representing 16.4% of all attacks. “Qilin primarily relies on stolen credentials to gain initial access,” Talos
+said
+. “After successfully breaching a target environment, the group places considerable emphasis on post-compromise activities, allowing it to methodically expand its control and maximize impact.”
+The cybersecurity vendor also noted that ransomware execution occurred on average roughly six days after the initial compromise, highlighting the need for organizations to detect malicious activity at the earliest possible stage and to prevent the deployment of ransomware. The disclosure comes as the Warlock (aka Water Manaul) ransomware group continues to exploit unpatched Microsoft SharePoint servers, while updating its toolset for enhanced persistence, lateral movement, and defense evasion.This includes the use of
+TightVNC
+for persistent control and a legitimate-but-vulnerable
+NSec driver
+(“NSecKrnl.sys”) in a BYOVD attack to terminate security products at the kernel level, replacing the “googleApiUtil64.sys” driver used in prior campaigns.</p>
+
+<p>Also observed during the course of the Warlock attack in January 2026 were the following tools -
+PsExec
+, for lateral movement. RDP Patcher, for facilitating concurrent RDP sessions. Velociraptor
+, for command-and-control (C2). Visual Studio Code and Cloudflare Tunnel, for tunneling C2 communications.</p>
+
+<p>Yuze
+, for intranet penetration and establishing a reverse proxy connection to the attacker’s C2 server across HTTP (port 80), HTTPS (port 443), and DNS (port 53). Rclone, for data exfiltration. To counter BYOVD threats, it’s recommendedto only allow signed drivers from explicitly trusted publishers, monitor driver installation events, and maintain a rigorous patch management schedule for updating security software, specifically those with driver-based components that could be exploited. “Warlock’s reliance on vulnerable drivers to disable security controls requires a multilayered defense focused on kernel integrity,” Trend Micro
+said
+.</p>
+
+<p>“Thus, organizations must upgrade from basic endpoint protection to enforcing strict driver governance and real-time monitoring of kernel-level activities.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="bka-identifies-revil-leaders-behind-130-german-ransomware-attacks"><a id="article-8"></a>BKA Identifies REvil Leaders Behind 130 German Ransomware Attacks</h2>
+
+<p>Germany’s Federal Criminal Police Office (aka BKA or the Bundeskriminalamt) has unmasked the real identities of two of the key figures associated with the now-defunct
+REvil
+(aka
+Sodinokibi
+) ransomware-as-a-service (RaaS) operation. One of the threat actors, who went by the alias
+UNKN
+, functioned as a representative of the group, advertising the ransomware in June 2019 on the XSS cybercrime forum. He has now been identified as
+Daniil Maksimovich Shchukin
+, a 31-year-old Russian national. He also went by the online monikers Oneiilk2, Oneillk2, Oneillk22, and GandCrab.</p>
+
+<p>The development was
+reported
+by independent security journalist Brian Krebs. “From early 2019 at the latest until at least July 2021, the wanted person, in cooperation with other individuals, acted as the leader of one of the largest global ransomware groups, known as GandCrab/REvil,” BKA said. “The perpetrators demanded large ransom payments in exchange for decrypting and not leaking data.”
+Also added to the wanted list is
+Anatoly Sergeevitsch Kravchuk
+, a 43-year-old Russian born in the Ukrainian city of Makiivka. He is alleged to have acted as the developer of REvil during the same time period.</p>
+
+<p>Shchukin and Kravchuk are suspected of having carried out 130 ransomware attacks across Germany. Out of these, 25 cases led to the payment of €1.9 million ($2.19 million). The incidents collectively incurred financial damages exceeding €35.4 million ($40.8 million). REvil
+(aka Water Mare and Gold Southfield) was one of the
+prolific ransomware groups
+that counted companies like JBS and Kaseya among its victims.</p>
+
+<p>An evolution of the
+GandCrab
+ransomware, the e-crime crew
+mysteriously went offline
+in mid-July 2021, only to resurface in two months later. By October 2021, the group
+ceased operations
+, and its data leak site became inaccessible as part of a
+law enforcement operation
+. Weeks later, Romanian law enforcement authorities
+announced
+the arrest of two individuals for their roles as affiliates of the REvil ransomware family. In a rare move, Russia’s Federal Security Service (FSB)
+disclosed
+in January 2022 that it had arrested several members belonging to the notorious REvil ransomware gang and neutralized its operations.</p>
+
+<p>Four of those members were
+sent to several years in prison
+in October 2024, Russian news publication Kommersant reported. UNKN also
+disappeared
+from the cybercrime forums coinciding with the operation, prompting another user, REvil (later renamed to 0_neday), to become the public face of the gang’s operations. In an
+interview
+with Recorded Future’s Dmitry Smilyanets in March 2021, UNKN said he had been in the ransomware business since 2007 and that they had as many as 60 affiliates working for the group at one point. “As a child, I scrounged through the trash heaps and smoked cigarette butts.</p>
+
+<p>I walked 10 km one way to the school,” he was quoted as saying. “I wore the same clothes for six months. In my youth, in a communal apartment, I didn’t eat for two or even three days. Now I am a millionaire.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="285-million-drift-hack-traced-to-six-month-dprk-social-engineering-operation"><a id="article-9"></a>$285 Million Drift Hack Traced to Six-Month DPRK Social Engineering Operation</h2>
+
+<p>Drift has
+revealed
+that the April 1, 2026, attack that led to the
+theft of $285 million
+was the culmination of a months-long targeted and meticulously planned social engineering operation undertaken by the Democratic People’s Republic of Korea (DPRK) that began in the fall of 2025. The Solana-based decentralized exchange described it as “an attack six months in the making,” attributing it with medium confidence to a North Korean state-sponsored hacking group dubbed
+UNC4736
+, which is also tracked under the cyptonyms AppleJeus, Citrine Sleet, Golden Chollima, and Gleaming Pisces. The threat actor has a
+history
+of targeting the cryptocurrency sector for financial theft since at least 2018. It’s best known for the
+X_TRADER/3CX supply chain breach
+in 2023 and the
+$53 million hack
+of decentralized finance (DeFi) platform
+Radiant Capital
+in October 2024.</p>
+
+<p>“The basis for this connection is both on-chain (fund flows used to stage and test this operation trace back to the Radiant attackers) and operational (personas deployed across this campaign have identifiable overlaps with known DPRK-linked activity),” Drift said in a Sunday analysis. In an assessment
+published
+in late January 2026, cybersecurity company CrowdStrike described Golden Chollima as an offshoot of Labyrinth Chollima that’s primarily geared towards cryptocurrency theft by targeting small fintech firms in the U.S., Canada, South Korea, India, and Western Europe. “The adversary typically conducts smaller-value thefts at a more consistent operational tempo, suggesting responsibility for ensuring baseline revenue generation for the DPRK regime,” CrowdStrike said. “Despite improving trade relations with Russia, the DPRK requires additional revenue to fund ambitious military plans that include constructing new destroyers, building nuclear-powered submarines, and launching additional reconnaissance satellites.”
+In at least one incident observed in late 2024, UNC4736 delivered malicious Python packages through a fraudulent recruitment scheme to a European fintech company.</p>
+
+<p>Upon gaining access, the threat actor moved laterally to the victim’s cloud environment to access IAM configurations and associated cloud resources, and ultimately diverted cryptocurrency assets to adversary-controlled wallets. How the Drift Attack Likely Unfolded
+Drift, which is working with law enforcement and forensic partners to piece together the sequence of events that led to the hack, said it was the target of a “structured intelligence operation” that required months of planning. Starting in or about fall 2025, individuals posing as a quantitative trading company approached Drift contributors at a major cryptocurrency conference and international crypto conferences under the pretext of integrating the protocol. It has since emerged that this was a deliberate approach, where members of this trading group approached and built rapport with specific Drift contributors at various major industry conferences that took place in several countries over a period of six months.</p>
+
+<p>“The individuals who appeared in person were not North Korean nationals,” Drift explained. “DPRK threat actors operating at this level are known to deploy third-party intermediaries to conduct face-to-face relationship-building.”
+“They were technically fluent, had verifiable professional backgrounds, and were familiar with how Drift operated. A Telegram group was established upon the first meeting, and what followed were months of substantive conversations around trading strategies and potential vault integrations. These interactions are typical of how trading firms interact and onboard with Drift.”
+Then, sometime between December 2025 and January 2026, the group onboarded an Ecosystem Vault on Drift, a step that required filling out a form with strategy details.</p>
+
+<p>As part of this process, the individuals are said to have engaged with multiple contributors, asking them “detailed and informed product questions,” while depositing more than $1 million of their own funds. This, Drift said, was a calculated move designed to build a functioning operational presence inside the Drift ecosystem, with integration conversations continuing with the contributors through February and March 2026. This included sharing links for projects, tools, and applications that the company claimed to be developing. The possibility that these interactions with the trading group may have acted as the initial infection pathway assumed significance in the wake of the April 1 hack.</p>
+
+<p>But as Drift revealed, their Telegram chats and malicious software had been deleted right around the time the attack took place. It’s suspected that there may be two primary attack vectors -
+One contributor may have been compromised after cloning a code repository shared by the group as part of efforts to deploy a frontend for their vault. A second contributor was persuaded into downloading a wallet product via Apple’s TestFlight to beta test the app. The repository-based intrusion vector is assessed to have involved a malicious Microsoft Visual Studio Code (VS Code) project that weaponizes the “tasks.json” file to automatically trigger the execution of malicious code upon opening the project in the IDE by using the “runOn: folderOpen” option.</p>
+
+<p>It’s worth noting that this technique has been
+adopted
+by North Korean threat actors associated with the Contagious Interview campaign since December 2025, prompting Microsoft to introduce new security controls in VS Code versions 1.109 and 1.110 to prevent unintended execution of tasks when opening a workspace. “The investigation has shown so far that the profiles used in this third-party targeted operation had fully constructed identities including employment histories, public-facing credentials, and professional networks,” Drift said. “The people Drift contributors met in person appeared to have spent months building profiles, both personal and professional, that could withstand scrutiny during a business or counterparty relationship.”
+North Korea’s Fragmented Malware Ecosystem
+The disclosure comes as DomainTools Investigations (DTI) disclosed that DPRK’s cyber apparatus has evolved into a “deliberately fragmented” malware ecosystem that’s mission-driven, operationally resilient, and resistant to attribution efforts. This shift is believed to be a response to law enforcement actions and intelligence disclosures about North Korean hacking campaigns.</p>
+
+<p>“Malware development and operations are increasingly compartmentalized, both technically and organizationally, ensuring that exposure in one mission area does not cascade across the entire program,” DTI
+said
+. “Crucially, this model also maximizes ambiguity. By separating tooling, infrastructure, and operational patterns along mission lines, the DPRK complicates attribution and slows defender decision-making.”
+Financial operations malware track
+To that end, DomainTools noted that DPRK’s espionage-oriented malware track is chiefly associated with
+Kimsuky
+, while
+Lazarus Group
+spearheads efforts to generate illicit revenue for the regime, transforming into a “central pillar” for sanctions evasion. The third track revolves around deploying ransomware and wiper malware for purposes of strategic signaling and drawing attention to its capabilities.</p>
+
+<p>This disruptive branch is associated with
+Andariel
+. Social Engineering Behind Contagious Interview and IT Worker Fraud
+Social engineering and deception continue to be the main catalyst for many of the intrusions that have been attributed to DPRK threat actors. This includes the recent supply chain compromise of the hugely popular npm package,
+Axios
+, as well as ongoing campaigns like Contagious Interview and IT worker fraud. Contagious Interview is the moniker
+assigned
+to a long-running threat in which the adversary approaches prospective targets and tricks them into executing malicious code from a fake repository as part of an assessment.</p>
+
+<p>Some of these efforts have used weaponized Node.js projects hosted on GitHub to
+deploy
+a JavaScript backdoor called
+DEV#POPPER RAT
+and an information stealer known as OmniStealer. On the other hand,
+DPRK IT worker fraud
+refers to
+coordinated efforts
+by North Korean operatives to
+land remote freelance and full-time roles
+at Western companies using stolen identities,
+AI-generated personas
+, and falsified credentials. Once hired, they generate steady revenue and leverage the access to introduce malware and siphon proprietary and sensitive information. In some cases, the stolen data is used to extort money from businesses.</p>
+
+<p>The
+state-sponsored program
+deploys thousands of technically skilled workers in countries like China and Russia, who connect to company-issued laptops hosted at laptop farms in the U.S. and elsewhere. The scheme also relies on a network of facilitators to receive work laptops, manage payroll, and handle logistics. These facilitators are recruited through shell companies.</p>
+
+<p>The process starts with recruiters who identify and screen potential candidates. Once accepted, the IT workers enter an onboarding phase, where facilitators assign identities and profiles, and guide them through resume updates, interview preparation, and initial job applications. The threat actors also work with collaborators to complete hiring requirements for full-time opportunities where strict identity verification policies are enforced. As noted by Chainalysis, cryptocurrency
+plays
+a central role in funneling a majority of the wages generated by these IT worker schemes back to North Korea while evading international sanctions.</p>
+
+<p>“The cycle is constant and unending. North Korean IT workers understand that, sooner or later, they will either quit or be dismissed from any given role,” Flare and IBM X-Force
+said
+in a report last month. “As a result, they are continually shifting between jobs, identities, and accounts – never remaining in one position or using a single persona for very long.”
+New evidence unearthed by Flare has since revealed the campaign’s efforts to actively recruit individuals from Iran, Syria, Lebanon, and Saudi Arabia, with at least two Iranians receiving formal offer letters from U.S. employers.</p>
+
+<p>There have been more than 10 instances of Iranian nationals being recruited by the regime. Facilitators have also been found to use LinkedIn to hire separate people from Iran, Ireland, and India, who are then coached to land the jobs. These individuals, called callers or interviewers, get on the phone with American hiring managers, pass technical interviews, and impersonate the real or fake Western personas curated by them. When a caller fails an interview, the facilitator reviews the recording and provides feedback.</p>
+
+<p>“North Koreans are deliberately targeting U.S. defense contractors, cryptocurrency exchanges, and financial institutions,” Flare
+said
+. “While the primary motivations appear to be financial, the deliberate targeting evidenced from their documents indicates that there may be other objectives at play as well.”
+“The DPRK is not simply deploying its own nationals under false identities. It is building a multinational recruitment pipeline, drawing skilled developers from Iran, Syria, Lebanon, and Saudi Arabia into an infrastructure designed to infiltrate U.S.</p>
+
+<p>defense contractors, cryptocurrency exchanges, financial institutions, and enterprises of every size. The recruits are real software engineers, paid in cryptocurrency, coached through interviews, and slotted into fabricated Western personas.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="36-malicious-npm-packages-exploited-redis-postgresql-to-deploy-persistent-implants"><a id="article-10"></a>36 Malicious npm Packages Exploited Redis, PostgreSQL to Deploy Persistent Implants</h2>
+
+<p>Cybersecurity researchers have discovered 36 malicious packages in the npm registry that are disguised as Strapi CMS plugins but come with different payloads to facilitate Redis and PostgreSQL exploitation, deploy reverse shells, harvest credentials, and drop a persistent implant. “Every package contains three files (package.json, index.js, postinstall.js), has no description, repository, or homepage, and uses version 3.6.8 to appear as a mature Strapi v3 community plugin,” SafeDep
+said
+. All identified npm packages follow the same naming convention, starting with “strapi-plugin-“ and then phrases like “cron,” “database,” or “server” to fool unsuspecting developers into downloading them. It’s worth noting that the official Strapi plugins are scoped under “@strapi/.”
+The packages, uploaded by four sock puppet accounts “umarbek1233,” “kekylf12,” “tikeqemif26,” and “umar_bektembiev1” over a period of 13 hours, are listed below -
+strapi-plugin-cron
+strapi-plugin-config
+strapi-plugin-server
+strapi-plugin-database
+strapi-plugin-core
+strapi-plugin-hooks
+strapi-plugin-monitor
+strapi-plugin-events
+strapi-plugin-logger
+strapi-plugin-health
+strapi-plugin-sync
+strapi-plugin-seed
+strapi-plugin-locale
+strapi-plugin-form
+strapi-plugin-notify
+strapi-plugin-api
+strapi-plugin-sitemap-gen
+strapi-plugin-nordica-tools
+strapi-plugin-nordica-sync
+strapi-plugin-nordica-cms
+strapi-plugin-nordica-api
+strapi-plugin-nordica-recon
+strapi-plugin-nordica-stage
+strapi-plugin-nordica-vhost
+strapi-plugin-nordica-deep
+strapi-plugin-nordica-lite
+strapi-plugin-nordica
+strapi-plugin-finseven
+strapi-plugin-hextest
+strapi-plugin-cms-tools
+strapi-plugin-content-sync
+strapi-plugin-debug-tools
+strapi-plugin-health-check
+strapi-plugin-guardarian-ext
+strapi-plugin-advanced-uuid
+strapi-plugin-blurhash
+An analysis of the packages reveals that the malicious code is embedded within the postinstall script hook, which gets executed on “npm install” without requiring any user interaction.</p>
+
+<p>It runs with the same privileges as those of the installing user, meaning it abuses root access within CI/CD environments and Docker containers. The evolution of the payloads distributed as part of the campaign is as follows -
+Weaponize a locally accessible Redis instance for remote code execution by injecting a crontab (aka cron table) entry to download and execute a shell script from a remote server every minute. The shell script writes a PHP web shell and Node.js reverse shell via SSH to Strapi’s public uploads directory. It also attempts to scan the disk for secrets (e.g., Elasticsearch and cryptocurrency wallet seed phrases) and exfiltrate a Guardarian API module.</p>
+
+<p>Combine Redis exploitation with Docker container escape to write shell payloads to the host outside the container. It also launches a direct Python reverse shell on port 4444 and writes a reverse shell trigger into the application’s node_modules directory via Redis. Deploy a reverse shell and write a shell downloader via Redis and execute the resulting file. Scan the system for environment variables and PostgreSQL database connection strings.</p>
+
+<p>An expanded credential harvester and reconnaissance payload to gather environment dumps, Strapi configurations, Redis database extraction by running INFO, DBSIZE, and KEYS commands, network topology mapping, Docker/Kubernetes secrets, cryptographic keys, and cryptocurrency wallet files. Conduct PostgreSQL database exploitation by connecting to the target’s PostgreSQL database using hard-coded credentials and querying Strapi-specific tables for secrets. It also dumps matching cryptocurrency-related patterns (e.g., wallet, transaction, deposit, withdraw, hot, cold, and balance) and attempts to connect to six Guardarian databases. This indicates that the threat actor is already in possession of the data, obtained either via a prior compromise or through some other means.</p>
+
+<p>Deploy a persistent implant designed to maintain remote access to a specific hostname (“prod-strapi”). Facilitate credential theft by scanning hard-coded paths and spawning a persistent reverse shell. “The eight payloads show a clear narrative: the attacker started aggressively (Redis RCE, Docker escape), found those approaches weren’t working, pivoted to reconnaissance and data collection, used hardcoded credentials for direct database access, and finally settled on persistent access with targeted credential theft,” SafeDep said. The nature of the payloads, combined with the focus on digital assets and the use of hard-coded database credentials and hostname, raises the possibility that the campaign was a targeted attack against a cryptocurrency platform.</p>
+
+<p>Users who have installed any of the aforementioned packages are advised to assume compromise and rotate all credentials. The discovery coincides with the discovery of several supply chain attacks targeting the open-source ecosystem -
+A GitHub account named “
+ezmtebo
+“ has submitted over 256 pull requests across various open-source repositories containing a credential exfiltration payload. “It steals secrets through CI logs and PR comments, injects temporary workflows to dump secret values, auto-applies labels to bypass pull_request_target gates, and runs a background /proc scanner for 10 minutes after the main script exits,” SafeDep said. A hijack of “
+dev-protocol
+,” a verified GitHub organization, to distribute malicious Polymarket trading bots with typosquatted npm dependencies (“ts-bign” and “levex-refa” or “big-nunber” and “lint-builder”) that steal wallet private keys, exfiltrate sensitive files, and open an SSH backdoor on the victim’s machine.</p>
+
+<p>While ”levex-refa” functions as a credential stealer, “lint-builder” installs the SSH backdoor. Both ”ts-bign” and “big-nunber” are designed to deliver “levex-refa” and “lint-builder,” respectively, as a transitive dependency. A compromise of the popular Emacs package, “
+kubernetes-el/kubernetes-el
+,” that exploited the
+Pwn Request vulnerability
+in its GitHub Actions workflow by using the pull_request_target trigger to steal the repository’s GITHUB_TOKEN, exfiltrate CI/CD secrets, deface the repository, and inject destructive code to delete nearly all repository files. A compromise of the legitimate “
+xygeni/xygeni-action
+“ GitHub Actions workflow using stolen maintainer credentials to plant a reverse shell backdoor.</p>
+
+<p>Xygeni has since
+implemented new security controls
+to address the incident. A compromise of the legitimate npm package, “
+mgc
+,” by means of an account takeover to push four malicious versions (1.2.1 through 1.2.4) containing a dropper script that detects the operating system and fetches a platform-specific payload – a Python trojan for Linux and a PowerShell variant for Windows called WAVESHAPER.V2 – from a GitHub Gist. The attack
+shares direct overlap
+with the recent supply chain attack targeting Axios, which has been attributed to a North Korean threat cluster tracked as UNC1069. A malicious npm package named “
+express-session-js
+“ that typosquats “express-session” and contains a dropper that retrieves a next-stage remote access trojan (RAT) from JSON Keeper to conduct data theft and persistent access by connecting to “216.126.237[.]71” using the Socket.IO library.</p>
+
+<p>A compromise of the legitimate PyPI package, “
+bittensor-wallet
+“ (version 4.0.2), to deploy a backdoor that’s triggered during a wallet decryption operation to exfiltrate wallet keys using HTTPS, DNS tunneling, and Raw TLS as exfiltration channels to either a hard-coded domain or one created using a Domain Generation Algorithm (DGA) that’s rotated daily. A malicious PyPI package named “
+pyronut
+“ that typosquats “pyrogram,” a popular Python Telegram API framework, to embed a stealthy backdoor that’s triggered every time a Telegram client starts and seize control of the Telegram session and the underlying host system. “The backdoor registers hidden Telegram message handlers that allow two hardcoded attacker-controlled accounts to execute arbitrary Python code (via the /e command and the meval library) and arbitrary shell commands (via the /shell command and subprocess) on the victim’s machine,” Endor Labs said. A set of three malicious Microsoft Visual Studio Code (VS Code) extensions published by “
+IoliteLabs
+“ – “solidity-macos,” “solidity-windows,” and “solidity-linux” – that were originally dormant since 2018 but were updated on March 25, 2026, to launch a multi-stage backdoor targeting Windows and macOS systems upon launching the application to establish persistence.</p>
+
+<p>Collectively, the extensions had 27,500 installs prior to them being removed. Multiple versions of the “
+KhangNghiem/fast-draft
+“ VS Code extension on Open VSX (0.10.89, 0.10.105, 0.10.106, and 0.10.112) that execute a GitHub-hosted downloader to deploy a second-stage Socket.IO RAT, an information stealer, a file exfiltration module, and a clipboard monitor from a GitHub repository. Interestingly, versions 0.10.88, 0.10.111, and 0.10.129-135 have been found to be clean. “That is not the release pattern you expect from a single compromised build or a maintainer who has fully switched to malicious behavior,” Aikido said.</p>
+
+<p>“It looks more like two competing release streams sharing the same publisher identity.”
+In a report published in February 2026, Group-IB revealed that software supply chain attacks have become “the dominant force reshaping the global cyber threat landscape,” adding that threat actors are going after trusted vendors, open-source software, SaaS platforms, browser extensions, and managed service providers to gain inherited access to hundreds of downstream organizations. The supply chain threat can rapidly escalate a single localized intrusion into something that has a large-scale, cross-border impact, with attackers industrializing supply chain compromises and turning it into a “self-reinforcing” ecosystem, as it offers reach, speed, and stealth. “Package repositories such as npm and PyPI have become prime targets, stolen maintainer credentials, and automated malware worms to compromise widely used libraries – turning development pipelines into large-scale distribution channels for malicious code,” Group-IB
+said
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fortinet-patches-actively-exploited-cve-2026-35616-in-forticlient-ems"><a id="article-11"></a>Fortinet Patches Actively Exploited CVE-2026-35616 in FortiClient EMS</h2>
+
+<p>Fortinet has released out-of-band patches for a critical security flaw impacting FortiClient EMS that it said has been exploited in the wild. The vulnerability, tracked as
+CVE-2026-35616
+(CVSS score: 9.1), has been described as a pre-authentication API access bypass leading to privilege escalation. “An improper access control vulnerability [CWE-284] in FortiClient EMS may allow an unauthenticated attacker to execute unauthorized code or commands via crafted requests,” Fortinet
+said
+in a Saturday advisory. The issue affects FortiClient EMS versions 7.4.5 through 7.4.6.</p>
+
+<p>It’s expected to be fully patched in the upcoming version 7.4.7, although the company has
+released a hotfix
+to address it. Simo Kohonen from Defused Cyber and Nguyen Duc Anh have been credited with discovering and reporting the flaw. In a post on X, Defused Cyber
+said
+it observed zero-day exploitation of CVE-2026-35616 earlier this week. According to watchTowr, exploitation attempts against CVE-2026-35616 were first recorded against its honeypots on March 31, 2026.</p>
+
+<p>Successful exploitation of the flaw could allow an unauthenticated attacker to sidestep API authentication and authorization protections, and execute malicious code or commands via crafted requests. “Fortinet has observed this to be exploited in the wild and urges vulnerable customers to install the hotfix for FortiClient EMS 7.4.5 and 7.4.6,” the company added. The development comes merely days after another recently-patched, critical vulnerability in FortiClient EMS (
+CVE-2026-21643
+, CVSS score: 9.1) came under active exploitation. It’s currently not known if the same threat actor is behind the exploitation of both the flaws, and if they are being weaponized together.</p>
+
+<p>Given the severity of the vulnerabilities, users are advised to update their FortiClient EMS to the latest version as soon as possible. “The timing of the ramp-up of in-the-wild exploitation of this zero-day is likely not coincidental,” watchTowr CEO and founder Benjamin Harris told The Hacker News. “Attackers have shown repeatedly that holiday weekends are the best time to move. Security teams are at half strength, on-call engineers are distracted, and the window between compromise and detection stretches from hours to days.</p>
+
+<p>Easter, like any other holiday, represents opportunity.”
+“What is disappointing is the bigger picture. This is the second unauthenticated vulnerability in FortiClient EMS in a matter of weeks.”
+“So, once again, organizations running FortiClient EMS and exposed to the Internet should treat this as an emergency response situation, not something to pick up on Tuesday morning. Apply the hotfix. Attackers already have a head start.”
+Update
+The U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA), on April 6, 2026,
+added
+CVE-2026-35616 to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the necessary fixes by April 9, 2026. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="china-linked-ta416-targets-european-governments-with-plugx-and-oauth-based-phishing"><a id="article-12"></a>China-Linked TA416 Targets European Governments with PlugX and OAuth-Based Phishing</h2>
+
+<p>A China-aligned threat actor has set its sights on European government and diplomatic organizations since mid-2025, following a two-year period of minimal targeting in the region. The campaign has been attributed to
+TA416
+, a cluster of activity that overlaps with DarkPeony, RedDelta, Red Lich, SmugX, UNC6384, and Vertigo Panda. “This TA416 activity included multiple waves of web bug and malware delivery campaigns against diplomatic missions to the European Union and NATO across a range of European countries,” Proofpoint researchers Mark Kelly and Georgi Mladenov
+said
+. “Throughout this period, TA416 regularly altered its infection chain, including abusing Cloudflare Turnstile challenge pages, abusing OAuth redirects, and using C# project files, as well as frequently updating its custom PlugX payload.”
+TA416 has also been observed orchestrating multiple campaigns aimed at diplomatic and government entities in the Middle East following the outbreak of the U.S.-Israel-Iran conflict in late February 2026.</p>
+
+<p>The effort is likely an attempt to gather regional intelligence pertaining to the conflict, the enterprise security company added. It’s worth mentioning here that TA416 also shares historical technical overlaps with another cluster known as
+Mustang Panda
+(aka CerenaKeeper, Red Ishtar, and UNK_SteadySplit). The two activity groups are collectively tracked under the monikers Earth Preta, Hive0154, HoneyMyte, Stately Taurus, Temp.HEX, and Twill Typhoon. While TA416’s attacks are characterized by the use of bespoke PlugX variants, the Mustang Panda cluster has repeatedly deployed tools like TONESHELL, PUBLOAD, and COOLCLIENT in recent attacks.</p>
+
+<p>What’s common to both of them is the use of DLL side-loading to launch the malware. TA416’s renewed focus on European entities is driven a mix of web bug and malware delivery campaigns, with the threat actors using freemail sender accounts to conduct reconnaissance and deploy the PlugX backdoor via malicious archives hosted on Microsoft Azure Blob Storage, Google Drive, domains under their control, and compromised SharePoint instances. The PlugX malware campaigns were previously documented by
+StrikeReady
+and
+Arctic Wolf
+in October 2025. “A web bug (or tracking pixel) is a tiny invisible object embedded in an email that triggers an HTTP request to a remote server when opened, revealing the recipient’s IP address, user agent, and time of access, allowing the threat actor to assess whether the email was opened by the intended target,” Proofpoint said.</p>
+
+<p>Attacks carried out by TA416 in December 2025 have been found to leverage third-party Microsoft Entra ID cloud applications to initiate redirects that lead to the download of malicious archives. Phishing emails used as part of this attack wave contain a link to Microsoft’s legitimate
+OAuth
+authorization endpoint that, when clicked, redirects the user to the attacker-controlled domain and ultimately deploys PlugX. The use of this technique has not escaped Microsoft’s notice, which last month
+warned
+of phishing campaigns targeting government and public-sector organizations that employ OAuth URL redirection mechanisms to bypass conventional phishing defenses implemented in email and browsers. Further refinements to the attack chain were observed in February 2026, when TA416 began linking to archives hosted on Google Drive or a compromised SharePoint instance.</p>
+
+<p>The downloaded archives, in this case, include a legitimate Microsoft MSBuild executable and a malicious C# project file. “When the MSBuild executable is run, it searches the current directory for a project file and automatically builds it,” the researchers said. “In the observed TA416 activity, the CSPROJ file acts as a downloader, decoding three Base64-encoded URLs to fetch a DLL side-loading triad from a TA416-controlled domain, saving them to the user’s temp directory, and executing a legitimate executable to load PlugX via the group’s typical DLL side-loading chain.”
+The PlugX malware remains a consistent presence throughout TA416’s intrusions, although the legitimate, signed executables abused for DLL side-loading have varied over time. The backdoor is also known to establish an encrypted communication channel with its command-and-control (C2) server, but not before performing anti-analysis checks to sidestep detection.</p>
+
+<p>PlugX accepts five different commands -
+0x00000002
+, to capture system information
+0x00001005
+, to uninstall the malware
+0x00001007
+, to adjust beaconing interval and timeout parameter
+0x00003004
+, to download a new payload (EXE, DLL, or DAT) and execute it
+0x00007002
+, to open a reverse command shell
+“TA416’s shift back to European government targeting in mid-2025, following two years of focus on Southeast Asia and Mongolia, is consistent with a renewed intelligence-collection focus against EU and NATO-affiliated diplomacy entities,” Proofpoint said. “In addition, TA416’s expansion to Middle Eastern government targeting in March 2026 further highlights how the group’s tasking prioritization is likely influenced by geopolitical flashpoints and escalations. Throughout this period, the group has shown a willingness to iterate on infection chains, cycling through using fake Cloudflare Turnstile pages, OAuth redirect abuse, and MSBuild-based delivery, while continuing to update its customized PlugX backdoor.”
+The disclosure comes as Darktrace revealed that Chinese‑nexus cyber operations have evolved from strategically-aligned activity in the 2010s to highly adaptive, identity-centric intrusions with an intent to establish long-term persistence within critical infrastructure networks. Based on a review of attack campaigns between July 2022 and September 2025, U.S.-based organizations accounted for 22.5% of all global events, followed by Italy, Spain, Germany, Thailand, the U.K., Panama, Colombia, the Philippines, and Hong Kong.</p>
+
+<p>A majority of cases (63%) involved the exploitation of internet-facing infrastructure (e.g.,
+CVE-2025-31324
+and
+CVE-2025-0994
+) to obtain initial access. “In one notable case, the actor had fully compromised the environment and established persistence, only to resurface in the environment more than 600 days after,” Darktrace
+said
+. “The operational pause underscores both the depth of the intrusion and the actor’s long‑term strategic intent.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-details-cookie-controlled-php-web-shells-persisting-via-cron-on-linux-servers"><a id="article-13"></a>Microsoft Details Cookie-Controlled PHP Web Shells Persisting via Cron on Linux Servers</h2>
+
+<p>Threat actors are increasingly using HTTP cookies as a control channel for PHP-based web shells on Linux servers and to achieve remote code execution, according to findings from the Microsoft Defender Security Research Team. “Instead of exposing command execution through URL parameters or request bodies, these web shells rely on threat actor-supplied cookie values to gate execution, pass instructions, and activate malicious functionality,” the tech giant
+said
+. The approach offers added stealth as it allows malicious code to stay dormant during normal application execution and activate the web shell logic only when specific cookie values are present. This behavior, Microsoft noted, extends to web requests, scheduled tasks, and trusted background workers.</p>
+
+<p>The malicious activity takes advantage of the fact that cookie values are available at runtime through the
+$_COOKIE superglobal
+variable, allowing attacker-supplied inputs to be consumed without additional parsing. What’s more, the technique is unlikely to raise any red flags as cookies blend into normal web traffic and reduce visibility. The cookie-controlled execution model comes in different implementations -
+A PHP loader that uses multiple layers of obfuscation and runtime checks before parsing structured cookie input to execute an encoded secondary payload. A PHP script that segments structured cookie data to reconstruct operational components such as file handling and decoding functions, and conditionally writes a secondary payload to disk and executes it.</p>
+
+<p>A PHP script that uses a single cookie value as a marker to trigger threat actor-controlled actions, including execution of supplied input and file upload. In at least one case, threat actors have been found to obtain initial access to a victim’s hosted Linux environment through valid credentials or the exploitation of a known security vulnerability to set up a cron job that invokes a shell routine periodically to execute an obfuscated PHP loader. This ”self-healing” architecture allows the PHP loader to be repeatedly recreated by the scheduled task even if it was removed as part of cleanup and remediation efforts, thereby creating a reliable and persistent remote code execution channel. Once the PHP loader is deployed, it remains inactive during normal traffic and springs into action upon receiving HTTP requests with specific cookie values.</p>
+
+<p>“By shifting execution control into cookies, the web shell can remain hidden in normal traffic, activating only during deliberate interactions,” Microsoft added. “By separating persistence through cron-based re-creation from execution control through cookie-gated activation, the threat actor reduced operational noise and limited observable indicators in routine application logs.”
+A common aspect that ties together all the aforementioned implementations is the use of obfuscation to conceal sensitive functionality and cookie-based gating to initiate the malicious action, while leaving a minimal interactive footprint. To counter the threat, Microsoft recommends enforcing multi-factor authentication for hosting control panels, SSH access, and administrative interfaces; monitoring for unusual login activity; restricting the execution of shell interpreters; auditing cron jobs and scheduled tasks across web servers; checking for suspicious file creation in web directories; and limiting hosting control panels’ shell capabilities. “The consistent use of cookies as a control mechanism suggests reuse of established web shell tradecraft,” Microsoft said.</p>
+
+<p>“By shifting control logic into cookies, threat actors enable persistent post-compromise access that can evade many traditional inspection and logging controls.”
+“Rather than relying on complex exploit chains, the threat actor leveraged legitimate execution paths already present in the environment, including web server processes, control panel components, and cron infrastructure, to stage and preserve malicious code.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

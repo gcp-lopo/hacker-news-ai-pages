@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-24 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware</a></li>
+      
+        <li><a href="#article-2">⚡ Weekly Recap: CI/CD Backdoor, FBI Buys Location Data, WhatsApp Ditches Numbers & More</a></li>
+      
+        <li><a href="#article-3">We Found Eight Attack Vectors Inside AWS Bedrock. Here's What Attackers Can Do with Them</a></li>
+      
+        <li><a href="#article-4">Microsoft Warns IRS Phishing Hits 29,000 Users, Deploys RMM Malware</a></li>
+      
+        <li><a href="#article-5">Trivy Hack Spreads Infostealer via Docker, Triggers Worm and Kubernetes Wiper</a></li>
+      
+        <li><a href="#article-6">Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</a></li>
+      
+        <li><a href="#article-7">Hackers Exploit CVE-2025-32975 (CVSS 10.0) to Hijack Unpatched Quest KACE SMA Systems</a></li>
+      
+        <li><a href="#article-8">FBI Warns Russian Hackers Target Signal, WhatsApp in Mass Phishing Attacks</a></li>
+      
+        <li><a href="#article-9">Oracle Patches Critical CVE-2026-21992 Enabling Unauthenticated RCE in Identity Manager</a></li>
+      
+        <li><a href="#article-10">Trivy Supply Chain Attack Triggers Self-Spreading CanisterWorm Across 47 npm Packages</a></li>
+      
+        <li><a href="#article-11">CISA Flags Apple, Craft CMS, Laravel Bugs in KEV, Orders Patching by April 3, 2026</a></li>
+      
+        <li><a href="#article-12">Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to Steal CI/CD Secrets</a></li>
+      
+        <li><a href="#article-13">Critical Langflow Flaw CVE-2026-33017 Triggers Attacks within 20 Hours of Disclosure</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-24-ai创业新闻">2026-03-24 AI创业新闻</h1>
+
+<h2 id="north-korean-hackers-abuse-vs-code-auto-run-tasks-to-deploy-stoatwaffle-malware"><a id="article-1"></a>North Korean Hackers Abuse VS Code Auto-Run Tasks to Deploy StoatWaffle Malware</h2>
+
+<p>The North Korean threat actors behind the Contagious Interview campaign, also tracked as WaterPlum, have been attributed to a malware family tracked as
+StoatWaffle
+that’s distributed via malicious Microsoft Visual Studio Code (VS Code) projects. The use of VS Code “tasks.json” to distribute malware is a
+relatively new tactic
+adopted by the threat actor
+since December 2025
+, with the attacks leveraging the “runOn: folderOpen” option to automatically trigger its execution every time any file in the project folder is opened in VS Code. “This task is configured so that it downloads data from a web application on Vercel regardless of executing OS [operating system],” NTT Security
+said
+in a report published last week. “Though we assume that the executing OS is Windows in this article, the essential behaviors are the same for any OS.”
+The downloaded payload first checks whether Node.js is installed in the executing environment.</p>
+
+<p>If it’s absent, the malware downloads Node.js from the official website and installs it. Subsequently, it proceeds to launch a downloader, which periodically polls an external server to fetch a next-stage downloader that exhibits identical behavior by reaching out to another endpoint on the same server and executing the received response as Node.js code. StoatWaffle has been found to deliver two different modules -
+A stealer that captures credentials and extension data stored in web browsers (Chromium-based browsers and Mozilla Firefox) and uploads them to a command-and-control (C2) server. If the compromised system runs on macOS, it also steals the iCloud Keychain database.</p>
+
+<p>A remote access trojan (RAT) that communicates with the C2 server to fetch and execute commands on the infected host. The commands allow the malware to change the current working directory, enumerate files and directories, execute Node.js code, upload file, recursively search the given directory and list or upload files matching a certain keyword, run shell commands, and terminate itself. “StoatWaffle is a modular malware implemented by Node.js, and it has Stealer and RAT modules,” the Japanese security vendor said. “WaterPlum is continuously developing new malware and updating existing ones.”
+The development coincides with various campaigns mounted by the threat actor targeting the open-source ecosystem -
+A set of
+malicious npm packages
+that distribute the
+PylangGhost
+malware, marking the first time the Python-based backdoor has been propagated via npm packages.</p>
+
+<p>A campaign known as
+PolinRider
+has
+implanted
+a malicious obfuscated JavaScript payload in hundreds of public GitHub repositories that culminates in the deployment of a new version of
+BeaverTail
+, a known stealer and downloader malware attributed to Contagious Interview. Among the compromises are
+four repositories
+belonging to the Neutralinojs GitHub organization. The attack is said to have compromised the GitHub account of a long-time neutralinojs contributor with organization-level write access to force-push JavaScript code that retrieves encrypted payloads in Tron, Aptos, and Binance Smart Chain (BSC) transactions to download and run BeaverTail. The victims are believed to have been infected via a malicious VS Code extension or an npm package.</p>
+
+<p>Microsoft, in an
+analysis
+of Contagious Interview this month, said the threat actors achieve initial access to developer systems through “convincingly staged recruitment processes” that mirror legitimate technical interviews, ultimately persuading victims into running malicious commands or packages hosted on GitHub, GitLab, or Bitbucket as part of the assessment. In some cases, targets are approached on LinkedIn. However, the individuals chosen for this social engineering attack are not junior developers, but rather founders, CTOs, and senior engineers in the cryptocurrency or Web3 sector, who are likely to have elevated access to the company’s tech infrastructure and cryptocurrency wallets. A recent incident
+involved
+the attackers unsuccessfully targeting the founder of AllSecure.io via a fake job interview.</p>
+
+<p>Some of the key malware families deployed as part of these attack chains include
+OtterCookie
+(a backdoor capable of extensive data theft),
+InvisibleFerret
+(a Python-based backdoor), and
+FlexibleFerret
+(a modular backdoor implemented in both Go and Python). While InvisibleFerret is known to be typically delivered via BeaverTail, recent intrusions have been found to distribute the malware as a follow-on payload, after leveraging initial access obtained through OtterCookie. It’s worth mentioning here that
+FlexibleFerret
+is also referred to as WeaselStore. Its Go and Python variants go by the monikers GolangGhost and PylangGhost, respectively.</p>
+
+<p>In a sign that the threat actors are actively refining their tradecraft, newer mutations of the VS Code projects have eschewed Vercel-based domains for GitHub Gist-hosted scripts to download and execute next-stage payloads that ultimately lead to the deployment of FlexibleFerret. These VS Code projects are staged on GitHub. “By embedding targeted malware delivery directly into interview tools, coding exercises, and assessment workflows developers inherently trust, threat actors exploit the trust job seekers place in the hiring process during periods of high motivation and time pressure, lowering suspicion and resistance,” the tech giant said. In response to the ongoing abuse of VS Code Tasks, Microsoft has included a mitigation in the January 2026 update (
+version 1.109
+) that introduces a new “task.allowAutomaticTasks” setting, which defaults to “off” in order to improve security and prevent unintended execution of tasks defined in “tasks.json” when opening a workspace.</p>
+
+<p>“The update also prevents the setting from being defined at the workspace level, so malicious repositories with their own .vscode/settings.json file should not be able to override the user (global) setting,” Abstract Security
+said
+. “This version and the recent February 2026 (
+version 1.110
+) release also introduce a secondary prompt that warns the user when an auto-run task is detected in a newly opened workspace. This acts as an additional guard after a user accepts the Workspace Trust prompt.”
+In recent months, North Korean threat actors have also been engaging in a coordinated malware campaign targeting cryptocurrency professionals through LinkedIn social engineering, fake venture capital firms, and fraudulent video conferencing links. The activity shares overlap with clusters tracked as
+GhostCall and UNC1069
+.</p>
+
+<p>“The attack chain culminates in a ClickFix-style fake CAPTCHA page that tricks victims into executing clipboard-injected commands in their Terminal,” MacPaw’s Moonlock Lab
+said
+. “The campaign is cross-platform by design, delivering tailored payloads for both macOS and Windows.”
+The findings come as the U.S. Department of Justice (DoJ)
+announced
+the sentencing of three men – Audricus Phagnasay, 25, Jason Salazar, 30, and Alexander Paul Travis, 35 – for their roles in furthering North Korea’s fraudulent information technology (IT) worker scheme in violation of international sanctions. All three individuals
+previously pleaded guilty
+in November 2025.</p>
+
+<p>Phagnasay and Salazar were both sentenced to three years of probation and a $2,000 fine. They were also ordered to forfeit the illicit proceeds gained by participating in the wire fraud conspiracy. Travis was sentenced to one year in prison and ordered to forfeit $193,265, the amount earned by North Koreans by using his identity. “These men practically gave the keys to the online kingdom to likely North Korean overseas technology workers seeking to raise illicit revenue for the North Korean government — all in return for what to them seemed like easy money,” Margaret Heap, U.S.</p>
+
+<p>attorney for the Southern District of Georgia, said in a statement. Last week, Flare and IBM X-Force
+published
+a detailed look at the
+IT worker
+operation
+and its
+internal structure
+, while highlighting how IT workers attend prestigious universities in North Korea and go through a rigorous interview process themselves before joining the scheme. They are “considered elite members of North Korean society and have become an indispensable part of the overall North Korean government’s strategic objectives,” the companies noted. “These objectives include, but are not limited to, revenue generation, remote employment activity, theft of corporate and proprietary information, extortion, and providing support to other North Korean groups.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-cicd-backdoor-fbi-buys-location-data-whatsapp-ditches-numbers--more"><a id="article-2"></a>⚡ Weekly Recap: CI/CD Backdoor, FBI Buys Location Data, WhatsApp Ditches Numbers &amp; More</h2>
+
+<p>Another week, another reminder that the internet is still a mess. Systems people thought were secure are being broken in simple ways, showing many still ignore basic advisories. This edition covers a mix of issues: supply chain attacks hitting CI/CD setups, long-abused IoT devices being shut down, and exploits moving quickly from disclosure to real attacks. There are also new malware tricks showing attackers are becoming more patient and creative.</p>
+
+<p>It’s a mix of old problems that never go away and new methods that are harder to detect. There are quiet state-backed activities, exposed data from open directories, growing mobile threats, and a steady stream of zero-days and rushed patches. Grab a coffee, and at least skim the CVE list. Some of these are the kind you don’t want to discover after the damage is done.</p>
+
+<p>⚡ Threat of the Week
+Trivy Vulnerability Scanner Breached in for Supply Chain Attack
+— Attackers have
+backdoored
+the widely used open-source Trivy vulnerability scanner, injecting credential-stealing malware into official releases and GitHub Actions used by thousands of CI/CD workflows. The breach has triggered a cascade of additional supply-chain compromises stemming from impacted projects and organizations not rotating their secrets, resulting in the distribution of a self-propagating worm referred to as CanisterWorm. Trivy, developed by Aqua Security, is one of the most widely used open-source vulnerability scanners, with over 32,000 GitHub stars and more than 100 million Docker Hub downloads. The Trivy compromise is the latest in a growing pattern of attacks targeting GitHub Actions and developers in general.</p>
+
+<p>GitHub
+changed
+the default behavior of pull_request_target workflows in December 2025 to reduce the risk of exploitation. BAS vs Automated Pentesting: What Each Actually Covers (and Doesn’t)
+Most teams pick one without knowing what the other misses. This guide breaks down both by use case across blue, red, and purple teams so you can see where each fits and where the gaps are. Download Now ➝
+🔔 Top News
+DoJ Takes Down DDoS Botnets
+— A cluster of IoT botnets behind some of the largest DDoS attacks ever recorded –
+AISURU
+,
+Kimwolf
+, JackSkid, and Mossad – were wiped as part of a broad law enforcement operation.</p>
+
+<p>The botnets largely spread across routers, IP cameras, and digital video recorders that are often shipped with weak credentials and rarely patched. Authorities removed the command-and-control servers used to commandeer the infected nodes. Together, operators of the four botnets had amassed more than 3 million devices, which they then sold access to other criminal hackers, who then used them to target victims with DDoS attacks to knock websites and internet services offline or mask other illicit activity. Some of these DDoS attacks were aimed at U.S.</p>
+
+<p>Department of Defense systems and other high-value targets. No arrests were announced, but two suspects associated with AISURU/Kimwolf are said to be based in Canada and Germany. All four botnets disrupted by the operation are variants of Mirai, which had its source code leaked in 2016 and has served as the starting point for other botnets. The U.S.</p>
+
+<p>Justice Department said some victims of the DDoS attacks lost hundreds of thousands of dollars through remediation expenses or ransom demands from hackers who would only stop overloading websites for a price. Google Debuts New Advanced Flow for Sideloading on Android
+— Google’s advanced flow for Android changes how apps from unverified developers are installed, adding friction to combat scams and malware. The feature is aimed at experienced users and allows sideloading through a one-time setup. The advanced flow adds a 24-hour delay and verification steps intended to disrupt coercive pressure and give users time to make decisions.</p>
+
+<p>It’s designed to address scenarios where attackers pressure individuals to install unsafe software and play on the urgency of the operation to push them to bypass security warnings and disable protections before they can pause or seek help. Critical Langflow Flaw Comes Under Attack
+— A critical security flaw impacting Langflow has come under active exploitation within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as CVE-2026-33017 (CVSS score: 9.3), is a case of missing authentication combined with code injection that could result in remote code execution. Cloud security firm Sysdig said that the attacks weaponize the vulnerability to steal sensitive data from compromised systems.</p>
+
+<p>“The real-world proof is definitive: threat actors exploited it in the wild within 20 hours of the advisory going public, with no public PoC code available,” Aviral Srivastava, who discovered the vulnerability, told The Hacker News. “They built working exploits just from reading the advisory description. That’s the hallmark of trivial exploitation when multiple independent attackers can weaponize a vulnerability from a description alone, within hours.”
+Interlock Ransomware Exploited Cisco FMC Flaw as 0-Day
+— An Interlock ransomware campaign exploited a critical security flaw in Cisco Secure Firewall Management Center (FMC) Software as a zero-day well over a month before it was publicly disclosed. The vulnerability in question is CVE-2026-20131 (CVSS score: 10.0), a case of insecure deserialization of user-supplied Java byte stream, which could allow an unauthenticated, remote attacker to bypass authentication and execute arbitrary Java code as root on an affected device.</p>
+
+<p>“This wasn’t just another vulnerability exploit; Interlock had a zero-day in their hands, giving them a week’s head start to compromise organizations before defenders even knew to look,” Amazon, which spotted the activity, said. Yet Another iOS Exploit Kit Comes to Light
+— A new watering hole attack against iPhone users has been found to deliver a previously undocumented iOS exploit kit codenamed DarkSword. While some of the attacks targeted users in Ukraine, the kit has also been put to use by two other clusters that singled out Saudi Arabian users in November 2025, as well as users in Turkey and Malaysia. It’s worth noting that these exploits would not be effective on devices where Lockdown Mode is active or on the iPhone 17 with Memory Integrity Enforcement (MIE) enabled.</p>
+
+<p>The kit used a total of six exploits in iOS to deliver various malware families designed for surveillance and intelligence gathering. Apple has since addressed all of them. “Completely written in JavaScript, DarkSword comprises six vulnerabilities across two exploit chains that were patched in stages ending with iOS 26.3,” iVerify said. “Starting in WebKit and moving down to the kernel, it achieves full iPhone compromise with elegant techniques never publicly seen before.” The discovery of DarkSword makes it the
+second mass attack
+targeting iOS devices.</p>
+
+<p>What’s more, the Russian threat actor that deployed DarkSword demonstrated poor operational security. They left the full JavaScript code unobfuscated, unprotected, and easily accessible. The findings also point to a secondary market where such exploits are being acquired by threat actors of varied motivations to actively infect unpatched iOS users on a large scale. Perseus Banking Malware Targets Android
+— A newly discovered Android malware is masking itself within television streaming apps in order to steal users’ passwords and banking data and spy on their personal notes, researchers have found.</p>
+
+<p>The malware, dubbed Perseus by researchers at ThreatFabric, is being actively distributed in the wild and primarily targets users in Turkey and Italy. To infect devices, attackers disguise the malware inside apps that appear to offer IPTV services — platforms that stream television content over the internet. These apps are also widely used to stream pirated content and are often downloaded outside official marketplaces like Google Play, making users more accustomed to installing them manually and less likely to view the process as suspicious. Once installed, Perseus can monitor nearly everything a user does in real time.</p>
+
+<p>It uses overlay attacks — placing fake login screens over legitimate apps — and keylogging capabilities to capture credentials as they are entered. The malware’s most unusual feature is its focus on personal note-taking applications. “Notes often contain sensitive information such as passwords, recovery phrases, financial details, or private thoughts, making them a valuable target for attackers,” ThreatFabric said. ‎️‍🔥 Trending CVEs
+New vulnerabilities show up every week, and the window between disclosure and exploitation keeps getting shorter.</p>
+
+<p>The flaws below are this week’s most critical — high-severity, widely used software, or already drawing attention from the security community. Check these first, patch what applies, and don’t wait on the ones marked urgent —
+CVE-2026-21992
+(Oracle),
+CVE-2026-33017
+(Langflow),
+CVE-2026-32746
+(GNU InetUtils telnetd),
+CVE-2026-32297, CVE-2026-32298
+(Angeet ES3 KVM),
+CVE-2026-3888
+(Ubuntu),
+CVE-2026-20643
+(Apple WebKit),
+CVE-2026-4276
+(LibreChat RAG API),
+CVE-2026-24291
+aka RegPwn (Microsoft Windows),
+CVE-2026-21643
+(Fortinet FortiClient),
+CVE-2026-3864
+(Kubernetes),
+CVE-2026-32635
+(Angular),
+CVE-2026-25769
+(
+Wazuh
+),
+CVE-2026-3564
+(ConnectWise ScreenConnect),
+CVE-2026-22557, CVE-2026-22558
+(Ubiquiti),
+CVE-2025-14986
+(Temporal),
+CVE-2026-31381, CVE-2026-31382
+(Gainsight Assist),
+CVE-2026-26189
+(Trivy),
+CVE-2026-4439, CVE-2026-4440, CVE-2026-4441
+(Google Chrome),
+CVE-2026-33001, CVE-2026-33002
+(Jenkins),
+CVE-2026-21570
+(Atlassian Bamboo Center), and
+CVE-2026-21884
+(Atlassian Crowd Data Center). 🎥 Cybersecurity Webinars
+Learn How to Automate Exposure Management with OpenCTI &amp; OpenAEV
+→ Discover how to automate continuous, threat-informed testing using open-source tools like OpenCTI and OpenAEV to validate your security controls against real attacker behavior without increasing your budget. See a live demo on how to verify your security works, identify real gaps, and integrate it into your SOC workflow at no extra cost.</p>
+
+<p>Identity Maturity Cracking in 2026: See the New Data + How to Catch Up Fast
+→ Identity programs are under massive pressure in 2026 - disconnected apps, AI agents, and credential sprawl are creating real risks and audit challenges. Join this webinar for new Ponemon Institute 2026 research from over 600 leaders, showing the scale of the problem and practical steps to close gaps, reduce friction, and catch up quickly. 📰 Around the Cyber World
+WhatsApp Tests Usernames Instead of Phone Numbers
+— WhatsApp is planning to introduce usernames and unique IDs instead of phone numbers, allowing users to send messages and make voice or video calls without sharing numbers. The optional privacy feature is expected to roll out globally by June 2026, with users and businesses able to reserve unique handles.</p>
+
+<p>“We’re excited to bring usernames to WhatsApp in the future to help people connect with new friends, groups, and businesses without having to share their phone numbers,” the company
+said
+in a statement shared with The Economic Times. The feature has been under test since early January 2026. Signal
+introduced
+a similar feature in early 2024. FBI Details SE Asia Scam Centers
+— The U.S.</p>
+
+<p>Federal Bureau of Investigation (FBI) detailed its work with Thai authorities to shut down
+scam centers
+proliferating in Southeast Asia. The schemes, which primarily target retirees, small-business owners, and people seeking companionship, have been described as a blend of cyber fraud, money laundering, and human trafficking, causing billions of dollars in annual losses. These scam centers operate in a manner that’s similar to how legitimate corporations do. “Recruiters advertise high-paying jobs abroad.</p>
+
+<p>Workers are flown to foreign countries only to discover that the positions do not exist,” the FBI
+said
+. “Passports are confiscated. Armed guards patrol the grounds. Under threat of violence, workers are forced to pose as potential romantic partners or savvy investment advisers, cultivating trust with victims over weeks or months.” Recent crackdowns in countries like Cambodia have freed thousands of workers from scam compounds, but the FBI warned that these breakthroughs can be temporary, as criminal networks always tend to relocate, rebrand, or shift tactics in response to law enforcement actions.</p>
+
+<p>APT28 Exposed Server Leaks SquirrelMail XSS Payload
+— A second exposed open directory discovered on a server (“
+203.161.50[.]145
+“) associated with APT28 (aka Fancy Bear) has offered insights into the threat actor’s espionage campaigns targeting government and military organizations across Ukraine, Romania, Bulgaria, Greece, Serbia, and North Macedonia. According to
+Ctrl-Alt-Intel
+, the directory contained command-and-control (C2) source code, scripts to steal emails, credentials, address books, and 2FA tokens from Roundcube mailboxes, telemetry logs, and exfiltrated data. The stolen data consists of 2,870 emails from government and military mailboxes, 244 sets of stolen credentials, 143 Sieve forwarding rules (to silently forward every incoming email to an attacker-controlled mailbox), and 11,527 contact email addresses. One of the newly identified tools is an XSS payload targeting the SquirrelMail webmail software, highlighting the threat actor’s continued focus on leveraging XSS flaws to steal data from email inboxes.</p>
+
+<p>It’s worth noting that the server was
+attributed
+to APT28 by the Computer Emergency Response Team of Ukraine (CERT-UA) as far back as September 2024. “Fancy Bear developed a modular, multi-platform exploitation toolkit where a victim simply opening a malicious email – with no further clicks – could result in their credentials stolen, their 2FA bypassed, emails within their mailbox exfiltrated, and a silent forwarding rule established that persists indefinitely,” Ctrl-Alt-Intel said. Analysis of a Beast Ransomware Server
+— An
+analysis
+of an open directory on a server (“5.78.84[.]144”) associated with Beast, a ransomware-as-a-service (RaaS) that’s suspected to be the successor to Monster ransomware, has uncovered the various tools used by the threat actors and the different stages of their attack lifecycle. These included Advanced IP Scanner and Advanced Port Scanner to map internal networks and find open remote desktop protocol (RDP) or server message block (SMB) ports.</p>
+
+<p>Also identified were programs to locate sensitive files for exfiltration and flag which servers hold the most data, as well as Mimikatz, LaZagne, and Automim (for credential harvesting), AnyDesk (for persistence), PsExec (for lateral movement), and MEGASync (for data exfiltration). Beast ransomware operations paused in November 2025 and resumed in January 2026. GrapheneOS Opposes the Unified Attestation Initiative
+— GrapheneOS has come out strongly against
+Unified Attestation
+, stating it “serves no truly useful purpose beyond giving itself an unfair advantage while pretending it has something to do with security.” The Unified Attestation initiative is an open-source, decentralized alternative to the Google Play Integrity API to provide device and app integrity checks for custom ROMs without requiring Google Play Services. “We strongly oppose the Unified Attestation initiative and call for app developers supporting privacy, security, and freedom on mobile to avoid it,” GraphenseOS said.</p>
+
+<p>“Companies selling phones should not be deciding which operating systems people are allowed to use for apps.”
+VoidStealer Uses Chrome Debugger to Steal Secrets
+— An information stealer known as VoidStealer has observed using a novel debugger-based Application-Bound Encryption (
+ABE
+) bypass technique that leverages hardware breakpoints to extract the “v20_master_key” directly from browser memory and use it to decrypt sensitive data stored in the browser. VoidStealer is a malware-as-a-service (MaaS) infostealer that began being marketed on several dark web forums in mid-December 2025. The ABE bypass technique was introduced in version 2.0 of the stealer announced on March 13, 2026. “The bypass requires neither privilege escalation nor code injection, making it a stealthier approach compared to alternative ABE bypass methods,” Gen Digital
+said
+.</p>
+
+<p>VoidStealer is assessed to have adopted the technique from the open-source
+ElevationKatz
+project. FBI Says it is Buying Americans’ location Data
+— FBI director Kash Patel admitted that the agency is buying location data that can be used to track people’s movements without a warrant. “We do purchase commercially available information that’s consistent with the Constitution and the laws under the Electronic Communications Privacy Act, and it has led to some valuable intelligence for us,” Patel
+said
+at a hearing before the Senate Intelligence Committee. Iranian Botnet Exposed via Open Directory
+— An Open Directory on “185.221.239[.]162:8080” has been found to contain several payloads, including a Python-based botnet script, a compiled DDoS binary, multiple C-language denial-of-service files, and IP addresses associated with SSH credentials.</p>
+
+<p>“A Python script called ohhhh.py reads credentials in a host:port|username|password format and opens 500 concurrent SSH sessions, compiling and launching the bot client on each host automatically,” Hunt.io
+said
+. “The exposed .bash_history captured three distinct phases of work: standing up the tunnel network, building and testing DDoS tooling against live targets, and iterative botnet development across multiple script versions.” The activity has not been linked to any state-directed campaign. OpenClaw Developers in Phishing Attack
+— OpenClaw’s combination of flexibility, local control, and a fast-growing ecosystem has made it popular among developers in a very short time. While that unprecedented adoption speed has exposed organizations to new security risks of its own (i.e., vulnerabilities and the presence of malicious skills on ClawHub and SkillsMP), threat actors are also capitalizing on the brand name and reputation to set up fake GitHub accounts for a phishing campaign that lures unsuspecting developers with promises of free $CLAW tokens and trick them into connect their cryptocurrency wallet.</p>
+
+<p>“The threat actor creates fake GitHub accounts, opens issue threads in attacker-controlled repositories, and tags dozens of GitHub developers,” OX Security researchers Moshe Siman Tov Bustan and Nir Zadok
+said
+. “The posts claim that recipients have won $5,000 worth of CLAW tokens and can collect them by visiting a linked site and connecting their crypto wallet.” The linked site (“token-claw[.]xyz”) is a near-identical clone of openclaw.ai rigged with a wallet-draining “Connect your wallet” button designed to conduct cryptocurrency theft. New Campaign Targets Energy Operations Personnel in Pakistan
+— A targeted campaign against operations personnel at energy firms linked to projects in Pakistan has leveraged phishing emails mimicking invitations to the upcoming Pakistan Energy Exhibition &amp; Conference (PEEC). The messages, sent from compromised accounts from a Pakistani university and a government organization, aim to deceive victims into opening PDF attachments with a fake Adobe Acrobat Reader update prompt.</p>
+
+<p>Clicking the update leads to the download of a ClickOnce application resource that drops the Havoc Demon C2 framework. “The redirect chain was also wrapped in geofencing and browser fingerprinting, limiting access to intended targets,” Proofpoint
+said
+. “That likely reduced the exposure to automated analysis while keeping the delivery path tightly scoped.” The activity has been codenamed UNK_VaporVibes. It’s assessed to share overlaps with activity publicly associated with
+SloppyLemming
+.</p>
+
+<p>Over 373K Dark Web Sites Down
+— International law enforcement agencies
+announced
+the takedown of one of the largest known networks of fraudulent platforms on the dark web, uncovering hundreds of thousands of fake websites used to scam users seeking child sexual abuse content. A 10-day international operation led by German authorities and supported by Europol shut down more than 373,000 dark web domains run by a 35-year-old man based in China, who had been operating a sprawling network of fraudulent platforms since at least 2021. While the sites advertised child abuse material and cybercrime-as-a-service offerings, nothing was actually delivered after victims made a payment in Bitcoin. The fraudulent scheme netted the operator an estimated €345,000 from around 10,000 people.</p>
+
+<p>Authorities from 23 countries participated in the operation, and have since identified 440 customers whose purchases are now under active investigation. Malicious npm Packages Steal Secrets
+— Two malicious npm packages, sbx-mask and touch-adv, have been found to steal secrets from victims’ computers. While one invokes the malicious code via the postinstall script, the other executes it when application code is invoked by the developer after importing it. “The evidence strongly suggests account takeover of a legitimate publisher, rather than intentional malicious activity,” Sonatype
+said
+.</p>
+
+<p>“Hijacked publisher accounts are particularly concerning as, over time, maintainers build trust with the users of their components. Attackers aim to take advantage of that trust in order to steal valuable, or profitable, information.”
+China to Have Its Own Post-Quantum Cryptography in 3 Years
+— China is reportedly planning to develop its own national post-quantum cryptography standards within the next three years, according to a
+report
+from Reuters. The U.S. finalized ​its first set of post-quantum cryptography standards in 2024 and is aiming to achieve full industry migration by 2035.</p>
+
+<p>What’s Next for Tycoon2FA? — A recent law enforcement operation dismantled the infrastructure associated with the
+Tycoon2FA
+phishing-as-a-service (PhaaS) platform. However, a new analysis from Bridewell has revealed that some of the 2FA phishing CAPTCHA pages are still live. The lingering activity, the cybersecurity company noted, stems from the fact that these pages operate on a massive network of compromised third-party sites, legitimate SaaS platforms, and thousands of disposable domains.</p>
+
+<p>“Operators and affiliates are highly agile and will attempt to rebuild, migrate to new infrastructure, or pivot to competing PhaaS platforms,” it
+added
+. “The live CAPTCHA pages we are seeing may belong to surviving criminal affiliates attempting to keep their individual campaigns breathing on secondary proxy networks.”
+🔧 Cybersecurity Tools
+MESH
+→ It is an open-source tool from BARGHEST that enables remote mobile forensics and network monitoring over an encrypted, peer-to-peer mesh network resistant to censorship. It connects Android/iOS devices behind firewalls or CGNAT using a modified Tailscale-like protocol (no central servers needed), supports ADB wireless debugging, libimobiledevice, PCAP capture, and Suricata IDS—allowing secure, direct access for live logical acquisitions in restricted or hostile environments. enject
+→ It is a lightweight Rust tool that protects .env secrets from AI assistants like Copilot or Claude.</p>
+
+<p>It replaces real values in your .env file with placeholders (e.g., en://api_key). Secrets stay encrypted in a per-project store (AES-256-GCM, master password protected). When you run enject run – <command />, it decrypts them only in memory at runtime, then wipes them—never leaving plaintext on disk. Open-source, macOS/Linux, perfect for safe local development.</p>
+
+<p>Disclaimer: For research and educational use only. Not security-audited. Review all code before use, test in isolated environments, and ensure compliance with applicable laws. Conclusion
+And that’s the week.</p>
+
+<p>The real pattern isn’t any one story; it’s the gap. The gap between a flaw and detection. Between a patch and a deployment. Between knowing and doing.</p>
+
+<p>Most of this week’s damage happened in that gap, and it’s not new. Before you move on: update your mobile devices, review anything touching your CI/CD pipeline, and don’t store crypto wallet recovery phrases in notes apps. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="we-found-eight-attack-vectors-inside-aws-bedrock-heres-what-attackers-can-do-with-them"><a id="article-3"></a>We Found Eight Attack Vectors Inside AWS Bedrock. Here’s What Attackers Can Do with Them</h2>
+
+<p>AWS Bedrock
+is Amazon’s platform for building AI-powered applications. It gives developers access to foundation models and the tools to connect those models directly to enterprise data and systems. That connectivity is what makes it powerful – but it’s also what makes Bedrock a target. When an AI agent can query your Salesforce instance, trigger a Lambda function, or pull from a SharePoint knowledge base, it becomes a node in your infrastructure - with permissions, with reachability, and with paths that lead to critical assets.</p>
+
+<p>The XM Cyber threat research team mapped exactly how attackers could exploit that connectivity inside Bedrock environments. The result: eight validated attack vectors spanning log manipulation, knowledge base compromise, agent hijacking, flow injection, guardrail degradation, and prompt poisoning. In this article, we’ll walk through each vector - what it targets, how it works, and what an attacker can reach on the other side. The Eight Vectors
+The XM Cyber threat research team analyzed the full Bedrock stack.</p>
+
+<p>Each attack vector we found starts with a low-level permission…and potentially ends somewhere you do
+not
+want an attacker to be. 1. Model Invocation Log Attacks
+Bedrock logs every model interaction for compliance and auditing. This is a potential shadow attack surface.</p>
+
+<p>An attacker can often just read the existing S3 bucket to harvest sensitive data. If that is unavailable, they may use bedrock:PutModelInvocationLoggingConfiguration to redirect logs to a bucket they control. From then on, every prompt flows silently to the attacker. A second variant targets the logs directly.</p>
+
+<p>An attacker with s3:DeleteObject or logs:DeleteLogStream permissions can scrub evidence of jailbreaking activity, eliminating the forensic trail entirely. 2. Knowledge Base Attacks - Data Source
+Bedrock Knowledge Bases connect foundation models to proprietary enterprise data via Retrieval Augmented Generation (RAG). The data sources feeding those Knowledge Bases - S3 buckets, Salesforce instances, SharePoint libraries, Confluence spaces - are directly reachable from Bedrock.</p>
+
+<p>For example, an attacker with
+s3:GetObject
+access to a Knowledge Base data source can bypass the model entirely and pull raw data directly from the underlying bucket. More critically, an attacker with
+the
+privileges to retrieve and decrypt a secret can steal the credentials Bedrock uses to connect to integrated SaaS services. In the case of SharePoint, they could potentially use those credentials to move laterally into Active Directory. 3.</p>
+
+<p>Knowledge Base Attacks - Data Store
+While the data source is the origin of information, the data store is where that information lives after it’s ingested - indexed, structured, and queryable in real time. For common vector databases integrated with Bedrock, including Pinecone and Redis Enterprise Cloud, stored credentials are often the weakest link. An attacker with
+access to credentials
+and network reachability can retrieve endpoint values and API keys from the
+StorageConfiguration
+object returned via the
+bedrock:GetKnowledgeBase
+API, and thus gain full administrative access to the vector indices. For AWS-native stores like Aurora and Redshift, intercepted credentials give an attacker direct access to the entire structured knowledge base.</p>
+
+<ol>
+  <li>
+    <p>Agent Attacks – Direct
+Bedrock Agents are autonomous orchestrators. An attacker with
+bedrock:UpdateAgent
+or
+bedrock:CreateAgent
+permissions can rewrite an agent’s base prompt, forcing it to leak its internal instructions and tool schemas. The same access, combined with
+bedrock:CreateAgentActionGroup
+, allows an attacker to attach a malicious executor to a legitimate agent – which can enable unauthorized actions like database modifications or user creation under the cover of a normal AI workflow.</p>
+  </li>
+  <li>
+    <p>Agent Attacks – Indirect
+Indirect agent attacks target the infrastructure the agent depends on instead of the agent’s configuration. An attacker with
+lambda:UpdateFunctionCode
+can deploy malicious code directly to the Lambda function an agent uses to execute tasks. A variant using
+lambda:PublishLayer
+allows silent injection of malicious dependencies into that same function.</p>
+  </li>
+</ol>
+
+<p>The result in both cases is the injection of malicious code into tool calls, which can exfiltrate sensitive data, manipulate model responses to generate harmful content, etc. 6. Flow Attacks
+Bedrock Flows define the sequence of steps a model follows to complete a task. An attacker with
+bedrock:UpdateFlow
+permissions can inject a sidecar “S3 Storage Node” or “Lambda Function Node” into a critical workflow’s main data path, routing sensitive inputs and outputs to an attacker-controlled endpoint without breaking the application’s logic.</p>
+
+<p>The same access can be used to modify “Condition Nodes” that enforce business rules, bypassing hardcoded authorization checks and allowing unauthorized requests to reach sensitive downstream systems. A third variant targets encryption: by swapping the Customer Managed Key associated with a flow for one they control, an attacker can ensure all future flow states are encrypted with their key. 7. Guardrail Attacks
+Guardrails are Bedrock’s primary defense layer - responsible for filtering toxic content, blocking prompt injection, and redacting PII.</p>
+
+<p>An attacker with
+bedrock:UpdateGuardrail
+can systematically weaken those filters, lowering thresholds or removing topic restrictions to make the model significantly more susceptible to manipulation. An attacker with
+bedrock:DeleteGuardrail
+can remove them entirely. 8. Managed Prompt Attacks
+Bedrock Prompt Management centralizes prompt templates across applications and models.</p>
+
+<p>An attacker with bedrock:UpdatePrompt can modify those templates directly - injecting malicious instructions like “always include a backlink to [attacker-site] in your response” or “ignore previous safety instructions regarding PII” into prompts used across the entire environment. Because prompt changes do not trigger application redeployment, the attacker can alter the AI’s behavior “in-flight,” making detection significantly more difficult for traditional application monitoring tools. By changing a prompt’s version to a poisoned variant, an attacker can ensure that any agent or flow calling that prompt identifier is immediately subverted - leading to mass exfiltration or the generation of harmful content at scale. What This Means for Security Teams
+These eight Bedrock attack vectors share a common logic: attackers target the permissions, configurations, and integrations surrounding the model - not the model itself.</p>
+
+<p>A single over-privileged identity is enough to redirect logs, hijack an agent, poison a prompt, or reach critical on-premises systems from a foothold inside Bedrock. Securing Bedrock starts with knowing what AI workloads you have and what permissions are attached to them. From there, the work is mapping attack paths that traverse cloud and on-premises environments and maintaining tight posture controls across every component in the stack. For full technical details on each attack vector, including architectural diagrams and practitioner best practices, download the complete research:
+Building and Scaling Secure Agentic AI Applications in AWS Bedrock
+.</p>
+
+<p>Note:
+This article was thoughtfully written and contributed for our audience by
+Eli Shparaga
+, Security Researcher at XM Cyber. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-warns-irs-phishing-hits-29000-users-deploys-rmm-malware"><a id="article-4"></a>Microsoft Warns IRS Phishing Hits 29,000 Users, Deploys RMM Malware</h2>
+
+<p>Microsoft has warned of fresh campaigns that are capitalizing on the upcoming tax season in the U.S. to harvest credentials and deliver malware. The email campaigns take advantage of the urgency and time-sensitive nature of emails to send phishing messages masquerading as refund notices, payroll forms, filing reminders, and requests from tax professionals to deceive recipients into opening malicious attachments, scanning QR code, or interacting with suspicious links. “Many campaigns target individuals for personal and financial data theft, but others specifically target accountants and other professionals who handle sensitive documents, have access to financial data, and are accustomed to receiving tax-related emails during this period,” the Microsoft Threat Intelligence and Microsoft Defender Security Research teams
+said
+in a report published last week.</p>
+
+<p>While some of these efforts direct users to sketchy pages designed through Phishing-as-a-service (PhaaS) platforms, others result in the deployment of legitimate remote monitoring and management tools (RMMs), such as ConnectWise ScreenConnect, Datto, and SimpleHelp, enabling the attackers to gain persistent access to compromised devices. The details of some of the campaigns are below -
+Using Certified Public Accountant (CPA) lures to deliver phishing pages associated with the Energy365 PhaaS kit to capture victims’ email and password. The Energy365 phishing kit is estimated to be sending hundreds of thousands of malicious emails on a daily basis. Using QR code and W2 lures to target approximately 100 organizations, mainly in the manufacturing, retail, and healthcare industries located in the U.S., to direct users to phishing pages mimicking the Microsoft 365 sign-in pages and built using the SneakyLog (aka Kratos) PhaaS platform to siphon their credentials and two-factor authentication (2FA) codes.</p>
+
+<p>Using tax-themed domains for use in phishing campaigns that trick users into clicking on bogus links under the pretext of accessing updated tax forms, only to distribute ScreenConnect. Impersonating the Internal Revenue Service (IRS) with a cryptocurrency lure that specifically targeted the higher education sector in the U.S., instructing recipients to download a “Cryptocurrency Tax Form 1099” by accessing a malicious domain (“irs-doc[.]com” or “gov-irs216[.]net”) to deliver ScreenConnect or SimpleHelp. Targeting accountants and related organizations, asking for help to file their taxes by sending a malicious link that leads to the installation of Datto. Microsoft said it also observed a large-scale phishing campaign on February 10, 2026, in which more than 29,000 users across 10,000 organizations were affected.</p>
+
+<p>About 95% of the targets were located in the U.S., spanning industries like financial services (19%), technology and software (18%), and retail and consumer goods (15%). “The emails impersonated the IRS, claiming that potentially irregular tax returns had been filed under the recipient’s Electronic Filing Identification Number (EFIN). Recipients were instructed to review these returns by downloading a purportedly legitimate ‘IRS Transcript Viewer,’” the tech giant said. The emails, which were sent through Amazon Simple Email Service (SES), contained a “Download IRS Transcript View 5.1” button that, when clicked, redirected users to smartvault[.]im, a domain masquerading as SmartVault, a well-known document management and sharing platform.</p>
+
+<p>The phishing site relied on Cloudflare to keep bots and automated scanners at bay, thus ensuring that only human users are served the main payload: a maliciously packaged ScreenConnect that grants the attackers remote access to their systems and facilitates data theft, credential harvesting, and further post‑exploitation activity. To stay safe against these attacks, organizations are recommended to enforce 2FA on all users, implement conditional access policies, monitor and scan incoming emails and visited websites, and prevent users from accessing the malicious domains. The development coincides with the discovery of several campaigns that have been found to drop remote access malware or conduct data theft -
+Using
+fake Google Meet and Zoom pages
+to lure users into fraudulent video calls that ultimately
+deliver
+remote-access software like Teramind, a legitimate employee monitoring platform, by means of a bogus software update. Using a
+fraudulent website
+that leverages the Avast branding to trick French-speaking users into handing over their full credit card details as part of a refund scam.</p>
+
+<p>Using a
+typosquatted website
+impersonating the official Telegram download portal (“telegrgam[.]com”) to distribute trojanized installers that, in addition to dropping a legitimate Telegram installer, execute a DLL responsible for launching an in-memory payload. The malware then initiates communication with its command-and-control infrastructure to receive instructions, download updated components, and maintain persistent access. Abusing
+Microsoft Azure Monitor alert notifications
+to deliver
+callback phishing emails
+that use invoice and unauthorized-payment lures. “Attackers create malicious Azure Monitor alert rules, embedding scam content in the alert description, including fake billing details and attacker-controlled support phone numbers,” LevelBlue said.</p>
+
+<p>“Victims are then added to the Action Group linked to the alert rule, causing Azure to send the phishing message from the legitimate sender address azure-noreply@microsoft.com.”
+Using
+quotation-themed lures
+in phishing emails to deliver a JavaScript dropper that connects to an external server to download a PowerShell script, which launches the trusted Microsoft application “Aspnet_compiler.exe” and injects into it an
+XWorm 7.1
+payload via reflective DLL injection. The updated malware comes with a .NET-developed component engineered for stealth and persistence. Similar requests for quotation lures have also been used to
+trigger
+a fileless Remcos RAT infection chain. Using phishing emails and
+ClickFix
+ploys to
+deliver
+NetSupport RAT
+and gain unauthorized system access, exfiltrate data, and deploy additional malware.</p>
+
+<p>Using
+Microsoft Application Registration Redirect URI’s
+(“login.microsoftonline[.]com”) in phishing emails to abuse trust relationships and bypass email spam filters to redirect users to phishing websites that capture victims’ credentials and 2FA codes. Abusing legitimate
+URL rewriting services
+from Avanan, Barracuda, Bitdefender, Cisco, INKY, Mimecast, Proofpoint, Sophos, and Trend Micro to conceal malicious URLs in phishing emails evades detection. “Threat actors have increasingly adopted multi-vendor chained redirection in their phishing campaigns,” LevelBlue said. “Earlier activity typically relied on a single rewriting service, but newer campaigns stack multiple layers of already‑rewritten links.</p>
+
+<p>This nesting makes it significantly harder for security platforms to reconstruct the full redirect path and identify the final malicious destination.”
+Using
+malicious ZIP files
+impersonating a wide range of software, including artificial intelligence (AI) image generators, voice-changing tools, stock-market trading utilities, game mods, VPNs, and emulators, to deliver
+Salat Stealer
+or MeshAgent, along with a cryptocurrency miner. The campaign has specifically targeted users in the U.S., the U.K., India, Brazil, France, Canada, and Australia. Using
+digital invitation lures
+sent via phishing emails to divert users to a fake Cloudflare CAPTCHA page that delivers a VBScript, which then runs PowerShell code to fetch an evasive .NET loader dubbed SILENTCONNECT from Google Drive to eventually deliver ScreenConnect. The findings follow an uptick in RMM adoption by threat actors, with the abuse of such tools surging 277% year-over-year, according to a
+recent report
+published by Huntress.</p>
+
+<p>One
+notable tactic
+involves the daisy-chaining of distinct RMM tools to fragment telemetry, distribute persistence, and complicate attribution and containment efforts, the company added. “As these tools are used by legitimate IT departments, they are typically overlooked and considered ‘trusted’ in most corporate environments,” Elastic Security Labs researchers Daniel Stepanic and Salim Bitam said. “Organizations must stay vigilant, auditing their environments for unauthorized RMM usage.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="trivy-hack-spreads-infostealer-via-docker-triggers-worm-and-kubernetes-wiper"><a id="article-5"></a>Trivy Hack Spreads Infostealer via Docker, Triggers Worm and Kubernetes Wiper</h2>
+
+<p>Cybersecurity researchers have uncovered malicious artifacts distributed via Docker Hub following the
+Trivy supply chain attack
+, highlighting the widening blast radius across developer environments. The last known clean release of
+Trivy
+on Docker Hub is 0.69.3. The malicious versions 0.69.4, 0.69.5, and 0.69.6 have since been removed from the container image library. “New image tags 0.69.5 and 0.69.6 were pushed on March 22 without corresponding GitHub releases or tags.</p>
+
+<p>Both images contain indicators of compromise associated with the same TeamPCP infostealer observed in earlier stages of this campaign,” Socket security researcher Philipp Burckhardt
+said
+. The development comes in the wake a
+supply chain compromise
+of Trivy, a popular open-source vulnerability scanner maintained by Aqua Security, allowing the threat actors to leverage a compromised credential to push a credential stealer within trojanized versions of the tool and two related GitHub Actions “aquasecurity/trivy-action” and “aquasecurity/setup-trivy.”
+The attack has had downstream impacts, with the attackers leveraging the stolen data to compromise dozens of npm packages to distribute a self-propagating worm known as
+CanisterWorm
+. The incident is believed to be the work of a threat actor tracked as TeamPCP. According to the OpenSourceMalware team, the attackers have defaced all 44 internal repositories associated with Aqua Security’s “
+aquasec-com
+“ GitHub organization by renaming each of them with a “tpcp-docs-“ prefix, setting all descriptions to “TeamPCP Owns Aqua Security,” and exposing them publicly.</p>
+
+<p>It’s worth noting that the “aquasec-com” account is distinct from the cloud security vendor’s other well-known GitHub organization account, “aquasecurity,” which hosts the impacted Trivy scanner and GitHub Actions, along with various open-source projects. The newly compromised organization contains proprietary source code, including source code for Tracee, internal Trivy forks, CI/CD pipelines, Kubernetes operators, and team knowledge bases. All the repositories are said to have been modified in a scripted 2-minute burst between 20:31:07 UTC and 20:32:26 UTC on March 22, 2026. It’s been assessed with high confidence that the threat actor leveraged a compromised “Argon-DevOps-Mgt” service account for this purpose.</p>
+
+<p>“Our forensic analysis of the GitHub Events API points to a compromised service account token — likely stolen during TeamPCP’s prior Trivy GitHub Actions compromise — as the attack vector,” security researcher Paul McCarty
+said
+. “This is a service/bot account (GitHub ID 139343333, created 2023-07-12) with a critical property: it bridges both GitHub orgs.”
+“One compromised token for this account gives the attacker write/admin access to both organizations,” McCarty added. The development is the latest escalation from a threat actor that’s has built a reputation for targeting cloud infrastructures, while progressively building capabilities to systemically exposed Docker APIs, Kubernetes clusters, Ray dashboards, and Redis servers to steal data, deploy ransomware, conduct extortion, and mine cryptocurrency. Their growing sophistication is best exemplified by the emergence of a new wiper malware that spreads through SSH via stolen keys and exploits exposed Docker APIs on port 2375 across the local subnet.</p>
+
+<p>A new payload attributed to TeamPCP has been found to go beyond credential theft to wiping entire Kubernetes (K8s) clusters located in Iran. The shell script uses the same ICP canister linked to CanisterWorm and then runs checks to identify Iranian systems. “On Kubernetes: deploys privileged DaemonSets across every node, including control plane,” Aikido security researcher Charlie Eriksen
+said
+. “Iranian nodes get wiped and force-rebooted via a container named ‘kamikaze.’ Non-Iranian nodes get the CanisterWorm backdoor installed as a systemd service.</p>
+
+<p>Non-K8s Iranian hosts get ‘rm -rf / –no-preserve-root.’”
+Given the ongoing nature of the attack, it’s imperative that organizations review their use of Trivy in CI/CD pipelines, avoid using affected versions, and treat any recent executions as potentially compromised. “This compromise demonstrates the long tail of supply chain attacks,” OpenSourceMalware said. “A credential harvested during the Trivy GitHub Actions compromise months ago was weaponized today to deface an entire internal GitHub organization. The Argon-DevOps-Mgt service account — a single bot account bridging two orgs with a long-lived PAT — was the weak link.”
+“From cloud exploitation to supply chain worms to Kubernetes wipers, they are building capability and targeting the security vendor ecosystem itself.</p>
+
+<p>The irony of a cloud security company being compromised by a cloud-native threat actor should not be lost on the industry. Update
+In a formal update shared on March 23, 2026, Aqua Security
+said
+its investigation is “actively focused on validating that all access paths have been identified and fully closed,” adding there is no indication its commercial products were
+impacted by the incident
+. “The mechanics here weren’t novel. The attacker, with write access to the repository, force-pushed tags to a new commit containing a modified entry point and relied on the fact that most workflows reference actions by tag,” CrowdStrike
+said
+.</p>
+
+<p>“For a defender, the takeaway is to pin your actions by committing SHA, monitor your CI/CD runners with the same rigor as production hosts, and treat any code that runs in your pipeline as code that runs in your infrastructure.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="inside-the-2026-cyber-workforce-skills-shortages-and-shifts-in-the-age-of-ai"><a id="article-6"></a>Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</h2>
+
+<h2 id="hackers-exploit-cve-2025-32975-cvss-100-to-hijack-unpatched-quest-kace-sma-systems"><a id="article-7"></a>Hackers Exploit CVE-2025-32975 (CVSS 10.0) to Hijack Unpatched Quest KACE SMA Systems</h2>
+
+<p>Threat actors are suspected to be exploiting a maximum-severity security flaw impacting Quest KACE Systems Management Appliance (SMA), according to Arctic Wolf. The cybersecurity company
+said
+it observed malicious activity starting the week of March 9, 2026, in customer environments that’s consistent with the exploitation of
+CVE-2025-32975
+on unpatched SMA systems exposed to the internet. It’s currently not known what the end goals of the attack are. CVE-2025-32975 (CVSS score: 10.0) refers to an
+authentication bypass vulnerability
+that allows attackers to impersonate legitimate users without valid credentials.</p>
+
+<p>Successful exploitation of the flaw could facilitate the complete takeover of administrative accounts. The issue was patched by Quest in May 2025. In the malicious activity detected by Arctic Wolf, threat actors are believed to have weaponized the vulnerability to seize control of administrative accounts and execute remote commands to drop Base64-encoded payloads from an external server (216.126.225[.]156) via the curl command. The unknown attackers then proceeded to create additional administrative accounts via “
+runkbot.exe
+,” a background process associated with the SMA Agent that’s used to run scripts and manage installations.</p>
+
+<p>Also detected were Windows Registry modifications via a PowerShell script for possible persistence or system configuration changes. Other actions undertaken by the threat actors are listed below -
+Conducting credential harvesting using Mimikatz. Performing discovery and reconnaissance by enumerating logged-in users and administrator accounts, and running “net time” and “net group” commands. Obtaining remote desktop protocol (RDP) access to backup infrastructure (Veeam, Veritas) and domain controllers.</p>
+
+<p>To counter the threat, administrators are advised to apply the latest updates and avoid exposing SMA instances to the internet. The issue has been addressed in versions 13.0.385, 13.1.81, 13.2.183, 14.0.341 (Patch 5), and 14.1.101 (Patch 4). Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fbi-warns-russian-hackers-target-signal-whatsapp-in-mass-phishing-attacks"><a id="article-8"></a>FBI Warns Russian Hackers Target Signal, WhatsApp in Mass Phishing Attacks</h2>
+
+<p>Threat actors affiliated with Russian Intelligence Services are conducting phishing campaigns to compromise commercial messaging applications (CMAs) like WhatsApp and Signal to seize control of accounts belonging to individuals with high intelligence value, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) and Federal Bureau of Investigation (FBI)
+said
+Friday. “The campaign targets individuals of high intelligence value, including current and former U.S. government officials, military personnel, political figures, and journalists,” FBI Director Kash Patel
+said
+in a post on X.</p>
+
+<p>“Globally, this effort has resulted in unauthorized access to thousands of individual accounts. After gaining access, the actors can view messages and contact lists, send messages as the victim, and conduct additional phishing from a trusted identity.”
+It’s worth noting that the attacks are designed to break into the victims’ CMA accounts through phishing and do not exploit any security vulnerability or weakness to crack the platforms’ encryption protections. These entail sending messages engineered to create a false sense of urgency by claiming that suspicious account activity or login attempts from an unrecognized device or location have been detected. While the agencies did not attribute the activity to a specific threat actor, prior reports from Microsoft and Google Threat Intelligence Group have linked such campaigns to multiple Russia-aligned threat clusters tracked as
+Star Blizzard
+,
+UNC5792 (aka UAC-0195), and UNC4221 (aka UAC-0185)
+.</p>
+
+<p>In a similar alert, the Cyber Crisis Coordination Center (C4), part of the National Cybersecurity Agency of France (ANSSI), warned of a surge in attack campaigns targeting instant messaging accounts associated with government officials, journalists, and business leaders. “These attacks – when successful – can allow malicious actors to access conversation histories, or even take control of their victims’ messaging accounts and send messages while impersonating them,” C4
+said
+. The end goal of the campaign is to enable the threat actors to gain unauthorized access to victims’ accounts, enabling them to view messages and contact lists, send messages on their behalf, and even conduct secondary phishing against other targets by abusing trusted relationships. As recently alerted by cybersecurity agencies from
+Germany
+and
+the Netherlands
+, the attack
+involves
+the adversary posing as “Signal Support” to approach targets and urge them to click on a link (or alternatively scan a QR code) or provide the PIN or verification code.</p>
+
+<p>In both cases, the social engineering scheme allows the threat actors to gain access to the victim’s CMA account. However, the campaign has two different outcomes for the victim depending on the method used -
+If the victim opts to provide the PIN or verification code to the threat actor, they lose access to their account, as the attacker has used it to recover the account on their end. While the threat actor cannot access past messages, the method can be used to monitor fresh messages and send messages to others by impersonating the victim. If the victim ends up clicking the link or scanning the QR code, a device under the control of the threat actor gets linked to the victim’s account, allowing them to access all messages, including those sent in the past.</p>
+
+<p>In this scenario, the victim continues to have access to the CMA account unless they are explicitly removed from the app settings. To better protect against the threat, users are advised to
+never share
+their
+SMS code or verification PIN with anyone
+, exercise caution when receiving unexpected messages from unknown contacts, check links before clicking them, and periodically review linked devices and remove those that appear suspicious. “These attacks, like all phishing, rely on social engineering. Attackers impersonate trusted contacts or services (such as the non-existent ‘Signal Support Bot’) to trick victims into handing over their login credentials or other information,” Signal
+said
+in a post on X earlier this month.</p>
+
+<p>“To help prevent this, remember that your Signal SMS verification code is only ever needed when you are first signing up for the Signal app. We also want to emphasize that Signal Support will <em>never</em> initiate contact via in-app messages, SMS, or social media to ask for your verification code or PIN. If anyone asks for any Signal-related code, it is a scam.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="oracle-patches-critical-cve-2026-21992-enabling-unauthenticated-rce-in-identity-manager"><a id="article-9"></a>Oracle Patches Critical CVE-2026-21992 Enabling Unauthenticated RCE in Identity Manager</h2>
+
+<p>Oracle has
+released
+security updates to address a critical security flaw impacting Identity Manager and Web Services Manager that could be exploited to achieve remote code execution. The vulnerability, tracked as
+CVE-2026-21992
+, carries a CVSS score of 9.8 out of a maximum of 10.0. “This vulnerability is remotely exploitable without authentication,” Oracle
+said
+in an advisory. “If successfully exploited, this vulnerability may result in remote code execution.”
+CVE-2026-21992 affects the following versions -
+Oracle Identity Manager versions 12.2.1.4.0 and 14.1.2.1.0
+Oracle Web Services Manager versions 12.2.1.4.0 and 14.1.2.1.0
+According to a
+description
+of the flaw in the NIST National Vulnerability Database (NVD), it’s “easily exploitable” and could allow an unauthenticated attacker with network access via HTTP to compromise Oracle Identity Manager and Oracle Web Services Manager.</p>
+
+<p>This, in turn, can result in the successful takeover of susceptible instances. Oracle makes no mention of the vulnerability being exploited in the wild. However, the tech giant has urged customers to apply the update without delay for optimal protection. In November 2025, the U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA) added
+CVE-2025-61757
+(CVSS score: 9.8), a pre-authenticated remote code execution flaw impacting Oracle Identity Manager, to the Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="trivy-supply-chain-attack-triggers-self-spreading-canisterworm-across-47-npm-packages"><a id="article-10"></a>Trivy Supply Chain Attack Triggers Self-Spreading CanisterWorm Across 47 npm Packages</h2>
+
+<p>The threat actors behind the
+supply chain attack
+targeting the popular Trivy scanner are suspected to be conducting follow-on attacks that have led to the compromise of a large number of npm packages with a previously undocumented self-propagating worm dubbed
+CanisterWorm
+. The name is a reference to the fact that the malware uses an
+ICP canister
+, which denotes a tamperproof smart contract on the Internet Computer blockchain, as a
+dead drop resolver
+. The development marks the first publicly documented abuse of an ICP canister for the explicit purpose of fetching the command-and-control (C2) server, Aikido Security researcher Charlie Eriksen
+said
+. The list of affected packages is below -
+28 packages in the @EmilGroup scope
+16 packages in the @opengov scope
+@teale.io/eslint-config
+@airtm/uuid-base32
+@pypestream/floating-ui-dom
+The development comes within a day after threat actors leveraged a compromised credential to publish malicious trivy, trivy-action, and setup-trivy releases containing a credential stealer.</p>
+
+<p>A cloud-focused
+cybercriminal operation
+known as
+TeamPCP
+is suspected to be behind the attacks. The infection chain involving the npm packages involves leveraging a postinstall hook to execute a loader, which then drops a Python backdoor that’s responsible for contacting the ICP canister dead drop to retrieve a URL pointing to the next-stage payload. The fact that the dead drop infrastructure is decentralized makes it
+resilient and resistant to takedown efforts
+. “The canister controller can swap the URL at any time, pushing new binaries to all infected hosts without touching the implant,” Eriksen said.</p>
+
+<p>Persistence is established by means of a systemd user service, which is configured to automatically start the Python backdoor after a 5-second delay if it gets terminated for some reason by using the “
+Restart=always
+“ directive. The systemd service masquerades as PostgreSQL tooling (“pgmon”) in an attempt to fly under the radar. The backdoor, as mentioned before, phones the
+ICP canister
+with a spoofed browser User-Agent every 50 minutes to fetch the URL in plaintext. The URL is subsequently parsed to fetch and run the executable.</p>
+
+<p>“If the URL contains youtube[.]com, the script skips it,” Eriksen explained. “This is the canister’s dormant state. The attacker arms the implant by pointing the canister at a real binary, and disarms it by switching back to a YouTube link. If the attacker updates the canister to point to a new URL, every infected machine picks up the new binary on its next poll.</p>
+
+<p>The old binary keeps running in the background since the script never kills previous processes.”
+It’s worth noting that a similar youtube[.]com-based kill switch has also been flagged by Wiz in connection with the trojanized Trivy binary (version 0.69.4), which reaches out to the same ICP canister via another Python dropper (“sysmon.py”). As of writing, the URL returned by the C2 is a
+rickroll YouTube video
+. The Hacker News found that the ICP canister
+supports
+three methods – get_latest_link, http_request, update_link – the last of which allows the threat actor to modify the behavior at any time to serve an actual payload. In tandem, the packages come with a “deploy.js” file that the attacker runs manually to spread the malicious payload to every package a stolen npm token provides access to in a programmatic fashion.</p>
+
+<p>The worm, assessed to be vibe-coded using an artificial intelligence (AI) tool, makes no attempt to conceal its functionality. “This isn’t triggered by npm install,” Aikido said. “It’s a standalone tool the attacker runs with stolen tokens to maximize blast radius.”
+To make matters worse, a subsequent mutation of CanisterWorm detected in “@teale.io/eslint-config” versions 1.8.11 and 1.8.12 has been found to steal npm tokens and use them to self-propagate on its own without the need for manual intervention. Unlike “deploy.js,” which was a self-contained script the attacker had to execute with the pilfered npm tokens to push a malicious version of the npm packages to the registry, the new variant incorporates this functionality in “index.js” within a findNpmTokens() function that’s run during the postinstall phase to collect npm authentication tokens from the victim’s machine.</p>
+
+<p>The main difference here is that the postinstall script, after installing the persistent backdoor, attempts to locate every npm token from the developer’s environment and spawns the worm right away with those tokens by launching “deploy.js” as a fully detached background process. Interestingly, the threat actor is said to have swapped out the ICP backdoor payload for a dummy test string (“hello123”), likely to ensure that the entire attack chain is working as intended before adding the malware. “This is the point where the attack goes from ‘compromised account publishes malware’ to ‘malware compromises more accounts and publishes itself,’” Eriksen said. “Every developer or CI pipeline that installs this package and has an npm token accessible becomes an unwitting propagation vector.</p>
+
+<p>Their packages get infected, their downstream users install those, and if any of them have tokens, the cycle repeats.”
+Update
+Software supply chain security company Socket said the
+CanisterWorm
+supply chain attack has expanded to 141 malicious package artifacts spanning more than 66 unique packages. “In the observed activity, the threat actor appears to have obtained one or more npm publishing tokens, or equivalent CI/CD publishing access, and used that access to replace legitimate package contents with malicious code, then republish the payload across additional packages reachable by the compromised credentials,” the company
+said
+. Additional analyses into CanisterWorm have been published by
+Endor Labs
+and
+JFrog
+, with the malware characterized as both a credential harvester and a malware dropper that searches for npm authentication tokens by scanning the developer machine and then passing the harvested tokens to a secondary script (“deploy.js”), which acts as a worm to propane the malicious logic across the victim’s software portfolio. “While credential harvesting via postinstall hooks is a well-established tactic,
+Shai-Hulud
+proved that stolen npm tokens could be immediately weaponized to infect and republish a victim’s own packages, turning a single compromise into an exponentially expanding attack,” Henrik Plate, head of security research at Endor Labs, said.</p>
+
+<p>“The campaign analyzed here follows the same playbook, confirming that worm-like self-propagation has become a recurring technique rather than an isolated incident.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-flags-apple-craft-cms-laravel-bugs-in-kev-orders-patching-by-april-3-2026"><a id="article-11"></a>CISA Flags Apple, Craft CMS, Laravel Bugs in KEV, Orders Patching by April 3, 2026</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday
+added
+five security flaws impacting Apple, Craft CMS, and Laravel Livewire to its Known Exploited Vulnerabilities (
+KEV
+) catalog, urging federal agencies to patch them by April 3, 2026. The vulnerabilities that have come under exploitation are listed below -
+CVE-2025-31277
+(CVSS score: 8.8) - A vulnerability in Apple WebKit that could result in memory corruption when processing maliciously crafted web content. (Fixed in July 2025)
+CVE-2025-43510
+(CVSS score: 7.8) - A memory corruption vulnerability in Apple’s kernel component that could allow a malicious application to cause unexpected changes in memory shared between processes.</p>
+
+<p>(Fixed in December 2025)
+CVE-2025-43520
+(CVSS score: 8.8) - A memory corruption vulnerability in Apple’s kernel component that could allow a malicious application to cause unexpected system termination or write kernel memory. (Fixed in December 2025)
+CVE-2025-32432
+(CVSS score: 10.0) - A code injection vulnerability in Craft CMS that could allow a remote attacker to execute arbitrary code. (Fixed in April 2025)
+CVE-2025-54068
+(CVSS score: 9.8) - A code injection vulnerability in Laravel Livewire that could allow unauthenticated attackers to achieve remote command execution in specific scenarios. (Fixed in July 2025)
+The addition of the three Apple vulnerabilities to the KEV catalog comes in the wake of reports from Google Threat Intelligence Group (GTIG), iVerify, and Lookout about an iOS exploit kit codenamed
+DarkSword
+that leverages these shortcomings, along with three bugs, to deploy various malware families like GHOSTBLADE, GHOSTKNIFE, and GHOSTSABER for data theft.</p>
+
+<p>CVE-2025-32432 is assessed to have been
+exploited
+as a zero-day by unknown threat actors since February 2025, per Orange Cyberdefense SensePost. Since then, an intrusion set tracked as
+Mimo
+(aka Hezb) has also been observed exploiting the vulnerability to deploy a cryptocurrency miner and residential proxyware. Rounding off the list is
+CVE-2025-54068
+, whose exploitation was
+recently flagged
+by the Ctrl-Alt-Intel Threat Research team as part of attacks mounted by the Iranian state-sponsored hacking group,
+MuddyWater
+(aka Boggy Serpens). In a report published earlier this week, Palo Alto Networks Unit 42 called out the adversary’s consistent targeting of diplomatic and critical infrastructure, including energy, maritime, and finance, across the Middle East and other strategic targets worldwide.</p>
+
+<p>“While social engineering remains its defining trait, the group is also increasing its technological capabilities,” Unit 42
+said
+. “Its diverse toolset includes AI-enhanced malware implants that incorporate anti-analysis techniques for long-term persistence. This combination of social engineering and rapidly developed tools creates a potent threat profile.”
+“To support its large-scale social engineering campaigns, Boggy Serpens uses a custom-built, web-based orchestration platform,” Unit 42 said. “This tool enables operators to automate mass email delivery while maintaining granular control over sender identities and target lists.”
+Attributed to the Iranian Ministry of Intelligence and Security (MOIS), the group is primarily focused on cyber espionage, although it has also been linked to disruptive operations targeting the Technion Israel Institute of Technology by adopting the
+DarkBit
+ransomware persona.</p>
+
+<p>One of the defining hallmarks of MuddyWater’s tradecraft has been the use of hijacked accounts belonging to official government and corporate entities in its spear-phishing attacks, and abuse of trusted relationships to evade reputation-based blocking systems and deliver malware. In a sustained campaign targeting an unnamed national marine and energy company in the U.A.E. between August 16, 2025, and February 11, 2026, the threat actor is said to have conducted four distinct waves of attack, leading to the deployment of various malware families, including
+GhostBackDoor and Nuso
+(aka HTTP_VIP). Some of the other notable tools in the threat actor’s arsenal include
+UDPGangster
+and
+LampoRAT
+(aka CHAR).</p>
+
+<p>“Boggy Serpens’ recent activity exemplifies a maturing threat profile, as the group integrates its established methodologies with refined mechanisms for operational persistence,” Unit 42 said. “By diversifying its development pipeline to include modern coding languages like Rust and AI-assisted workflows, the group creates parallel tracks that ensure the redundancy needed to sustain a high operational tempo.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="trivy-security-scanner-github-actions-breached-75-tags-hijacked-to-steal-cicd-secrets"><a id="article-12"></a>Trivy Security Scanner GitHub Actions Breached, 75 Tags Hijacked to Steal CI/CD Secrets</h2>
+
+<p>Trivy, a popular open-source vulnerability scanner maintained by Aqua Security, was compromised a second time within the span of a month to deliver malware capable of stealing sensitive CI/CD secrets. The latest incident impacted GitHub Actions “
+aquasecurity/trivy-action
+“ and “
+aquasecurity/setup-trivy
+,” which are used to scan Docker container images for vulnerabilities and set up GitHub Actions workflow with a specific version of the scanner, respectively. “We identified that an attacker force-pushed 75 out of 76 version tags in the aquasecurity/trivy-action repository, the official GitHub Action for running Trivy vulnerability scans in CI/CD pipelines,” Socket security researcher Philipp Burckhardt
+said
+. “These tags were modified to serve a malicious payload, effectively turning trusted version references into a distribution mechanism for an infostealer.”
+The payload executes within GitHub Actions runners and aims to extract valuable developer secrets from CI/CD environments, such as SSH keys, credentials for cloud service providers, databases, Git, Docker configurations, Kubernetes tokens, and cryptocurrency wallets.</p>
+
+<p>The
+development
+marks the second supply chain incident involving Trivy. Towards the end of February and early March 2026, an autonomous bot called hackerbot-claw
+exploited
+a “pull_request_target” workflow to steal a Personal Access Token (PAT), which was then weaponized to seize control of the GitHub repository, delete several release versions, and push two malicious versions of its Visual Studio Code (VS Code) extension to Open VSX. The first sign of the compromise was
+flagged
+by security researcher Paul McCarty after a new compromised release (version 0.69.4) was published to the “aquasecurity/trivy” GitHub repository. The rogue version has since been removed.</p>
+
+<p>According to
+Wiz
+, version 0.69.4 starts both the legitimate Trivy service and the malicious code responsible for a series of tasks -
+Conduct data theft by scanning the system for environmental variables and credentials, encrypting the data, and exfiltrating it via an HTTP POST request to scan.aquasecurtiy[.]org. Set up persistence by using a
+systemd service
+after confirming that it’s running on a developer machine. The systemd service is configured to run a Python script (“sysmon.py”) that polls an external server to retrieve the payload and execute it. In a statement, Itay Shakury, vice president of open source at Aqua Security,
+said
+the attackers abused a compromised credential to publish malicious trivy, trivy-action, and setup-trivy releases.</p>
+
+<p>In the case of “aquasecurity/trivy-action,” the adversary
+force-pushed
+75 version tags to point to the malicious commits containing the Python infostealer payload without creating a new release or pushing to a branch, as is standard practice. Seven “aquasecurity/setup-trivy” tags were force-pushed in the same manner. “So in this case, the attacker didn’t need to exploit Git itself,” Burckhardt told The Hacker News. “They had valid credentials with sufficient privileges to push code and rewrite tags, which is what enabled the tag poisoning we observed.</p>
+
+<p>What remains unclear is the exact credential used in this specific step (e.g., a maintainer PAT vs. automation token), but the root cause is now understood to be credential compromise carried over from the earlier incident.”
+The security vendor also acknowledged that the latest attack stemmed from incomplete containment of the hackerbot-claw incident. “We rotated secrets and tokens, but the process wasn’t atomic, and attackers may have been privy to refreshed tokens,” Shakury said. “We are now taking a more restrictive approach and locking down all automated actions and any token in order to thoroughly eliminate the problem.”
+The stealer operates in three stages: harvesting environment variables from the runner process memory and the file system, encrypting the data, and exfiltrating it to the attacker-controlled server (“scan.aquasecurtiy[.]org”).</p>
+
+<p>Should the exfiltration attempt fail, the victim’s own GitHub account is abused to stage the stolen data in a public repository named “tpcp-docs” by making use of the captured INPUT_GITHUB_PAT, an environment variable used in GitHub Actions to pass a GitHub PAT for authentication with the GitHub API. It’s currently not known who is behind the attack, although there are signs that the threat actor known as
+TeamPCP
+may be behind it. This assessment is based on the fact that the credential harvester self-identifies as “TeamPCP Cloud stealer” in the source code. Also known as DeadCatx3, PCPcat, PersyPCP, ShellForce, and CipherForce, the
+group
+is known for acting as a cloud-native cybercrime platform designed to breach modern cloud infrastructure to facilitate data theft and extortion.</p>
+
+<p>“The credential targets in this payload are consistent with the group’s broader cloud-native theft-and-monetization profile,” Socket said. “The heavy emphasis on Solana validator key pairs and cryptocurrency wallets is less well-documented as a TeamPCP hallmark, though it aligns with the group’s known financial motivations. The self-labeling could be a false flag, but the technical overlap with prior TeamPCP tooling makes genuine attribution plausible.”
+Users are advised to ensure that they are using the latest safe releases -
+trivy 0.69.3
+trivy-action 0.35.0
+setup-trivy 0.2.6
+“If you suspect you were running a compromised version, treat all pipeline secrets as compromised and rotate immediately,” Shakury said. Additional mitigation steps include blocking the exfiltration domain and the associated IP address (45.148.10[.]212) at the network level, and checking GitHub accounts for repositories named “tpcp-docs,” which may indicate successful exfiltration via the fallback mechanism.</p>
+
+<p>“Pin GitHub Actions to full SHA hashes, not version tags,” Wiz researcher Rami McCarthy said. “Version tags can be moved to point at malicious commits, as demonstrated in this attack.”
+Update
+The supply chain attack on Trivy appears to have had a cascading impact, with threat actors leveraging the stolen data to compromise several npm packages and push malicious versions containing a self-propagating worm. More details about the activity
+can be found here
+. Aqua Security has published a
+detailed advisory
+of the supply chain attack, stating the attacker created a malicious version of Trivy (0.69.4) by following the below three steps -
+Pushing a commit (1885610c) that swapped the actions/checkout reference to an imposter commit (70379aad) containing a composite action that downloaded malicious Go source files from a typosquatted domain.</p>
+
+<p>Adding –skip=validate to goreleaser to bypass binary validation. Tagging this commit as v0.69.4, triggering the release pipeline. Aqua also noted that the attacker compromised “trivy-action” by force-pushing 76 of 77 version tags to malicious commits that injected an infostealer malware. It’s worth noting that 76 of the 77 version tags in the GitHub repository (v0.0.1 through v0.34.2) were poisoned, and one of them is a duplicate (v0.0.10).</p>
+
+<p>The sole clean tag was v0.35.0. “The v0.0.10 tag appears to be a legacy inconsistency in naming (not following the usual semver format), which is why we treated it as a duplicate rather than a distinct affected version,” Socket told The Hacker News. “It looks like Aqua’s advisory is counting all tag names, including the duplicates, which explains the difference.”
+In a similar manner, the threat actors force-pushed seven existing tags associated with “setup-trivy” (v0.2.0 – v0.2.6) to malicious commits. “The malicious ‘action.yaml’ contained the same infostealer as trivy-action, injected as a ‘Setup environment’ step that executes before the legitimate Trivy installation,” Aqua said.</p>
+
+<p>As recommended actions, the company is also urging users who may have run any of the infected versions to assume compromise and perform the following actions -
+Audit Trivy versions
+Review all workflows using aquasecurity/trivy-action or aquasecurity/setup-trivy for signs of compromise
+Look for repositories named “tpcp-docs” in the GitHub organization
+Pin GitHub Actions to full, immutable commit SHA hashes instead of version tags
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-langflow-flaw-cve-2026-33017-triggers-attacks-within-20-hours-of-disclosure"><a id="article-13"></a>Critical Langflow Flaw CVE-2026-33017 Triggers Attacks within 20 Hours of Disclosure</h2>
+
+<p>A critical security flaw impacting Langflow has
+come under active exploitation
+within 20 hours of public disclosure, highlighting the speed at which threat actors weaponize newly published vulnerabilities. The security defect, tracked as
+CVE-2026-33017
+(CVSS score: 9.3), is a case of missing authentication combined with code injection that could result in remote code execution. “The POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication,” according to Langflow’s advisory for the flaw. “When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database.</p>
+
+<p>This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution.”
+The vulnerability affects all versions of the open-source artificial intelligence (AI) platform prior to and including 1.8.1. It has been currently addressed in the
+development version 1.9.0.dev8
+. Security researcher Aviral Srivastava, who discovered and reported the flaw on February 26, 2026, said it’s distinct from
+CVE-2025-3248
+(CVSS score: 9.8), another critical bug in Langflow that abused the /api/v1/validate/code endpoint to execute arbitrary Python code without requiring any authentication. It has since come under active exploitation, per the U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA). “CVE-2026-33017 is in /api/v1/build_public_tmp/{flow_id}/flow,” Srivastava
+explained
+, adding that the root cause stems from the use of the same exec() call as CVE-2025-3248 at the end of the chain. “This endpoint is designed to be unauthenticated because it serves public flows. You can’t just add an auth requirement without breaking the entire public flows feature.</p>
+
+<p>The real fix is removing the data parameter from the public endpoint entirely, so public flows can only execute their stored (server-side) flow data and never accept attacker-supplied definitions.”
+Successful exploitation could allow an attacker to send a single HTTP request and obtain arbitrary code execution with the full privileges of the server process. With this privilege in place, the threat actor can read environment variables, access or modify files to inject backdoors or erase sensitive data, and even obtain a reverse shell. Srivastava told The Hacker News that exploiting CVE-2026-33017 is “extremely easy” and can be triggered by means of a weaponized curl command. One HTTP POST request with malicious Python code in the JSON payload is enough to achieve immediate remote code execution, he added.</p>
+
+<h2 id="cloud-security-firm-sysdig-said-it-observed-the-first-exploitation-attempts-targeting-cve-2026">Cloud security firm Sysdig said it observed the first exploitation attempts targeting CVE-2026</h2>
+<p>33017 in the wild within 20 hours of the advisory’s publication on March 17, 2026. “No public proof-of-concept (PoC) code existed at the time,” Sysdig said. “Attackers built working exploits directly from the advisory description and began scanning the internet for vulnerable instances. Exfiltrated information included keys and credentials, which provided access to connected databases and potential software supply chain compromise.”
+Threat actors have also been observed moving from automated scanning to leveraging custom Python scripts in order to extract data from “/etc/passwd” and deliver an unspecified next-stage payload hosted on “173.212.205[.]251:8443.” Subsequent activity from the same IP address points in a thorough credential harvesting operation that involves gathering environment variables, enumerating configuration files and databases, and extracting the contents of .env files.</p>
+
+<p>This suggests planning on part of the threat actor by staging the malware to be delivered once a vulnerable target is identified. “This is an attacker with a prepared exploitation toolkit moving from vulnerability validation to payload deployment in a single session,” Sysdig noted. It’s currently not known who is behind the attacks. The 20-hour window between advisory publication and first exploitation aligns with an accelerating trend that has seen the median time-to-exploit (TTE) shrinking from 771 days in 2018 to just hours in 2024.</p>
+
+<p>According to Rapid7’s
+2026 Global Threat Landscape Report
+, the median time from publication of a vulnerability to its inclusion in CISA’s Known Exploited Vulnerabilities (KEV) catalog dropped from 8.5 days to five days over the past year. “This timeline compression poses serious challenges for defenders. The median time for organizations to deploy patches is approximately 20 days, meaning defenders are exposed and vulnerable for far too long,” it added. “Threat actors are monitoring the same advisory feeds that defenders use, and they are building exploits faster than most organizations can assess, test, and deploy patches.</p>
+
+<p>Organizations must completely reconsider their vulnerability programs to meet reality.”
+Users are advised to update to the latest patched version as soon as possible, audit environment variables and secrets on any publicly exposed Langflow instance, rotate keys and database passwords as a precautionary measure, monitor for outbound connections to unusual callback services, and restrict network access to Langflow instances using firewall rules or a reverse proxy with authentication. The exploration activity targeting CVE-2025
+-
+3248 and CVE-2026-33017 underscores how AI workloads are landing in attackers’ crosshairs owing to their access to valuable data, integration within the software supply chain, and insufficient security safeguards. “CVE-2026-33017 […] demonstrates a pattern that is becoming the norm rather than the exception: critical vulnerabilities in popular open-source tools are weaponized within hours of disclosure, often before public PoC code is even available,” Sysdig concluded. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

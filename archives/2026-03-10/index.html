@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-10 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials</a></li>
+      
+        <li><a href="#article-2">UNC4899 Breached Crypto Firm After Developer AirDropped Trojanized File to Work Device</a></li>
+      
+        <li><a href="#article-3">⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack & Vibe-Coded Malware</a></li>
+      
+        <li><a href="#article-4">Can the Security Platform Finally Deliver for the Mid-Market?</a></li>
+      
+        <li><a href="#article-5">Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft</a></li>
+      
+        <li><a href="#article-6">Web Server Exploits and Mimikatz Used in Attacks Targeting Asian Critical Infrastructure</a></li>
+      
+        <li><a href="#article-7">OpenAI Codex Security Scanned 1.2 Million Commits and Found 10,561 High-Severity Issues</a></li>
+      
+        <li><a href="#article-8">Anthropic Finds 22 Firefox Vulnerabilities Using Claude Opus 4.6 AI Model</a></li>
+      
+        <li><a href="#article-9">Transparent Tribe Uses AI to Mass-Produce Malware Implants in Campaign Targeting India</a></li>
+      
+        <li><a href="#article-10">Multi-Stage VOID#GEIST Malware Delivering XWorm, AsyncRAT, and Xeno RAT</a></li>
+      
+        <li><a href="#article-11">The MSP Guide to Using AI-Powered Risk Management to Scale Cybersecurity</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-10-ai创业新闻">2026-03-10 AI创业新闻</h1>
+
+<h2 id="malicious-npm-package-posing-as-openclaw-installer-deploys-rat-steals-macos-credentials"><a id="article-1"></a>Malicious npm Package Posing as OpenClaw Installer Deploys RAT, Steals macOS Credentials</h2>
+
+<p>Cybersecurity researchers have discovered a malicious npm package that masquerades as an
+OpenClaw
+installer to deploy a remote access trojan (RAT) and steal sensitive data from compromised hosts. The package, named “
+@openclaw-ai/openclawai
+,” was uploaded to the registry by a user named “openclaw-ai” on March 3, 2026. It has been downloaded 178 times to date. The library is still available for download as of writing.</p>
+
+<p>JFrog, which discovered the package, said it’s designed to steal system credentials, browser data, crypto wallets, SSH keys, Apple Keychain databases, and iMessage history, as well as install a persistent RAT with remote access capabilities, SOCKS5 proxy, and live browser session cloning. “The attack is notable for its broad data collection, its use of social engineering to harvest the victim’s system password, and the sophistication of its persistence and C2 [command-and-control] infrastructure,” security researcher Meitar Palas
+said
+. “Internally, the malware identifies itself as GhostLoader.”
+The malicious logic is triggered by means of a postinstall hook, which
+re-installs the package globally
+using the command: “npm i -g @openclaw-ai/openclawai.” Once the installation is complete, the OpenClaw binary points to “scripts/setup.js” by means of the “bin” property in the “package.json” file. It’s worth noting that the “
+bin
+“ field is used to define executable files that should be added to the user’s PATH during package installation.</p>
+
+<p>This, in turn, turns the package into a globally accessible command-line tool. The file “setup.js” serves as the first-stage dropper that, upon running, displays a convincing fake command-line interface with animated progress bars to give the impression that OpenClaw is being installed on the host. After the purported installation step is complete, the script shows a bogus iCloud Keychain authorization prompt, asking users to enter their system password. Simultaneously, the script retrieves an encrypted second-stage JavaScript payload from the C2 server (“trackpipe[.]dev”), which is then decoded, written to a temporary file, and spawned as a detached child process to continue running in the background.</p>
+
+<p>The temp file is deleted after 60 seconds to cover up traces of the activity. “If the Safari directory is inaccessible (no Full Disk Access), the script displays an AppleScript dialog urging the user to grant FDA to Terminal, complete with step-by-step instructions and a button that opens System Preferences directly,” JFrog explained. “This enables the second-stage payload to steal Apple Notes, iMessage, Safari history, and Mail data.”
+The JavaScript second-stage, featuring about 11,700 lines, is a full-fledged information stealer and RAT framework that’s capable of persistence, data collection, browser decryption, C2 communication, a SOCKS5 proxy, and live browser cloning. It’s also equipped to steal a wide range of data -
+macOS Keychain, including both the local login.keychain-db and all iCloud Keychain databases
+Credentials, cookies, credit cards, and autofill data from all Chromium-based browsers, such as Google Chrome, Microsoft Edge, Brave, Vivaldi, Opera, Yandex, and Comet
+Data from desktop wallet applications and browser extensions
+Cryptocurrency wallet seed phrases
+SSH keys
+Developer and cloud credentials for AWS, Microsoft Azure, Google Cloud, Kubernetes, Docker, and GitHub
+Artificial intelligence (AI) agent configurations, and
+Data protected by the FDA, including Apple Notes, iMessage history, Safari browsing history, Mail account configurations, and Apple account information
+In the final stage, the collected data is compressed into a tar.gz archive and exfiltrated through multiple channels, including directly to the C2 server, Telegram Bot API, and GoFile.io.</p>
+
+<p>What’s more, the malware enters a persistent daemon mode that allows it to monitor clipboard content every three seconds and transmit any data that matches one of the nine pre-defined patterns corresponding to private keys,
+WIF key
+, SOL private key, RSA private key, BTC address, Ethereum address, AWS key, OpenAI key, and Strike key. Other features include keeping tabs on running processes, scanning incoming iMessage chats in real-time, and executing commands sent from the C2 server to run arbitrary shell command, open a URL on the victim’s default browser, download additional payloads, upload files, start/stop a SOCKS5 proxy, list available browsers, clone a browser profile and launch it in headless mode, stop the browser clone, self-destruct, and update itself. The browser cloning function is particularly dangerous as it launches a headless Chromium instance with the existing browser profile that contains cookies, login, and history data. This gives the attacker a fully authenticated browser session without the need for accessing credentials.</p>
+
+<p>“The @openclaw-ai/openclawai package combines social engineering, encrypted payload delivery, broad data collection, and a persistent RAT into a single npm package,” JFrog said. “The polished fake CLI installer and Keychain prompt are convincing enough to extract system passwords from cautious developers, and once captured, those credentials unlock macOS Keychain decryption and browser credential extraction that would otherwise be blocked by OS-level protections.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="unc4899-breached-crypto-firm-after-developer-airdropped-trojanized-file-to-work-device"><a id="article-2"></a>UNC4899 Breached Crypto Firm After Developer AirDropped Trojanized File to Work Device</h2>
+
+<p>The North Korean threat actor known as
+UNC4899
+is suspected to be behind a sophisticated cloud compromise campaign targeting a cryptocurrency organization in 2025 to steal millions of dollars in cryptocurrency. The activity has been attributed with moderate confidence to the state-sponsored adversary, which is also
+tracked
+under the cryptonyms Jade Sleet, PUKCHONG, Slow Pisces, and TraderTraitor. “This incident is notable for its blend of social engineering, exploitation of personal-to-corporate device peer-to-peer data (P2P) transfer mechanisms, workflows, and eventual pivot to the cloud to employ living-off-the-cloud (LOTC) techniques,” the tech giant noted in its
+H1 2026 Cloud Threat Horizons Report
+shared with The Hacker News. Upon gaining access to the cloud environment, the attackers are said to have abused legitimate DevOps workflows to harvest credentials, break out of the confines of containers, and tamper with Cloud SQL databases to facilitate the cryptocurrency theft.</p>
+
+<p>The attack chain, Google Cloud said, represents a progression of what started with the compromise of a developer’s personal device to their corporate workstation, before jumping to the cloud to make unauthorized modifications to the financial logic. It all started with the threat actors using social engineering ploys to deceive the developer into downloading an archive file as part of a supposed open-source project collaboration. The developer then transferred the same file to their company device over AirDrop. “Using their AI-assisted Integrated Development Environment (IDE), the victim then interacted with the archive’s contents, eventually executing the embedded malicious Python code, which spawned and executed a binary that masqueraded as the Kubernetes command-line tool,” Google said.</p>
+
+<p>The binary then contacted an attacker-controlled domain and acted as a backdoor to the victim’s corporate machine, giving the attackers a way to pivot to the Google Cloud environment by likely using authenticated sessions and available credentials. This step was followed by an initial reconnaissance phase aimed at gathering information about various services and projects. The attack moved to the next phase with the discovery of a
+bastion host
+, with the adversary modifying its multi-factor authentication (MFA) policy attribute to access it and perform additional reconnaissance, including navigating to specific pods within the Kubernetes environment. Subsequently, UNC4899 adopted a living-off-the-cloud (LotC) approach to configure persistence mechanisms by altering Kubernetes deployment configurations so as to execute a bash command automatically when new pods are created.</p>
+
+<p>The command, for its part, downloaded a backdoor. Some of the other steps carried out by the threat actor are listed below -
+Kubernetes resources tied to the victim’s CI/CD platform solution were modified to inject commands that displayed the service account tokens onto the logs. The attacker obtained a token for a high-privileged CI/CD service account, permitting them to escalate their privileges and conduct lateral movement, specifically targeting a pod that handled network policies and load balancing. The stolen service account token was used to authenticate to the sensitive infrastructure pod running in privileged mode, escape the container, and deploy a backdoor for persistent access.</p>
+
+<p>Another round of reconnaissance was conducted by the threat actor before shifting their attention to a workload responsible for managing customer information, such as user identities, account security, and cryptocurrency wallet information. The attacker used it to extract static database credentials that were stored insecurely in the pod’s environment variables. The credentials were then abused to access the production database via Cloud SQL Auth Proxy and execute SQL commands to make user account modifications. This included password resets and MFA seed updates for several high-value accounts.</p>
+
+<p>The attack culminated with the use of the compromised accounts to successfully withdraw several million dollars in digital assets. The incident “highlights the critical risks posed by the personal-to-corporate P2P data transfer methods and other data bridges, privileged container modes, and the unsecured handling of secrets in a cloud environment,” Google said. “Organizations should adopt a defense-in-depth strategy that rigorously validates identity, restricts data transfer on endpoints, and enforces strict isolation within cloud runtime environments to limit the blast radius of an intrusion event.”
+To counter the threat, organizations are advised to implement context-aware access and phishing-resistant MFA, ensure only trusted images are deployed, isolate compromised nodes from establishing connectivity with external hosts, monitor for unexpected container processes, adopt robust secrets management, enforce policies to disable or restrict peer-to-peer file sharing using AirDrop or Bluetooth and mounting of unmanaged external media on corporate devices. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-qualcomm-0-day-ios-exploit-chains-airsnitch-attack--vibe-coded-malware"><a id="article-3"></a>⚡ Weekly Recap: Qualcomm 0-Day, iOS Exploit Chains, AirSnitch Attack &amp; Vibe-Coded Malware</h2>
+
+<p>Another week in cybersecurity. Another week of “you’ve got to be kidding me.”
+Attackers were busy. Defenders were busy. And somewhere in the middle, a whole lot of people had a very bad Monday morning.</p>
+
+<p>That’s kind of just how it goes now. The good news? There were some actual wins this week. Real ones.</p>
+
+<p>The kind where the good guys showed up, did the work, and made a dent. It doesn’t always happen, so when it does, it’s worth noting. The bad news? For every win, there’s a fresh headache waiting right behind it.</p>
+
+<p>New tricks, old tricks dressed up in new clothes, and a few things that’ll make you want to go touch grass and never log back in. But you will. We all do. So here’s everything that mattered this week — the wins, the warnings, and the stuff you really shouldn’t ignore.</p>
+
+<p>⚡ Threat of the Week
+Tycoon 2FA and LeakBase Operations Dismantled
+— The infrastructure hosting the Tycoon2FA service, which Europol said was among the largest adversary-in-the-middle (AitM) phishing operations worldwide, has been dismantled by a coalition of security companies and law enforcement agencies. “Taking down infrastructure associated with Tycoon 2FA and identifying the individual allegedly responsible for creating this prolific hacking tool will have a significant impact on overall MFA credential phishing, and hopefully strike a blow to the world’s most prolific AitM phishing-as-a-service,” Proofpoint said in a statement shared with The Hacker News. Phishing kits and PhaaS platforms have become an Achilles’ heel in recent years, streamlining and democratizing phishing attacks for less technically savvy hackers by providing them with a suite of tools to create convincing emails and phishing pages that unsuspecting victims will engage with. For a relatively modest fee, aspiring cybercriminals can subscribe to these services and carry out phishing attacks at scale.</p>
+
+<p>In a similar development, authorities also took down
+LeakBase
+, one of the world’s largest online forums for cybercriminals to buy and sell stolen data and cybercrime tools. While the disruption is a positive development, it’s known that such takedowns typically create only short-term disruptions, as the ecosystem adapts by migrating to other forums or more resilient distribution channels, like Telegram. Shadow AI Is EVERYWHERE. Here’s How You Can Find and Secure It
+Shadow AI is quietly accessing sensitive data across your SaaS environment.</p>
+
+<p>Learn how to close AI blind spots and get ahead of data exposure risks with this new guide. Get Answers Now ➝
+🔔 Top News
+Anthropic Finds 22 Firefox Vulnerabilities in Firefox
+— Anthropic said it discovered 22 new security vulnerabilities in the Firefox web browser using its Claude Opus 4.6 large language model (LLM)as part of a security partnership with Mozilla. Of these, 14 have been classified as high, seven have been classified as moderate, and one has been rated low in severity. The issues were addressed in Firefox 148, released late last month.</p>
+
+<p>The vulnerabilities were identified over a two-week period in January 2026. The company noted that the cost of identifying vulnerabilities is cheaper than creating an exploit for them, and the model is better at finding issues than at exploiting them. Qualcomm Flaw Exploited in the Wild
+— A high-severity security flaw impacting Qualcomm chips used in Android devices has been exploited in the wild. The vulnerability in question is CVE-2026-21385 (CVSS score: 7.8), a buffer over-read in the Graphics component that could result in memory corruption and arbitrary code execution.</p>
+
+<p>There are currently no details on how the vulnerability is being exploited in the wild. However, Google acknowledged in its monthly Android security bulletin that “there are indications that CVE-2026-21385 may be under limited, targeted exploitation.”
+Coruna iOS Exploit Kit Uses 23 Exploits Against Older iOS Devices
+— Google disclosed details of a new and powerful exploit kit dubbed Coruna (aka CryptoWaters) targeting Apple iPhone models running iOS versions between 13.0 and 17.2.1. The exploit kit featured five full iOS exploit chains and a total of 23 exploits, the company said. What makes it different is that it started with a commercial surveillance vendor in February 2025, got picked up by what seems like a Russian espionage group targeting Ukrainians in July 2025, and ended up in the hands of financially motivated attackers in China going after crypto wallets by the end of the year.</p>
+
+<p>Coruna began its life as a surveillance exploit kit, but by the time it reached the Chinese cybercrime gang, it was heavily focused on financial theft. It’s not known how the exploit kit got passed between multiple threat actors of varied motivations. This has raised the possibility of a secondhand market where it’s resold to other threat actors, who end up repurposing them for their own objectives. Transparent Tribe Unleases Vibeware Against Indian Entities
+— In a new attack campaign detected by Bitdefender, the Pakistan-aligned threat actor known as Transparent Tribe has leveraged artificial intelligence (AI)-powered coding tools to vibe-code malware and use them to target the Indian government and its embassies in multiple foreign countries.</p>
+
+<p>These tools are written in niche programming languages like Nim, Zig, and Crystal so as to evade detection. “Rather than a breakthrough in technical sophistication, we are seeing a transition toward AI-assisted malware industrialization that allows the actor to flood target environments with disposable, polyglot binaries,” the company said. Iranian Hackers Target U.S. Entities Amid Conflict
+— The Iranian hacking group tracked as MuddyWater (aka Seedworm) targeted several U.S.</p>
+
+<p>companies, including banks, airports, non-profit, and the Israeli arm of a software company, as part of a campaign that began in early February 2026, and continued after the joint U.S.-Israel military strikes on Iran towards the end of the month. The development comes against the backdrop of hacktivist-fueled cyber attacks, with wiper campaigns targeting Israeli energy, financial, government, and utilities sectors. “The trajectory is clear: what began as nation-state-level
+ICS capability
+in 2012 [with Shamoon wiper] has become, by 2026, something any motivated actor can attempt with free tools and an internet connection,” CloudSEK
+said
+in a report last week. “The technical barrier has collapsed.</p>
+
+<p>The threat pool has expanded. And the US attack surface has never been larger.” Another targeted campaign has
+distributed
+a trojanized version of the
+Red Alert
+rocket warning Android app to Israeli users via SMS messages impersonating official Home Front Command communications. Once installed, the malware monitors and abuses the granted permissions to collect sensitive data, including SMS messages, contacts, location data, device accounts, and installed applications. The campaign is believed to be the work of a Hamas-affiliated actor known as
+Arid Viper
+.</p>
+
+<p>There are currently no details available on the scope of the campaign and whether any of the infections were successful. Acronis
+said
+it highlights how trusted emergency services can be weaponized during periods of geopolitical tension using social engineering. ‎️‍🔥 Trending CVEs
+New vulnerabilities show up every week, and the window between disclosure and exploitation keeps getting shorter. The flaws below are this week’s most critical — high-severity, widely used software, or already drawing attention from the security community.</p>
+
+<p>Check these first, patch what applies, and don’t wait on the ones marked urgent —
+CVE-2026-2796
+(Mozilla Firefox),
+CVE-2026-21385
+(Qualcomm),
+CVE-2026-2256
+(
+MS-Agent
+),
+CVE-2026-26198
+(Ormar),
+CVE-2026-27966
+(langflow),
+CVE-2025–64712
+(Unstructured.io),
+CVE-2026-24009
+(Docling),
+CVE-2026-23600
+(HPE AutoPass License Server),
+CVE-2026-27636
+,
+CVE-2026-28289
+(aka Mail2Shell) (FreeScout),
+CVE-2025-67736
+(
+FreePBX
+),
+CVE-2025-34288
+(Nagios XI),
+CVE-2025-14500
+(
+IceWarp
+),
+CVE-2026-20079
+(Cisco Secure Firewall Management Center),
+CVE-2025-13476
+(Viber app for Android),
+CVE-2026-3336, CVE-2026-3337, CVE-2026-3338
+(Amazon AWS-LC),
+CVE-2026-25611
+(MongoDB),
+CVE-2026-3536, CVE-2026-3537, CVE-2026-3538
+(Google Chrome),
+CVE-2026-27970
+(Angular),
+CVE-2026-29058
+(AVideo) a
+privilege escalation flaw
+in IPVanish VPN for macOS (no CVE), and and a
+remote code execution vulnerability
+in Ghost CMS (no CVE). 🎥 Cybersecurity Webinars
+Automating Real-World Security Testing to Prove What Actually Works
+→ Running a security test once a year and hoping for the best? That’s not a strategy anymore. This webinar shows you how to continuously test your defenses using real attack techniques — so you actually know what holds up and what quietly breaks when no one’s looking.</p>
+
+<p>When AI Agents Become Your New Attack Surface
+→ AI tools aren’t just answering questions anymore — they’re browsing the web, hitting APIs, and touching your internal systems. That changes everything about how you think about risk. This webinar breaks down what that means for security, and what you actually need to do before something goes wrong. 📰 Around the Cyber World
+New AirSnitch Attack Shows Wi-Fi Client Isolation May Not Be Enough
+— A group of academics has developed a new attack called
+AirSnitch
+that breaks the encryption that separates Wi-Fi clients.</p>
+
+<p>Xin’an Zhou, the lead author of the research paper,
+told
+Ars Technica that AirSnitch bypasses worldwide Wi-Fi encryption and that it “might have the potential to enable advanced cyber attacks.” The
+attack
+, at its core, leverages three weaknesses in client isolation implementations: (1) It abuses the group key(s) that are shared between all clients in the same Wi-Fi network, (2) It bypasses client isolation by tricking the gateway into forwarding packets to the victim at the IP layer by taking advantage of the fact that many networks only enforce client isolation at the MAC/Ethernet layer, and (3) It allows an adversary to manipulate internal switches and bridges to forward the victim’s uplink and downlink traffic to the adversary. As a result, they enable the attacker to restore AitM capabilities even if client isolation protections exist. “We found that Wi-Fi client isolation can often be bypassed,” Mathy Vanhoef said. “This allows an attacker who can connect to a network, either as a malicious insider or by connecting to a co-located open network, to attack others.”
+Google Tracked 90 Exploited 0-Days in 2025
+— Google said it tracked 90 zero-day vulnerabilities exploited in-the-wild in 2025, up from 78 in 2024 and down from 100 in 2023.</p>
+
+<p>“Both the raw number (43) and proportion (48%) of vulnerabilities impacting enterprise technologies reached all-time highs, accounting for almost 50% of total zero-days exploited in 2025,” the company
+said
+. Of these, vulnerabilities in security and networking appliances made up about half (21) of the enterprise-related zero-days in 2025. Mobile zero-days rebounded from nine in 2024 to 15 in 2025, with commercial surveillance vendors (15, plus likely another three) leading the charge in exploiting zero-day vulnerabilities than state-sponsored cyber espionage groups (12) for the first time. The names of the commercial spyware companies were not disclosed.</p>
+
+<p>Microsoft had the largest number of actively exploited flaws at 25, followed by Google (11), Apple (8), Cisco (4), Fortinet (4), Ivanti (3), and Broadcom VMware (3). Memory safety issues accounted for 35% of all exploited zero-day vulnerabilities last year. Financially motivated threat groups, including ransomware gangs, also targeted enterprise technologies and accounted for nine zero-days in 2025, double the five attributed to them in 2024. Velvet Tempest Deploys ClickFix Attack
+—
+Velvet Tempest
+(aka DEV-0504) has been observed using a ClickFix lure, followed by hands-on-keyboard activity consistent with Termite ransomware tradecraft.</p>
+
+<p>According to a report by Deception.Pro, the attack used the social engineering technique to drop payloads like DonutLoader and CastleRAT. “Follow-on activity included Active Directory reconnaissance (domain trusts, server discovery, user listing) and attempted browser credential harvesting via a PowerShell script downloaded from 143.198.160[.]37,” it
+said
+. “Telemetry and infrastructure in this chain align with a modern initial-access playbook: rapid staging, heavy use of living-off-the-land binaries (LOLBins), and long-lived command-and-control (C2) traffic that blends into normal browser noise.” No ransomware was deployed in the attack that took place between February 3 and 16, 2026. Ghanaian National Pleads Guilty to Role in $100M Romance Scam
+— A Ghanaian national pleaded guilty to his role in a massive fraud ring that stole over $100 million from victims across the U.S.</p>
+
+<p>through business email compromise attacks and romance scams. 40-year-old Derrick Van Yeboah pleaded guilty to conspiracy to commit wire fraud and agreed to pay more than $10 million in restitution. “Van Yeboah personally perpetrated many of the romance scams by impersonating fake romantic partners in communications with victims,” the U.S. Justice Department
+said
+.</p>
+
+<p>“Many of the conspiracy’s victims were vulnerable older men and women who were tricked into believing that they were in online romantic relationships with persons who were, in fact, fake identities assumed by members of the conspiracy.” The conspirators, part of a criminal organization primarily based in Ghana, also committed business email compromises to deceive businesses into wiring funds to the enterprise. In total, the scheme stole and laundered more than $100 million from dozens of victims. After stealing the money, the fraud proceeds were laundered to West Africa. The defendant is scheduled to be sentenced in June 2026.</p>
+
+<p>Taiwan Indicts 62 People for Cyber Scams
+— Prosecutors in Taipei
+indicted
+62 people and 13 companies for their involvement in cyber scam operations organized throughout Asia by the
+Prince Group
+. Chen Zhi, the founder of the Prince Group, was indicted by U.S. prosecutors last year on money laundering charges. Taipei prosecutors said those associated with Prince Group laundered at least $339 million into Taiwan and used the stolen funds to buy 24 properties, 35 vehicles, and other assets amounting to approximately $1.7 million.</p>
+
+<p>In all, authorities seized about $174 million in cash and assets. Prince Group “effectively controlled 250 offshore companies in 18 countries, holding 453 domestic and international financial accounts. By creating fictitious transaction contracts between these offshore companies, the group laundered money through foreign exchange channels,” they added. Ransomware Actors Use AzCopy
+— Ransomware operators are ditching the usual tools like Rclone for Microsoft’s own
+AzCopy
+, turning a trusted Azure utility into a stealthy data exfiltration mechanism and blending into normal activity.</p>
+
+<p>“The adoption of AzCopy and other familiar tools by attackers represents a similar logic to living-off-the-land in the final and most critical phase of an operation: exfiltrating data out of an organization,” Varonis
+said
+. “Spinning up an Azure storage account takes minutes and requires only a credit card or compromised credentials. The attacker gains the benefits of Microsoft’s global infrastructure while security teams struggle to distinguish between malicious uploads and legitimate traffic.”
+Threat Actors Exploit Critical Flaw in WPEverest Plugin
+— Threat actors are exploiting a critical security flaw in WPEverest’s User Registration &amp; Membership plugin (CVE-2026-1492, CVSS score: 9.8) to create rogue administrator accounts. The vulnerability affects all versions of User Registration &amp; Membership through 5.1.2.</p>
+
+<p>The issue has been addressed in version 5.1.3. Wordfence said the plugin is susceptible to improper privilege management, which enables the creation of bogus admin accounts. “This is due to the plugin accepting a user-supplied role during membership registration without properly enforcing a server-side allowlist,” it
+said
+. “This makes it possible for unauthenticated attackers to create administrator accounts by supplying a role value during membership registration.”
+MuddyWater Evolves Its Tactics
+— The Iranian hacking group known as
+MuddyWater
+has been
+observed
+leveraging
+Shodan and Nuclei to identify potential vulnerable targets, as well as using subfinder and ffuf to perform enumeration of target web applications.</p>
+
+<p>The findings come from an analysis of the
+threat actor
+‘s VPS server hosted in the Netherlands. MuddyWater is also said to be attempting to scan and/or exploit recently disclosed CVEs related to BeyondTrust (CVE-2026-1731), Ivanti (CVE-2026-1281), n8n (CVE-2025-68613), React (CVE-2025-55182), SmarterMail (CVE-2025-52691), Laravel Livewire (CVE-2025-54068), N-Central (CVE-2025-9316), Citrix NetScaler (CVE-2025-5777), Langflow (CVE-2025-34291), and Fortinet (CVE-2024-55591, CVE-2024-23113, CVE-2022-42475), along with SQL injection vulnerabilities in BaSalam and an unspecified Postgres development platform for initial access. One of the custom tools identified in the server is KeyC2, a command-and-control (C2) framework that allows operators to remotely control compromised Windows machines over a custom binary protocol on port 1269 from a Python script. Two C2 tools used by the adversary are PersianC2, which relies on standard HTTP polling to receive commands and files via JSON API endpoints, and ArenaC2, a Python-based program that operates over HTTP POST requests.</p>
+
+<p>Also detected is a PowerShell loader that leads to the execution of obfuscated Node.js payloads that appear similar to
+Tsundere
+Botnet. The infrastructure is assessed to have been used to target entities in Israel, Egypt, Jordan, the U.A.E., and the U.S. Some aspects of the activity overlap with
+Operation Olalampo
+. 2,622 Valid Certificates Exposed
+— A new study undertaken by Google and GitGuardian found over a million unique private keys leaked across GitHub and Docker Hub, out of which 40,000 were mapped to 140,000 real TLS certificates.</p>
+
+<p>“As of September 2025, 2,600 of these certificates were valid, with more than 900 actively protecting Fortune 500 companies, healthcare providers, and government agencies,” GitGuardian
+said
+. “Our disclosure campaign achieved 97% remediation, but at the cost of 4,300 emails sent, 1,706 entities contacted, 9 bug bounty submissions, countless follow-ups, and days of meticulous attribution work employing multiple OSINT techniques. The high success rate masks the extraordinary effort required to protect organizations that fail to protect themselves.”
+Context7 MCP Server Suffers from ContextCrush
+— A critical security flaw in Upstash’s Context7 MCP Server, a widely used tool for delivering documentation to AI coding assistants, has been discovered. Dubbed ContextCrush, the vulnerability could allow attackers to inject malicious instructions into AI development tools through a trusted documentation channel.</p>
+
+<p>Noma Security, which disclosed details of the flaw, said it’s rooted within the platform’s “Custom Rules” feature, which allows library maintainers to provide AI-specific instructions to help assistants better interpret documentation. “Context7 operates both as the registry, where anyone can publish and manage library documentation, and as the trusted delivery mechanism that pushes content directly into the AI agent’s context,” security researcher Eli Ainhorn
+said
+. “The attacker never needs to reach the victim’s machine. Instead, the attacker can plant malicious custom rules in Context7’s registry, and Context7’s infrastructure delivers them through the MCP server to the AI agent running in the developer’s IDE.</p>
+
+<p>As agents are execution machines and run whatever is loaded into their context, all the victim’s agent does is execute the attacker’s instructions on the victim’s machine, using its own tool access (Bash, file read/write, network). In this scenario, the agent has no way to distinguish between legitimate documentation and attacker-controlled content because they arrive through the same trusted channel and from the same trusted source.”
+German Court Sentences Key Person Behind Call Center Scam
+— A German court has
+sentenced
+a suspected central figure in the so-called Milton Group call-center fraud network to seven-and-a-half years in prison. Although the court did not publicly name the defendant, court records reviewed by the Organized Crime and Corruption Reporting Project (OCCRP)
+indicate
+the person convicted was Mikheil Biniashvili, a citizen of Georgia and Israel. In addition to the prison sentence, the court ordered the confiscation of €2.4 million ($2.8 million) linked to the operation.</p>
+
+<p>Between 2017 and 2019, the defendant ran a call-center operation in Albania that used trained agents to persuade victims to invest in fraudulent online trading schemes. The scheme caused losses of about €8 million ($9.4 million) to victims, mostly in German-speaking countries. The operation employed up to 600 people at its peak. Call-center agents allegedly posed as investment advisers, building trust with targets before persuading them to deposit funds into fake trading platforms controlled by the network by promising large investment returns.</p>
+
+<p>Biniashvili was arrested in Armenia in 2023 and extradited to Germany in 2024. Multiple Flaws in Avira Internet Security
+— Three vulnerabilities have been disclosed in Avira Internet Security that could allow for arbitrary file deletion (CVE-2026-27748) in the Software Updater component, an insecure deserialization (CVE-2026-27749) in System Speedup, and an arbitrary folder deletion over TOCTOU (CVE-2026-27748) in the Optimizer. “The file delete primitive is useful on its own,” Quarkslab
+said
+. “The other two both result in Local Privilege Escalation to SYSTEM.”
+Russian Ransomware Operator Pleads Guilty in U.S.</p>
+
+<p>— Evgenii Ptitsyn, a 43-year-old Russian national, has
+pleaded guilty
+in a U.S. court to running the Phobos ransomware outfit that targeted more than 1,000 victims globally and extorted ransom payments worth over $39 million. Ptitsyn was
+extradited
+from South Korea in November 2024. “Beginning in at least November 2020, Ptitsyn and others conspired to engage in an international computer hacking and extortion scheme that victimized public and private entities through the deployment of Phobos ransomware,” the Justice Department said.</p>
+
+<p>“As part of the scheme, Ptitsyn and his co-conspirators developed and offered access to Phobos ransomware to other criminals or ‘affiliates’ to encrypt victims’ data and extort ransom payments from victims. The administrators operated a darknet website to coordinate the sale and distribution of Phobos ransomware to co-conspirators and used online monikers to advertise their services on criminal forums and messaging platforms.” Ptitsyn faces a maximum penalty of 20 years in prison for wire fraud charges. Fake Google Security Check Leads to RAT
+— A bogus website resembling the Google Account security page is being used to deliver a Progressive Web App (PWA) capable of harvesting one-time passcodes and cryptocurrency wallet addresses, and proxying attacker traffic through victims’ browsers. “Disguised as a routine security checkup, it walks victims through a four-step flow that grants the attacker push notification access, the device’s contact list, real-time GPS location, and clipboard contents – all without installing a traditional app,” Malwarebytes
+said
+.</p>
+
+<p>“For victims who follow every prompt, the site also delivers an Android companion package introducing a native implant that includes a custom keyboard (enabling keystroke capture), accessibility-based screen reading capabilities, and permissions consistent with call log access and microphone recording.”
+Phishing Campaign Abuses Google Infrastructure
+— A new email phishing campaign is leveraging legitimate Google infrastructure to bypass standard security filters. The activity uses Google Cloud Storage (GCS) to host initial phishing URLs that, when clicked, redirect unsuspecting users to a malicious site designed to capture their financial information or deploy malware. “By hosting the initial link on Google’s servers, the attackers ensure the email passes authentication checks like SPF and DKIM,” security researcher Anurag Gawande
+said
+. Client-Side Injection Conducts Ad Fraud
+— A new malicious client-side injection originating from a malicious browser extension impersonating Microsoft Clarity has been found to overwrite referral tokens to redirect affiliate revenue to unknown threat actors.</p>
+
+<p>“A browser extension is injecting obfuscated JavaScript from msclairty[.]com, a typosquatted domain impersonating Microsoft Clarity,” c/side’s Simon Wijckmans
+said
+. “The domain is not serving analytics. It is delivering an obfuscated JavaScript payload that performs affiliate cookie stuffing, tracking cookie deletion, and Fetch API hijacking inside the visitor’s browser. This prevents a competing tracking service from recording the real traffic source.</p>
+
+<p>The attacker does not just want credit for the visit. They actively block other trackers from capturing any attribution data that would conflict with their fraudulent cookie.” The script has affected sites across multiple unrelated sectors, including transportation, SaaS platforms, sports management, and government payment portals. Impacted visitors primarily span Chrome versions 132, 138, and 145, and originate from U.S.-based IP addresses on the East and West coasts. Illinois Man Charged with Hacking Snapchat Accounts to Steal Nudes
+— U.S.</p>
+
+<p>prosecutors have charged a 26-year-old Illinois man, Kyle Svara, with conducting a phishing operation that made it possible to break into the Snapchat accounts of approximately 570 women to steal private photos and sell them online. “From at least May 2020 to February 2021, Svara used social engineering and other resources to collect his targets’ emails, phone numbers, and/or Snapchat usernames,” the Justice Department
+said
+. “He then used those means of identification to access his targets’ Snapchat accounts, which prompted Snap Inc. to send account security codes to those women.</p>
+
+<p>Using anonymized phone numbers, Svara posed as a representative of Snap Inc. and sent more than 4,500 text messages to hundreds of women, requesting those Snapchat access codes.” Svara is alleged to have accessed the Snapchat accounts of at least 59 women without permission to download their nude or semi-nude images and sell them on internet forums. Meta Sued Over AI Smart Glasses’ Privacy Concerns
+— Meta is
+facing
+a new class action lawsuit over its AI-powered Ray-Ban Meta glasses, following a
+report
+from Swedish newspapers Svenska Dagbladet and Goteborgs-Posten that employees at Kenya-based subcontractor Sama are reviewing intimate, personal footage filmed from customers’ glasses. Meta said subcontracted workers might sometimes review content captured by its AI smart glasses for the purpose of improving the “experience,” as
+stated
+in its
+Privacy Policy
+.</p>
+
+<p>It also claimed that data is filtered to protect people’s privacy. But the investigation found that this step did not always consistently work. “Unless users choose to share media they’ve captured with Meta or others, that media stays on the user’s device,” Meta
+told
+BBC News. “When people share content with Meta AI, we sometimes use contractors to review this data for the purpose of improving people’s experience, as many other companies do.”
+Total Ransomware Payments Stagnated in 2025
+— The total ransomware payments in 2025 stagnated, even if the number of attacks increased.</p>
+
+<p>According to blockchain analysis firm Chainalysis, total on-chain ransomware payments fell by approximately 8% to $820 million in 2025, even as claimed attacks rose 50%. “While aggregate revenue stagnated, the median ransom payment grew 368% year-over-year to nearly $60,000,” the company
+said
+. “The 2025 total is likely to approach or exceed $900 million as we attribute more events and payments, just as our 2024 total grew from our initial $813 million estimate this time last year.” The decline in payment rates from 63% in 2024 to just 29% last year indicates that fewer victims are yielding to attackers’ ransom demands, it added. The development comes amid increased fragmentation of the ransomware ecosystem and threat actors shifting towards more stealthy methods, such as defense evasion and persistence techniques, to prioritize data theft and prolonged, low-noise access.</p>
+
+<p>Mobile Blockchain Wallet Found Vulnerable to Severe Flaws
+— An unnamed mobile blockchain wallet app for Android has been
+found
+susceptible to two independent severe vulnerabilities, allowing untrusted deep links to trigger sensitive wallet flows and trick users into approving phishing-driven transactions, as well as retain cryptographic private keys from the device despite deleting an account. This meant that an attacker with later device access could re-import the account using its public address and regain full signing authority without re-entering the keys. According to LucidBit Labs, the vulnerabilities have been patched by the developer. “The main strength of crypto wallets lies in their cryptographic foundations,” security researcher Assaf Morag said.</p>
+
+<p>“However, when these wallets are implemented as user-facing applications, the overall orchestration of the system becomes just as critical as the cryptography itself. As the saying goes, a system’s security posture is defined by its weakest link. In this case, the two vulnerabilities demonstrate how flaws at the application layer can undermine the entire security model, despite the strength of the underlying cryptography.”
+Kubernetes RCE Via Nodes/Proxy GET Permission
+— New research has identified an authorization bypass in Kubernetes Role-based access control (RBAC) that allows a service account with nodes/proxy GET permissions to execute commands in any Pod in the cluster. The issue exploits a bug in how Kubernetes API servers handle WebSocket connections.</p>
+
+<p>“Nodes/proxy GET allows command execution when using a connection protocol such as WebSockets,” security researcher Graham Helton
+said
+. “This is due to the Kubelet making authorization decisions based on the initial WebSocket handshake’s request without verifying CREATE permissions are present for the Kubelet’s /exec endpoint, requiring different permissions depending solely on the connection protocol. The result is anyone with access to a service account assigned nodes/proxy GET that can reach a Node’s Kubelet on port 10250 can send information to the /exec endpoint, executing commands in any Pod, including privileged system Pods, potentially leading to a full cluster compromise.” The Kubernetes project has declined to address the issue, stating its intended behavior. However, it’s expected to release Fine-Grained Kubelet API Authorization (KEP-2862) next month to address the attack.</p>
+
+<p>“A targeted patch would require coordinated changes across multiple components with special-case logic,” Edera
+said
+. “This is the kind of complexity that could lead to future vulnerabilities. Once KEP-2862 reaches GA and sees adoption, nodes/proxy can be deprecated for monitoring use cases.”
+Other Key Stories on the Radar
+— The Israeli government is
+working
+on the country’s first cybersecurity law, the U.S. National Security Agency (NSA)
+published
+Zero Trust Implementation Guidelines (ZIGs) to help organizations safeguard sensitive data, systems, and services against sophisticated cyber threats, Google Project Zero found
+multiple vulnerabilities
+that could be used to bypass a new Windows 11 feature called
+Administrator Protection
+and obtain admin privileges, threat actors are continuing to
+abuse Microsoft Teams functionality
+by leveraging guest invitations and phishing-themed team names to impersonate billing and subscription notifications, and a loader named
+PhantomVAI
+has been
+used
+in the wild over the past year to deploy other payloads, such as Remcos RAT, XWorm, AsyncRAT, DarkCloud, and SmokeLoader.</p>
+
+<p>🔧 Cybersecurity Tools
+DetectFlow
+→ It is an open-source detection pipeline from SOC Prime that matches streaming log events against Sigma rules in real time — before they ever reach your SIEM. Instead of relying on your SIEM to do the heavy lifting, it tags and enriches events in-flight using Apache Kafka and Flink, then passes the results downstream to wherever you need them. Built on 11 years of detection intelligence, it’s designed for teams who want faster detection, more rule coverage, and less dependency on SIEM-imposed limits. ADTrapper
+→ It is an open-source platform that analyzes Windows Active Directory authentication logs and flags threats using 54+ built-in detection rules — covering everything from brute force to AD CS attacks.</p>
+
+<p>It runs in Docker, deploys with one command, and supports SharpHound data for deeper AD analysis. Disclaimer: For research and educational use only. Not security-audited. Review all code before use, test in isolated environments, and ensure compliance with applicable laws.</p>
+
+<p>Conclusion
+That’s your week. A lot happened. Some of it was bad, some of it was worse, and a little bit of it was actually good. The scoreboard is messy, like it always is.</p>
+
+<p>Same time next week — and if history is any guide, we’ll have plenty more to talk about. Stay patched, stay skeptical, and maybe don’t click that link. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="can-the-security-platform-finally-deliver-for-the-mid-market"><a id="article-4"></a>Can the Security Platform Finally Deliver for the Mid-Market?</h2>
+
+<p>Mid-market organizations are constantly striving to achieve security levels on a par with their enterprise peers. With heightened awareness of supply chain attacks, your customers and business partners are defining the security level you must meet. What if you could be the enabler for your organization to remain competitive — and help win business — by easily demonstrating that you meet these strict security levels? The challenge, of course, is how to do so with a small budget and a lean IT and security team.</p>
+
+<p>The security platform has long been seen as the mechanism for reducing complexity by consolidating security tools. However, it has never really lived up to its promise. Or has it? An upcoming webinar explores whether the security platform model can finally deliver on its original vision — simplifying operations, reducing cost, and strengthening security posture for mid-market organizations.</p>
+
+<p>Join Bitdefender to learn how
+Bitdefender GravityZone
+is making the dream of affordable, simplified security for lean IT and security teams a reality. During this session, you will learn:
+Why a security platform is perfect for mid-market organizations
+How to demonstrate reduced risk and increased security posture to your leadership, business partners, and customers
+How to reduce security fire-fighting and free up your lean IT and security team to focus on strategic projects
+For IT Directors, CISOs, and security leaders operating under resource constraints, the ability to consolidate tools without sacrificing coverage can be a competitive advantage — not just a technical improvement. If your organization is under pressure to prove resilience, meet partner expectations, and improve security outcomes without increasing complexity, this session will provide practical insights and a clear path forward. Register now
+to discover how Bitdefender GravityZone can help you achieve security across your organization — without the enterprise-level burden.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="chrome-extension-turns-malicious-after-ownership-transfer-enabling-code-injection-and-data-theft"><a id="article-5"></a>Chrome Extension Turns Malicious After Ownership Transfer, Enabling Code Injection and Data Theft</h2>
+
+<p>Two Google Chrome extensions have turned malicious after what appears to be a case of
+ownership transfer
+, offering attackers a way to push malware to downstream customers, inject arbitrary code, and harvest sensitive data. The extensions in question, both originally associated with a developer named “akshayanuonline@gmail.com” (BuildMelon), are listed below -
+QuickLens - Search Screen with Google Lens (ID: kdenlnncndfnhkognokgfpabgkgehodd) - 7,000 users
+ShotBird - Scrolling Screenshots, Tweet Images &amp; Editor (ID: gengfhhkjekmlejbhmmopegofnoifnjp) - 800 users
+While QuickLens is no longer available for download from the Chrome Web Store, ShotBird remains accessible as of writing. ShotBird was
+originally launched
+in November 2024, with its developer, Akshay Anu S (@AkshayAnuOnline),
+claiming
+on X that the extension is suitable for “creating professional, studio-like visuals,” and that all processing happens locally. According to
+research
+published by monxresearch-sec, the browser add-on received a “Featured” flag in January 2025, before it was passed on to a different developer (“loraprice198865@gmail.com”) sometime last month.</p>
+
+<p>In a similar vein, QuickLens was listed for sale on ExtensionHub on October 11, 2025, by “akshayanuonline@gmail.com” merely two days after it was published, Annex Security’s John Tuckner
+said
+. On February 1, 2026, the extension’s owner changed to “support@doodlebuggle.top” on the Chrome Web Store listing page. The malicious update introduced to QuickLens on February 17, 2026, kept the original functionality but introduced capacities to strip security headers (e.g., X-Frame-Options) from every HTTP response, allowing malicious scripts injected into a web page to make arbitrary requests to other domains, bypassing Content Security Policy (
+CSP
+) protections. In addition, the extension contained code to fingerprint the user’s country, detect the browser and operating system, and polls an external server every five minutes to receive JavaScript, which is stored in the browser’s local storage and executed on every page load by adding a hidden 1×1 GIF <img /> element and setting the JavaScript string as its “onload” attribute.</p>
+
+<p>This, in turn, causes the malicious code to be executed once the image is loaded. “The actual malicious code never appears in the extension’s source files,” Tuckner explained. “Static analysis shows a function that creates image elements. That’s it.</p>
+
+<p>The payloads are delivered from the C2 and stored in local storage – they only exist at runtime.”
+A similar analysis of the ShotBird extension by monxresearch-sec has uncovered the use of direct callbacks to deliver JavaScript code instead of creating a 1x1 pixel image to trigger the execution. The JavaScript is engineered to display a bogus Google Chrome browser update prompt, clicking which users are served a ClickFix-style page to open the Windows Run dialog, launch “cmd.exe,” and paste a PowerShell command, resulting in the download of an executable named “googleupdate.exe” on Windows hosts. The malware then proceeds to hook input, textarea, select HTML elements, and capture any data entered by the victim. This could include credentials, PIN, card details, tokens, and government identifiers.</p>
+
+<p>It’s also equipped to siphon data stored in the Chrome web browser, such as passwords, browsing history, and extension-related information. “This is a two-stage abuse chain: extension-side remote browser control plus host-level execution pivot via fake updates,” the researcher said. “The result is high-risk data exposure in-browser and confirmed host-side script execution on at least one affected system. In practical terms, this elevates the impact from browser-only abuse to likely credential theft and broader endpoint compromise.”
+It’s assessed that the same threat actor is behind the compromise of the two extensions and is operating them in parallel, given the use of an identical command-and-control (C2) architecture pattern, ClickFix lures injected into the browsing context, and ownership transfer as an infection vector.</p>
+
+<p>Interestingly, the original extension developer has
+published
+several
+other
+extensions
+under their name on the Chrome Web Store, and all of them have received a Featured badge. The developer also has an
+account on ExtensionHub
+, although no extensions are currently listed for sale. What’s more, the individual has
+attempted
+to sell domains like “AIInfraStack[.]com” for $2,500, stating the “strong keyword domain” is “relevant for [sic] rapidly growing AI ecosystem.”
+“This is the extension supply chain problem in a nutshell,” Annex Security said. “A ‘Featured,’ reviewed, functional extension changes hands, and the new owner pushes a weaponized update to every existing user.”
+The disclosure comes as Microsoft warned of the
+malicious Chromium‑based browser extensions
+that masquerade as legitimate AI assistant tools to harvest LLM chat histories and browsing data.</p>
+
+<p>“At scale, this activity turns a seemingly trusted productivity extension into a persistent data collection mechanism embedded in everyday enterprise browser usage, highlighting the growing risk browser extensions pose in corporate environments,” the Microsoft Defender Security Research Team
+said
+. In recent weeks, threat hunters have also flagged a malicious Chrome extension named lmΤoken Chromophore (ID: bbhaganppipihlhjgaaeeeefbaoihcgi) that impersonates imToken while advertising itself as a hex color visualizer in the Chrome Web Store to steal cryptocurrency seed phrases using phishing redirects. “Instead of providing the harmless tool it promises, the extension automatically opens a threat actor-controlled phishing site as soon as it is installed, and again whenever the user clicks it,” Socket researcher Kirill Boychenko
+said
+. “On install, the extension fetches a destination URL from a hardcoded JSONKeeper endpoint (jsonkeeper[.]com/b/KUWNE) and opens a tab pointing to a lookalike Chrome Web Store-style domain, chroomewedbstorre-detail-extension[.]com.</p>
+
+<p>The landing page impersonates imToken using mixed-script homoglyphs and funnels victims into credential-capture flows that request either a 12 or 24-word seed phrase or a private key.”
+Other malicious extensions
+flagged
+by Palo Alto Networks Networks Unit 42 have been found to engage in affiliate hijacking and data exfiltration, with one of them – Chrome MCP Server - AI Browser Control (ID: fpeabamapgecnidibdmjoepaiehokgda) –
+serving
+as a full-fledged remote access trojan while masquerading as an AI automation tool using the Model Context Protocol (MCP). Unit 42 researchers have also revealed that
+three popular Chrome extensions
+– Urban VPN Proxy, Urban Browser Guard, and Urban Ad Blocker – are again available on the Chrome Web Store after previously being removed for scraping AI conversations from various chatbots, including OpenAI ChatGPT, Anthropic Claude, Microsoft Copilot, DeepSeek, Google Gemini, xAI Grok, Meta AI, and Perplexity. “Following the public disclosure of the campaign on December 15, 2025, the developer updated benign versions in January 2026, likely in response to the report,” researchers Qinge Xie, Nabeel Mohamed, Shresta Bellary Seetharam, Fang Liu, Billy Melicher, and Alex Starov
+said
+. Furthermore, the cybersecurity company identified an extension called Palette Creator (ID: iofmialeiddolmdlkbheakaefefkjokp), which has over 100,000 users and whose previous version communicated with known network indicators associated with a campaign dubbed
+RedDirection
+to carry out browser hijacking.</p>
+
+<p>That’s not all. A new campaign
+comprising
+over 30,000 domains has been found to initiate a redirect chain to route traffic to a landing page (“ansiblealgorithm[.]com”) that’s used for distributing a Chrome extension called OmniBar AI Chat and Search (ID: ajfanjhcdgaohcbphpaceglgpgaaohod). The extension makes use of the chrome_settings_overrides API to alter Chrome settings and set the browser home page to omnibar[.]ai, as well as make the default search provider to a custom URL: “go.omnibar[.]ai/?api=omni&amp;sub1=omnibar.ai&amp;q={searchTerms}​” and track queries via an API parameter. It’s believed that the end goal is to perform browser-hijacking as part of what seems to be a large-scale affiliate marketing scheme, Unit 42 said, adding it identified two other extensions that exhibit the same browser-hijacking behavior consistent with OmniBar via home page override and search interception -
+AI Output Algo Tool (ID: eeoonfhmbjlmienmmbgapfloddpmoalh)
+Serpey.com official extension (ID: hokdpdlchkgcenfpiibjjfkfmleoknkp)
+A deeper investigation of three more extensions published by the same developer (“jon@status77.com” aka Status 77) has uncovered that two of them track user browsing activity to inject affiliate markers, while a third one extracts and transmits user Reddit comment threads to a developer-controlled API endpoint -
+Care.Sale (ID: jaioobipjdejpeckgojiojjahmkiaihp)
+Giant Coupons Official Extension (ID: akdajpomgjgldidenledjjiemgkjcchc)
+Consensus - Reddit Comment Summarizer (ID: mkkfklcadlnkhgapjeejemflhamcdjld)
+Users who have installed any of the aforementioned extensions are advised to remove them from their browsers with immediate effect, avoid side-loading or installing unverified productivity extensions, and audit browsers for any unknown extensions and uninstall them.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="web-server-exploits-and-mimikatz-used-in-attacks-targeting-asian-critical-infrastructure"><a id="article-6"></a>Web Server Exploits and Mimikatz Used in Attacks Targeting Asian Critical Infrastructure</h2>
+
+<p>High-value organizations located in South, Southeast, and East Asia have been targeted by a Chinese threat actor as part of a years-long campaign. The activity, which has targeted aviation, energy, government, law enforcement, pharmaceutical, technology, and telecommunications sectors, has been attributed by Palo Alto Networks Unit 42 to a previously undocumented threat activity group dubbed
+CL-UNK-1068
+, where “CL” refers to “cluster” and “UNK” stands for unknown motivation. However, the security vendor has assessed with “moderate-to-high confidence” that the primary objective of the campaign is cyber espionage. “Our analysis reveals a multi-faceted tool set that includes custom malware, modified open-source utilities, and living-off-the-land binaries (LOLBINs),” security researcher Tom Fakterman
+said
+.</p>
+
+<p>“These provide a simple, effective way for the attackers to maintain a persistent presence within targeted environments.”
+The tools are designed to target both Windows and Linux environments, with the adversary relying on a mix of open-source utilities and malware families such as
+Godzilla
+,
+ANTSWORD
+, Xnote, and Fast Reverse Proxy (
+FRP
+), all of which have been put to use by various Chinese hacking groups. While both Godzilla and ANTSWORD function as web shells, Xnote is a Linux backdoor that’s been
+detected in the wild since 2015
+and has been deployed by an adversarial collective known as
+Earth Berberoka
+(aka
+GamblingPuppet
+) in attacks aimed at online gambling sites. Typical attack chains entail the exploitation of web servers to deliver web shells and move laterally to other hosts, followed by attempts to steal files matching certain extensions (“web.config,” “.aspx,” “.asmx,” “.asax,” and “.dll”) from the “c:\inetpub\wwwroot” directory of a Windows web server likely in an attempt to steal credentials or discover vulnerabilities. Other files harvested by CL-UNK-1068 include web browser history and bookmarks, XLSX and CSV files from desktops and USER directories, and database backup (.bak) files from MS-SQL servers.</p>
+
+<p>In an interesting twist, the threat actors have been observed using WinRAR to archive the relevant files, Base64-encoding the archives by executing the certutil -encode command, and then running the type command to print the Base64 content to their screen through the web shell. “By encoding the archives as text and printing them to their screen, the attackers were able to exfiltrate data without actually uploading any files,” Unit 42 said. “The attackers likely chose this method because the shell on the host allowed them to run commands and view output, but not to directly transfer files.”
+One of the techniques employed in these attacks is the use of legitimate Python executables (“python.exe” and “pythonw.exe”) to launch DLL side-loading attacks and stealthily execute malicious DLLs, including FRP for persistent access,
+PrintSpoofer
+, and a Go-based custom scanner named ScanPortPlus. CL-UNK-1068 is also said to have engaged in reconnaissance efforts using a custom .NET tool named SuperDump as far back as 2020.</p>
+
+<p>Recent intrusions have transitioned to a new method that uses batch scripts to collect host information and map the local environment. Also utilized by the adversary are a wide range of tools to facilitate credential theft -
+Mimikatz, to dump passwords from memory
+LsaRecorder
+, to hook
+LsaApLogonUserEx2
+to record the WinLogon password
+DumpItForLinux
+and
+Volatility Framework
+, to extract password hashes from memory
+SQL Server Management Studio Password Export Tool
+, to extract the contents of “sqlstudio.bin,” which stores connection information for Microsoft SQL Server Management Studio (SSMS)
+“Using primarily open-source tools, community-shared malware and batch scripts, the group has successfully maintained stealthy operations while infiltrating critical organizations,” Unit 42 concluded. “This cluster of activity demonstrates versatility by operating across both Windows and Linux environments, using different versions of their tool set for each operating system. While the focus on credential theft and sensitive data exfiltration from critical infrastructure and government sectors strongly suggests an espionage motive, we cannot yet fully rule out cybercriminal intentions.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="openai-codex-security-scanned-12-million-commits-and-found-10561-high-severity-issues"><a id="article-7"></a>OpenAI Codex Security Scanned 1.2 Million Commits and Found 10,561 High-Severity Issues</h2>
+
+<p>OpenAI on Friday began rolling out
+Codex Security
+, an artificial intelligence (AI)-powered security agent that’s designed to find, validate, and propose fixes for vulnerabilities. The feature is available in a research preview to ChatGPT Pro, Enterprise, Business, and Edu customers via the Codex web with free usage for the next month. “It builds deep context about your project to identify complex vulnerabilities that other agentic tools miss, surfacing higher-confidence findings with fixes that meaningfully improve the security of your system while sparing you from the noise of insignificant bugs,” the company
+said
+. Codex Security represents an evolution of
+Aardvark⁠
+, which OpenAI unveiled in private beta in October 2025 as a way for developers and security teams to detect and fix security vulnerabilities at scale.</p>
+
+<p>Over the last 30 days, Codex Security has scanned more than 1.2 million commits across external repositories over the course of the beta, identifying 792 critical findings and 10,561 high-severity findings. These include vulnerabilities in various open-source projects like OpenSSH⁠, GnuTLS⁠, GOGS⁠, Thorium⁠, libssh, PHP, and Chromium, among others. Some of them have been listed below -
+GnuPG - CVE-2026-24881, CVE-2026-24882
+GnuTLS - CVE-2025-32988, CVE-2025-32989
+GOGS - CVE-2025-64175, CVE-2026-25242
+Thorium</p>
+<ul>
+  <li>CVE-2025-35430, CVE-2025-35431, CVE-2025-35432, CVE-2025-35433, CVE-2025-35434, CVE-2025-35435, CVE-2025-35436
+According to the AI company, the latest iteration of the application security agent leverages the reasoning capabilities of its frontier models and combines them with automated validation to minimize the risk of false positives and deliver actionable fixes. OpenAI’s scans on the same repositories over time have demonstrated increasing precision and declining false positive rates, with the latter falling by more than 50% across all repositories.</li>
+</ul>
+
+<p>In a statement shared with The Hacker News, OpenAI said Codex Security is designed to improve signal-to-noise by grounding vulnerability discovery in system context and validating findings before surfacing them to users. Specifically, the agent works in three steps: it analyzes a repository to get a handle on the project’s security-relevant structure of the system and generates an editable threat model that captures what it does and where it’s most exposed. Once the system context is built, Codex Security uses it as a foundation to identify vulnerabilities and classifies findings based on their real-world impact. The flagged issues are pressure-tested in a sandboxed environment to validate them.</p>
+
+<p>“When Codex Security is configured with an environment tailored to your project, it can validate potential issues directly in the context of the running system,” OpenAI said. “That deeper validation can reduce false positives even further and enable the creation of working proofs-of-concept, giving security teams stronger evidence and a clearer path to remediation.”
+The final stage involves the agent proposing fixes that best align with the system behavior so as to reduce regressions and make them easier to review and deploy. News of Codex Security comes weeks after Anthropic launched
+Claude Code Security
+to help users scan a software codebase for vulnerabilities and suggest patches. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="anthropic-finds-22-firefox-vulnerabilities-using-claude-opus-46-ai-model"><a id="article-8"></a>Anthropic Finds 22 Firefox Vulnerabilities Using Claude Opus 4.6 AI Model</h2>
+
+<p>Anthropic on Friday said it
+discovered
+22 new security vulnerabilities in the Firefox web browser as part of a security partnership with Mozilla. Of these, 14 have been classified as high, seven have been classified as moderate, and one has been rated low in severity. The issues were addressed in
+Firefox 148
+, released late last month. The
+vulnerabilities
+were identified over a two-week period in January 2026.</p>
+
+<p>The artificial intelligence (AI) company said the number of high-severity bugs identified by its Claude Opus 4.6 large language model (LLM) represents “almost a fifth” of all high-severity vulnerabilities that were patched in Firefox in 2025. Anthropic said the LLM detected a use-after-free bug in the browser’s JavaScript after “just” 20 minutes of exploration, which was then validated by a human researcher in a virtualized environment to rule out the possibility of a false positive. “By the end of this effort, we had scanned nearly 6,000 C++ files and submitted a total of 112 unique reports, including the high- and moderate-severity vulnerabilities mentioned above,” the company said. “Most issues have been fixed in Firefox 148, with the remainder to be fixed in upcoming releases.”
+The AI upstart said it also fed its Claude model access to the entire list of vulnerabilities submitted to Mozilla and tasked the AI tool with developing a practical exploit for them.</p>
+
+<p>Despite carrying out the test several hundred times and spending about $4,000 in API credits, the company said Claude Opus 4.6 was able to turn the security defect into an exploit only in two cases. This behavior, the company added, signaled two important aspects: the cost of identifying vulnerabilities is cheaper than creating an exploit for them, and the model is better at finding issues than at exploiting them. “However, the fact that Claude could succeed at automatically developing a crude browser exploit, even if only in a few cases, is concerning,” Anthropic emphasized, adding the exploits only worked within the confines of its testing environment, which has had some security features like sandboxing intentionally stripped off. A crucial component incorporated into the process is a task verifier to determine if the exploit actually works, giving the tool real-time feedback as it explores the codebase in question and allowing it to iterate its results until a successful exploit is devised.</p>
+
+<p>One such exploit Claude wrote was for
+CVE-2026-2796
+(CVSS score: 9.8), which has been
+described
+as a just-in-time (JIT) miscompilation in the JavaScript WebAssembly component. The disclosure comes weeks after the company
+released
+Claude Code Security in a limited research preview as a way to fix vulnerabilities using an AI agent. “We can’t guarantee that all agent-generated patches that pass these tests are good enough to merge immediately,” Anthropic said. “But task verifiers give us increased confidence that the produced patch will fix the specific vulnerability while preserving program functionality—and therefore achieve what’s considered to be the minimum requirement for a plausible patch.”
+Mozilla, in a coordinated announcement, said the AI-assisted approach has discovered 90 other bugs, most of which have been fixed.</p>
+
+<p>These consisted of assertion failures that overlapped with issues traditionally found through fuzzing and distinct classes of logic errors that the fuzzers failed to catch. “The scale of findings reflects the power of combining rigorous engineering with new analysis tools for continuous improvement,” the browser maker
+said
+. “We view this as clear evidence that large-scale, AI-assisted analysis is a powerful new addition to security engineers’ toolbox.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="transparent-tribe-uses-ai-to-mass-produce-malware-implants-in-campaign-targeting-india"><a id="article-9"></a>Transparent Tribe Uses AI to Mass-Produce Malware Implants in Campaign Targeting India</h2>
+
+<p>The Pakistan-aligned threat actor known as
+Transparent Tribe
+has become the latest hacking group to embrace artificial intelligence (AI)-powered coding tools to strike targets with various implants. The activity is designed to produce a “high-volume, mediocre mass of implants” that are developed using lesser-known programming languages like Nim, Zig, and Crystal and rely on trusted services like Slack, Discord, Supabase, and Google Sheets to fly under the radar, according to new findings from Bitdefender. “Rather than a breakthrough in technical sophistication, we are seeing a transition toward AI-assisted malware industrialization that allows the actor to flood target environments with disposable, polyglot binaries,” security researchers Radu Tudorica, Adrian Schipor, Victor Vrabie, Marius Baciu, and Martin Zugec
+said
+in a technical breakdown of the campaign. The transition towards vibe-coded malware, aka
+vibeware
+, as a means to complicate detection has been characterized by the Romanian cybersecurity vendor as Distributed Denial of Detection (DDoD).</p>
+
+<p>In this approach, the idea is not to sidestep detection efforts through technical sophistication, but rather to flood target environments with disposable binaries, each using a different language and communication protocol. Helping threat actors in this aspect are large language models (LLMs), which lower the barrier to cybercrime and collapse the expertise gap by enabling them to generate functional code in unfamiliar languages, either from scratch or by porting the core business logic from more common ones. The latest set of attacks has been found to target the Indian government and its embassies in multiple foreign countries, with APT36 using LinkedIn to identify high-value targets. The attacks have also singled out the Afghan government and several private businesses, albeit to a lesser extent.</p>
+
+<p>The infection chains likely begin with phishing emails bearing Windows shortcuts (LNKs) bundled within ZIP archives or ISO images. Alternatively, PDF lures featuring a prominent “Download Document” button are used to redirect users to an attacker-controlled website that triggers the download of the same ZIP archives. Regardless of the method used, the LNK file is used to execute PowerShell scripts in memory, which then download and run the main backdoor and facilitate post-compromise actions. These include the deployment of known adversary simulation tools like Cobalt Strike and Havoc, indicating a hybrid approach to ensure resilience.</p>
+
+<p>Some of the other tools observed as part of the attacks are listed below -
+Warcode
+, a custom shellcode loader written in Crystal that’s used to reflectively load a Havoc agent directly into memory. NimShellcodeLoader
+, an experimental counterpart to Warcode that’s used to deploy a Cobalt Strike beacon embedded into it. CreepDropper
+, a .NET malware that’s used to deliver and install additional payloads, including SHEETCREEP, a Go-based infostealer that uses Microsoft Graph API for C2, and MAILCREEP, a C#-based backdoor utilizing Google Sheets for C2. Both malware families were
+detailed
+by Zscaler ThreatLabz in January 2026.</p>
+
+<p>SupaServ
+, a Rust-based backdoor that establishes a primary communication channel via the Supabase platform, with Firebase acting as a fallback. It contains Unicode emojis, suggesting that it was likely developed using AI. LuminousStealer
+, a likely vibe-coded, Rust-based infostealer that uses Firebase and Google Drive to exfiltrate files matching certain extensions (.txt, .docx, .pdf, .png, .jpg, .xlsx, .pptx, .zip, .rar, .doc, and .xls). CrystalShell
+, a backdoor written in Crystal that’s capable of targeting Windows, Linux, and macOS systems, and uses hard-coded Discord channel IDs for C2.</p>
+
+<p>It supports the ability to run commands and gather host information. One variant of the malware has been found to use Slack for C2. ZigShell
+, a counterpart to CrystalShell that’s written in Zig and uses Slack as its primary C2 infrastructure. It also supports added functionality to upload and download files.</p>
+
+<p>CrystalFile
+, a simple command interpreter written in Crystal that continuously monitors the “C:\Users\Public\AccountPictures\input.txt” and executes the contents using “cmd.exe.”
+LuminousCookies
+, a Rust-based specialized injector to exfiltrate cookies, passwords, and payment information from Chromium-based browsers by circumventing
+app-bound encryption
+. BackupSpy
+, a Rust-based utility designed to monitor the local file system and external media for high-value data. ZigLoader
+, a specialized loader written in Zig that decrypts and executes arbitrary shellcode in memory. Gate Sentinel Beacon
+, a customized version of the open-source
+GateSentinel
+C2 framework project.</p>
+
+<p>“The transition of APT36 toward vibeware represents a technical regression,” Bitdefender said. “While AI-assisted development increases sample volume, the resulting tools are often unstable and riddled with logical errors. The actor’s strategy incorrectly targets signature-based detection, which has long been superseded by modern endpoint security.”
+Bitdefender haș warned that the threat posed by AI-assisted malware is the industrialization of the attacks, allowing threat actors to scale their activities quickly and with less effort. “We are seeing a convergence of two trends that have been developing for some time: the adoption of exotic, niche programming languages, and the abuse of trusted services to hide in legitimate network traffic,” the researchers said.</p>
+
+<p>“This combination allows even mediocre code to achieve high operational success by simply overwhelming standard defensive telemetry.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="multi-stage-voidgeist-malware-delivering-xworm-asyncrat-and-xeno-rat"><a id="article-10"></a>Multi-Stage VOID#GEIST Malware Delivering XWorm, AsyncRAT, and Xeno RAT</h2>
+
+<p>Cybersecurity researchers have disclosed details of a multi-stage malware campaign that uses batch scripts as a pathway to deliver various encrypted remote access trojan (RATs) payloads that correspond to
+XWorm
+,
+AsyncRAT
+, and
+Xeno RAT
+. The stealthy attack chain has been codenamed
+VOID#GEIST
+by Securonix Threat Research. At a high level, the obfuscated batch script is used to deploy a second batch script, stage a legitimate embedded Python runtime, and decrypt encrypted shellcode blobs, which are executed directly in memory by injecting them into separate instances of “explorer.exe” using a technique called
+Early Bird Asynchronous Procedure Call (APC) injection
+. “Modern malware campaigns increasingly shift from standalone executables toward complex, script-based delivery frameworks that closely mimic legitimate user activity,” researchers Akshay Gaikwad, Shikha Sangwan, and Aaron Beardslee
+said
+in a technical report shared with The Hacker News.</p>
+
+<p>“Rather than deploying traditional PE binaries, attackers leverage modular pipelines comprising batch scripts for orchestration, PowerShell for stealthy staging, legitimate embedded runtimes for portability, and raw shellcode executed directly in memory for persistence and control.”
+This fileless execution mechanism minimizes disk-based detection opportunities, thereby allowing the threat actors to operate within compromised systems without triggering security alerts. What’s more, the approach offers an extra advantage in that these individual stages appear harmless in isolation and resemble regular administrative activity. The starting point of the attack is a batch script that’s fetched from a TryCloudflare domain and distributed via phishing emails. Once launched, it deliberately avoids taking steps to escalate privileges and leverages the permission rights of the currently logged-in user to establish an initial foothold, while blending into seemingly innocuous administrative operations.</p>
+
+<p>The initial stage serves as a launchpad to display a decoy PDF by launching Google Chrome in full-screen. The displayed financial document or invoice serves as a visual distraction to conceal what’s happening behind the scenes. This includes launching a PowerShell command to re-execute the original batch script, such as using the -WindowStyle Hidden parameter, to avoid displaying a console window. To ensure persistence across system reboots, an auxiliary batch script is placed in the Windows user’s Startup directory so that it’s automatically executed every time the victim logs in to the system.</p>
+
+<p>The absence of more intrusive persistence methods is intentional, as it reduces the forensic footprint. “Technically, this persistence method operates entirely within the current user’s privilege context. It does not modify system-wide registry keys, create scheduled tasks, or install services,” the researchers said. “Instead, it relies on standard user-level startup behavior, which requires no elevation and generates minimal security friction.</p>
+
+<p>This design choice reduces the likelihood of triggering privilege escalation prompts or registry-monitoring alerts.”
+The next phase begins with the malware reaching out to a TryCloudflare domain to fetch additional payloads in the form of ZIP archives that contain multiple files -
+runn.py
+, a Python-based loader script responsible for decrypting and injecting encrypted shellcode payload modules into memory
+new.bin
+, an encrypted shellcode payload corresponding to XWorm
+xn.bin
+, an encrypted shellcode payload corresponding to Xeno RAT
+pul.bin
+, an encrypted shellcode payload corresponding to AsyncRAT
+a.json, n.json,
+and
+p.json
+, key files containing the decryption keys required by the Python loader to dynamically decrypt the shellcode at runtime
+Once the files are extracted, the attack sequence deploys a legitimate embedded Python runtime directly from python[.]org. This step offers several advantages. For starters, it eliminates any dependency on the system. As a result, the malware can continue to operate even if the infected endpoint does have Python installed.</p>
+
+<p>“From the attacker’s perspective, the objectives of this stage are portability, reliability, and stealth,” Securonix said. “By embedding a legitimate interpreter into the staging directory, the malware transforms itself into a fully self-contained execution environment capable of decrypting and injecting payload modules without relying on external system components.”
+The main goal of the attack is to leverage the Python runtime to launch “runn.py,” which then decrypts and runs the XWorm payload using Early Bird APC injection. The malware also makes use of a legitimate Microsoft binary, “AppInstallerPythonRedirector.exe,” to invoke Python and launch Xeno RAT. In the last stage, the Python loader uses the same injection mechanism to launch AsyncRAT.</p>
+
+<p>The infection chain culminates with the malware transmitting a minimal HTTP beacon back to attacker-controlled C2 infrastructure hosted on TryCloudflare to confirm the digital break-in. It’s currently not known who the targets of the attack were, and if there have been any successful compromises. “This repeated injection pattern reinforces the modular architecture of the framework. Instead of delivering a single monolithic payload, the attacker deploys components incrementally, improving flexibility and resilience,” Securonix said.</p>
+
+<p>“From a detection standpoint, repeated process injection into explorer.exe within short time windows is a strong behavioral indicator that correlates across stages of the attack.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-msp-guide-to-using-ai-powered-risk-management-to-scale-cybersecurity"><a id="article-11"></a>The MSP Guide to Using AI-Powered Risk Management to Scale Cybersecurity</h2>
+
+<p>Scaling cybersecurity services as an MSP or MSSP requires technical expertise
+and
+a business model that delivers measurable value at scale. Risk-based cybersecurity is the foundation of that model. When done right, it builds client trust, increases upsell opportunities, and drives recurring revenue. But to deliver this consistently and efficiently, you need the right technology and processes.</p>
+
+<p>We created
+The MSP Growth Guide: How MSPs Use AI-Powered Risk Management to Scale Their Cybersecurity Business
+to help providers transition to scalable, risk-first cybersecurity. Inside, you’ll find practical insights into the top challenges MSPs face, expert guidance on overcoming them, and a framework for selecting and implementing AI-powered risk management to unlock scalable, recurring revenue. Why Risk Management Is the Key to Scaling Cybersecurity Services
+Most MSPs offer critical cybersecurity services, from compliance support to endpoint protection, but these are often isolated engagements that limit long-term value and recurring revenue. A risk-based approach changes that.</p>
+
+<p>By assessing the full threat landscape and prioritizing risks by business impact, MSPs can shift from tactical fixes to continuous, proactive service. By adopting a risk‑first approach, you can:
+Anticipate and neutralize threats before they cause harm
+Continuously adapt security measures to an evolving threat landscape
+Protect assets, operations, and reputation even when compliance does not require specific actions
+Risk management also helps MSPs meet the expectations of modern cybersecurity frameworks, many of which require formal, ongoing risk assessments. By embedding risk management into your service offerings, you open the door to more lucrative contracts and compliance‑led upsells. Six Challenges AI-Powered Risk Management Solves for MSPs
+Offering risk management services delivers clear value, yet even experienced MSPs encounter obstacles that hinder service delivery, reduce scalability, and make it more difficult to showcase their impact to clients.</p>
+
+<dl>
+  <dt>Here are the six most common barriers to growth MSPs face:</dt>
+  <dt>Manual assessments</dt>
+  <dd>Time-consuming, error-prone, and hard to scale
+No remediation roadmap</dd>
+  <dd>Findings without clear action plans frustrate clients
+Compliance complexity</dd>
+  <dd>Aligning with multiple frameworks manually is time-consuming and inconsistent
+Lack of business context</dd>
+  <dd>Reports are too technical for decision-makers
+Talent shortages</dd>
+  <dd>Skilled risk experts are hard to find and retain
+Unmanaged third-party risk</dd>
+  <dd>Most platforms ignore vendor risk
+To turn a risk-based cybersecurity strategy into a scalable, profitable service model, MSPs need the right technology. That’s where AI-powered risk management platforms come in. These platforms streamline every step, from assessment to remediation and reporting, while embedding CISO-level expertise into your service delivery. Selecting the Right AI‑Powered Risk Management Platform — What to Demand and Why
+What to Expect from a Modern Risk Management Platform
+The right AI‑powered risk management platform assesses threats while accelerating the delivery of results that drive business growth.</dd>
+</dl>
+
+<p>Service providers should expect:
+Faster onboarding and service delivery with automated, user-friendly risk assessments
+Improved compliance management through built-in framework alignment, automatic mapping, and continuous monitoring
+Higher client satisfaction and trust with clear, business-focused risk reporting
+Measurable ROI by reducing manual workloads, increasing efficiency, and enabling more profitable service delivery at scale
+Greater upsell opportunities by identifying additional services clients need based on their unique risk profile
+How to Choose the Right AI-Powered Risk Management Platform
+Choosing the right risk management solution is key to scaling cybersecurity services. The right platform should improve operational efficiency, help prioritize action, and communicate risk in ways that resonate with business stakeholders. Key capabilities to look for in a modern risk management platform include:
+Automated risk assessments:
+Deliver results in days instead of months, reduce human error, and ensure consistent, repeatable outcomes
+Dynamic risk register with heatmaps:
+Instantly visualize and prioritize risks based on severity and likelihood to focus efforts where they matter most
+Actionable remediation plans:
+Turn findings into clear, prioritized tasks aligned with business goals and compliance requirements
+Customizable risk tolerances:
+Tailor risk scoring and recommendations to each client’s specific objectives and risk appetite
+For the full list of capabilities to look for, download
+The MSP Growth Guide: How MSPs Use AI-Powered Risk Management to Scale Their Cybersecurity Business. When these capabilities are built into your service model, you unlock the ability to scale operations, increase margins, and grow revenue without expanding headcount.</p>
+
+<p>Turning AI-Powered Risk Management Into a Strategic Advantage
+AI-powered risk management helps MSPs and MSSPs scale services, improve efficiency, and deliver continuous value to clients. It streamlines assessments, prioritizes risks based on business impact, and supports consistent, high-quality service delivery. The MSP Growth Guide: How MSPs Use AI-Powered Risk Management to Scale Their Cybersecurity Business
+shows how to integrate AI-driven risk management into your offering to drive long-term growth. Download the guide
+to learn how to scale smarter, strengthen client relationships, and use risk management as a competitive advantage.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

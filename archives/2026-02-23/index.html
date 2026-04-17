@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-02-23 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">AI-Assisted Threat Actor Compromises 600+ FortiGate Devices in 55 Countries</a></li>
+      
+        <li><a href="#article-2">Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning</a></li>
+      
+        <li><a href="#article-3">CISA Adds Two Actively Exploited Roundcube Flaws to KEV Catalog</a></li>
+      
+        <li><a href="#article-4">EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security</a></li>
+      
+        <li><a href="#article-5">BeyondTrust Flaw Used for Web Shells, Backdoors, and Data Exfiltration</a></li>
+      
+        <li><a href="#article-6">Cline CLI 2.3.0 Supply Chain Attack Installed OpenClaw on Developer Systems</a></li>
+      
+        <li><a href="#article-7">ClickFix Campaign Abuses Compromised Sites to Deploy MIMICRAT Malware</a></li>
+      
+        <li><a href="#article-8">Identity Cyber Scores: The New Metric Shaping Cyber Insurance in 2026</a></li>
+      
+        <li><a href="#article-9">Ukrainian National Sentenced to 5 Years in North Korea IT Worker Fraud Case</a></li>
+      
+        <li><a href="#article-10">FBI Reports 1,900 ATM Jackpotting Incidents Since 2020, $20M Lost in 2025</a></li>
+      
+        <li><a href="#article-11">Former Google Engineers Indicted Over Trade Secret Transfers to Iran</a></li>
+      
+        <li><a href="#article-12">PromptSpy Android Malware Abuses Gemini AI to Automate Recent-Apps Persistence</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-02-23-ai创业新闻">2026-02-23 AI创业新闻</h1>
+
+<h2 id="ai-assisted-threat-actor-compromises-600-fortigate-devices-in-55-countries"><a id="article-1"></a>AI-Assisted Threat Actor Compromises 600+ FortiGate Devices in 55 Countries</h2>
+
+<p>A Russian-speaking, financially motivated threat actor has been observed taking advantage of commercial generative artificial intelligence (AI) services to compromise over 600 FortiGate devices located in 55 countries. That’s according to new findings from Amazon Threat Intelligence, which said it observed the activity between January 11 and February 18, 2026. “No exploitation of FortiGate vulnerabilities was observed—instead, this campaign succeeded by exploiting exposed management ports and weak credentials with single-factor authentication, fundamental security gaps that AI helped an unsophisticated actor exploit at scale,” CJ Moses, Chief Information Security Officer (CISO) of Amazon Integrated Security,
+said
+in a report. The tech giant described the threat actor as having limited technical capabilities, a constraint they overcame by relying on multiple commercial generative AI tools to implement various phases of the attack cycle, such as tool development, attack planning, and command generation.</p>
+
+<p>While one AI tool served as the primary backbone of the operation, the attackers also relied on a second AI tool as a fallback to assist with pivoting within a specific compromised network. The names of the AI tools were not disclosed. The threat actor is assessed to be driven by financial gain and not associated with any advanced persistent threat (APT) with state-sponsored resources. As recently
+highlighted
+by Google, generative AI tools are being increasingly adopted by threat actors to scale and accelerate their operations, even if they don’t equip them with novel uses of the technology.</p>
+
+<p>If anything, the emergence of AI tools illustrates how capabilities that were once off-limits to novice or technically challenged threat actors are becoming increasingly feasible, further lowering the barrier to entry for cybercrime and enabling them to come up with comprehensive attack methodologies. “They are likely a financially motivated individual or small group who, through AI augmentation, achieved an operational scale that would have previously required a significantly larger and more skilled team,” Moses said. Amazon’s investigation into the threat actor’s activity has revealed that they have successfully compromised multiple organizations’ Active Directory environments, extracted complete credential databases, and even targeted backup infrastructure, likely in a lead-up to ransomware deployment. What’s interesting here is that rather than devising ways to persist within hardened environments or those that had employed sophisticated security controls, the threat actor chose to drop the target altogether and move to a relatively softer victim.</p>
+
+<p>This indicates the use of AI as a way to bridge their skill gap for easy pickings. Amazon said it identified publicly accessible infrastructure managed by the attackers that hosted various artifacts pertinent to the campaign. This included AI-generated attack plans, victim configurations, and source code for custom tooling. The entire modus operandi is akin to an “AI-powered assembly line for cybercrime,” the company added.</p>
+
+<p>At its core, the attacks enabled the threat actor to breach FortiGate appliances, allowing it to extract full device configurations that, in turn, made it possible to glean credentials, network topology information, and device configuration information. This involved systematic scanning of FortiGate management interfaces exposed to the internet across ports 443, 8443, 10443, and 4443, followed by attempts to authenticate using commonly reused credentials. The activity was sector-agnostic, indicating automated mass scanning for vulnerable appliances. The scans originated from the IP address
+212.11.64[.]250
+.</p>
+
+<p>The stolen data was then used to burrow deeper into targeted networks and conduct post-exploitation activities, including reconnaissance for vulnerability scanning using Nuclei, Active Directory compromise, credential harvesting, and efforts to access backup infrastructure that align with typical ransomware operations. Data gathered by Amazon shows that the scanning activity resulted in organizational-level compromise, causing multiple FortiGate devices belonging to the same entity to be accessed. The compromised clusters have been detected across South Asia, Latin America, the Caribbean, West Africa, Northern Europe, and Southeast Asia. “Following VPN access to victim networks, the threat actor deploys a custom reconnaissance tool, with different versions written in both Go and Python,” the company said.</p>
+
+<p>“Analysis of the source code reveals clear indicators of AI-assisted development: redundant comments that merely restate function names, simplistic architecture with disproportionate investment in formatting over functionality, naive JSON parsing via string matching rather than proper deserialization, and compatibility shims for language built-ins with empty documentation stubs.”
+Some of the other steps undertaken by the threat actor following the reconnaissance phase are listed below -
+Achieve domain compromise via
+DCSync attacks
+. Move laterally across the network via pass-the-hash/pass-the-ticket attacks, NTLM relay attacks, and remote command execution on Windows hosts. Target Veeam Backup &amp; Replication servers to deploy credential harvesting tools and programs aimed at exploiting known Veeam vulnerabilities (e.g.,
+CVE-2023-27532
+and
+CVE-2024-40711
+). Another noteworthy finding is the threat actor’s pattern of repeatedly running into failures when trying to exploit anything beyond the “most straightforward, automated attack paths,” with their own documentation recording that the targets had either patched the services, closed the required ports, or had no vulnerable exploitation vectors.</p>
+
+<p>With Fortinet appliances becoming an
+attractive target for threat actors
+, it’s essential that organizations ensure management interfaces are not exposed to the internet, change default and common credentials, rotate SSL-VPN user credentials, implement multi-factor authentication for administrative and VPN access, and audit for unauthorized administrative accounts or connections. It’s also recommended to isolate backup servers from general network access, ensure all software programs are up-to-date, and monitor for unintended network exposure. “As we expect this trend to continue in 2026, organizations should anticipate that AI-augmented threat activity will continue to grow in volume from both skilled and unskilled adversaries,” Moses said. “Strong defensive fundamentals remain the most effective countermeasure: patch management for perimeter devices, credential hygiene, network segmentation, and robust detection for post-exploitation indicators.”
+Update
+In a separate research, Cyber and Ramen also
+disclosed
+details of the same campaign, highlighting the threat actor’s use of DeepSeek and Anthropic Claude to generate the attack plans.</p>
+
+<p>A prior exposure of the same server in December 2025 has revealed that the earlier instance hosted a copy of an offensive AI framework known as
+HexStrike AI
+. “DeepSeek is used to generate attack plans from reconnaissance data,” an anonymous threat researcher behind the security blog said. “Claude’s coding agent produced vulnerability assessments during the intrusions and was configured to execute offensive tools on the victim systems. A previously unreported model context protocol (
+MCP
+) server acts as a bridge to the language models, maintaining a knowledge base which grows with each target.”
+The server, 212.11.64[.]250, has been found to host over 1,400 files across 139 subdirectories.</p>
+
+<p>This included CVE exploit code, FortiGate configuration files, Nuclei scanning templates, Veeam credential extraction tools, and BloodHound collection data. Also present among the exposed files was a custom Model Context Protocol (MCP) server named ARXON to process scan results and reconnaissance data, invoke DeepSeek to generate attack plans, and leverage scripts to modify victim infrastructure. Another custom tool used by the attacker is a Go-based orchestrator called CHECKER2 for parallel VPN scanning and target processing. “What sets this activity apart is the integration of LLMs: a (likely) single operator managing simultaneous intrusions across multiple countries with analytical support at every stage,” the researcher said.</p>
+
+<p>“Language models only assisted a low-to-average skilled actor in removing the number of targets one person can work at any given time.”
+(The story was updated after publication to include additional details of the campaign from Cyber and Ramen.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="anthropic-launches-claude-code-security-for-ai-powered-vulnerability-scanning"><a id="article-2"></a>Anthropic Launches Claude Code Security for AI-Powered Vulnerability Scanning</h2>
+
+<p>Artificial intelligence (AI) company Anthropic has begun to roll out a new security feature for Claude Code that can scan a user’s software codebase for vulnerabilities and suggest patches. The capability, called
+Claude Code Security
+, is currently available in a limited research preview to Enterprise and Team customers. “It scans codebases for security vulnerabilities and suggests targeted software patches for human review, allowing teams to find and fix security issues that traditional methods often miss,” the company
+said
+in a Friday announcement. Anthropic said the feature aims to leverage AI as a tool to help find and resolve vulnerabilities to counter attacks where threat actors weaponize the same tools to automate vulnerability discovery.</p>
+
+<p>With AI agents
+increasingly
+capable of
+detecting security vulnerabilities
+that have otherwise escaped human notice, the tech upstart said the same capabilities could be used by
+adversaries to uncover exploitable weaknesses
+more quickly than before. Claude Code Security, it added, is designed to counter this kind of AI-enabled attack by giving defenders an advantage and improving the security baseline. Anthropic claimed that Claude Code Security goes beyond static analysis and scanning for known patterns by reasoning the codebase like a human security researcher, as well as understanding how various components interact, tracing data flows throughout the application, and flagging vulnerabilities that may be missed by rule-based tools. Each of the identified vulnerabilities is then subjected to what it says is a “multi-stage verification process” where the results are re-analyzed to filter out false positives.</p>
+
+<p>The vulnerabilities are also assigned a severity rating to help teams focus on the most important ones. The final results are displayed to the analyst in the Claude Code Security dashboard, where teams can review the code and the suggested patches and approve them. Anthropic also emphasized that the system’s decision-making is driven by a human-in-the-loop (HITL) approach. “Because these issues often involve nuances that are difficult to assess from source code alone, Claude also provides a confidence rating for each finding,” Anthropic said.</p>
+
+<p>“Nothing is applied without human approval: Claude Code Security identifies problems and suggests solutions, but developers always make the call.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-adds-two-actively-exploited-roundcube-flaws-to-kev-catalog"><a id="article-3"></a>CISA Adds Two Actively Exploited Roundcube Flaws to KEV Catalog</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday
+added
+two security flaws impacting Roundcube webmail software to its Known Exploited Vulnerabilities (
+KEV
+) catalog, citing evidence of active exploitation. The vulnerabilities in question are listed below -
+CVE-2025-49113
+(CVSS score: 9.9) - A deserialization of untrusted data vulnerability that allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php. (Fixed in
+June 2025
+)
+CVE-2025-68461
+(CVSS score: 7.2) - A cross-site scripting vulnerability via the animate tag in an SVG document.</p>
+
+<p>(Fixed in
+December 2025
+)
+Dubai-based cybersecurity company FearsOff, whose founder and CEO, Kirill Firsov, was credited with discovering and reporting CVE-2025-49113, said attackers have already “
+diffed and weaponized the vulnerability
+“ within 48 hours of public disclosure of the flaw. An exploit for the vulnerability was subsequently
+made available
+for sale on June 4, 2025. Firsov also noted that the shortcoming can be triggered reliably on default installations, and that it had been hidden in the codebase for over 10 years. There are no details on who is behind the exploitation of the two Roundcube flaws.</p>
+
+<p>But multiple vulnerabilities in the email software have been
+weaponized
+by nation-state threat actors like APT28 and Winter Vivern. Federal Civilian Executive Branch (FCEB) agencies are to remediate identified vulnerabilities by March 13, 2026, to secure their networks against the active threat. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ec-council-expands-ai-certification-portfolio-to-strengthen-us-ai-workforce-readiness-and-security"><a id="article-4"></a>EC-Council Expands AI Certification Portfolio to Strengthen U.S. AI Workforce Readiness and Security</h2>
+
+<p>With $5.5 trillion in global AI risk exposure and 700,000 U.S. workers needing reskilling, four new AI certifications and Certified CISO v4 help close the gap between AI adoption and workforce readiness
+. EC-Council
+, creator of the world-renowned
+Certified Ethical Hacker (CEH)
+credential and a global leader in applied cybersecurity education, today launched its Enterprise AI Credential Suite, with four new role-based
+AI certifications
+debuting alongside
+Certified CISO v4
+, an overhauled executive cyber leadership program. The dual launch is the largest single expansion of EC-Council’s portfolio in its 25-year history.</p>
+
+<p>It addresses a structural gap that no single tool, platform, or policy can solve alone: AI is scaling faster than the workforce trained to run, secure, and govern it. The launch aligns with U.S. priorities on workforce development and applied AI education outlined in Executive Order 14179, the July 2025 AI Action Plan’s workforce development pillar, and Executive Orders 14277 and 14278, which emphasize expanding AI education pathways and building job-relevant skills across professional and skilled-trade roles, at a time when organizations are moving AI from pilot projects into everyday operations and decision-making. That urgency is visible in both economic exposure and workforce capacity.</p>
+
+<p>IDC estimates
+that unmanaged AI risk could reach $5.5 trillion globally, while
+Bain &amp; Company projects
+a 700,000-person AI and cybersecurity reskilling gap in the United States. The International Monetary Fund (IMF) and the World Economic Forum (WEF) have also pointed to workforce readiness, rather than access to technology, as a primary constraint on AI-driven productivity and growth, especially as adoption accelerates across sectors. Security pressure is rising in parallel with adoption. Eighty-seven percent
+of organizations report AI-driven attacks, and generative AI traffic has
+surged by 890 percent
+, expanding attack surfaces that many teams are still learning how to defend, while AI capability remains concentrated, with
+67 percent of AI talent
+located in just 15 U.S.</p>
+
+<p>cities and women representing only
+28 percent of the AI workforce
+, highlighting persistent access and participation gaps as demand increases. “AI is moving from experimentation to infrastructure, and the workforce has to move with it,”
+said Jay Bavisi, Group President, EC-Council. “These programs are built to give professionals practical capability across adoption, security, and governance, so organizations can scale AI with confidence and clear accountability.”
+Role-Aligned Certifications
+The Enterprise AI Credential Suite is structured to mirror how AI capability is developed in practice. Artificial Intelligence Essentials (AIE) serves as the baseline, building practical AI fluency and responsible usage across roles, and it is supported by EC-Council’s proprietary Adopt.</p>
+
+<p>Defend. Govern. (ADG) framework, which defines how AI should be operationalized at scale in real environments. Adopt:
+Prepare teams to deploy AI deliberately, with readiness and safeguards
+Defend:
+Secure AI systems against threats such as prompt injection, data poisoning, model exploitation, and AI supply-chain compromise
+Govern:
+Embed accountability, oversight, and risk management into AI systems from the outset
+Within this structure, the four new certifications align directly to specific workforce needs across the AI lifecycle.</p>
+
+<p>Artificial Intelligence Essentials (AIE)
+builds foundational AI literacy. Certified AI Program Manager (CAIPM)
+equips to translate AI strategy into execution, aligning teams, governance, and delivery to drive measurable ROI and enterprise-scale intelligence. Certified Offensive AI Security Professional (COASP)
+builds elite capabilities to test vulnerabilities in LLMs, simulate exploits, and secure AI infrastructure hardening enterprises against emerging threats. Certified Responsible AI Governance &amp; Ethics (CRAGE) credential
+focuses on Responsible AI, Governance and Ethics at enterprise scale with NIST/ISO compliance.</p>
+
+<p>Alongside the new AI certifications,
+Certified CISO v4
+updates executive cyber leadership education for AI-driven risk environments, strengthening leadership readiness as intelligent systems become part of core business operations and security decision-making. “Security leaders are now accountable for systems that learn, adapt, and influence outcomes at speed,”
+Bavisi added. “Certified CISO v4 prepares leaders to manage AI-driven risk with clarity, strengthen governance, and make informed decisions when responsibility is on the line.”
+The portfolio also builds on EC-Council’s long-standing work with government and defense organizations, including its existing DoD 8140 baseline certification recognition, as AI security and workforce readiness take on greater national importance. To explore the full range of training and certification opportunities, visit the
+EC-Council AI Courses
+library.</p>
+
+<p>About EC-Council:
+EC-Council is the creator of the Certified Ethical Hacker (CEH) program and a leader in cybersecurity education. Founded in 2001, EC-Council’s mission is to provide high-quality training and certifications for cybersecurity professionals to keep organizations safe from cyber threats. EC-Council offers over 200 certifications and degrees in various cybersecurity domains, including forensics, security analysis, threat intelligence, and information security. An ISO/IEC 17024 accredited organization, EC-Council has certified over 350,000 professionals worldwide, with clients ranging from government agencies to Fortune 100 companies.</p>
+
+<p>EC-Council is the gold standard in cybersecurity certification, trusted by the U.S. Department of Defense, the Army, Navy, Air Force, and leading global corporations. For more information, visit:
+www.eccouncil.org
+Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="beyondtrust-flaw-used-for-web-shells-backdoors-and-data-exfiltration"><a id="article-5"></a>BeyondTrust Flaw Used for Web Shells, Backdoors, and Data Exfiltration</h2>
+
+<p>Threat actors have been observed exploiting a recently disclosed critical security flaw impacting BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA) products to conduct a wide range of malicious actions, including deploying VShell and
+The vulnerability, tracked as
+CVE-2026-1731
+(CVSS score: 9.9), allows attackers to execute operating system commands in the context of the site user. In a report published Thursday, Palo Alto Networks Unit 42
+said
+it detected the security flaw being actively exploited in the wild for network reconnaissance, web shell deployment, command-and-control (C2), backdoor and remote management tool installs, lateral movement, and data theft. The campaign has targeted financial services, legal services, high technology, higher education, wholesale and retail, and healthcare sectors across the U.S., France, Germany, Australia, and Canada. The cybersecurity company described the vulnerability as a case of sanitization failure that enables an attacker to leverage the affected “thin-scc-wrapper” script that’s reachable via WebSocket interface to inject and execute arbitrary shell commands in the context of the site user.</p>
+
+<p>“While this account is distinct from the root user, compromising it effectively grants the attacker control over the appliance’s configuration, managed sessions and network traffic,” security researcher Justin Moore said. The current scope of attacks exploiting the flaw range from reconnaissance to backdoor deployment -
+Using a custom Python script to gain access to an administrative account. Installing multiple web shells across directories, including a PHP backdoor that’s capable of executing raw PHP code or running arbitrary PHP code without writing new files to disk, as well as a bash dropper that establishes a persistent web shell. Deploying malware such as
+VShell
+and
+Spark RAT
+.</p>
+
+<p>Using out-of-band application security testing (OAST) techniques to validate successful code execution and fingerprint compromised systems. Executing commands to stage, compress and exfiltrate sensitive data, including configuration files, internal system databases and a full PostgreSQL dump, to an external server. “The relationship between CVE-2026-1731 and
+CVE-2024-12356
+highlights a localized, recurring challenge with input validation within distinct execution pathways,” Unit 42 said. “CVE-2024-12356’s insufficient validation was using third-party software (postgres), while CVE-2026-1731’s insufficient validation problem occurred in the BeyondTrust Remote Support (RS) and older versions of the BeyondTrust Privileged Remote Access (PRA) codebase.”
+With CVE-2024-12356 exploited by China-nexus threat actors like
+Silk Typhoon
+, the cybersecurity company noted that CVE-2026-1731 could also be a target for sophisticated threat actors.</p>
+
+<p>The development comes as the U.S. Cybersecurity and Infrastructure Security Agency (CISA)
+updated
+its Known Exploited Vulnerabilities (KEV) catalog entry for CVE-2026-1731 to confirm that the bug has been exploited in ransomware campaigns. In an update to its advisory, BeyondTrust stated that exploitation attempts targeting the flaw were first detected on January 31, 2026, after “anomalous activity” was flagged on a single Remote Support appliance, at least a week before it was publicly disclosed on February 6, 2026. “BeyondTrust is aware of and supporting a limited number of self-hosted customers in responding to active exploitation attempts of the previously disclosed critical vulnerability (CVE-2026-1731) in its Remote Support and Privileged Remote Access solutions,” the company
+said
+.</p>
+
+<p>“Observed exploitation activity has been limited to internet-facing, self-hosted environments where the patch had not been applied before February 9, 2026.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cline-cli-230-supply-chain-attack-installed-openclaw-on-developer-systems"><a id="article-6"></a>Cline CLI 2.3.0 Supply Chain Attack Installed OpenClaw on Developer Systems</h2>
+
+<p>In yet another software supply chain attack, the open-source, artificial intelligence (AI)-powered coding assistant
+Cline CLI
+was updated to stealthily install
+OpenClaw
+, a self-hosted autonomous AI agent that has become exceedingly popular in the past few months. “On February 17, 2026, at 3:26 AM PT, an unauthorized party used a compromised npm publish token to publish an update to Cline CLI on the NPM registry: cline@2.3.0,” the maintainers of the Cline package
+said
+in an advisory. “The published package contains a modified package.json with an added postinstall script: ‘postinstall”: “npm install -g openclaw@latest.’”
+As a result, this causes OpenClaw to be installed on the developer’s machine when Cline version 2.3.0 is installed. Cline said no additional modifications were introduced to the package and there was no malicious behavior observed.</p>
+
+<p>However, it noted that the installation of OpenClaw was not authorized or intended. The supply chain attack affects all users who installed the Cline CLI package published on npm, specifically version 2.3.0, during an approximately eight-hour window between 3:26 a.m. PT and 11:30 a.m. PT on February 17, 2026.</p>
+
+<p>The incident does not impact Cline’s Visual Studio Code (VS Code) extension and JetBrains plugin. To mitigate the unauthorized publication, Cline maintainers have released version 2.4.0. Version 2.3.0 has since been deprecated and the compromised token has been revoked. Cline also said the npm publishing mechanism has been updated to support OpenID Connect (OIDC) via GitHub Actions.</p>
+
+<p>In a
+post
+on X, the Microsoft Threat Intelligence team said it observed a “small but noticeable uptick” in OpenClaw installations on February 17, 2026, as a result of the
+supply chain compromise
+of the Cline CLI package. According to
+StepSecurity
+, the compromised Cline package was downloaded roughly 4,000 times during the eight-hour stretch. Users are advised to update to the latest version, check their environment for any unexpected installation of OpenClaw, and remove it if not required. “Overall impact is considered low, despite high download counts: OpenClaw itself is not malicious, and the installation does not include the installation/start of the Gateway daemon,” Endor Labs researcher Henrik Plate
+said
+.</p>
+
+<p>“Still, this event emphasizes the need for package maintainers to not only enable trusted publishing, but also disable publication through traditional tokens – and for package users to pay attention to the presence (and sudden absence) of corresponding attestations.”
+Leveraging Clinejection to Leak Publication Secrets
+While it’s currently not clear who is behind the breach of the npm package and what their end goals were, it comes after security researcher Adnan Khan
+discovered
+that attackers could steal the repository’s authentication tokens through
+prompt injection
+by taking advantage of the fact that it is configured to automatically triage any incoming issue raised on GitHub. “When a new issue is opened, the workflow spins up Claude with access to the repository and a broad set of tools to analyze and respond to the issue,” Khan explained. “The intent: automate first-response to reduce maintainer burden.”
+But a misconfiguration in the workflow meant that it gave Claude excessive permissions to achieve arbitrary code execution within the default branch. This aspect, combined with a prompt injection embedded within the GitHub issue title, could be exploited by an attacker with a GitHub account to trick the AI agent into running arbitrary commands and compromise production releases.</p>
+
+<p>This shortcoming, which builds upon
+PromptPwnd
+, has been codenamed Clinejection. It was introduced in a
+source code commit
+made on December 21, 2025. The attack chain is outlined below -
+Prompt Claude to run arbitrary code in issue triage workflow
+Evict legitimate cache entries by filling the cache with more than 10GB of junk data, triggering GitHub’s Least Recently Used (LRU) cache eviction policy
+Set
+poisoned cache entries
+matching the nightly release workflow’s cache keys
+Wait for the nightly publish to run at around 2 a.m. UTC and trigger on the poisoned cache entry
+“This would allow an attacker to obtain code execution in the nightly workflow and steal the publication secrets,” Khan noted.</p>
+
+<p>“If a threat actor were to obtain the production publish tokens, the result would be a devastating supply chain attack.”
+“A malicious update pushed through compromised publication credentials would execute in the context of every developer who has the extension installed and set to update automatically.”
+In other words, the attack sequence employs
+GitHub Actions cache poisoning
+to pivot from the triage workflow to a highly privileged workflow, such as the Publish Nightly Release and Publish NPM Nightly workflows, and steal the nightly publication credentials, which have the same access as those used for production releases. As it turns out,
+this is exactly what happened
+, with the unknown threat actor weaponizing an active npm publish token (referred to as NPM_RELEASE_TOKEN or NPM_TOKEN) to authenticate with the Node.js registry and publish Cline version 2.3.0. “We have been talking about AI supply chain security in theoretical terms for too long, and this week it became an operational reality,” Chris Hughes, VP of Security Strategy at Zenity, said in a statement shared with The Hacker News. “When a single issue title can influence an automated build pipeline and affect a published release, the risk is no longer theoretical.</p>
+
+<p>The industry needs to start recognizing AI agents as privileged actors that require governance.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="clickfix-campaign-abuses-compromised-sites-to-deploy-mimicrat-malware"><a id="article-7"></a>ClickFix Campaign Abuses Compromised Sites to Deploy MIMICRAT Malware</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new
+ClickFix
+campaign that abuses compromised legitimate sites to deliver a previously undocumented remote access trojan (RAT) called
+MIMICRAT
+(aka AstarionRAT). “The campaign demonstrates a high level of operational sophistication: compromised sites spanning multiple industries and geographies serve as delivery infrastructure, a multi-stage PowerShell chain performs ETW and AMSI bypass before dropping a Lua-scripted shellcode loader, and the final implant communicates over HTTPS on port 443 using HTTP profiles that resemble legitimate web analytics traffic,” Elastic Security Labs
+said
+in a Friday report. According to the enterprise search and cybersecurity company, MIMICRAT is a custom C++ RAT with support for Windows token impersonation, SOCKS5 tunneling, and a set of 22 commands for comprehensive post-exploitation capabilities. The campaign was discovered earlier this month.</p>
+
+<p>It’s also assessed to
+share tactical and infrastructural overlaps
+with another ClickFix campaign documented by Huntress that leads to the deployment of the Matanbuchus 3.0 loader, which then serves as a conduit for the same RAT. The end goal of the attack is suspected to be ransomware deployment or data exfiltration. In the infection sequence highlighted by Elastic, the entry point is bincheck[.]io, a legitimate Bank Identification Number (BIN) validation service that was breached to inject malicious JavaScript code that’s responsible for loading an externally hosted PHP script. The PHP script then proceeds to deliver the ClickFix lure by displaying a fake Cloudflare verification page and instructing the victim to copy and paste a command into the Windows Run dialog to address the issue.</p>
+
+<p>This, in turn, leads to the execution of a PowerShell command, which then contacts a command-and-control (C2) server to fetch a second-stage PowerShell script that patches Windows event logging (
+ETW
+) and antivirus scanning (
+AMSI
+) before dropping a Lua-based loader. In the final stage, the Lua script decrypts and executes in memory shellcode that delivers MIMICRAT. The Trojan uses HTTPS for communicating with the C2 server, allowing it to accept two dozen commands for process and file system control, interactive shell access, token manipulation, shellcode injection, and SOCKS proxy tunneling. “The campaign supports 17 languages, with the lure content dynamically localized based on the victim’s browser language settings to broaden its effective reach,” security researcher Salim Bitam said.</p>
+
+<p>“Identified victims span multiple geographies, including a USA-based university and multiple Chinese-speaking users documented in public forum discussions, suggesting broad opportunistic targeting.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="identity-cyber-scores-the-new-metric-shaping-cyber-insurance-in-2026"><a id="article-8"></a>Identity Cyber Scores: The New Metric Shaping Cyber Insurance in 2026</h2>
+
+<p>With
+one in three cyber-attacks
+now involving compromised employee accounts, insurers and regulators are placing far greater emphasis on identity posture when assessing cyber risk. For many organizations, however, these assessments remain largely opaque. Elements such as password hygiene, privileged access management, and the extent of multi-factor authentication (MFA) coverage are increasingly influential in how cyber risk and
+insurance costs
+are evaluated. Understanding the identity-centric factors behind these assessments is critical for organizations seeking to demonstrate lower risk exposure and secure more favorable insurance terms.</p>
+
+<p>Why identity posture now drives underwriting
+With the
+global average cost
+of a data breach reaching $4.4 million in 2025, more organizations are turning to cyber insurance to manage financial exposure. In the UK, coverage has increased from
+37%
+in 2023 to
+45%
+in 2025, but rising claims volumes are prompting insurers to tighten underwriting requirements. Credential compromise remains one of the most reliable ways for attackers to gain access,
+escalate privileges
+, and persist within an environment. For insurers, strong
+identity controls
+reduce the likelihood that a single compromised account can lead to widespread disruption or data loss, supporting more sustainable underwriting decisions.</p>
+
+<p>What insurers want to see in identity security
+Password hygiene and credential exposure
+Despite the growing use of multi-factor authentication and
+passwordless initiatives
+, passwords still play a key role in authentication. Organizations should pay particular attention to the behaviors and issues that increase the risk of credential theft and abuse, including:
+Password reuse across identities
+, particularly among administrative or
+service accounts
+, increases the likelihood that one stolen credential leads to broader access. Legacy authentication protocols
+are still common in networks and frequently abused to harvest credentials. NTLM persists in many environments despite being functionally replaced by
+Kerberos
+in Windows 2000.</p>
+
+<p>Dormant accounts
+with valid credentials, which act as unmonitored entry points and often retain unnecessary access. Service accounts
+with
+never-expiring passwords
+, creating long-lived, low-visibility attack paths. Shared administrative credentials
+, reduce accountability and amplify the impact of compromise. From an underwriting perspective, evidence that an organization understands and actively manages these risks is often more important than the presence of individual technical controls.</p>
+
+<p>Regular audits of password hygiene
+and credential exposure help demonstrate maturity and intent to reduce identity-driven risk. Privileged access management
+Privileged access management
+is a critical measure of an organization’s ability to prevent and mitigate breaches. Privileged accounts can have high-level access to systems and data, but are frequently over-permissioned. As a result, insurers pay close attention to how these accounts are governed.</p>
+
+<p>Service accounts, cloud administrators, and delegated privileges outside central monitoring significantly elevate risk. This is especially true when they operate without
+MFA or logging
+. Excessive membership in Domain Admin or Global Administrator roles and overlapping administrative scopes all suggest that privilege escalation would be both rapid and difficult to contain. Poorly governed or unknown privileged access is typically viewed as higher risk than a small number of tightly controlled administrators.</p>
+
+<p>Security teams can use tools such as
+Specops Password Auditor
+to identify stale, inactive, or over-privileged administrative accounts and prioritize remediation before those credentials are abused. Specops Password Auditor - Dashboard
+When determining the likelihood of a damaging breach, the question is straightforward: if an attacker
+compromises a single account
+, how quickly can they become an administrator? Where the answer is “immediately” or “with minimal effort,” premiums tend to reflect that exposure. MFA coverage
+Most organizations can credibly state that
+MFA has been deployed.</p>
+
+<p>However, MFA only meaningfully reduces risk when it is consistently enforced across all critical systems and accounts. In one documented case, the
+City of Hamilton
+was denied an $18 million cyber insurance payout after a ransomware attack because MFA had not been fully implemented across affected systems. While
+MFA isn’t infallible
+, fatigue attacks first require valid account credentials and then depend on a user approving an unfamiliar authentication request, an outcome that is far from guaranteed. Meanwhile, accounts that authenticate via older protocols, non-interactive service accounts, or privileged roles exempted for convenience all offer viable bypass paths once initial access is achieved.</p>
+
+<p>That’s why insurers increasingly require MFA for all privileged accounts, as well as for email and remote access. Organizations that neglect it may face higher premiums. Four steps to improve your identity cyber score
+There are many ways organizations can improve identity security, but insurers look for evidence of progress in a few key areas:
+Eliminate weak and shared passwords:
+Enforce minimum password standards and
+reduce password reuse
+, particularly for administrative and service accounts. Strong password hygiene limits the impact of credential theft and reduces the risk of lateral movement following initial access.</p>
+
+<p>Apply MFA across all critical access paths:
+Ensure MFA is enforced
+on remote access, cloud applications, VPNs, and all privileged accounts. Insurers increasingly expect MFA coverage to be comprehensive rather than selectively applied. Reduce permanent privileged access:
+Limit permanent administrative rights
+wherever practical and adopt just-in-time or time-bound access for elevated tasks. Fewer always-on privileged accounts directly reduce the impact of credential compromise.</p>
+
+<p>Regularly review and certify access:
+Conduct routine reviews of user and privileged permissions to ensure they align with current roles. Stale access
+and orphaned accounts are common red flags in insurance assessments. Insurers increasingly expect organizations to demonstrate not only that identity controls exist, but that they are actively monitored and improved over time. Specops Password Auditor
+supports this by providing clear visibility into password exposure within Active Directory and enforcing controls that reduce credential-based risk.</p>
+
+<p>To understand how these controls can be applied in your environment and aligned with insurer expectations,
+speak with a Specops expert
+or request a live demo. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ukrainian-national-sentenced-to-5-years-in-north-korea-it-worker-fraud-case"><a id="article-9"></a>Ukrainian National Sentenced to 5 Years in North Korea IT Worker Fraud Case</h2>
+
+<p>A 29-year-old Ukrainian national has been
+sentenced to five years in prison
+in the U.S. for his role in facilitating North Korea’s fraudulent information technology (IT) worker scheme. In November 2025, Oleksandr “Alexander” Didenko
+pleaded guilty
+to wire fraud conspiracy and aggravated identity theft for stealing the identities of U.S. citizens and selling them to IT workers to help them land jobs at 40 U.S.</p>
+
+<p>companies and draw regular salaries, which were then funneled back to the regime to support its weapons programs. He was apprehended by Polish authorities in late 2024, and later extradited to the U.S. Didenko has also been ordered to serve 12 months of supervised release and to pay $46,547.28 in restitution. Last year, Didenko also agreed to forfeit more than $1.4 million, which includes about $181,438 in U.S.</p>
+
+<p>dollars and cryptocurrency seized from him and his co-conspirators. The defendant is said to have run a website named
+Upworksell[.]com
+to help overseas IT workers buy or rent stolen or borrowed identities since the start of 2021. The IT workers abused these identities to apply for jobs on freelance work platforms based in California and Pennsylvania. The site was seized by authorities on May 16, 2024.</p>
+
+<p>In addition, Didenko paid individuals in the U.S. to
+receive and host laptops
+at their residences in Virginia, Tennessee and California. The idea was to give the impression that the workers were located in the country, when, in reality, they were connecting remotely from countries like China, where they were dispatched to. As part of the criminal scheme, Didenko managed as many as 871 proxy identities and facilitated the operation of at least three U.S.-based laptop farms.</p>
+
+<p>One of the computers was sent to a laptop farm run by Christina Marie Chapman in Arizona. Chapman was arrested in May 2024 and
+sentenced to 102 months in prison
+in July 2025 for participating in the scheme. Furthermore, he enabled his North Korean clients to access the U.S. financial system through Money Service Transmitters instead of having to open an account at a bank within the U.S.</p>
+
+<p>These money transfer services were used to move employment income to foreign bank accounts. Officials said Didenko’s clients were paid hundreds of thousands of dollars for their work. “Defendant Didenko’s scheme funneled money from Americans and U.S. businesses, into the coffers of North Korea, a hostile regime,” said U.S.</p>
+
+<p>Attorney Jeanine Ferris Pirro. “Today, North Korea is not only a threat to the homeland from afar, it is an enemy within.”
+“By using stolen and fraudulent identities, North Korean actors are infiltrating American companies, stealing information, licensing, and data that is harmful to any business. But more than that, money paid to these so-called employees goes directly to munitions programs in North Korea.”
+Despite continued law enforcement actions, the Hermit Kingdom’s conspiracy shows no signs of stopping. If anything, the operation has continued to evolve with new tactics and techniques to evade detection.</p>
+
+<p>According to a
+report
+from threat intelligence firm Security Alliance (SEAL) last week, the IT workers have begun to apply for remote positions using real LinkedIn accounts of individuals they’re impersonating in an effort to make their fraudulent applications look authentic. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fbi-reports-1900-atm-jackpotting-incidents-since-2020-20m-lost-in-2025"><a id="article-10"></a>FBI Reports 1,900 ATM Jackpotting Incidents Since 2020, $20M Lost in 2025</h2>
+
+<p>The U.S. Federal Bureau of Investigation (FBI) has warned of an increase in ATM jackpotting incidents across the country, leading to losses of more than $20 million in 2025. The agency said 1,900 ATM jackpotting incidents have been reported since 2020, out of which 700 took place last year. In December 2025, the U.S.</p>
+
+<p>Department of Justice (DoJ)
+said
+about $40.73 million has been collectively lost to jackpotting attacks since 2021. “Threat actors exploit physical and software vulnerabilities in ATMs and deploy malware to dispense cash without a legitimate transaction,” the FBI
+said
+in a Thursday bulletin. The jackpotting attacks involve the use of specialized malware, such as Ploutus, to infect ATMs and force them to dispense cash. In most cases, cybercriminals have been observed gaining unauthorized access to the machines by opening an ATM face with widely available generic keys.</p>
+
+<p>There are at least two different ways by which the malware is deployed: Removing the ATM’s hard drive, followed by either connecting it to their computer, copying it to the hard drive, attaching it back to the ATM, and rebooting the ATM, or replacing it entirely with a foreign hard drive preloaded with the malware and rebooting it. Regardless of the method used, the end result is the same. The malware is designed to interact directly with the ATM hardware, thereby getting around any security controls present in the original ATM software. Because the malware does not require a connection to an actual bank card or customer account to dispense cash, it can be used against ATMs of different manufacturers with little to no code changes, as the underlying Windows operating system is exploited during the attack.</p>
+
+<p>Ploutus was
+first observed
+in Mexico in 2013. Once installed, it grants threat actors complete control over an ATM, enabling them to trigger cash-outs that the FBI said can occur in minutes and are harder to detect until after the money is withdrawn. “Ploutus malware exploits the eXtensions for Financial Services (
+XFS
+), the layer of software that instructs an ATM what to physically do,” the FBI explained. “When a legitimate transaction occurs, the ATM application sends instructions through XFS for bank authorization.</p>
+
+<p>If a threat actor can issue their own commands to XFS, they can bypass bank authorization entirely and instruct the ATM to dispense cash on demand.”
+The agency has outlined a long list of recommendations that organizations can adopt to mitigate jackpotting risks. This includes tightening physical security by installing threat sensors, setting up security cameras, and changing standard locks on ATM devices. Other measures involve auditing ATM devices, changing default credentials, configuring an automatic shutdown mode once indicators of compromise are detected, enforcing device allowlisting to prevent connection of unauthorized devices, and maintaining logs. Update
+The U.S.</p>
+
+<p>has
+indicted
+six more suspects for ATM jackpotting crimes, accusing them of conspiracy to commit bank fraud, conspiracy to commit bank burglary and computer fraud, bank fraud, bank burglary, and damage to computers. The suspects are alleged to be affiliated with Tren de Aragua, a designated Foreign Terrorist Organization. With the latest development, a total of 93 defendants have been charged in connection with the scheme in recent months. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="former-google-engineers-indicted-over-trade-secret-transfers-to-iran"><a id="article-11"></a>Former Google Engineers Indicted Over Trade Secret Transfers to Iran</h2>
+
+<p>Two former Google engineers and one of their husbands have been
+indicted
+in the U.S. for allegedly committing trade secret theft from the search giant and other tech firms and transferring the information to unauthorized locations, including Iran. Samaneh Ghandali, 41, and her husband Mohammadjavad Khosravi (aka Mohammad Khosravi), 40, along with her sister Soroor Ghandali, 32, have been accused of conspiring to commit trade secret theft from Google and other leading technology companies, theft and attempted theft of trade secrets, and obstruction of justice. The three defendants, all Iranian nationals and residing in San Jose, were arrested on Thursday and made their initial appearances in federal district court in the California city.</p>
+
+<p>According to the U.S. Department of Justice (DoJ), the Ghandali sisters worked at Google before joining another technology company identified as Company 3. Khosravi is said to have been employed at a different company (named Company 2). All three of them landed jobs in the area of mobile computer processors.</p>
+
+<p>While the names of Company 2 and Company 3 were not disclosed, The Hacker News found that Soroor Ghandali worked as a hardware engineer intern at Google before joining Intel. Khosravi, on the other hand, was employed at Qualcomm as an ASIC design engineer. “As part of the alleged scheme to commit trade secret theft, the defendants used their employment to obtain access to confidential and sensitive information,” the DoJ
+said
+in a press release. “The defendants then exfiltrated confidential and sensitive documents, including trade secrets related to processor security and cryptography and other technologies, from Google and other technology companies to unauthorized third-party and personal locations, including to work devices associated with each other’s employers, and to Iran.”
+In a
+statement
+shared with Bloomberg, a Google spokesperson said the company has enhanced safeguards to protect its confidential information and immediately alerted law enforcement after discovering the incident.</p>
+
+<p>The trade secrets pertained to the company’s Tensor processor for Pixel phones. Samaneh Ghandali, per the department, transferred hundreds of files, including Google trade secrets, to a third-party communications platform, specifically to channels that had each of the defendant’s first names. Soroor Ghandali is also alleged to have exfiltrated numerous Google-related files, which contained trade secrets, to the same channels while working for the company. The trade secret files were subsequently copied to different personal devices, as well as a work device belonging to Khosravi and a work device issued to Soroor Ghandali by Company 3.</p>
+
+<p>The defendants then concealed their actions by submitting false, signed affidavits; destroyed the exfiltrated files from electronic devices; and manually took photographs of screens containing the documents’ contents instead of transferring the documents using the messaging app. “After Google’s internal security systems detected Samaneh Ghandali’s activity and Google revoked her access to company resources in August 2023, Samaneh Ghandali allegedly executed a signed affidavit claiming she had not shared Google’s confidential information with anyone outside the company,” the DoJ added. Furthermore, Samaneh Ghandali and Khosravi performed searches online and visited websites about deleting communications and other data. This included queries related to the duration for which a cellular service provider kept “messages to print out for court.”
+In the meantime, the couple is alleged to have continued accessing Google trade secrets stored on their personal devices for purposes of manually photographing hundreds of computer screens of both Google’s and Company 2’s sensitive information for an unspecified duration that stretched for months.</p>
+
+<p>Samaneh Ghandali also allegedly manually captured with her mobile phone about 24 photographs of Khosravi’s work computer screen containing Company 2 trade secret information on the night before the pair traveled to Iran in December 2023. These photographs were then accessed from a personal device associated with Samaneh Ghandali in Iran. If convicted, each defendant faces a maximum sentence of 10 years in prison and a $250,000 fine for each count of trade secret theft charges and a maximum sentence of 20 years in prison and a $250,000 fine for the count of obstruction of justice. The development comes less than a month after another ex-Google engineer, Linwei Ding, was
+convicted
+in the U.S.</p>
+
+<p>for stealing thousands of the company’s confidential documents to build a startup in China. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="promptspy-android-malware-abuses-gemini-ai-to-automate-recent-apps-persistence"><a id="article-12"></a>PromptSpy Android Malware Abuses Gemini AI to Automate Recent-Apps Persistence</h2>
+
+<p>Cybersecurity researchers have discovered what they say is the first Android malware that abuses Gemini, Google’s generative artificial intelligence (AI) chatbot, as part of its execution flow and achieves persistence. The malware has been codenamed
+PromptSpy
+by ESET. The malware is equipped to capture lockscreen data, block uninstallation efforts, gather device information, take screenshots, and record screen activity as video. “Gemini is used to analyze the current screen and provide PromptSpy with step-by-step instructions on how to ensure the malicious app remains pinned in the recent apps list, thus preventing it from being easily swiped away or killed by the system,” ESET researcher Lukáš Štefanko
+said
+in a report published today.</p>
+
+<p>“Since Android malware often relies on UI navigation, leveraging generative AI enables the threat actors to adapt to more or less any device, layout, or OS version, which can greatly expand the pool of potential victims.”
+Specifically, this involves hard-coding the AI model and a prompt in the malware, assigning the AI agent the persona of an “Android automation assistant.” It sends Gemini a natural language prompt along with an XML dump of the current screen that gives detailed information about every UI element, including its text, type, and exact position on the display. Gemini then processes this information and responds with JSON instructions that tell the malware what action to perform (e.g., a tap) and where to perform it. The multi-step interaction continues until the app is successfully locked in the recent apps list and cannot be terminated. The main goal of PromptSpy is to deploy a built-in VNC module that grants the attackers remote access to the victim’s device.</p>
+
+<p>The malware is also designed to take advantage of Android’s accessibility services to prevent it from being uninstalled using invisible overlays. It communicates with a hard-coded command-and-control (C2) server (“54.67.2[.]84”) via the VNC protocol. It’s worth noting that the actions suggested by Gemini are executed through accessibility services, allowing the malware to interact with the device without user input. All of this is accomplished by communicating with the C2 server to receive the Gemini API key, take screenshots on demand, intercept lockscreen PIN or password, record screen, and capture the pattern unlock screen as a video.</p>
+
+<p>An analysis of the language localization clues and the distribution vectors used suggests that the campaign is likely financially motivated and targets users in Argentina. Interestingly, evidence shows that PromptSpy was developed in a Chinese‑speaking environment, as indicated by the presence of debug strings written in simplified Chinese. “PromptSpy is distributed by a dedicated website and has never been available on Google Play,” Štefanko said. PromptSpy is assessed to be an advanced version of another previously unknown Android malware called VNCSpy, samples of which were first uploaded to the VirusTotal platform last month from Hong Kong.</p>
+
+<p>The website, “mgardownload[.]com,” is used to deliver a dropper, which, when installed and launched, opens a web page hosted on “m-mgarg[.]com.” It masquerades as JPMorgan Chase, going by the name “MorganArg” in reference to Morgan Argentina. The dropper also instructs victims to grant it permissions to install apps from unknown sources to deploy PromptSpy. “In the background, the Trojan contacts its server to request a configuration file, which includes a link to download another APK, presented to the victim, in Spanish, as an update,” ESET said. “During our research, the configuration server was no longer accessible, so the exact download URL remains unknown.”
+The findings illustrate how threat actors are incorporating AI tools into their operations and make malware more dynamic, giving them ways to automate actions that would otherwise be more challenging with conventional approaches.</p>
+
+<p>Because PromptSpy prevents itself from being uninstalled by overlaying invisible elements on the screen, the only way for a victim to remove it is to
+reboot the device into Safe Mode
+, where third‑party apps are disabled and can be uninstalled. “PromptSpy shows that Android malware is beginning to evolve in a sinister way,” ESET said. “By relying on generative AI to interpret on‑screen elements and decide how to interact with them, the malware can adapt to virtually any device, screen size, or UI layout it encounters.”
+“Instead of hardcoded taps, it simply hands AI a snapshot of the screen and receives precise, step‑by‑step interaction instructions in return, helping it achieve a persistence technique resistant to UI changes.”
+When reached for comment, a Google spokesperson told The Hacker News via email that there is currently no evidence that apps containing PromptSpy are being distributed via Google Play. “Android users are automatically protected against known versions of this malware by
+Google Play Protect
+, which is on by default on Android devices with Google Play Services.</p>
+
+<p>Google Play Protect can warn users or block apps known to exhibit malicious behavior, even when those apps come from sources outside of Play,” the spokesperson added. (The story was updated after publication to include a response from Google.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

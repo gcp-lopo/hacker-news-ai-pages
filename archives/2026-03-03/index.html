@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-03 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel</a></li>
+      
+        <li><a href="#article-2">Google Develops Merkle Tree Certificates to Enable Quantum-Resistant HTTPS in Chrome</a></li>
+      
+        <li><a href="#article-3">⚡ Weekly Recap: SD-WAN 0-Day, Critical CVEs, Telegram Probe, Smart TV Proxy SDK and More</a></li>
+      
+        <li><a href="#article-4">How to Protect Your SaaS from Bot Attacks with SafeLine WAF</a></li>
+      
+        <li><a href="#article-5">APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday</a></li>
+      
+        <li><a href="#article-6">Accelerate your AI Initiatives</a></li>
+      
+        <li><a href="#article-7">North Korean Hackers Publish 26 npm Packages Hiding Pastebin C2 for Cross-Platform RAT</a></li>
+      
+        <li><a href="#article-8">ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket</a></li>
+      
+        <li><a href="#article-9">Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement</a></li>
+      
+        <li><a href="#article-10">Pentagon Designates Anthropic Supply Chain Risk Over AI Military Dispute</a></li>
+      
+        <li><a href="#article-11">DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams</a></li>
+      
+        <li><a href="#article-12">900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks</a></li>
+      
+        <li><a href="#article-13">Malicious Go Crypto Module Steals Passwords, Deploys Rekoobe Backdoor</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-03-ai创业新闻">2026-03-03 AI创业新闻</h1>
+
+<h2 id="new-chrome-vulnerability-let-malicious-extensions-escalate-privileges-via-gemini-panel"><a id="article-1"></a>New Chrome Vulnerability Let Malicious Extensions Escalate Privileges via Gemini Panel</h2>
+
+<p>Cybersecurity researchers have disclosed details of a now-patched security flaw in Google Chrome that could have permitted attackers to escalate privileges and gain access to local files on the system. The vulnerability, tracked as
+CVE-2026-0628
+(CVSS score: 8.8), has been described as a case of insufficient policy enforcement in the WebView tag. It was
+patched
+by Google in early January 2026 in version 143.0.7499.192/.193 for Windows/Mac and 143.0.7499.192 for Linux. “Insufficient policy enforcement in WebView tag in Google Chrome prior to 143.0.7499.192 allowed an attacker who convinced a user to install a malicious extension to inject scripts or HTML into a privileged page via a crafted Chrome extension,” according to a description on the NIST National Vulnerability Database (NVD).</p>
+
+<p>Palo Alto Networks Unit 42 researcher Gal Weizman, who discovered and reported the flaw on November 23, 2025,
+said
+the issue could have permitted malicious extensions with basic permissions to seize control of the new
+Gemini Live panel
+in Chrome. The panel can be launched by clicking the Gemini icon located at the top of the browser window. Google
+added Gemini integration
+to Chrome in September 2025. This attack could have been abused by an attacker to achieve privilege escalation, enabling them to access the victim’s camera and microphone without their permission, take screenshots of any website, and access local files.</p>
+
+<p>The findings highlight an emerging attack vector arising from baking artificial intelligence (AI) and agentic capabilities directly into web browsers to facilitate real-time content summarization, translation, and automated task execution, as the same capabilities could be abused to perform privileged actions. The problem, at its core, is the need for granting these AI agents privileged access to the browsing environment to perform multi-step operations, thereby becoming a double-edged sword when an attacker embeds hidden prompts in a malicious web page, and a victim user is tricked into accessing it via social engineering or some other means. The prompt could instruct the AI assistant to perform actions that would otherwise be blocked by the browser, leading to data exfiltration or code execution. Even worse, the web page could manipulate the agent to
+store the instructions in memory
+, causing it to persist across sessions.</p>
+
+<p>Besides the expanded attack surface, Unit 42 said the integration of an AI side panel in agentic browsers brings back classic browser security risks. “By placing this new component within the high-privilege context of the browser, developers could inadvertently create new logical flaws and implementation weaknesses,” Weizman said. “This could include vulnerabilities related to cross-site scripting (XSS), privilege escalation, and side-channel attacks that can be exploited by less-privileged websites or browser extensions.”
+While browser extensions operate based on a defined set of permissions, successful exploitation of CVE-2026-0628 undermines the browser security model and allows an attacker to run arbitrary code at “gemini.google[.]com/app” via the browser panel and gain access to sensitive data. “An extension with access to a basic permission set through the
+declarativeNetRequest API
+allowed permissions that could have enabled an attacker to inject JavaScript code into the new Gemini panel,” Weizman added.</p>
+
+<p>“When the Gemini app is loaded within this new panel component, Chrome hooks it with access to powerful capabilities.”
+It’s worth noting that the declarativeNetRequest API allows extensions to intercept and change properties of HTTPS web requests and responses. It’s used by ad-blocking extensions to stop issuing requests to load ads on web pages. In other words, all it takes for an attacker is to trick an unsuspecting user into installing a specially crafted extension, which could then inject arbitrary JavaScript code into the Gemini side panel to interact with the file system, take screenshots, access the camera, turn on the microphone – all features necessary for the AI assistant to perform its tasks. “This difference in what type of component loads the Gemini app is the line between by-design behavior and a security flaw,” Unit 42 said.</p>
+
+<p>An extension influencing a website is expected. However, an extension influencing a component that is baked into the browser is a serious security risk.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-develops-merkle-tree-certificates-to-enable-quantum-resistant-https-in-chrome"><a id="article-2"></a>Google Develops Merkle Tree Certificates to Enable Quantum-Resistant HTTPS in Chrome</h2>
+
+<p>Google has announced a new program in its Chrome browser to ensure that HTTPS certificates are secure against the
+future risk
+posed by
+quantum computers
+. “To ensure the scalability and efficiency of the ecosystem, Chrome has no immediate plan to add traditional
+X.509 certificates
+containing post-quantum cryptography to the
+Chrome Root Store
+,” the Chrome Secure Web and Networking Team
+said
+. “Instead, Chrome, in collaboration with other partners, is developing an
+evolution
+of HTTPS certificates based on
+Merkle Tree Certificates
+(MTCs), currently in development in the PLANTS working group.”
+As Cloudflare explains, MTC is a
+proposal
+for the next generation of the Public Key Infrastructure (PKI) used to secure the internet that aims to reduce the number of public keys and signatures in the TLS handshake to the bare minimum required. Under this model, a Certification Authority (CA) signs a single ‘Tree Head’ representing potentially millions of certificates, and the ‘certificate’ sent to the browser is a lightweight proof of inclusion in that tree, Google said.</p>
+
+<p>In other words, MTCs facilitate the adoption of post-quantum algorithms without having to incur additional bandwidth associated with classical X.509 certificate chains. The approach, the company added, decouples the security strength of the corresponding cryptographic algorithm from the size of the data transmitted to the user. “By shrinking the authentication data in a TLS handshake to the absolute minimum, MTCs aim to keep the post-quantum web as fast and seamless as today’s internet, maintaining high performance even as we adopt stronger security,” Google said. The tech giant said it’s already experimenting with MTCs with real internet traffic and that it plans to gradually expand the rollout in three distinct phases by the third quarter of 2027 -
+Phase 1
+(In progress) - Google is conducting a feasibility study in collaboration with Cloudflare to evaluate the performance and security of TLS connections relying on MTCs.</p>
+
+<p>Phase 2
+(Q1 2027) - Google plans to invite Certificate Transparency (CT)
+Log
+operators with at least one “
+usable
+“ log in Chrome before February 1, 2026, to participate in the initial bootstrapping of public MTCs. Phase 3
+(Q3 2027) - Google will finalize the requirements for onboarding additional CAs into the new Chrome Quantum-resistant Root Store (CQRS) and corresponding Root Program that only supports MTCs. “We view the adoption of MTCs and a quantum-resistant root store as a critical opportunity to ensure the robustness of the foundation of today’s ecosystem,” Google said. By designing for the specific demands of a modern, agile, internet, we can accelerate the adoption of post-quantum resilience for all web users.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-sd-wan-0-day-critical-cves-telegram-probe-smart-tv-proxy-sdk-and-more"><a id="article-3"></a>⚡ Weekly Recap: SD-WAN 0-Day, Critical CVEs, Telegram Probe, Smart TV Proxy SDK and More</h2>
+
+<p>This week is not about one big event. It shows where things are moving. Network systems, cloud setups, AI tools, and common apps are all being pushed in different ways. Small gaps in access control, exposed keys, and normal features are being used as entry points.</p>
+
+<p>The pattern becomes clear only when you see everything together. Faster scans, smarter misuse of trusted services, and steady targeting of high-value sectors. Each story adds context. Reading them all gives a fuller picture of how today’s threat landscape is evolving.</p>
+
+<p>⚡ Threat of the Week
+Cisco SD-WAN Zero-Day Exploited
+— A newly disclosed maximum-severity security flaw in Cisco Catalyst SD-WAN Controller (formerly vSmart) and Catalyst SD-WAN Manager (formerly vManage) has come under active exploitation in the wild as part of malicious activity that dates back to 2023. The vulnerability, tracked as CVE-2026-20127 (CVSS score: 10.0), allows an unauthenticated remote attacker to bypass authentication and obtain administrative privileges on an affected system by sending a crafted request. Cisco credited the Australian Signals Directorate’s Australian Cyber Security Centre (ASD-ACSC) for reporting the vulnerability. The networking equipment major is tracking the exploitation and subsequent post-compromise activity under the moniker UAT-8616, describing the cluster as a “highly sophisticated cyber threat actor.”
+Control Your AI Agents Before They Control You
+Airia is the governance and orchestration layer for enterprise AI.</p>
+
+<p>Monitor drift, enforce policy, optimize inference cost, and generate audit-ready evidence—so your AI scales securely, compliantly, and profitably. Request a Demo ➝
+🔔 Top News
+Anthropic Accuses 3 Chinese Firms of Distillation Attacks
+— Anthropic accused three Chinese AI firms of engaging in concerted “industrial-scale” distillation attack campaigns aimed at extracting information from its model, making it the latest American tech firm to level such claims after OpenAI issued similar complaints. DeepSeek, Moonshot AI, and MiniMax are said to have flooded Claude with large volumes of specially-crafted prompts to elicit responses to train their own proprietary models. Last month, OpenAI submitted an open letter to U.S.</p>
+
+<p>legislators, claiming to have observed activity “indicative of ongoing attempts by DeepSeek to distill frontier models of OpenAI and other U.S. frontier labs, including through new, obfuscated methods.” The disclosure renewed a debate over training data sources and distillation techniques, with some criticizing the company for training its own systems using copyrighted material without permission. “Anthropic is guilty of stealing training data at a massive scale and has had to pay multibillion-dollar settlements for their theft,” xAI CEO Elon Musk said. Google Disrupts UNC2814 GRIDTIDE Campaign
+— Google disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as UNC2814 that breached at least 53 organizations across 42 countries.</p>
+
+<p>The tech giant described UNC2814 as a prolific, elusive actor that has a history of targeting international governments and global telecommunications organizations across Africa, Asia, and the Americas. Central to the hacking group’s operations is a novel backdoor dubbed GRIDTIDE that abuses Google Sheets API as a communication channel to disguise C2 traffic and facilitate the transfer of raw data and shell commands. Chinese cyber espionage groups have consistently prioritized the telecommunication sector as a target precisely because of the access their networks provide to sensitive data and lawful intercept infrastructure. Thousands of Public Google Cloud API Keys Exposed with Gemini Access
+— New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data.</p>
+
+<p>The problem occurs when users enable the Gemini API on a Google Cloud project (i.e., Generative Language API), causing the existing API keys in that project, including those accessible via the website JavaScript code, to gain surreptitious access to Gemini endpoints without any warning or notice. With a valid key, an attacker can access uploaded files, cached data, and even rack up LLM usage charges, Truffle Security said. The issue has since been plugged by Google. UAT-10027 Targets U.S.</p>
+
+<p>Education and Healthcare Sectors
+— A previously undocumented threat activity cluster known as UAT-10027 has been attributed to an ongoing malicious campaign targeting education and healthcare sectors in the U.S. since at least December 2025. The end goal of the attacks is to deliver a never-before-seen backdoor codenamed Dohdoor. “Dohdoor utilizes the DNS-over-HTTPS (DoH) technique for command-and-control (C2) communications and has the ability to download and execute other payload binaries reflectively,” Cisco Talos said.</p>
+
+<p>Analysis of the campaign has revealed no evidence of data exfiltration to date. Although no final payloads have been observed other than what appears to be the Cobalt Strike Beacon to backdoor into the victim’s environment, it’s believed that UAT-10027’s actions are likely driven by financial gain based on the victimology pattern. Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration
+— Security vulnerabilities in Anthropic Claude Code could have allowed attackers to remotely execute code on users’ machines and steal API keys by injecting malicious configurations into repositories, and then waiting for an unsuspecting developer to clone and open an untrustworthy project. The vulnerabilities were addressed between September 2025 and January 2026.</p>
+
+<p>“The ability to execute arbitrary commands through repository-controlled configuration files created severe supply chain risks, where a single malicious commit could compromise any developer working with the affected repository,” Check Point said. “The integration of AI into development workflows brings tremendous productivity benefits, but also introduces new attack surfaces that weren’t present in traditional tools.”
+‎️‍🔥 Trending CVEs
+New vulnerabilities surface daily, and attackers move fast. Reviewing and patching early keeps your systems resilient. Here are this week’s most critical flaws to check first —
+CVE-2025-40538, CVE-2025-40539, CVE-2025-40540, CVE-2025-40541
+(SolarWinds Serv-U),
+CVE-2026-20127
+,
+CVE-2026-20122, CVE-2026-20126, CVE-2026-20128
+(Cisco Catalyst SD-WAN),
+CVE-2026-25755
+(jsPDF),
+CVE-2025-12543
+(HPE Telco Service Activator),
+CVE-2026-22719, CVE-2026-22720, CVE-2026-22721
+(Broadcom VMware Aria Operations),
+CVE-2026-3061, CVE-2026-3062, CVE-2026-3063
+(Google Chrome),
+CVE-2025-10010
+(CryptoPro Secure Disk for BitLocker),
+CVE-2025-13942, CVE-2025-13943, CVE-2026-1459
+(Zyxel),
+CVE-2025-71210, CVE-2025-71211
+(Trend Micro Apex One),
+CVE-2026-0542
+(ServiceNow AI Platform),
+CVE-2026-24061
+(telnetd),
+CVE-2026-21902
+(Juniper Networks Junos OS),
+CVE-2025-29631, CVE-2025-1242
+(Gardyn Home Kit),
+CVE-2025-15576
+(FreeBSD),
+CVE-2026-26365
+(Akamai),
+CVE-2026-27739
+(Angular), and
+SVE-2025-50109
+(Samsung Tizen OS).</p>
+
+<p>🎥 Cybersecurity Webinars
+Automating Real-World Security Testing to Prove What Actually Works
+→ This webinar explains why one-time security assessments are no longer enough and shows how organizations can automate continuous, real-world testing of their defenses to uncover gaps and measure how well controls hold up against actual attack techniques. When AI Agents Become Your New Attack Surface
+→ This webinar explains that as AI tools turn into autonomous agents that can browse, call APIs, and access internal systems, the security risk expands beyond the model to the entire environment they operate in, requiring stricter access controls, monitoring, and system-level safeguards rather than model testing alone. Quantum Is Coming: Preparing for the End of Today’s Encryption
+→ This webinar explains how future quantum computers could break today’s encryption, why “harvest now, decrypt later” attacks are a real risk, and what practical steps organizations can take now to begin shifting to post-quantum cryptography. 📰 Around the Cyber World
+UNC6384 Drops New PlugX Variant
+—
+IIJ-SECT
+and
+LAB52
+have detailed new activity from the Chinese cyber espionage group
+UNC6384
+.</p>
+
+<p>The attacks follow a known modus operandi of using STATICPLUGIN, a digitally signed downloader, to deliver updated versions of PlugX using DLL side-loading. The malicious payloads are distributed via phishing emails with meeting invitation lures or through fake software updates. OpenAI Takes Action Against ChatGPT Accounts Used for Harmful Purposes
+— OpenAI said it took down ChatGPT accounts used for influence operations, phishing, and malware development. This included a possible Chinese intelligence operation in which an individual associated with Chinese law enforcement used the AI tool for covert influence operations against domestic and foreign adversaries.</p>
+
+<p>The company also acted against clusters conducting reconnaissance about U.S. persons and federal building locations, online romance scams, and Russian influence operations across Africa by generating social media posts and long-form commentary articles. “Unusually, this scam network combined manual ChatGPT prompting and an automated AI chatbot to try to entrap its targets,” OpenAI
+said
+about the scam operation running out of Cambodia. Some of these scams targeted Indonesian loveseekers.</p>
+
+<p>Other scams used ChatGPT to create content that purported to come from fictitious law firms, as well as impersonate real attorneys and U.S. law enforcement as part of a recovery scam targeting fraud victims. AI-Induced Lateral Movement
+— New research from Orca Security has highlighted how AI can become a “third dimension” in the world of lateral movement, after network and identity, allowing attackers to expand their reach. “By injecting prompt injections in overlooked fields that are fetched by AI agents, hackers can trick LLMs, abuse Agentic tools, and carry out significant security incidents,” Orca
+said
+.</p>
+
+<p>“LLMs don’t truly understand the difference between data and instructions, and when tool output is fed back into the model, it can be interpreted as something to act on. Which opens a window to AI-induced Lateral Movement (AILM) activities.”
+Russia Launches Probe into Telegram CEO
+— Russian authorities launched a criminal investigation of Telegram founder and CEO Pavel Durov. He is allegedly charged with promoting and facilitating terrorist activity on the messaging platform by failing to respond to law enforcement takedown requests. Russian officials have accused Durov of choosing a “path of violence and permissiveness” by not cooperating with its law enforcement agencies, according to
+the Rossiyskaya Gazeta
+.</p>
+
+<p>The move comes after Russia began restricting access to Telegram in the country in favor of MAX. Last month, Durov
+called
+it an “attempt to force its citizens to switch to a state-controlled app built for surveillance and political censorship.”
+Hacked Prayer App Sends Surrender Messages
+— According to reports from
+The Wall Street Journal
+and
+WIRED
+, unidentified hackers seized control of an Iranian prayer app during a joint U.S.-Israeli attack to send messages urging the Iranian military to lay down their weapons and promising amnesty if they surrendered. The messages were sent in the form of push notifications to the BadeSaba Calendar app. It’s currently not clear who is behind the hack.</p>
+
+<p>The app has been downloaded more than 5 million times from the Google Play Store. Following the U.S.-Israel war on Iran, the government
+shut down all internet access
+in the country. Smart TVs Turned Into AI Content Scrapers
+— Several smart TV app makers are deploying a new SDK named
+Bright SDK
+that lets users see fewer ads but also stealthily turns their TV into a node in a global proxy network that crawls and scrapes the web. Bright Data, the company behind the SDK, claims to operate more than 150 million residential proxy IP addresses spanning 195 countries.</p>
+
+<p>Multiple Stealer Malware Families Detected
+— Multiple information stealer families have been detected in the wild. This includes
+Arkanix
+,
+CharlieKirk GRABBER
+,
+ComSuon
+,
+DarkCloud
+,
+MawaStealer
+, and
+MioLab
+(NovaStealer). Kaspersky’s analysis of Arkanix has revealed that it was likely developed as an LLM-assisted experiment, shrinking development time and costs. While Arkanix was promoted on underground forums in October 2025, the malware-as-a-service (MaaS) appears to have been taken down towards the end of 2025.</p>
+
+<p>The findings demonstrate continued demand for off-the-key stealer malware, creating an ecosystem that enables other threat actors to purchase stealer logs for obtaining initial access to targets. “Raw Infostealer logs are meticulously filtered by corporate domain, packaged, and sold to initial access brokers and attackers specifically looking for frictionless entry points into high-value corporate networks,” Hudson Rock
+said
+. The development has been complemented by underground networks turning into cybercrime marketplaces, complete with reputation systems, escrow, and specialist vendors, Varonis added. “One operator runs infostealers across thousands of machines.</p>
+
+<p>Another extracts and sorts the credentials. A third sells curated access,” security researcher Daniel Kelley
+said
+. “A fourth deploys the ransomware. Each person focuses on what they do best, and the ecosystem has become ruthlessly efficient.”
+Chilean National Extradited to U.S.</p>
+
+<p>to Face Financial Fraud Crimes
+— Alex Rodrigo Valenzuela Monje (aka VAL4K), a 24-year-old Chilean national, has been extradited to the U.S. over his alleged role in running a cybercrime operation that involved the trafficking of payment card data. The defendant is accused of trafficking stolen credit card numbers and information for over 26,500 credit cards. “From at least May 2021 to August 2023, Valenzuela Monje operated an illegal online card shop, selling dumps of unauthorized access devices through Telegram channels,” the U.S.</p>
+
+<p>Justice Department
+said
+. “He allegedly operated the channels known as MacacoCC Collective and Novato Carding, offering payment card data for virtually all U.S. payment cards.”
+New FUNNULL Infrastructure Discovered
+— QiAnXin has
+flagged
+new infrastructure associated with
+FUNNULL
+, a Philippines-based content delivery network (CDN) sanctioned last year by the U.S. Treasury for facilitating cyber scam operations.</p>
+
+<p>“Previously, their main method was to poison existing public CDN services; now they have evolved to independently develop complete server-side attack suites (RingH23), actively infiltrating CDN nodes, demonstrating a significant improvement in control and technical sophistication,” QiAnXin XLab said. Two independent supply chain infection channels have been identified: the compromise of maccms.la to distribute a malicious PHP backdoor through its update channel, and the compromise of the GoEdge CDN management node to implant an infection module, and deploy the proprietary RingH23 attack suite to all edge nodes via SSH remote commands. The campaign has compromised 10,748 unique IP addresses, predominantly video streaming sites. Spike in Scans for SonicWall Devices
+— GreyNoise said it detected a spike in scans for SonicWall devices originating from the infrastructure of a known proxy provider.</p>
+
+<p>The activity started on February 22, 2026, and scanned for exposed SonicWall SSL VPNs. A total of 84,142 scanning sessions targeting SonicWall SonicOS infrastructure were observed between February 22 and February 25, 2026. The scanning came from 4,305 unique IP addresses across 20 autonomous systems. “Ninety-two percent of sessions probed a single API endpoint to determine whether SSL VPN is enabled — the prerequisite check before credential attacks,” GreyNoise
+said
+.</p>
+
+<p>“A commercial proxy service delivered 32% of campaign volume through 4,102 rotating exit IPs in two surgical bursts totaling 16 hours.”
+Google Removes 115 Android Apps Tied to Ad Fraud
+— A new ad fraud operation dubbed
+Genisys
+involved hijacking Android devices to run malicious activity in the background. The activity leveraged a set of
+115 apps
+that stealthily opened websites inside hidden browser windows to generate ad display revenue for their creators. More than 500 domains were generated using AI tools to serve the ads. “They appear as generic blogs, news-style sites, and informational properties produced at scale, built not to attract real audiences but to receive and monetize fraudulent traffic,” Integral Ads said.</p>
+
+<p>The apps have since been removed by Google. The findings build on another mobile ad fraud scheme called
+Arcade
+in which mobile apps generated hidden in-app browser activity to load websites in the background and convert mobile-origin activity into web traffic. Zerobot Exploits Flaws in n8n and Tenda Routers
+— A Mirai-based IoT botnet named
+Zerobot
+has been observed exploiting vulnerabilities in the n8n AI automation platform (
+CVE-2025-68613
+) and Tenda routers (
+CVE-2025-7544
+) to expand its reach. The activity was first detected in January 2026.</p>
+
+<p>“Targeting of the n8n vulnerability is particularly interesting: Botnets typically exploit Internet of Things (IoT) devices, such as security cameras, DVRs, and routers, but n8n falls into an entirely different category,” Akamai
+said
+. “Although this isn’t entirely new behavior for botnets, this sort of targeting presents a greater danger to organizations by exposing more critical infrastructure to compromise as the n8n exploit could enable lateral movement for a threat actor.”
+Various ClickFix Campaigns Spotted
+— Threat hunters disclosed multiple ClickFix campaigns, including one leading to a hands-on-keyboard attack that deployed the Termite ransomware. The
+attack
+has been attributed to a group known as Velvet Tempest (DEV-0504). Another ClickFix campaign, codenamed
+OCRFix
+, used websites impersonating the Tesseract OCR tool as a launchpad for delivering malware that uses
+EtherHiding
+to retrieve the C2 server, send system information, and await further instructions.</p>
+
+<p>A third campaign has been found employing
+fake GitHub repositories
+impersonating software companies and leveraging ClickFix to social-engineer victims into installing infostealers, such as SHub Stealer v2.0. GTFire Phishing Scheme Detailed
+— A phishing campaign dubbed GTFire is abusing Google Firebase to host phishing pages and Google Translate to disguise the malicious URLs and bypass email and web security filters. “By chaining these services together, the attackers create phishing links that appear benign, leverage Google’s reputation, and dynamically redirect victims to brand‑impersonating login pages,” Group-IB
+said
+. “Once credentials are submitted and harvested, victims are often redirected back to the legitimate website of the targeted organization, reducing suspicion and delaying incident response.” The campaign is estimated to have harvested thousands of stolen credentials associated with more than a thousand organizations, spanning over a hundred countries and hundreds of industries.</p>
+
+<p>The threat actor behind the operation has been active since at least January 1, 2022. Mexico, the U.S., Spain, India, and Argentina are among the prominent targets. C77L Ransomware Targets Russia
+— A ransomware operation called C77L has been tied to at least 40 attacks on Russian and Belarusian enterprises since March 2025. The group is assessed to be operating out of Iran.</p>
+
+<p>Initial access to target networks is accomplished via weak passwords for publicly available RDP and VPN endpoints. “The targets of attacks are Windows systems due to their overwhelming predominance in the IT infrastructures of medium and small businesses,” F6
+said
+. RESURGE Malware Can Be Dormant on Infected Ivanti Devices
+— The U.S. Cybersecurity and Infrastructure Security Agency (CISA)
+updated
+its original alert for
+RESURGE
+, a piece of malware deployed as part of exploitation activity targeting a now-patched security flaw in Ivanti Connect Secure (ICS) appliances.</p>
+
+<p>The agency said “RESURGE has sophisticated network-level evasion and authentication techniques, leveraging advanced cryptographic methods and forged TLS certificates to facilitate covert communications,” adding “RESURGE can remain latent on systems until a remote actor attempts to connect to the compromised device.”
+30 Members of The Com Arrested
+— A coordinated law enforcement operation led by Europol
+detained
+30 individuals connected to an underground online community known as
+The Com
+. The operation, launched in January 2025, has been codenamed Project Compass. An additional 179 members were also identified as part of the investigation. The Com is the name assigned to a loose-knit cybercrime collective that has been linked to online doxxing, harassment, threats of violence, extortion, sexual exploitation, phishing, SIM swapping, ransomware, and other digital crimes.</p>
+
+<p>Europol described The Com as a decentralized extremist network. U.K. Government Cuts Cyber Attack Fix Times by 84%
+— The U.K. government has
+claimed
+it has reduced its backlog of critical vulnerabilities by 75% and reduced cyber attack fix times by 87%.</p>
+
+<p>Serious security weaknesses in public sector websites are fixed six times faster, cutting the average time from nearly two months to just over a week, the U.K. government said in an update published on 26 February. Poland Dismantles Organized Crime Group
+— Poland’s Central Bureau for Combating Cybercrime (CBZC)
+dismantled
+an organized group that used phishing to take control of Facebook accounts and extract BLIK payment codes from victims. Eleven members of an organized criminal group operating in Poland and Germany between May 2022 and May 2024 were identified.</p>
+
+<p>Six suspects have been placed in pretrial detention as part of the investigation, and over 100,000 credentials were seized. The group used “phishing techniques to obtain login details for Facebook accounts, and then gained access to them and used instant messaging to extort BLIK codes from other users of the portal,” CBZC said. Hacker Exploits Clade to Target Mexican Government Sites
+— An unknown hacker
+exploited
+Anthropic’s Claude chatbot to carry out attacks against Mexican government agencies, according to a report by Gambit Security. “Within a month of the initial compromise, ten government bodies and one financial institution were affected, approximately 195 million identities exposed, and roughly 150GB of data exfiltrated: tax records, civil registry files, voter data,” the company
+said
+.</p>
+
+<p>“The attacker even built an automated system that forges official government tax certificates using live data. It was orchestrated by an individual actor directing AI to operate as a nation-state-level team of operators and analysts.” The operation ran on more than 1,000 prompts and regularly passed information to OpenAI’s GPT-4.1 for analysis. The breach began in late December 2025 and continued for about a month. Anthropic has since disrupted the activity and banned all of the accounts involved.</p>
+
+<p>The attacks haven’t been attributed to a specific group. 🔧 Cybersecurity Tools
+Titus
+→ It is an open-source tool from Praetorian that scans code, files, repositories, and traffic to find leaked credentials like API keys and tokens. It uses hundreds of pattern rules and can check whether a detected secret is actually active. You can run it as a command-line tool, use it inside other tools as a Go library, or use it as extensions in Burp Suite or a browser to uncover credential leaks in different workflows.</p>
+
+<p>Sirius
+→ It is an open-source vulnerability scanning platform on GitHub that automates network and system security checks to find weaknesses and risks in infrastructure. It combines community-driven security data with automated tests, runs within containers, and gives operators a unified view of vulnerabilities to prioritize remediation. Disclaimer: These tools are provided for research and educational use only. They are not security-audited and may cause harm if misused.</p>
+
+<p>Review the code, test in controlled environments, and comply with all applicable laws and policies. Conclusion
+Viewed one by one, these incidents seem contained. Seen together, they show how risk now flows across connected systems that organizations rely on daily. Infrastructure, AI platforms, cloud services, and third-party tools are deeply intertwined, and strain in one area often exposes another.</p>
+
+<p>The takeaway is clarity, not alarm. Adversaries are improving efficiency, scaling access, and operating inside normal processes. Reading through each report helps map that shift and understand how the broader environment is changing. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-to-protect-your-saas-from-bot-attacks-with-safeline-waf"><a id="article-4"></a>How to Protect Your SaaS from Bot Attacks with SafeLine WAF</h2>
+
+<p>Most SaaS teams remember the day their user traffic started growing fast. Few notice the day bots started targeting them. On paper, everything looks great: more sign-ups, more sessions, more API calls. But in reality, something feels off:
+Sign-ups increase, but users aren’t activating.</p>
+
+<p>Server costs rise faster than revenue. Logs are filled with repeated requests from strange user agents. If this sounds familiar, it’s not just a sign of popularity. Your app is under constant automated attack, even if no ransom emails have arrived.</p>
+
+<p>Your load balancer sees traffic. Your product team sees “growth”. Your database sees pain. This is where a WAF like SafeLine fits in.</p>
+
+<p>SafeLine
+is a self-hosted web application firewall (WAF) that sits in front of your app and inspects every HTTP request before it reaches your code. It does not just look for broken packets or known bad IPs. It watches how traffic behaves: what it sends, how fast, in what patterns, and against which endpoints. How
+SafeLine
+Works
+In this article, we’ll show what real attacks look like for a SaaS product, how bots exploit business logic, and how SafeLine can protect your app without adding extra work for your team.</p>
+
+<p>The Attacks SaaS Products Actually See
+When people say “web attacks”, many think only about SQL injection or XSS. Those still exist, and SafeLine blocks them with a built‑in Semantic Analysis Engine. SafeLine’s Semantic Analysis Engine reads HTTP requests like a security engineer. Instead of just hunting keywords, it understands context, decoding payloads, spotting weird field types, and recognizing attack intent across SQL, JS, NoSQL, and modern frameworks.</p>
+
+<dl>
+  <dt>Blocks sophisticated bots and zero-days with 99.45% accuracy and no constant rule tweaks needed. Malicious Requests Blocked by SafeLine</dt>
+  <dt>But for SaaS, the most painful attacks are not always the most “technical”. They are the ones that bend your business rules. Common examples:</dt>
+  <dt>Fake sign‑ups</dt>
+  <dd>Automated sign‑up scripts farm free trials, burn invitation codes, or harvest discount coupons.</dd>
+  <dt>Credential stuffing</dt>
+  <dd>Bots try leaked username/password pairs against your login endpoint until something works. API scraping</dd>
+  <dd>Competitors or generic scrapers walk your API, page by page, copying your content or pricing. Abusive automation</dd>
+  <dd>One user (or botnet) triggers heavy background jobs, export tasks, or webhook storms that you pay for. Bot traffic spikes</dd>
+  <dd>Sudden waves of scripted requests hit the same endpoints, not big enough to be a classic DDoS, but enough to slow everything down.</dd>
+  <dt>The tricky part is that all these requests look “normal” at the HTTP level. They are:</dt>
+  <dt>Well‑formed</dt>
+  <dt>Often over HTTPS</dt>
+  <dt>Using your documented API</dt>
+  <dt>Why a Self‑Hosted WAF Makes Sense for SaaS</dt>
+  <dt>There are many cloud WAF products. They work well for a lot of teams. But SaaS products have some special concerns:</dt>
+  <dt>Data control</dt>
+  <dd>You may not want every request and response to flow through another company’s cloud.</dd>
+  <dt>Latency and routing</dt>
+  <dd>Extra external hops can matter for global users. Debugging</dd>
+  <dd>When a cloud WAF blocks something, you often see a vague message, not full context. SafeLine takes a different path:
+It is
+self‑hosted
+and runs as a reverse proxy in front of your app. You keep full control over logs and traffic.</dd>
+</dl>
+
+<p>You see exactly why a request was blocked, in your own dashboards. For SaaS teams, that means you can:
+Meet stricter customer or compliance demands about where data flows. Tune rules without opening a support ticket. Treat your WAF configuration as part of your normal infrastructure, not a black‑box service.</p>
+
+<p>How SafeLine Sees and Stops Bot Traffic
+Bots are not one thing. Some are clumsy scripts; some are almost indistinguishable from real users. SafeLine uses several layers to deal with them. 1.</p>
+
+<p>Understanding traffic, not just signatures
+SafeLine combines rule‑based checks with semantic analysis of requests. In practice, that means it looks at:
+Parameters and payloads (for injection attempts, strange encodings, exploit patterns). URL structures and access paths (for scanners, crawlers, and exploit kits). Frequency and distribution of calls (for login abuse, scraping, and subtle flood attacks).</p>
+
+<p>This is what allows it to:
+Block classic web attacks with a low false positive rate. Detect weird patterns that do not match any single “signature” but clearly are not normal user behavior. 2. Anti‑Bot challenges
+Some bots can only be stopped by forcing them to prove they are not machines.</p>
+
+<p>SafeLine includes an
+Anti‑Bot Challenge
+feature: when it detects suspicious traffic, it can present a challenge that real browsers handle, but bots fail. Key points:
+Normal human users barely notice it. Basic crawlers, scripts, and abuse tools get blocked or slowed down sharply. You decide where to enable it: sign‑up, login, pricing pages, or specific APIs.</p>
+
+<ol>
+  <li>Rate limiting as a safety net
+For SaaS, “too much of a good thing” is a real problem. One overly eager integration, one faulty script, or one attack can exhaust resources. SafeLine’s
+rate limiting
+lets you:
+Limit how many requests an IP or token can make to specific endpoints per second, minute, or hour.</li>
+</ol>
+
+<p>Protect login, sign‑up, and expensive APIs from brute force and floods. Keep your application stable even under abnormal spikes. This is essential for:
+Protecting free tiers from abuse. Keeping “unlimited API calls” from turning into “unlimited cloud bills”.</p>
+
+<ol>
+  <li>Identity and access controls
+Some parts of your SaaS should never be public:
+Internal dashboards
+Early beta features
+Region‑specific admin tools
+SafeLine provides an
+authentication challenge
+feature. When enabled, visitors must enter a password you set before they can continue. This is a simple way to:
+Hide internal or staging environments from scanners and bots.</li>
+</ol>
+
+<p>Reduce the blast radius of misconfigured or forgotten routes. A Simple Story: A SaaS Team vs. Bot Abuse
+There is a small B2B SaaS product:
+Less than 10 people on the team. Nginx fronting a set of REST APIs.</p>
+
+<p>Free trials, public sign‑up, and open API docs. At first, numbers look good. Then:
+Fake sign‑ups climb to 150–200 per day. CPU peaks hit 70% because of login attempts and abuse traffic.</p>
+
+<p>The database grows faster than paying users. When they add SafeLine:
+They deploy it behind Nginx, as a self‑hosted WAF. They enable bot detection, rate limits on sign‑up and login, and basic abuse rules for new accounts. Within one week:
+Fake registrations fall below 10 per day.</p>
+
+<p>CPU stabilizes around 40%. Conversion starts to recover, because real users face fewer obstacles. The interesting part is not the numbers. It is what the team did
+not
+have to do:
+They did not design complex in‑app throttling.</p>
+
+<p>They did not maintain custom bot‑blocking code. They did not argue for months about whether they could send traffic to an external inspection service. SafeLine quietly took the first wave of abuse, and the product team focused again on features and customers. How SafeLine Fits into a SaaS Stack
+From an architecture point of view, SafeLine behaves like a reverse proxy:
+External traffic → SafeLine → your Nginx / app servers.</p>
+
+<p>This makes it easier to adopt without rewriting your product. You can:
+Put SafeLine in front of your main web app and API gateway. Slowly route more domains and services through it as you gain confidence. The SafeLine dashboard then becomes your “security console”:
+You see attack logs: which IP tried what, which rule triggered, what payload was blocked.</p>
+
+<p>You see trends: increased scans, new kinds of payloads, or growing bot patterns. You can adjust rules and protections in a few clicks. Deployment and Ease of Use
+SafeLine WAF is designed for SaaS operators who may not have dedicated security teams. A deployment typically takes less than 10 minutes.</p>
+
+<p>Below is the one-click deployment command:
+bash -c “$(curl -fsSLk https://waf.chaitin.com/release/latest/manager.sh)” – –en
+See the official documentation for detailed instructions:
+https://docs.waf.chaitin.com/en/GetStarted/Deploy
+More importantly,
+SafeLine
+still provides a free edition for all users worldwide. So once you install it, it’s ready to use right out of the box—no extra costs at all. Only when you need advanced features is a paid license required. After installation, you’ll see a clean interface with a super simple and intuitive configuration experience.</p>
+
+<p>Protect your first app by following this official tutorial:
+https://docs.waf.chaitin.com/en/GetStarted/AddApplication
+. Once configured, the WAF operates autonomously while providing detailed visibility into threats and mitigation actions. Looking Ahead: Continuous Security
+The threat landscape is constantly evolving. Bots are becoming smarter, attacks are increasingly targeted, and SaaS platforms continue to grow in complexity.</p>
+
+<p>To stay ahead, companies must:
+Monitor traffic behavior continuously
+Adapt rate-limiting and bot detection rules dynamically
+Regularly audit logs for unusual activity
+Ensure sensitive endpoints have layered protections
+SafeLine’s approach aligns perfectly with these needs, providing a
+flexible, data-driven security layer
+that grows with your SaaS business. For those interested in exploring the technology firsthand, visit the
+SafeLine GitHub Repository
+or experience the
+Live Demo
+. Or you can just go straight to
+install
+it and try it for free forever! Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="apt28-tied-to-cve-2026-21513-mshtml-0-day-exploited-before-feb-2026-patch-tuesday"><a id="article-5"></a>APT28 Tied to CVE-2026-21513 MSHTML 0-Day Exploited Before Feb 2026 Patch Tuesday</h2>
+
+<p>A recently disclosed security flaw patched by Microsoft may have been exploited by the Russia-linked state-sponsored threat actor known as
+APT28
+, according to
+new findings
+from Akamai. The vulnerability in question is
+CVE-2026-21513
+(CVSS score: 8.8), a high-severity security feature bypass affecting the MSHTML Framework. “Protection mechanism failure in MSHTML Framework allows an unauthorized attacker to bypass a security feature over a network,” Microsoft
+noted
+in its advisory for the flaw. It was
+fixed
+by the Windows maker as part of its February 2026 Patch Tuesday update.</p>
+
+<p>However, the tech giant also noted that the vulnerability had been exploited as a zero-day in real-world attacks, crediting the Microsoft Threat Intelligence Center (MSTIC), Microsoft Security Response Center (MSRC), and Office Product Group Security Team, along with Google Threat Intelligence Group (GTIG), for reporting it. In a hypothetical attack scenario, a threat actor could weaponize the vulnerability by persuading a victim to open a malicious HTML file or shortcut (LNK) file delivered through a link or as an email attachment. Once the crafted file is opened, it manipulates browser and Windows Shell handling, causing the content to be executed by the operating system, Microsoft noted. This, in turn, allows the attacker to bypass security features and potentially achieve code execution.</p>
+
+<p>While the company has not officially shared any details about the zero-day exploitation effort, Akamai said it identified a
+malicious artifact
+that was uploaded to VirusTotal on January 30, 2026, and is associated with infrastructure linked to APT28. It’s worth noting that the sample was
+flagged
+by the Computer Emergency Response Team of Ukraine (CERT-UA) early last month in connection with APT28’s attacks exploiting another security flaw in Microsoft Office (CVE-2026-21509, CVSS score: 7.8). The web infrastructure company said CVE-2026-21513 is rooted in the logic within “ieframe.dll” that handles hyperlink navigation, and that it’s the result of insufficient validation of the target URL, which allows attacker-controlled input to reach code paths that invoke
+ShellExecuteExW
+. This, in turn, enables execution of local or remote resources outside the intended browser security context.</p>
+
+<p>“This payload involves a specially crafted Windows Shortcut (LNK) that embeds an HTML file immediately after the standard LNK structure,” security researcher Maor Dahan said. “The LNK file initiates communication with the domain wellnesscaremed[.]com, which is attributed to APT28 and has been in extensive use for the campaign’s multistage payloads. The exploit leverages nested iframes and multiple DOM contexts to manipulate trust boundaries.”
+Akamai noted that the technique makes it possible for an attacker to bypass Mark-of-the-Web (
+MotW
+) and Internet Explorer Enhanced Security Configuration (
+IE ESC
+), leading to a downgrade of the security context and ultimately facilitating the execution of malicious code outside of the browser sandbox via
+ShellExecuteExW
+. “While the observed campaign leverages malicious LNK files, the vulnerable code path can be triggered through any component embedding MSHTML,” the company added.</p>
+
+<p>“Therefore, additional delivery mechanisms beyond LNK-based phishing should be expected.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="accelerate-your-ai-initiatives"><a id="article-6"></a>Accelerate your AI Initiatives</h2>
+
+<h2 id="north-korean-hackers-publish-26-npm-packages-hiding-pastebin-c2-for-cross-platform-rat"><a id="article-7"></a>North Korean Hackers Publish 26 npm Packages Hiding Pastebin C2 for Cross-Platform RAT</h2>
+
+<p>Cybersecurity researchers have disclosed a new iteration of the ongoing
+Contagious Interview
+campaign, where the North Korean threat actors have published a set of 26 malicious packages to the npm registry. The packages masquerade as developer tools, but contain functionality to extract the actual command-and-control (C2) by using seemingly harmless Pastebin content as a dead drop resolver and ultimately drop a developer-targeted credential stealer and remote access trojan. The C2 infrastructure is hosted on Vercel across 31 deployments. The
+campaign
+, tracked by Socket and kmsec.uk’s Kieran Miyamoto is being tracked under the moniker
+StegaBin
+.</p>
+
+<p>It’s attributed to a North Korean threat activity cluster known as Famous Chollima. “The loader extracts C2 URLs steganographically encoded within three Pastebin pastes, innocuous computer science essays in which characters at evenly-spaced positions have been replaced to spell out hidden infrastructure addresses,” Socket researchers Philipp Burckhardt and Peter van der Zee
+said
+. The list of the malicious npm packages is as follows -
+argonist@0.41.0
+bcryptance@6.5.2
+bee-quarl@2.1.2
+bubble-core@6.26.2
+corstoken@2.14.7
+daytonjs@1.11.20
+ether-lint@5.9.4
+expressjs-lint@5.3.2
+fastify-lint@5.8.0
+formmiderable@3.5.7
+hapi-lint@19.1.2
+iosysredis@5.13.2
+jslint-config@10.22.2
+jsnwebapptoken@8.40.2
+kafkajs-lint@2.21.3
+loadash-lint@4.17.24
+mqttoken@5.40.2
+prism-lint@7.4.2
+promanage@6.0.21
+sequelization@6.40.2
+typoriem@0.4.17
+undicy-lint@7.23.1
+uuindex@13.1.0
+vitetest-lint@4.1.21
+windowston@3.19.2
+zoddle@4.4.2
+All identified packages come with an install script (“install.js”) that’s automatically executed during package installation, which, in turn, runs the malicious payload located in “vendor/scrypt-js/version.js.” Another common aspect that unites the 26 packages is that they explicitly declare the legitimate package they are typosquatting as a dependency, likely in an attempt to make them appear credible. The payload serves as a text steganography decoder by contacting a Pastebin URL and extracting its contents to retrieve the actual C2 Vercel URLs.</p>
+
+<p>While the pastes seemingly contain a benign essay about computer science, the decoder is designed to look at specific characters in certain positions in the text and string them together to create a list of C2 domains. “The decoder strips zero-width Unicode characters, reads a 5-digit length marker from the beginning, calculates evenly-spaced character positions throughout the text, and extracts the characters at those positions,” Socket said. “The extracted characters are then split on a ||| separator (with an ===END=== termination marker) to produce an array of C2 domain names.”
+The malware then reaches out to the decoded domain to fetch platform-specific payloads for Windows, macOS, and Linux, a tactic widely observed in the Contagious Interview campaign. One such domain, “ext-checkdin.vercel[.]app” has been found to serve a shell script, which then contacts the same URL to retrieve a RAT component.</p>
+
+<p>The Trojan connects to 103.106.67[.]63:1244 to await further instructions that allow it to change the current directory and execute shell commands, through which a comprehensive intelligence collection suite is deployed. It contains nine modules to facilitate Microsoft Visual Studio Code (VS Code) persistence, keylogging and clipboard theft, browser credential harvesting, TruffleHog secret scanning, and Git repository and SSH key exfiltration -
+vs
+, which uses a malicious tasks.json file to contact a Vercel domain every time a project is opened in VS Code by taking advantage of the
+runOn: “folderOpen” trigge
+r. The module specifically scans the victim’s VS Code config directory across all three platforms and writes the malicious tasks.json directly into it. clip
+, which acts as a keylogger, mouse tracker, and clipboard stealer with support for active window tracking and conducts periodic exfiltration every 10 minutes.</p>
+
+<p>bro
+, which is a Python payload to steal browser credential stores. j
+, which is a Node.js module used for browser and cryptocurrency theft by targeting Google Chrome, Brave, Firefox, Opera, and Microsoft Edge, and extensions like MetaMask, Phantom, Coinbase Wallet, Binance, Trust, Exodus, and Keplr, among others. On macOS, it also targets the iCloud Keychain. z
+, which enumerates the file system and steals files matching certain predefined patterns.</p>
+
+<p>n
+, which acts as a RAT to grant the attacker the ability to remotely control the infected host in real-time via a persistent WebSocket connection to 103.106.67[.]63:1247 and exfiltrate data of interest over FTP. truffle
+, which downloads the legitimate
+TruffleHog secrets scanner
+from the official GitHub page to discover and exfiltrate developer secrets. git
+, which collects files from .ssh directories, extracts Git credentials, and scans repositories. sched
+, which is the same as “vendor/scrypt-js/version.js” and is redeployed as a persistence mechanism.</p>
+
+<p>“While previous waves of the Contagious Interview campaign relied on relatively straightforward malicious scripts and Bitbucket-hosted payloads, this latest iteration demonstrates a concerted effort to bypass both automated detection and human review,” Socket concluded. “The use of character-level steganography on Pastebin and multi-stage Vercel routing points to an adversary that is refining its evasion techniques and attempting to make its operations more resilient.”
+The disclosure comes as the North Korean actors have also been observed publishing malicious npm packages (e.g., express-core-validator) to fetch a next-stage JavaScript payload hosted on Google Drive. “Only a single package has been published with this new technique,” Miyamoto
+said
+. “It is likely Famous Chollima will continue to leverage multiple techniques and infrastructure to deliver follow-on payloads.</p>
+
+<p>It is unlikely this signals a complete overhaul of their stager behaviour on npm.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="clawjacked-flaw-lets-malicious-sites-hijack-local-openclaw-ai-agents-via-websocket"><a id="article-8"></a>ClawJacked Flaw Lets Malicious Sites Hijack Local OpenClaw AI Agents via WebSocket</h2>
+
+<p>OpenClaw has fixed a high-severity security issue that, if successfully exploited, could have allowed a malicious website to connect to a locally running artificial intelligence (AI) agent and take over control. “Our vulnerability lives in the core system itself – no plugins, no marketplace, no user-installed extensions – just the bare OpenClaw gateway, running exactly as documented,” Oasis Security
+said
+in a report published this week. The flaw has been codenamed
+ClawJacked
+by the cybersecurity company. The attack assumes the following threat model: A developer has
+OpenClaw
+set up and running on their laptop, with its
+gateway
+, a local WebSocket server, bound to localhost and protected by a password.</p>
+
+<p>The attack kicks in when the developer lands on an attacker-controlled website through social engineering or some other means. The infection sequence then follows the steps below -
+Malicious JavaScript on the web page opens a WebSocket connection to localhost on the OpenClaw gateway port. The script brute-forces the gateway password by taking advantage of a missing rate-limiting mechanism for localhost. Post successful authentication with admin-level permissions, the script stealthily registers as a trusted device, which is auto-approved by the gateway without any user prompt.</p>
+
+<p>The attacker gains complete control over the AI agent, allowing them to interact with it, dump configuration data, enumerate connected nodes, and read application logs. “Any website you visit can open one to your localhost. Unlike regular HTTP requests, the browser doesn’t block these cross-origin connections,” Oasis Security said. “So while you’re browsing any website, JavaScript running on that page can silently open a connection to your local OpenClaw gateway.</p>
+
+<p>The user sees nothing.”
+“That misplaced trust has real consequences. The gateway relaxes several security mechanisms for local connections – including silently approving new device registrations without prompting the user. Normally, when a new device connects, the user must confirm the pairing. From localhost, it’s automatic.”
+Following responsible disclosure, OpenClaw pushed a fix in less than 24 hours with
+version 2026.2.25
+released on February 26, 2026.</p>
+
+<p>Users are advised to apply the latest updates as soon as possible, periodically audit access granted to AI agents, and enforce appropriate governance controls for non-human (aka agentic) identities. The development comes amid a broader security scrutiny of the OpenClaw ecosystem, primarily stemming from the fact that AI agents hold entrenched access to disparate systems and the authority to execute tasks across enterprise tools, leading to a significantly larger blast radius should they be compromised. Reports from
+Bitsight
+and
+NeuralTrust
+have detailed how OpenClaw instances left connected to the internet pose an expanded attack surface, with each integrated service further broadening the blast radius and can be transformed into an attack weapon by embedding prompt injections in content (e.g., an email or a Slack message) processed by the agent to execute malicious actions. The disclosure comes as OpenClaw also patched a log poisoning vulnerability that allowed attackers to write malicious content to log files via WebSocket requests to a publicly accessible instance on TCP port 18789.</p>
+
+<p>Since the agent reads its own logs to troubleshoot certain tasks, the security loophole could be abused by a threat actor to embed indirect prompt injections, leading to unintended consequences. The
+issue
+was addressed in
+version 2026.2.13
+, which was shipped on February 14, 2026. “If the injected text is interpreted as meaningful operational information rather than untrusted input, it could influence decisions, suggestions, or automated actions,” Eye Security
+said
+. “The impact would therefore not be ‘instant takeover,’ but rather: manipulation of agent reasoning, influencing troubleshooting steps, potential data disclosure if the agent is guided to reveal context, and indirect misuse of connected integrations.”
+In recent weeks, OpenClaw has also been found susceptible to multiple vulnerabilities (
+CVE-2026-25593
+,
+CVE-2026-24763
+,
+CVE-2026-25157
+,
+CVE-2026-25475
+,
+CVE-2026-26319, CVE-2026-26322, CVE-2026-26329
+), ranging from moderate to high severity, that could result in remote code execution, command injection, server-side request forgery (SSRF), authentication bypass, and path traversal.</p>
+
+<p>The vulnerabilities have been addressed in OpenClaw versions
+2026.1.20
+,
+2026.1.29
+,
+2026.2.1
+,
+2026.2.2
+, and
+2026.2.14
+. “As AI agent frameworks become more prevalent in enterprise environments, security analysis must evolve to address both traditional vulnerabilities and AI-specific attack surfaces,” Endor Labs said. Elsewhere, new research has demonstrated that malicious skills uploaded to ClawHub, an open marketplace for downloading OpenClaw skills, are being used as conduits to deliver a new variant of
+Atomic Stealer
+, a macOS information stealer developed and rented by a cybercrime actor known as
+Cookie Spider
+. “The infection chain begins with a normal SKILL.md that installs a prerequisite,” Trend Micro
+said
+.</p>
+
+<p>“The skill appears harmless on the surface and was even labeled as benign on VirusTotal. OpenClaw then goes to the website, fetches the installation instructions, and proceeds with the installation if the LLM decides to follow the instructions.”
+The instructions hosted on the website “openclawcli.vercel[.]app” include a malicious command to download a stealer payload from an external server (“91.92.242[.]30”) and run it. Threat hunters have also flagged a new
+malware delivery campaign
+in which a threat actor by the name @liuhui1010 has been identified, leaving comments on legitimate skill listing pages, urging users to explicitly run a command they provided on the Terminal app if the skill “doesn’t work on macOS.”
+The command is designed to retrieve Atomic Stealer from “91.92.242[.]30,” an IP address previously documented by
+Koi Security and OpenSourceMalware
+for distributing the same malware via malicious skills uploaded to ClawHub. What’s more, a recent analysis of 3,505 ClawHub skills by AI security company Straiker has
+uncovered
+no less than 71 malicious ones, some of which posed as legitimate cryptocurrency tools but contained hidden functionality to redirect funds to threat actor-controlled wallets.</p>
+
+<p>Two other skills, bob-p2p-beta and runware, have been linked to a multi-layered cryptocurrency scam that employs an agent-to-agent attack chain targeting the AI agent ecosystem. The skills have been attributed to a threat actor who operates under the aliases “26medias” on ClawHub and “BobVonNeumann” on
+Moltbook
+and X. “BobVonNeumann presents itself as an AI agent on Moltbook, a social network designed for agents to interact with each other,” researchers Yash Somalkar and Dan Regalado said. “From that position, it promotes its own malicious skills directly to other agents, exploiting the trust that agents are designed to extend to each other by default.</p>
+
+<p>It’s a supply chain attack with a social engineering layer built on top.”
+What bob-p2p-beta does, however, is instruct other AI agents to store Solana wallet private keys in plaintext, purchase worthless $BOB tokens on pump.fun, and route all payments through an attacker-controlled infrastructure. The second skill claims to offer a benign image generation tool to build the developer’s credibility. Given that ClawHub is becoming a new fertile ground for attackers, users are advised to audit skills before installing them, avoid providing credentials and keys unless it’s essential, and monitor skill behavior. The security risks associated with self-hosted agent runtimes like OpenClaw have also prompted Microsoft to issue an advisory, warning that unguarded deployment could pave the way for credential exposure/exfiltration, memory modification, and host compromise if the agent can be tricked into retrieving and running malicious code either through poisoned skills or prompt injections.</p>
+
+<p>“Because of these characteristics, OpenClaw should be treated as untrusted code execution with persistent credentials,” the Microsoft Defender Security Research Team
+said
+. “It is not appropriate to run on a standard personal or enterprise workstation.”
+“If an organization determines that OpenClaw must be evaluated, it should be deployed only in a fully isolated environment such as a dedicated virtual machine or separate physical system. The runtime should use dedicated, non-privileged credentials and access only non-sensitive data. Continuous monitoring and a rebuild plan should be part of the operating model.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="thousands-of-public-google-cloud-api-keys-exposed-with-gemini-access-after-api-enablement"><a id="article-9"></a>Thousands of Public Google Cloud API Keys Exposed with Gemini Access After API Enablement</h2>
+
+<p>New research has found that Google Cloud API keys, typically designated as project identifiers for billing purposes, could be abused to authenticate to sensitive Gemini endpoints and access private data. The findings come from Truffle Security, which discovered nearly 3,000 Google API keys (identified by the prefix “AIza”) embedded in client-side code to provide Google-related services like embedded maps on websites. “With a valid key, an attacker can access uploaded files, cached data, and charge LLM-usage to your account,” security researcher Joe Leon
+said
+, adding the keys “now also authenticate to Gemini even though they were never intended for it.”
+The problem occurs when users enable the Gemini API on a Google Cloud project (i.e., Generative Language API), causing the existing API keys in that project, including those accessible via the website JavaScript code, to gain surreptitious access to Gemini endpoints without any warning or notice. This effectively allows any attacker who scrapes websites to get hold of such API keys and use them for nefarious purposes and quota theft, including accessing sensitive files via the /files and /cachedContents endpoints, as well as making Gemini API calls, racking up huge bills for the victims.</p>
+
+<p>In addition, Truffle Security found that creating a new API key in Google Cloud defaults to “Unrestricted,” meaning it’s applicable for every enabled API in the project, including Gemini. “The result: thousands of API keys that were deployed as benign billing tokens are now live Gemini credentials sitting on the public internet,” Leon said. In all, the company said it found 2,863 live keys accessible on the public internet, including a website associated with Google. The disclosure comes as Quokka published a similar report, finding over 35,000 unique Google API keys embedded in its scan of 250,000 Android apps.</p>
+
+<p>“Beyond potential cost abuse through automated LLM requests, organizations must also consider how AI-enabled endpoints might interact with prompts, generated content, or connected cloud services in ways that expand the blast radius of a compromised key,” the mobile security company
+said
+. “Even if no direct customer data is accessible, the combination of inference access, quota consumption, and possible integration with broader Google Cloud resources creates a risk profile that is materially different from the original billing-identifier model developers relied upon.”
+Although the behavior was initially deemed intended, Google has since stepped in to address the problem. “We are aware of this report and have worked with the researchers to address the issue,” a Google spokesperson told The Hacker News via email. “Protecting our users’ data and infrastructure is our top priority.</p>
+
+<p>We have already implemented proactive measures to detect and block leaked API keys that attempt to access the Gemini API.”
+It’s currently not known if this issue was ever exploited in the wild. However, in a
+Reddit post
+published two days ago, a user claimed a “stolen” Google Cloud API Key resulted in $82,314.44 in charges between February 11 and 12, 2026, up from a regular spend of $180 per month. We have reached out to Google for further comment, and we will update the story if we hear back. Users who have set up Google Cloud projects are advised to check their APIs and services, and verify if artificial intelligence (AI)-related APIs are enabled.</p>
+
+<p>If they are enabled and publicly accessible (either in client-side JavaScript or checked into a public repository), make sure the keys are rotated. “Start with your oldest keys first,” Truffle Security said. “Those are the most likely to have been deployed publicly under the old guidance that API keys are safe to share, and then retroactively gained Gemini privileges when someone on your team enabled the API.”
+“This is a great example of how risk is dynamic, and how APIs can be over-permissioned after the fact,” Tim Erlin, security strategist at Wallarm, said in a statement. “Security testing, vulnerability scanning, and other assessments must be continuous.”
+“APIs are tricky in particular because changes in their operations or the data they can access aren’t necessarily vulnerabilities, but they can directly increase risk.</p>
+
+<p>The adoption of AI running on these APIs, and using them, only accelerates the problem. Finding vulnerabilities isn’t really enough for APIs. Organizations have to profile behavior and data access, identifying anomalies and actively blocking malicious activity.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="pentagon-designates-anthropic-supply-chain-risk-over-ai-military-dispute"><a id="article-10"></a>Pentagon Designates Anthropic Supply Chain Risk Over AI Military Dispute</h2>
+
+<p>Anthropic on Friday hit back after U.S. Secretary of Defense Pete Hegseth directed the Pentagon to designate the artificial intelligence (AI) upstart as a “supply chain risk.”
+“This action follows months of negotiations that reached an impasse over two exceptions we requested to the lawful use of our AI model, Claude: the mass domestic surveillance of Americans and fully autonomous weapons,” the company
+said
+. “No amount of intimidation or punishment from the Department of War will change our position on mass domestic surveillance or fully autonomous weapons.”
+In a social media post on Truth Social, U.S. President Donald Trump
+said
+he was ordering all federal agencies to phase out the use of Anthropic technology within the next six months.</p>
+
+<p>A subsequent X post from Hegseth mandated that all contractors, suppliers, and partners doing business with the U.S. military cease any “commercial activity with Anthropic” effective immediately. “In conjunction with the President’s directive for the Federal Government to cease all use of Anthropic’s technology, I am directing the Department of War to designate Anthropic a Supply Chain Risk to National Security,” Hegseth
+wrote
+. The designation comes after weeks of negotiations between the Pentagon and Anthropic over the use of its AI models by the U.S.</p>
+
+<p>military. In a post published this week, the company
+argued
+that its contracts should not facilitate mass domestic surveillance or the development of autonomous weapons, citing reasons that the technology isn’t capable enough to support them safely and reliably. “We support the use of AI for lawful foreign intelligence and counterintelligence missions,” Anthropic noted. “But using these systems for mass domestic surveillance is incompatible with democratic values.</p>
+
+<p>AI-driven mass surveillance presents serious, novel risks to our fundamental liberties.”
+The company also called out the U.S. Department of War’s (DoW) position that it will only work with AI companies that allow “any lawful use” of the technology, while removing any safeguards that may exist, as part of efforts to build an “AI-first” warfighting force and bolster national security. “Diversity, Equity, and Inclusion and social ideology have no place in the DoW, so we must not employ AI models which incorporate ideological ‘tuning’ that interferes with their ability to provide objectively truthful responses to user prompts,” a memorandum
+issued by the Pentagon
+last month reads. “The Department must also utilize models free from usage policy constraints that may limit lawful military applications.”
+Responding to the designation, Anthropic described it as “legally unsound” and said it would set a dangerous precedent for any American company that negotiates with the government.</p>
+
+<p>It also noted that a supply chain risk designation under
+10 USC 3252
+can only extend to the use of Claude as part of DoW contracts, and that it cannot affect the use of Claude to serve other customers. Sean Parnell, the Pentagon’s chief spokesperson, said in a
+Thursday X post
+that the department has no interest in conducting mass domestic surveillance or deploying autonomous weapons without human involvement, describing the narrative as “fake.”
+“Here’s what we’re asking: Allow the Pentagon to use Anthropic’s model for all lawful purposes,” Parnell said. “This is a simple, common-sense request that will prevent Anthropic from jeopardizing critical military operations and potentially putting our warfighters at risk. We will not let ANY company dictate the terms regarding how we make operational decisions.”
+The
+ongoing stalemate
+has also polarized the tech industry.</p>
+
+<p>Hundreds of employees at Google and OpenAI have
+signed an open letter
+urging their companies to stand with Anthropic in its clash with the Pentagon over military applications for AI tools like Claude. xAI CEO Elon Musk
+sided
+with the Trump administration on Friday, saying “Anthropic hates Western Civilization.”
+The
+standoff
+between Anthropic and the U.S. government comes as OpenAI CEO Sam Altman said OpenAI reached an agreement with the U.S. Department of Defense (DoD) to deploy its models in their classified network.</p>
+
+<p>It also asked DoD to extend those terms to all AI companies. “AI safety and wide distribution of benefits are the core of our mission. Two of our most important safety principles are prohibitions on domestic mass surveillance and human responsibility for the use of force, including for autonomous weapon systems,” Altman
+said
+in a post on X. “The DoW agrees with these principles, reflects them in law and policy, and we put them into our agreement.”
+Update
+The
+public spat
+between Anthropic and the U.S.</p>
+
+<p>government has led to its Claude chatbot jumping to the top slot on Apple’s chart of top U.S. free apps, even as OpenAI CEO Sam Altman
+said
+the company’s designation as a supply chain risk sets an “extremely scary precedent.”
+The AI company also shared more details on its agreement with the Pentagon for deploying advanced AI systems in classified environments, adding “we think our agreement has more guardrails than any previous agreement for classified AI deployments, including Anthropic’s.”
+It said the work with the DoW is guided by three red lines. This includes no use of OpenAI technology for mass domestic surveillance, to direct autonomous weapons systems, and for high-stakes automated decisions, such as social credit systems. “In our agreement, we protect our red lines through a more expansive, multi-layered approach,” the company
+said
+in a statement.</p>
+
+<p>“We retain full discretion over our safety stack, we deploy via cloud, cleared OpenAI personnel are in the loop, and we have strong contractual protections.”
+Altman also said the company will
+consider committing
+to publishing every change to the red lines in the future, along with a public explanation and a mandatory notice period before it takes effect. In a LinkedIn post, OpenAI’s head of national security partnerships Katrina Mulligan argued that its contract limits the deployment to cloud API, gives it control over the models and safety stack deployed, and human AI experts are in the loop to make any modifications if its “models aren’t refusing queries they should, or there’s more operational risk than we expected.”
+“Autonomous systems require inference at the edge,” Mulligan
+said
+. “By limiting our deployment to cloud API, we can ensure that our models cannot be integrated directly into weapons systems, sensors, or other operational hardware.”
+OpenAI’s deal also coincides with a report from The Wall Street Journal, which
+revealed
+that the U.S. conducted a major air attack on Iran with the help of Anthropic’s AI tools despite disagreements over its use.</p>
+
+<p>(The story was updated after publication with the latest developments.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="doj-seizes-61-million-in-tether-linked-to-pig-butchering-crypto-scams"><a id="article-11"></a>DoJ Seizes $61 Million in Tether Linked to Pig Butchering Crypto Scams</h2>
+
+<p>The U.S. Department of Justice (DoJ) this week announced the seizure of $61 million worth of Tether that were allegedly associated with bogus cryptocurrency schemes known as
+pig butchering
+. The confiscated funds were traced to cryptocurrency addresses used for the laundering of criminally derived proceeds stolen from victims of cryptocurrency investment scams, the department added. “Criminal actors and professional money launderers use cyber-enabled fraud schemes to swindle their victims and conceal their ill-gotten gains,”
+said
+HSI Charlotte Acting Special Agent in Charge Kyle D.</p>
+
+<p>Burns. “HSI special agents work diligently to trace the illicit proceeds of crime across the globe to disrupt and dismantle the transnational criminal organizations that seek to defraud hardworking Americans.”
+As is the norm in such cybercrime operations, threat actors are known to target individuals by cultivating romantic relationships after approaching them on dating and social media messaging apps. These activities are carried out by individuals who are trafficked into scam compounds operating primarily in Southeast Asia with promises of high-paying jobs. The cybercrime syndicates behind the scams then confiscate their passports and are coerced into conning victims online by posing as charming strangers or brokers on investment platforms, or face brutal consequences.</p>
+
+<p>The end goal is to coax unsuspecting users into parting with their hard-earned money in fraudulent cryptocurrency investment schemes. According to the DoJ, the fake platforms displayed made-up investment portfolios displaying unusually high returns in a deliberate attempt to make victims invest more of their funds. The reality hits when users try to withdraw their funds, at which point they are asked to pay an extra fee as a way to extract even more money from them. “Once the victims’ money transferred to a cryptocurrency wallet under the scammers’ control, the crooks quickly routed that money through many other wallets to hide the nature, source, control, and ownership of that stolen money,” the department added.</p>
+
+<p>In a coordinated announcement, Tether
+said
+it has frozen around $4.2 billion in assets linked to illicit activity to date, including nearly $250 million related to scam networks since June 2025 alone. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="900-sangoma-freepbx-instances-compromised-in-ongoing-web-shell-attacks"><a id="article-12"></a>900+ Sangoma FreePBX Instances Compromised in Ongoing Web Shell Attacks</h2>
+
+<p>The Shadowserver Foundation has
+revealed
+that over 900 Sangoma FreePBX instances still remain infected with web shells as part of attacks that exploited a command injection vulnerability starting in December 2025. Of these,
+401 instances
+are located in the U.S., followed by 51 in Brazil, 43 in Canada, 40 in Germany, and 36 in France. The non-profit entity said the compromises are likely accomplished via the exploitation of CVE-2025-64328 (CVSS score: 8.6), a high-severity security flaw that could enable post-authentication command injection. “The impact is that any user with access to the FreePBX Administration panel could leverage this vulnerability to execute arbitrary shell commands on the underlying host,” FreePBX
+said
+in an advisory for the flaw in November 2025.</p>
+
+<p>“An attacker could leverage this to obtain remote access to the system as the asterisk user.”
+The vulnerability affects FreePBX versions higher than and including 17.0.2.36. It was resolved in version 17.0.3. As mitigations, it’s advised to add security controls to ensure that only authorized users have access to the FreePBX Administrator Control Panel (ACP), restrict access from hostile networks to the ACP, and update the filestore module to the latest version. The vulnerability has since come under active exploitation in the wild, prompting the U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA) to
+add
+it to its Known Exploited Vulnerabilities (KEV) catalog earlier this month. Source: The Shadowserver Foundation
+In a report published late last month, Fortinet FortiGuard Labs revealed that the threat actor behind the cyber fraud operation codenamed INJ3CTOR3 has been exploiting CVE-2025-64328 starting early December 2025 to deliver a web shell codenamed EncystPHP. “By leveraging Elastix and FreePBX administrative contexts, the web shell operates with elevated privileges, enabling arbitrary command execution on the compromised host and initiating outbound call activity through the PBX environment,” the cybersecurity company noted. FreePBX users are recommended to update their FreePBX deployments to the latest version as soon as possible to counter active threats.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="malicious-go-crypto-module-steals-passwords-deploys-rekoobe-backdoor"><a id="article-13"></a>Malicious Go Crypto Module Steals Passwords, Deploys Rekoobe Backdoor</h2>
+
+<p>Cybersecurity researchers have disclosed details of a malicious Go module that’s designed to harvest passwords, create persistent access via SSH, and deliver a Linux backdoor named Rekoobe. The Go module, github[.]com/xinfeisoft/crypto, impersonates the legitimate “golang.org/x/crypto” codebase, but injects malicious code that’s responsible for exfiltrating secrets entered via terminal password prompts to a remote endpoint, fetches a shell script in response, and executes it. “This activity fits namespace confusion and impersonation of the legitimate golang.org/x/crypto subrepository (and its GitHub mirror github.com/golang/crypto),” Socket security researcher Kirill Boychenko
+said
+. “The legitimate project identifies go.googlesource.com/crypto as canonical and treats GitHub as a mirror, a distinction the threat actor abuses to make github.com/xinfeisoft/crypto look routine in dependency graphs.”
+Specifically, the backdoor has been placed within the “ssh/terminal/terminal.go” file, so that every time a victim application invokes ReadPassword() – a function supposedly meant to read input like passwords from a terminal – it causes those interactive secrets to be captured.</p>
+
+<p>The main responsibility of the downloaded script is to function as a Linux stager, appending a threat actor’s SSH key to the “/home/ubuntu/.ssh/authorized_keys” file, set iptables default policies to ACCEPT in an attempt to loosen firewall restrictions, and retrieve additional payloads from an external server while disguising them with the .mp5 extension. Of the two payloads, one is a helper that tests internet connectivity and attempts to communicate with an IP address (“154.84.63[.]184”) over TCP port 443. The program likely functions as a recon or loader, Socket noted. The second downloaded payload has been assessed to be Rekoobe, a
+known
+Linux trojan
+that has been detected in the wild
+since at least 2015
+.</p>
+
+<p>The
+backdoor
+is
+capable
+of receiving commands from an attacker-controlled server to download more payloads, steal files, and execute a reverse shell. As recently as August 2023, Rekoobe has been put to use by Chinese nation-state groups like
+APT31
+. While the package
+still remains listed
+on pkg.go.dev, the Go security team has taken steps to block the library as malicious. “This campaign will likely repeat because the pattern is low-effort and high-impact: a lookalike module that hooks a high-value boundary (ReadPassword), uses GitHub Raw as a rotating pointer, then pivots into curl | sh staging and Linux payload delivery,” Boychenko said.</p>
+
+<p>“Defenders should anticipate similar supply chain attacks targeting other ‘credential edge’ libraries (SSH helpers, CLI auth prompts, database connectors) and more indirection through hosting surfaces to rotate infrastructure without republishing code.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

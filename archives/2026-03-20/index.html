@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-20 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Speagle Malware Hijacks Cobra DocGuard to Steal Data via Compromised Servers</a></li>
+      
+        <li><a href="#article-2">54 EDR Killers Use BYOVD to Exploit 34 Signed Vulnerable Drivers and Disable Security</a></li>
+      
+        <li><a href="#article-3">ThreatsDay Bulletin: FortiGate RaaS, Citrix Exploits, MCP Abuse, LiveChat Phish & More</a></li>
+      
+        <li><a href="#article-4">New Perseus Android Banking Malware Monitors Notes Apps to Extract Sensitive Data</a></li>
+      
+        <li><a href="#article-5">How Ceros Gives Security Teams Visibility and Control in Claude Code</a></li>
+      
+        <li><a href="#article-6">DarkSword iOS Exploit Kit Uses 6 Flaws, 3 Zero-Days for Full Device Takeover</a></li>
+      
+        <li><a href="#article-7">CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks</a></li>
+      
+        <li><a href="#article-8">OFAC Sanctions DPRK IT Worker Network Funding WMD Programs Through Fake Remote Jobs</a></li>
+      
+        <li><a href="#article-9">Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access</a></li>
+      
+        <li><a href="#article-10">Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE</a></li>
+      
+        <li><a href="#article-11">Claude Code Security and Magecart: Getting the Threat Model Right</a></li>
+      
+        <li><a href="#article-12">9 Critical IP KVM Flaws Enable Unauthenticated Root Access Across Four Vendors</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-20-ai创业新闻">2026-03-20 AI创业新闻</h1>
+
+<h2 id="speagle-malware-hijacks-cobra-docguard-to-steal-data-via-compromised-servers"><a id="article-1"></a>Speagle Malware Hijacks Cobra DocGuard to Steal Data via Compromised Servers</h2>
+
+<p>Cybersecurity researchers have flagged a new malware dubbed
+Speagle
+that hijacks the functionality and infrastructure of a legitimate program called Cobra DocGuard. “Speagle is designed to surreptitiously harvest sensitive information from infected computers and transmit it to a Cobra DocGuard server that has been compromised by the attackers, masking the data exfiltration process as legitimate communications between client and server,” Symantec and Carbon Black researchers
+said
+in a report published today. Cobra DocGuard is a document security and encryption platform developed by EsafeNet. The abuse of this software in real-world attacks has been
+publicly recorded twice
+to date.</p>
+
+<p>In January 2023, ESET documented an intrusion where a gambling company in Hong Kong was compromised in September 2022 via a malicious update pushed by the software. Later that August, Symantec highlighted the activity of a new threat cluster codenamed Carderbee, which was found using a trojanized version of the program to deploy PlugX, a backdoor widely used by Chinese hacking groups like Mustang Panda. The attacks targeted multiple organizations in Hong Kong and other Asian countries. Speagle remains unattributed to date.</p>
+
+<p>But what makes the malware noteworthy is that it’s designed to gather and exfiltrate data from only those systems that have the Cobra DocGuard data protection software installed. The activity is being tracked under the moniker Runningcrab. “This indicates deliberate targeting, possibly to facilitate intelligence collection or industrial espionage,” the Broadcom-owned threat hunting teams said. “At present, we believe the most likely hypotheses are that it is either the work of a state-sponsored actor or the work of a private contractor available for hire.”
+Exactly how the malware is delivered to victims is unknown, although it’s suspected that it may have been done via a supply chain attack, as evidenced by the two aforementioned cases.</p>
+
+<p>In addition, the central role played by the security software and its infrastructure deserves a mention. Not only does Speagle use a legitimate Cobra DocGuard server for command-and-control (C2) and as a data exfiltration point, it also invokes a driver associated with the program to delete itself from the compromised host. The 32-bit .NET executable, once launched, first checks the installation folder of Cobra DocGuard and then proceeds to harvest and transmit data from the infected machine in phases. This includes details about the system and files located in specific folders, such as those that contain web browser history and autofill data.</p>
+
+<p>What’s more, one variant of Speagle has been found to incorporate additional functionality to turn on/off certain types of data collection, as well as search for files related to Chinese ballistic missiles like Dongfeng-27 (aka DF-27). “Speagle is a novel, parasitic threat that cleverly makes use of Cobra DocGuard’s client to mask its malicious activity and its infrastructure to hide exfiltration traffic,” researchers said. “Its developer no doubt took notice of previous supply chain attacks using the software and may have selected it both for its perceived vulnerability and its high rate of use among targeted organizations.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="54-edr-killers-use-byovd-to-exploit-34-signed-vulnerable-drivers-and-disable-security"><a id="article-2"></a>54 EDR Killers Use BYOVD to Exploit 34 Signed Vulnerable Drivers and Disable Security</h2>
+
+<p>A new analysis of endpoint detection and response (EDR) killers has revealed that 54 of them leverage a technique known as bring your own vulnerable driver (
+BYOVD
+) by abusing a total of 34 vulnerable drivers. EDR killer programs have been a common presence in ransomware intrusions as they offer a way for affiliates to neutralize security software before deploying file-encrypting malware. This is done so in an attempt to evade detection. “Ransomware gangs, especially those with ransomware-as-a-service (RaaS) programs, frequently produce new builds of their encryptors, and ensuring that each new build is reliably undetected can be time-consuming,” ESET researcher Jakub Souček
+said
+in a report shared with The Hacker News.</p>
+
+<p>“More importantly, encryptors are inherently very noisy (as they inherently need to modify a large number of files in a short period); making such malware undetected is rather challenging.”
+EDR killers act as a specialized, external component that’s run to disable security controls before executing the lockers themselves, thereby keeping the latter simple, stable, and easy to rebuild. That’s not to say there have not been instances where EDR termination and ransomware modules have been fused into one single binary. Reynolds ransomware
+is a case in point. A majority of the EDR killers rely on legitimate yet vulnerable drivers to gain elevated privileges and achieve their goals.</p>
+
+<p>Among the nearly 90 EDR killer tools detected by the Slovakian cybersecurity company, more than half of them utilize the well-known BYOVD tactic simply because it’s reliable. “The goal of a
+BYOVD attack
+is to gain kernel-mode privileges, often called Ring 0,” Bitdefender
+explains
+. “At this level, code has unrestricted access to system memory and hardware. Since an attacker cannot load an unsigned malicious driver, they ‘bring’ a driver signed by a reputable vendor (such as a hardware manufacturer or an old antivirus version) that has a known vulnerability.”
+Armed with the kernel access, threat actors can terminate EDR processes, disable security tools, tamper with kernel callbacks, and undermine endpoint protections.</p>
+
+<p>The result is an abuse of Microsoft’s driver trust model to evade defenses, taking advantage of the fact that the vulnerable driver is legitimate and signed. The BYOVD-based EDR killers are primarily developed by three types of threat actors -
+Closed ransomware groups like DeadLock and Warlock that do not rely on affiliates
+Attackers forking and tweaking existing proof-of-concept code (e.g., SmilingKiller and TfSysMon-Killer)
+Cybercriminals marketing such tools on underground marketplaces as a service (e.g., DemoKiller aka
+Бафомет
+,
+ABYSSWORKER
+, and
+CardSpaceKiller
+)
+ESET said it also identified script-based tools that make use of built-in administrative commands like taskkill, net stop, or sc delete to interfere with the regular functioning of security product processes and services. Select variants have also been found to combine scripting with Windows Safe Mode. “Since Safe Mode loads only a minimal subset of the operating system, and security solutions typically aren’t included, malware has a higher chance of disabling protection,” the company noted.</p>
+
+<p>“At the same time, such activity is very noisy, as it requires a reboot, which is risky and unreliable in unknown environments. Therefore, it is seen only rarely in the wild.”
+The third category of EDR killers are anti-rootkits, which include legitimate utilities such as GMER, HRSword, and PC Hunter, that offer an intuitive user interface to terminate protected processes or services. A fourth, emerging class is a set of driverless EDR killers like
+EDRSilencer
+and
+EDR-Freeze
+that block outbound traffic from EDR solutions and cause the programs to enter a “coma” like state. “Attackers aren’t putting much effort into making their encryptors undetected,” ESET said.</p>
+
+<p>“Rather, all the sophisticated defense-evasion techniques have shifted to the user-mode components of EDR killers. This trend is most visible in commercial EDR killers, which often incorporate mature anti-analysis and anti-detection capabilities.”
+To combat ransomware and EDR killers, blocking commonly misused drivers from loading is a necessary defense mechanism. However, given that EDR killers are executed only at the last stage and just before launching the encryptor, a failure at this stage means the threat actor can easily switch to another tool to accomplish the same task. The implication is that organizations need layered defenses and detection strategies in place to proactively monitor, flag, contain, and remediate the threat at each every stage of the attack lifecycle.</p>
+
+<p>“EDR killers endure because they’re cheap, consistent, and decoupled from the encryptor – a perfect fit for both encryptor developers, who don’t need to focus on making their encryptors undetectable, and affiliates, who possess an easy-to-use, powerful utility to disrupt defenses prior to encryption,” ESET said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-fortigate-raas-citrix-exploits-mcp-abuse-livechat-phish--more"><a id="article-3"></a>ThreatsDay Bulletin: FortiGate RaaS, Citrix Exploits, MCP Abuse, LiveChat Phish &amp; More</h2>
+
+<p>ThreatsDay Bulletin is back on The Hacker News, and this week feels off in a familiar way. Nothing loud, nothing breaking everything at once. Just a lot of small things that shouldn’t work anymore but still do. Some of it looks simple, almost sloppy, until you see how well it lands.</p>
+
+<p>Other bits feel a little too practical, like they’re already closer to real-world use than anyone wants to admit. And the background noise is getting louder again, the kind people usually ignore. A few stories are clever in a bad way. Others are just frustratingly avoidable.</p>
+
+<p>Overall, it feels like quiet pressure is building in places that matter. Skim it or read it properly, but don’t skip this one. Emerging RaaS exploiting FortiGate flaws
+The Gentlemen RaaS Detailed
+Group-IB has shed light on the various tactics adopted by The Gentlemen, a nascent Ransomware-as-a-Service (RaaS) operation that consists of about 20 members. It originated from a payment dispute after its operator “hastalamuerte” opened a public arbitration thread on the RAMP cybercrime forum, accusing Qilin ransomware operators of unpaid affiliate commission amounting to $48,000.</p>
+
+<p>The group primarily uses
+CVE-2024-55591
+, a critical authentication bypass vulnerability in FortiOS/FortiProxy, for initial access. “The group maintains an operational database of approximately 14,700 already exploited FortiGate devices globally,” the company
+said
+. “Separate from exploited devices, the operators maintain 969 validated brute-forced FortiGate VPN credentials ready for attack.” The Gentlemen also employs defense evasion via the bring your own vulnerable driver (
+BYOVD
+) technique to terminate security processes at the kernel level. About 94 organizations have already been attacked by this threat group since its emergence in July/August 2025.</p>
+
+<p>Pre-auth RCE chain in ITSM platform
+Multiple Flaws in BMC FootPrints
+Four security flaws (CVE-2025-71257, CVE-2025-71258, CVE-2025-71259, and CVE-2025-71260) have been disclosed in BMC FootPrints, a widely deployed ITSM solution, that could be chained into pre-authentication remote code execution. The attack sequence begins with an authentication bypass (CVE-2025-71257) that extracts a guest session token (“SEC_TOKEN”) from the password reset endpoint, which is then used to reach an unsanitized Java deserialization sink (CVE-2025-71260) in the “/aspnetconfig” endpoint’s “__VIEWSTATE” parameter. Exploitation via the AspectJWeaver gadget chain enables arbitrary file write to the Tomcat web root directory, achieving full remote code execution. Armed with the SEC_TOKEN, an attacker could also exploit two SSRF flaws (CVE-2025-71258 and CVE-2025-71259) and potentially leak internal data.</p>
+
+<p>The issues were addressed in September 2025. Loader deploys stealthy C2 malware
+Hijack Loader Drops SnappyClient
+The
+malware loader
+known as
+Hijack Loader
+is being used to deliver a previously undocumented, C++-based command-and-control (C2) framework known as SnappyClient. “SnappyClient has an extended list of capabilities, including taking screenshots, keylogging, a remote terminal, and data theft from browsers, extensions, and other applications,” Zscaler ThreatLabz
+said
+. “SnappyClient employs multiple evasion techniques to hinder endpoint security detection, including an Antimalware Scan Interface (AMSI) bypass, as well as implementing Heaven’s Gate, direct system calls, and transacted hollowing.</p>
+
+<p>SnappyClient receives two configuration files from the C2 server, which contain a list of actions to perform when a specified condition is met, along with another that specifies applications to target for data theft.” The framework was first discovered in December 2025. The attack chain involves the distribution of malicious payloads after a user visits a website impersonating the Spanish telecom firm Telefónica. It’s assessed that the primary use for SnappyClient is cryptocurrency theft, with a possible connection between the developers of HijackLoader and SnappyClient based on observed code similarities. Deep link abuse enables command execution
+CursorJack Abuses Deep Links for Command Execution
+Proofpoint has detailed a new technique called CursorJack that abuses Cursor’s support for Model Context Protocol (MCP)
+deep links
+to enable local command execution or allow installation of a malicious remote MCP server.</p>
+
+<p>The attack takes advantage of the fact that MCP servers commonly specify a command in their “mcp.json” configuration. “The cursor:// protocol handler could be abused through social engineering in specific configurations,” the company
+said
+. “A single click followed by user acceptance of an install prompt could result in arbitrary command execution. The technique could be leveraged both for local code execution via the command parameter or to install a malicious remote MCP server via the URL parameter.” The enterprise security firm has also
+released
+a proof-of-concept (PoC) exploit on GitHub.</p>
+
+<p>Mass exploitation hits Citrix flaws
+New Campaign Targets Citrix Flaws
+A new campaign is actively targeting known security flaws in Citrix NetScaler (
+CVE-2025-5777
+and
+CVE-2023-4966
+). According to
+Defused Cyber
+, more than 500 exploit attempts have been recorded against its honeypot system on March 16, 2026. “Highly elevated exploit activity against older vulnerabilities can often precede a zero-day vulnerability,” it said. Teams phishing grants remote access
+Spike in Phishing Campaigns Impersonating IT Staff
+Rapid7 said it’s seeing an increase in phishing campaigns where threat actors impersonate internal IT departments via Microsoft Teams.</p>
+
+<p>“The primary objective is to persuade users to launch Quick Assist, granting the TA remote access to deploy malware, exfiltrate data, or facilitate lateral movement across the network,” it
+added
+. “The recent surge in Teams-based delivery highlights a critical vulnerability in how organizations manage external access. Teams often allows any external user to message internal staff. This is the functional equivalent of operating an email server without a gateway filter.”
+ClickFix delivers AutoHotKey backdoor
+ClickFix Attack Leads to AutoHotKey Backdoor
+A new
+ClickFix-style campaign
+has compromised a Pakistani government website (“wasafaisalabad.gop[.]pk”) to deliver fake CAPTCHA lures.</p>
+
+<p>The attack chain installs an MSI installer via a disguised clipboard command, which drops an AutoHotKey-based backdoor polling a remote server for tasks, Gen Digital
+said
+. It’s currently not known how the website was breached. The social engineering tactic has proved so effective that even nation-state groups such as North Korea’s Lazarus group, Iran’s MuddyWater, and Russia’s APT28 have adopted it. In January, researchers from Sekoia reported that a separate ClickFix framework dubbed IClickFix had been injected into over 3,800 WordPress sites since 2024.</p>
+
+<p>Stealer upgrade spreads via pirated games
+Updated Version of ACRStealer Spotted
+The malware loader known as Hijack Loader is being used to deliver an updated version of an information stealer referred to as ACRStealer. “This updated variant follows similar evasion techniques and C2 initialization strategy to make it even stealthier,” G DATA
+said
+. “This integration with HijackLoader highlights ACRStealer’s versatility and modularity, which will likely attract more malicious actors to use it as a final payload.” In these campaigns, Hijack Loader is downloaded from the domain associated with PiviGames, a Spanish portal hosting pirated PC games. The development comes against the backdrop of another campaign that involved several cases of malware
+being distributed
+through PiviGames.</p>
+
+<p>Live chat phishing steals sensitive data
+Phishing Campaign Abuses LiveChat
+A new phishing campaign has been observed using LiveChat, a customer service software featuring live messaging, to steal data. Phishing emails using refund-related themes are used to redirect users to a link hosted via LiveChat’s service (“direct.lc[.]chat”), from where they are asked to click on a link sent in the chat to complete the refund by entering their personal and financial information. “Unlike typical refund scams or credential phishing, this campaign engages victims through a real-time chat interface, impersonating well-known brands in order to harvest sensitive data such as account credentials, credit card details, multi-factor authentication (MFA) codes, and other personally identifiable information (PII),” Cofense
+said
+. RagaSerpent expands multi-region espionage
+RagaSerpent Goes After Indonesia and Thailand
+A SideWinder-adjacent cluster known as RagaSerpent is suspected to be leveraging tax audit and government compliance themes in spear-phishing emails to deliver multi-stage malware for command-and-control (C2) and establish sustained access across targeted organizations in Southeast Asia, including Indonesia and Thailand.</p>
+
+<p>The attack chain is
+consistent
+with a prior campaign targeting India using similar tax-related lures to deliver a legitimate enterprise tool called SyncFuture TSM, developed by a Chinese company. “This is not unusual in APT operations: in-country targeting can be used to complicate attribution (e.g., by creating noisy ‘domestic’ victimology) or to reach foreign diplomats/missions operating inside India—a pattern explicitly noted in reporting on SideWinder’s broader geographic targeting and diplomatic victim set,” ITSEC Asia
+said
+. The recent campaigns show the threat actor has expanded its operations beyond South Asia and into Africa, Europe, the Middle East, and Southeast Asia. Unauthenticated access exposed device data
+DJI Patches Security Flaw in Romo Smart Vacuums
+DJI has
+patched
+a security flaw in its backend that could have allowed attackers to take over all its Romo smart vacuums.</p>
+
+<p>Security researcher Sammy Azdoufal said DJI servers returned data for any device just by providing a device serial number. DJI shared the data on any device without any authentication or authorization. The researcher said he was able to map the locations of more than 7,000 Romo smart vacuums and 3,000 DJI portable power stations that shared the same server. New password layer strengthens account security
+WhatsApp Tests Alphanumeric Password
+WhatsApp has begun
+testing
+support for setting an alphanumeric account password.</p>
+
+<p>It can be anywhere between six and 20 characters long and should include at least one letter and one number. Adding an alphanumeric password to the equation is likely an effort to make brute-force attempts harder. For example, if a threat actor carries out a SIM swap to intercept messages and bypass two-factor authentication, they would still need to enter the 6-20 character-long password to gain access to the victim’s WhatsApp account. Suspected ransomware group appears fabricated
+What is 0APT?</p>
+
+<p>More evidence has emerged that the
+0APT ransom group
+is likely a
+fake and a fraud
+. “Thus far, the threat actor has not provided credible proof of ransomware or data exfiltration attacks as the data samples on the DLS appeared to be fabricated,” Intel 471
+said
+. “For example, the files that supposedly contained metadata of data stolen from victim networks were unusually large, reaching several terabytes each. Additionally, partial downloads of those files indicated they did not contain any useful data, and in fact, we observed several instances in which the content contained a repeating pattern of null bytes.”
+Google blocks millions of risky apps
+Google Rejects 1.75M Policy-Violating Android Apps in 2025
+Google
+rejected
+1.75 million policy-violating Android apps and blocked more than 80,000 developer accounts from the Google Play Store in 2025, down from 2.36 million apps and 158,000 accounts in 2024.</p>
+
+<p>The company said that through 2025, it blocked more than 255,000 Android apps from obtaining excessive access to sensitive user data, and that it implemented more than 10,000 safety checks on published apps and strengthened detection capabilities by integrating Google’s latest generative artificial intelligence (AI) models into the review process. Android’s built-in security suite, Play Protect, which now scans over 350 billion apps every day, has identified over 27 million malicious apps sideloaded from outside Google Play. Play Protect’s ‘enhanced fraud protection’ has been expanded to cover over 2.8 billion Android devices in 185 markets, blocking 266 million installation attempts from 872,000 unique risky apps. In a related development, the tech giant has made available Scam Detection for phone calls on Google Pixel devices in the U.S., U.K., Australia, Canada, France, Germany, India, Ireland, Italy, Japan, Mexico, and Spain.</p>
+
+<p>It’s also being
+expanded
+to Samsung Galaxy S26 series in the U.S. 1% of flaws drove most attacks
+1% of Security Flaws Drove Most Cyber Attacks in 2025
+A report from VulnCheck found that a mere 1% of 2025 CVEs were exploited in the wild by the end of the year. Network edge devices accounted for a third of all products exploited last year. “There was a small decrease (-13%) in new vulnerabilities linked to named state-sponsored threat groups and APTs over the course of 2025,” the cybersecurity company
+said
+.</p>
+
+<p>“New CVE exploits attributed to China-nexus groups increased while Iranian exploit activity fell.” Another report from IBM X-Force
+revealed
+that there has been a 44% increase in cyberattacks exploiting public-facing applications. EU extends CSAM detection rules
+Europe Votes to Extend Voluntary Rules for CSAM Detection Until 2027
+The European Parliament has
+voted
+to extend a temporary exemption to E.U. privacy legislation that allows online platforms to voluntarily detect child sexual abuse material (CSAM) until August 2027. Lawmakers said the additional time will allow the bloc to negotiate and adopt a long-term legal framework to prevent and combat CSAM online.</p>
+
+<p>AOT malware evades analysis and detection
+Phishing URL Delivers Rhadamanthys and XMRig Miner
+A previously undocumented attack chain delivered via a phishing URL has been found to distribute a ZIP archive containing a C++ trojan downloader, which then initiates a loader responsible for decrypting and staging the Rhadamanthys stealer and XMRig cryptocurrency miner. “The campaign’s core evasion relies on .NET Native Ahead-of-Time (AOT) compiled binaries, which strip traditional .NET metadata, frustrate common .NET analysis tools, and force analysts to fall back on native-level tooling, making detection and reverse engineering significantly harder,” Cyderes
+said
+. “Sophisticated anti-analysis capabilities: The AOT loader employs a sandbox scoring system evaluating RAM size, system uptime, user file counts, and AV process presence; virtual machine detection via registry inspection; and active suppression of miner activity when monitoring tools like Task Manager, Process Hacker, or x64dbg are detected.”
+Secrets sprawl surges across GitHub
+28.65M New Hard-Coded Secrets Added to Public GitHub commits in 2025
+GitGuardian’s State of Secrets Sprawl report has
+found
+that 28,649,024 new secrets were added to public GitHub commits in 2025 alone, up 34% from the previous year. The figure also represents a 152% increase in leaked secrets growth since 2021.</p>
+
+<p>In 2025, AI service secrets reached 1,275,105, up 81% year-over-year. Also identified by GitGuardian were 24,008 unique secrets exposed in MCP-related configuration files across public GitHub, including 2,117 unique valid credentials. Malicious themes inject ads and redirects
+6 Malicious Packagist Themes Contain Trojanized jQuery
+Six malicious Packagist packages posing as OphimCMS themes have been found to contain trojanized jQuery that exfiltrates URLs, injects full-screen overlay ads, and loads
+Funnull-linked redirects
+. The packages are ophimcms/theme-dy, ophimcms/theme-mtyy, ophimcms/theme-rrdyw, ophimcms/theme-pcc, ophimcms/theme-motchill, and ophimcms/theme-legend.</p>
+
+<p>“All six ship trojanized JavaScript assets, primarily disguised as legitimate jQuery libraries, that redirect visitors, exfiltrate URLs, inject ads, and in the most severe case load a second-stage payload – a mobile-targeted redirect to gambling and adult content sites, from infrastructure operated by Funnull,” Socket
+said
+. Multi-stage phishing bypasses security filters
+Outpost24 Targeted by 7-Stage Phishing Attack
+A C-level executive at Swedish security firm Outpost24 was
+targeted
+in a sophisticated phishing attack. The multi-chain redirect phishing campaign impersonated JPMorgan Chase to trick the recipient into reviewing a document by clicking on a link and triggering the infection. The link is a redirect URL hosted within Cisco’s infrastructure, which then initiates a series of URL redirects that leverage trusted services like Nylas as well as compromised legitimate infrastructure to bypass security filters and conceal the final phishing destination.</p>
+
+<p>“Several stages redirect victims through legitimate or previously reputable domains, reducing the likelihood that security scanners or reputation-based filtering will block the link,” Specops said. “The attackers went as far as to implement a legitimate Cloudflare-based ‘human validation’ step to ensure that only real people saw the actual landing page where credentials are requested.” The attack, ultimately unsuccessful, is said to have used a new phishing-as-a-service (PhaaS) toolkit named Kratos. Some of this will fade by next week. Some of it won’t.</p>
+
+<p>That’s the annoying part, figuring out which “minor” thing quietly sticks around and turns into a real problem later. Anyway, that’s the rundown. Take what you need, ignore what you can, and keep an eye on the stuff that feels a little too easy. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-perseus-android-banking-malware-monitors-notes-apps-to-extract-sensitive-data"><a id="article-4"></a>New Perseus Android Banking Malware Monitors Notes Apps to Extract Sensitive Data</h2>
+
+<p>Cybersecurity researchers have disclosed a new Android malware family called
+Perseus
+that’s being actively distributed in the wild with an aim to conduct device takeover (DTO) and financial fraud. Perseus is built upon the foundations of
+Cerberus
+and Phoenix, at the same time evolving into a “more flexible and capable platform” for compromising Android devices through dropper apps distributed via phishing sites. “Through Accessibility-based remote sessions, the malware enables real-time monitoring and precise interaction with infected devices, allowing full device takeover and targeting various regions, with a strong focus on Turkey and Italy,” ThreatFabric
+said
+in a report shared with The Hacker News. “Beyond traditional credential theft, Perseus monitors user notes, indicating a focus on extracting high-value personal or financial information.”
+Cerberus was
+first documented
+by the Dutch mobile security company in August 2019, highlighting the malware’s abuse of Android’s
+accessibility service
+to grant itself additional permissions, as well as steal sensitive data and credentials by serving fake overlay screens.</p>
+
+<p>Following the leak of its source code in 2020,
+multiple variants
+have emerged, including Alien,
+ERMAC
+, and
+Phoenix
+. Some of the artifacts distributed by Perseus are listed below -
+Roja App Directa (com.xcvuc.ocnsxn) - Dropper
+TvTApp (com.tvtapps.live) - Perseus payload
+PolBox Tv (com.streamview.players) - Perseus payload
+ThreatFabric’s analysis has uncovered that the malware expands on the Phoenix codebase, with the threat actors likely relying on a large language model (LLM) to assist with the development. This is based on indicators such as extensive in-app logging and the presence of emojis in the source code. As with the recently disclosed
+Massiv
+Android malware, Perseus masquerades as IPTV services to target users who are looking to sideload such apps on their devices to watch premium content.</p>
+
+<p>Campaigns distributing the malware have primarily targeted Turkey, Italy, Poland, Germany, France, the U.A.E., and Portugal. “By embedding its payload within this expected context, the Perseus malware effectively reduces user suspicion and increases infection success rates, blending malicious activity with a commonly accepted distribution model for such services,” ThreatFabric said. Once deployed, Perseus functions no differently from other Android banking malware in that it launches overlay attacks and captures keystrokes to intercept user input in real-time and display fake interfaces atop financial apps and cryptocurrency services to steal credentials. The malware also allows the operator to remotely issue commands via a command-and-control (C2) panel, and perform and authorize fraudulent transactions.</p>
+
+<p>Some of the supported commands are as follows -
+scan_notes
+, to capture contents from various note-taking apps, such as Google Keep, Xiaomi Notes, Samsung Notes, ColorNote Notepad Notes, Evernote, Simple Notes Pro, Simple Notes, and Microsoft OneNote (specifies the wrong package name “com.microsoft.onenote” instead of “com.microsoft.office.onenote”). start_vnc
+, to launch a near-real-time visual stream of the victim’s screen. stop_vnc
+, to stop the remote session. start_hvnc
+, to transmit a structured representation of the UI hierarchy and allow the threat actor to interact with UI elements programmatically.</p>
+
+<p>stop_hvnc
+, to stop the remote session. enable_accessibility_screenshot
+, to enable taking screenshots using the accessibility service. disable_accessibility_screenshot
+, to disable taking screenshots using the accessibility service. unblock_app
+, to remove an application from the blocklist.</p>
+
+<p>clear_blocked
+, to clear the entire list of blocked applications. action_blackscreen
+, to display a black screen overlay to hide device activity from the user. nighty
+, to mute audio. click_coord
+, to perform a tap at specific screen coordinates.</p>
+
+<p>install_from_unknown
+, to force installation from unknown sources. start_app
+, to launch a specified application. Perseus performs a wide range of environment checks to detect the presence of debuggers and analysis tools like Frida and Xposed, as well as verify if a SIM card has been inserted, determine the number of installed apps and if it’s unusually low, and validate battery values to make sure it’s running in an actual device. The malware then combines all this information to formulate an overall suspicion score that’s sent to the C2 panel to decide the next course of action and if the operator should proceed with data theft.</p>
+
+<p>“Perseus highlights the continued evolution of Android malware, demonstrating how modern threats build upon established families like Cerberus and Phoenix while introducing targeted improvements rather than entirely new paradigms,” ThreatFabric said. “Its capabilities, which range from Accessibility-based remote control and overlay attacks to note monitoring, show a clear focus on maximizing both interaction with the device and the value of the data collected. This balance between inherited functionality and selective innovation reflects a broader trend toward efficiency and adaptability in malware development.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-ceros-gives-security-teams-visibility-and-control-in-claude-code"><a id="article-5"></a>How Ceros Gives Security Teams Visibility and Control in Claude Code</h2>
+
+<p>Security teams have spent years building identity and access controls for human users and service accounts. But a new category of actor has quietly entered most enterprise environments, and it operates entirely outside those controls. Claude Code, Anthropic’s AI coding agent, is now running across engineering organizations at scale. It reads files, executes shell commands, calls external APIs, and connects to third-party integrations called MCP servers.</p>
+
+<p>It does all of this autonomously, with the full permissions of the developer who launched it, on the developer’s local machine, before any network-layer security tool can see it. It leaves no audit trail that the existing security infrastructure was built to capture. This walkthrough covers Ceros, an AI Trust Layer built by
+Beyond Identity
+that sits directly on the developer’s machine alongside Claude Code and provides real-time visibility, runtime policy enforcement, and a cryptographic audit trail of every action the agent takes. The Problem: Claude Code Operates Outside Existing Security Controls
+Before walking through the product, it helps to understand why existing tools cannot address this problem.</p>
+
+<p>Most enterprise security tooling sits at the network edge or the API gateway. These tools see traffic after it leaves the machine. By the time a SIEM ingests an event or a network monitor flags unusual traffic, Claude Code has already acted: the file has already been read, the shell command has already executed, and the data has already moved. Claude Code’s behavioral profile compounds this problem significantly.</p>
+
+<p>It lives off the land, using tools and permissions already on the developer’s machine rather than bringing its own. It communicates through external model calls that look like normal traffic. It executes complex sequences of actions that no human explicitly programmed. And it runs with the full inherited permissions of whoever launched it, including access to credentials, production systems, and sensitive data that developers happen to have on their machine.</p>
+
+<p>The result is a gap that network-layer tools structurally cannot close: everything Claude Code does on the local machine, before any request leaves the device. That is where Ceros operates. Getting Started: Two Commands, Thirty Seconds
+Ceros is designed so that installation does not disrupt developer workflow. Setup requires two commands:
+curl -fsSL https://agent.beyondidentity.com/install.sh | bash</p>
+
+<p>ceros claude
+The first command installs the CLI.</p>
+
+<p>The second launches Claude Code through Ceros. A browser window opens, prompts for an email address, and sends a six-digit verification code. After entering the code, Claude Code starts up and works exactly as it did before. From the developer’s perspective, nothing has changed.</p>
+
+<p>For organization-wide rollouts, administrators can configure Ceros so that developers are prompted to enroll automatically when they launch Claude Code. Security becomes invisible to the developer, which is the only way security actually gets adopted at scale. Once enrolled, before Claude Code generates a single token, Ceros captures full device context, including OS, kernel version, disk encryption status, Secure Boot state, and endpoint protection status, all in under 250 milliseconds. It captures the complete process ancestry of how Claude Code was invoked, with binary hashes of every executable in the chain.</p>
+
+<p>And it ties the session to a verified human identity through Beyond Identity’s platform, signed with a hardware-bound cryptographic key. The Console: See What Claude Code Has Actually Been Doing
+After enrolling a device and running Claude Code normally for a few days, navigating to the Ceros admin console reveals something most security teams have never seen before: a complete record of what Claude Code has actually been doing across their environment. The Conversations view
+shows every session between a developer and Claude Code across all enrolled devices, listed by user, device, and timestamp. Clicking into any conversation shows the full back-and-forth between the developer and the agent.</p>
+
+<p>But between the prompts and responses, something else is visible: tool calls. When a developer asks Claude Code something as simple as “what files are in my directory?”, the LLM does not simply know the answer. It instructs the agent to execute a tool on the local machine, in this case bash ls -la. That shell command runs on the developer’s device with the developer’s permissions.</p>
+
+<p>One casual question triggers real execution on a real machine. The Conversations view surfaces every one of these tool invocations across every session. For most security teams, this is the first time they have seen this data. The Tools view
+has two tabs.</p>
+
+<p>The Definitions tab shows every tool available to Claude Code across the enrolled environment, including built-in tools like Bash, ReadFile, WriteFile, Edit, and SearchWeb, as well as every MCP server that developers have connected to their agents. Each entry includes the tool’s full schema: the instructions given to the LLM about what the tool does and how to invoke it. The Calls tab
+shows what was actually executed. Not just what exists, but what was invoked, with what arguments, and what was returned.</p>
+
+<p>Security teams can drill into any individual tool call and see the exact command that ran, the arguments passed, and the full output that came back. The MCP Server view
+is where many security teams have their most significant discovery moment. MCP servers are how Claude Code connects to external tools and services, including databases, Slack, email, internal APIs, and production infrastructure. Developers add them casually, thinking about productivity rather than security.</p>
+
+<p>Each one is a data access path that nobody reviewed. The Ceros dashboard shows every MCP server connected to Claude Code across all enrolled devices, when it was first seen, which devices it appears on, and whether it has been approved. For most organizations, the gap between what security teams assumed was connected and what is actually connected is significant. Policies: Enforcing Controls on Claude Code at Runtime
+Visibility without governance surfaces risk, but it does not prevent it.</p>
+
+<p>The Policies section is where Ceros moves from observability to enforcement, and where the compliance story becomes concrete. Policies
+in Ceros are evaluated at runtime, before the action executes. This distinction matters for compliance: the control operates at the moment of the action, not reconstructed after the fact. MCP server allowlisting
+is the highest-impact policy most organizations write first.</p>
+
+<p>Administrators define a list of approved MCP servers and set the default to block everything else. From that point forward, any Claude Code instance attempting to connect to an unapproved MCP server is blocked before the connection is established, and the attempt is logged. Tool-level policies
+allow administrators to control which tools Claude Code can invoke and under what conditions. A policy can block the Bash tool entirely for teams that do not need shell access from their agents.</p>
+
+<p>It can allow file reads within the project directory while blocking reads in sensitive paths like ~/.ssh/ or /etc/. The policy engine evaluates not just which tool is being called but what arguments are being passed, which is the difference between a useful policy and policy theater. Device posture requirements
+gate Claude Code sessions on the security state of the machine. A policy can require that disk encryption be enabled and endpoint protection be running before a session is allowed to start.</p>
+
+<p>Ceros continuously reassesses device posture throughout the session, not just at login. If endpoint protection is disabled while Claude Code is active, Ceros sees it and acts on it based on policy. The Activity Log: Audit-Ready Evidence
+The Activity Log is where Ceros becomes directly relevant to compliance teams. Every entry is not simply a record; it is a forensic snapshot of the environment at the exact moment Claude Code was invoked.</p>
+
+<p>A single log entry contains the device’s full security posture at that moment, the complete process ancestry showing every process in the chain that invoked Claude Code, binary signatures of every executable in that ancestry, the OS-level user identity tied to a verified human, and every action Claude Code took during the session. This matters for compliance because auditors increasingly require proof that logs are immutable. Standard log files that administrators can edit do not satisfy this requirement. Ceros signs every entry with a hardware-bound cryptographic key before it leaves the machine.</p>
+
+<p>The log cannot be modified after the fact. For frameworks that require tamper-evident audit records, including SOC 2’s CC8.1, FedRAMP’s AU-9, HIPAA’s audit control requirements, and PCI-DSS v4.0’s Requirement 10, this is the specific evidence artifact that satisfies the control. When an auditor asks for evidence of monitoring and access controls on AI agents, the answer is an export from the Ceros dashboard covering the full audit period, cryptographically signed, with user attribution and device context on every entry. Managed MCP Deployment: Standardizing Claude Code’s Tooling Across the Org
+For organizations that want to standardize the tools available to Claude Code rather than only blocking unapproved ones, Ceros provides managed MCP deployment from the admin console.</p>
+
+<p>Administrators can push approved MCP servers to every developer’s Claude Code instance from a single interface, without requiring any developer configuration. The MCP server appears in the developer’s agent automatically on the next launch. Combined with MCP server allowlisting, this creates a complete governance model: administrators define what is required, what is permitted, and what is blocked. Developers work within that envelope without friction.</p>
+
+<p>The Dashboard: Agentic AI Risk Posture Across the Org
+Coming up is
+The Dashboard
+, a single view of AI risk posture across your entire enrolled organization. Where the session-level views tell you what one developer’s agent did, the Dashboard tells you what is happening across the fleet: how many devices are provisioned, enrolled, and actively running Claude Code, with automatic flagging when adoption gaps indicate that agents are running outside the Ceros enrollment path and outside your controls. Sign up
+to be notified when The Dashboard ships. Conclusion
+The security gap that Claude Code creates is not at the network edge.</p>
+
+<p>It is on the developer’s machine, where the agent operates before any existing security tool can see it. Ceros closes that gap by living where the agent lives, capturing everything before it executes, and producing cryptographically signed evidence that security and compliance teams can act on. For security teams whose organizations have deployed Claude Code and are beginning to reckon with what that means for their audit posture and controls, the starting point is visibility. You cannot govern what you cannot see, and until now, there has been no tooling that could show you what Claude Code was actually doing.</p>
+
+<p>Ceros is available now, and getting started is free. Security teams can enroll a device and see their Claude Code activity for the first time at
+beyondidentity.ai
+. Ceros is built by Beyond Identity, which is SOC 2 / FedRAMP compliant and deployable as cloud SaaS, self-hosted, or fully air-gapped on-premises. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="darksword-ios-exploit-kit-uses-6-flaws-3-zero-days-for-full-device-takeover"><a id="article-6"></a>DarkSword iOS Exploit Kit Uses 6 Flaws, 3 Zero-Days for Full Device Takeover</h2>
+
+<p>A new exploit kit for Apple iOS devices designed to steal sensitive data from is being wielded by multiple threat actors since at least November 2025, according to reports from
+Google Threat Intelligence Group
+(GTIG),
+iVerify
+, and
+Lookout
+. According to GTIG, multiple commercial surveillance vendors and suspected state-sponsored actors have utilized the full-chain exploit kit, codenamed
+DarkSword
+, in distinct campaigns targeting Saudi Arabia, Turkey, Malaysia, and Ukraine. The discovery of DarkSword makes it the second iOS exploit kit, after
+Coruna
+, to be discovered within the span of a month. The kit is designed to target iPhones running iOS versions between iOS 18.4 and 18.7, and is said to have been deployed by a suspected Russian espionage group named UNC6353 in attacks targeting Ukrainian users.</p>
+
+<p>It’s worth noting that UNC6353 has also been linked to the use of the Coruna in attacks aimed at Ukrainians by injecting the JavaScript framework into compromised websites. “DarkSword aims to extract an extensive set of personal information, including credentials from the device and specifically targets a plethora of crypto wallet apps, hinting at a financially motivated threat actor,” Lookout said. “Notably, DarkSword appears to take a ‘hit-and-run’ approach by collecting and exfiltrating the targeted data from the device within seconds or at most minutes, followed by cleanup.”
+Exploit chains such as Coruna and DarkSword are engineered to facilitate complete access to a victim’s device with little to no interaction required on the part of the user. The findings once again show that there is a second-hand market for exploits that allows threat groups with limited resources and goals not necessarily aligned with cyber espionage to acquire “top-of-the-line exploits” and use them to infect mobile devices.</p>
+
+<p>“The use of both DarkSword and Coruna by a variety of actors demonstrates the ongoing risk of exploit proliferation across actors of varying geography and motivation,” GTIG said. The exploit chain linked to the newly discovered kit makes use of six different vulnerabilities to deploy three payloads, out of which CVE-2026-20700, CVE-2025-43529, and CVE-2025-14174 were exploited as zero-days, prior to them being patched by Apple:
+CVE-2025-31277</p>
+<ul>
+  <li>Memory corruption vulnerability in JavaScriptCore (Patched in version 18.6)
+CVE-2026-20700</li>
+  <li>User-mode Pointer Authentication Code (PAC) bypass in dyld (Patched in version 26.3)
+CVE-2025-43529</li>
+  <li>Memory corruption vulnerability in JavaScriptCore (Patched in versions 18.7.3 and 26.2)
+CVE-2025-14174</li>
+  <li>Memory corruption vulnerability in ANGLE (Patched in versions 18.7.3 and 26.2)
+CVE-2025-43510</li>
+  <li>Memory management vulnerability in the iOS kernel (Patched in versions 18.7.2 and 26.1)
+CVE-2025-43520</li>
+  <li>Memory corruption vulnerability in the iOS kernel (Patched in versions 18.7.2 and 26.1)
+Lookout said it discovered DarkSword after an analysis of malicious infrastructure associated with UNC6353, identifying that one of the compromised domains hosted a malicious iFrame element that’s responsible for loading a JavaScript to fingerprint devices visiting the site and determine whether the target needs to be routed to the iOS exploit chain. The exact method by which the websites are infected is currently not known. What made this notable was that the JavaScript was specifically looking for iOS devices running versions between 18.4 and 18.6.2, unlike Coruna, which targeted older iOS versions from 13.0 through 17.2.1.</li>
+</ul>
+
+<p>“DarkSword is a complete exploit chain and infostealer written in JavaScript,” Lookout explained. “It leverages multiple vulnerabilities to establish privileged code execution to access sensitive information and exfiltrate it off the device.”
+As is the case with Coruna, the attack chain begins when a user visits via Safari a web page that embeds the iFrame containing JavaScript. Once launched, DarkSword is capable of breaking the confines of the
+WebContent sandbox
+(aka Safari’s renderer process) and leveraging WebGPU to inject into
+mediaplaybackd
+, a system daemon introduced by Apple to handle media playback functions. This, in turn, enables the dataminer malware – referred to as GHOSTBLADE – to gain access to privileged processes and restricted parts of the file system.</p>
+
+<p>Following a successful privilege escalation, an orchestrator module is used to load additional components that are designed to harvest sensitive data, as well as inject an exfiltration payload into Springboard to siphon the staged information to an external server over HTTP(S). This includes emails, iCloud Drive files, contacts, SMS messages, Safari browsing history and cookies, cryptocurrency wallet and exchange data, usernames, passwords, photos, call history, Wi-Fi WiFi configuration and passwords, location history, calendar, cellular and SIM information, installed app list, data from Apple apps like Notes and Health, and message histories from apps like Telegram and WhatsApp. iVerify, in its own analysis of DarkSword, said the exploit chain weaponizes JavaScriptCore JIT vulnerabilities in the Safari renderer process (CVE-2025-31277 or CVE-2025-43529) based on the iOS version to achieve remote code execution via CVE-2026-20700, and then escape the sandbox via the GPU process by taking advantage of CVE-2025-14174 and CVE-2025-43510. “DarkSword uses two separate sandbox escape vulnerabilities, first by pivoting out of the WebContent sandbox into the GPU process, and then by pivoting from the GPU process to mediaplaybackd,” GTIG explained.</p>
+
+<p>“The same sandbox escape exploits were used regardless of which RCE exploit was needed.”
+In the final stage, a kernel privilege escalation flaw (CVE-2025-43520) is leveraged to obtain arbitrary read/write and arbitrary function call capabilities inside mediaplaybackd, and ultimately execute the injected JavaScript code. “This malware is highly sophisticated and appears to be a professionally designed platform enabling rapid development of modules through access to a high-level programming language,” Lookout said. “This extra step shows a significant effort put into the development of this malware with thoughts about maintainability, long-term development, and extensibility.”
+Further analysis of the JavaScript files used in DarkSword has been found to contain references to iOS versions 17.4.1 and 17.5.1, indicating that the kit was ported from a previous version targeting older versions of the operating system. Another aspect that sets DarkSword apart from other spyware is that it’s not meant for persistent surveillance and data gathering.</p>
+
+<p>In other words, once the data exfiltration is completed, the malware takes steps to clean the staged files and exits. The end goal, Lookout noted, is to minimize the dwell time and exfiltrate the data it identifies as quickly as possible. Very little is known about UNC6353, other than its use of both Coruna and DarkSword via watering hole attacks on compromised Ukrainian websites. This indicates that the hacking group is likely well-funded to secure high-quality iOS exploit chains that are likely developed for commercial surveillance.</p>
+
+<p>It’s assessed that UNC6353 is a technically less sophisticated threat actor that operates with motives aligned with Russian intelligence requirements. “Given that both Coruna and DarkSword have capabilities for cryptocurrency theft and intelligence gathering, we must consider the possibility that UNC6353 is a Russia-backed privateer group or criminal proxy threat actor,” Lookout said. “The complete lack of obfuscation in DarkSword code, the lack of obfuscation in the HTML for the iframes, and the fact that the DarkSword File Receiver is so simply designed and obviously named lead us to believe that UNC6353 may not have access to strong engineering resources or, alternatively, is not concerned with taking appropriate OPSEC measures.”
+The use of DarkSword has also been linked to two other threat actors -
+UNC6748
+, which targeted Saudi Arabian users in November 2025 using a Snapchat-themed website, snapshare[.]chat, that leveraged the exploit chain to deliver GHOSTKNIFE, a JavaScript backdoor capable of information theft. Activity associated with Turkish commercial surveillance vendor
+PARS Defense
+that used DarkSword in November 2025 to deliver GHOSTSABER, a JavaScript backdoor that communicates with an external server to facilitate device and account enumeration, file listing, data exfiltration, and the execution of arbitrary JavaScript code.</p>
+
+<p>Google said the observed UNC6353 use of DarkSword in December 2025 only supported iOS versions from 18.4 to 18.6, while that attributed to UNC6748 and PARS Defense also targeted iOS devices running version 18.7. “For the second time in a month, threat actors have employed waterhole attacks to target iPhone users,” iVerify said. “Notably, neither of these attacks was individually targeted. The combined attacks now likely affect hundreds of millions of unpatched devices running iOS versions from 13 to 18.6.2.”
+“In both instances, the tools were discovered due to significant operational security (OPSEC) failures and carelessness in the deployment of the iOS offensive capabilities.</p>
+
+<p>These recent events prompt several key questions: How big and well-equipped is the market for iOS 0-day and n-day exploits for iOS devices? How accessible are such powerful capabilities to financially motivated actors?”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-warns-of-zimbra-sharepoint-flaw-exploits-cisco-zero-day-hit-in-ransomware-attacks"><a id="article-7"></a>CISA Warns of Zimbra, SharePoint Flaw Exploits; Cisco Zero-Day Hit in Ransomware Attacks</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged government agencies to apply patches for two security flaws impacting
+Synacor Zimbra Collaboration Suite
+(ZCS) and
+Microsoft Office SharePoint
+, stating they have been actively exploited in the wild. The vulnerabilities in question are as follows -
+CVE-2025-66376
+(CVSS score: 7.2) - A stored cross-site scripting vulnerability in the Classic UI of ZCS, where attackers could abuse Cascading Style Sheets (CSS) @import directives in an HTML e-mail message. (Fixed in versions 10.0.18 and 10.1.13 in
+November 2025
+)
+CVE-2026-20963
+(CVSS score: 8.8) - A deserialization of untrusted data vulnerability in Microsoft Office SharePoint that allows an unauthorized attacker to execute code over a network.</p>
+
+<p>(Fixed in
+January 2026
+)
+The addition of CVE-2025-66376 to the KEV catalog follows a report from Seqrite Labs, which detailed a campaign orchestrated by a suspected Russian state-sponsored intrusion set targeting the State Hydrographic Service of Ukraine (hydro.gov[.]ua). The activity has been codenamed Operation GhostMail. “A social engineered internship inquiry is used to deliver an obfuscated JavaScript payload embedded directly in the email body,” the Indian cybersecurity vendor
+said
+. “When the victim opens the email in a vulnerable Zimbra webmail session, it exploits CVE-2025-66376.”
+“The phishing email has no malicious attachments, no suspicious links, no macros.</p>
+
+<p>The entire attack chain lives inside the HTML body of a single email, there are no malicious attachments.”
+The JavaScript malware is designed to harvest credentials, session tokens, backup two-factor authentication (2FA) recovery codes, browser-saved passwords, and the contents of the victim’s mailbox going back 90 days. The captured data is exfiltrated over both DNS and HTTPS. The email message was sent on January 22, 2026, from a likely compromised email address belonging to the National Academy of Internal Affairs. The campaign is consistent with prior attack waves conducted by Russian state-sponsored threat actors, such as
+Operation RoundPress
+, that have leveraged XSS vulnerabilities in webmail software to breach Ukrainian organizations.</p>
+
+<p>“Operation GhostMail demonstrates the continued evolution of webmail-focused intrusion, where attackers rely entirely on browser-resident stealers rather than traditional malware binaries,” Seqrite Labs said. “By embedding obfuscated JavaScript directly within an HTML email and exploiting a Zimbra webmail XSS condition, the threat actor achieves full session interception without dropping files, exploiting macros, or triggering endpoint-based detections.”
+There are currently no public reports referencing the exploitation of CVE-2026-2096, the identity of the threat actor exploiting it, and the scale of such efforts. In light of active exploitation, Federal Civilian Executive Branch (FCEB) agencies are recommended to apply patches for CVE-2025-66376 by April 1, 2026, and for CVE-2026-20963 by March 23, 2026. The disclosure comes as Amazon revealed that threat actors associated with Interlock ransomware have exploited a maximum-severity security flaw impacting Cisco’s firewall management software (CVE-2026-20131, CVSS score: 10.0) since January 26, 2026, more than a month before it was publicly disclosed.</p>
+
+<p>“Interlock has historically targeted specific sectors where operational disruption creates maximum pressure for payment,” Amazon
+said
+. These sectors include education, engineering, architecture, construction, manufacturing, industrial, health care, and government entities. The attack once again highlights a persistent pattern of threat actors targeting edge network devices from different vendors, including Cisco, Fortinet, Ivanti, and others, to obtain initial access to target networks. The fact that CVE-2026-20131 was weaponized as a zero-day shows that attackers are investing time and resources to find previously unknown flaws that could grant them elevated access.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ofac-sanctions-dprk-it-worker-network-funding-wmd-programs-through-fake-remote-jobs"><a id="article-8"></a>OFAC Sanctions DPRK IT Worker Network Funding WMD Programs Through Fake Remote Jobs</h2>
+
+<p>The U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC) has sanctioned six individuals and two entities for their involvement in the Democratic People’s Republic of Korea (DPRK)
+information technology (IT) worker scheme
+with an aim to defraud U.S. businesses and generate illicit revenue for the regime to fund its weapons of mass destruction (WMD) programs. “The North Korean regime targets American companies through deceptive schemes carried out by its overseas IT operatives, who weaponize sensitive data and extort businesses for substantial payments,”
+said
+Secretary of the Treasury Scott Bessent.</p>
+
+<p>The
+fraudulent scheme
+, also called Coral Sleet/Jasper Sleet, PurpleDelta and Wagemole, relies on bogus documentation, stolen identities, and fabricated personas to help the IT workers obscure their true origins and land jobs at legitimate companies in the U.S. and elsewhere. A disproportionate portion of the salaries is then funneled back to North Korea to facilitate the nation’s missile programs in violation of international sanctions. In some cases, these efforts are
+complemented
+by the deployment of malware to steal proprietary and sensitive information, as well as engaging in extortion efforts by demanding ransoms in return for not publicly leaking the stolen data.</p>
+
+<p>The individuals and entities targeted by the latest round of OFAC sanctions are listed below -
+Amnokgang Technology Development Company
+, an IT company that manages delegations of overseas IT workers and conducts other illicit procurement activities to obtain and sell military and commercial technology through their overseas networks. Nguyen Quang Viet
+, the Chief Executive Officer of Vietnamese company
+Quangvietdnbg International Services Company Limited
+that facilitates currency conversion services for North Koreans. The company is estimated to have converted about $2.5 million into cryptocurrency between mid-2023 and mid-2025. Do Phi Khanh
+, an associate of Kim Se Un, who was
+sanctioned
+by the U.S.</p>
+
+<p>in July 2025. Do is alleged to have acted as Kim’s proxy and allowed Kim to use his identity to open bank accounts and launder proceeds from IT workers. Hoang Van Nguyen
+, who also assists Kim in opening bank accounts and enables cryptocurrency transactions for Kim. Yun Song Guk
+, a North Korean national who led a group of IT workers conducting freelance IT work from Boten, Laos, since at least 2023.</p>
+
+<p>Yun has coordinated several dozen financial transactions amounting to more than $70,000 with
+Hoang Minh Quang
+relating to IT services, and has worked with
+York Louis Celestino Herrera
+to develop freelance IT service contracts. The development comes as LevelBlue highlighted the IT worker scheme’s use of Astrill VPN to conduct their operations while located in countries like China, owing to the service’s ability to bypass China’s Great Firewall. The idea is to tunnel traffic through U.S. exit nodes, effectively allowing them to masquerade as legitimate domestic employees.</p>
+
+<p>“These threat actors commonly operate from China rather than North Korea for two reasons: more reliable Internet infrastructure and the ability to leverage VPN services to conceal their true geographic origin,” security researcher Tue Luu
+said
+. “Lazarus Group’s subgroups, including
+Contagious Interview
+, rely on this capability to access the global Internet unrestricted, manage command-and-control infrastructure, and mask their true location.”
+The cybersecurity company also said it detected an unsuccessful attempt made by North Korea to infiltrate an organization by replying to a help wanted ad. The IT worker, who was hired on August 15, 2025, as a remote employee to work on Salesforce data, was terminated 10 days later after exhibiting indicators showing consistent logins from China. A notable aspect of Jasper Sleet’s tradecraft is the use of artificial intelligence to enable identity fabrication, social engineering, and long‑term operational persistence at low cost, underscoring how AI‑powered services can lower technical barriers and augment threat actors’ capabilities.</p>
+
+<p>“Jasper Sleet leverages AI across the attack lifecycle to get hired, stay hired, and misuse access at scale,” Microsoft
+said
+. “Threat actors are using AI to shortcut the reconnaissance process that informs the development of convincing digital personas tailored to specific job markets and roles.”
+Another crucial component involves using an AI application called Faceswap to insert the faces of North Korean IT workers into stolen identity documents and to generate polished headshots for resumes. In doing so, these efforts not only aim to improve the precision of their campaigns, but also increase the credibility by crafting convincing digital identities. Furthermore, the remote IT worker threat is assessed to have leveraged agentic AI tools to create fake company websites, and to rapidly generate, refine, and reimplement malware components, in some cases by jailbreaking large language models (LLMs).</p>
+
+<p>“Threat actors such as North Korean remote IT workers rely on long‑term, trusted access,” Microsoft said. “Because of this fact, defenders should treat fraudulent employment and access misuse as an insider‑risk scenario, focusing on detecting misuse of legitimate credentials, abnormal access patterns, and sustained low‑and‑slow activity.”
+In a detailed report published by Flare and IBM X-Force examining the tactics and techniques employed by the IT worker operatives, it has come to light that the threat actors use timesheets for tracking job applications and work progress, IP Messenger (aka IPMsg) for decentralized internal communication, and Google Translate to translate job descriptions, craft applications, and even interpret responses from tools like ChatGPT. The IT worker scheme is built atop a multi-tiered operational structure involving recruiters, facilitators, IT workers, and collaborators, each of whom play a distinct part -
+Recruiters, who are responsible for screening potential IT workers and recording initial interview sessions to send to facilitators. Facilitators and IT workers, who are tasked with persona creation, obtaining freelance or full-time employment, and onboarding new hires.</p>
+
+<p>Collaborators, who are recruited to donate their personal identity and/or information to help the IT workers complete the hiring process and receive company-issued laptops. “With the help of recruited western collaborators, primarily from LinkedIn and GitHub, who, willingly or unwillingly, provide their identities for use in the IT worker fraud scheme, NKITW are able to penetrate more deeply and reliably into an organization, for a longer period of time,” the companies
+said
+in a report shared with The Hacker News. “North Korea’s IT worker operations are widespread and deeply integrated within the DPRK party-state. It is an integral component in the DPRK’s revenue-generation and sanctions-evasion machinery.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="interlock-ransomware-exploits-cisco-fmc-zero-day-cve-2026-20131-for-root-access"><a id="article-9"></a>Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access</h2>
+
+<p>Amazon Threat Intelligence is warning of an active
+Interlock
+ransomware campaign that’s exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is
+CVE-2026-20131
+(CVSS score: 10.0), a case of insecure deserialization of user-supplied Java byte stream, which could allow an unauthenticated, remote attacker to bypass authentication and execute arbitrary Java code as root on an affected device. According to data gleaned from the tech giant’s
+MadPot
+global sensor network
+, the security flaw is said to have been exploited as a zero-day since January 26, 2026, more than a month before it was publicly disclosed by Cisco. “This wasn’t just another vulnerability exploit; Interlock had a zero-day in their hands, giving them a week’s head start to compromise organizations before defenders even knew to look.</p>
+
+<p>Upon making this discovery, we shared our findings with Cisco to help support their investigation and protect customers,” CJ Moses, chief information security officer (CISO) of Amazon Integrated Security, said in a
+report
+shared with The Hacker News. The discovery, Amazon said, was made possible, thanks to an operational security blunder on the part of the threat actor that exposed their cybercrime group’s operational toolkit via a misconfigured infrastructure server, offering insights into its multi-stage attack chain, bespoke remote access trojans, reconnaissance scripts, and evasion techniques. The attack chain involves sending crafted HTTP requests to a specific path in the affected software with an aim to execute arbitrary Java code, after which the compromised system issues an HTTP PUT request to an external server to confirm successful exploitation. Once this step is complete, the commands are sent to fetch an ELF binary from a remote server, which hosts other tools linked to Interlock.</p>
+
+<p>The list of identified tools is as follows -
+A PowerShell reconnaissance script used for systematic Windows environment enumeration, gathering details about operating system and hardware, running services, installed software, storage configuration, Hyper-V virtual machine inventory, user file listings across Desktop, Documents, and Downloads directories, browser artifacts from Chrome, Edge, Firefox, Internet Explorer, and 360 browser, active network connections, and RDP authentication events from Windows event logs. Custom remote access trojans written in JavaScript and Java for command-and-control, interactive shell access, arbitrary command execution, bidirectional file transfer, and SOCKS5 proxy capability. It also supports self-update and self-delete mechanisms to replace or remove the artifact without having to reinfect the machine and challenge forensic investigation. A Bash script for configuring Linux servers as HTTP reverse proxies to obscure the attacker’s true origins.</p>
+
+<p>The script delivers
+fail2ban
+, an open-source Linux intrusion prevention tool, and compiles and spawns an HAProxy instance that listens on port 80 and forwards all inbound HTTP traffic to a hard-coded target IP address. Furthermore, the infrastructure laundering script runs a log erasure routine as a cron job every five minutes to aggressively delete and purge the contents of *.log files and suppress shell history by unsetting the HISTFILE variable. A memory-resident web shell for inspecting incoming requests for specially crafted parameters containing encrypted command payloads, which are then decrypted and executed. A lightweight network beacon for phoning attacker-controlled infrastructure likely to validate successful code execution or confirm network port reachability following initial exploitation.</p>
+
+<p>ConnectWise ScreenConnect for persistent remote access and for serving as an alternative pathway should other footholds be detected and removed. Volatility Framework
+, an open-source memory forensics framework
+The links to Interlock stem from “convergent” technical and operational indicators, including the embedded ransom note and TOR negotiation portal. Evidence shows that the threat actor is likely operational during the UTC+3 time zone. In light of active exploitation of the flaw, users are advised to apply patches as soon as possible, conduct security assessments to identify potential compromise, review ScreenConnect deployments for unauthorized installations, and implement defense-in-depth strategies.</p>
+
+<p>“The real story here isn’t just about one vulnerability or one ransomware group—it’s about the fundamental challenge zero-day exploits pose to every security model,” Moses said. “When attackers exploit vulnerabilities before patches exist, even the most diligent patching programs can’t protect you in that critical window.”
+“This is precisely why defense-in-depth is essential—layered security controls provide protection when any single control fails or hasn’t yet been deployed. Rapid patching remains foundational in vulnerability management, but defense in depth helps organizations not to be defenseless during the window between exploit and patch.”
+The disclosure comes as Google
+revealed
+that ransomware actors are changing their tactics in response to declining payment rates, targeting vulnerabilities in common VPNs and firewalls for initial access and leaning less on external tooling and more on built-in Windows capabilities. Multiple threat clusters, both ransomware operators themselves and initial access brokers, have also been found to employ malvertising and/or search engine optimization (SEO) tactics to distribute malware payloads for initial access.</p>
+
+<p>Other commonly observed techniques include the use of compromised credentials, backdoors, or legitimate remote desktop software to establish a foothold, as well as relying on built-in and already installed tools for reconnaissance, privilege escalation, and lateral movement. “While we anticipate ransomware to remain one of the most dominant threats globally, the reduction in profits may cause some threat actors to seek other monetization methods,” Google said. “This could manifest as increased data theft extortion operations, the use of more aggressive extortion tactics, or opportunistically using access to victim environments for secondary monetization mechanisms such as using compromised infrastructure to send phishing messages.”
+Update
+Cisco has
+updated
+its advisory for CVE-2026-20131 to confirm reports of active exploitation. “Cisco continues to strongly recommend that customers upgrade to a fixed software release to remediate this vulnerability,” it added.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-unpatched-telnetd-flaw-cve-2026-32746-enables-unauthenticated-root-rce"><a id="article-10"></a>Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE</h2>
+
+<p>Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges. The vulnerability, tracked as
+CVE-2026-32746
+, carries a CVSS score of 9.8 out of 10.0. It has been described as a case of out-of-bounds write in the LINEMODE Set Local Characters (SLC) suboption handler that results in a buffer overflow, ultimately paving the way for code execution. Israeli cybersecurity company Dream, which discovered and reported the flaw on March 11, 2026, said it affects all versions of the Telnet service implementation through 2.7.</p>
+
+<p>A fix for the vulnerability is expected to be available no later than April 1, 2026. “An unauthenticated remote attacker can exploit this by sending a specially crafted message during the initial connection handshake — before any login prompt appears,” Dream
+said
+in an alert. “Successful exploitation can result in remote code execution as root.”
+“A single network connection to port 23 is sufficient to trigger the vulnerability. No credentials, no user interaction, and no special network position are required.”
+The SLC handler, per Dream, processes option negotiation during the Telnet protocol handshake.</p>
+
+<p>But given that the flaw can be triggered before authentication, an attacker can weaponize it immediately after establishing a connection by sending specially crafted protocol messages. Successful exploitation could result in complete system compromise if telnetd runs with root privileges. This, in turn, could open the door to various post-exploitation actions, including the deployment of persistent backdoors, data exfiltration, and lateral movement by using the compromised hosts as pivot points. “An unauthenticated attacker can trigger it by connecting to port 23 and sending a crafted SLC suboption with many triplets,”
+according
+to Dream security researcher Adiel Sol.</p>
+
+<p>“No login is required; the bug is hit during option negotiation, before the login prompt. The overflow corrupts memory and can be turned into arbitrary writes. In practice, this can lead to remote code execution. Because telnetd usually runs as root (e.g., under inetd or xinetd), a successful exploit would give the attacker full control of the system.”
+In the absence of a fix, it’s advised to disable the service if it’s not necessary, run telnetd without root privileges where required, block port 23 at the network perimeter and host-based firewall level to restrict access, and isolate Telnet access.</p>
+
+<p>The disclosure comes nearly two months after another critical security flaw was disclosed in GNU InetUtils telnetd (
+CVE-2026-24061
+, CVSS score: 9.8) that could be leveraged to gain root access to a target system. The vulnerability has since come under active exploitation in the wild, per the U.S. Cybersecurity and Infrastructure Security Agency. Update
+Data from attack surface management platform Censys
+shows
+that there are about 3,362 exposed hosts as of March 18, 2026.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="claude-code-security-and-magecart-getting-the-threat-model-right"><a id="article-11"></a>Claude Code Security and Magecart: Getting the Threat Model Right</h2>
+
+<p>When a Magecart payload hides inside the EXIF data of a dynamically loaded third-party favicon, no repository scanner will catch it – because the malicious code never actually touches your repo. As teams adopt Claude Code Security for static analysis, this is the exact technical boundary where AI code scanning stops and client-side runtime execution begins. A detailed analysis of where Claude Code Security stops — and what runtime monitoring covers — is available
+here
+. A
+Magecart skimmer
+recently found in the wild used a three-stage loader chain to hide its payload inside a favicon’s EXIF metadata — never touching the merchant’s source code, never appearing in a repository, and executing entirely in the shopper’s browser at checkout.</p>
+
+<p>The attack raises a question that’s worth getting precise about: which category of tool is actually supposed to catch this? Magecart Lives Outside Your Codebase
+Magecart‑style attacks are rarely about classic vulnerabilities in your own source code. They are supply chain infiltrations. The malicious JavaScript typically arrives via compromised third‑party assets: tag managers, payment/checkout widgets, analytics tools, CDN‑hosted scripts, and images that are loaded into the browser at runtime.</p>
+
+<p>The victim organization didn’t write that code, doesn’t review it in PRs, and it often doesn’t exist in their repository at all. That means a repository‑based static analysis tool, such as Claude Code Security, is therefore limited by design in this scenario, because it can only analyze what’s in the repo or what you explicitly feed it. Any skimmer that lives solely in modified third‑party resources or dynamically loaded binaries in production never enters its field of view. That’s not a bug in the product; it’s a scope mismatch.</p>
+
+<p>The Attack Flow: How the Skimmer Hides
+Here is the initial loader seen on compromised websites:
+This stub dynamically loads a script from what appears to be a legitimate Shopify CDN URL. The loaded script then constructs the actual malicious URL using obfuscated index arrays:
+Once decoded, this points to //b4dfa5[.]xyz/favicon.ico. What happens next is where the technique gets interesting: the script retrieves the favicon as binary data, parses the EXIF metadata to extract a malicious string, and executes it via new Function() — the payload lives inside image metadata, so it’s invisible to anything that isn’t watching the browser at runtime. The final exfiltration call POSTs stolen payment data silently to an attacker-controlled server:
+The chain has four properties that matter for the tooling discussion that follows: the initial loader looks like a benign third-party include; the payload is hidden in binary image metadata; exfiltration happens directly from the shopper’s browser; and none of it requires touching the merchant’s own source code.</p>
+
+<p>What Claude Code Security Can and Can’t See
+Claude Code Security is designed to scan codebases, trace data flows, and suggest fixes for vulnerabilities in the code you or your teams write. That makes it useful for securing first‑party applications, but it also defines its blind spots for this attack class. In this scenario, it has no practical visibility into malicious code that’s only injected into third‑party, CDN, or tag‑manager‑hosted scripts that are never stored in your repos. It can’t interrogate payloads hidden in binary assets like favicons or images that are not part of your source tree either.</p>
+
+<p>It can’t assess the risk or live reputation of attacker‑controlled domains that only appear at runtime, and real‑time detection of anomalous browser‑side network requests during checkout is also beyond its scope. Where it could contribute (though not as the primary control) would be in cases where your own code contains dynamic script‑injection logic, a pattern that a code analysis tool may flag as risky. And if first‑party code hard‑codes suspicious exfiltration endpoints or uses unsafe data‑collection logic, static analysis can highlight those flows for review. The top four rows are what matter most in a Magecart scenario, and Claude Code Security has no runtime visibility into any of them.</p>
+
+<p>The bottom two represent a fundamentally different threat: a developer accidentally writing malicious-looking code in their own repository. Magecart is One Vector, Not the Whole Attack Surface
+The favicon steganography technique above is sophisticated, but it’s one instance of a broader pattern. Web supply chain attacks arrive through several distinct mechanisms, each with the same defining characteristic: the malicious activity happens at runtime, in the browser, through assets the merchant didn’t create. See how AI-generated, polymorphic JavaScript is raising the stakes →
+A few others worth naming:
+Malicious iframe injection.</p>
+
+<p>A compromised third-party widget silently overlays a legitimate checkout form with an attacker-controlled iframe. The user sees the real page, but their keystrokes are sent to the attacker. Nothing in the merchant’s repository changes. Pixel tracker abuse.</p>
+
+<p>Analytics and advertising pixels — nearly universal on e-commerce sites — are loaded from external CDNs. When those CDNs are compromised or the pixel provider itself is breached, the tracking code running on every page becomes an exfiltration channel. The merchant’s code still calls the same legitimate-looking endpoint it always did. DOM-based credential harvesting.</p>
+
+<p>A script loaded via a tag manager silently listens for form field events on login or payment pages, capturing data before it’s ever submitted. The attack lives entirely in the event handler registered at runtime, not in anything a static scanner would ever see. Each of these follows the same logic as the Magecart case: the threat lives outside the repository, executes in a context that static analysis cannot observe, and targets the gap between what you shipped and what actually runs in your users’ browsers. You can find the
+full breakdown
+of how each vector maps to tooling coverage — and what a defense-in-depth program looks like across all of them — in the guide linked below.</p>
+
+<p>Why Runtime Monitoring Is Critical (But Not the Only Control)
+For
+web supply chain threats
+like this Magecart campaign, continuous monitoring of what actually runs in users’ browsers is the primary layer with direct visibility into the attack as it happens. Client‑side runtime monitoring platforms answer a couple of questions that static tools cannot:
+“What code is executing in my users’ browsers right now, and what is it doing?”
+At the same time, runtime monitoring is only one part of the picture. It works best as part of a defense‑in‑depth strategy. Static analysis and supply‑chain governance reduce the attack surface, while runtime monitoring catches what slips through, and what lives entirely outside your repos.</p>
+
+<p>Reframing the “Test”: Category, Not Capability
+Evaluating a repo-centric tool like Claude Code Security against a runtime attack is a category error, not a product failure. It’s like expecting a smoke detector to put out fires. It’s the wrong tool for that job, but the ideal one for what it was designed to do. For a fire-safe building, you need smoke detectors and fire extinguishers, and for a safe website, you need Claude Code Security and runtime monitoring in your stack.</p>
+
+<p>For Magecart and similar client‑side skimming attacks, you need that runtime window into the browser. Static repository scanning, by itself, simply doesn’t see where these attacks truly live. If you’re mapping tooling to threat classes at the CISO level, we’ve put together a short guide on how code security and runtime monitoring fit together across the full range of web supply chain vectors — and where each one stops being useful. CISO’s Guide to Claude Code Security →
+Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="9-critical-ip-kvm-flaws-enable-unauthenticated-root-access-across-four-vendors"><a id="article-12"></a>9 Critical IP KVM Flaws Enable Unauthenticated Root Access Across Four Vendors</h2>
+
+<p>Cybersecurity researchers have warned about the risks posed by low-cost IP KVM (Keyboard, Video, Mouse over Internet Protocol) devices, which can grant attackers extensive control over compromised hosts. The nine vulnerabilities, discovered by
+Eclypsium
+, span four different products from GL-iNet Comet RM-1, Angeet/Yeeso ES3 KVM, Sipeed NanoKVM, and JetKVM. The most severe of them allow unauthenticated actors to gain root access or run malicious code. “The common themes are damning: missing firmware signature validation, no brute-force protection, broken access controls, and exposed debug interfaces,” researchers Paul Asadoorian and Reynaldo Vasquez Garcia
+said
+in an analysis.</p>
+
+<p>With IP KVM devices enabling remote access to the target machine’s keyboard, video output, and mouse input at the BIOS/UEFI level, successful exploitation of vulnerabilities in these products can expose systems to potential takeover risks, undermining security controls put in place. The list of shortcomings is as follows -
+CVE-2026-32290
+(CVSS score: 4.2) - An insufficient verification of firmware authenticity in GL-iNet Comet KVM (Fix being planned)
+CVE-2026-32291
+(CVSS score: 7.6) - A Universal Asynchronous Receiver-Transmitter (UART) root access vulnerability in GL-iNet Comet KVM (Fix being planned)
+CVE-2026-32292
+(CVSS score: 5.3) - An insufficient brute-force protection vulnerability in GL-iNet Comet KVM (Fixed in version 1.8.1 BETA)
+CVE-2026-32293
+(CVSS score: 3.1) - An insecure initial provisioning via unauthenticated cloud connection vulnerability in GL-iNet Comet KVM (Fixed in version 1.8.1 BETA)
+CVE-2026-32294
+(CVSS score: 6.7) - An insufficient update verification vulnerability in JetKVM (Fixed in version 0.5.4)
+CVE-2026-32295
+(CVSS score: 7.3) - An insufficient rate limiting vulnerability in JetKVM (Fixed in version 0.5.4)
+CVE-2026-32296
+(CVSS score: 5.4) - A configuration endpoint exposure vulnerability in Sipeed NanoKVM (Fixed in NanoKVM version 2.3.1 and NanoKVM Pro version 1.2.4)
+CVE-2026-32297
+(CVSS score: 9.8) - A missing authentication for a critical function vulnerability in Angeet ES3 KVM leading to arbitrary code execution (No fix available)
+CVE-2026-32298
+(CVSS score: 8.8) - An operating system command injection vulnerability in Angeet ES3 KVM leading to arbitrary command execution (No fix available)
+“These are not exotic zero-days requiring months of reverse engineering,” the researchers noted. “These are fundamental security controls that any networked device should implement. Input validation.</p>
+
+<p>Authentication. Cryptographic verification. Rate limiting. We are looking at the same class of failures that plagued early IoT devices a decade ago, but now on a device class that provides the equivalent of physical access to everything it connects to.”
+An adversary can weaponize these issues to inject keystrokes, boot from removable media to bypass disk encryption or Secure Boot protections, circumvent lock screens and access systems, and, more importantly, remain undetected by security software installed at the operating system level.</p>
+
+<p>This is not the first time vulnerabilities have been disclosed in IP KVM devices. In July 2025, Russian cybersecurity vendor Positive Technologies
+flagged five flaws
+in ATEN International switches (CVE-2025-3710, CVE-2025-3711, CVE-2025-3712, CVE-2025-3713, and CVE-2025-3714) that could pave the way for denial-of-service or remote code execution. What’s more, such IP KVM switches like PiKVM or TinyPilot
+have been put to use
+by North Korean IT workers residing in countries like China to remotely connect to company-issued laptops hosted on laptop farms. As mitigations, it’s recommended to enforce multi-factor authentication (MFA) where supported, isolate KVM devices on a dedicated management VLAN, restrict internet access, use tools like Shodan to check for external exposure, monitor for unexpected network traffic to/from the devices, and keep the firmware up-to-date.</p>
+
+<p>“A compromised KVM is not like a compromised IoT device sitting on your network. It is a direct, silent channel to every machine it controls,” Eclypsium said. “An attacker who compromises the KVM can hide tools and backdoors on the device itself, consistently re-infecting host systems even after remediation.”
+“Since some firmware updates lack signature verification on most of these devices, a supply-chain attacker could tamper with the firmware at distribution time and have it persist indefinitely.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

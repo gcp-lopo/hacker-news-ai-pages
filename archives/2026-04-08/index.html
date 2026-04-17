@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-08 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Iran-Linked Hackers Disrupt U.S. Critical Infrastructure by Targeting Internet-Exposed PLCs</a></li>
+      
+        <li><a href="#article-2">Russian State-Linked APT28 Exploits SOHO Routers in Global DNS Hijacking Campaign</a></li>
+      
+        <li><a href="#article-3">[Webinar] How to Close Identity Gaps in 2026 Before AI Exploits Enterprise Risk</a></li>
+      
+        <li><a href="#article-4">Docker CVE-2026-34040 Lets Attackers Bypass Authorization and Gain Host Access</a></li>
+      
+        <li><a href="#article-5">Over 1,000 Exposed ComfyUI Instances Targeted in Cryptomining Botnet Campaign</a></li>
+      
+        <li><a href="#article-6">Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</a></li>
+      
+        <li><a href="#article-7">The Hidden Cost of Recurring Credential Incidents</a></li>
+      
+        <li><a href="#article-8">New GPUBreach Attack Enables Full CPU Privilege Escalation via GDDR6 Bit-Flips</a></li>
+      
+        <li><a href="#article-9">China-Linked Storm-1175 Exploits Zero-Days to Rapidly Deploy Medusa Ransomware</a></li>
+      
+        <li><a href="#article-10">Flowise AI Agent Builder Under Active CVSS 10.0 RCE Exploitation; 12,000+ Instances Exposed</a></li>
+      
+        <li><a href="#article-11">Iran-Linked Password-Spraying Campaign Targets 300+ Israeli Microsoft 365 Organizations</a></li>
+      
+        <li><a href="#article-12">DPRK-Linked Hackers Use GitHub as C2 in Multi-Stage Attacks Targeting South Korea</a></li>
+      
+        <li><a href="#article-13">Multi-OS Cyberattacks: How SOCs Close a Critical Risk in 3 Steps</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-04-08-ai创业新闻">2026-04-08 AI创业新闻</h1>
+
+<h2 id="iran-linked-hackers-disrupt-us-critical-infrastructure-by-targeting-internet-exposed-plcs"><a id="article-1"></a>Iran-Linked Hackers Disrupt U.S. Critical Infrastructure by Targeting Internet-Exposed PLCs</h2>
+
+<p>Iran-affiliated cyber actors are targeting internet-facing operational technology (OT) devices across critical infrastructures in the U.S., including programmable logic controllers (PLCs), cybersecurity and intelligence agencies
+warned
+Tuesday. “These attacks have led to diminished PLC functionality, manipulation of display data and, in some cases, operational disruption and financial loss,” the U.S. Federal Bureau of Investigation (FBI)
+said
+in a post on X. The agencies said the
+campaign
+is part of a
+recent escalation
+in cyber attacks orchestrated by Iranian hacking groups against U.S.</p>
+
+<p>organizations in response to the ongoing conflict between Iran and the U.S. and Israel. Specifically, the activity has led to PLC disruptions across several U.S. critical infrastructure sectors via what the authoring agencies described as malicious interactions with the project file and manipulation of data on human-machine interface (HMI) and supervisory control and data acquisition (SCADA) displays.</p>
+
+<p>These attacks have singled out Rockwell Automation and Allen-Bradley PLCs deployed in government services and facilities, Water and Wastewater Systems (WWS), and energy sectors. “The actors used leased, third-party hosted infrastructure with configuration software, such as Rockwell Automation’s Studio 5000 Logix Designer software, to create an accepted connection to the victim’s PLC,” the advisory said. “Targeted devices include CompactLogix and Micro850 PLC devices.”
+Upon obtaining initial access, the threat actors established command-and-control by deploying Dropbear, a Secure Shell (SSH) software, on victim endpoints to enable remote access through port 22 and facilitate the extraction of the device’s project file and data manipulation on HMI and SCADA displays. To combat the threat, organizations are advised to avoid exposing the PLC to the internet, take steps to prevent remote modification either via a physical or software switch, implement multi-factor authentication (MFA), and erect a firewall or network proxy in front of the PLC to control network access, keep PLC devices up-to-date, disable any unused authentication features, and monitor for unusual traffic.</p>
+
+<p>This is not the first time Iranian threat actors have targeted OT networks and PLCs. In late 2023, Cyber Av3ngers (aka Hydro Kitten, Shahid Kaveh Group, and UNC5691) was
+linked
+to the active exploitation of Unitronics PLCs to target the Municipal Water Authority of Aliquippa in western Pennsylvania. These attacks compromised at least 75 devices. “This advisory confirms what we’ve observed for months: Iran’s cyber escalation follows a known playbook.</p>
+
+<p>Iranian threat actors are now moving faster and broader and targeting both IT and OT infrastructure,” Sergey Shykevich, threat intelligence group manager at Check Point Research, said in a statement shared with The Hacker News. “We documented identical targeting patterns against Israeli PLCs in March. It is not the first time Iranian actors are targeting operational technology in the US for disruption purposes, so organizations shouldn’t treat this as a new threat, but as an accelerating one.”
+The development comes amid a
+new-found surge
+in distributed denial-of-service (DDoS) attacks and claims of hack-and-leak operations carried out by cyber proxy groups and hacktivists targeting Western and Israeli entities, according to Flashpoint. In a report published this week, DomainTools Investigations (DTI) described activity attributed to Homeland Justice, Karma/KarmaBelow80, and Handala Hack as a “single, coordinated cyber influence ecosystem” aligned with Iran’s Ministry of Intelligence and Security (MOIS) rather than a set of distinct hacktivist groups.</p>
+
+<p>“These personas function as interchangeable operational veneers applied to a consistent underlying capability,” DTI
+said
+. “Their purpose is not to reflect organizational separation, but to enable segmentation of messaging, targeting, and attribution while preserving continuity of infrastructure and tradecraft.”
+Public-facing domains and Telegram channels serve as the primary dissemination and amplification hub, with the messaging platform also playing a huge role in command-and-control (C2) operations by allowing the malware to communicate with threat actor-controlled bots, reduce infrastructure overhead, and blend in with normal operations. “This ecosystem represents a state-directed instrument of cyber-enabled influence, in which technical operations are tightly integrated with narrative manipulation and media amplification dynamics to achieve coercive and strategic effects,” DTI added. MuddyWater aș a CastleRAT Affiliate
+The development comes as JUMPSEC detailed MuddyWater ties with the criminal ecosystem, stating that the Iranian state-sponsored threat actor operates at least two CastleRAT builds against Israeli targets.</p>
+
+<p>It’s worth noting that CastleRAT is a remote access trojan that’s part of the
+CastleLoader framework
+attributed by Recorded Future to a group it tracks under the moniker GrayBravo (aka TAG-150). Central to the operations is a PowerShell deployer (“reset.ps1”) that deploys a previously undocumented JavaScript-based malware called ChainShell, which then contacts a smart contract on the Ethereum blockchain to retrieve a C2 address and use it to fetch next-stage JavaScript code for execution on compromised hosts. Some aspects of these connections between MOIS and the cybercrime ecosystem were also flagged by
+Ctrl-Alt-Intel
+,
+Broadcom
+, and
+Check Point
+, highlighting the growing engagement as evidence of a growing reliance on off-the-shelf tools to support state objectives and complicate attribution efforts. The same PowerShell loader has also been found to deliver a botnet malware referred to as Tsundere (aka Dindoor).</p>
+
+<p>According to JUMPSEC, both ChainShell and Tsundere are separate TAG-150 platform components that are deployed along with CastleRAT. “The adoption of a Russian criminal MaaS by an Iranian state actor has direct implications for defenders,” JUMPSEC said in a report shared with The Hacker News. “Organizations targeted by MuddyWater, especially in the defence, aerospace, energy, and government sectors, now face threats that combine state-level targeting with commercially developed offensive tools.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="russian-state-linked-apt28-exploits-soho-routers-in-global-dns-hijacking-campaign"><a id="article-2"></a>Russian State-Linked APT28 Exploits SOHO Routers in Global DNS Hijacking Campaign</h2>
+
+<p>The Russia-linked threat actor known as
+APT28
+(aka Forest Blizzard) has been linked to a new campaign that has compromised insecure MikroTik and TP-Link routers and modified their settings to turn them into malicious infrastructure under their control as part of a cyber espionage campaign since at least May 2025. The large-scale exploitation campaign has been
+codenamed
+FrostArmada
+by Lumen’s Black Lotus Labs, with Microsoft
+describing
+it as an effort to exploit vulnerable home and small office (SOHO) internet devices to hijack DNS traffic and enable passive collection of network data. “Their technique modified DNS settings on compromised routers to hijack local network traffic to capture and exfiltrate authentication credentials,” Black Lotus Labs said in a report shared with The Hacker News. “When targeted domains were requested by a user, the actor redirected traffic to an attacker-in-the-middle (AitM) node, where those credentials were harvested and exfiltrated.</p>
+
+<p>This approach enabled a nearly invisible attack that required no interaction from the end user.”
+The infrastructure associated with the campaign has been disrupted and taken offline as part of a joint operation in collaboration with the U.S. Department of Justice, Federal Bureau of Investigation, and other international partners. In a press statement announcing the court-authorized technical operation neutralizing the U.S. portion of the network, the U.S.</p>
+
+<p>Department of Justice (DoJ) said the DNS hijacking operation allowed Russian intelligence agencies to target individuals of interest to the Kremlin, including those in the military, government, and critical infrastructure sectors. The law enforcement effort has been codenamed Operation Masquerade. The activity is assessed to have commenced as far back as May 2025 in a limited capacity, followed by widespread router exploitation and DNS redirection commencing in early August. At its peak in December 2025, more than 18,000 unique IP addresses from no less than 120 countries were found communicating with APT28 infrastructure.</p>
+
+<p>These efforts primarily singled out government agencies, such as ministries of foreign affairs, law enforcement, and third-party email and cloud service providers across North African, Central American, Southeast Asian, and European countries. The Microsoft Threat Intelligence team, in its analysis of the campaign, attributed the activity to APT28 and its sub-group tracked as Storm-2754. The tech giant said it identified more than 200 organizations and 5,000 consumer devices impacted by the threat actor’s malicious DNS infrastructure. “For nation-state actors like Forest Blizzard, DNS hijacking enables persistent, passive visibility and reconnaissance at scale,” Redmond said.</p>
+
+<p>“By compromising edge devices that are upstream of larger targets, threat actors can take advantage of less closely monitored or managed assets to pivot into enterprise environments.”
+The DNS hijacking activity has also facilitated AitM attacks that made it possible to facilitate the theft of passwords, OAuth tokens, and other credentials for web and email-related services, putting organizations at risk of broader compromise. The development marks the first time the adversarial collective has been observed using DNS hijacking at scale to support AiTM of Transport Layer Security (TLS) connections after exploiting edge devices, Microsoft added. At a high level, the attack chain involves APT28 gaining remote administrative access to SOHO devices and changing default network configurations to use DNS resolvers under its control. The malicious reconfiguration causes the devices to send their DNS requests to actor-controlled servers.</p>
+
+<p>This, in turn, causes DNS lookups for email applications or login pages to be resolved by the malicious DNS server. The threat actor then attempts to conduct AitM attacks against those connections to steal user account credentials by tricking the victims into connecting to malicious infrastructure. Some of these domains are associated with Microsoft Outlook on the web. Microsoft said it also identified AitM activity aimed at non-Microsoft hosted servers in at least three government organizations in Africa.</p>
+
+<p>“It is believed that the DNS hijacking operations are opportunistic in nature, with the actor gaining visibility of a large pool of candidate target users then filtering down users at each stage in the exploitation chain to triage for victims of likely intelligence value,” the U.K. National Cyber Security Centre (NCSC)
+said
+. APT28 is said to have exploited TP-Link WR841N routers for its DNS poisoning operations by likely taking advantage of
+CVE-2023-50224
+(CVSS score: 6.5), an authentication bypass vulnerability that could be used to extract stored credentials via specially crafted HTTP GET requests. Per the DoJ, threat actors affiliated with Military Unit 26165 of the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU) have exploited known security vulnerabilities to steal credentials for thousands of TP-Link routers worldwide since at least 2024, using them to redirect DNS requests to GRU-controlled servers.</p>
+
+<p>“The actors then implemented an automated filtering process to determine which DNS requests were of interest and warranted interception,” the DoJ
+said
+. “For select targets, the GRU’s DNS resolvers provided fraudulent DNS records for specific domains that mimicked legitimate services – including Microsoft Outlook Web Access – to facilitate Actor-in-the-Middle attacks against encrypted victim network traffic.”
+A second cluster of servers has been found to receive DNS requests via compromised routers and subsequently forward them to remote actor-owned servers. This cluster is also assessed to have engaged in interactive operations targeting a small number of MikroTik routers located in Ukraine. “Forest Blizzard’s DNS hijacking and AitM activity allows the actor to conduct DNS collection on sensitive organizations worldwide and is consistent with the actor’s longstanding remit to collect espionage against priority intelligence targets,” Microsoft said.</p>
+
+<p>“Although we have only observed Forest Blizzard utilizing their DNS hijacking campaign for information collection, an attacker could use an AiTM position for additional outcomes, such as malware deployment or denial of service.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="webinar-how-to-close-identity-gaps-in-2026-before-ai-exploits-enterprise-risk"><a id="article-3"></a>[Webinar] How to Close Identity Gaps in 2026 Before AI Exploits Enterprise Risk</h2>
+
+<p>In the rapid evolution of the 2026 threat landscape, a frustrating paradox has emerged for CISOs and security leaders:
+Identity programs are maturing, yet the risk is actually increasing
+. According to new research from the
+Ponemon Institute
+, hundreds of applications within the typical enterprise remain disconnected from centralized identity systems. These ”dark matter” applications operate outside the reach of standard governance, creating a massive, unmanaged attack surface that is now being aggressively exploited—not just by human threat actors, but by
+autonomous AI agents
+. The Invisible Threat: Disconnected Apps &amp; AI Amplification
+Modern enterprises have invested heavily in IAM and Zero Trust, but the ”last mile” of identity—legacy apps, localized accounts, and siloed SaaS—remains a stubborn blind spot.</p>
+
+<p>The entry of AI into the workforce has turned this gap from a compliance headache into a critical vulnerability. As organizations deploy AI copilots and autonomous agents to increase productivity, these agents often require access to the very systems that sit outside your centralized control. The result? AI agents are inadvertently amplifying credential risks, reusing stale tokens, and navigating paths of least resistance that your security team can’t even see.</p>
+
+<p>Join the 2026 Identity Maturity Briefing
+To help security leaders navigate this ”Confidence Gap,”
+The Hacker News
+is
+hosting an exclusive webinar featuring
+Mike Fitzpatrick (Ponemon Institute)
+and
+Matt Chiodi (CSO, Cerby)
+. They will break down the latest findings from over
+600 IT and security leaders
+and provide a tactical roadmap for closing the identity gaps that lead to audit friction and stalled digital initiatives. In this session, you will uncover:
+Exclusive 2026 Benchmark Data:
+See how your identity maturity compares to your peers. The “Shadow AI” Factor:
+Understand how AI agents are expanding your disconnected surface area.</p>
+
+<p>The Cost of Manual Management:
+Why relying on manual password and credential fixes is a losing strategy in 2026. Practical Remediation Steps:
+Learn exactly what leading organizations are doing now to regain control of every application. Why You Should Attend
+If you are leading an identity, security, or compliance strategy, ”doing more of the same” is no longer an option. This conversation is designed to move you beyond theoretical maturity and into
+operational control
+.</p>
+
+<p>Secure your spot now
+to get the data-driven insights you need to protect your organization’s most fragmented—and most targeted—asset:
+Identity. Register for the Webinar: Identity Maturity Under Pressure
+→
+Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="docker-cve-2026-34040-lets-attackers-bypass-authorization-and-gain-host-access"><a id="article-4"></a>Docker CVE-2026-34040 Lets Attackers Bypass Authorization and Gain Host Access</h2>
+
+<p>A high-severity security vulnerability has been disclosed in Docker Engine that could permit an attacker to bypass authorization plugins (
+AuthZ
+) under specific circumstances. The vulnerability, tracked as
+CVE-2026-34040
+(CVSS score: 8.8), stems from an incomplete fix for
+CVE-2024-41110
+, a maximum-severity vulnerability in the same component that came to light in July 2024. “Using a specially-crafted API request, an attacker could make the Docker daemon forward the request to an authorization plugin without the body,” Docker Engine maintainers
+said
+in an advisory released late last month. “The authorization plugin may allow a request which it would have otherwise denied if the body had been forwarded to it.”
+“Anyone who depends on authorization plugins that introspect the request body to make access control decisions is potentially impacted.”
+Multiple security vulnerabilities, including Asim Viladi Oglu Manizada, Cody, Oleh Konko, and Vladimir Tokarev, have been credited with independently discovering and reporting the bug.</p>
+
+<p>The issue has been patched in Docker Engine version 29.3.1. According to a report published by Cyera Research Labs researcher Tokarev, the vulnerability stems from the fact that the fix for CVE-2024-41110 did not properly handle oversized HTTP request bodies, thereby opening the door to a scenario where a single padded HTTP request can be used to create a privileged container with host file system access. In a hypothetical attack scenario, an attacker who has Docker API access restricted by an AuthZ plugin can undermine the mechanism by padding a container creation request to more than 1MB, causing it to be dropped before reaching the plugin. “The plugin allows the request because it sees nothing to block,” Tokarev
+said
+in a report shared with The Hacker News.</p>
+
+<p>“The Docker daemon processes the full request and creates a privileged container with root access to the host: your AWS credentials, SSH keys, Kubernetes configs, and everything else on the machine. This works against every AuthZ plugin in the ecosystem.”
+What’s more, an artificial intelligence (AI) coding agent like
+OpenClaw running inside a Docker-based sandbox
+can be tricked into executing a prompt injection concealed within a specifically crafted GitHub repository as part of a regular developer workflow, resulting in the execution of malicious code that exploits CVE-2026-34040 to bypass authorization using the above approach and create a privileged container and mount the host file system. With this level of access in place, the attacker can extract credentials for cloud services, and abuse them to take control of cloud accounts, Kubernetes clusters, and even SSH into production servers. It doesn’t end there.</p>
+
+<p>Cyera also cautioned that AI agents can
+figure out the bypass on their own
+and trigger it by constructing a padded HTTP request upon encountering errors when attempting to access files like
+kubeconfig
+as part of a legitimate debugging task issued by a developer (e.g., debug the K8s out-of-memory issue). This approach eliminates the need for planting a poisoned repository containing the malicious instructions. “AuthZ plugin denied the mount request,” Cyera explained. “The agent has access to the Docker API and knows how HTTP works.</p>
+
+<p>CVE-2026-34040 doesn’t require any exploit code, privilege, or special tools. It’s a single HTTP request with extra padding. Any agent that can read Docker API documentation can construct it.”
+As temporary workarounds, it’s recommended to avoid using AuthZ plugins that rely on request body inspection for security decisions, limit access to the Docker API to trusted parties by following the principle of least privilege, or run Docker in
+rootless mode
+. “In rootless mode, even a privileged container’s ‘root’ maps to an unprivileged host UID,” Tokarev said.</p>
+
+<p>“The blast radius drops from ‘full host compromise’ to ‘compromised unprivileged user.’ For environments that can’t go fully rootless, –userns-remap provides similar UID mapping.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="over-1000-exposed-comfyui-instances-targeted-in-cryptomining-botnet-campaign"><a id="article-5"></a>Over 1,000 Exposed ComfyUI Instances Targeted in Cryptomining Botnet Campaign</h2>
+
+<p>An active campaign has been observed targeting internet-exposed instances running ComfyUI, a popular stable diffusion platform, to enlist them into a cryptocurrency mining and proxy botnet. “A purpose-built Python scanner continuously sweeps major cloud IP ranges for vulnerable targets, automatically installing malicious nodes via
+ComfyUI-Manager
+if no exploitable node is already present,” Censys security researcher Mark Ellzey
+said
+in a report published Monday. The attack activity, at its core, systemically scans for exposed ComfyUI instances and exploits a misconfiguration that allows remote code execution on unauthenticated deployments through
+custom nodes
+. Upon successful exploitation, the compromised hosts are added to a cryptomining operation that mines Monero via XMRig and Conflux via lolMiner, as well as to a Hysteria V2 botnet.</p>
+
+<p>Both of them are centrally managed through a Flask-based command-and-control (C2) dashboard. Data from the attack surface management platforms shows that there are more than
+1,000 publicly-accessible ComfyUI instances
+. While not a huge number, it’s sufficient for a threat actor to run opportunistic campaigns to reap financial gains. Censys said it discovered the campaign last month after identifying an open directory on
+77.110.96[.]200
+, an IP address associated with a bulletproofing hosting services provider,
+Aeza Group
+.</p>
+
+<p>The directory is said to have contained a previously undocumented set of tools to pull off the attacks. This includes two reconnaissance tools to enumerate exposed ComfyUI instances across cloud infrastructure, identify those that have ComfyUI-Manager installed, and shortlist those that are susceptible to the code execution exploit. One of the two scanner Python scripts also functions as an exploitation framework that weaponizes ComfyUI’s custom nodes to achieve code execution. This technique, some aspects of which were
+documented
+by Snyk in December 2024, takes advantage of the fact that some custom nodes accept raw Python code as input and run it directly without requiring any authentication.</p>
+
+<p>As a result, an attacker can scan exposed ComfyUI instances for specific custom node families that support arbitrary code execution, effectively turning the service into a channel for delivering attacker-controlled Python payloads. Some of the custom node families that the attack particularly looks for are listed below -
+Vova75Rus/ComfyUI-Shell-Executor
+filliptm/ComfyUI_Fill-Nodes
+seanlynch/srl-nodes
+ruiqutech/ComfyUI-RuiquNodes
+“If none of the target nodes are present, the scanner checks whether ComfyUI-Manager is installed,” Censys said. “If available, it installs a vulnerable node package itself, then retries exploitation.”
+It’s worth noting that “ComfyUI-Shell-Executor” is a malicious package created by the attacker to fetch a next-stage shell script (“ghost.sh”) from the aforementioned IP address. Once code execution is obtained, the scanner removes evidence of the exploit by clearing the ComfyUI prompt history.</p>
+
+<p>A newer version of the scanner also incorporates persistence mechanisms that cause the shell script to be downloaded every six hours and the exploit workflow to be re-executed every time ComfyUI is started. The shell script, for its part, disables shell history, kills competing miners, launches the miner process, anduses the
+LD_PRELOAD
+hook to hide a watchdog process that ensures the miner process is revived in the event it gets terminated. In addition, the miner program is copied to multiple locations so that even if the primary install directory gets wiped, it can be launched from one of the fallback locations. A third mechanism the malware uses to ensure persistence is the use of the ”
+chattr +i
+“ command to lock the miner binaries and prevent them from being deleted, modified, or renamed, even by the root user.</p>
+
+<p>“There is also dedicated code targeting a specific competitor, ‘Hisana’ (which is referenced throughout the code), which appears to be another mining botnet,” Censys explained. “Rather than just killing it, ghost.sh overwrites its configuration to redirect Hisana’s mining output to its own wallet address, then occupies Hisana’s C2 port (10808) with a dummy Python listener so Hisana can’t restart.”
+The infected hosts are commandeered by means of a Flask-based C2 panel, which allows the operator to push instructions or deploy additional payloads, including a shell script that installs Hysteria V2 with the likely goal of selling compromised nodes as proxies. Further analysis of the attacker’s shell command history has revealed an SSH login attempt as root to the IP address
+120.241.40[.]237
+, which has been linked to an
+ongoing worm campaign
+targeting exposed Redis database servers. “Much of the tooling in this repository appears hastily assembled, and the overall tactics and techniques might initially suggest unsophisticated activity,” Censys said.</p>
+
+<p>“Specifically, the operator identifies exposed ComfyUI instances running custom nodes, determines which of those nodes expose unsafe functionality, and then uses them as a pathway to remote code execution.”
+“The infrastructure accessed by the operator further supports the idea that this activity is part of a broader campaign focused on discovering and exploiting exposed services, followed by the deployment of custom tooling for persistence, scanning, or monetization.”
+The discovery coincides with the emergence of multiple botnet campaigns in recent weeks -
+Exploitation of
+command injection vulnerabilities
+in n8n (
+CVE-2025-68613
+) and Tenda AC1206 routers (
+CVE-2025-7544
+) to
+add them
+to a Mirai-based botnet known as
+Zerobot
+. Exploitation of
+vulnerabilities
+in Apache ActiveMQ (
+CVE-2023-46604
+), Metabase (
+CVE-2023-38646
+), and React Server Components (
+CVE-2025-55182
+aka React2Shell) to deliver
+Kinsing
+, a persistent malware used for cryptocurrency mining and launching Distributed Denial of Service (DDoS) attacks. Exploitation of a suspected zero-day vulnerability in fnOS Network Attached Storage (NAS) to target internet-exposed systems and implant them with a DDoS malware called
+Netdragon
+. “NetDragon establishes an HTTP backdoor interface on compromised devices, enabling attackers to remotely access and control the infected systems,” QiAnXin XLab said.</p>
+
+<p>“It tampers with the ‘hosts’ file to hijack the official Feiniu NAS system update domains, effectively preventing devices from obtaining system updates and security patches.”
+Expansion of
+RondoDox
+‘s exploit list to 174 different vulnerabilities, while shifting the attack methodology from a “shotgun approach” to more targeted and recent flaws that are more likely to lead to infections. Exploitation of
+known security vulnerabilities
+to deploy a new variant of
+Condi
+, a Linux malware that turns compromised linux devices into bots capable of conducting DDoS attacks. The binary references a string “QTXBOT,” either indicating the name of the forked version or the internal project name. Brute-force attacks against SSH servers to launch an XMRig miner and generate illicit cryptocurrency revenue as part of an active cryptojacking operation called Monaco.</p>
+
+<p>Weak SSH passwords have also been
+used as attack pathways
+to deploy malware that establishes persistence, kills competing miners, connects to an external server, and performs a ZMap scan to propagate the malware in a worm-like fashion to other vulnerable hosts. “Botnet activity has surged over the last year, with Spauhaus noting 26% and 24% increases in the two six-month periods Jan - Jun 2025 and Jul - Dec 2025, respectively,” Pulsedive
+said
+. “This increase is associated with bots and nodes appearing in the United States. The increase also stems from the availability of source code for botnets such as Mirai.</p>
+
+<p>Mirai offshoots and variants are responsible for some of the largest DDoS attacks by volume.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="inside-the-2026-cyber-workforce-skills-shortages-and-shifts-in-the-age-of-ai"><a id="article-6"></a>Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</h2>
+
+<h2 id="the-hidden-cost-of-recurring-credential-incidents"><a id="article-7"></a>The Hidden Cost of Recurring Credential Incidents</h2>
+
+<p>When talking about credential security, the focus usually lands on breach prevention. This makes sense when
+IBM’s 2025 Cost of a Data Breach Report
+puts the average cost of a breach at $4.4 million. Avoiding even one major incident is enough to justify most security investments, but that headline figure obscures the more persistent problems caused by recurring credential incidents. Account lockouts and compromised credentials don’t make the news.</p>
+
+<p>They show up as repeated helpdesk tickets, interrupted workflows, and time pulled away from higher-value work. Individually, each incident seems minor, but collectively they place a constant
+burden on IT teams
+and the wider business. The real cost doesn’t just sit in the breach you might prevent, but in the day-to-day disruption you’re already dealing with. Repeated incidents equal repeated costs
+If an organization finds itself suffering from credential-based attacks or repeated account compromises, the obvious response is to tighten password policies.</p>
+
+<p>However, many organizations struggle to balance security with usability. And when something doesn’t work, the helpdesk gets the call. Forrester estimates
+that password resets account for up to 30% of all helpdesk tickets, with each one costing around $70 when you factor in staff time and lost productivity. For a mid-sized organization, that’s a significant, ongoing operational cost tied directly to credential incidents.</p>
+
+<p>Disruptions like these build up and mean IT teams spend most of their time firefighting while end users lose momentum. The organization absorbs the cost in ways that are easy to overlook, but hard to eliminate. How poor password policies contribute to credential incidents
+When users are met with vague error messages like “does not meet complexity requirements,” they’re left guessing. Which rule did they break?</p>
+
+<p>What is missing? After a few failed attempts, most users stop trying to understand the policy and start looking for the quickest way through it. People fall back to reusing old passwords with minor tweaks or storing credentials insecurely just to avoid going through the process again. None of this is malicious, but it increases the likelihood of repeated
+credential-related incidents
+, from lockouts to account compromise.</p>
+
+<p>Without any form of breached password screening, organizations rely on time-based resets to manage risk. But a password doesn’t become unsafe because it’s old. It becomes unsafe when it’s exposed. Even with short expiry periods, users can continue logging in with credentials that have already been exposed in breaches.</p>
+
+<p>Those accounts are vulnerabilities waiting to be exploited, but without visibility into that, you’re effectively leaving it to chance. At the same time, IT teams are still dealing with the operational impact of unnecessary resets without addressing the underlying risk. Without the ability to detect exposed credentials, organizations are left managing symptoms instead of the root cause, and the cycle of incidents continues. It’s here that tools like
+Specops Password Policy
+help.</p>
+
+<p>Its Breached Password Protection feature continuously scans your user accounts against a database of more than 5.8 billion compromised passwords. If a password appears in our database, customizable alerts prompt users to reset, shortening the window of opportunity for attackers to abuse those credentials. Specops Password Policy
+Mandatory periodic resets compound password issues
+For many years, forced password resets were treated as a baseline security measure. In practice, they tend to create more problems than they solve.</p>
+
+<p>When users are required to change passwords every 60 or 90 days, behavior becomes
+predictable
+. People make small, incremental changes to existing passwords or choose something easy to remember under time pressure. The result isn’t stronger credentials, but more vulnerable ones. Beyond creating weaker passwords, these fixed expiration intervals introduce regular disruption into the working day.</p>
+
+<p>Every reset is a potential lockout, adding to the mounting pile of helpdesk tickets that drain your resources without actually improving your security posture. This is why guidance from bodies like
+NIST
+has moved away from mandatory periodic changes towards only resetting passwords when there is evidence of a breach. While removing password resets entirely requires careful consideration, updated guidance should prompt a rethink of arbitrary expiration dates. Strong password policies set the baseline for identity security
+It’s easy to treat passwords as a legacy problem and something to minimize as you move towards
+passwordless authentication
+.</p>
+
+<p>However, passwords still underpin identity security. If that foundation is weak, the impact shows up everywhere. Compromised or simplistic passwords introduce risk at the identity layer, where attackers can gain legitimate access and move laterally without raising immediate alarms. By enforcing robust, user-friendly requirements and identifying exposed credentials early, you reduce the number of weak entry points across your environment.</p>
+
+<p>This becomes especially important as organizations evolve their authentication strategies. Specops Breached Password Protection continuously blocks over 5 billion breached passwords
+Passwordless still depends on strong underlying credentials. Without a solid baseline, you risk carrying existing weaknesses into new systems. Fewer compromised accounts mean fewer incidents, less time spent on remediation, and less disruption to day-to-day operations.</p>
+
+<p>Beat the cost of repeated credential incidents
+Strong password controls will help reduce risk. But the true operational payoff lies in reducing the time and resources spent resolving a constant flow of incidents across the organization. When you factor in fewer lockouts, fewer reset requests, and less time spent dealing with compromised credentials, you’ll see the impact in reduced day-to-day disruption for both IT teams and end users. If recurring credential incidents are becoming all too common in your environment, it’s worth taking a closer look.</p>
+
+<p>Want to see how Specops can help strengthen your identity security? Book a demo
+to see our solutions in action. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-gpubreach-attack-enables-full-cpu-privilege-escalation-via-gddr6-bit-flips"><a id="article-8"></a>New GPUBreach Attack Enables Full CPU Privilege Escalation via GDDR6 Bit-Flips</h2>
+
+<p>New academic research has identified multiple RowHammer attacks against high-performance graphics processing units (GPUs) that could be exploited to escalate privileges and, in some cases, even take full control of a host. The efforts have been codenamed
+GPUBreach
+,
+GDDRHammer
+, and
+GeForge
+. GPUBreach goes a step further than
+GPUHammer
+, demonstrating for the first time that RowHammer bit-flips in GPU memory can induce much more than data corruption and enable privilege escalation, and lead to a full system compromise. “By corrupting GPU page tables via GDDR6 bit-flips, an unprivileged process can gain arbitrary GPU memory read/write, and then chain that into full CPU privilege escalation — spawning a root shell — by exploiting memory-safety bugs in the NVIDIA driver,” Gururaj Saileshwar, one of the authors of the study and Assistant Professor at the University of Toronto,
+said
+in a post on LinkedIn.</p>
+
+<p>What makes GPUBreach notable is that it works even without having to disable the input–output memory management unit (
+IOMMU
+), a
+crucial hardware component
+that ensures memory security by preventing Direct Memory Access (DMA) attacks and isolating each peripheral to its own memory space. “GPUBreach shows it is not enough: by corrupting trusted driver state within IOMMU-permitted buffers, we trigger kernel-level out-of-bounds writes — bypassing IOMMU protections entirely without needing it disabled,” Saileshwar added. “This has serious implications for cloud AI infrastructure, multi-tenant GPU deployments, and HPC environments.”
+RowHammer is a long-standing Dynamic Random-Access Memory (DRAM) reliability error where repeated accesses (i.e., hammering) to a memory row can cause electrical interference that flips bits (changing 0 to 1m or vice versa) in adjacent rows. This undermines isolation guarantees fundamental to modern operating systems and sandboxes.</p>
+
+<p>DRAM manufacturers have implemented hardware-level mitigations, such as Error-Correcting Code (ECC) and Target Row Refresh (TRR), to counter this line of attack. However, research published in July 2025 by researchers at the University of Toronto expanded the threat to GPUs. GPUHammer
+, as it’s called, is the first practical RowHammer attack targeting NVIDIA GPUs using GDDR6 memory. It employs techniques like multi-threaded parallel hammering to overcome architectural challenges inherent to GPUs that previously made them immune to bit flips.</p>
+
+<p>The consequence of a successful GPUHammer exploit is a drop in machine learning (ML) model accuracy, which can degrade by up to 80% when running on a GPU. GPUBreach extends this approach to corrupt GPU page tables with RowHammer and achieve privilege escalation, resulting in arbitrary read/write on GPU memory. More consequentially, the attack has been found to leak secret cryptographic keys from
+NVIDIA cuPQC
+, stage model accuracy degradation attacks, and obtain CPU privilege escalation with IOMMU enabled. “The compromised GPU issues DMA (using the aperture bits in PTEs) into a region of CPU memory that the IOMMU permits (the GPU driver’s own buffers),” the researchers said.</p>
+
+<p>“By corrupting this trusted driver state, the attack triggers memory-safety bugs in the NVIDIA kernel driver and gains an arbitrary kernel write primitive, which is then used to spawn a root shell.”
+This disclosure of GPUBreach coincides with two other concurrent works – GDDRHammer and GeForge – that also revolve around GPU page-table corruption via GDDR6 RowHammer and facilitate GPU-side privilege escalation. Just like GPUBreach, both techniques can be used to gain arbitrary read/write access to CPU Memory. Where GPUBreach stands apart is that it also enables full CPU privilege escalation, making it a more potent attack. GeForge, in particular, requires IOMMU to be disabled for it to work, whereas GDDRHammer modifies the GPU page table entry’s aperture field to allow the unprivileged
+CUDA
+kernel to read and write all of the host CPU’s memory.</p>
+
+<p>“One main difference is that GDDRHammer exploits the last level page table (PT) and GeForge exploits the last level page directory (PD0),” the teams behind the two GPU memory exploits said. “However, both works are able to achieve the same goal of hijacking the GPU page table translation to gain read/write access to the GPU and host memory.”
+One temporary mitigation to tackle these attacks is to
+enable ECC
+on the GPU. That said, it bears noting that RowHammer attacks like
+ECCploit
+and
+ECC.fail
+have been found to overcome this countermeasure. “However, if attack patterns induce more than two bit flips (shown feasible on DDR4 and DDR5 systems), existing ECC cannot correct these and may even cause silent data corruption; so ECC is not a foolproof mitigation against GPUBreach,” the researchers said.</p>
+
+<p>“On desktop or laptop GPUs, where ECC is currently unavailable, there are no known mitigations to our knowledge.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="china-linked-storm-1175-exploits-zero-days-to-rapidly-deploy-medusa-ransomware"><a id="article-9"></a>China-Linked Storm-1175 Exploits Zero-Days to Rapidly Deploy Medusa Ransomware</h2>
+
+<p>A China-based threat actor known for deploying Medusa ransomware has been linked to the weaponization of a combination of zero-day and N-day vulnerabilities to orchestrate “high-velocity” attacks and break into susceptible internet-facing systems. “The threat actor’s high operational tempo and proficiency in identifying exposed perimeter assets have proven successful, with recent intrusions heavily impacting healthcare organizations, as well as those in the education, professional services, and finance sectors in Australia, the United Kingdom, and the United States,” the Microsoft Threat Intelligence team
+said
+. Attacks mounted by
+Storm-1175
+have also leveraged zero-day exploits, in some cases, before they have been publicly disclosed, as well as recently disclosed vulnerabilities to obtain initial access. Select incidents have involved the threat actor chaining together multiple exploits (e.g.,
+OWASSRF
+) for post-compromise activity.</p>
+
+<p>Upon gaining a foothold, the financially motivated cybercriminal actor swiftly moves to exfiltrate data and deploy Medusa ransomware within a span of a few days, or, in select incidents, within 24 hours. To aid in these efforts, the group creates persistence by creating new user accounts, deploying web shells or legitimate remote monitoring and management (RMM) software for lateral movement, conducting credential theft, and interfering with the normal functioning of security solutions, before dropping the ransomware. Since 2023, Storm-1175 has been linked to the exploitation of more than 16 vulnerabilities -
+CVE-2023-21529
+(Microsoft Exchange Server)
+CVE-2023-27351
+and CVE-2023-27350 (Papercut)
+CVE-2023-46805
+and
+CVE-2024-21887
+(Ivanti Connect Secure and Policy Secure)
+CVE-2024-1708
+and
+CVE-2024-1709
+(ConnectWise ScreenConnect)
+CVE-2024-27198
+and
+CVE-2024-27199
+(JetBrains TeamCity)
+CVE-2024-57726
+,
+CVE-2024-57727
+, and
+CVE-2024-57728
+(SimpleHelp)
+CVE‑2025‑31161
+(CrushFTP)
+CVE-2025-10035
+(Fortra GoAnywhere MFT)
+CVE-2025-52691
+and
+CVE-2026-23760
+(SmarterTools SmarterMail)
+CVE-2026-1731
+(BeyondTrust)
+Both
+CVE-2025-10035
+and
+CVE-2026-23760
+are said to have been exploited as zero-days prior to them being publicly disclosed. As of late 2024, the hacking crew has exhibited a flair for targeting Linux systems, including exploiting vulnerable Oracle WebLogic instances across several organizations.</p>
+
+<p>However, the exact vulnerability that was being weaponized in these attacks remains unknown. “Storm-1175 rotates exploits quickly during the time between disclosure and patch availability or adoption, taking advantage of the period where many organizations remain unprotected,” Microsoft said. Some of the notable tactics observed in these attacks are as follows -
+Using living-off-the-land binaries (LOLBins), including PowerShell and PsExec, along with Impacket for lateral movement. Relying on PDQ Deployer for both lateral movement and payload delivery, including Medusa ransomware, across the network.</p>
+
+<p>Modifying Windows Firewall policies to enable Remote Desktop Protocol (RDP) and deliver malicious payloads to other devices. Carrying out credential dumping using Impacket and Mimikatz. Configuring Microsoft Defender Antivirus exclusions to prevent it from blocking ransomware payloads. Leveraging Bandizip and Rclone for data collection and exfiltration, respectively.</p>
+
+<p>The bigger implication here is that RMM tools like AnyDesk, Atera, MeshAgent, ConnectWise ScreenConnect, or SimpleHelp are becoming dual-use infrastructure for covert operations, as they allow threat actors to blend malicious traffic into trusted, encrypted platforms and reduce the likelihood of detection. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="flowise-ai-agent-builder-under-active-cvss-100-rce-exploitation-12000-instances-exposed"><a id="article-10"></a>Flowise AI Agent Builder Under Active CVSS 10.0 RCE Exploitation; 12,000+ Instances Exposed</h2>
+
+<p>Threat actors are exploiting a maximum-severity security flaw in
+Flowise
+, an open-source artificial intelligence (AI) platform, according to new findings from VulnCheck. The vulnerability in question is
+CVE-2025-59528
+(CVSS score: 10.0), a code injection vulnerability that could result in remote code execution. “The CustomMCP node allows users to input configuration settings for connecting to an external MCP (Model Context Protocol) server,” Flowise
+said
+in an advisory released in September 2025. “This node parses the user-provided mcpServerConfig string to build the MCP server configuration.</p>
+
+<p>However, during this process, it executes JavaScript code without any security validation.”
+Flowise noted that successful exploitation of the vulnerability can allow access to dangerous modules such as child_process (command execution) and fs (file system), as it runs with full Node.js runtime privileges. Put differently, a threat actor who weaponizes the flaw can execute arbitrary JavaScript code on the Flowise server, leading to full system compromise, file system access, command execution, and sensitive data exfiltration. “As only an API token is required, this poses an extreme security risk to business continuity and customer data,” Flowise added. It credited Kim SooHyun with discovering and reporting the flaw.</p>
+
+<p>The issue was addressed in version 3.0.6 of the npm package. According to details shared by VulnCheck, exploitation activity against the vulnerability has originated from a single Starlink IP address. CVE-2025-59528 is the
+third Flowise flaw
+with in-the-wild exploitation after
+CVE-2025-8943
+(CVSS score: 9.8), an operating system command remote code execution, and
+CVE-2025-26319
+(CVSS score: 8.9), an arbitrary file upload. “This is a critical-severity bug in a popular AI platform used by a number of large corporations,” Caitlin Condon, vice president of security research at VulnCheck, told The Hacker News in a statement.</p>
+
+<p>“This specific vulnerability has been public for more than six months, which means defenders have had time to prioritize and patch the vulnerability. The internet-facing attack surface area of 12,000+ exposed instances makes the active scanning and exploitation attempts we’re seeing more serious, as it means attackers have plenty of targets to opportunistically reconnoiter and exploit.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="iran-linked-password-spraying-campaign-targets-300-israeli-microsoft-365-organizations"><a id="article-11"></a>Iran-Linked Password-Spraying Campaign Targets 300+ Israeli Microsoft 365 Organizations</h2>
+
+<p>An Iran-nexus threat actor is suspected to be behind a password-spraying campaign targeting Microsoft 365 environments in Israel and the U.A.E. amid ongoing conflict in the Middle East. The activity, assessed to be ongoing, was carried out in three distinct attack waves that took place on March 3, March 13, and March 23, 2026, per Check Point. “The campaign is primarily focused on Israel and the U.A.E., impacting more than 300 organizations in Israel and over 25 in the U.A.E.,” the Israeli cybersecurity company
+said
+.</p>
+
+<p>“Activity associated with the same actor was also observed against a limited number of targets in Europe, the United States, the United Kingdom, and Saudi Arabia.”
+The campaign is assessed to have targeted the cloud environments of government entities, municipalities, technology, transportation, energy sector organizations, and private-sector companies in the region. Password spraying is a form of brute-force attack where a threat actor attempts to use a single common password against multiple usernames on the same application. It’s also considered a more effective way to discover weak credentials at scale without triggering rate-limiting defenses. Check Point said the technique is known to be adopted by Iranian hacking groups like
+Peach Sandstorm
+and
+Gray Sandstorm
+(formerly DEV-0343) in the past to infiltrate target networks.</p>
+
+<p>The campaign essentially unfolds over three phases: aggressive scanning or password-spraying conducted from Tor exit nodes, followed by conducting the login process, and exfiltrating sensitive data, such as mailbox content. “Analysis of M365 logs suggests similarities to
+Gray Sandstorm
+, including the use of red-team tools to conduct these attacks via Tor exit nodes,” Check Point said. “The threat actor used commercial VPN nodes hosted at AS35758 (Rachamim Aviel Twito), which aligns with recent activity tied to Iran-nexus operations in the Middle East.”
+To counter the threat, organizations are advised to monitor sign-in logs for signs of password spraying, apply conditional access controls to limit authentication to approved geographic locations, enforce multi-factor authentication (MFA) for all users, and enable audit logs for post-compromise investigation. Iran Revives Pay2Key Operations
+The disclosure comes as a U.S.</p>
+
+<p>healthcare organization was targeted in late February 2026 by
+Pay2Key
+, an Iranian ransomware gang with ties to the country’s government. The ransomware-as-a-service (RaaS) operation, which has links to the
+Fox Kitten
+(aka
+Lemon Sandstorm
+, PARISITE, Pioneer Kitten, and UNC757) group, first emerged in 2020. The variant deployed in the attack is an upgrade from prior campaigns
+observed
+in July 2025, using improved evasion, execution, and anti-forensics techniques to achieve its goals. According to Beazley Security and Halcyon, no data was exfiltrated during the attack, a shift from the group’s double extortion playbook.</p>
+
+<p>The attack is said to have leveraged an undetermined access route to breach the organization, using a legitimate remote access tool like TeamViewer to establish a foothold, then harvest credentials for lateral movement, disarm Microsoft Defender Antivirus by falsely signaling that a third-party antivirus product is active, inhibit recovery, deploy ransomware, drop a ransom note, and clear logs to cover up the tracks. “By clearing logs at the end of execution rather than the beginning, the actors ensure that even the ransomware’s own activity is wiped, not just whatever preceded it,” Halcyon
+said
+. Among the
+key changes
+the group enacted following its return last year was offering affiliates an 80% cut of ransom proceeds, up from 70%, for participating in attacks targeting Iran’s enemies. A month later, a Linux variant of the Pay2Key ransomware was detected in the wild.</p>
+
+<p>“The sample is configuration-driven, requires root-level privileges to execute, and is engineered to traverse broad file system scope, classify mounts, and encrypt data using ChaCha20 in full or partial modes,” Morphisec researcher Ilia Kulmin
+said
+in a report published last month. “Before encryption, it weakens defenses and removes friction by stopping services, killing processes, disabling SELinux and AppArmor, and installing a reboot-time cron entry. This lets the encryptor run faster and survive restarts.”
+In March 2026, Halcyon also
+revealed
+that the administrator of
+Sicarii
+ransomware, Uke, urged pro-Iranian operators to use Baqiyat 313 Locker (aka BQTlock) due to the influx of affiliate requests. BQTLock, which operates with pro-Palestinian motives, has targeted the U.A.E., the U.S., and Israel since July 2025.</p>
+
+<p>“Iran has a long track record of using cyber operations to retaliate against perceived political slights,” the cybersecurity company
+said
+. “Ransomware is increasingly incorporated into these operations, with ransomware campaigns that blur the line between criminal extortion and state-sponsored sabotage.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="dprk-linked-hackers-use-github-as-c2-in-multi-stage-attacks-targeting-south-korea"><a id="article-12"></a>DPRK-Linked Hackers Use GitHub as C2 in Multi-Stage Attacks Targeting South Korea</h2>
+
+<p>Threat actors likely associated with the Democratic People’s Republic of Korea (DPRK) have been observed using GitHub as command-and-control (C2) infrastructure in multi-stage attacks targeting organizations in South Korea. The attack chain, per
+Fortinet FortiGuard Labs
+, involves obfuscated Windows shortcut (LNK) files acting as the starting point to drop a decoy PDF document and a PowerShell script that sets the stage for the next phase of the attack. It’s assessed that these LNK files are distributed via phishing emails. As soon as the payloads are downloaded, the victim is displayed the PDF document, while the malicious PowerShell script runs silently in the background.</p>
+
+<p>The PowerShell script performs checks to resist analysis by scanning for running processes related to virtual machines, debuggers, and forensic tools. If any of those processes are detected, the script immediately terminates. Otherwise, it extracts a Visual Basic Script (VBScript) and sets up persistence using a scheduled task that launches the PowerShell payload every 30 minutes in a hidden window to sidestep detection. This ensures that the PowerShell script is executed automatically after every system reboot.</p>
+
+<p>The PowerShell script then profiles the compromised host, saves the result to a log file, and exfiltrates it to a GitHub repository created under the account “motoralis” using a hard-coded access token. Some of the GitHub accounts created as part of the campaign include “God0808RAMA,” “Pigresy80,” “entire73,” “pandora0009,” and “brandonleeodd93-blip.”
+The script then parses a specific file in the same GitHub repository to fetch additional modules or instructions, thus allowing the operator to weaponize the trust associated with a platform like GitHub to blend in and maintain persistent control over the infected host. Fortinet said that earlier iterations of the campaign relied on LNK files to spread malware families like Xeno RAT. It’s worth noting that the use of GitHub C2 to distribute Xeno RAT and its variant MoonPeak was documented by
+ENKI
+and
+Trellix
+last year.</p>
+
+<p>These attacks were attributed to a North Korean state-sponsored group known as Kimsuky. “Instead of depending on complex custom malware, the threat actor uses native Windows tools for deployment, evasion, and persistence,” security researcher Cara Lin said. “By minimizing the use of dropped PE files and leveraging LolBins, the attacker can target a broad audience with a low detection rate.”
+The disclosure comes as AhnLab
+detailed
+a similar LNK-based infection chain from Kimsuky that ultimately results in the deployment of a Python-based backdoor. The LNK files, as before, execute a PowerShell script and create a hidden folder in the ”C:\windirr” path to stage the payloads, including a decoy PDF and another LNK file that mimics a Hangul Word Processor (HWP) document.</p>
+
+<p>Also deployed are intermediate payloads to set up persistence and launch a PowerShell script, which then uses Dropbox as a C2 channel to fetch a batch script. The batch file then downloads two separate ZIP file fragments from a remote server (“quickcon[.]store”) and combines them together to create a single archive and extracts from it an XML task scheduler and a Python backdoor. The task scheduler is used to launch the implant. The Python-based malware supports the ability to download additional payloads and execute commands issued from the C2 server.</p>
+
+<p>The instructions allow it to run shell scripts, list directories, upload/download/delete files, and run BAT, VBScript, and EXE files. The findings also coincide with
+ScarCruft
+‘s shift from traditional LNK-based attack chains to an HWP OLE-based dropper to deliver
+RokRAT
+, a remote access trojan exclusively used by the North Korean hacking group, per S2W. Specifically, the malware is embedded as an OLE object within an HWP document and executed via DLL side-loading. “Unlike previous attack chains that progressed from LNK-dropped BAT scripts to shellcode, this case confirms the use of newly developed dropper and downloader malware to deliver shellcode and the ROKRAT payload,” the South Korean security company
+said
+.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="multi-os-cyberattacks-how-socs-close-a-critical-risk-in-3-steps"><a id="article-13"></a>Multi-OS Cyberattacks: How SOCs Close a Critical Risk in 3 Steps</h2>
+
+<dl>
+  <dt>Your attack surface no longer lives on one operating system, and neither do the campaigns targeting it. In enterprise environments, attackers move across Windows endpoints, executive MacBooks, Linux infrastructure, and mobile devices, taking advantage of the fact that many SOC workflows are still fragmented by platform. For security leaders, this creates a</dt>
+  <dt>costly operational gap</dt>
+  <dd>slower validation, limited early-stage visibility, more escalations, and more time for attackers to steal credentials, establish persistence, or move deeper before the response fully begins. The Multi-OS Attack Problem SOCs Aren’t Ready For
+A multi-OS attack can turn one threat into several different investigations at once.</dd>
+</dl>
+
+<p>The campaign may follow a different path depending on the system it reaches, which breaks the speed and consistency SOC teams rely on during early triage. Instead of moving through one clear validation process, the team ends up jumping between tools, reconstructing behavior across environments, and trying to catch up while the attack keeps moving. That quickly leads to familiar problems inside the SOC:
+Validation delays increase business exposure
+by slowing the moment when the team can confirm risk and contain it. Fragmented evidence reduces incident clarity
+when fast decisions are needed on scope, priority, and impact.</p>
+
+<p>Escalation volume grows
+because too many cases cannot be closed confidently at the earliest stage. Response consistency breaks down
+across teams and environments, making investigations harder to manage at scale. Attackers get more time to move
+before the organization has a clear picture of what is unfolding. SOC efficiency drops
+as time is lost to tool-switching, duplicated effort, and slower decision-making.</p>
+
+<p>How Top SOCs Turn Multi-OS Complexity into Faster Response
+The teams that handle this well usually do one thing differently: they make cross-platform investigation faster, clearer, and more consistent from the start. With solutions like
+ANY.RUN Sandbox
+, that becomes much easier to do across enterprise operating systems. Here are three practical steps to make that happen:
+Step 1: Make Cross-Platform Analysis Part of Early Triage
+Early triage gets slower the moment teams assume the same threat will behave the same way everywhere. It often does not.</p>
+
+<p>A suspicious file, script, or link that reveals one pattern in Windows may take a different path on macOS, rely on different native components, and create a different level of risk. That makes cross-platform validation essential from the start. For instance, macOS is often treated as the safer side of the enterprise environment, which can make it an
+easier place for threats to go unnoticed early. As adoption grows among executives, developers, and other high-value users, attackers have more reason to tailor campaigns for that environment.</p>
+
+<p>A recent ClickFix campaign was analyzed by ANY.RUN experts is a good example. Check its full attack chain below:
+See the recent attack targeting Claude Code users
+. Fake Claude Code documentation page analyzed inside ANY.RUN’s interactive sandbox
+Attackers exploited a Google ad redirect to lure victims to a fake Claude Code documentation page, then used a ClickFix flow to push a malicious Terminal command. That command downloaded an encoded script, installed AMOS Stealer, collected browser data, credentials, Keychain contents, and sensitive files, then deployed a backdoor for persistent access.</p>
+
+<p>Give your team a faster way to detect multi-OS threat behavior before hidden execution paths turn into credential theft, persistence, and deeper compromise. Close Multi-OS Security Gaps
+When cross-platform analysis starts early, teams can:
+Recognize
+how one campaign changes across operating systems before the investigation splits
+Validate
+suspicious activity earlier in the environment actually being targeted
+Reduce
+the chance of missing platform-specific behavior during early triage
+Step 2: Keep Cross-Platform Investigations in One Workflow
+Multi-OS attacks become harder to contain when one case forces the team into several disconnected workflows.A suspicious link on one system, a script on another, and a different execution path somewhere else can quickly turn a single incident into a messy investigation spread across multiple tools. That slows down validation, makes evidence harder to follow, and creates more room for the threat to keep moving. ClickFix campaigns, for instance, show why this matters.</p>
+
+<p>The same technique has been used to target different operating systems, from Windows to macOS, while following different execution paths depending on the environment. A typical ClickFix “CAPTCHA” analyzed in the Windows environment inside ANY.RUN sandbox
+If each version has to be analyzed in a separate tool, the investigation takes longer, requires more effort, and becomes much harder to keep consistent. With
+ANY.RUN Sandbox
+, teams can investigate these threats within a single workflow across major enterprise operating systems, making it easier to compare behavior, follow the attack chain, and understand how the campaign changes from one environment to another without constantly switching context. Major operating systems available in ANY.RUN sandbox for analyzing multi-OS cyber attacks
+When investigations stay in one workflow, teams:
+Cut the operational overhead
+that multi-OS investigations create
+Keep
+one connected view
+of campaign activity instead of managing separate case fragments
+Support a
+more standardized response
+process as the attack scope expands across the enterprise
+Step 3: Turn Cross-Platform Visibility into Faster Response
+Seeing activity across operating systems only helps if the team can quickly understand what matters and act on it.</p>
+
+<p>In multi-OS attacks, that is often where the response starts to slow down. One behavior appears in one environment, other artifacts show up somewhere else, and the team is left trying to piece everything together before it can make a confident decision. What helps is having the right information presented in a way that is easier to work through under pressure. With ANY.RUN Sandbox, teams can review auto-generated reports, follow attacker behavior, examine IOCs in dedicated tabs, and use the built-in AI Assistant to speed up analysis and understand suspicious activity faster.</p>
+
+<p>That makes it easier to move from raw activity to a clearer view of what the threat is doing, how serious it is, and what needs to happen next. Auto-generated report containing all the necessary information for deeper threat analysis
+When cross-platform visibility is easier to work through, teams can:
+Make
+faster decisions with evidence
+that is easier to review and act on
+Reduce delays
+caused by scattered findings and manual reconstruction
+Move into containment with
+more confidence
+even when the attack behaves differently across environments
+Stop Giving Multi-OS Attacks Room to Move
+Multi-OS attacks win when defenders lose time. Every extra workflow, every delayed validation, and every missing piece of context gives the threat more room to spread before the team can contain it. With
+ANY.RUN’s cloud-based sandbox
+, teams can reduce that delay by bringing cross-platform analysis into a more consistent workflow across major enterprise operating systems.</p>
+
+<p>That gives SOC teams clearer context, faster decisions, and measurable operational gains:
+Up to 3× stronger SOC efficiency
+across investigation workflows
+21 minutes less MTTR per case
+when threats are validated faster
+94% of users reporting faster triage
+in daily operations
+Up to 20% lower Tier 1 workload
+from reduced manual effort
+30% fewer escalations from Tier 1 to Tier 2
+during early analysis
+Lower breach exposure
+through earlier detection and response
+Less alert fatigue
+with faster access to threat insights
+Expand cross-platform visibility
+to reduce investigation delays, limit business exposure, and give your SOC more control over multi-OS threats. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-02-27 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">Aeternum C2 Botnet Stores Encrypted Commands on Polygon Blockchain to Evade Takedown</a></li>
+      
+        <li><a href="#article-2">UAT-10027 Targets U.S. Education and Healthcare with Dohdoor Backdoor</a></li>
+      
+        <li><a href="#article-3">ThreatsDay Bulletin: Kali Linux + Claude, Chrome Crash Traps, WinRAR Flaws, LockBit & 15+ Stories</a></li>
+      
+        <li><a href="#article-4">Shadow AI Is Everywhere. Here’s How You Can Find and Secure It</a></li>
+      
+        <li><a href="#article-5">Expert Recommends: Prepare for PQC Right Now</a></li>
+      
+        <li><a href="#article-6">Microsoft Warns Developers of Fake Next.js Job Repos Delivering In-Memory Malware</a></li>
+      
+        <li><a href="#article-7">Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens</a></li>
+      
+        <li><a href="#article-8">Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access</a></li>
+      
+        <li><a href="#article-9">Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries</a></li>
+      
+        <li><a href="#article-10">Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration</a></li>
+      
+        <li><a href="#article-11">SLH Offers $500–$1,000 Per Call to Recruit Women for IT Help Desk Vishing Attacks</a></li>
+      
+        <li><a href="#article-12">Top 5 Ways Broken Triage Increases Business Risk Instead of Reducing It</a></li>
+      
+        <li><a href="#article-13">Malicious NuGet Packages Stole ASP.NET Data; npm Package Dropped Malware</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-02-27-ai创业新闻">2026-02-27 AI创业新闻</h1>
+
+<h2 id="aeternum-c2-botnet-stores-encrypted-commands-on-polygon-blockchain-to-evade-takedown"><a id="article-1"></a>Aeternum C2 Botnet Stores Encrypted Commands on Polygon Blockchain to Evade Takedown</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new botnet loader called
+Aeternum C2
+that uses a blockchain-based command-and-control (C2) infrastructure to make it resilient to takedown efforts. “Instead of relying on traditional servers or domains for command-and-control, Aeternum stores its instructions on the public Polygon blockchain,” Qrator Labs
+said
+in a report shared with The Hacker News. “This network is widely used by decentralized applications, including Polymarket, the world’s largest prediction market. This approach makes Aeternum’s C2 infrastructure effectively permanent and resistant to traditional takedown methods.”
+This is not the first time botnets have been found relying on blockchain for C2.</p>
+
+<p>In 2021, Google said it took steps to disrupt a botnet known as
+Glupteba
+that uses the Bitcoin blockchain as a backup C2 mechanism to fetch the actual C2 server address. Details of Aeternum C2 first emerged in December 2025, when Outpost24’s KrakenLabs
+revealed
+that a threat actor by the name of LenAI was advertising the malware on underground forums for $200 that grants customers access to a panel and a configured build. For $4,000, customers were allegedly promised the entire C++ codebase along with updates. A native C++ loader available in both x32 and x64 builds, the malware works by writing commands to be issued to the infected host to smart contracts on the Polygon blockchain.</p>
+
+<p>The bots then read those commands by querying public remote procedure call (RPC) endpoints. All of this is managed via the web-based panel, from where customers can select a smart contract, choose a command type, specify a payload URL and update it. The command, which can target all endpoints or a specific one, is written into the blockchain as a transaction, after which it becomes available to every compromised device that’s polling the network. “Once a command is confirmed, it cannot be altered or removed by anyone other than the wallet holder,” Qrator Labs said.</p>
+
+<p>“The operator can manage multiple smart contracts simultaneously, each one potentially serving a different payload or function, such as a clipper, a stealer, a RAT, or a miner.”
+According to a
+two-part research
+published by
+Ctrl Alt Intel
+earlier this month, the C2 panel is implemented as a Next.js web application that allows operators to deploy smart contracts to the Polygon blockchain. The smart contracts contain a function that, when called by the malware via the Polygon RPC, causes it to return the encrypted command that’s subsequently decoded and run on the victim machines. Besides using the blockchain to turn it into a takedown-resistant botnet, the malware packs in various anti-analysis features to extend the lifespan of infections. This includes checks to detect virtualized environments, in addition to equipping customers with the ability to scan their builds via
+Kleenscan
+to ensure that they are not flagged by antivirus vendors.</p>
+
+<p>“The operational costs are negligible: $1 worth of MATIC, the native token of the Polygon network, is enough for 100 to 150 command transactions,” the Czechian cybersecurity vendor said. “The operator doesn’t need to rent servers, register domains, or maintain any infrastructure beyond a crypto wallet and a local copy of the panel.”
+The threat actor has since
+attempted to sell the entire toolkit
+for an asking price of $10,000, claiming a lack of time for support and their involvement in another project. “I will sell the entire project to one person with permission for resale and commercial use, with all ‘rights,’” LenAI said. “I will also give useful tips/notes on development that I did not have time to implement.”
+It’s worth noting that LenAI is also behind a second crimeware solution called
+ErrTraffic
+that enables threat actors to automate ClickFix attacks by generating fake glitches on compromised websites to induce a false sense of urgency and deceive users into following malicious instructions.</p>
+
+<p>The disclosure comes as Infrawatch published details of an underground service that deploys dedicated laptop hardware into American homes to co-opt the devices into a residential proxy network named DSLRoot that redirects malicious traffic through them. The hardware is designed to run a Delphi-based program called DSLPylon that’s equipped with capabilities to enumerate supported modems on the network, as well as remotely control the residential networking equipment and Android devices via an Android Debug Bridge (
+ADB
+) integration. “Attribution analysis identifies the operator as a Belarusian national with residential presence in Minsk and Moscow,” Infrawatch
+said
+. “DSLRoot is estimated to operate roughly 300 active hardware devices across 20+ U.S.</p>
+
+<p>states.”
+The operator has been identified as Andrei Holas (aka Andre Holas and Andrei Golas), with the service promoted on BlackHatWorld by a user operating under the alias GlobalSolutions, claiming to offer physical residential ADSL proxies for sale for $190 per month for unrestricted access. It is also available for $990 for six months and $1,750 for annual subscriptions. “DSLRoot’s custom software provides automated remote management of consumer modems (ARRIS/Motorola, Belkin, D-Link, ASUS) and Android devices via ADB, enabling IP address rotation and connectivity control,” the company noted. “The network operates without authentication, allowing clients to route traffic anonymously through U.S.</p>
+
+<p>residential IPs.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="uat-10027-targets-us-education-and-healthcare-with-dohdoor-backdoor"><a id="article-2"></a>UAT-10027 Targets U.S. Education and Healthcare with Dohdoor Backdoor</h2>
+
+<p>A previously undocumented threat activity cluster has been attributed to an ongoing malicious campaign targeting education and healthcare sectors in the U.S. since at least December 2025. The campaign is being tracked by Cisco Talos under the moniker
+UAT-10027
+. The end goal of the attacks is to deliver a never-before-seen backdoor codenamed Dohdoor.</p>
+
+<p>“Dohdoor utilizes the DNS-over-HTTPS (DoH) technique for command-and-control (C2) communications and has the ability to download and execute other payload binaries reflectively,” security researchers Alex Karkins and Chetan Raghuprasad
+said
+in a technical report shared with The Hacker News. Although the initial access vector used in the campaign is currently not known, it’s suspected to involve the use of social engineering phishing techniques, leading to the execution of a PowerShell script. The script then proceeds to download and run a Windows batch script from a remote staging server, which, for its part, facilitates the download of a malicious Windows dynamic-link library (DLL) that’s named “propsys.dll” or “batmeter.dll.”
+The DLL payload – i.e., Dohdoor – is launched by means of a legitimate Windows executable (e.g., “Fondue.exe,” “mblctr.exe,” and “ScreenClippingHost.exe”) using a technique referred to as
+DLL side-loading
+. The backdoored access created by the implant is used to retrieve a next-stage payload directly into the victim’s memory and execute it.</p>
+
+<p>The payload is assessed to be a Cobalt Strike Beacon. “The threat actor hides the C2 servers behind the Cloudflare infrastructure, ensuring that all outbound communication from the victim machine appears as legitimate HTTPS traffic to a trusted global IP address,” Talos said. “This technique bypasses DNS-based detection systems, DNS sinkholes, and network traffic analysis tools that monitor suspicious domain lookups, ensuring that the malware’s C2 communications remain stealth by traditional network security infrastructure.”
+Dohdoor has also been found to unhook system calls to bypass endpoint detection and response (EDR) solutions that monitor Windows API calls through
+user-mode hooks in NTDLL.dll
+. Raghuprasad told The Hacker News that, “the attacker had infected several educational institutions, including a university that is connected to several other institutions, indicating a potential wider attack surface.</p>
+
+<p>Additionally, one of the affected entities was a healthcare facility, specifically for elderly care.”
+Analysis of the campaign has revealed no evidence of data exfiltration to date. Although no final payloads have been observed other than what appears to be the Cobalt Strike Beacon to backdoor into the victim’s environment, it’s believed that UAT-10027’s actions are likely driven by financial giants based on the victimology pattern, the researcher added. There is currently no clarity on who is behind UAT-10027, but Cisco Talos said it found some tactical similarities between Dohdoor and
+LazarLoader
+, a
+downloader
+previously identified as used by the North Korean hacking group Lazarus in attacks aimed at South Korea. “While UAT-10027’s malware shares technical overlaps with the Lazarus Group, the campaign’s focus on the education and health care sectors deviates from Lazarus’ typical profile of cryptocurrency and defense targeting,” Talos concluded.</p>
+
+<p>“However, […] North Korean APT actors have targeted the healthcare sector using
+Maui ransomware
+, and another North Korean APT group,
+Kimsuky
+, has targeted the
+education sector
+, highlighting the overlaps in the victimology of UAT-10027 with that of other North Korean APTs.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-kali-linux--claude-chrome-crash-traps-winrar-flaws-lockbit--15-stories"><a id="article-3"></a>ThreatsDay Bulletin: Kali Linux + Claude, Chrome Crash Traps, WinRAR Flaws, LockBit &amp; 15+ Stories</h2>
+
+<p>Nothing here looks dramatic at first glance. That’s the point. Many of this week’s threats begin with something ordinary, like an ad, a meeting invite, or a software update. Behind the scenes, the tactics are sharper.</p>
+
+<p>Access happens faster. Control is established sooner. Cleanup becomes harder. Here is a quick look at the signals worth paying attention to.</p>
+
+<p>AI-powered command execution
+Kali Linux Integrates Claude AI Assistant via MCP
+Kali Linux, an advanced penetration testing Linux distribution used for ethical hacking and network security assessments, has
+added
+an integration with Anthropic’s Claude large language model through the Model Context Protocol (MCP) to issue commands in natural language and translate them into technical commands. Belarus-linked Android spyware
+ResidentBat Infrastructure Analyzed
+ResidentBat is an Android spyware implant used by Belarusian authorities for surveillance operations against journalists and civil society. Once installed, it provides operators with access to call logs, microphone recordings, SMS, encrypted messenger traffic, screen captures, and locally stored files. The malware, although
+first documented
+in December 2025, is assessed to date back to 2021.</p>
+
+<p>According to Censys, ResidentBat-associated infrastructure is
+concentrated
+in Europe and Russia: the Netherlands (5 hosts), Germany (2 hosts), Switzerland (2 hosts), and Russia (1 host) in a recent Platform view, using a narrow port range (7000-7257) for control traffic. Crypto phishing wave
+Phishing Campaigns Impersonate Bitpanda
+Phishing campaigns are impersonating cryptocurrency brokerage services like Bitpanda to harvest sensitive data under the pretext of reconfirming their information or risk having their accounts blocked. “Attempting to get multiple forms of information and identification, the attackers used tactics that would seem legitimate to the everyday user,” Cofense
+said
+. “User information such as name verification, email, and password credentials, and location were all used in this attempt to harvest information under the guise of a multi-factor authentication process.”
+Breakout times shrink
+Adversaries Get Faster in 2025
+In its 2026 Global Threat Report, CrowdStrike said adversaries became faster than ever before in 2025.</p>
+
+<p>“The average e-crime breakout time — the period between initial access and lateral movement onto another system — dropped to 29 minutes, a 65% increase in speed from 2024,” the company
+said
+. One such intrusion undertaken by
+Luna Moth
+(aka Chatty Spider) targeting a law firm moved from initial access to data exfiltration in four minutes. Chief among the factors fueling this dramatic acceleration was the widespread abuse of legitimate credentials, which allowed attackers to blend into normal network traffic and bypass many traditional security controls. This was coupled with threat actors of varied motivations utilizing AI technology to accelerate and optimize their existing techniques.</p>
+
+<p>Some of the threat actors that have leveraged AI in their operations include
+Fancy Bear
+, Punk Spider (aka Akira), Blind Spider (aka Blind Eagle), Odyssey Spider (aka TA558), and an India-nexus hacking group called Frantic Tiger that has used Netlify and Cloudflare pages for credential-harvesting operations. The cybersecurity company said it observed an 89% increase in the number of attacks by AI-enabled adversaries compared to 2024 and a 42% year-over-year increase in zero-days exploited prior to public disclosure. In tandem, 67% of vulnerabilities exploited by China-nexus adversaries provided immediate system access, and 40% targeted edge devices that typically lack comprehensive monitoring. The vast majority of attacks, 82%, were free of malware — highlighting attackers’ enduring shift toward hands-on-keyboard operations and the abuse of legitimate tools and credentials.</p>
+
+<p>4-minute lateral movement
+Fastest Attacker Breakout Time Drops to 4 Minutes
+In a similar report, ReliaQuest said the fastest intrusions reached lateral movement in just 4 minutes, an 85% acceleration from last year, with data exfiltration taking place in 6 minutes. The statistic is fueled by attackers increasingly weaving AI and automation into their tradecraft. “As attackers increasingly secure valid credentials with elevated privileges, the time to react has drastically dropped,” ReliaQuest
+said
+. “In 2025, the average breakout time (initial access to lateral movement) dropped to 34 minutes.</p>
+
+<p>In 47% of incidents, they secured high privileges before ever touching the network. This allows them to skip escalation, blend into traffic, and repurpose legitimate tools.”
+ClickFix fuels Mac stealers
+Mac Users Targeted by Stealer Malware Using ClickFix
+Mac users searching for popular software like Homebrew, 7-Zip, Notepad++, LibreOffice, and Final Cut Pro are the target of an
+active malvertising campaign
+powered by at least 35 hijacked Google advertiser accounts originating from countries including the U.S., Canada, Italy, Poland, Brazil, India, Saudi Arabia, Japan, China, Romania, Malta, Slovenia, Germany, the U.K., and the U.A.E. More than 200 malicious advertisements impersonating legitimate macOS software have been found. The end goal of these efforts is to direct users to fake pages that contain
+ClickFix
+-like instructions to deliver MacSync stealer.</p>
+
+<p>Another ClickFix campaign has been
+observed
+using fake CAPTCHA verification lures on bogus phishing pages to distribute stealer malware that can harvest data from web browsers, gaming apps like Steam, cryptocurrency wallets, and VPN apps. According to ReliaQuest data, a quarter of attacks used social engineering for initial access last year, with ClickFix
+responsible
+for delivering 59% of the top malware families. Encryption debate resurfaces
+Meta Executive Warned Against Encryption in Messenger and Instagram
+Meta went ahead with a plan to encrypt the messaging services connected to its Facebook and Instagram apps despite internal warnings that it would hinder the social media giant’s ability to flag child-exploitation cases to law enforcement, Reuters
+reported
+. The internal chat exchange dated March 2019 was filed
+in connection with a lawsuit
+brought by the U.S.</p>
+
+<p>state of New Mexico, accusing it of exposing children and teens to sexual exploitation on its platforms and profiting from it. In response to the concerns raised, Meta said it worked on additional safety features before it launched encrypted messaging on Facebook and Instagram in 2023. ActiveMQ flaw aids LockBit
+Apache ActiveMQ Exploit Leads to LockBit Ransomware
+Threat actors are exploiting a now-patched security flaw in internet-facing Apache ActiveMQ servers (
+CVE-2023-46604
+) to deploy LockBit ransomware. “Despite being evicted after the initial intrusion, they successfully breached the same server on a second occasion 18 days later,” The DFIR Report
+said
+.</p>
+
+<p>“After compromising the server, the threat actor used Metasploit, possibly along with Meterpreter, to perform post-exploitation activities. These activities included escalating privileges, accessing LSASS process memory, and moving laterally across the network. After regaining access following their eviction, the threat actor swiftly transitioned to deploying ransomware. They leveraged credentials extracted during their previous breach to deploy LockBit ransomware via RDP.” The ransomware is suspected to be crafted using the
+leaked LockBit builder
+.</p>
+
+<p>Chrome crash-to-command trick
+CrashFix Variants Detailed
+Two newly flagged Google Chrome extensions, Pixel Shield - Block Ads (ID: nlogodaofdghipmbdclajkkpheneldjd) and PageGuard - Phishing Protection (ID: mlaonedihngoginmmlaacpihnojcoocl), have been found to adopt the same playbook as
+CrashFix
+, where the browser is deliberately crashed, and the user is tricked into running a malicious command à la ClickFix. The most concerning aspect of this campaign is that the extensions actually work and offer the advertised functionality. “The original NexShield DoS created a billion chrome.runtime.connect() calls,” Annex Security’s John Tuckner
+said
+. “These variants use a different technique I’m calling the Promise Bomb because it crashes the browser by flooding Chrome’s message passing system with millions of unresolvable promises.” While the original NexShield used timer-based activation, the new variants have evolved to push notification-based command-and-control (C2), causing the denial-of-service to be triggered only when the C2 server sends a push notification containing a “newVersion” value ending in “2.” This, in turn, gives the attacker selective remote control over when the crashes happen.</p>
+
+<p>WinRAR patch lag persists
+Widespread Exposure to CVE-2025-8088
+Cybersecurity firm Stairwell said more than 80% of the IT networks it monitors run versions of WinRAR vulnerable to
+CVE-2025-8088
+, a vulnerability that has been widely exploited by cybercrime and cyber espionage groups. “This finding underscores a persistent challenge in enterprise security when widely deployed, trusted software that quietly falls out of date and becomes a high-value target for attackers,” Alex Hegyi
+said
+. Crypto IV reuse risk
+Open-Source Projects Use Crypto Libraries with Insecure Defaults
+A new analysis from Trail of Bits has revealed that more than 723,000 open-source projects use cryptographic libraries with insecure defaults. The aes-js and pyaes libraries have been found to provide a default initialization vector (IV) in their AES-CTR API, leading to a large number of key/IV reuse bugs.</p>
+
+<p>“Reusing a key/IV pair leads to serious security issues: if you encrypt two messages in CTR mode or GCM with the same key and IV, then anybody with access to the ciphertexts can recover the XOR of the plaintexts, and that’s a very bad thing,” Trail of Bits
+said
+. While neither library has been updated in years, strongSwan has released an update to address the problem in strongMan (
+CVE-2026-25998
+). AI audits smart contracts
+OpenAI Teams Up with Paradigm for EVMbench
+OpenAI and Paradigm have jointly announced EVMbench, a benchmark that measures how well AI agents can detect, exploit, and patch high-severity smart contract vulnerabilities. “EVMbench draws on 120 curated vulnerabilities from 40 audits, with most sourced from open code audit competitions,” OpenAI
+said
+.</p>
+
+<p>“EVMbench is intended both as a measurement tool and as a call to action. As agents improve, it becomes increasingly important for developers and security researchers to incorporate AI-assisted auditing into their workflows.”
+Fake FSB extortion plot
+Moscow Man Accused of Impersonating FSB to Extort Conti Ransomware
+A Russian national has been accused of trying to extort money from the notorious Conti ransomware group by posing as an officer of Russia’s Federal Security Service (FSB), according to local media reports. RBC
+reported
+that the suspect, Ruslan Satuchin, posed as an FSB officer and demanded a large payment from Conti. Although an investigation was formally launched in September 2025, the incident allegedly began in September 2022 when Satuchin contacted one of the members of the hacker group and extorted them to avoid criminal liability.</p>
+
+<p>Once a prolific ransomware gang, Conti
+shut down its operations
+in mid-2022 after splintering into small groups. Ad cloaking service exposed
+1Campaign Service Helps Malicious Google Ads Evade Detection
+Varonis has disclosed details of a newly identified cybercrime service known as 1Campaign that enables threat actors to run malicious Google Ads for extended periods of time while evading scrutiny. The cloaking platform “passes Google’s screening, filters out security researchers, and keeps phishing and crypto drainer pages online for as long as possible, funneling real users to attacker-controlled sites,” Varonis security researcher Daniel Kelley
+said
+. “It combines real-time visitor filtering, fraud scoring, geographic targeting, and a bot guard script generator into a single dashboard.” It’s developed and maintained by a threat actor named DuppyMeister for over three years, along with offering Telegram channels for support.</p>
+
+<p>Traffic linked to 1Campaign has been distributed across the U.S., Canada, the Netherlands, China, Germany, France, Japan, Hungary, and Albania. Teams call drops macOS malware
+Social Engineer Using Teams Leads to macOS Malware
+A social engineering campaign has been observed using Microsoft Teams meetings to trick attendants into installing macOS malware. Daylight Security has assessed that the activity is consistent with an ongoing attack campaign orchestrated by North Korean threat actors under the name
+GhostCall
+. “During the call, the attacker claimed audio issues and coached the victim into running terminal commands that downloaded and executed malicious binaries,” Daylight researchers Kyle Henson and Oren Biderman
+said
+.</p>
+
+<p>“Analysts observed staged downloads and execution from macOS cache and temporary paths, Keychain credential access, and outbound connections to newly created attacker-controlled domains.”
+RAMP fallout reshapes underground
+What Happened Post RAMP Shutdown? Last month, law enforcement authorities from the U.S. seized the
+notorious RAMP cybercrime forum
+. The event has had a cascading impact, destabilising trust and accelerating fragmentation across the underground cybercrime ecosystem.</p>
+
+<p>There are also speculations that RAMP may have functioned as a honeypot or had been compromised long before its seizure. “Rather than consolidating around a single successor, ransomware actors are redistributing across both gated platforms like T1erOne and accessible forums such as Rehub,” Rapid7
+said
+. “This shift reflects adaptation, not decline. Disruption fractures trust and redistributes coordination across multiple platforms.”
+Anonymous Fénix members detained
+Spain Arrests Suspected Hacktivists for DDoS Attacks
+Spanish authorities have
+announced
+the arrest of four members of the Anonymous Fénix group for their involvement in distributed denial-of-service (DDoS) attacks.</p>
+
+<p>The suspects, whose names were not disclosed, targeted the websites of government ministries, political parties, and public institutions. Two of the group leaders were arrested in May 2025. The first attacks occurred in April 2023. The group is said to have intensified its activities beginning in September 2024, recruiting volunteers to mount DDoS attacks against targets of interest.</p>
+
+<p>Judicial spear-phish drops RAT
+Argentina’s Judicial Sector Targeted by RAT Malware
+A spear-phishing campaign has been observed targeting Argentina’s judicial sector that delivers a ZIP archive containing a Windows shortcut that, when launched, displays a decoy PDF to the victims, while stealthily dropping a Rust-based remote access trojan (RAT). “The campaign leverages highly authentic judicial decoy documents to exploit trust in court communications, enabling successful delivery of a covert remote access trojan and facilitating long-term access to sensitive legal and institutional data,” Seqrite Labs
+said
+. Typosquat spreads ValleyRAT
+Fake Huorong Website Drops ValleyRAT
+A persuasive lookalike website of Huorong Security antivirus (“huoronga[.]com”) has been used to deliver a RAT malware known as
+ValleyRAT
+. The campaign is the work of a Chinese cybercrime group called Silver Fox, which has a history of distributing trojanized versions of popular Chinese software and other popular programs through typosquatted domains to distribute trojanized installers responsible for deploying ValleyRAT.</p>
+
+<p>“Once it’s installed, attackers can monitor the victim, steal sensitive information, and remotely control the system,” Malwarebytes
+said
+. Repo-squatting via Google Ads
+GPUGate Campaign Delivers Hijack Loader
+Users searching for developer tools have become the target of an ongoing campaign dubbed
+GPUGate
+that uses a malicious installer to deliver
+Hijack Loader
+and
+Atomic Stealer
+. “The attacker creates a throwaway GitHub account and forks the official GitHub Desktop repository,” GMO Cybersecurity by Ierae
+said
+. “The attacker edits the download link in the README to point to their malicious installer and commits the change.</p>
+
+<p>Lastly, the attacker used sponsored ads for ‘GitHub Desktop’ to promote their commit, using an anchor in README.md to skip past GitHub’s cautions.” Victims who downloaded the malicious Windows installer would execute a multi-stage loader, while Mac victims received Atomic Stealer. These stories may seem separate, but they point in the same direction. Speed is increasing. Deception is improving.</p>
+
+<p>And attackers are finding new ways to blend into everyday activity. The warning signs are there for those who look closely. Small gaps, delayed patches, misplaced trust, and rushed clicks still make the biggest difference. Staying aware of these shifts is no longer optional.</p>
+
+<p>The details change each week. The pressure does not. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="shadow-ai-is-everywhere-heres-how-you-can-find-and-secure-it"><a id="article-4"></a>Shadow AI Is Everywhere. Here’s How You Can Find and Secure It</h2>
+
+<h2 id="expert-recommends-prepare-for-pqc-right-now"><a id="article-5"></a>Expert Recommends: Prepare for PQC Right Now</h2>
+
+<p>Introduction: Steal It Today, Break It in a Decade
+Digital evolution is unstoppable, and though the pace may vary, things tend to fall into place sooner rather than later. That, of course, applies to adversaries as well. The rise of ransomware and cyber extortion generated funding for a complex and highly professional criminal ecosystem. The era of the cloud brought general availability of almost infinite amounts of storage.</p>
+
+<p>So there is literally nothing that stops criminals from stealing and trafficking heaps of data, be it encrypted or not. Patient adversaries are employing a “Harvest Now, Decrypt Later” (HNDL) strategy. They are quietly accumulating encrypted data with the intention of decrypting it later using quantum computers. Any data requiring long-term security, such as trade secrets or classified designs, is vulnerable because its lifespan will inevitably outlive its current encryption.</p>
+
+<p>Therefore, it is crucial that organizations begin planning their PQC migration now, ensuring that data encrypted today remains secure against future quantum-enabled decryption attacks. The Quantum Waiting Game
+Cryptography is the backbone of digital trust, but the looming era of quantum computing threatens its foundations. Harnessing quantum physics, future quantum machines will effortlessly break the mathematical encryption schemes that protect data today. Current prototypes
+[1]
+are not quite there yet because they fundamentally lack the scale and error-correction capability required to successfully execute complex quantum algorithms.</p>
+
+<p>However, the prospect of a mature, cryptographically relevant quantum computer (CRQC) is alarming. Such a machine could likely break modern encryption in a matter of minutes, likely by 2030 to 2035. To combat the looming quantum computing threat, our cryptography must evolve immediately. This is why Post-Quantum Cryptography (PQC)
+[2]
+is being introduced as a solution.</p>
+
+<p>PQC provides new cryptographic algorithms designed to withstand attacks from both today’s classical computers and future quantum machines. A Step-by-Step Guide to Future-Proofing with PQC
+PQC migration is a complex process that spans the entire organization and potentially reaches deep into its security architecture. This massive transition is complicated by the current state of industry planning. There is still a lack of consensus in technical literature regarding common steps or uniform terminology for migration strategies.</p>
+
+<p>Without a common language, companies find it difficult to effectively compare, adopt, or coordinate the most suitable migration strategies. Our research concludes that the following strategy offers an effective, universal framework that can be adapted to suit any organization. [3, 4, 5, 6, 7, 8, 9]
+Security Navigator 2026 is Here - Download Now
+The newly released
+Security Navigator 2026
+offers critical insights into current digital threats, documenting 139,373 incidents and 19,053 confirmed breaches. More than just a report, it serves as a guide to navigating a safer digital landscape.</p>
+
+<p>What’s Inside? 📈 In-Depth Analysis: Statistics from CyberSOC, Vulnerabilitiy scanning, Pentesting, CERT, Cy-X and Ransomware observations from Dark Net surveillance. 🔮 Future-Ready: Equip yourself with security predictions and stories from the field. 🧠 Stories from security practitioners across the world.</p>
+
+<p>👁️ Security deep-dives: Get briefed on emerging trends related to Generative AI, Operational Technology and post-quantum cryptography. Stay one step ahead in cybersecurity. Your essential guide awaits! 🔗
+Get Your Copy Now
+At this stage, it is important to emphasize that a migration team must be established for each migration.</p>
+
+<p>This team should consist of cryptography and cybersecurity experts and managers from the software system or infrastructure being migrated. The team will drive the migration process forward and ensure its completion. Step 1 (Preparation):
+This phase establishes the scope and leadership for the PQC migration process. Key activities include assessing the relevance and urgency of PQC, appointing a program lead, aligning stakeholders on clear goals, and initiating conversations with vendors to determine migration needs.</p>
+
+<p>Step 2 (Diagnosis):
+This phase involves a thorough evaluation of the current cybersecurity posture to establish a comprehensive security baseline. Key activities include documenting all cryptographic assets, categorizing data based on their confidential lifespan, identifying suppliers of cryptographic tools to evaluate their PQC readiness, and conducting a formal risk assessment to generate a prioritized asset list based on principles such as Mosca’s theorem
+[12]
+. Step 3 (Planning):
+Once the urgency and scope are determined, this phase focuses on the “how” and “when“. It focuses on the migration strategy, creating a comprehensive business and technical plan and timeline based on the urgency and scope determined in previous steps.</p>
+
+<p>Key activities involve appointing a dedicated migration manager to oversee the process and conducting a comprehensive cost estimate for the entire migration. Step 4 (Execution):
+This critical phase involves executing the plan to establish a quantum-safe environment through careful technical implementation. Key activities include maintaining backward compatibility via a hybrid cryptographic approach, implementing recommended PQC primitives for key exchange and signatures, adjusting key sizes, and integrating cryptographic agility to ensure rapid adaptation with minimal service disruption. Step 5 (Continuous Monitoring and Update):
+This final phase focuses on continuous vigilance after migration, recognizing the dynamic cryptographic landscape.</p>
+
+<p>Key activities include routinely reviewing and updating the cryptographic inventory, conducting regular reviews of emerging threats to PQC schemes, performing proactive security audits and vulnerability assessments, and staying updated on the latest PQC advances to ensure timely system and software updates. Addressing Key Challenges: A Practical Checklist
+To ensure a successful PQC migration, organizations must proactively identify and mitigate key obstacles that could hinder progress. They must recognize that the transition involves navigating three interdependent categories of challenges. Organizational challenges:
+These non-technical obstacles relate to people, strategic planning, internal governance, and coordination across the wider ecosystem, often complicated by a lack of urgency or qualified personnel.</p>
+
+<p>PQC challenges:
+These stem directly from the immaturity of the new technology. Although we now have initial standards, such as ML-KEM and its implementation in protocols like TLS, a lack of standardization for a complete suite of algorithms and uncertainty in selecting and testing reliable PQC solutions remain major hurdles. The main issue is the lack of specific implementation guidelines, such as how to effectively deploy hybridization or agility mechanisms. Code and Documentation challenges:
+These are technical hurdles caused by the inherent rigidity of existing IT infrastructure (legacy systems), the need for extensive code modification, and the complexity of implementing secure cryptographic changes.</p>
+
+<p>The following breaks down the major obstacles to a successful PQC migration and offers solutions for each. Each obstacle falls under one of the previously established challenge categories. See references
+[71]
+and
+[11]
+for a more comprehensive discussion of additional obstacles. Lack of Urgency and Business Case (Organizational):
+Problem:
+The quantum threat seems distant, making it challenging to establish a sense of urgency and budget approval from leadership.</p>
+
+<p>Solution:
+Organizations can use tools like Mosca’s Theorem
+[12]
+to quantify their vulnerability and take inventory of cryptographic assets to improve current cybersecurity regardless of the quantum timeline. Internal Knowledge and Skills Deficit (Organizational):
+Problem:
+Lack of internal knowledge about quantum-based threats, and shortage of qualified personnel to implement new PQC solutions. Solution:
+Launch training initiatives for IT and management. Engage external PQC consultants to design the strategy and knowledge transfer.</p>
+
+<p>Internal Governance and Planning (Organizational):
+Problem:
+Absence of PQC governance and a fully articulated transition plan, leading to ineffective task prioritization and operational inefficiencies. Solution:
+Appoint a PQC migration manager or steering committee to mandate a cryptographic inventory for risk-based migration prioritization. Ecosystem and Coordination Failures (Organizational):
+Problem:
+Lack of ecosystem engagement, unclear governance, and limited collaboration hamper the PQC transition. Solution:
+Proactively manage vendor relationships and join industry forums to share knowledge, collaborate, and influence standards development.</p>
+
+<p>Regulatory Voids (Organizational):
+Problem:
+Existing regulations (e.g. NIS2 and DORA) mandate the use of state-of-the-art cryptography while new PQC-specific laws are pending. Solution:
+Adopt recent PQC standards proactively for critical systems to meet the “state-of-the-art” requirement. Leverage EUCC certification and monitor ETSI/OpenSSL for implementation guidance.</p>
+
+<p>Uncertain Selection Criteria (PQC):
+Problem:
+Organizations struggle to decide between an all-at-once or phased hybrid approach to replacing PQC, as they lack clear criteria. Solution:
+Default to a hybrid PQC model to gain operational knowledge, and minimize complications before committing to a full replacement strategy. Security and Reliability Concerns (PQC):
+Problem:
+Uncertainty about the maturity and security of PQC algorithms, organizations must balance present-day protection and future resilience. Solution:
+Use a hybrid PQC approach with a staged rollout.</p>
+
+<p>Begin with non-critical areas before expanding to ensure the solution is stable and reliable. Rigidity of Legacy Systems (Code and Documentation):
+Problem:
+Legacy systems inflexibility. This is exacerbated in resource-constrained devices, e.g. IoT and smart cards, which lack the memory and power necessary for larger PQC keys and intense computations.</p>
+
+<p>Solution:
+Replace hardware to accommodate PQC demands. If this is not feasible, implement lightweight, optimized PQC libraries. Ecosystem Interdependency (Code and Documentation):
+Problem:
+The interconnected nature of the Public Key Infrastructure (PKI) means that a PQC transition affects all involved parties, including standards bodies, hardware/software vendors, and certificate authorities (CAs). Solution:
+Collaborate with suppliers and CAs, participate in industry and regulatory groups (e.g., NIST, CISA, ENISA, ETSI, ANSSI, NCSC and BSI), and map all third-party component dependencies.</p>
+
+<dl>
+  <dt>Lack of Certified and Approved Components (Code and Documentation):</dt>
+  <dt>Problem:</dt>
+  <dt>Limited availability of certified components (eg HSMs) from vendors, especially in regulated sectors such as finance and government. Solution</dt>
+  <dd>During procurement, organizations must mandate FIPS 140-3 or EUCC validation for PQC-capable hardware, while beginning software-level migration (e.g., TLS/SSH) in parallel. Lack of Agility (Code and Documentation):
+Problem:
+Current systems are cryptographically inflexible. This makes adapting to new threats or evolving standards slow and complex due to the need for intricate code changes.</dd>
+</dl>
+
+<p>Solution:
+Prioritize cryptographic agility by designing new systems that allow for algorithm swapping via simple configuration and centralized key and certificate support. Key Takeaways
+Urgency of Migration:
+Act immediately! The deadline is now. The time for waiting for CRQC is over.</p>
+
+<dl>
+  <dt>Organizations must start preparing and migrating their data immediately to ensure long-term security. Establish Foundational Priorities: Strategic efforts must focus on developing a clear, actionable strategy for planning and executing the PQC transition smoothly. Foster United Collaboration</dt>
+  <dd>The PQC transition demands a unified effort to address the collective security challenge. This requires actively sharing lessons learned and collaborating across industries, governments, and academia.</dd>
+</dl>
+
+<p>Embed Hybrid Cryptography and Cryptographic Agility:
+The ability to rapidly and seamlessly combine, modify or swap cryptographic primitives must be adopted as the cornerstone of the new security posture to adapt to future advances in quantum-safe standards. Acknowledge Interdependent Challenges:
+The success of any PQC migration hinges on recognizing that the transition involves navigating several interdependent categories of challenges. This is just an excerpt of the many topics covered in the
+Security Navigator 2026
+. For more in-depth articles on the use and abuse of Generative AI, Hacktivism and cybercrime, Vulnerability management and Cyber Extortion, as well as CyberSOC statistics and security predictions, you should check out the full report!</p>
+
+<p>Head over to the download page and get a copy. References:
+[1]
+The Quantum Insider – Quantum Computing Roadmaps: A Look at the Maps and Predictions of Major Quantum Players
+[2]
+cnlab – Post-Quantum Cryptography: A Comprehensive Guide
+[3]
+ETSI – Migration Strategies and Recommendations for Quantum Safe Schemes
+[4]
+NCSC – Timelines for Migration to Post-Quantum Cryptography
+[5]
+Encryption Consulting – Enterprise Guide to PQC Migration
+[6]
+NIST – Migration to Post-Quantum Cryptography: Preparation for Considering the Implementation and Adoption of Quantum Safe Cryptography
+[7]
+arXiv – Identifying Research Challenges in Post Quantum Cryptography Migration and Cryptographic Agility
+[8]
+CISA – Quantum-Readiness: Migration to Post-Quantum Cryptography
+[9]
+BSI – Quantum-Safe Cryptography: Fundamentals, Current Developments and Recommendations
+[10]
+Orange Cyberdefense – 8 Minutes to Stay in Control: Quantum and Security
+[11]
+NXP – Post-Quantum Cryptographic Migration Challenges for Embedded Devices
+[12]
+IEEE Security &amp; Privacy – Cybersecurity in an Era with Quantum Computers: Will We Be Ready? Note:
+This article was expertly written and contributed by Mohammed Meziani, Senior Security Consultant at Orange Cyberdefense. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-warns-developers-of-fake-nextjs-job-repos-delivering-in-memory-malware"><a id="article-6"></a>Microsoft Warns Developers of Fake Next.js Job Repos Delivering In-Memory Malware</h2>
+
+<p>A “coordinated developer-targeting campaign” is using malicious repositories disguised as legitimate Next.js projects and technical assessments to trick victims into executing them and establish persistent access to compromised machines. “The activity aligns with a broader cluster of threats that use job-themed lures to blend into routine developer workflows and increase the likelihood of code execution,” the Microsoft Defender Security Research Team
+said
+in a report published this week. The tech giant said the campaign is characterized by the use of multiple entry points that lead to the same outcome, where attacker-controlled JavaScript is retrieved at runtime and executed to facilitate command-and-control (C2). The attacks rely on the threat actors setting up fake repositories on trusted developer platforms like Bitbucket, using names like “Cryptan-Platform-MVP1” to trick developers looking for jobs into running as part of an assessment process.</p>
+
+<p>Further analysis of the identified repositories has uncovered three distinct execution paths that, while triggered in different ways, have the end goal of executing an attacker‑controlled JavaScript directly in memory -
+Visual Studio Code workspace execution
+, where Microsoft Visual Studio Code (VS Code) projects with workspace automation configuration are used to run malicious code retrieved from a Vercel domain as soon as the developer opens and trusts the project. This involves the use of the runOn: “folderOpen” to configure the task. Build‑time execution during application development
+, where manually running the development server via “
+npm run dev
+“ is enough to activate the execution of malicious code embedded within modified JavaScript libraries masquerading as jquery.min.js, causing it to fetch a JavaScript loader hosted on Vercel. The retrieved payload is then executed in memory by Node.js.</p>
+
+<p>Server startup execution via environment exfiltration and dynamic remote code execution
+, where launching the application backend causes malicious loader logic concealed within a backend module or route file to be executed. The loader transmits the process environment to the external server and executes JavaScript received as a response in memory within the Node.js server process. Microsoft noted that all three methods lead to the same JavaScript payload that’s responsible for profiling the host and periodically polling a registration endpoint to get a unique “instanceId” identifier. This identifier is subsequently supplied in follow-on polls to correlate activity.</p>
+
+<p>It’s also capable of executing server-provided JavaScript in memory, ultimately paving the way for a second-stage controller that turns the initial foothold into a persistent access pathway for receiving tasks by contacting a different C2 server and executing them in memory to minimize leaving traces on disk. Attack chain overview
+“The controller maintains stability and session continuity, posts error telemetry to a reporting endpoint, and includes retry logic for resilience,” Microsoft said. “It also tracks spawned processes and can stop managed activity and exit cleanly when instructed. Beyond on-demand code execution, Stage 2 supports operator-driven discovery and exfiltration.”
+While the Windows maker did not attribute the activity to a specific threat actor, the use of VS Code tasks and Vercel domains to stage malware is a tactic that has been adopted by North Korea-linked hackers associated with a long-running campaign known as
+Contagious Interview
+.</p>
+
+<p>The end goal of these efforts is to gain the ability to deliver malware to developer systems, which often contain sensitive data, such as source code, secrets, and credentials, that can provide opportunities to pivot deeper into the target network. Using GitHub gists in VS Code tasks.json instead of Vercel URLs
+In a report published Wednesday, Abstract Security
+said
+it has observed a shift in threat actor tactics, notably a spike in alternative staging servers used in the VS Code tasks commands instead of Vercel URLs. This includes the use of scripts hosted on GitHub gists (“gist.githubusercontent[.]com”) to download and run next-stage payloads. An alternative approach employs URL shorteners like short[.]gy to conceal Vercel URLs.</p>
+
+<p>The cybersecurity company said it also identified a
+malicious npm package
+linked to the campaign named “eslint-validator” that retrieves and runs an obfuscated payload from a Google Drive URL. The payload in question is a known JavaScript malware referred to as BeaverTail. Furthermore, a malicious VS Code task embedded within a GitHub repository has been found to initiate a Windows-only infection chain that runs a batch script to download Node.js runtime on the host (if it does not exist) and leverage the certutil program to parse a code block contained within the script. The decoded script is then executed with the previously obtained Node.js runtime to deploy a Python malware protected with PyArmor.</p>
+
+<p>Cybersecurity company Red Asgard, which has also been
+extensively
+tracking the
+campaign
+,
+said
+the threat actors have leveraged crafted VS code projects that use the runOn: “folderOpen” trigger to deploy malware that, in turn, queries the Polygon blockchain to retrieve JavaScript stored within an NFT contract for improved resilience. The final payload is an information stealer that harvests credentials and data from web browsers, cryptocurrency wallets, and password managers. Distribution of staging infrastructure used by North Korean threat actors in 2025
+“This developer‑targeting campaign shows how a recruiting‑themed ‘interview project’ can quickly become a reliable path to remote code execution by blending into routine developer workflows such as opening a repository, running a development server, or starting a backend,” Microsoft concluded. To counter the threat, the company is recommending that organizations harden developer workflow trust boundaries, enforce strong authentication and conditional access, maintain strict credential hygiene, apply the principle of least privilege to developer accounts and build identities, and separate build infrastructure where feasible.</p>
+
+<p>The development comes as GitLab said it banned 131 unique accounts that were engaged in distributing malicious code projects linked to the Contagious Interview campaign and the fraudulent IT worker scheme known as
+Wagemole
+. “Threat actors typically originated from consumer VPNs when interacting with GitLab.com to distribute malware; however, they also intermittently originated from dedicated VPS infrastructure and likely laptop farm IP addresses,” GitLab’s Oliver Smith
+said
+. “Threat actors created accounts using Gmail email addresses in almost 90% of cases.”
+In more than 80% of the cases, per the software development platform, the threat actors are said to have leveraged at least six legitimate services to host malware payloads, including JSON Keeper, Mocki, npoint.io, Render, Railway.app, and Vercel. Among these, Vercel was the most commonly used, with the threat actors relying on the web development platform no less than 49 times in 2025.</p>
+
+<p>“In December, we observed a cluster of projects executing malware via VS Code tasks, either piping remote content to a native shell or executing a custom script to decode malware from binary data in a fake font file,” Smith added, corroborating the aforementioned findings from Microsoft. Assessed organization chart of the North Korean IT worker cell
+Also discovered by GitLab was a private project “almost certainly” controlled by a North Korean national managing a
+North Korean IT worker cell
+that contained detailed financial and personnel records showing earnings of more than $1.64 million between Q1 2022 and Q3 2025. The project included more than 120 spreadsheets, presentations, and documents tracking quarterly income performance for individual team members. “Records demonstrate that these operations function as structured enterprises with defined targets and operating procedures and close hierarchical oversight,” GitLab noted.</p>
+
+<p>“This cell’s demonstrated ability to cultivate facilitators globally provides a high degree of operational resiliency and money laundering flexibility.”
+A GitHub account associated with a North Korean IT worker
+In a report published earlier this month, Okta said the “vast majority” of interviews with
+IT workers
+do not progress to a second interview or job offer, but noted they are “learning from their mistakes” and that a large number of them seek temporary contract work as software developers hired out to third-party companies to take advantage of the fact that they are unlikely to enforce rigorous background checks. “Some actors however seem to be more competent at crafting personas and passing screening interviews,” it
+added
+. A kind of IT Worker natural selection is at play. The most successful actors are very prolific, and scheduled hundreds of interviews each.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="malicious-stripeapi-nuget-package-mimicked-official-library-and-stole-api-tokens"><a id="article-7"></a>Malicious StripeApi NuGet Package Mimicked Official Library and Stole API Tokens</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new malicious package discovered on the NuGet Gallery, impersonating a library from financial services firm Stripe in an attempt to target the financial sector. The package, codenamed StripeApi.Net, attempts to masquerade as
+Stripe.net
+, a legitimate library from Stripe that has over 75 million downloads. It was uploaded by a user named StripePayments on February 16, 2026. The package is no longer available.</p>
+
+<p>“The NuGet page for the malicious package is set up to resemble the official Stripe.net package as closely as possible,” ReversingLabs Petar Kirhmajer
+said
+. “It uses the same icon as the legitimate package and contains a nearly identical readme, only swapping the ‘Stripe.net’ references to read ‘Stripe-net.’”
+In a further effort to lend credibility to the typosquatted package, the threat actor behind the campaign is said to have artificially inflated the download count to more than 180,000. But in an interesting twist, the downloads were split across 506 versions, with each version recording about 300 downloads on average. The package replicates some of the legitimate Stripe package’s functionality, but also modifies certain critical methods to collect and transfer sensitive data, including the user’s Stripe API token, back to the threat actor.</p>
+
+<p>With the rest of the codebases remaining fully functional, it’s unlikely to attract any suspicion from unsuspecting developers who may have inadvertently downloaded it. ReversingLabs said it discovered and reported the package “relatively soon” after it was initially released, causing it to be taken before it could inflict any serious damage. The software supply chain security company also noted that the activity marks a shift from
+prior campaigns
+that have leveraged
+bogus NuGet packages
+to target the cryptocurrency ecosystem and facilitate wallet key theft. “Developers who mistakenly download and integrate a typosquatted library like StripeAPI.net will still have their applications compile successfully and function as intended,” Kirhmajer said.</p>
+
+<p>“Payments would process normally and, from the developer’s perspective, nothing would appear broken. In the background, however, sensitive data is being secretly copied and exfiltrated by malicious actors.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisco-sd-wan-zero-day-cve-2026-20127-exploited-since-2023-for-admin-access"><a id="article-8"></a>Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access</h2>
+
+<p>A newly disclosed maximum-severity security flaw in Cisco Catalyst SD-WAN Controller (formerly vSmart) and Catalyst SD-WAN Manager (formerly vManage) has come under active exploitation in the wild as part of malicious activity that dates back to 2023. The vulnerability, tracked as
+CVE-2026-20127
+(CVSS score: 10.0), allows an unauthenticated remote attacker to bypass authentication and obtain administrative privileges on an affected system by sending a crafted request. Successful exploitation of the flaw could allow the adversary to obtain elevated privileges and log in to the system as an internal, high-privileged, non-root user account. “This vulnerability exists because the peering authentication mechanism in an affected system is not working properly,” Cisco
+said
+in an advisory, adding the threat actor could leverage the non-root user account to access NETCONF and manipulate network configuration for the SD-WAN fabric.</p>
+
+<p>The shortcoming affects the following deployment types, irrespective of the device configuration -
+On-Prem Deployment
+Cisco Hosted SD-WAN Cloud
+Cisco Hosted SD-WAN Cloud - Cisco Managed
+Cisco Hosted SD-WAN Cloud - FedRAMP Environment
+Cisco credited the Australian Signals Directorate’s Australian Cyber Security Centre (ASD-ACSC) for reporting the vulnerability. The networking equipment major is tracking the exploitation and subsequent post-compromise activity under the moniker
+UAT-8616
+, describing the cluster as a “highly sophisticated cyber threat actor.”
+The vulnerability has been addressed in the following versions of Cisco Catalyst SD-WAN -
+Prior to version 20.91 - Migrate to a fixed release. Version 20.9 - 20.9.8.2 (Estimated release February 27, 2026)
+Version 20.111 - 20.12.6.1
+Version 20.12.5 - 20.12.5.3
+Version 20.12.6 - 20.12.6.1
+Version 20.131 - 20.15.4.2
+Version 20.141 - 20.15.4.2
+Version 20.15 - 20.15.4.2
+Version 20.161 - 20.18.2.1
+Version 20.18 - 20.18.2.1
+“Cisco Catalyst SD-WAN Controller systems that are exposed to the internet and that have ports exposed to the internet are at risk of exposure to compromise,” Cisco warned. The company has also recommended customers to audit the “/var/log/auth.log” file for entries related to “Accepted publickey for vmanage-admin” from unknown or unauthorized IP addresses.</p>
+
+<p>It’s also advised to check the IP addresses in the auth.log log file against the configured System IPs that are listed in the Cisco Catalyst SD-WAN Manager web UI (WebUI &gt; Devices &gt; System IP). According to information released by the ASD-ACSC, UAT-8616 is said to have compromised Cisco SD-WANs since 2023 via the zero-day exploit, allowing it to gain elevated access. “The vulnerability allowed a malicious cyber actor to create a rogue peer joined to the network management plane, or control plane, of an organization’s SD-WAN,” ASD-ACSC said. “The rogue device appears as a new but temporary, actor-controlled SD-WAN component that can conduct trusted actions within the management and control plane.”
+After successfully compromising a public-facing application, the attackers have been found to leverage the built-in update mechanism to stage a software version downgrade and escalate to the root user by exploiting
+CVE-2022-20775
+(CVSS score: 7.8), a high-severity privilege escalation bug in the CLI of Cisco SD-WAN Software, and then restoring the software back to the version it was originally running.</p>
+
+<p>Some of the subsequent steps initiated by the threat actor are as follows -
+Created local user accounts that mimicked other local user accounts. Added a Secure Shell Protocol (SSH) authorized key for root access and modified SD-WAN-related start-up scripts to customize the environment. Used Network Configuration Protocol on port 830 (NETCONF) and SSH to connect to/between Cisco SD-WAN appliances within the management plane. Took steps to clear evidence of the intrusion by purging logs under “/var/log,” command history, and network connection history.</p>
+
+<p>“UAT-8616’s attempted exploitation indicates a continuing trend of the targeting of network edge devices by cyber threat actors looking to establish persistent footholds into high-value organizations, including Critical Infrastructure (CI) sectors,” Talos said. The development has prompted the Cybersecurity and Infrastructure Security Agency (CISA) to
+add
+both CVE-2022-20775 and CVE-2026-20127 to its Known Exploited Vulnerabilities (
+KEV
+) catalog, mandating Federal Civilian Executive Branch (FCEB) agencies to apply the fixes within the next 24 hours. To check for version downgrade and unexpected reboot events, CISA
+recommends
+analyzing the following logs -
+/var/volatile/log/vdebug
+/var/log/tmplog/vdebug
+/var/volatile/log/sw_script_synccdb.log
+CISA has also
+issued
+a new emergency directive,
+26-03: Mitigate Vulnerabilities in Cisco SD-WAN Systems
+, as part of which federal agencies are required to inventory SD-WAN devices, apply updates, and assess potential compromise. To that end, agencies have been ordered to provide a catalog of all in-scope SD-WAN systems on their networks by February 26, 2026, 11:59 p.m.</p>
+
+<p>ET. Additionally, they are required to submit a detailed inventory of all in-scope products and actions taken by March 5, 2026, 11:59 p.m. ET. Lastly, the agencies will have to submit the list of all steps taken to harden their environments by March 26, 2026, 11:59 p.m.</p>
+
+<p>ET. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-disrupts-unc2814-gridtide-campaign-after-53-breaches-across-42-countries"><a id="article-9"></a>Google Disrupts UNC2814 GRIDTIDE Campaign After 53 Breaches Across 42 Countries</h2>
+
+<p>Google on Wednesday disclosed that it worked with industry partners to disrupt the infrastructure of a suspected China-nexus cyber espionage group tracked as
+UNC2814
+that breached at least 53 organizations across 42 countries. “This prolific, elusive actor has a long history of targeting international governments and global telecommunications organizations across Africa, Asia, and the Americas,” Google Threat Intelligence Group (GTIG) and Mandiant
+said
+in a report published today. UNC2814 is also suspected to be linked to additional infections in more than 20 other nations. The tech giant, which has been tracking the threat actor since 2017, has been observed using API calls to communicate with software-as-a-service (SaaS) apps as command-and-control (C2) infrastructure.</p>
+
+<p>The idea, it added, is to disguise their malicious traffic as benign. Central to the hacking group’s operations is a novel backdoor dubbed GRIDTIDE that abuses Google Sheets API as a communication channel to disguise C2 traffic and facilitate the transfer of raw data and shell commands. It’s a C-based malware that supports file upload/download and the execution of arbitrary shell commands. Dan Perez, GTIG researcher, told The Hacker News via email that they cannot confirm if all the intrusions involved the use of the GRIDTIDE backdoor.</p>
+
+<p>“We believe many of these organizations have been compromised for years,” Perez added. Exactly how UNC2814 obtains initial access remains a topic of investigation, but the group is said to have a history of exploiting and compromising web servers and edge systems. Attacks mounted by the threat actor have leveraged a service account to move laterally within the environment via SSH. Also put to use are living-off-the-land (LotL) binaries to conduct reconnaissance, escalate privileges, and set up persistence for the backdoor.</p>
+
+<p>“To achieve persistence, the threat actor created a service for the malware at /etc/systemd/system/xapt.service, and once enabled, a new instance of the malware was spawned from /usr/sbin/xapt,” Google explained. Another noteworthy aspect is the deployment of SoftEther VPN Bridge to establish an outbound encrypted connection to an external IP address. It’s worth mentioning here that the abuse of SoftEther VPN has been
+linked
+to
+multiple
+Chinese hacking groups
+. There is evidence indicating that GRIDTIDE is dropped on endpoints containing personally identifiable information (PII), an aspect that’s consistent with cyber espionage activity focused on monitoring persons of interest.</p>
+
+<p>Google, however, noted that it did not observe any data exfiltration taking place during the course of the campaign. GRIDTIDE execution lifecycle
+GRIDTIDE’s C2 mechanism involves a cell-based polling mechanism, where specific roles are assigned to certain spreadsheet cells to enable bidirectional communication -
+A1, to poll for attacker commands and overwrite it with a status response (e.g., S-C-R or Server-Command-Success)
+A2-An, to transfer data, such as command output and files
+V1, to store system data from the victim endpoint
+As part of the action, Google said it terminated all Google Cloud Projects controlled by the attacker, disabled all known UNC2814 infrastructure, and cut off access to attacker-controlled accounts and Google Sheets API calls leveraged by the actor for command-and-control (C2) purposes. The tech giant described UNC2814 as one of the “most far-reaching, impactful campaigns” encountered in recent years, adding that it has issued formal victim notifications to each of the targets and that it is actively supporting organizations with verified compromises resulting from this threat. The latest discovery is one of many concurrent efforts by Chinese nation-state groups to embed themselves into networks for long-term access.</p>
+
+<p>The development also highlights that the network edge continues to take the brunt of internet-wide exploitation attempts, with threat actors frequently exploiting vulnerabilities and misconfigurations in such appliances as a common entry point into enterprise networks. These appliances have
+become attractive targets
+in recent years as they typically lack endpoint malware detection, yet provide direct network access or pivot points to internal services if compromised. “The global scope of UNC2814’s activity, evidenced by confirmed or suspected operations in over 70 countries, underscores the serious threat facing telecommunications and government sectors, and the capacity for these intrusions to evade detection by defenders,” Google said. “Prolific intrusions of this scale are generally the result of years of focused effort and will not be easily re-established.</p>
+
+<p>We expect that UNC2814 will work hard to re-establish its global footprint.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="claude-code-flaws-allow-remote-code-execution-and-api-key-exfiltration"><a id="article-10"></a>Claude Code Flaws Allow Remote Code Execution and API Key Exfiltration</h2>
+
+<p>Cybersecurity researchers have
+disclosed
+multiple security vulnerabilities in Anthropic’s Claude Code, an artificial intelligence (AI)-powered coding assistant, that could result in remote code execution and theft of API credentials. “The vulnerabilities exploit various configuration mechanisms, including Hooks, Model Context Protocol (MCP) servers, and environment variables – executing arbitrary shell commands and exfiltrating Anthropic API keys when users clone and open untrusted repositories,” Check Point researchers Aviv Donenfeld and Oded Vanunu
+said
+in a report shared with The Hacker News. The identified shortcomings fall under three broad categories -
+No CVE
+(CVSS score: 8.7) - A code injection vulnerability stemming from a user consent bypass when starting Claude Code in a new directory that could result in arbitrary code execution without additional confirmation via untrusted
+project hooks
+defined in .claude/settings.json. (Fixed in version 1.0.87 in September 2025)
+CVE-2025-59536
+(CVSS score: 8.7) - A code injection vulnerability that allows execution of arbitrary shell commands automatically upon tool initialization when a user starts Claude Code in an untrusted directory.</p>
+
+<p>(Fixed in version 1.0.111 in October 2025)
+CVE-2026-21852
+(CVSS score: 5.3) - An information disclosure vulnerability in Claude Code’s project-load flow that allows a malicious repository to exfiltrate data, including Anthropic API keys. (Fixed in version 2.0.65 in January 2026)
+“If a user started Claude Code in an attacker-controller repository, and the repository included a settings file that set ANTHROPIC_BASE_URL to an attacker-controlled endpoint, Claude Code would issue API requests before showing the trust prompt, including potentially leaking the user’s API keys,” Anthropic said in an advisory for CVE-2026-21852. In other words, simply opening a crafted repository is enough to exfiltrate a developer’s active API key, redirect authenticated API traffic to external infrastructure, and capture credentials. This, in turn, can permit the attacker to burrow deeper into the victim’s AI infrastructure.</p>
+
+<p>This could potentially involve accessing shared project files, modifying/deleting cloud-stored data, uploading malicious content, and even generating unexpected API costs. Successful exploitation of the first vulnerability could trigger stealthy execution on a developer’s machine without any additional interaction beyond launching the project. CVE-2025-59536 also achieves a similar goal, the main difference being that repository-defined configurations defined through .mcp.json and claude/settings.json file could be exploited by an attacker to override explicit user approval prior to interacting with external tools and services through the Model Context Protocol (MCP). This is achieved by setting the “
+enableAllProjectMcpServers
+“ option to true.</p>
+
+<p>“As AI-powered tools gain the ability to execute commands, initialize external integrations, and initiate network communication autonomously, configuration files effectively become part of the execution layer,” Check Point said. “What was once considered operational context now directly influences system behavior.”
+“This fundamentally alters the threat model. The risk is no longer limited to running untrusted code – it now extends to opening untrusted projects. In AI-driven development environments, the supply chain begins not only with source code, but with the automation layers surrounding it.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="slh-offers-5001000-per-call-to-recruit-women-for-it-help-desk-vishing-attacks"><a id="article-11"></a>SLH Offers $500–$1,000 Per Call to Recruit Women for IT Help Desk Vishing Attacks</h2>
+
+<p>The notorious cybercrime collective known as
+Scattered LAPSUS$ Hunters
+(SLH) has been observed offering financial incentives to recruit women to pull off social engineering attacks. The idea is to hire them for voice phishing campaigns targeting IT help desks, Dataminr said in a new threat brief. The group is said to be offering anywhere between $500 and $1,000 upfront per call, in addition to providing them with the necessary pre-written scripts to carry out the attack. “SLH is diversifying its social engineering pool by specifically recruiting women to conduct vishing attacks, likely to increase the success rate of help desk impersonation,” the threat intelligence firm
+said
+.</p>
+
+<p>A
+high-profile cybercrime supergroup
+comprising LAPSUS$, Scattered Spider, and ShinyHunters, SLH has a record of engaging in advanced social engineering attacks to sidestep multi-factor authentication (MFA) through techniques like
+MFA prompt bombing
+and SIM swapping. The group’s modus operandi also involves targeting help desks and call centers to breach companies by posing as employees and convincing them to reset a password or install a remote monitoring and management (RMM) tool that grants them remote access. Once initial access is obtained, Scattered Spider has been
+observed
+moving laterally to virtualized environments, escalating privileges, and exfiltrating sensitive corporate data. Some of these attacks have further led to the deployment of ransomware.</p>
+
+<p>Another hallmark of these attacks is the
+use of legitimate services and residential proxy networks
+(e.g., Luminati and OxyLabs) to blend in and evade detection. Scattered Spider actors have used various tunneling tools like Ngrok, Teleport, and Pinggy, as well as free file-sharing services such as file.io, gofile.io, mega.nz, and transfer.sh. SLH’s Telegram post to recruit women
+In a report published earlier this month, Palo Alto Networks Unit 42, which is tracking Scattered Spider under the moniker Muddled Libra, described the threat actor as “highly proficient at exploiting human psychology” by impersonating employees to attempt password and multi-factor authentication (MFA) resets. Scattered Spider attack chain
+In at least one case investigated by the cybersecurity company in September 2025, Scattered Spider is said to have created and utilized a virtual machine (VM) after obtaining privileged credentials by calling the IT help desk and then used it to conduct reconnaissance (e.g., Active Directory enumeration) and attempt to exfiltrate Outlook mailbox files and data downloaded from the target’s Snowflake database.</p>
+
+<p>“While focusing on identity compromise and social engineering, this threat actor leverages legitimate tools and existing infrastructure to blend in,” Unit 42
+said
+. “They operate quietly and maintain persistence.”
+The cybersecurity company also
+noted
+that Scattered Spider has an “extensive history” of targeting Microsoft Azure environments using the Graph API to facilitate access to Azure cloud resources. Also put to use by the group are cloud enumeration tools such as ADRecon for Active Directory reconnaissance. With social engineering emerging as the primary entry point for the cybercrime group, organizations are advised to be on alert and train IT help desk and support personnel to watch out for pre-written scripts and polished voice impersonation, enforce strict identity verification, harden MFA policies by shifting away from SMS-based authentication, and audit logs for new user creation or administrative privilege escalation following help desk interactions.</p>
+
+<p>“This recruitment drive represents a calculated evolution in SLH’s tactics,” Dataminr said. “By specifically seeking female voices, the group likely aims to bypass the ‘traditional’ profiles of attackers that IT help desk staff may be trained to identify, thereby increasing the effectiveness of their impersonation efforts.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="top-5-ways-broken-triage-increases-business-risk-instead-of-reducing-it"><a id="article-12"></a>Top 5 Ways Broken Triage Increases Business Risk Instead of Reducing It</h2>
+
+<p>Triage is supposed to make things simpler. In a lot of teams, it does the opposite. When you can’t reach a confident verdict early, alerts turn into repeat checks, back-and-forth, and “just escalate it” calls. That cost doesn’t stay inside the SOC; it shows up as missed SLAs, higher cost per case, and more room for real threats to slip through.</p>
+
+<p>So where does triage go wrong? Here are five triage issues that turn investigations into expensive guesswork, and how top teams are changing the outcome with execution evidence. 1. Decisions Made Without Real Evidence
+Business risk:
+The hardest triage failure to notice is when decisions get made before proof exists.</p>
+
+<p>If responders rely on partial signals (labels, hash matches, reputation), they end up approving or escalating cases without seeing what the file or link actually does. That uncertainty fuels false positives, missed real threats, slower containment, and higher cost per case, while giving attackers more time before anyone has confidence in the verdict. The Fix: Get Execution Evidence Early
+High-performing teams reduce this risk by validating behavior at triage, not later. Sandboxes make that practical by showing real execution: process activity, network calls, persistence, and the full attack chain.</p>
+
+<p>For example, with ANY.RUN’s interactive sandbox, teams report that in ~90% of cases, they can see
+the full attack chain within ~60 seconds
+, turning unclear alerts into evidence-backed decisions early in the workflow. See the complex hybrid attack exposed in 35 seconds
+. Full attack chain with fake Microsoft login page revealed inside ANY.RUN sandbox in less than a minute
+In this real-world hybrid phishing scenario combining Tycoon 2FA and Salty 2FA, most traditional controls failed to detect the threat because the attack blended multiple kits and evasive redirects. Inside an interactive sandbox, however, the full malicious flow and a clear verdict appeared in
+just 35 seconds
+.</p>
+
+<p>Improve triage speed and certainty to cut MTTR by up to 21 minutes per case, control escalation costs, and limit real business exposure. Explore faster triage
+Business outcomes:
+Faster, evidence-backed verdicts at triage
+Lower cost per case by reducing rework
+Fewer missed threats caused by “unclear” closures</p>
+<ol>
+  <li>Triage Quality Depends on Analyst Seniority
+Business risk:
+In many SOCs, the outcome of triage depends on who touches the alert. Senior staff close faster because they recognize patterns; junior staff escalates because they don’t have enough confidence or context.</li>
+</ol>
+
+<p>The result is inconsistent verdicts, uneven response speed, and a workflow that doesn’t scale cleanly as alert volume grows. The Fix: Make Triage Repeatable for Every Shift
+Top teams reduce this gap by designing triage around shared evidence and repeatable steps, not personal experience. The goal is simple: give Tier 1 enough clarity to reach the same conclusion a senior responder would, using the same observable facts. Auto-generated report for easy sharing between team members
+With ANY.RUN, teams can share the same sandbox session and findings through built-in teamwork features, so knowledge doesn’t stay in one person’s head.</p>
+
+<p>That consistency helps reduce “escalate to be safe” behavior and keeps triage outcomes stable across shifts. Business outcomes:
+Consistent triage across shifts
+Fewer senior reviews
+More predictable SLAs</p>
+<ol>
+  <li>Triage Delays Give Attackers More Time
+Business risk:
+Even when a threat is detected, triage can take too long to confirm what’s happening. Manual checks and queued escalations delay action, extending dwell time and giving attackers room to move laterally or exfiltrate data.</li>
+</ol>
+
+<p>The business impact shows up as
+missed SLAs
+and higher incident costs. The Fix: Shrink Time-to-Decision at Triage
+High-performing teams treat triage as a speed problem: reduce the steps between detection and a defensible verdict. That means confirming behavior immediately, before the case bounces between queues or turns into a long validation loop. Full visibility into the attack revealed in 35 seconds inside ANY.RUN’s cloud sandbox
+With the interactive sandbox, suspicious files and URLs can be detonated quickly, and the full attack chain often becomes visible in under a minute.</p>
+
+<p>Operational results often show
+up to 21 minutes shaved off MTTR per case
+, because teams spend less time waiting, re-checking, and escalating just to confirm what’s happening. Business outcomes:
+Earlier confirmation, shorter dwell time
+Fewer SLA misses under load
+Smaller incident impact</p>
+<ol>
+  <li>Over-Escalation Hides Real Priority Incidents
+Business risk:
+When evidence is unclear, Tier 1 escalates “just to be safe,” and Tier 2 becomes a verification layer for borderline cases. That clogs queues, pulls senior time into “maybes,” and slows response to high-impact incidents, increasing cost per investigation and raising the risk that critical cases wait too long.</li>
+</ol>
+
+<p>The Fix: Close More Cases at Tier 1 with Execution Evidence
+When Tier 1 can prove or dismiss alerts independently, Tier 2 stays focused on real incidents instead of acting as a verification desk. With solutions like ANY.RUN, that becomes realistic because the sandbox is built for fast triage: it’s intuitive to use, provides
+AI-assisted guidance
+during analysis, and generates
+auto-built reports
+that capture the key evidence without extra manual write-ups. A dedicated
+IOCs tab
+also pulls indicators into one place, so Tier 1 can escalate with context rather than escalating for confirmation. AI assisted guidance showcased in ANY.RUN’s sandbox
+This is how teams see
+up to a 30% reduction in Tier-1 → Tier-2 escalations
+, preserving senior capacity for high-risk threats.</p>
+
+<p>Business outcomes:
+Less Tier 2 overload
+Faster queues
+Lower escalation volume</p>
+<ol>
+  <li>Manual Work Limits Scale and Increases Error
+Business risk:
+A lot of triage is still repetitive manual work, following redirect chains, dealing with CAPTCHAs, or uncovering hidden links in QR codes. As volume grows, this limits throughput, increases mistakes, and triggers unnecessary escalation simply because teams run out of time. The Fix: Reduce Manual Steps with Interactive Automation
+Modern sandbox environments combine automation with human-like interactivity, allowing suspicious content to be safely opened, redirected flows followed, and protection mechanisms such as CAPTCHAs or QR-embedded links to be handled automatically during analysis.</li>
+</ol>
+
+<p>Malicious PDF with a QR code: ANY.RUN extracts and opens the embedded link automatically, revealing the next stage of the attack
+With ANY.RUN’s interactive sandbox, these routine triage actions are performed inside the controlled environment, exposing hidden malicious behavior while removing repetitive work from responders. In day-to-day operations, teams often see
+up to a 20% decrease in Tier 1 workload
+, along with fewer escalations and more time available for high-value investigation. Business outcomes:
+More Tier 1 capacity
+Fewer manual errors
+More time for confirmed threats
+Reduce Business Risk by Fixing Triage First
+Broken triage rarely looks dramatic. Instead, it quietly slows response, increases escalation pressure, and keeps real threats open longer than the business can afford.</p>
+
+<p>Teams that shift to evidence-driven, execution-based triage consistently report measurable gains, including:
+Up to 3× improvement in overall SOC efficiency
+94% of users reported faster triage and clearer verdicts
+Up to 58% more threats identified across investigations
+Improving speed, certainty, and scalability at the triage stage is one of the fastest ways to reduce MTTR, control operational cost, and cut real business exposure. Explore evidence-driven triage
+for your SOC and turn faster decisions into measurable security performance. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="malicious-nuget-packages-stole-aspnet-data-npm-package-dropped-malware"><a id="article-13"></a>Malicious NuGet Packages Stole ASP.NET Data; npm Package Dropped Malware</h2>
+
+<p>Cybersecurity researchers have discovered four malicious NuGet packages that are designed to target ASP.NET web application developers to steal sensitive data. The campaign,
+discovered by Socket
+, exfiltrates
+ASP.NET Identity data
+, including user accounts, role assignments, and permission mappings, as well as manipulates authorization rules to create persistent backdoors in victim applications. The names of the packages are listed below -
+NCryptYo
+DOMOAuth2_
+IRAOAuth2.0
+SimpleWriter_
+The NuGet packages were published to the repository between August 12 and 21, 2024, by a user named
+hamzazaheer
+. They have since been taken down from the repository following responsible disclosure, but not before attracting more than 4,500 downloads.</p>
+
+<p>According to the software supply chain security company, NCryptYo acts as a first-stage dropper that establishes a local proxy on localhost:7152 that relays traffic to an attacker-controlled command-and-control (C2) server whose address is dynamically retrieved at runtime. It’s worth noting that NCryptYo attempts to masquerade as the legitimate NCrypto package. DOMOAuth2_ and IRAOAuth2.0 steal Identity data and backdoor apps, while SimpleWriter_ features unconditional file writing and hidden process execution capabilities while presenting itself as a PDF conversion utility. An analysis of package metadata has revealed identical build environments, indicating that the campaign is the work of a single threat actor.</p>
+
+<p>“NCryptYo is a stage-1 execution-on-load dropper,” security researcher Kush Pandya said. “When the assembly loads, its static constructor installs JIT compiler hooks that decrypt embedded payloads and deploy a stage-2 binary - a localhost proxy on port 7152 that relays traffic between the companion packages and the attacker’s external C2 server, whose address is resolved dynamically at runtime.”
+Once the proxy is active, DOMOAuth2_ and IRAOAuth2.0 begin transmitting the ASP.NET Identity data through the local proxy to the external infrastructure. The C2 server responds with authorization rules that are then processed by the application to create a persistent backdoor by granting themselves admin roles, modifying access controls, or disabling security checks. SimpleWriter_, for its part, writes threat actor-controlled content to disk and executes the dropped binary with hidden windows.</p>
+
+<p>It’s not exactly clear how users are tricked into downloading these packages, as the attack chain kicks in only after all four of them are installed. “The campaign’s objective is not to compromise the developer’s machine directly, but to compromise the applications they build,” Pandya explained. “By controlling the authorization layer during development, the threat actor gains access to deployed production applications.”
+“When the victim deploys their ASP.NET application with the malicious dependencies, the C2 infrastructure remains active in production, continuously exfiltrating permission data and accepting modified authorization rules. The threat actor or a buyer can then grant themselves admin-level access to any deployed instance.”
+The disclosure comes as Tenable disclosed details of a malicious npm package named ambar-src that amassed more than 50,000 downloads before it was removed from the JavaScript registry.</p>
+
+<p>It was uploaded to npm on February 13, 2026. The package makes use of npm’s
+preinstall script hook
+to trigger the execution of malicious code contained within index.js during its installation. The malware is designed to run a one-liner command that obtains different payloads from the domain “x-ya[.]ru” based on the operating system -
+On Windows, it downloads and executes a file called msinit.exe containing encrypted shellcode, which is decoded and loaded into memory. On Linux, it fetches a bash script and executes it.</p>
+
+<p>The bash script then retrieves another payload from the same server, an ELF binary that works as an
+SSH-based reverse shell client
+. On macOS, it fetches another script that uses osascript to run JavaScript responsible for dropping Apfell, a JavaScript for Automation (JXA) agent part of the Mythic C2 framework that can conduct reconnaissance, collect screenshots, steal data from Google Chrome, and capture system passwords by displaying a fake prompt. “It employs multiple techniques to evade detection, and drops open-source malware with advanced capabilities, targeting developers on Windows, Linux, and macOS hosts,” the company
+said
+. Once the data is collected, it’s exfiltrated to the attacker to a Yandex Cloud domain in an effort to blend in with legitimate traffic and take advantage of the fact that trusted services are less likely to be blocked within corporate networks.</p>
+
+<p>Ambar-src is assessed to be a more mature variant of
+eslint-verify-plugin
+, another rogue npm package that was recently flagged by JFrog as dropping Mythic agents Poseidon and Apfell on Linux and macOS systems. “If this package is installed or running on a computer, that system must be considered fully compromised,” Tenable said. “While the package should be removed, please be aware that because an external entity may have gained full control of the computer, removing the package does not guarantee the elimination of all resulting malicious software.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

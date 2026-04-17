@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-31 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">OpenAI Patches ChatGPT Data Exfiltration Flaw and Codex GitHub Token Vulnerability</a></li>
+      
+        <li><a href="#article-2">DeepLoad Malware Uses ClickFix and WMI Persistence to Steal Browser Credentials</a></li>
+      
+        <li><a href="#article-3">⚡ Weekly Recap: Telecom Sleeper Cells, LLM Jailbreaks, Apple Forces U.K. Age Checks and More</a></li>
+      
+        <li><a href="#article-4">3 SOC Process Fixes That Unlock Tier 1 Productivity</a></li>
+      
+        <li><a href="#article-5">Russian CTRL Toolkit Delivered via Malicious LNK Files Hijacks RDP via FRP Tunnels</a></li>
+      
+        <li><a href="#article-6">The State of Secrets Sprawl 2026: 9 Takeaways for CISOs</a></li>
+      
+        <li><a href="#article-7">Three China-Linked Clusters Target Southeast Asian Government in 2025 Cyber Campaign</a></li>
+      
+        <li><a href="#article-8">Iran-Linked Hackers Breach FBI Director’s Personal Email, Hit Stryker With Wiper Attack</a></li>
+      
+        <li><a href="#article-9">Citrix NetScaler Under Active Recon for CVE-2026-3055 (CVSS 9.3) Memory Overread Bug</a></li>
+      
+        <li><a href="#article-10">TA446 Deploys DarkSword iOS Exploit Kit in Targeted Spear-Phishing Campaign</a></li>
+      
+        <li><a href="#article-11">CISA Adds CVE-2025-53521 to KEV After Active F5 BIG-IP APM Exploitation</a></li>
+      
+        <li><a href="#article-12">Apple Sends Lock Screen Alerts to Outdated iPhones Over Active Web-Based Exploits</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-31-ai创业新闻">2026-03-31 AI创业新闻</h1>
+
+<h2 id="openai-patches-chatgpt-data-exfiltration-flaw-and-codex-github-token-vulnerability"><a id="article-1"></a>OpenAI Patches ChatGPT Data Exfiltration Flaw and Codex GitHub Token Vulnerability</h2>
+
+<p>A previously unknown vulnerability in OpenAI ChatGPT allowed sensitive conversation data to be exfiltrated without user knowledge or consent, according to new findings from Check Point. “A single malicious prompt could turn an otherwise ordinary conversation into a covert exfiltration channel, leaking user messages, uploaded files, and other sensitive content,” the cybersecurity company
+said
+in a report published today. “A backdoored GPT could abuse the same weakness to obtain access to user data without the user’s awareness or consent.”
+Following responsible disclosure, OpenAI addressed the issue on February 20, 2026. There is no evidence that the issue was ever exploited in a malicious context.</p>
+
+<p>While ChatGPT is built with various guardrails to prevent unauthorized data sharing or generate
+direct outbound network requests
+, the newly discovered vulnerability bypasses these safeguards entirely by exploiting a side channel originating from the Linux runtime used by the artificial intelligence (AI) agent for code execution and data analysis. Specifically, it abuses a hidden DNS-based communication path as a “covert transport mechanism” by encoding information into DNS requests to get around visible AI guardrails. What’s more, the same hidden communication path could be used to establish remote shell access inside the Linux runtime and achieve command execution. In the absence of any warning or user approval dialog, the vulnerability creates a security blind spot, with the AI system assuming that the environment was isolated.</p>
+
+<p>As an illustrative example, an attacker could convince a user to paste a malicious prompt by passing it off as a way to unlock premium capabilities for free or improve ChatGPT’s performance. The threat gets magnified when the technique is embedded inside custom GPTs, as the malicious logic could be baked into it as opposed to tricking a user into pasting a specially crafted prompt. “Crucially, because the model operated under the assumption that this environment could not send data outward directly, it did not recognize that behavior as an external data transfer requiring resistance or user mediation,” Check Point explained. “As a result, the leakage did not trigger warnings about data leaving the conversation, did not require explicit user confirmation, and remained largely invisible from the user’s perspective.”
+With tools like ChatGPT increasingly embedded in enterprise environments and users uploading highly personal information, vulnerabilities like these underscore the need for organizations to implement their own security layer to counter prompt injections and other unexpected behavior in AI systems.</p>
+
+<p>“This research reinforces a hard truth for the AI era: don’t assume AI tools are secure by default,” Eli Smadja, head of research at Check Point Research, said in a statement shared with The Hacker News. “As AI platforms evolve into full computing environments handling our most sensitive data, native security controls are no longer sufficient on their own. Organizations need independent visibility and layered protection between themselves and AI vendors. That’s how we move forward safely – by rethinking security architecture for AI, not reacting to the next incident.”
+The development comes as threat actors have been
+observed
+publishing web browser extensions (or updating existing ones) that engage in the dubious practice of prompt poaching to silently siphon AI chatbot conversations without user consent, highlighting how seemingly harmless add-ons could become a channel for data exfiltration.</p>
+
+<p>“It almost goes without saying that these plugins open the doors to several risks, including identity theft, targeted phishing campaigns, and sensitive data being put up for sale on underground forums,” Expel researcher Ben Nahorney
+said
+. “In the case of organizations where employees may have unwittingly installed these extensions, they may have exposed intellectual property, customer data, or other confidential information.”
+Command Injection Vulnerability in OpenAI Codex Leads to GitHub Token Compromise
+The findings also coincide with the discovery of a critical command injection vulnerability in OpenAI’s
+Codex
+, a cloud-based software engineering agent, that could have been exploited to steal GitHub credential data and ultimately compromise multiple users interacting with a shared repository. “The vulnerability exists within the task creation HTTP request, which allows an attacker to smuggle arbitrary commands through the GitHub branch name parameter,” BeyondTrust Phantom Labs researcher Tyler Jespersen
+said
+in a report shared with The Hacker News. “This can result in the theft of a victim’s GitHub User Access Token – the same token Codex uses to authenticate with GitHub.”
+The issue, per BeyondTrust, stems from improper input sanitization when processing GitHub branch names during task execution on the cloud.</p>
+
+<p>Because of this inadequacy, an attacker could inject arbitrary commands through the branch name parameter in an HTTPS POST request to the backend Codex API, execute malicious payloads inside the agent’s container, and retrieve sensitive authentication tokens. “This granted lateral movement and read/write access to a victim’s entire codebase,” Kinnaird McQuade, chief security architect at BeyondTrust,
+said
+in a post on X. It has been patched by OpenAI as of February 5, 2026, after it was reported on December 16, 2025. The vulnerability affects the ChatGPT website, Codex CLI, Codex SDK, and the Codex IDE Extension.</p>
+
+<p>The cybersecurity vendor said the branch command injection technique could also be extended to steal GitHub Installation Access tokens and execute bash commands on the code review container whenever @codex is referenced in GitHub. “With the malicious branch set up, we referenced Codex in a comment on a pull request (PR),” it explained. “Codex then initiated a code review container and created a task against our repository and branch, executing our payload and forwarding the response to our external server.”
+The research also highlights a growing risk where the privileged access granted to AI coding agents can be weaponized to provide a “scalable attack path” into enterprise systems without triggering traditional security controls. “As AI agents become more deeply integrated into developer workflows, the security of the containers they run in – and the input they consume – must be treated with the same rigor as any other application security boundary,” BeyondTrust said.</p>
+
+<p>“The attack surface is expanding, and the security of these environments needs to keep pace.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="deepload-malware-uses-clickfix-and-wmi-persistence-to-steal-browser-credentials"><a id="article-2"></a>DeepLoad Malware Uses ClickFix and WMI Persistence to Steal Browser Credentials</h2>
+
+<p>A new campaign has leveraged the
+ClickFix
+social engineering tactic as a way to distribute a previously undocumented malware loader referred to as
+DeepLoad
+. “It likely uses AI-assisted obfuscation and process injection to evade static scanning, while credential theft starts immediately and captures passwords and sessions even if the primary loader is blocked,” ReliaQuest researchers Thassanai McCabe and Andrew Currie
+said
+in a report shared with The Hacker News. The starting point of the attack chain is a ClickFix lure that tricks users into running PowerShell commands by pasting the command into the Windows Run dialog under the pretext of addressing a non-existent issue. This, in turn, uses “mshta.exe,” a legitimate Windows utility to download and run an obfuscated PowerShell loader.</p>
+
+<p>The loader, for its part, has been found to conceal its actual functionality among meaningless variable assignments, likely in an attempt to deceive security tools. It’s assessed that the threat actors relied on an artificial intelligence (AI) tool to develop the obfuscation layer. DeepLoad makes deliberate efforts to blend in with regular Windows activity and fly under the radar. This includes hiding the payload within an executable named “LockAppHost.exe,” a legitimate Windows process that manages the lock screen.</p>
+
+<p>In addition, the malware covers up its own tracks by disabling PowerShell command history and invoking native Windows core functions directly instead of relying on PowerShell’s built-in commands to launch processes and modify memory. In doing so, it bypasses common monitoring hooks that keep tabs on PowerShell-based activity. “To evade file-based detection, DeepLoad generates a secondary component on the fly by using the built-in PowerShell feature Add-Type, which compiles and runs code written in C#,” ReliaQuest said. “This produces a temporary Dynamic Link Library (DLL) file dropped into the user’s Temp directory.”
+This offers a way for the malware to sidestep file name-based detections, as the DLL is compiled every time it’s executed and written with a randomized file name.</p>
+
+<p>Another notable defense evasion tactic adopted by DeepLoad is the use of
+asynchronous procedure call (APC) injection
+to run the main payload inside a trusted Windows process without a decoded payload written to disk after launching the target process in a suspended state, writing shellcode into its memory, and then resuming the execution of the process. DeepLoad is designed to facilitate credential theft by extracting browser passwords from the host. It also drops a malicious browser extension that intercepts credentials as they are being entered on login pages and persists across user sessions unless it’s explicitly removed. A more dangerous feature of the malware is its ability to automatically detect when removable media devices like USB drives are connected and copy the malware-laced files using names like “ChromeSetup.lnk,” “Firefox Installer.lnk,” and “AnyDesk.lnk” so as to trigger the infection once it’s doubled-clicked.</p>
+
+<p>“DeepLoad used Windows Management Instrumentation (WMI) to reinfect a ‘clean’ host three days later with no user action and no attacker interaction,” ReliaQuest explained. “WMI served two purposes: It broke the parent-child process chains most detection rules are built to catch, and it created a WMI event subscription that quietly re-executed the attack later.”
+The goal, it appears, is to deploy multi-purpose malware that can perform malicious actions across the cyber kill chain and sidestep detection by security controls by avoiding writing artifacts to disk, blending into Windows processes, and spreading quickly to other machines. The disclosure comes as G DATA
+detailed
+another malware loader dubbed Kiss Loader that’s distributed through Windows Internet Shortcut files (URL) attached to phishing emails, which then connects to a remote
+WebDAV resource hosted on a TryCloudflare domain
+to serve a secondary shortcut that masquerades as a PDF document. Once executed, the shortcut launches a WSH script responsible for running a JavaScript component, which proceeds to retrieve and execute a batch script that displays a decoy PDF, sets up persistence in the Startup folder, and downloads the Python-based Kiss Loader.</p>
+
+<p>In the final stage, the loader decrypts and runs
+Venom RAT
+, an AsyncRAT variant, using
+APC injection
+. It’s currently not known how widespread attacks deploying Kiss Loader are, and if it’s being offered under a malware-as-a-service (MaaS) model. That said, the threat actor behind the loader claims to be from Malawi. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="-weekly-recap-telecom-sleeper-cells-llm-jailbreaks-apple-forces-uk-age-checks-and-more"><a id="article-3"></a>⚡ Weekly Recap: Telecom Sleeper Cells, LLM Jailbreaks, Apple Forces U.K. Age Checks and More</h2>
+
+<p>Some weeks are loud. This one was quieter but not in a good way. Long-running operations are finally hitting courtrooms, old attack methods are showing up in new places, and research that stopped being theoretical right around the time defenders stopped paying attention. There’s a bit of everything this week.</p>
+
+<p>Persistence plays, legal wins, influence ops, and at least one thing that looks boring until you see what it connects to. All of it below. Let’s go. ⚡ Threat of the Week
+Citrix Flaw Comes Under Active Exploitation
+— A critical security flaw in Citrix NetScaler ADC and NetScaler Gateway (CVE-2026-3055, CVSS score: 9.3) has come under active exploitation as of March 27, 2026.</p>
+
+<p>The vulnerability refers to a case of insufficient input validation leading to memory overread, which an attacker could exploit to leak potentially sensitive information. Per Citrix, successful exploitation of the flaw hinges on the appliance being configured as a SAML Identity Provider (SAML IDP). Your Engineers Are Drowning in Tools — Here’s the Data
+Chainguard surveyed 1,200 engineers and tech leaders for their 2026 Engineering Reality Report. AI is buying back time but also introducing new security concerns, while technical debt, tool sprawl, and burnout keep dragging teams down.</p>
+
+<p>72% say time pressure blocks new feature work; 88% report productivity loss from too many tools. Get the Full Report ➝
+🔔 Top News
+FBI Confirms Hack of Director Kash Patel’s Personal Email Account
+— The U.S. Federal Bureau of Investigation (FBI) confirmed that threat actors gained access to an email account belonging to FBI Director Kash Patel, but said no government information has been compromised. The Iran-linked hacker group Handala claimed responsibility for the hack, releasing files allegedly representing photos, emails, and classified documents taken from the FBI director’s inbox.</p>
+
+<p>“The so-called ‘impenetrable’ systems of the FBI were brought to their knees within hours by our team,” the hackers wrote. It’s unclear when the account was hacked. The U.S. government, which recently took down multiple sites operated by Iranian state actors, said it’s offering up to $10 million for information on threat groups like Parsian Afzar Rayan Borna and Handala.</p>
+
+<p>Parsian Afzar Rayan Borna is an
+IT company
+that’s been
+implicated
+in Iran’s disinformation and surveillance campaigns. The company is assessed to be linked to
+Banished Kitten
+, an Iran-nexus adversary active since at least 2008 and operates the Homeland Justice and Handala Hack personas. Red Menshen Uses Stealthy BPFDoor to Spy on Telecom Networks
+— A China-linked state-sponsored threat actor known as Red Menshen has deployed kernel implants and passive backdoors deep within telecommunication backbone infrastructure worldwide for long-term persistence. The implants have been fittingly described as sleeper cells that lie dormant and blend into target environments, but spring into action upon receiving a magic packet by quietly monitoring network traffic instead of opening a visible connection.</p>
+
+<p>Initial access is usually gained by exploiting known vulnerabilities in edge networking devices and VPN products or by leveraging compromised accounts. Once inside, the threat actor maintains long-term access by deploying tools like BPFdoor. Some BPFdoor samples mimic bare-metal infrastructure, posing as legitimate enterprise platforms to blend into operational noise. Others spoof core containerization components.</p>
+
+<p>By embedding the implant deep below traditional visibility layers, the goal is to significantly complicate detection efforts. Rapid7 has
+released
+a scanning script designed to detect known BPFDoor variants across Linux environments. GlassWorm Evolves to Drop Extension-Based Stealer
+— A new evolution of the GlassWorm campaign is delivering a multi-stage framework capable of comprehensive data theft and installing a remote access trojan (RAT), which deploys an information-stealing Google Chrome extension masquerading as an offline version of Google Docs. “It logs keystrokes, dumps cookies and session tokens, captures screenshots, and takes commands from a C2 server hidden in a Solana blockchain memo,” Aikido said.</p>
+
+<p>GlassWorm is the moniker assigned to a persistent campaign that obtains an initial foothold through rogue packages published across npm, PyPI, GitHub, and the Open VSX marketplace. In addition, the operators are known to compromise the accounts of project maintainers to push poisoned updates. Russian Hacker Sentenced to 2 Years for TA551-Linked Ransomware Attacks
+— Ilya Angelov, a 40-year-old Russian national, was sentenced to two years in prison for managing a botnet that was used to launch ransomware attacks against U.S. companies.</p>
+
+<p>Angelov, who went by the online aliases “milan” and “okart,” is said to have co-managed a Russia-based cybercriminal group known as TA551 (aka ATK236, G0127, Gold Cabin, Hive0106, Mario Kart, Monster Libra, Shathak, and UNC2420) between 2017 and 2021. The attacks leveraged spam emails to compromise systems and rope them into a botnet that other cybercriminals used to break into corporate systems and deploy ransomware. This included threat actors affiliated with BitPaymer and IcedID. FCC Bans New Foreign-Made Routers Over Security Risks
+— The U.S.</p>
+
+<p>Federal Communications Commission (FCC) said it was banning the import of new, foreign-made consumer routers, citing “unacceptable” risks to cyber and national security. To that end, all consumer-grade routers manufactured in foreign countries have been added to the Covered List, unless they have been granted a Conditional Approval by the Department of War (DoW) or the Department of Homeland Security (DHS) after determining that they do not pose any risks. The development comes as the Indian government appears to be preparing to bar Chinese CCTV product makers, such as Hikvision, Dahua, and TP-Link, from selling their cameras from April 1, 2026, to tighten oversight under the Standardisation Testing and Quality Certification (STQC) rules, the Economic Times
+reported
+. ‎️‍🔥 Trending CVEs
+New vulnerabilities show up every week, and the window between disclosure and exploitation keeps getting shorter.</p>
+
+<p>The flaws below are this week’s most critical — high-severity, widely used software, or already drawing attention from the security community. Check these first, patch what applies, and don’t wait on the ones marked urgent —
+CVE-2026-3055
+(Citrix NetScaler ADC and NetScaler Gateway),
+CVE-2025-62843, CVE-2025-62844, CVE-2025-62845, CVE-2025-62846
+(QNAP),
+CVE-2026-22898
+(QNAP QVR Pro),
+CVE-2026-4673, CVE-2026-4677, CVE-2026-4674
+(Google Chrome),
+CVE-2026-4404
+(GoHarbor Harbor),
+CVE-2026-1995
+(IDrive for Windows),
+CVE-2026-4681
+(
+Windchill and FlexPLM
+),
+CVE-2025-15517, CVE-2025-15518, CVE-2025-15519, CVE-2025-15605, CVE-2025-62673
+(TP-Link),
+CVE-2025-66176
+(HikVision),
+CVE-2026-32647
+(NGINX Open Source and NGINX Plus),
+CVE-2026-22765, CVE-2026-22766
+(Dell Wyse Management Suite),
+CVE-2026-21637, CVE-2026-21710
+(Node.js),
+CVE-2026-25185
+aka LnkMeMaybe (Microsoft),
+CVE-2026-1519
+,
+CVE-2026-3104
+,
+CVE-2026-3119
+,
+CVE-2026-3591
+(BIND 9),
+CVE-2026-2931
+(Amelia Booking plugin),
+CVE-2026-33656
+(EspoCRM),
+CVE-2026-3608
+(Kea),
+CVE-2026-20817
+(Microsoft Windows Error Reporting),
+CVE-2025-33244
+(NVIDIA Apex),
+CVE-2026-32746
+(Synology DiskStation Manager), and
+CVE-2026-3098
+(Smart Slider 3 plugin). 🎥 Cybersecurity Webinars
+Your Identity Program Is Mature. So Why Are You Still Getting Breached?</p>
+
+<p>→ Your identity program is mature. Yet hundreds of apps still operate outside it. New 2026 Ponemon research from 600+ security leaders shows exactly how big that gap is and what it costs. Now, AI agents are making it worse.</p>
+
+<p>This webinar breaks down the findings and shows you what to fix first. Everyone Agrees AI Agents Need Identity. Almost Nobody Knows How to Do It
+→ Everyone agrees AI agents need identity. Few know how to actually do it.</p>
+
+<p>This session skips the theory and shows you what a real production deployment looks like, including how to give agents strong identities, see exactly what they’re doing, and control how they behave. 📰 Around the Cyber World
+Fortinet FortiClient EMS Flaw Comes Under Attack
+— A recently patched security flaw affecting Fortinet FortiClient EMS has come under active exploitation in the wild as of March 24, 2026. The vulnerability in question is
+CVE-2026-21643
+(CVSS score: 9.1), a critical SQL injection that could allow an unauthenticated attacker to execute unauthorized code or commands via specifically crafted HTTP requests. The issue was addressed by Fortinet last month in FortiClient EMS version 7.4.5.</p>
+
+<p>“Attackers can smuggle SQL statements through the ‘Site’-header inside an HTTP request,” Defused Cyber
+said
+. Nearly 1,000 FortiClient EMS are publicly exposed. Meta Disrupts Influence Operation Linked to Iran
+— Meta
+said
+it disrupted an influence operation linked to Iran that employed “sophisticated fake personas” on Instagram to build relationships with U.S. users before sending political messaging.</p>
+
+<p>The network used accounts posing as journalists, commentators, and ordinary people to engage users and gradually introduce political narratives. A second layer of accounts amplified posts to help spread the messaging. Armenian National Extradited to U.S. in Connection with RedLine Stealer Operations
+— An Armenian national has been extradited to the United States over his alleged role in the administration of the
+RedLine infostealer
+malware.</p>
+
+<p>Hambardzum Minasyan, per court documents, allegedly developed and managed the stealer, while unnamed conspirators maintained digital infrastructure, including the command-and-control (C2) servers and administrative panels to enable the deployment of the malware by affiliates, and collected payments from the affiliates. “They allegedly responded to questions and requests from actual and potential RedLine affiliates, conspired with each other and affiliates to steal and possess the financial information, including access devices, of victims, and laundered the proceeds of cybercrime through cryptocurrency exchanges and other means,” the U.S. Justice Department
+said
+. Minasyan has also been accused of registering two virtual private servers to host portions of RedLine’s infrastructure, as well as two internet domains in support of the scheme, repositories on an online file sharing site to distribute the stealer to affiliates, and registering a cryptocurrency account in November 2021 to receive payments.</p>
+
+<p>RedLine Stealer was disrupted in an international law enforcement operation in October 2024. Minasyan has been charged with conspiracy to commit access device fraud, conspiracy to violate the Computer Fraud and Abuse Act, and conspiracy to commit money laundering. If convicted, he faces up to 10 years in prison for access device fraud and up to 20 years in prison for the other two counts. In June 2025, the U.S.</p>
+
+<p>Department of State announced a $10 million reward for information on
+Maxim Alexandrovich Rudometov
+, who is believed to be the main developer and administrator of RedLine. New Android Malware “Android God Mode” Abuses Accessibility Permissions
+— The Indian Cybercrime Coordination Centre (I4C) has
+issued
+an advisory, alerting users of a new Android malware called Android God Mode that abuses its permissions to accessibility services to seize control of infected devices. The malware is propagated via dropper apps that masquerade as banking, public, and utility services such as SBI YONO, Jivan Parman Patra, and RTO Challan, indicating that the campaign’s focus is on targeting Indian users. “By coercing users into granting elevated Android permissions, these threats achieve near-total control over the device, enabling stealthy overlay attacks and the real-time theft of sensitive financial and personal information,” the I4C
+said
+.</p>
+
+<p>The malware is distributed in the form of links or APK files shared through WhatsApp. Once installed, it abuses Android’s accessibility services to grant itself additional permissions to harvest incoming SMS messages, send messages on the victim’s behalf, access contact lists, initiate fraudulent call forwarding, and take pictures using the device’s camera. Android 17 Beta Gains New Security Features
+— To improve security against code injection attacks, Android now
+enforces
+that dynamically loaded native libraries must be read-only. If your app targets Android 17 or higher, all native files loaded using System.load() must be marked as read-only beforehand.</p>
+
+<p>Another new addition is the support for Post-Quantum Cryptography (PQC) through the new v3.2 APK Signature Scheme. This scheme utilizes a hybrid approach, combining a classical signature with an ML-DSA signature. China-Linked Actors Deliver Mofu Loader and KIVARS
+— In recent months, Chinese-affiliated espionage clusters like
+DRBControl
+have
+employed
+DLL side-loading techniques to deliver
+Mofu Loader
+– a malware previously attributed to
+GroundPeony
+– which then drops a C++ backdoor capable of executing commands issued by an attacker-controlled server. Last year, companies and organizations in Japan and Taiwan have also been
+targeted
+by variants of a
+backdoor
+called
+KIVARS
+, which is tied to a Chinese hacking group called
+BlackTech
+.</p>
+
+<p>Automated Traffic Outpaces Human Traffic
+— HUMAN Security found that automated traffic grew eight times faster than human traffic year-over-year. “In 2025, automated traffic across the internet grew 23.51% year over year, while human traffic increased 3.10% over the same period,” the company
+said
+. The cybersecurity company noted that its customers experienced more than 400,000 attempted post-login account compromise attacks, more than quadruple that of 2024. U.S.</p>
+
+<p>Accuses China of Backing Scam Compounds
+— A senior U.S. official accused Beijing of implicitly backing Chinese criminal syndicates running cyber scam compounds across Southeast Asia. Speaking during a Joint Economic Committee congressional hearing about U.S. efforts to combat digital scams, Reva Price, commissioner with the U.S.-China Economic and Security Review Commission, said links have been unearthed between scam centers and the Chinese government’s Belt and Road Initiative.</p>
+
+<p>Chinese criminal syndicates have “invested in projects linked to China’s Belt and Road Initiative alongside China’s state-owned enterprises,” she
+said
+, adding that they “have also seen criminal leaders who appear to have gotten a pass by promoting messaging and other activities aligned with Chinese Communist Party priorities.” Scam centers in Southeast Asia are often operated by Chinese crime syndicates that lure people into the region with enticing job opportunities and coerce them into participating in pig butchering or romance baiting scams by confiscating their passports and subjecting them to torture. Exploitation Against Oracle WebLogic Servers
+— A recently disclosed security flaw in Oracle WebLogic (
+CVE-2026-21962
+, CVSS score: 10.0) witnessed automated exploitation attempts almost immediately after public exploit code was released, demonstrating how software flaws are being rapidly weaponized by bad actors. The activity, detected by CloudSEK against its honeypots, also leveraged other WebLogic flaws (CVE-2020-14882, CVE-2020-14883, CVE-2020-2551, and CVE-2017-10271), as well as flaws impacting Hikvision and PHPUnit, indicating a spray and pray approach. “Attackers predominantly utilized rented Virtual Private Servers (VPS) from common hosting providers like DigitalOcean and HOSTGLOBAL.PLUS,” the company
+said
+.</p>
+
+<p>“The overall activity was characterized by high-volume, automated scanning, with tools like libredtail-http and the Nmap Scripting Engine dominating the malicious traffic.”
+Security Flaws in Cisco Catalyst 9300 Series Switches
+— Details have emerged about now-patched vulnerabilities in Cisco Catalyst 9300 Series switches (CVE-2026-20110, CVE-2026-20112, CVE-2026-20113, and CVE-2026-20114) that could result in privilege escalation, operational denial-of-service, stored cross-site scripting (XSS), and CRLF injection. “Collectively, these vulnerabilities introduce risks to administrative trust boundaries, service availability, session integrity, and system log reliability – affecting both operational continuity and security monitoring capabilities,” OPSWAT
+said
+. “CVE-2026-20114 and CVE-2026-20110 are the most operationally impactful when chained. A low-privilege Web UI user can escalate access and invoke a maintenance-mode operation, resulting in full denial of service that may require physical intervention to restore.” The issues were patched by Cisco last week.</p>
+
+<p>Financial Institution Targeted by BRUSHWORM and BRUSHLOGGER
+— A modular backdoor with USB-based spreading capabilities was used in an attack targeting an unnamed South Asian financial institution, according to findings from Elastic Security Labs. The malware, dubbed BRUSHWORM, is one of the two malware components identified in the victim’s infrastructure, the other being a DLL keylogger referred to as BRUSHLOGGER. “BRUSHWORM features anti-analysis checks, AES-CBC encrypted configuration, scheduled task persistence, modular DLL payload downloading, USB worm propagation, and broad file theft targeting documents, spreadsheets, email archives, and source code,” security researcher Salim Bitam
+said
+. BRUSHWORM is also responsible for running basic anti-analysis checks, maintaining persistence, command-and-control (C2) communication, and downloading additional modular payloads.</p>
+
+<p>BRUSHLOGGER augments the backdoor by capturing system-wide keystrokes via a simple Windows keyboard hook and logging the active window context for each keystroke session. “Neither binary employs meaningful code obfuscation, packing, or advanced anti-analysis techniques,” Elastic said. “Given the absence of a kill switch, the use of free dynamic DNS servers in testing versions, and some coding mistakes, we assess with moderate confidence that the author is relatively inexperienced and may have leveraged AI code-generation tools during development without fully reviewing the output.”
+U.K. Sanctions Xinbi
+— The U.K.’s Foreign, Commonwealth and Development Office (FCDO) has
+sanctioned
+Xinbi, a Chinese-language guarantee marketplace
+accused
+of enabling large-scale online fraud and human exploitation by supporting #8 Park (aka Legend Park), an industrial-scale scam compound in Cambodia notorious for large-scale pig butchering scams and forced labor of trafficked workers.</p>
+
+<p>The U.K. is the first country to sanction Xinbi. The move is designed to isolate Xinbi from the legitimate crypto ecosystem and disrupt its operations. Xinbi
+is
+estimated
+to have processed over $19.9 billion between 2021 and 2025.</p>
+
+<p>“The platform facilitates everything from ‘Black U’ money laundering and unlicensed OTC trades to the sale of compromised personal databases and scam infrastructure,” Chainalysis said. “In the face of previous takedowns, Xinbi demonstrated significant resilience by rapidly migrating to the SafeW messaging app and launching its own proprietary payment app, XinbiPay. This evolution highlights the challenges around pursuing illicit services as they build custom financial rails to insulate themselves from platform-level disruptions.” According to a
+report
+published by Elliptic last month, #8 Park is linked to a company named Legend Innovation, which, in turn, has ties to Prince Group, whose chairman, Chen Zhi, was arrested and extradited to China in connection with a crackdown on a large-scale fraud operation. #8 Park is also tied to HuiOne Group, with its payment business, HuiOne Pay (later rebranded as H-PAY), which operates a physical store within the compound.</p>
+
+<p>There has since been a
+sharp decline
+in incoming payments to merchants operating inside the compound beginning around February 9, 2026, with transactions almost entirely ceasing by February 13. What is Tsundere? —
+Tsundere
+is a botnet that enables system fingerprinting and arbitrary command execution on victim machines. It’s notable for the use of a technique called EtherHiding to retrieve command-and-control (C2) servers stored in smart contracts on the Ethereum blockchain.</p>
+
+<p>The malware is suspected to be a Malware-as-a-Service (MaaS) offering of Russian origin, owing to logic that checks whether the infected host is located in a CIS country, including Ukraine, and terminates execution if so. Most recently, the use of the botnet has been linked to the Iranian state-sponsored actor
+MuddyWater
+. Jailbreaking, a Continued Risk to LLMs
+— New research from Palo Alto Networks Unit 42 has uncovered that prompt jailbreaking remains a practical risk to large language models (LLMs) and that a genetic algorithm-based fuzzing approach can be used to generate meaning-preserving prompt variants to trigger policy-violating outcomes against both closed-source and open-weight pre-trained models. “The broader implication is that guardrails should be treated as probabilistic controls that require continuous adversarial evaluation, not as definitive security boundaries,” Unit 42
+said
+.</p>
+
+<p>The findings reinforce that security for LLM applications cannot rely on a single layer, necessitating that organizations define and enforce application scope, use robust, multi-signal content controls, treat user input as untrusted and isolate it from privileged instructions, validate outputs against scope and policy, and monitor for misuse, and apply standard security controls, such as authentication, rate limiting, and and least privilege tool permissions. SEO Campaign Delivers AsyncRAT
+— Since October 2025, an unknown threat actor has been running an
+active SEO poisoning campaign
+, using impersonation sites of over 25 popular applications to direct victims to malicious installers, including VLC Media Player, OBS Studio, KMS Tools, and CrosshairX. The campaign uses ScreenConnect, a legitimate remote management tool, to establish initial access and to deliver AsyncRAT. “Most notable in this campaign is the RAT’s added cryptocurrency clipper, dynamic plugin system capable of loading arbitrary capabilities at runtime, and a geo-fencing mechanism that deliberately excludes targets across the Middle East, North Africa, and Central Asia,” NCC Group said.</p>
+
+<p>AsyncRAT has also been delivered as part of a series of attacks on Libyan organizations between November 2025 and February 2026. The attacks targeted an oil refinery, a telecoms organization, and a state institution. “AsyncRAT is a remote access Trojan with a variety of capabilities, including keylogging, screen capture, and remote command execution capabilities, making it ideal for use in intelligence gathering and espionage attacks,” Symantec and Carbon Black
+said
+. “It is also modular, meaning it can be updated and customized, which is attractive for attackers.”
+Nigerian National Sentenced to 7 Years in Prison
+— A Nigerian man has been sentenced to more than seven years in a U.S.</p>
+
+<p>prison for his role in a scheme that broke into business email accounts and tricked victims into sending millions of dollars to fraudulent bank accounts. James Junior Aliyu, 31, received a 90-month prison sentence for conspiracy to commit wire fraud and money laundering. The court also ordered Aliyu to forfeit $1.2 million and repay nearly $2.39 million to the victims. Aliyu, who pleaded guilty in August 2025, acknowledged that he conspired with others, including Kosi Goodness Simon-Ebo, 31, and Henry Onyedikachi Echefu, 34, to deceive and defraud multiple American victims from February 2017 until at least July 2017.</p>
+
+<p>The business email compromise scheme targeted American businesses and individuals by compromising email accounts and sending false wiring instructions to deceive victims into sending money to bank accounts under their control. “Aliyu and his accomplices conspired to commit money laundering by disbursing the fraudulently obtained funds in the drop accounts to other accounts,” the U.S. Justice Department
+said
+. “Co-conspirators moved the stolen money by initiating account transfers, withdrawing cash, and obtaining cashier’s checks.</p>
+
+<p>They also wrote checks to other individuals and entities to hide the true ownership and source of these assets. In total, Aliyu and his co-conspirators attempted to defraud victims of at least $10.4 million, and the victims suffered an actual loss of at least $2,389,130.”
+Sensor Technology to Combat Deepfakes
+— Researchers at ETH Zürich have developed a sensor system that stamps a cryptographic signature onto images, video, and audio within a sensor chip at the exact moment they are captured, making it impossible to tamper with the data without being detected. “If the signatures are uploaded to a public ledger (e.g., a blockchain), anyone can verify the authenticity of videos and other data,” ETH Zürich
+said
+. “The technology can, in principle, be integrated into any type of sensor or camera.</p>
+
+<p>It would then be possible to identify manipulated content on online platforms with minimal effort.”
+Middle East Conflict Fuels Cyber Attacks
+— Threat actors have been
+capitalizing
+on geopolitical tensions in the Middle East region to spread Android spyware by distributing trojanized versions of
+Israel’s Red Alert apps
+via SMS phishing messages. The espionage campaign has been codenamed Operation False Siren by CYFIRMA. ZIP archives containing lures related to the conflict are also
+being used
+to launch malicious payloads that lead to the deployment of
+PlugX
+and
+LOTUSLITE
+backdoors. These ZIP-based phishing campaigns have been attributed to a Chinese nation-state actor known as
+Mustang Panda
+.</p>
+
+<p>Elsewhere, an Iran-themed fake news blog site hosting malicious JavaScript has been found, leading to the deployment of StealC malware. Apple Tests Ways to Block Malicious Copy-Pastes in macOS
+— With the release of macOS 26.4 last week, Apple has introduced a new feature that warns Mac users if they paste harmful commands in the Terminal app to curb
+ClickFix
+-style attacks that have increasingly targeted macOS in recent months. “Scammers often encourage pasting text into Terminal to try and harm your Mac or compromise your privacy,” the message
+reads
+. “These instructions are commonly offered via websites, chat agents, apps, files, or a phone call.” The alert comes with a “Paste Anyway” for those who wish to proceed.</p>
+
+<p>The disclosure comes as multiple
+ClickFix campaigns
+have come to light, including using a Cloudflare-themed verification page to deliver a Python-based macOS stealer dubbed
+Infiniti Stealer
+. A similar Cloudflare verification, but for Windows, has been
+used
+to launch PowerShell commands that ultimately drop StealC, Lumma, Rhadamanthys, Vidar Stealer, and Aura Stealer malware. The ClickFix strategy has also been adopted by a traffic distribution system known as
+KongTuke
+to redirect visitors of compromised WordPress websites to phishing pages and malware payloads. According to eSentire, ClickFix lures have been used to deliver
+EtherRAT
+, a Node.js-based backdoor linked to North Korean threat actors.</p>
+
+<p>“EtherRAT allows threat actors to run arbitrary commands on compromised hosts, gather extensive system information, and steal assets such as cryptocurrency wallets and cloud credentials,” the Canadian security company
+said
+. “Command-and-Control (C2) addresses are retrieved using ‘EtherHiding,’ a technique to make C2 addresses more resilient by storing and updating them in Ethereum smart contracts, allowing threat actors to rotate infrastructure at a small cost and avoid takedowns by law enforcement.” Recorded Future said it has identified five distinct clusters leveraging ClickFix to facilitate initial access to Windows and macOS systems since May 2024. “This indicates that the ClickFix methodology has transitioned into a standardized, high-ROI template adopted across a fragmented ecosystem of threat actors,” Insikt Group
+said
+. “While visually diverse, all analyzed clusters use a consistent execution framework that bypasses traditional browser security controls by shifting the point of exploitation to user-assisted manual commands.</p>
+
+<p>These campaigns target a wide variety of sectors, including accounting (QuickBooks), travel (Booking.com), and system optimization (macOS).”
+Apple Rolls Out Mandatory Age Verification in U.K. — In more Apple news, the tech giant has
+rolled out
+mandatory U.K. age verification with iOS 26.4, requiring users to provide a credit card or ID to confirm if they are an adult before “downloading apps, changing certain settings, or taking other actions with your Apple Account.” The move comes at a time when online child safety is increasingly drawing attention from regulators, causing many digital services, including social media apps and porn sites, to roll out similar checks. Discord, which
+announced
+plans to verify the ages of all its users last month, has since
+paused the effort
+until H2 2026 after concerns were raised about how IDs and personal information would be handled.</p>
+
+<p>Discord has reiterated that it does not receive any identifying personal information from users who need to manually verify their age. Instead, it is partnering with third-party age verification companies, who will “handle verification and only pass back your age group.” The company also
+said
+it’s no longer working with age verification vendor Persona, which has attracted criticism over allegations that it
+shared users’ data with other companies
+and
+left its frontend source code
+exposed to the internet. 🔧 Cybersecurity Tools
+OpenClaw Security Handbook
+→ It is a detailed security guide published by ZAST AI for users of OpenClaw, a multi-channel AI gateway that connects messaging platforms, LLMs, and local system capabilities. Because that combination creates a serious attack surface, the handbook covers the real risks — prompt injection, malicious skills, exposed ports, credential theft — backed by documented incidents and CVEs, with practical configuration guidance for locking it down.</p>
+
+<p>VulHunt
+→ It is an open-source framework from Binarly’s research team for hunting vulnerabilities in software binaries and UEFI firmware. It uses customizable rulepacks for scanning and can connect to Binarly’s Transparency Platform for large-scale triage. It also supports running as an MCP server, letting AI assistants interact with it directly. Disclaimer: For research and educational use only.</p>
+
+<p>Not security-audited. Review all code before use, test in isolated environments, and ensure compliance with applicable laws. Conclusion
+That’s the week. Some of it will age well, some of it is already being quietly exploited while you’re reading this sentence.</p>
+
+<p>The through-line, if there is one: patience. Attackers are playing long games. The detections, the arrests, the patches — they matter, but they’re almost always trailing. Stay sharp, check the CVE list, and see you next Monday.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="3-soc-process-fixes-that-unlock-tier-1-productivity"><a id="article-4"></a>3 SOC Process Fixes That Unlock Tier 1 Productivity</h2>
+
+<p>What is really slowing Tier 1 down: the threat itself or the process around it? In many SOCs, the biggest delays do not come from the threat alone. They come from fragmented workflows, manual triage steps, and limited visibility early in the investigation. Fixing those process gaps can help Tier 1 move faster, reduce unnecessary escalations, and improve how the entire SOC responds under pressure.</p>
+
+<p>Here are three process fixes that can help unlock stronger Tier 1 performance. Process #1: Replace Tool Switching with One Cross-Platform Investigation Workflow
+The problem:
+Tier 1 often loses time moving between different tools, interfaces, and processes to investigate suspicious activity across operating systems. What starts as one alert can quickly turn into a fragmented workflow. Why it hurts productivity:
+Constant tool switching slows down triage, breaks investigation focus, and makes it harder to build a clear picture of what is happening.</p>
+
+<p>It also increases the chance of missed context, especially when suspicious activity involves more than one environment or does not fit neatly into a Windows-first process. The solution:
+Replace fragmented investigation steps with one unified workflow for suspicious file and URL analysis across operating systems. Rather than sending Tier 1 through separate tools and processes for each environment, give them one place to observe behavior, gather evidence, and make decisions. That reduces friction in daily triage and keeps investigations consistent across Windows, macOS, Linux, and Android.</p>
+
+<p>ANY.RUN’s sandbox supporting 4 major operating systems
+This matters even more as macOS becomes a bigger part of business environments and attackers continue expanding beyond traditional Windows-focused campaigns. Security teams need the ability to investigate macOS-related threats without breaking their workflow. With ANY.RUN sandbox, Tier 1 can analyze activity across macOS, Windows, Linux, and Android in one place, reducing blind spots and speeding up early-stage decisions. Check real-world example:
+Miolab Stealer analyzed in macOS environment
+Miolab stealer analyzed inside ANY.RUN sandbox
+This Miolab Stealer session shows why cross-platform visibility matters in modern triage.</p>
+
+<p>The sample imitates a legitimate macOS authentication prompt, steals the user’s password, collects files from key directories, and sends the data to a remote server. Inside the ANY.RUN sandbox, this behavior becomes visible early, helping the team quickly understand the threat and respond with more confidence. Expand your SOC’s cross-platform threat visibility and reduce breach risk with unified analysis across macOS, Windows, Linux, and Android. Integrate in Your SOC
+What a unified workflow helps achieve:
+Lower investigation friction
+at Tier 1, with less time wasted across disconnected tools
+More consistent triage quality
+across Windows, macOS, Linux, and Android
+Reduced risk of missed context
+when threats span multiple operating systems
+Faster response decisions
+and a smoother path from triage to escalation
+Process #2: Shift Tier 1 to Behavior-First Triage with Automation and Interactivity
+The problem:
+Tier 1 often spends too much time reviewing alerts, static indicators, and scattered context before understanding whether a suspicious file or URL is actually malicious.</p>
+
+<p>Why it hurts productivity:
+Static data can suggest that something looks suspicious, but it does not always show what the object actually does during execution. On top of that, many modern threats do not reveal their full behavior without user actions such as opening a file, clicking through a page, or completing part of an interaction chain. This creates delays, adds manual work, and increases unnecessary escalations. The solution:
+Shift the process from alert-first review to behavior-first triage supported by automation and interactivity.</p>
+
+<p>Instead of relying mainly on hashes, domains, or metadata, let Tier 1 start with real execution in a safe environment. This is especially powerful when the interactive part of the analysis can also be automated. ANY.RUN’s Automated Interactivity opens the malicious link hidden under a QR code without any manual effort
+Rather than spending analyst time on QR codes, CAPTCHA checks, and other steps designed to delay or evade detection, the workflow can move forward on its own until meaningful behavior appears. With ANY.RUN, teams can uncover complex phishing and malware chains faster, reduce manual effort during triage, and reach clearer escalation decisions sooner.</p>
+
+<p>In fact, in 90% of cases, the behavior needed to validate a threat becomes visible within the first 60 seconds of detonation. Less than a minute required to analyze full attack chain inside ANY.RUN sandbox
+What behavior-first triage with automated interactivity helps achieve:
+Better use of Tier 1 capacity,
+with less time lost to repetitive manual actions
+Faster threat validation
+before suspicious activity turns into a longer investigation
+Fewer escalations
+caused by unclear early-stage evidence
+Stronger SOC response speed
+through earlier, behavior-based confirmation of malicious intent
+Process #3: Standardize Escalation with Response-Ready Evidence
+The problem:
+Too many investigations reach escalation without enough clear evidence. Tier 1 may know that something looks suspicious, but the next team still has to spend time rebuilding context, rechecking behavior, and figuring out what actually matters. Why it hurts productivity:
+When escalations are inconsistent or incomplete, the SOC loses time at multiple levels.</p>
+
+<p>Tier 2 and incident response teams have to repeat work, urgent cases take longer to validate, and leadership has less confidence in how quickly the team can move from triage to action. The solution:
+Standardize escalation around response-ready evidence rather than assumptions or partial notes. With ANY.RUN sandbox, Tier 1 can escalate with a ready-to-handle report instead of manually piecing together findings. It automatically generates a structured analysis report with the behavioral evidence, process activity, network details, screenshots, and other context collected during detonation.</p>
+
+<p>Automatically generated report for efficiency and timesaving
+As a result, Tier 2 receives a clearer view of the attack chain upfront, which cuts repeated work and helps move from triage to response with less delay. What response-ready escalation helps achieve:
+Reduced documentation burden
+on Tier 1 during escalation
+Faster handoff
+to Tier 2 with a clearer picture of the attack chain
+Less repeated investigation
+work across SOC functions
+More consistent response decisions
+based on complete behavioral evidence
+How These Process Fixes Improve SOC Performance
+When SOC teams fix the process gaps that slow Tier 1 down, the impact goes far beyond faster triage. They reduce manual workload, improve escalation quality, and give the entire team a clearer path from initial validation to response. In practice, organizations using ANY.RUN report measurable gains across both day-to-day operations and broader SOC performance.</p>
+
+<p>Up to
+20% lower Tier 1 workload
+through faster validation and less manual triage work
+Around
+30% fewer Tier 1-to-Tier 2 escalations
+, helping senior team members stay focused on higher-priority threats
+94% of users report faster triage
+in real SOC workflows
+Up to
+3× stronger SOC efficiency/performance
+, driven by quicker validation and smoother workflows
+Lower infrastructure costs by replacing hardware-heavy analysis setups with a cloud-based environment
+An average
+21-minute reduction in MTTR per case
+, supporting faster containment and response
+Less alert fatigue and earlier, evidence-based decisions through faster access to threat behavior and context
+Strengthen Tier 1 performance
+and give your SOC a faster path from triage to response with ANY.RUN. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="russian-ctrl-toolkit-delivered-via-malicious-lnk-files-hijacks-rdp-via-frp-tunnels"><a id="article-5"></a>Russian CTRL Toolkit Delivered via Malicious LNK Files Hijacks RDP via FRP Tunnels</h2>
+
+<p>Cybersecurity researchers have discovered a remote access toolkit of Russian-origin that’s distributed via malicious Windows shortcut (LNK) files that are disguised as private key folders. The
+CTRL
+toolkit, according to Censys, is custom-built using .NET and includes various executables” to facilitate credential phishing, keylogging, Remote Desktop Protocol (RDP) hijacking, and reverse tunneling via Fast Reverse Proxy (FRP). “The executables provide encrypted payload loading, credential harvesting via a polished Windows Hello phishing UI, keylogging, RDP session hijacking, and reverse proxy tunneling through FRP,” Censys security researcher Andrew Northern
+said
+. The attack surface management platform said it recovered CTRL from an open directory at 146.19.213[.]155 in February 2026.</p>
+
+<p>Attack chains distributing the toolkit rely on a weaponized LNK file (“Private Key #kfxm7p9q_yek.lnk”) with a folder icon to trick users into double-clicking it. This triggers a multi-stage process, with each stage decrypting or decompressing the next, until it leads to the deployment of the toolkit. The LNK file dropper is designed to launch a hidden PowerShell command, which then wipes existing persistence mechanisms from the victim’s Windows Startup folder. It also decodes a Base64-encoded blob and runs it in memory.</p>
+
+<p>The stager, for its part, tests TCP connectivity to hui228[.]ru:7000 and downloads next-stage payloads from the server. Furthermore, it modifies firewall rules, sets up persistence using scheduled tasks, creates backdoor local users, and spawns a cmd.exe shell server on port 5267 that’s accessible through the FRP tunnel. One of the downloaded payloads, “ctrl.exe,” functions as a .NET loader for launching an embedded payload, the CTRL Management Platform, which can serve either as a server or a client depending on the command-line arguments. Communication occurs over a Windows named pipe.</p>
+
+<p>“The dual-mode design means the operator deploys ctrl.exe once on the victim (via the stager), then interacts with it by running ctrl.exe client through the FRP-tunneled RDP session,” Censys said. “The named pipe architecture keeps all C2 command traffic local to the victim machine — nothing traverses the network except the RDP session itself.”
+The supported commands allow the malware to gather system information, launch a module designed for credential harvesting, and start a keylogger as a background service (if configured as a server) to capture all keystrokes to a file named “C:\Temp\keylog.txt” by installing a keyboard hook, and exfiltrate the results. The credential harvesting component is launched as a Windows Presentation Foundation (WPF) application that mimics a real Windows PIN verification prompt to capture the system PIN. The module, besides blocking attempts to escape the phishing window via keyboard shortcuts like Alt+Tab, Alt+F4, or F4, validates the entered PIN against the real Windows credential prompt via UI automation by using the
+SendKeys()
+method.</p>
+
+<p>“If the PIN is rejected, the victim is looped back with an error message,” Northern explained. “The window remains open even if the PIN successfully validates against the actual Windows authentication system. The captured PIN is logged with the prefix [STEALUSER PIN CAPTURED] to the same keylog file used by the background keylogger.”
+One of the commands built into the toolkit allows it to send toast notifications impersonating web browsers like Google Chrome, Microsoft Edge, Brave, Opera, Opera GX, Vivaldi, Yandex, and Iron to conduct additional credential theft or deliver other payloads. The two other payloads dropped as part of the attack are listed below -
+FRPWrapper.exe, which is a Go DLL that’s
+loaded in memory
+to establish reverse tunnels for RDP and a raw TCP shell through the operator’s FRP server.</p>
+
+<p>RDPWrapper.exe, which enables unlimited concurrent RDP sessions. “The toolkit demonstrates deliberate operational security. None of the three hosted binaries contain hard-coded C2 addresses,” Censys said. “All data exfiltration occurs through the FRP tunnel via RDP — the operator connects to the victim’s desktop and reads keylog data through the ctrl named pipe.</p>
+
+<p>This architecture leaves minimal network forensic artifacts compared to traditional C2 beacon patterns.”
+“The CTRL toolkit demonstrates a trend toward purpose-built, single-operator toolkits that prioritize operational security over feature breadth. By routing all interaction through FRP reverse tunnels to RDP sessions, the operator avoids the network-detectable beacon patterns that characterize commodity RATs.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-state-of-secrets-sprawl-2026-9-takeaways-for-cisos"><a id="article-6"></a>The State of Secrets Sprawl 2026: 9 Takeaways for CISOs</h2>
+
+<p>Secrets sprawl isn’t slowing down: in 2025, it accelerated faster than most security teams anticipated. GitGuardian’s State of Secrets Sprawl 2026 report
+analyzed billions of commits across public GitHub and uncovered 29 million new hardcoded secrets in 2025 alone, a 34% increase year over year and the largest single-year jump ever recorded. This year’s findings reveal three core trends: AI has fundamentally reshaped how and where credentials leak, internal systems are far more exposed than most organizations realize, and remediation continues to be the industry’s Achilles heel. Here are nine strategic takeaways that matter.</p>
+
+<ol>
+  <li>Secrets are growing faster than the developer population
+Since 2021, leaked secrets have grown 152%, while GitHub’s public developer base expanded 98%. More developers and more AI-assisted code generation mean more credentials in circulation, and detection alone can’t keep pace. 2.</li>
+</ol>
+
+<p>AI services drove 81% more leaks year over year
+GitGuardian detected 1,275,105 leaked secrets tied to AI services in 2025, up 81% from 2024. Eight of the ten fastest-growing categories of leaked secrets were AI-related. This isn’t just about OpenAI or Anthropic keys. The real explosion is happening in LLM infrastructure: retrieval APIs like Brave Search (+1,255%), orchestration tools like Firecrawl (+796%), and managed backends like Supabase (+992%).</p>
+
+<p>Every new AI integration introduces another machine identity, and each one expands the attack surface. Deploying AI safely requires a proper secrets security strategy. 3. Internal repositories are 6x more likely to leak than public ones
+While public GitHub gets the attention, internal repositories are where the highest-value credentials live.</p>
+
+<p>GitGuardian’s research found that 32.2% of internal repos contain at least one hardcoded secret, compared to just 5.6% of public repos. These aren’t test keys. They’re CI/CD tokens, cloud access credentials, and database passwords, the exact assets attackers target once they gain a foothold. Security through obscurity has failed.</p>
+
+<p>Treat internal repos as first-class leak sources. 4. 28% of leaks happen entirely outside code
+Secrets don’t only live in repositories. GitGuardian found that 28% of incidents in 2025 originated entirely outside source code, in Slack, Jira, Confluence, and similar collaboration tools.</p>
+
+<p>These leaks are more dangerous:
+56.7% of secrets found only in collaboration tools were rated critical
+, compared to 43.7% for code-only incidents. Teams share credentials during incident response, troubleshooting, and onboarding. If you’re only scanning code, you’re missing a quarter of your exposure. And the credentials leaking in collaboration tools are usually more critical and severe.</p>
+
+<ol>
+  <li>Self-hosted GitLab and Docker registries expose secrets at 3-4x the rate of public GitHub
+GitGuardian discovered thousands of unintentionally exposed self-hosted GitLab instances and Docker registries in 2025. Scanning these systems revealed 80,000 credentials, with 10,000 still valid. Secrets in Docker images were particularly troubling: 18% of scanned Docker images contained secrets, and 15% of those were valid, compared to 12% of GitLab repositories with a 12% validity rate.</li>
+</ol>
+
+<p>Docker secrets are also more production-adjacent. The perimeter between private and public is porous. 6. 64% of secrets leaked in 2022 remain valid today
+Detection is not remediation.</p>
+
+<p>GitGuardian retested secrets confirmed as valid in 2022 and found that 64% are still exploitable four years later. This is not a rounding error. It’s proof that rotation and revocation are not routine, owned, or automated in most organizations. Credentials embedded across build systems, CI variables, container images, and vendor integrations are hard to replace without breaking production.</p>
+
+<p>For many teams, the safest short-term choice is to do nothing, leaving attackers with durable access paths. 7. Developer endpoints are the new credential aggregation layer
+The
+Shai-Hulud 2 supply chain attack
+gave researchers rare visibility into what secrets actually look like on
+compromised developer machines
+. Across 6,943 systems, GitGuardian identified 294,842 secret occurrences corresponding to 33,185 unique secrets.</p>
+
+<p>On average, each live secret appeared in eight different locations on the same machine, spread across .env files, shell history, IDE configs, cached tokens, and build artifacts. More striking: 59% of compromised machines were CI/CD runners, not personal laptops. Once secrets start sprawling into build infrastructure, they become an organizational exposure problem, not just an individual hygiene issue. More recently, the
+LiteLLM supply chain attack
+demonstrated the same pattern, with compromised packages harvesting SSH keys, cloud credentials, and API tokens from developer machines where AI development tools are increasingly concentrated.</p>
+
+<ol>
+  <li>MCP servers exposed 24,000+ secrets in their first year
+Model Context Protocol (MCP) made AI systems more useful by connecting them to tools and data sources. It also introduced a new class of credential exposure. In 2025, GitGuardian found 24,008 unique secrets in MCP-related config files on public GitHub, with 2,117 verified as valid.</li>
+</ol>
+
+<p>As agentic AI adoption accelerates, MCP and similar frameworks will normalize putting credentials into config files, startup flags, and local JSON. The agent ecosystem is expanding faster than security controls can adapt. 9. Shift from secrets detection to non-human identity governance
+The industry’s limiting factor is answering three questions at scale:</p>
+<ul>
+  <li>
+    <p>What non-human identities exist in my environment?</p>
+  </li>
+  <li>
+    <p>Who owns them? - What can they access? Organizations embracing agentic AI need to move beyond detection and build continuous NHI governance. That means eliminating long-lived static credentials wherever possible, adopting
+short-lived identity-driven access
+, implementing secrets vaulting as the default developer workflow, and treating every service account, CI job, and AI agent as a governed identity with lifecycle management.</p>
+  </li>
+</ul>
+
+<p>The Bottom Line
+Secrets sprawl is not slowing down. It’s accelerating alongside AI adoption, developer productivity tools, and distributed software delivery. The old model of scanning public repos and hoping for compliance is no longer sufficient. Security teams need visibility across internal systems, collaboration tools, container registries, and developer endpoints.</p>
+
+<p>They need remediation workflows that can rotate credentials without breaking production. And most importantly, they need to stop treating secrets as isolated incidents and start managing them as part of a broader non-human identity governance program. The attack surface has changed. The question is whether security programs will change with it.</p>
+
+<p>About the Research
+GitGuardian’s yearly State of Secrets Sprawl report was published for the 5th time, analyzing billions of public commits on GitHub, monitoring internal incidents across customer environments, and conducting original research on self-hosted infrastructure exposure and supply chain compromises. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="three-china-linked-clusters-target-southeast-asian-government-in-2025-cyber-campaign"><a id="article-7"></a>Three China-Linked Clusters Target Southeast Asian Government in 2025 Cyber Campaign</h2>
+
+<p>Three threat activity clusters aligned with China have targeted a government organization in Southeast Asia as part of what has been described as a “complex and well-resourced operation.”
+The campaigns have led to the deployment of various malware families, including
+HIUPAN
+(aka USBFect, MISTCLOAK, or U2DiskWatch),
+PUBLOAD
+,
+EggStremeFuel
+(aka RawCookie),
+EggStremeLoader
+(aka Gorem RAT),
+MASOL RAT
+,
+PoshRAT
+, TrackBak Stealer, RawCookie, Hypnosis Loader, and
+FluffyGh0st
+. The
+activity
+has been attributed to the following clusters -
+June - August 2025:
+Mustang Panda
+(aka Stately Taurus). March - September 2025: CL-STA-1048, which overlaps with clusters publicly documented under the monikers
+Earth Estries
+and
+Crimson Palace
+. April and August 2025 - CL-STA-1049, which overlaps with a publicly documented cluster known as
+Unfading Sea Haze
+.</p>
+
+<p>Activity timeline
+“These activity clusters overlap with publicly reported campaigns aimed at establishing persistent access,” Palo Alto Networks Unit 42 researchers Doel Santos and Hiroaki Hara
+said
+. “Significant overlap in tactics, techniques, and procedures (TTPs) with known China-aligned campaigns suggests the clusters and threat group have a common target of interest, potentially coordinating their effort.”
+Infection chain of CL-STA-1048 26m
+The Mustang Panda activity, recorded between June 1 and August 15, 2025, entailed the use of a USB-based malware known as HIUPAN to deliver the PUBLOAD backdoor by means of a rogue DLL codenamed
+Claimloader
+. The threat actor’s first recorded use of Claimloader dates
+back to late 2022
+in attacks targeting government organizations in the Philippines. Additional analysis of the victim network has uncovered the deployment of COOLCLIENT, another known backdoor attributed to Mustang Panda for more than three years.</p>
+
+<p>It supports file download/upload, keystroke recording, packet tunneling, and port map information capture. The tools used by CL-STA-1048 vary as they are noisy -
+EggStremeFuel, a lightweight backdoor that’s equipped to download/upload files, enumerate files and directories, start or terminate a reverse shell, send the current global IP address, and update the C2 configuration. EggStremeLoader, another component of the EggStreme malware framework that’s launched by EggStremeFuel. It supports 59 backdoor commands to support extensive data theft.</p>
+
+<p>This includes a variant that facilitates file download/upload over Dropbox. MASOL RAT (aka Backdr-NQ), a remote access trojan with file download/upload and arbitrary command execution features. TrackBak, an information stealer that collects logs, clipboard data, network information, and files from drives. The activity linked to CL-STA-1049, on the other hand, involves the use of a novel DLL loader called Hypnosis Loader, which is launched via DLL side-loading, to ultimately install FluffyGh0st RAT.</p>
+
+<p>The exact initial access vector used by CL-STA-1048 and CL-STA-1049 remains unclear. “The convergence of these activity clusters, all of which show links to known China-aligned actors, points to a coordinated effort to achieve a common strategic goal,” Unit 42 said. “The attackers’ methodology indicates they intended to gain long-term, persistent access to sensitive government networks, not just to cause disruption.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="iran-linked-hackers-breach-fbi-directors-personal-email-hit-stryker-with-wiper-attack"><a id="article-8"></a>Iran-Linked Hackers Breach FBI Director’s Personal Email, Hit Stryker With Wiper Attack</h2>
+
+<p>Threat actors with ties to Iran successfully broke into the personal email account of Kash Patel, the director of the U.S. Federal Bureau of Investigation (FBI), and leaked a cache of photos and other documents to the internet. Handala Hack Team
+, which carried out the breach, said on its website that Patel “will now find his name among the list of successfully hacked victims.” In a statement shared with Reuters, the FBI
+confirmed
+Patel’s emails had been targeted, and noted necessary steps have been taken to “mitigate ​potential risks associated with this activity.”
+The agency also said the published data was “historical in nature and involves no government information.” The leak includes emails from ​2010 and 2019 allegedly sent by Patel. Handala Hack
+is assessed to be a pro-Iranian, pro-Palestinian hacktivist persona adopted by Iran’s Ministry of Intelligence and Security (
+MOIS
+).</p>
+
+<p>It’s tracked by the cybersecurity community under the monikers Banished Kitten, Cobalt Mystique, Red Sandstorm, and Void Manticore, with the group also operating another persona called
+Homeland Justice
+to target Albanian entities since mid-2022. A third persona linked to the MOIS-affiliated adversary is
+Karma
+, which is said to have been likely completely replaced by Handala Hack since late 2023. Data gathered by StealthMole has
+revealed
+that Handala’s online presence extends beyond messaging platforms and cybercrime forums like BreachForums to publicize its activities, maintaining a layered infrastructure that includes surface web domains, Tor-hosted services, and external file-hosting platforms such as MEGA. “Handala has consistently targeted IT and service providers in an effort to obtain credentials, relying largely on compromised VPN accounts for initial access,” Check Point
+said
+in a report published this month.</p>
+
+<p>“Throughout the last months, we identified hundreds of logon and brute-force attempts against organizational VPN infrastructure linked to Handala-associated infrastructure.”
+Attacks mounted by the proxy group are known to leverage RDP for lateral movement and initiate destructive operations by dropping wiper malware families such as Handala Wiper and Handala PowerShell Wiper via Group Policy logon scripts. Also used are legitimate disk encryption utilities like VeraCrypt to complicate recovery efforts. “Unlike financially motivated cybercriminal groups, Handala-associated activity has historically emphasized disruption, psychological impact, and geopolitical signaling,” Flashpoint
+said
+. “Operations attributed to the persona frequently align with periods of heightened geopolitical tension and often target organizations with symbolic or strategic value.”
+The
+development
+comes against the backdrop of the
+U.S.-Israel-Iran conflict
+, prompting Iran to go on a retaliatory cyber offensive against Western targets.</p>
+
+<p>Notably, Handala Hack
+claimed credit
+for crippling the networks of medical devices and services provider Stryker by deleting a huge trove of company data and wiping thousands of employee devices. The attack is the
+first confirmed
+destructive wiper operation targeting a U.S. Fortune 500 company. In an update issued on its website this week, Stryker
+said
+“the incident is contained,” adding it “reacted quickly to not only regain access but to remove the unauthorized party from our environment” by dismantling the persistence mechanisms installed.</p>
+
+<p>The breach, it stated, was
+confined
+to its internal Microsoft environment. The threat actors have been found to use a malicious file to run commands that allowed them to conceal their actions. However, the file does not possess any capabilities to spread across the network, Stryker pointed out. Palo Alto Networks Unit 42
+said
+the primary vector for recent destructive operations from Handala Hack likely involves the “exploitation of identity through phishing and administrative access
+through Microsoft Intune
+.” Hudson Rock has
+found
+evidence that compromised credentials associated with Microsoft infrastructure obtained via infostealer malware may have been used to pull off the hack.</p>
+
+<p>In the wake of the breach, both
+Microsoft
+and the Cybersecurity and Infrastructure Security Agency (
+CISA
+) have released guidance on hardening Windows domains and fortifying Intune to defend against similar attacks. This includes using the principle of least privilege, enforcing phishing-resistant multi-factor authentication (MFA), and
+enabling multi-admin approval
+in Intune for sensitive changes. Flashpoint has characterized the attack on Stryker as a dangerous shift in supply chain threats, as state-linked cyber activity targeting critical suppliers and logistics providers can have cascading impacts across the entire healthcare ecosystem. DoJ Takes Down Pro-Iranian Hacker Domains
+Handala Hack’s leak of Patel’s personal emails comes in response to a court-authorized operation that led to the seizure of four domains operated by MOIS since 2022 as part of an effort to disrupt its malicious activities in cyberspace.</p>
+
+<p>The U.S. government is also
+offering a $10 million reward
+for information on members of the group. The names of the seized domains are listed below -
+justicehomeland[.]org
+handala-hack[.]to
+karmabelow80[.]org
+handala-redwanted[.]to
+“The seized domains […] were used by the MOIS in furtherance of attempted psychological operations targeting adversaries of the regime by claiming credit for hacking activity, posting sensitive data stolen during such hacks, and calling for the killing of journalists, regime dissidents, and Israeli persons,” the U.S. Department of Justice (DoJ)
+said
+.</p>
+
+<p>This included the names and sensitive information of about 190 individuals associated with or employed by the Israeli Defense Force (IDF) and/or Israeli government, and 851 GB of confidential data from members of the Sanzer Hasidic Jewish community. In addition, an email address linked to the group (“handala_team@outlook[.]com”) is alleged to have been used to send death threats to Iranian dissidents and journalists living in the U.S. and elsewhere. In a separate advisory, the FBI revealed that Handala Hack and other MOIS cyber actors have employed social engineering tactics to engage with prospective victims on social messaging applications to deliver Windows malware capable of enabling persistent remote access using a Telegram bot by masquerading the first-stage payload as commonly used programs like Pictory, KeePass, Telegram, or WhatsApp.</p>
+
+<p>Using Telegram (or other legitimate services) as C2 is a common tactic by threat actors to hide malicious activity among normal network traffic, and significantly reduce the likelihood of detection. Related malware artifacts found on compromised devices have revealed added capabilities to record audio and screen while a Zoom session was active. The attacks have targeted dissidents, opposition groups, and journalists, per the FBI. “MOIS cyber actors are responsible for using Telegram as a command-and-control (C2) infrastructure to push malware targeting Iranian dissidents, journalists opposed to Iran, and other opposition groups around the world,” the bureau
+said
+.</p>
+
+<p>“This malware resulted in intelligence collection, data leaks, and reputational harm against the targeted parties.”
+Handala Hack has
+since resurfaced
+on a different clearnet domain, “handala-team[.]to,” where it described the domain seizures as “desperate attempts by the United States and its allies to silence the voice of Handala.”
+The
+ongoing conflict
+has also
+prompted fresh warnings
+that it risks turning critical infrastructure sector operators into lucrative targets, even as it has triggered a surge in
+DDoS attacks
+,
+website defacements
+, and
+hack-and-leak operations
+against
+Israel
+and
+Western organizations
+. Hacktivists entities have also
+engaged
+in psychological warfare and influence operations with an aim to sow fear and confusion among the targeted populations. In recent weeks, the energy sector in the Middle East has drawn the attention of a relatively new cybercriminal group called Nasir Security. The group, instead of directly targeting energy companies, has gone after their contractors and third-parties to leak internal data, leading to “incorrect assumptions” about the origin of hacks.</p>
+
+<p>“The group is attacking supply chain vendors involved in engineering, safety, and construction,” Resecurity
+said
+. “The supply chain attacks attributed to Nasir Security are likely carried out by cyber-mercenaries or individuals hired or sponsored by Iran or its proxies.”
+“The cyber activity tied to this conflict is becoming increasingly decentralized and destructive,” Kathryn Raines, cyber threat intelligence team lead for the National Security Solutions at Flashpoint, said in a statement. “Groups like Handala and Fatimion are targeting private-sector organizations with attacks designed to erase data, disrupt services, and introduce uncertainty for both businesses and the public. At the same time, we’re seeing a greater use of legitimate administrative tools in these cyber operations, making it significantly harder for traditional security controls to detect.”
+That’s not all.</p>
+
+<p>MOIS-linked actors have been increasingly engaging with the cybercrime ecosystem to support its objectives and provide a cover for its malicious activity. This includes Handala’s integration of Rhadamanthys stealer into its operations and MuddyWater’s use of the Tsundere botnet (aka
+Dindoor
+) and
+Fakeset
+, the latter of which is a downloader used to deliver
+CastleLoader
+. “Such engagement offers a dual advantage: it enhances operational capabilities through access to mature criminal tooling and resilient infrastructure, while complicating attribution and contributing to recurring confusion around Iranian threat activity,” Check Point
+said
+. “The use of such tools has created significant confusion, leading to misattribution and flawed pivoting, and clustering together activities that are not necessarily related.</p>
+
+<p>This demonstrates that the use of criminal software can be effective for obfuscation, and highlights the need for extreme caution when analyzing overlapping clusters.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="citrix-netscaler-under-active-recon-for-cve-2026-3055-cvss-93-memory-overread-bug"><a id="article-9"></a>Citrix NetScaler Under Active Recon for CVE-2026-3055 (CVSS 9.3) Memory Overread Bug</h2>
+
+<p>A recently disclosed critical security flaw impacting Citrix NetScaler ADC and NetScaler Gateway is witnessing active reconnaissance activity, according to
+Defused Cyber
+and
+watchTowr
+. The vulnerability,
+CVE-2026-3055
+(CVSS score: 9.3), refers to a case of insufficient input validation leading to memory overread, which an attacker could exploit to leak potentially sensitive information. Per Citrix, successful exploitation of the flaw hinges on the appliance being configured as a SAML Identity Provider (SAML IDP). “We are now observing auth method fingerprinting activity against NetScaler ADC/Gateway in the wild,” Defused Cyber said in a post on X.</p>
+
+<p>“Attackers are probing /cgi/GetAuthMethods to enumerate enabled authentication flows in our Citrix honeypots.”
+This is likely an attempt on the part of threat actors to determine if NetScaler ADC and NetScaler Gateway are indeed configured as a SAML IDP. In a similar warning, watchTowr said it has detected active reconnaissance against NetScaler instances in its honeypot network, raising the possibility that in-the-wild exploitation can happen anytime. “Organizations running affected Citrix NetScaler versions in affected configurations need to drop tools and patch immediately,” the company said. “When attacker reconnaissance shifts to active exploitation, the window to respond will evaporate.”
+The vulnerability affects NetScaler ADC and NetScaler Gateway versions before 14.1-60.58, 14.1 before 14.1-66.59, and 13.1 before 13.1-62.23, as well as NetScaler ADC 13.1-FIPS and 13.1-NDcPP before 13.1-37.262.</p>
+
+<p>In recent years, a number of security vulnerabilities affecting NetScaler have
+come under active exploitation
+in the wild. These include CVE-2023-4966 (Citrix Bleed), CVE-2025-5777 (Citrix Bleed 2), CVE-2025-6543, and CVE-2025-7775. It’s therefore crucial that users move quickly to the latest updates as soon as possible to stay protected, as it’s a matter of not if, but when. Update
+The vulnerability has since come under active exploitation in the wild, with Defused Cyber
+noting
+that “attackers send crafted SAMLRequest payloads to /saml/login omitting the AssertionConsumerServiceURL field, triggering the appliance to leak memory contents via the NSC_TASS cookie.” According to watchTowr, exploitation attempts have originated from known threat actor source IPs as of March 27, 2026.</p>
+
+<p>In an analysis published last week, watchTowr
+said
+the vulnerability can be exploited to return sensitive data left over from a previous request in memory via NSC_TASS when sending a request to the “/saml/login” endpoint. When the same request is sent to a patched instance, the response is: “Parsing of presented Assertion failed; Please contact your administrator.”
+Further investigation has revealed that CVE-2026-3055 refers to not one singular memory overread vulnerability, but distinct ones that affect the following endpoints -
+/saml/login
+/wsfed/passive?wctx
+For exploitation to occur, a “wctx” query string parameter needs to be present in the HTTP request, but without any value and lacking the “=” symbol. “An unpatched/vulnerable Citrix NetScaler will mistakenly check only for its presence before accessing the buffer associated with the variable, rather than checking for the presence of associated data,” watchTowr researcher Aliz Hammond
+said
+. “Since there is no actual value in the request, it just points to dead memory.”
+“If the target Citrix NetScaler is vulnerable, it’ll leak memory all over the place and look like a crime scene.</p>
+
+<p>This memory arrives, yet again, Base64-encoded in the very same NSC_TASS cookie we discussed before, but without any of the limitations of the ‘other’ vulnerability patched within CVE-2026-3055.”
+(The story was updated after publication on March 30, 2026, to include additional details of the flaw.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ta446-deploys-darksword-ios-exploit-kit-in-targeted-spear-phishing-campaign"><a id="article-10"></a>TA446 Deploys DarkSword iOS Exploit Kit in Targeted Spear-Phishing Campaign</h2>
+
+<p>Proofpoint has
+disclosed
+details of a targeted email campaign in which threat actors with ties to Russia are leveraging the recently disclosed
+DarkSword
+exploit kit to target iOS devices. The activity has been attributed with high confidence to the Russian state-sponsored threat group known as
+TA446
+, which is also tracked by the broader cybersecurity community under the monikers Callisto, COLDRIVER, and Star Blizzard (formerly SEABORGIUM). It’s assessed to be affiliated with Russia’s Federal Security Service (FSB). The hacking group is
+known
+for spear-phishing campaigns aimed at harvesting credentials from targets of interest.</p>
+
+<p>However, attacks mounted by the threat actor over the past year have targeted victims’ WhatsApp accounts, as well as leveraged various custom malware families to steal sensitive data. The latest activity, highlighted by
+Proofpoint
+and
+Malfors
+, involves using fake “discussion invitation” emails spoofing the Atlantic Council to facilitate the delivery of GHOSTBLADE, a dataminer malware, via the DarkSword exploit kit. The emails were sent from compromised senders on March 26, 2026. One of the
+email recipients
+was
+Leonid Volkov
+, a prominent Russian opposition politician and the political director of the Anti-Corruption Foundation.</p>
+
+<p>An automated analysis triggered by Proofpoint’s security tools is said to have redirected to a benign decoy PDF document, likely because of server-side filtering put in place to only lead iPhone browsers to the exploit kit. “We have not previously observed TA446 target users’ iCloud accounts or Apple devices, but the adoption of the leaked DarkSword iOS exploit kit has now enabled the actor to target iOS devices,” Proofpoint said. The enterprise security firm also noted that the volume of emails from the threat actor has been “significantly higher” in the last two weeks, adding that these attacks lead to the deployment of a known backdoor referred to as
+MAYBEROBOT
+via password-protected ZIP files. The group’s use of DarkSword has also been corroborated by the fact that a DarkSword loader
+uploaded to VirusTotal
+has been found to reference “
+escofiringbijou[.]com
+,” a second-stage domain attributed to the threat actor.</p>
+
+<p>A urlscan.io result has
+revealed
+that the TA446-controlled domain has served the DarkSword exploit kit, including the initial redirector, exploit loader, remote code execution, and Pointer Authentication Code (PAC) bypass components. However, there is no evidence that sandbox escapes were delivered. It’s suspected that the TA446 is repurposing the DarkSword exploit kit for credential harvesting and intelligence collection, with Proofpoint noting that the targeting observed in the email campaign was “much wider than usual” and that it included government, think tank, higher education, financial, and legal entities. This, in turn, has raised the possibility that the threat actor is leveraging the new capability afforded by DarkSword as part of an opportunistic campaign against a broader target set.</p>
+
+<p>The development comes as Apple has
+begun sending
+Lock Screen notifications to iPhones and iPads running older versions of iOS and iPadOS to alert users of web-based attacks and urging them to install the update to block the threat. The unusual step signals that the company is treating it as a broad enough threat requiring users’ immediate attention. Apple’s warning also coincides with the leak of a new version of DarkSword on GitHub, raising concerns that they could democratize access to nation-state exploits, fundamentally shifting the mobile threat landscape. Justin Albrecht, principal researcher at Lookout, said the leaked, plug-and-play version allows even unskilled threat actors to deploy the advanced iOS espionage kit, turning it into commodity malware.</p>
+
+<p>“DarkSword refutes the common belief that iPhones are immune to cyber threats, and that advanced mobile attacks are only used in targeted efforts against governments and high-ranking officials,” Albrecht added. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cisa-adds-cve-2025-53521-to-kev-after-active-f5-big-ip-apm-exploitation"><a id="article-11"></a>CISA Adds CVE-2025-53521 to KEV After Active F5 BIG-IP APM Exploitation</h2>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday
+added
+a critical security flaw impacting F5 BIG-IP Access Policy Manager (APM) to its Known Exploited Vulnerabilities (
+KEV
+) catalog, citing evidence of active exploitation. The vulnerability in question is
+CVE-2025-53521
+(CVSS v4 score: 9.3), which could allow a threat actor to achieve remote code execution. “When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE),” according to a description of the flaw in CVE.org.</p>
+
+<p>While the shortcoming was initially categorized and remediated as a denial-of-service (DoS) vulnerability with a CVSS v4 score of 8.7, F5 said it has been reclassified as a case of RCE in light of “new information obtained in March 2026.”
+The company has since
+updated
+its advisory to confirm that the vulnerability “has been exploited in the vulnerable BIG-IP versions.” It did not share any additional details on who may be behind the exploitation activity. However, F5 published a
+number of indicators
+that can be used to assess if the system has been compromised -
+File-related indicators -
+Presence of /run/bigtlog.pipe and/or /run/bigstart.ltm. Mismatch of file hashes when compared to known good versions of /usr/bin/umount and/or /usr/sbin/httpd. Mismatch of file sizes or timestamps when compared to known good versions of /usr/bin/umount and/or /usr/sbin/httpd.</p>
+
+<p>Each release and EHF may have different file sizes and timestamps. Log-related indicators -
+An entry in “/var/log/restjavad-audit.<NUMBER>.log" showing a local user accessing the iControl REST API from localhost. An entry in "/var/log/auditd/audit.log.<NUMBER>" showing a local user accessing the iControl REST API from localhost to disable SELinux. Log messages in "/var/log/audit" show the results of a command being run in the audit log.</NUMBER></NUMBER></p>
+
+<p>Other TTPs observed include -
+Modifications to the underlying components that the system integrity checker,
+sys-eicheck
+, relies on, resulting in a failure of the tool, specifically /usr/bin/umount and/or /usr/sbin/httpd, indicating unexpected changes to the system software as mentioned above. HTTP/S traffic from the BIG-IP system that contains HTTP 201 response codes and CSS content-type to disguise the attacker’s activities. Changes to the following three files, although their presence alone does not signal a security issue -
+/var/sam/www/webtop/renderer/apm_css.php3
+/var/sam/www/webtop/renderer/full_wt.php3
+/var/sam/www/webtop/renderer/webtop_popup_css.php3
+“We have observed cases of webshell being written to disk; however, the webshells have been observed to work in memory only, meaning the files listed above might not be modified,” F5 cautioned. The issue impacts the following versions -
+17.5.0 - 17.5.1 (Fixed in version 17.5.1.3)
+17.1.0 - 17.1.2 (Fixed in version 17.1.3)
+16.1.0 - 16.1.6 (Fixed in version 16.1.6.1)
+15.1.0 - 15.1.10 (Fixed in version 15.1.10.8)
+In light of active exploitation, Federal Civilian Executive Branch (FCEB) agencies have been given until March 30, 2026, to apply the fixes to secure their networks.</p>
+
+<p>“When F5 CVE-2025-53521 first emerged last year as a denial-of-service issue, it didn’t immediately signal urgency, and many system administrators likely prioritized it accordingly,” watchTowr CEO and founder Benjamin Harris said in a statement shared with The Hacker News. “Fast forward to today’s big ‘yikes’ moment: the situation has changed significantly. What we’re observing now is pre-auth remote code execution and evidence of in-the-wild exploitation, with a CISA KEV listing to back it up. That’s a very different risk profile than what was initially communicated.”
+Defused Cyber, in an X post, has also
+confirmed
+that it’s seeing “acute scanning activity” for vulnerable F5 BIG-IP devices following the addition of CVE-2025-53521 to the KEV catalog.</p>
+
+<p>“This actor is hitting /mgmt/shared/identified-devices/config/device-info which is a F5 BIG-IP REST API endpoint used to retrieve system-level information, such as hostname, machine ID, and base MAC address,” it said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="apple-sends-lock-screen-alerts-to-outdated-iphones-over-active-web-based-exploits"><a id="article-12"></a>Apple Sends Lock Screen Alerts to Outdated iPhones Over Active Web-Based Exploits</h2>
+
+<p>Apple is now sending Lock Screen notifications to iPhones and iPads running older versions of iOS and iPadOS to alert users of web-based attacks and urge them to install the update. The development was
+first reported
+by MacRumors. “Apple is aware of attacks targeting out-of-date iOS software, including the version on your iPhone. Install this critical update to protect your iPhone,” the notification issued by Apple reads.</p>
+
+<p>The development comes a week after Apple
+released
+a support document, asking users running older versions of iOS and iPadOS to update their devices following the discovery of new iOS exploit kits like
+Coruna
+and
+DarkSword
+. Multiple threat actors of varied motivations have been found to leverage these kits over the past year to deliver malicious payloads when unsuspecting users visit a compromised website. While Coruna targets iOS versions between 13.0 and 17.2.1, DarkSword is designed to target iPhones running iOS versions between 18.4 and 18.7. A new report from Kaspersky this week
+found
+that the Coruna exploit kit is an evolution of the framework used in Operation Triangulation, a sophisticated campaign that targeted iPhones via zero-click iMessage exploits.</p>
+
+<p>It first came to light in June 2023. “Coruna is not a patchwork of public exploits; it is a continuously maintained evolution of the original Operation Triangulation framework,” the Russian cybersecurity vendor said. It’s currently not known how the two kits found their way into the hands of several threat actors and cybercriminals, but recent research has raised the possibility of an active market for second-hand zero-day exploits. The emergence of these kits, coupled with the leak of a newer version of DarkSword, has raised concerns that they could democratize access to exploits that were previously reserved for nation-states, potentially turning them into
+mass-exploitation tools
+.</p>
+
+<p>In the process, they risk transforming iPhones and iPads into a bigger attack surface than they are at present. Users who are unable to update to a supported version are advised to consider enabling Lockdown Mode, if available, to protect against malicious web content. Lockdown Mode was introduced in 2022 and is available on devices running iOS versions 16 and later. In a statement shared with TechCrunch, Apple
+said
+, “We are not aware of any successful mercenary spyware attacks against a Lockdown Mode-enabled Apple device.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

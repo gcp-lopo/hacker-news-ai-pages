@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-02-20 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">PromptSpy Android Malware Abuses Gemini AI to Automate Recent-Apps Persistence</a></li>
+      
+        <li><a href="#article-2">INTERPOL Operation Red Card 2.0 Arrests 651 in African Cybercrime Crackdown</a></li>
+      
+        <li><a href="#article-3">Microsoft Patches CVE-2026-26119 Privilege Escalation in Windows Admin Center</a></li>
+      
+        <li><a href="#article-4">ThreatsDay Bulletin: OpenSSL RCE, Foxit 0-Days, Copilot Leak, AI Password Flaws & 20+ Stories</a></li>
+      
+        <li><a href="#article-5">From Exposure to Exploitation: How AI Collapses Your Response Window</a></li>
+      
+        <li><a href="#article-6">Fake IPTV Apps Spread Massiv Android Malware Targeting Mobile Banking Users</a></li>
+      
+        <li><a href="#article-7">CRESCENTHARVEST Campaign Targets Iran Protest Supporters With RAT Malware</a></li>
+      
+        <li><a href="#article-8">Citizen Lab Finds Cellebrite Tool Used on Kenyan Activist’s Phone in Police Custody</a></li>
+      
+        <li><a href="#article-9">Grandstream GXP1600 VoIP Phones Exposed to Unauthenticated Remote Code Execution</a></li>
+      
+        <li><a href="#article-10">Critical Flaws Found in Four VS Code Extensions with Over 125 Million Installs</a></li>
+      
+        <li><a href="#article-11">Cybersecurity Tech Predictions for 2026: Operating in a World of Permanent Instability</a></li>
+      
+        <li><a href="#article-12">Dell RecoverPoint for VMs Zero-Day CVE-2026-22769 Exploited Since Mid-2024</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-02-20-ai创业新闻">2026-02-20 AI创业新闻</h1>
+
+<h2 id="promptspy-android-malware-abuses-gemini-ai-to-automate-recent-apps-persistence"><a id="article-1"></a>PromptSpy Android Malware Abuses Gemini AI to Automate Recent-Apps Persistence</h2>
+
+<p>Cybersecurity researchers have discovered what they say is the first Android malware that abuses Gemini, Google’s generative artificial intelligence (AI) chatbot, as part of its execution flow and achieves persistence. The malware has been codenamed
+PromptSpy
+by ESET. The malware is equipped to capture lockscreen data, block uninstallation efforts, gather device information, take screenshots, and record screen activity as video. “Gemini is used to analyze the current screen and provide PromptSpy with step-by-step instructions on how to ensure the malicious app remains pinned in the recent apps list, thus preventing it from being easily swiped away or killed by the system,” ESET researcher Lukáš Štefanko
+said
+in a report published today.</p>
+
+<p>“Since Android malware often relies on UI navigation, leveraging generative AI enables the threat actors to adapt to more or less any device, layout, or OS version, which can greatly expand the pool of potential victims.”
+Specifically, this involves hard-coding the AI model and a prompt in the malware, assigning the AI agent the persona of an “Android automation assistant.” It sends Gemini a natural language prompt along with an XML dump of the current screen that gives detailed information about every UI element, including its text, type, and exact position on the display. Gemini then processes this information and responds with JSON instructions that tell the malware what action to perform (e.g., a tap) and where to perform it. The multi-step interaction continues until the app is successfully locked in the recent apps list and cannot be terminated. The main goal of PromptSpy is to deploy a built-in VNC module that grants the attackers remote access to the victim’s device.</p>
+
+<p>The malware is also designed to take advantage of Android’s accessibility services to prevent it from being uninstalled using invisible overlays. It communicates with a hard-coded command-and-control (C2) server (“54.67.2[.]84”) via the VNC protocol. It’s worth noting that the actions suggested by Gemini are executed through accessibility services, allowing the malware to interact with the device without user input. All of this is accomplished by communicating with the C2 server to receive the Gemini API key, take screenshots on demand, intercept lockscreen PIN or password, record screen, and capture the pattern unlock screen as a video.</p>
+
+<p>An analysis of the language localization clues and the distribution vectors used suggests that the campaign is likely financially motivated and targets users in Argentina. Interestingly, evidence shows that PromptSpy was developed in a Chinese‑speaking environment, as indicated by the presence of debug strings written in simplified Chinese. “PromptSpy is distributed by a dedicated website and has never been available on Google Play,” Štefanko said. PromptSpy is assessed to be an advanced version of another previously unknown Android malware called VNCSpy, samples of which were first uploaded to the VirusTotal platform last month from Hong Kong.</p>
+
+<p>The website, “mgardownload[.]com,” is used to deliver a dropper, which, when installed and launched, opens a web page hosted on “m-mgarg[.]com.” It masquerades as JPMorgan Chase, going by the name “MorganArg” in reference to Morgan Argentina. The dropper also instructs victims to grant it permissions to install apps from unknown sources to deploy PromptSpy. “In the background, the Trojan contacts its server to request a configuration file, which includes a link to download another APK, presented to the victim, in Spanish, as an update,” ESET said. “During our research, the configuration server was no longer accessible, so the exact download URL remains unknown.”
+The findings illustrate how threat actors are incorporating AI tools into their operations and make malware more dynamic, giving them ways to automate actions that would otherwise be more challenging with conventional approaches.</p>
+
+<p>Because PromptSpy prevents itself from being uninstalled by overlaying invisible elements on the screen, the only way for a victim to remove it is to
+reboot the device into Safe Mode
+, where third‑party apps are disabled and can be uninstalled. “PromptSpy shows that Android malware is beginning to evolve in a sinister way,” ESET said. “By relying on generative AI to interpret on‑screen elements and decide how to interact with them, the malware can adapt to virtually any device, screen size, or UI layout it encounters.”
+“Instead of hardcoded taps, it simply hands AI a snapshot of the screen and receives precise, step‑by‑step interaction instructions in return, helping it achieve a persistence technique resistant to UI changes.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="interpol-operation-red-card-20-arrests-651-in-african-cybercrime-crackdown"><a id="article-2"></a>INTERPOL Operation Red Card 2.0 Arrests 651 in African Cybercrime Crackdown</h2>
+
+<p>An international cybercrime operation against online scams has led to 651 arrests and recovered more than $4.3 million as part of an effort led by law enforcement agencies from 16 African countries. The initiative, codenamed Operation Red Card 2.0, took place between December 8, 2025 and January 30, 2026, according to INTERPOL. It targeted infrastructure and actors behind high-yield investment scams, mobile money fraud, and fraudulent mobile loan applications. Countries that participated in the law enforcement operation included Angola, Benin, Cameroon, Côte d’Ivoire, Chad, Gabon, Gambia, Ghana, Kenya, Namibia, Nigeria, Rwanda, Senegal, Uganda, Zambia, and Zimbabwe.</p>
+
+<p>It was conducted under the African Joint Operation against Cybercrime (AFJOC). “During the eight-week operation, investigations exposed scams linked to over USD 45 million in financial losses and identified 1,247 victims, predominantly from the African continent but also from other regions of the world,” INTERPOL
+said
+in a press release. The operation also saw authorities confiscating 2,341 devices and taking down 1,442 malicious IPs, domains, and servers, as well as other related infrastructure. Some of the notable cases are listed below -
+Nigerian authorities dismantled a high-yield investment fraud ring that recruited young individuals to carry out cyber-enabled crimes using phishing, identity theft, social engineering, and fake digital asset investment schemes.</p>
+
+<p>More than 1,000 fraudulent social media accounts were taken down. Six members of a sophisticated cybercrime syndicate were arrested by Nigerian authorities for breaching the internal platform of a major telecommunications provider through compromised staff login credentials. The scheme involved stealing “significant volumes of airtime and data for illegal resale.”
+Kenyan authorities arrested 27 individuals in connection with a fraud scheme that used messaging apps, social media, and fictitious testimonials to deceive victims into making fake investments by promising them huge returns. Victims were shown bogus account statements or dashboards to keep up the ruse, but were blocked from making any withdrawals.</p>
+
+<p>Côte d’Ivoire authorities arrested 58 individuals and seized 240 mobile phones, 25 laptops and over 300 SIM cards to disrupt a predatory mobile loan fraud scheme that primarily targeted vulnerable populations through fake mobile applications and messaging services, enticing them with promises of unsecured loans and then trapping them extra fees, abusive debt-collection practices, and theft of sensitive personal and financial data. “These organized cybercriminal syndicates inflict devastating financial and psychological harm on individuals, businesses, and entire communities with their false promises,” Neal Jetton, INTERPOL’s director of the Cybercrime Directorate, said. “Operation Red Card highlights the importance of collaboration when combating transnational cybercrime. I encourage all victims of cybercrime to reach out to law enforcement for help.”
+The second phase of Red Card comes almost a year after INTERPOL
+announced
+the arrest of 306 suspects and seizure of 1,842 devices as part of the first wave of the operation that transpired between November 2024 and February 2025.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-patches-cve-2026-26119-privilege-escalation-in-windows-admin-center"><a id="article-3"></a>Microsoft Patches CVE-2026-26119 Privilege Escalation in Windows Admin Center</h2>
+
+<p>Microsoft has disclosed a now-patched security flaw in Windows Admin Center that could allow an attacker to escalate their privileges. Windows Admin Center
+is a locally deployed, browser-based management tool set that lets users manage their Windows Clients, Servers, and Clusters without the need for connecting to the cloud. The high-severity vulnerability, tracked as
+CVE-2026-26119
+, carries a CVSS score of 8.8 out of a maximum of 10.0
+“Improper authentication in Windows Admin Center allows an authorized attacker to elevate privileges over a network,” Microsoft
+said
+in an advisory released on February 17, 2026. “The attacker would gain the rights of the user that is running the affected application.”
+Microsoft credited Semperis researcher Andrea Pierini with discovering and reporting the vulnerability.</p>
+
+<p>It’s worth mentioning that the security issue was patched by the tech giant in
+Windows Admin Center version 2511
+released in December 2025. While the Windows maker makes no mention of this vulnerability being exploited in the wild, it has been tagged with an “Exploitation More Likely” assessment. Technical details related to CVE-2026-26119 are presently under wraps, but that could change soon. In a post
+shared
+on LinkedIn, Pierini said the vulnerability could “allow a full domain compromise starting from a standard user” under certain conditions.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-openssl-rce-foxit-0-days-copilot-leak-ai-password-flaws--20-stories"><a id="article-4"></a>ThreatsDay Bulletin: OpenSSL RCE, Foxit 0-Days, Copilot Leak, AI Password Flaws &amp; 20+ Stories</h2>
+
+<p>The cyber threat space doesn’t pause, and this week makes that clear. New risks, new tactics, and new security gaps are showing up across platforms, tools, and industries — often all at the same time. Some developments are headline-level. Others sit in the background but carry long-term impact.</p>
+
+<p>Together, they shape how defenders need to think about exposure, response, and preparedness right now. This edition of ThreatsDay Bulletin brings those signals into one place. Scan through the roundup for quick, clear updates on what’s unfolding across the cybersecurity and hacking landscape. Privacy model hardening
+Google Showcases New Privacy and Security Features in Android 17
+Google
+announced
+the first beta version of
+Android 17
+, with two privacy and security enhancements: the deprecation of Cleartext Traffic Attribute and support for HPKE Hybrid Cryptography to enable secure communication using a combination of public key and symmetric encryption (AEAD).</p>
+
+<p>“If your app targets (Android 17) or higher and relies on
+usesCleartextTraffic
+=’true’ without a corresponding Network Security Configuration, it will default to disallowing cleartext traffic,” Google said. “You are encouraged to migrate to
+Network Security Configuration files
+for granular control.”
+RaaS expands cross-platform reach
+LockBit 5.0 Ransomware Analyzed
+A new analysis of the LockBit 5.0 ransomware has revealed that the Windows version packs in various defense evasion and anti-analysis techniques, including packing, DLL unhooking, process hollowing, patching Event Tracing for Windows (ETW) functions, and log clearing. “What’s notable among the multiple systems support is its proclaimed capability to ‘work on all versions of Proxmox,’” Acronis
+said
+. “Proxmox is an open-source virtualization platform and is being adopted by enterprises as an alternative to commercial hypervisors, which makes it another prime target of ransomware attacks.” The latest version also introduces dedicated builds tailored for enterprise environments, highlighting the continued evolution of ransomware-as-a-service (RaaS) operations.</p>
+
+<p>Mac users lured via nested obfuscation
+ClickFix Continues to Evolve
+Cybersecurity researchers have detailed a new evolution of the
+ClickFix
+social engineering tactic targeting macOS users. “Dubbed Matryoshka due to its nested obfuscation layers, this variant uses a fake installation/fix flow to trick victims into executing a malicious Terminal command,” Intego
+said
+. “While the ClickFix tactic is not new, this campaign introduces stronger evasion techniques — including an in-memory, compressed wrapper and API-gated network communications — designed to hinder static analysis and automated sandboxes.” The campaign primarily targets users attempting to visit software review sites, leveraging typosquatting in the URL name to redirect them to fake sites and activate the infection chain. Loader pipeline drives rapid domain takeover
+ClickFix Delivers Matanbuchus 3.0 and AstarionRAT
+Another new
+ClickFix
+campaign detected in February 2026 has been observed delivering a malware-as-a-service (MaaS) loader known as
+Matanbuchus 3.0
+.</p>
+
+<p>Huntress, which
+dissected
+the attack chain, said the ultimate objective of the intrusion was to deploy ransomware or exfiltrate data based on the fact that the threat actor rapidly progressed from initial access to lateral movement to domain controllers via PsExec, rogue account creation, and Microsoft Defender exclusion staging. The attack also led to the deployment of a custom implant dubbed AstarionRAT that supports 24 commands to facilitate credential theft, SOCKS5 proxy, port scanning, reflective code loading, and shell execution. According to data from the cybersecurity company,
+ClickFix fueled 53% of all malware loader activity
+in 2025. Typosquat chain targets macOS credentials
+Fake Homebrew Typosquats Deliver Cuckoo Stealer
+In yet another ClickFix campaign, threat actors are relying on the “reliable trick” to host malicious instructions on fake websites disguised as Homebrew (“homabrews[.]org”) to trick users into pasting them on the Terminal app under the pretext of installing the macOS package manager.</p>
+
+<p>In the attack chain documented by Hunt.io, the commands in the typosquatted Homebrew domain are used to deliver a credential-harvesting loader and a second-stage macOS infostealer dubbed Cuckoo Stealer. “The injected installer looped on password prompts using ‘
+dscl . -authonly
+,’ ensuring the attacker obtained working credentials before deploying the second stage,” Hunt.io
+said
+. “Cuckoo Stealer is a full-featured macOS infostealer and RAT: It establishes LaunchAgent persistence, removes quarantine attributes, and maintains encrypted HTTPS command-and-control communications.</p>
+
+<p>It collects browser credentials, session tokens, macOS Keychain data, Apple Notes, messaging sessions, VPN and FTP configurations, and over 20 cryptocurrency wallet applications.” The use of “dscl . -authonly” has been
+previously observed
+in attacks deploying Atomic Stealer. Phobos affiliate detained in Europe
+Poland Detains Man with Alleged Links to Phobos Ransomware
+Authorities from Poland’s Central Bureau for Combating Cybercrime (CBZC) have detained a 47-year-old man over suspected ties to the Phobos ransomware group. He faces a potential prison sentence of up to five years.</p>
+
+<p>The CBZC
+said
+the “47-year-old used encrypted messaging to contact the Phobos criminal group, known for conducting ransomware attacks,” adding the suspect’s devices contained logins, passwords, credit card numbers, and server IP addresses that could have been used to launch “various attacks, including ransomware.” The arrest is part of Europol’s
+Operation Aether
+, which targets the 8Base ransomware group, believed to be linked to Phobos. It has been almost exactly a year since international law enforcement dismantled the 8Base crew. More than 1,000 organizations around the world have been targeted in Phobos ransomware attacks, and the cybercriminals are believed to have obtained over $16 million in ransom payments. Industrial ransomware surge accelerates
+Rise in Attacks Targeting Operational Technology Environments
+There has been a sharp rise in the number of ransomware groups targeting industrial organizations as cybercriminals continue to exploit vulnerabilities in operational technology (OT) and industrial control systems (ICS), Dragos
+warned
+.</p>
+
+<p>A total of 119 ransomware groups targeting industrial organizations were tracked during 2025, a 49% increase from the 80 tracked in 2024. 2025 saw 3,300 industrial organizations around the world hit by ransomware, compared with 1693 in 2024. The most targeted sector was manufacturing, followed by transportation. In addition, a hacking group tracked as Pyroxene has been observed conducting “supply chain-leveraged attacks targeting defense, critical infrastructure, and industrial sectors, with operations expanding from the Middle East into North America and Western Europe.” It often leverages initial access provided by PARISITE, to enable movement from IT into OT networks.</p>
+
+<p>Pyroxene overlaps with activity attributed to
+Imperial Kitten
+(aka APT35), a threat actor affiliated with the cyber arm of the Islamic Revolutionary Guard Corps (IRGC). Copilot bypassed DLP safeguards
+Microsoft Says a Copilot Bug Summarised Confidential Emails
+Microsoft
+confirmed
+a bug (
+CW1226324
+) that let Microsoft 365 Copilot summarize confidential emails from Sent Items and Drafts folders since January 21, 2026, without users’ permission, bypassing data loss prevention (DLP) policies put in place to safeguard sensitive data. A fix was deployed by the company on February 3, 2026. However, the company did not disclose how many users or organizations were affected.</p>
+
+<p>“Users’ email messages with a confidential label applied are being incorrectly processed by Microsoft 365 Copilot chat,” Microsoft said. “The Microsoft 365 Copilot “work tab” Chat is summarizing email messages even though these email messages have a sensitivity label applied, and a DLP policy is configured. A code issue is allowing items in the sent items and draft folders to be picked up by Copilot even though confidential labels are set in place.”
+Jira trials weaponized for spam
+Atlassian Jira Exploited in Spam Campaigns
+Threat actors are abusing the trust and reputation associated with Atlassian Jira Cloud and its connected email system to run automated spam campaigns and bypass traditional email security. To accomplish this, the operators created Atlassian Cloud trial accounts using randomized naming conventions, allowing them to generate disposable Jira Cloud instances at scale.</p>
+
+<p>“Emails were tailored to target specific language groups, targeting English, French, German, Italian, Portuguese, and Russian speakers — including highly skilled Russian professionals living abroad,” Trend Micro
+said
+. “These campaigns not only distributed generic spam, but also specifically targeted sectors such as government and corporate entities.” The attacks, active from late December 2025 through late January 2026, primarily targeted organizations using Atlassian Jira. The goal was to get recipients to open the emails and click on malicious links, which would initiate a redirect chain powered by the Keitaro Traffic Distribution System (TDS) and then finally lead them to pages peddling investment scams and online casino landing sites, suggesting that financial gain was likely the main objective. GitLab SSRF now federally mandated patch
+CISA Adds GitLab Flaw to KEV Catalog
+The U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA), on February 18, 2026,
+added
+CVE-2021-22175 to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the patch by March 11, 2026. “GitLab contains a server-side request forgery (SSRF) vulnerability when requests to the internal network for webhooks are enabled,” CISA said. In March 2025, GreyNoise
+revealed
+that a cluster of about 400 IP addresses was actively exploiting multiple SSRF vulnerabilities, including CVE-2021-22175, to target susceptible instances in the U.S., Germany, Singapore, India, Lithuania, and Japan. Telegram bots fuel Fortune 500 phishing
+GS7 Targets Fortune 500 Firms in Phishing Campaign
+An elusive, financially motivated threat actor dubbed GS7 has been targeting Fortune 500 companies in a new phishing campaign that leverages trusted company branding with lookalike websites aimed at harvesting credentials via Telegram bots.</p>
+
+<p>The campaign, codenamed
+Operation DoppelBrand
+, targets top financial institutions, including Wells Fargo, USAA, Navy Federal Credit Union, Fidelity Investments, and Citibank, as well as technology, healthcare, and telecommunications firms worldwide. Victims are lured through phishing emails and redirected to counterfeit pages where credentials are harvested and transmitted to Telegram bots controlled by the attacker. According to SOCRadar, the group itself, however, has a history stretching back to 2022. The threat actor is said to have registered more than 150 malicious domains in recent months using registrars such as NameCheap and OwnRegistrar, and routing traffic through Cloudflare to evade detection.</p>
+
+<p>GS7’s end goals include not only harvesting credentials, but also downloading remote management and monitoring (RMM) tools like LogMeIn Resolve on victim systems to enable remote access or the deployment of malware. This has raised the possibility that the group may even act as an initial access broker (IAB), selling the access to ransomware groups or other affiliates. Remcos shifts to live C2 surveillance
+New Remcos RAT Variant Spotted
+Phishing emails disguised as invoices, job offers, or government notices are being used to distribute a new variant of Remcos RAT to facilitate comprehensive surveillance and control over infected systems. “The latest Remcos variant has been observed exhibiting a significant change in behaviour compared to previous versions,” Point Wild
+said
+.</p>
+
+<p>“Instead of stealing and storing data locally on the infected system, this variant establishes direct online command-and-control (C2) communication, enabling real-time access and control. In particular, it leverages the webcam to capture live video streams, allowing attackers to monitor targets remotely. This shift from local data exfiltration to live, online surveillance represents an evolution in Remcos’ capabilities, increasing the risk of immediate espionage and persistent monitoring.”
+China-made vehicles restricted on bases
+Poland Bans Camera-Packing Cars Made in China From Military Facilities
+Poland’s Ministry of Defence has banned Chinese cars, and other motor vehicles equipped with technology to record position, images, or sound, from entering protected military facilities due to national security concerns and to “limit the risk of access to sensitive data.” The ban also extends to connecting work phones to infotainment systems in motor vehicles produced in China. The ban isn’t permanent: the Defence Ministry has called for the development of a vetting process to allow carmakers to undergo a security assessment that, if passed, can allow their vehicles to enter protected facilities.</p>
+
+<p>“Modern vehicles equipped with advanced communication systems and sensors can collect and transmit data, so their presence in protected zones requires appropriate safety regulations,” the Polish Army
+said
+. The measures introduced are preventive and comply with the practices of NATO countries and other allies to ensure the highest standards of defense infrastructure protection. They are part of a wider process of adapting security procedures to the changing technological environment and current requirements for the protection of critical infrastructure.”
+DKIM replay fuels invoice scams
+Phishing Attacks Abuse Legitimate Apple and PayPal Invoices
+Bad actors are abusing legitimate invoices and dispute notifications from trusted vendors, such as PayPal, Apple, DocuSign, and Dropbox Sign (formerly HelloSign), to bypass email security controls. “These platforms often allow users to enter a ‘seller name’ or add a custom note when creating an invoice or notification,” Casey-owned INKY
+said
+.</p>
+
+<p>“Attackers abuse this functionality by inserting scam instructions and a phone number into those user-controlled fields. They then send the resulting invoice or dispute notice to an email address they control, ensuring the malicious content is embedded in a legitimate, vendor-generated message.” Because these emails originate from a legitimate company, they bypass checks like Domain-based Message Authentication, Reporting and Conformance (DMARC). As soon as the legitimate email is received, the attacker proceeds to forward it to the intended targets, allowing the “authentic looking” message to land in the victims’ inboxes. The attack is known as a DKIM replay attack.</p>
+
+<p>RMM abuse surges 277%
+Adversaries Drop Malware in Favor of RMM
+A new report from Huntress has revealed that the abuse of Remote Monitoring and Management (RMM) software surged 277% year-over-year, accounting for 24% of all observed incidents. Threat actors have begun to increasingly favor these tools because they are ubiquitous in enterprise environments, and the trusted nature of the RMM software allows malicious activity to blend in with legitimate usage, making detection harder for defenders. They also offer increased stealth, persistence, and operational efficiency. “As cybercriminals built entire playbooks around these legitimate, trusted tools to drop malware, steal credentials, and execute commands, the use of traditional hacking tools plummeted by 53%, while remote access trojans and malicious scripts dropped by 20% and 11.7%, respectively,” the company
+said
+.</p>
+
+<p>Texas targets China-linked tech firms
+Texas sues TP-Link and Anzu Robotics over China Links
+Texas Attorney General Ken Paxton has
+sued
+TP-Link for “deceptively marketing its networking devices and allowing the Chinese Communist Party (‘CCP’) to access American consumers’ devices in their homes.” Paxton’s lawsuit alleges that TP Link’s products have been
+used by Chinese hacking groups
+to launch cyber attacks against the U.S. and that the company is subject to Chinese data laws, which it said require firms operating in the country to support its intelligence services by “divulging Americans’ data.” TP-Link
+told
+The Record that these allegations are “without merit” and that neither the Chinese government nor the Chinese Communist Party (CCP) exercises control over the company, its products, or user data. It also added that all U.S. user data is stored on domestic Amazon Web Services (AWS) servers.</p>
+
+<p>In a second lawsuit, Paxton also
+accused
+Anzu Robotics of misleading Texas consumers about the “origin, data practices, and security risks of its drones.” Paxton’s office described the company’s products as “21st century Trojan horse linked to the CCP.”
+MetaMask backdoor expands DPRK campaign
+Contagious Interview Campaign Evolves
+The North Korea-linked campaign known as
+Contagious Interview
+is designed to target IT professionals working in cryptocurrency, Web3, and artificial intelligence sectors to steal sensitive data and financial information using malware such as BeaverTail and InvisibleFerret. However, recent iterations of the campaign have expanded their data theft capabilities by tampering with the MetaMask wallet extension (if it’s installed) through a lightweight JavaScript backdoor that shares the same functionality as InvisibleFerret, according to security researcher Seongsu Park. “Through the backdoor, attackers instruct the infected system to download and install a fake version of the popular MetaMask cryptocurrency wallet extension, complete with a dynamically generated configuration file that makes it appear legitimate,” Park
+said
+. “Once installed, the compromised MetaMask extension silently captures the victim’s wallet unlock password and transmits it to the attackers’ command-and-control server, giving them complete access to cryptocurrency funds.”
+Booking.com kits hit hotels, guests
+Hotel and Retail Sector Ensnared in Booking.com Phishing Campaign
+Bridewell has warned of a resurgence in malicious activity targeting the hotel and retail sector.</p>
+
+<p>“The primary motivation driving this incident is financial fraud, targeting two victims: hotel businesses and hotel customers, in sequential order,” security researcher Joshua Penny
+said
+. “The threat actor(s) utilize impersonation of the Booking.com platform through two distinct phishing kits dedicated to harvesting credentials and banking information from each victim, respectively.” It’s worth noting that the activity shares overlap with a prior activity wave
+disclosed
+by Sekoia in November 2025, although the use of a dedicated phishing kit is a new approach by either the same or new operators. EPMM exploits enable persistent access
+Ivanti Flaws Exploited to Drop Reverse Shells and Malware
+The recently disclosed security flaws in Ivanti Endpoint Manager Mobile (EPMM) have been exploited by bad actors to establish a reverse shell, deliver JSP web shells, conduct reconnaissance, and download malware, including
+Nezha
+, cryptocurrency miners, and backdoors for remote access. The two critical vulnerabilities,
+CVE-2026-1281 and CVE-2026-1340
+, allow unauthenticated attackers to remotely execute arbitrary code on target servers, granting them full control over mobile device management (MDM) infrastructure without requiring user interaction or credentials.</p>
+
+<p>According to Palo Alto Networks Unit 42, the campaign has affected state and local government, healthcare, manufacturing, professional and legal services, and high technology sectors in the U.S., Germany, Australia, and Canada. “Threat actors are accelerating operations, moving from initial reconnaissance to deploying dormant backdoors designed to maintain long-term access even after organizations apply patches,” the cybersecurity company
+said
+. In a related development, Germany’s Federal Office for Information Security (BSI) has
+reported
+evidence of exploitation since the summer of 2025 and has urged organizations to audit their systems for indicators of compromise (IoCs) as far back as July 2025. AI passwords lack true randomness
+LLM-Generated Passwords Are Dangerously Insecure
+New research by Irregular has
+found
+that passwords generated directly by a large language model (LLM) may appear strong but are fundamentally insecure, as “LLMs are designed to predict tokens – the opposite of securely and uniformly sampling random characters.” The artificial intelligence (AI) security company said it detected LLM-generated passwords in the real world as part of code development tasks instead of leaning on traditional secure password generation methods.</p>
+
+<p>“People and coding agents should not rely on LLMs to generate passwords,” the company said. “LLMs are optimized to produce predictable, plausible outputs, which is incompatible with secure password generation. AI coding agents should be directed to use secure password generation methods instead of relying on LLM-output passwords. Developers using AI coding assistants should review generated code for hardcoded credentials and ensure agents use cryptographically secure methods or established password managers.”
+PDF engine flaws enable account takeover
+16 Vulnerabilities in Foxit and Apryse PDF Tools
+Cybersecurity researchers have discovered more than a dozen vulnerabilities (
+CVE-2025-70401, CVE-2025-70402, and CVE-2025-66500
+) in popular PDF platforms from Foxit and Apryse, potentially allowing attackers to exploit them for account takeover, session hijacking, data exfiltration, and arbitrary JavaScript execution.</p>
+
+<p>“Rather than isolated bugs, the issues cluster around recurring architectural failures in how PDF platforms handle untrusted input across layers,” Novee Security researchers Lidor Ben Shitrit, Elad Meged, and Avishai Fradlis
+said
+. “Several vulnerabilities were exploitable with a single request and affected trusted domains commonly embedded inside enterprise applications.” The issues have been addressed by both Apryse and Foxit through product updates. Training labs expose cloud backdoors
+Exposed Training Apps Turn Backdoors for Cloud Breaches
+A “widespread” security issue has been discovered where security vendors inadvertently expose deliberately vulnerable training applications, such as OWASP Juice Shop, DVWA, bWAPP, and Hackazon, to the public internet. This can open organizations to severe security risks when they are executed from a privileged cloud account.</p>
+
+<p>“Primarily deployed for internal testing, product demonstrations, and security training, these applications were frequently left accessible in their default or misconfigured states,” Pentera Labs
+said
+. “These critical flaws not only allowed attackers full control over the compromised compute engine but also provided pathways for lateral movement into sensitive internal systems. Violations of the principle of least privilege and inadequate sandboxing measures further facilitated privilege escalation, endangering critical infrastructure and sensitive organizational data.” Further analysis has determined that threat actors are exploiting this blind spot to plant web shells, cryptocurrency miners, and persistence mechanisms on compromised systems. Evasion loader refines C2 stealth
+Oyster Loader Detailed
+The malware loader known as
+Oyster
+(aka Broomstick or CleanUpLoader) has continued to evolve into early 2026, fine-tuning its C2 infrastructure and obfuscation methods, per findings from Sekoia.</p>
+
+<p>The malware is distributed mainly through fake websites that distribute installers for legitimate software like Microsoft Teams, with the core payload often deployed as a DLL for persistent execution. “The initial stage leverages excessive legitimate API call hammering and simple anti-debugging traps to thwart static analysis,” the company
+said
+. “The core payload is delivered in a highly obfuscated manner. The final stage implements a robust C2 communication protocol that features a dual-layer server infrastructure and highly-customized data encoding.”
+Stealer taunts researchers in code
+Noodlophile Operators Hit Back
+Noodlophile
+is the name given to an information-stealing malware that has been distributed via fake AI tools promoted on Facebook.</p>
+
+<p>Assessed to be the work of a threat actor based in Vietnam, it was first documented by Morphisec in May 2025. Since then, there have been other reports detailing various campaigns, such as
+UNC6229
+and
+PXA Stealer
+, orchestrated by
+Vietnamese cybercriminals
+. Morphisec’s latest analysis of Noodlophile has revealed that the threat actor “padded the malware with millions of repeats of a colorful Vietnamese phrase translating to ‘f*** you, Morphisec,’” suggesting that the operators were not thrilled about getting exposed. “Not just to vent frustration over disrupted campaigns, but also to bloat the file and crash AI-based analysis tools that are based on the Python disassemble library – dis.dis(obj),” security researcher Michael Gorelik
+said
+.</p>
+
+<p>Crypto library RCE risk patched
+OpenSSL Fixes Several Flaws
+The OpenSSL project has patched a stack buffer overflow flaw that can lead to remote code execution attacks under certain conditions. The vulnerability, tracked as
+CVE-2025-15467
+, resides in how the library processes Cryptographic Message Syntax data. Threat actors can use CMS packets with maliciously crafted AEAD parameters to crash OpenSSL and run malicious code. CVE-2025-15467 is one of 12 issues that were
+disclosed
+by AISLE late last month.</p>
+
+<p>Another high-severity vulnerability is
+CVE-2025-11187
+, which could trigger a stack-based buffer overflow due to a missing validation. Machine accounts expand delegation risk
+Kerberos Delegation Applies to Computer Accounts
+New research from Silverfort has cleared a “common assumption” that
+Kerberos delegation
+– which allows a service to request resources or perform actions on behalf of a user – applies not just to human users, but also to machine accounts as well. In other words, a computer account can be delegated on behalf of highly privileged machine identities such as domain controllers. “That means a service trusted for delegation can act not just on behalf of other users, but also on behalf of machine accounts, the most critical non-human identities (NHIs) in any domain,” Silverfort researcher Dor Segal
+said
+.</p>
+
+<p>“The risk is obvious. If an adversary can leverage delegation, it can act on behalf of sensitive machine accounts, which in many environments hold privileges equivalent to Domain Administrator.” To counter the risk, it’s advised to run “Set-ADAccountControl -Identity “HOST01$” -AccountNotDelegated $true” for each sensitive machine account. Security news rarely breaks in isolation. One incident leads to another, new research builds on older findings, and attacker playbooks keep adjusting along the way.</p>
+
+<p>The result is a constant stream of signals that are easy to miss without a structured view. This roundup pulls those signals together into a single, readable snapshot. Go through the full list to get quick clarity on the developments shaping defender priorities and risk conversations right now. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="from-exposure-to-exploitation-how-ai-collapses-your-response-window"><a id="article-5"></a>From Exposure to Exploitation: How AI Collapses Your Response Window</h2>
+
+<p>We’ve all seen this before: a developer deploys a new cloud workload and grants overly broad permissions just to keep the sprint moving. An engineer generates a “temporary” API key for testing and forgets to revoke it. In the past, these were minor operational risks, debts you’d eventually pay down during a slower cycle. In 2026, “Eventually” is Now
+But today, within minutes, AI-powered adversarial systems can find that over-permissioned workload, map its identity relationships, and calculate a viable route to your critical assets.</p>
+
+<p>Before your security team has even finished their morning coffee, AI agents have simulated thousands of attack sequences and moved toward execution. AI compresses reconnaissance, simulation, and prioritization into a single automated sequence. The exposure you created this morning can be modeled, validated, and positioned inside a viable attack path before your team has lunch. The Collapse of the Exploitation Window
+Historically, the exploitation window favored the defender.</p>
+
+<p>A vulnerability was disclosed, teams assessed their exposure, and remediation followed a predictable patch cycle. AI has shattered that timeline. In 2025, over
+32% of vulnerabilities were exploited on or before the day the CVE was issued
+. The infrastructure powering this is massive, with
+AI-powered scan activity reaching 36,000 scans per second
+.</p>
+
+<p>But it’s not just about speed; it’s about context. Only 0.47% of identified security issues are actually exploitable. While your team burns cycles reviewing the 99.5% of “noise,” AI is laser-focused on the 0.5% that matters, isolating the small fraction of exposures that can be chained into a viable route to your critical assets. To understand the threat, we must look at it through two distinct lenses: how AI accelerates attacks on your infrastructure, and how your AI infrastructure itself introduces a new attack surface.</p>
+
+<p>Scenario #1: AI as an Accelerator
+AI attackers aren’t necessarily using “new” exploits. They are exploiting the exact same CVEs and misconfigurations they always have, but they are doing it with machine speed and scale. Automated vulnerability chaining
+Attackers no longer need a “Critical” vulnerability to breach you. They use AI to chain together “Low” and “Medium” issues, a stale credential here, a misconfigured S3 bucket there.</p>
+
+<p>AI agents can ingest identity graphs and telemetry to find these convergence points in seconds, doing work that used to take human analysts weeks. Identity sprawl as a weapon
+Machine identities now outnumber human employees 82 to 1. This creates a massive web of keys, tokens, and service accounts. AI-driven tools excel at “identity hopping”, mapping token exchange paths from a low-security dev container to an automated backup script, and finally to a high-value production database.</p>
+
+<p>Social Engineering at scale
+Phishing has surged 1,265% because AI allows attackers to mirror your company’s internal tone and operational “vibe” perfectly. These aren’t generic spam emails; they are context-aware messages that bypass the usual “red flags” employees are trained to spot. Scenario #2: AI as the New Attack Surface
+While AI accelerates attacks on legacy systems, your own AI adoption is creating entirely new vulnerabilities. Attackers aren’t just using AI; they are targeting it.</p>
+
+<p>The Model Context Protocol and Excessive Agency
+When you connect internal agents to your data, you introduce the risk that it will be targeted and turned into a “confused deputy.” Attackers can use prompt injection to trick your public-facing support agents into querying internal databases they should never access. Sensitive data surfaces and is exfiltrated by the very systems you trusted to protect it, all while looking like authorized traffic. Poisoning the Well
+The results of these attacks extend far beyond the moment of exploitation. By feeding false data into an agent’s long-term memory (Vector Store), attackers create a dormant payload.</p>
+
+<p>The AI agent absorbs this poisoned information and later serves it to users. Your EDR tools see only normal activity, but the AI is now acting as an insider threat. Supply Chain Hallucinations
+Finally, attackers can poison your supply chain before they ever touch your systems. They use LLMs to predict the “hallucinated” package names that AI coding assistants will suggest to developers.</p>
+
+<p>By registering these malicious packages first (slopsquatting), they ensure developers inject backdoors directly into your CI/CD pipeline. Reclaiming the Response Window
+Traditional defense cannot match AI speed because it measures success by the wrong metrics. Teams count alerts and patches, treating volume as progress, while adversaries exploit the gaps that accumulate from all this noise. An effective strategy for staying ahead of attackers in the era of AI must focus on one simple, yet critical question:
+which exposures actually matter for an attacker moving laterally through your environment?</p>
+
+<p>To answer this, organizations must shift from reactive patching to Continuous Threat Exposure Management (CTEM). It is an operational pivot designed to align security exposure with actual business risk. AI-enabled attackers don’t care about isolated findings. They chain exposures together into viable paths to your most critical assets.</p>
+
+<p>Your remediation strategy needs to account for that same reality: focus on the convergence points where multiple exposures intersect, where one fix eliminates dozens of routes. The ordinary operational decisions your teams made this morning can become a viable attack path before lunch. Close the paths faster than AI can compute them, and you reclaim the window of exploitation. Note:
+This article was thoughtfully written and contributed for our audience by Erez Hasson, Director of Product Marketing at XM Cyber.</p>
+
+<p>Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="fake-iptv-apps-spread-massiv-android-malware-targeting-mobile-banking-users"><a id="article-6"></a>Fake IPTV Apps Spread Massiv Android Malware Targeting Mobile Banking Users</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new Android trojan called
+Massiv
+that’s designed to facilitate device takeover (
+DTO
+) attacks for financial theft. The malware, according to ThreatFabric, masquerades as seemingly harmless IPTV apps to deceive victims, indicating that the activity is primarily singling out users looking for the online TV applications. “This new threat, while only seen in a limited number of rather targeted campaigns, already poses a great risk to the users of mobile banking, allowing its operators to remotely control infected devices and perform device takeover attacks with further fraudulent transactions performed from the victim’s banking accounts,” the Dutch mobile security company
+said
+in a report shared with The Hacker News. ThreatFabric told The Hacker News via email that the malware was first spotted in a campaign targeting users in Portugal and Greece earlier this year, although it has observed samples dating back to the start of 2025 as part of smaller test campaigns.</p>
+
+<p>Like various Android banking malware families, Massiv supports a wide range of features to facilitate credential theft through a number of methods: screen streaming through Android’s
+MediaProjection API
+, keylogging, SMS interception, and fake overlays served atop banking and financial apps. The overlay asks users to enter their credentials and credit card details. One such campaign has been found to target
+gov.pt
+, a Portuguese public administration app that allows users to store identification documents and manage the Digital Mobile Key (aka
+Chave Móvel Digital
+or CMD). The overlay tricks users into entering their phone number and PIN code, likely in an effort to bypass Know Your Customer (KYC) verification.</p>
+
+<p>ThreatFabric said it identified cases where scammers used the information captured through these overlays to open new banking accounts in the victim’s name, allowing them to be used for money laundering or getting loans approved without the actual victim’s knowledge. In addition, it serves as a fully functional remote-control tool, granting the operator the ability to access the victim’s device stealthily while showing a black screen overlay to conceal the malicious activity. These techniques, realized by abusing Android’s accessibility services, have also been observed in several other Android bankers like
+Crocodilus
+,
+Datzbro
+, and
+Klopatra
+. “However, some applications implement protection against screen capture,” the company explained.</p>
+
+<p>“To bypass it, Massiv uses so-called UI-tree mode – it traverses AccessibilityWindowInfo roots and recursively processes AccessibilityNodeInfo objects.”
+This is done so as to build a JSON representation of visible text and content descriptions, UI elements, screen coordinates, and interaction flags that indicate whether the UI element is clickable, editable, focused, or enabled. Only nodes that are visible and have text are exported to the attacker, who can then determine the next course of action by issuing specific commands to interact with the device. The malware is equipped to carry out a wide range of malicious actions -
+Enable black overlay, mute sounds and vibration
+Send device information
+Perform click and swipe actions
+Alter clipboard with specific text
+Disable black screen
+Turn on/off screen streaming
+Unlock device with pattern
+Serve overlays for an app, device pattern lock, or PIN
+Download ZIP archive with overlays for targeted applications
+Download and install APK files
+Open Battery Optimization, Device Admin, and Play Protect settings screens
+Request for permissions to access SMS messages, install APK packages,
+Clear log databases on the device
+Massiv is distributed in the form of dropper apps mimicking IPTV apps via SMS phishing. Once installed and launched, the dropper prompts the victim to install an “important” update by granting it permissions to install software from external sources.</p>
+
+<p>The names of the malicious artifacts are listed below -
+IPTV24 (hfgx.mqfy.fejku) - Dropper
+Google Play (hobfjp.anrxf.cucm) - Massiv
+“In most of the cases observed, it is just masquerading,” ThreatFabric said. “No actual IPTV applications were infected or initially contained malicious code. Usually, the dropper that mimics an IPTV app opens a WebView with an IPTV website in it, while the actual malware is already installed and running on the device.”
+The majority of Android malware campaigns using TV-related droppers have targeted Spain, Portugal, France, and Turkey over the past six months. Massiv is the latest entrant to an already crowded Android threat landscape, reflecting the continuing demand for such turnkey solutions among cybercriminals.</p>
+
+<p>“While not yet observed being promoted as Malware-as-a-Service, Massiv’s operator shows clear signs of going this path, introducing API keys to be used in malware communication with the backend,” ThreatFabric said. “Code analysis revealed ongoing development, with more features likely to be introduced in the future.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="crescentharvest-campaign-targets-iran-protest-supporters-with-rat-malware"><a id="article-7"></a>CRESCENTHARVEST Campaign Targets Iran Protest Supporters With RAT Malware</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new campaign dubbed
+CRESCENTHARVEST
+, likely targeting supporters of Iran’s ongoing protests to conduct information theft and long-term espionage. The Acronis Threat Research Unit (TRU) said it observed the activity after January 9, with the attacks designed to deliver a malicious payload that serves as a remote access trojan (RAT) and information stealer to execute commands, log keystrokes, and exfiltrate sensitive data. It’s currently not known if any of the attacks were successful. “The campaign exploits recent geopolitical developments to lure victims into opening malicious .LNK files disguised as protest-related images or videos,” researchers Subhajeet Singha, Eliad Kimhy, and Darrel Virtusio
+said
+in a report published this week.</p>
+
+<p>“These files are bundled with authentic media and a Farsi-language report providing updates from ‘the rebellious cities of Iran.’ This pro- protest framing appears to be intended to increase credibility and to attract Farsi-speaking Iranians seeking protest-related information.”
+CRESCENTHARVEST, although unattributed, is believed to be the work of an Iran-aligned threat group. The discovery makes it the second such campaign identified as going after specific individuals in the aftermath of the nationwide protests in Iran that began towards the end of 2025. Last month, French cybersecurity company HarfangLab detailed a threat cluster dubbed
+RedKitten
+that targeted non-governmental organizations and individuals involved in documenting recent human rights abuses in Iran with an aim to infect them with a custom backdoor known as SloppyMIO. According to Acronis, the exact initial access vector used to distribute the malware is not known.</p>
+
+<p>However, it’s suspected that the threat actors are relying on spear-phishing or “protracted social engineering efforts” in which the operators build rapport with the victims over time before sending the malicious payloads. It’s worth noting that Iranian hacking groups like Charming Kitten and Tortoiseshell have a
+storied history
+of
+engaging
+in
+sophisticated social-engineered attacks
+that involve approaching prospective targets under
+fake personas
+and cultivating a relationship with them, in some cases
+even stretching for years
+, before weaponizing the trust to infect them with malware. “The use of Farsi language content for social engineering and the distributed files depicting the protests in heroic terms suggest an intent to attract Farsi-speaking individuals of Iranian origin, who are in support of the ongoing protests,” the Swiss-based security company noted. The starting point of the attack chain is a malicious RAR archive that claims to contain information related to the Iranian protests, including various images and videos, along with two Windows shortcut (LNK) files that masquerade as an image or a video file by using the double extension trick (*.jpg.lnk or *.mp4.lnk).</p>
+
+<p>The deceptive file, once launched, contains PowerShell code to retrieve another ZIP archive, while simultaneously opening a harmless image or video, tricking the victim into thinking that they have interacted with a benign file. Present within the ZIP archive is a legitimate Google-signed binary (“software_reporter_tool.exe”) shipped as part of Chrome’s cleanup utility and several DLL files, including two rogue libraries that are sideloaded by the executable to realize the threat actor’s objectives -
+urtcbased140d_d.dll, a C++ implant that extracts and decrypts Chrome’s
+app-bound encryption
+keys through COM interfaces. It shares overlaps with an open-source project known as ChromElevator. version.dll (aka CRESCENTHARVEST), a remote access tool that lists installed antivirus products and security tools, enumerates local user accounts on the device, loads DLLs, harvests system metadata, browser credentials, Telegram desktop account data, and keystrokes.</p>
+
+<p>CRESCENTHARVEST employs Windows Win HTTP APIs to communicate with its command-and-control (C2) server (“servicelog-information[.]com”), allowing it to blend in with regular traffic. Some of the supported commands are listed below -
+Anti
+, to run anti-analysis checks
+His
+, to steal browser history
+Dir
+, to list directories
+Cwd
+, to get the current working directory
+Cd
+, to change directory
+GetUser
+, to get user information
+ps
+, to run PowerShell commands (not working)
+KeyLog
+, to activate keylogger
+Tel_s
+, to steal Telegram session data
+Cook
+, to steal browser cookies
+Info
+, to steal system information
+F_log
+, to steal browser credentials
+Upload
+, to upload files
+shell
+, to run shell commands
+“The CRESCENTHARVEST campaign represents the latest chapter in a decade-long pattern of suspected nation-state cyber espionage operations targeting journalists, activists, researchers, and diaspora communities globally,” Acronis said. “Much of what we observed in CRESCENTHARVEST reflects well-established tradecraft: LNK-based initial access, DLL side-loading through signed binaries, credential harvesting and social engineering aligned to current events.”
+The disclosure comes days after The New York Times
+revealed
+that Iran’s government likely tracked protesters’ locations through their phones to warn them over a text message that their “presence at illegal gatherings” had been recorded and that they were under “intelligence monitoring.”
+The move, it said, was an attempt to crack down dissent. According to a report published by Iran-focused digital rights group Holistic Resilience last week, some people who posted on social media about the protests and other political topics have had their SIM cards suspended.</p>
+
+<p>“The Islamic Republic is building a distinct model of digital control and surveillance, one that is not based on permanent isolation but on conditional and interruptible connectivity,” RaazNet
+said
+. “The central pillar of this model is the National Information Network (NIN). Unlike traditional physical infrastructure, such as roads or factories, the NIN is not a static state project. Like other digital systems, it evolves continuously alongside advances in communications technologies, undergoes regular versioning, and is expanded in response to changing technical and political requirements.”
+The move is part of a
+broader effort
+that
+combines information
+gleaned from e-government databases, surveillance cameras, as well as
+malware deployed
+via social engineering to establish remote access and monitor its citizens’ movements online in a sustained manner.</p>
+
+<p>One such tool is a lightweight modular trojan called
+2Ac2 RAT
+that’s designed for victim device control and data collection. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="citizen-lab-finds-cellebrite-tool-used-on-kenyan-activists-phone-in-police-custody"><a id="article-8"></a>Citizen Lab Finds Cellebrite Tool Used on Kenyan Activist’s Phone in Police Custody</h2>
+
+<p>New research from the Citizen Lab has found signs that Kenyan authorities used a commercial
+forensic extraction tool
+manufactured by Israeli company Cellebrite to break into a prominent dissident’s phone, making it the latest case of abuse of the technology targeting civil society. The interdisciplinary research unit at the University of Toronto’s Munk School of Global Affairs &amp; Public Policy
+said
+it found the indicators on a personal phone belonging to Boniface Mwangi, a Kenyan pro-democracy activist who has
+announced plans
+to run for president in 2027. Specifically, it has emerged that Cellebrite’s forensic extraction tools were used on his Samsung phone while it was in police custody following his arrest in July 2025. The phone was returned to him nearly two months later, in September, at which point Mwangi found that the phone was no longer password-protected and could be unlocked without requiring a password.</p>
+
+<p>It’s been assessed with high confidence that Cellebrite’s technology was used on the phone on or around July 20 and July 21, 2025. “The use of Cellebrite could have enabled the full extraction of all materials from Mwangi’s device, including messages, private materials, personal files, financial information, passwords, and other sensitive information,” the Citizen Lab said. The latest findings follow a
+separate report
+released last month, in which the researchers said officials in Jordan likely
+used Cellebrite
+to extract information from the mobile phones of activists and human rights defenders who had been critical of Israel and spoke out in support of Palestinians in Gaza. The devices were seized by Jordanian authorities during detentions, arrests, and interrogations, and subsequently returned to them.</p>
+
+<p>The documented incidents took place between late 2023 and mid-2025, the Citizen Lab said. In response to the findings, a spokesperson for Cellebrite
+told
+The Guardian that the company’s technology is used to “access private data only in accordance with legal due process or with appropriate consent to aid investigations legally after an event has occurred.”
+The two cases add to a
+growing body
+of
+evidence
+documenting the misuse of Cellebrite technology by government clients. It also reflects a broader ecosystem of surveillance abuses by various governments around the world to enable highly-targeted surveillance using mercenary spyware like Pegasus and Predator. Predator Spyware Targets Angolan Journalist
+The development also coincides with another report from Amnesty International, which discovered evidence that the iPhone belonging to Teixeira Cândido, an Angolan journalist and press freedom advocate, was successfully targeted by Intellexa’s
+Predator
+spyware in May 2024 after he opened an infection link received via WhatsApp.</p>
+
+<p>The iPhone was running iOS 16.2, an outdated version of the operating system with known security issues. It’s currently not known what exploit was used to trigger the infection. In multiple reports published last year, Recorded Future
+revealed
+that it has observed suspected Predator operations in Angola
+dating back to 2024
+. “This is the first forensically confirmed case of the Predator spyware being used to target civil society in Angola,” the international human rights organization
+said
+.</p>
+
+<p>“Once the spyware was installed, the attacker could gain unrestricted access to Teixeira Cândido’s iPhone.”
+“The Predator spyware infection appears to have lasted less than one day, with the infection being removed when Teixeira Cândido’s phone was restarted in the evening of 4 May 2024. From that time until 16 June 2024, the attackers made 11 new attempts to re-infect the device by sending him new malicious Predator infection links. All of these subsequent attack attempts appear to have failed, likely due to the links simply not being opened.”
+According to an analysis published by French offensive security company Reverse Society, Predator is a
+commercial spyware product
+“built for reliable, long-term deployment” and allows operators to selectively enable or disable modules based on target activity, granting them real-time control over surveillance efforts. Predator has also been found to incorporate various undocumented anti-analysis mechanisms, including a crash reporter monitoring system for anti-forensics and SpringBoard hooking to suppress recording indicators from victims when the microphone or camera is activated, illustrating the sophistication of the spyware.</p>
+
+<p>On top of that, it has explicit checks to avoid running in U.S. and Israeli locales. “These findings demonstrate that Predator’s operators have granular visibility into failed deployments, […] enabling them to adapt their approaches for specific targets,” Jamf Threat Labs researchers Shen Yuan and Nir Avraham
+said
+. “This error code system transforms failed deployments from black boxes into diagnostic events.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="grandstream-gxp1600-voip-phones-exposed-to-unauthenticated-remote-code-execution"><a id="article-9"></a>Grandstream GXP1600 VoIP Phones Exposed to Unauthenticated Remote Code Execution</h2>
+
+<p>Cybersecurity researchers have disclosed a critical security flaw in the Grandstream GXP1600 series of VoIP phones that could allow an attacker to seize control of susceptible devices. The vulnerability, tracked as
+CVE-2026-2329
+, carries a CVSS score of 9.3 out of a maximum of 10.0. It has been described as a case of unauthenticated stack-based buffer overflow that could result in remote code execution. “A remote attacker can leverage CVE-2026-2329 to achieve unauthenticated remote code execution (RCE) with root privileges on a target device,” Rapid7 researcher Stephen Fewer, who discovered and reported the bug on January 6, 2026,
+said
+.</p>
+
+<p>According to the cybersecurity company, the issue is rooted in the device’s web-based API service (“/cgi-bin/api.values.get”) and is accessible in a default configuration without requiring authentication. This endpoint is designed to fetch one or more configuration values from the phone, such as the firmware version number or the model, through a colon-delimited string in the “request” parameter (e.g., “request=68:phone_model”), which is then parsed to extract each identifier and append it to a 64 byte buffer on the stack. “When appending another character to the small 64 byte buffer, no length check is performed to ensure that no more than 63 characters (plus the appended null terminator) are ever written to this buffer,” Fewer explained. “Therefore, an attacker-controlled ‘request’ parameter can write past the bounds of the small 64 byte buffer on the stack, overflowing into adjacent stack memory.”
+This means that a malicious colon-delimited “request” parameter sent as part of an HTTP request to the “/cgi-bin/api.values.get” endpoint can be used to trigger a stack-based buffer overflow, allowing the threat actors to corrupt the stack contents and ultimately achieve remote code execution on the underlying operating system.</p>
+
+<p>The vulnerability affects GXP1610, GXP1615, GXP1620, GXP1625, GXP1628, and GXP1630 models. It has been addressed as part of a
+firmware update
+(
+version 1.0.7.81
+) released late last month. In a
+Metasploit exploit module
+developed by Rapid7, it has been demonstrated that the vulnerability could be exploited to gain root privileges on a vulnerable device and chain it with a post-exploitation component to extract credentials stored on a compromised device. Furthermore, the remote code execution capabilities can be weaponized to reconfigure the target device to use a malicious Session Initiation Protocol (SIP) proxy, effectively enabling the attacker to intercept phone calls to and from the device and eavesdrop on VoIP conversations.</p>
+
+<p>A
+SIP proxy
+is an intermediary server in VoIP networks to establish and manage voice/video calls between endpoints. “This isn’t a one-click exploit with fireworks and a victory banner,” Rapid7’s Douglas McKee
+said
+. “But the underlying vulnerability lowers the barrier in a way that should concern anyone operating these devices in exposed or lightly-segmented environments.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-flaws-found-in-four-vs-code-extensions-with-over-125-million-installs"><a id="article-10"></a>Critical Flaws Found in Four VS Code Extensions with Over 125 Million Installs</h2>
+
+<p>Cybersecurity researchers have disclosed multiple security vulnerabilities in four popular Microsoft Visual Studio Code (VS Code) extensions that, if successfully exploited, could allow threat actors to steal local files and execute code remotely. The extensions, which have been collectively installed more than 125 million times, are Live Server, Code Runner, Markdown Preview Enhanced, and Microsoft Live Preview. “Our research demonstrates that a hacker needs only one malicious extension, or a single vulnerability within one extension, to perform lateral movement and compromise entire organizations,” OX Security researchers Moshe Siman Tov Bustan and Nir Zadok
+said
+in a report shared with The Hacker News. Details of the vulnerabilities are as follows -
+CVE-2025-65717
+(CVSS score: 9.1) - A vulnerability in Live Server that allows attackers to exfiltrate local files, tricking a developer into visiting a malicious website when the extension is running, causing JavaScript embedded in the page to crawl and extract files from the local development HTTP server that runs at localhost:5500, and transmit them to a domain under their control.</p>
+
+<p>(Remains unpatched)
+CVE-2025-65716
+(CVSS score: 8.8) - A vulnerability in Markdown Preview Enhanced that allows attackers to execute arbitrary JavaScript code by uploading a crafted markdown (.md) file, allowing local port enumeration and exfiltration to a domain under their control. (Remains unpatched)
+CVE-2025-65715
+(CVSS score: 7.8) - A vulnerability in Code Runner that allows attackers to execute arbitrary code by convincing a user to alter the “settings.json” file through phishing or social engineering. (Remains unpatched)
+A
+vulnerability in Microsoft Live Preview
+allows attackers to access sensitive files on a developer’s machine by tricking a victim into visiting a malicious website when the extension is running, which then enables specially crafted JavaScript requests targeting the localhost to enumerate and exfiltrate sensitive files. (No CVE, Fixed silently by Microsoft in
+version 0.4.16
+released in September 2025)
+To secure the development environment, it’s essential to avoid applying untrusted configurations, disable or uninstall non-essential extensions, harden the local network behind a firewall to restrict inbound and outbound connections, periodically update extensions, and turn off localhost-based services when not in use.</p>
+
+<p>“Poorly written extensions, overly permissive extensions, or malicious ones can execute code, modify files, and allow attackers to take over a machine and exfiltrate information,” OX Security said. “Keeping vulnerable extensions installed on a machine is an immediate threat to an organization’s security posture: it may take only one click, or a downloaded repository, to compromise everything.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="cybersecurity-tech-predictions-for-2026-operating-in-a-world-of-permanent-instability"><a id="article-11"></a>Cybersecurity Tech Predictions for 2026: Operating in a World of Permanent Instability</h2>
+
+<dl>
+  <dt>In 2025, navigating the digital seas still felt like a matter of direction. Organizations charted routes, watched the horizon, and adjusted course to reach safe harbors of resilience, trust, and compliance. In 2026, the seas are no longer calm between storms. Cybersecurity</dt>
+  <dt>now unfolds in a state of</dt>
+  <dt>continuous atmospheric instability</dt>
+  <dd>AI-driven threats that adapt in real time, expanding digital ecosystems, fragile trust relationships, persistent regulatory pressure, and accelerating technological change.</dd>
+</dl>
+
+<p>This is not turbulence on the way to stability; it
+is
+the climate. In this environment, cybersecurity technologies are no longer merely navigational aids. They are
+structural reinforcements
+. They determine whether an organization endures volatility or learns to function normally within it.</p>
+
+<dl>
+  <dt>That is why security investments in 2026 are increasingly made not for coverage, but for</dt>
+  <dt>operational continuity</dt>
+  <dd>sustained operations, decision-grade visibility and controlled adaptation as conditions shift. This article is less about what’s “next-gen” and more about what becomes non-negotiable when conditions keep changing
+. The shifts that will steer cybersecurity priorities and determine which investments hold when conditions turn. Regulation and geopolitics become architectural constraints
+Regulation is no longer something security reacts to.</dd>
+</dl>
+
+<p>It is something systems are built to withstand continuously. Cybersecurity is now firmly anchored at the intersection of technology, regulation and geopolitics. Privacy laws,
+digital sovereignty
+requirements, AI governance frameworks and sector-specific regulations no longer sit on the side as periodic compliance work; they operate as
+permanent design parameters
+, shaping where data can live, how it can be processed and what security controls are acceptable by default. At the same time,
+geopolitical tensions
+increasingly translate into cyber pressure: supply-chain exposure, jurisdictional risk, sanctions regimes and state-aligned cyber activity all shape the threat landscape as much as vulnerabilities do.</p>
+
+<p>As a result, cybersecurity strategies must integrate regulatory and geopolitical considerations directly into architecture and technology decisions, rather than treating them as parallel governance concerns. Changing the conditions: Making the attack surface unreliable
+Traditional cybersecurity often tried to forecast specific events: the next exploit, the next malware campaign, the next breach. But in an environment where signals multiply, timelines compress and AI blurs intent and scale, those forecasts decay quickly. The problem isn’t that prediction is useless.</p>
+
+<p>It’s that it expires faster than defenders can operationalize it. So the advantage shifts. Instead of trying to guess the next move, the stronger strategy is to
+shape the conditions
+attackers need to succeed. Attackers depend on stability: time to map systems, test assumptions, gather intelligence and establish persistence.</p>
+
+<p>The modern counter-move is to make that intelligence
+unreliable and short-lived
+. By using tools like Automated Moving Target Defense (
+AMTD
+) to dynamically alter system and network parameters,
+Advanced Cyber Deception
+that diverts adversaries away from critical systems, or Continuous Threat Exposure Management (
+CTEM
+) to map exposure and reduce exploitability, defenders shrink the window in which an intrusion chain can be assembled. This is where security becomes less about “detect and respond” and more about
+deny, deceive and disrupt
+before an attacker’s plan becomes momentum. The goal is simple: shorten the shelf-life of attacker knowledge until planning becomes fragile, persistence becomes expensive and “low-and-slow” stops paying off.</p>
+
+<dl>
+  <dt>AI becomes the acceleration layer of the cyber control plane</dt>
+  <dt>AI is no longer a feature layered on top of security tools. It is increasingly infused inside them across prevention, detection, response, posture management and governance. The practical shift is not “more alerts,” but</dt>
+  <dt>less friction</dt>
+  <dd>faster correlation, better prioritization and shorter paths from raw telemetry to usable decisions. The SOC becomes less of an alert factory and more of a
+decision engine
+, with AI accelerating triage, enrichment, correlation and the translation of scattered signals into a coherent narrative.</dd>
+  <dt>Investigation time compresses because context arrives faster and response becomes more orchestrated because routine steps can be drafted, sequenced and executed with far less manual stitching. But the bigger story is what happens outside the SOC. AI is increasingly used to improve the</dt>
+  <dt>efficiency and quality of cybersecurity controls</dt>
+  <dd>asset and data discovery become faster and more accurate; posture management becomes more continuous and less audit-driven; policy and governance work becomes easier to standardize and maintain. Identity operations, in particular, benefit from AI-assisted workflows that improve provisioning hygiene, strengthen recertification by focusing reviews on meaningful risk and reduce audit burden by accelerating evidence collection and anomaly detection.</dd>
+</dl>
+
+<p>This is the shift that matters. Security programs stop spending energy assembling complexity and start spending it
+steering outcomes
+. Security becomes a lifecycle discipline across digital ecosystems
+Most breaches do not start with a vulnerability. They start with an architectural decision made months earlier.</p>
+
+<dl>
+  <dt>Cloud platforms, SaaS ecosystems, APIs, identity federation and AI services continue to expand digital environments at a faster rate than traditional security models can absorb. The key shift is not merely that the attack surface grows, but that</dt>
+  <dt>interconnectedness changes what “risk” means</dt>
+  <dt>. Security is therefore becoming a</dt>
+  <dt>lifecycle discipline</dt>
+  <dd>integrated throughout the entire system lifecycle, not just development. It starts at architecture and procurement, continues through integration and configuration, extends into operations and change management and is proven during incidents and recovery.</dd>
+</dl>
+
+<p>In practice, that means the lifecycle now includes what modern ecosystems are actually made of:
+secure-by-design delivery through the SDLC
+and
+digital supply chain security
+to manage the risks inherited from third-party software, cloud services and dependencies. Leading organizations move away from security models focused on isolated components or single phases. Instead, security is increasingly designed as an
+end-to-end capability
+that evolves with the system, rather than trying to bolt on controls after the fact. Zero Trust as a continuous decisioning and adaptive control
+In a world where the perimeter dissolved long ago, Zero Trust stops being a strategy and becomes the default infrastructure.</p>
+
+<dl>
+  <dt>Especially as</dt>
+  <dt>trust itself becomes dynamic</dt>
+  <dt>. The key shift is that access is no longer treated as a one-time gate. Zero Trust increasingly means</dt>
+  <dt>continuous decisioning</dt>
+  <dd>permission is evaluated repeatedly, not granted once. Identity, device posture, session risk, behavior and context become live inputs into decisions that can tighten, step up, or revoke access as conditions change.</dd>
+</dl>
+
+<p>With identity designed as a
+dynamic control plane
+, Zero Trust expands beyond users to include
+non-human identities
+such as service accounts, workload identities, API tokens and OAuth grants. This is why identity threat detection and response becomes essential: detecting token abuse, suspicious session behavior and privilege path anomalies early, then containing them fast. Continuous authorization makes stolen credentials less durable, limits how far compromise can travel and reduces the Time-To-Detection dependency by increasing the
+Time-To-Usefulness friction
+for attackers. Segmentation then does the other half of the job by keeping local compromise from turning into systemic spread by containing the
+blast radius
+by design.</p>
+
+<dl>
+  <dt>The most mature Zero Trust programs stop measuring success by deployment milestones and start measuring it by</dt>
+  <dt>operational outcomes</dt>
+  <dd>how quickly access can be constrained when risk rises, how fast sessions can be invalidated, how small the blast radius remains when an identity is compromised and how reliably sensitive actions require stronger proof than routine access. Data security and privacy engineering unlock scalable AI
+Data is the foundation of digital value and simultaneously the fastest path to regulatory, ethical and reputational damage. That tension is why
+data security and privacy engineering are becoming non-negotiable foundations,
+not governance add-ons. When organizations can’t answer basic questions such as what data exists, where it lives, who can access it, what is it used for and how it moves, every initiative built on data becomes fragile.</dd>
+</dl>
+
+<p>This is what ultimately determines whether AI projects can scale without turning into a liability. Data security programs must evolve from “protect what we can see” to
+govern how the business actually uses data
+. That means building durable foundations around visibility (discovery, classification, lineage), ownership, enforceable access and retention rules and protections that follow data across cloud, SaaS, platforms and partners. A practical way to build this capability is through a
+Data Security Maturity Model
+to identify gaps across the core building blocks, prioritize what to strengthen first and initiate a maturity journey toward consistent, measurable and continuous data protection throughout its lifecycle.</p>
+
+<p>Privacy engineering becomes also the discipline that makes those foundations usable and scalable. It shifts privacy from documentation to
+design through purpose-based access
+, minimization by default and
+privacy-by-design
+patterns embedded in delivery teams. The result is data that can move quickly
+with guardrails
+, without turning growth into hidden liability. Post-Quantum Risk makes crypto agility a design requirement
+Quantum computing is still emerging, but its security impact is already tangible because adversaries plan around time.</p>
+
+<p>“Harvest now, decrypt later”
+turns encrypted traffic collected now into future leverage. “Trust now, forge later”
+carries the same logic into trust systems: certificates, signed code and long-lived signatures that anchor security decisions today could become vulnerable later. Governments have understood this timing problem and started to
+put dates on it,
+with first milestones as early as 2026 for EU governments and critical infrastructure operators to develop national post-quantum roadmaps and cryptographic inventories. Even if the rules start in the public sector, they travel fast through the supply chain and into the private sector.</p>
+
+<p>This is why crypto agility becomes a
+design requirement
+rather than a future upgrade project. Cryptography is not a single control in one place. It is embedded across protocols, applications, identity systems, certificates, hardware, third-party products and cloud services. If an organization cannot rapidly locate where cryptography lives, understand what it protects and change it without breaking operations, it is not “waiting for PQC.” It is accumulating
+cryptographic debt
+under a regulatory clock.</p>
+
+<p>Post-quantum preparedness therefore becomes less about picking replacement algorithms and more about building the ability to evolve: cryptographic asset visibility, disciplined key and certificate lifecycle management, upgradable trust anchors where possible and architectures that can rotate algorithms and parameters without disruption. Cryptographic risk is no longer a future problem. It is a
+present design decision
+with long-term consequences. Taken together, these shifts change what “good” looks like.</p>
+
+<p>Security stops being judged by how much it covers and starts being judged by what it enables: resilience, clarity and controlled adaptation when conditions refuse to cooperate. The strongest security programs are not the most rigid ones. They are the ones that adapt without losing control. The digital environment does not promise stability, but it does reward
+preparation
+.</p>
+
+<p>Organizations that integrate security across the system lifecycle, treat data as a strategic asset, engineer for cryptographic evolution and reduce human friction are better positioned to
+operate with confidence
+in a world that keeps shifting. Turbulence is no longer exceptional. It’s the baseline. The organizations that succeed are the ones designed to operate anyway.</p>
+
+<p>Read
+Digital Security Magazine – 18th Edition
+. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="dell-recoverpoint-for-vms-zero-day-cve-2026-22769-exploited-since-mid-2024"><a id="article-12"></a>Dell RecoverPoint for VMs Zero-Day CVE-2026-22769 Exploited Since Mid-2024</h2>
+
+<p>A maximum severity security vulnerability in Dell RecoverPoint for Virtual Machines has been exploited as a zero-day by a suspected China-nexus threat cluster dubbed
+UNC6201
+since mid-2024, according to a
+new report
+from Google Mandiant and Google Threat Intelligence Group (GTIG). The activity involves the exploitation of CVE-2026-22769 (CVSS score: 10.0), a case of hard-coded credentials affecting versions prior to 6.0.3.1 HF1. Other products, including RecoverPoint Classic, are not vulnerable to the flaw. “This is considered critical as an unauthenticated remote attacker with knowledge of the hardcoded credential could potentially exploit this vulnerability, leading to unauthorized access to the underlying operating system and root-level persistence,” Dell said in a bulletin released Tuesday.</p>
+
+<p>The issue impacts the following products -
+RecoverPoint for Virtual Machines Version 5.3 SP4 P1 - Migrate from RecoverPoint for Virtual Machines 5.3 SP4 P1 to 6.0 SP3, and then upgrade to 6.0.3.1 HF1
+RecoverPoint for Virtual Machines Versions 6.0, 6.0 SP1, 6.0 SP1 P1, 6.0 SP1 P2, 6.0 SP2, 6.0 SP2 P1, 6.0 SP3, and 6.0 SP3 P1 - Upgrade to 6.0.3.1 HF1
+RecoverPoint for Virtual Machines Versions 5.3 SP4, 5.3 SP3, 5.3 SP2, and earlier - Upgrade to version 5.3 SP4 P1 or a 6.x version, and then apply the necessary remediation
+“Dell recommends that RecoverPoint for Virtual Machines be deployed within a trusted, access-controlled internal network protected by appropriate firewalls and network segmentation,” it
+noted
+. “RecoverPoint for Virtual Machines is not intended for use on untrusted or public networks.”
+“We are aware of less than a dozen impacted organizations, but because the full scale of this campaign is unknown, we recommend that organizations previously targeted by BRICKSTORM look out for GRIMBOLT in their environments,” Rich Reece, Manager, Mandiant Consulting at Google Cloud, told The Hacker News via email. Mandiant said it discovered CVE-2026-22769 earlier this year while investigating multiple Dell RecoverPoint for Virtual Machines within an unspecified victim’s environment. “The actor is likely still active in unpatched and remediated environments, and because exploitation has been occurring since mid-2024, they have had significant time to establish persistence and carry out long-term espionage,” Reece said.</p>
+
+<p>“We anticipate additional companies will find active or historic compromises as they begin hunting using the new IOCs/YARA rules we published.”
+Per Google, the hard-coded credential relates to an “admin” user for the Apache Tomcat Manager instance that could be used authenticate to the Dell RecoverPoint Tomcat Manager, upload a web shell named SLAYSTYLE via the “/manager/text/deploy” endpoint, and execute commands as root on the appliance to drop the BRICKSTORM backdoor and its newer version dubbed GRIMBOLT. “This is a C# backdoor compiled using native ahead-of-time (AOT) compilation, making it harder to reverse engineer,” Mandiant’s Charles Carmakal
+added
+. Google told The Hacker News that the activity has targeted organizations across North America, with GRIMBOLT incorporating features to better evade detection and minimize forensic traces on infected hosts. “GRIMBOLT is even better at blending in with the system’s own native files,” it added.</p>
+
+<p>UNC6201 is also assessed to share overlaps with
+UNC5221
+, another China-nexus espionage cluster known for its
+exploitation of virtualization technologies and Ivanti zero-day vulnerabilities
+to
+distribute
+web shells and malware families like BEEFLUSH, BRICKSTORM, and ZIPLINE. Despite the tactical similarities, the two clusters are assessed to be distinct at this stage. It’s worth noting that the use of BRICKSTORM has also been linked by CrowdStrike to a third China-aligned adversary tracked as
+Warp Panda
+in attacks aimed at U.S. entities.</p>
+
+<p>A noteworthy aspect of the latest set of attacks revolves around UNC6201’s reliance on temporary virtual network interfaces – referred to as “Ghost NICs” – to pivot from compromised virtual machines into internal or SaaS environments, and then delete those NICs to cover up the tracks in an effort to impede investigation efforts. “Consistent with the earlier BRICKSTORM campaign, UNC6201 continues to target appliances that typically lack traditional endpoint detection and response (EDR) agents to remain undetected for long periods,” Google said. Exactly how initial access is obtained remains unclear, but like UNC5221, it’s also known to target edge appliances to break into target networks. An analysis of the compromised VMware vCenter appliances has also uncovered
+iptable commands
+executed by means of the web shell to perform the following set of actions -
+Monitor incoming traffic on port 443 for a specific HEX string
+Add the source IP address of that traffic to a list and if the IP address is on the list and connects to port 10443, the connection is ACCEPTED
+Silently redirect subsequent traffic to port 443 to port 10443 for the next 300 seconds (five minutes) if the IP is on the approved list
+Furthermore, the threat actor has been found replacing old BRICKSTORM binaries with GRIMBOLT in September 2025.</p>
+
+<p>While GRIMBOLT also provides a remote shell capability and uses the same command-and-control (C2) as BRICKSTORM, it’s not known what prompted the shift to the harder-to-detect malware, and whether it was a planned transition or a response to public disclosures about BRICKSTORM. “Nation-state threat actors continue targeting systems that don’t commonly support EDR solutions, which makes it very hard for victim organizations to know they are compromised and significantly prolongs intrusion dwell times,” Carmakal said. The disclosure comes as Dragos
+warned
+of attacks mounted by Chinese groups like
+Volt Typhoon
+(aka
+Voltzite
+) to compromise Sierra Wireless Airlink gateways located in electric and oil and gas sectors, followed by pivoting to engineering workstations to dump config and alarm data. The activity, according to the cybersecurity company, took place in July 2025.</p>
+
+<p>The hacking crew is said to acquire initial access from Sylvanite, which rapidly weaponizes edge device vulnerabilities before patches are applied and hands off access for deeper operational technology (OT) intrusions. “Voltzite moved beyond data exfiltration to direct manipulation of engineering workstations investigating what would trigger processes to stop,” Dragos
+said
+. “ This represents the removal of the last practical barrier between having access and causing physical consequences. Cellular gateways create unauthorized pathways into OT networks bypassing traditional security controls.”
+Update
+The U.S.</p>
+
+<p>Cybersecurity and Infrastructure Security Agency (CISA), on February 18, 2026,
+added
+CVE-2026-22769 to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the patch by February 21, 2026. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

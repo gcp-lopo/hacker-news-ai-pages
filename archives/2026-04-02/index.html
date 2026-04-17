@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-02 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">CERT-UA Impersonation Campaign Spread AGEWHEEZE Malware to 1 Million Emails</a></li>
+      
+        <li><a href="#article-2">Microsoft Warns of WhatsApp-Delivered VBS Malware Hijacking Windows via UAC Bypass</a></li>
+      
+        <li><a href="#article-3">Block the Prompt, Not the Work: The End of "Doctor No"</a></li>
+      
+        <li><a href="#article-4">Casbaneiro Phishing Targets Latin America and Europe Using Dynamic PDF Lures</a></li>
+      
+        <li><a href="#article-5">New Chrome Zero-Day CVE-2026-5281 Under Active Exploitation — Patch Released</a></li>
+      
+        <li><a href="#article-6">3 Reasons Attackers Are Using Your Trusted Tools Against You (And Why You Don’t See It Coming)</a></li>
+      
+        <li><a href="#article-7">Google Attributes Axios npm Supply Chain Attack to North Korean Group UNC1069</a></li>
+      
+        <li><a href="#article-8">Claude Code Source Leaked via npm Packaging Error, Anthropic Confirms</a></li>
+      
+        <li><a href="#article-9">Android Developer Verification Rollout Begins Ahead of September Enforcement</a></li>
+      
+        <li><a href="#article-10">TrueConf Zero-Day Exploited in Attacks on Southeast Asian Government Networks</a></li>
+      
+        <li><a href="#article-11">Vertex AI Vulnerability Exposes Google Cloud Data and Private Artifacts</a></li>
+      
+        <li><a href="#article-12">The AI Arms Race – Why Unified Exposure Management Is Becoming a Boardroom Priority</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-04-02-ai创业新闻">2026-04-02 AI创业新闻</h1>
+
+<h2 id="cert-ua-impersonation-campaign-spread-agewheeze-malware-to-1-million-emails"><a id="article-1"></a>CERT-UA Impersonation Campaign Spread AGEWHEEZE Malware to 1 Million Emails</h2>
+
+<p>The Computer Emergency Response Team of Ukraine (CERT-UA) has
+disclosed
+details of a new phishing campaign in which the cybersecurity agency itself was impersonated to distribute a remote administration tool known as AGEWHEEZE. As part of the attacks, the threat actors, tracked as
+UAC-0255
+, sent emails on March 26 and 27, 2026, posing as CERT-UA to distribute a password-protected ZIP archive hosted on Files.fm and urged recipients to install the “specialized software.”
+The targets of the campaign included state organizations, medical centers, security companies, educational institutions, financial institutions, and software development companies. Some of the emails were sent from the email address “incidents@cert-ua[.]tech.”
+The ZIP file (“CERT_UA_protection_tool.zip”) is designed to download malware packaged as security software from the agency. The malware, per CERT-UA, is a remote access trojan codenamed AGEWHEEZE.</p>
+
+<p>A Go-based malware, AGEWHEEZE communicates with an external server (“54.36.237[.]92”) over WebSockets and supports a wide range of commands to execute commands, perform file operations, modify the clipboard, emulate mouse and keyboard, take screenshots, and manage processes and services. It also creates persistence by using a scheduled task, modifying the Windows Registry, or adding itself to the Startup directory. The attack is assessed to have been largely unsuccessful. “No more than a few infected personal devices belonging to employees of educational institutions of various forms of ownership were identified,” the agency said.</p>
+
+<p>“The team’s specialists provided the necessary methodological and practical assistance.”
+An analysis of the bogus website “cert-ua[.]tech” has revealed that it was likely generated with assistance from artificial intelligence (AI) tools, with the HTML source code also including a comment: “С Любовью, КИБЕР СЕРП,” meaning “With Love, CYBER SERP.”
+In posts on Telegram, Cyber Serp claims that they are “cyber-underground operatives from Ukraine.” The Telegram channel was created in November 2025 and has more than 700 subscribers. The threat actor also said the phishing emails were sent to 1 million ukr[.]net mailboxes as part of the campaign, and that over 200,000 devices have been compromised. “We are not bandits – the average Ukrainian citizen will never suffer as a result of our actions,” it
+said
+in a post. Last month, Cyber Serp
+took responsibility
+for an alleged breach of Ukrainian cybersecurity company Cipher, stating it obtained a complete dump of the servers, including a client database and source code for their line of CIPS products, among others.</p>
+
+<p>In a statement on its website, Cipher
+acknowledged
+that attackers compromised the credentials of an employee at one of its technology companies but said its infrastructure was operating normally. The infected user had access to a single project, which did not contain sensitive data, it added. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-warns-of-whatsapp-delivered-vbs-malware-hijacking-windows-via-uac-bypass"><a id="article-2"></a>Microsoft Warns of WhatsApp-Delivered VBS Malware Hijacking Windows via UAC Bypass</h2>
+
+<p>Microsoft is calling attention to a new campaign that has leveraged WhatsApp messages to distribute malicious Visual Basic Script (VBS) files. The activity, beginning in late February 2026, leverages these scripts to initiate a multi-stage infection chain for establishing persistence and enabling remote access. It’s currently not known what lures the threat actors use to trick users into executing the scripts. “The campaign relies on a combination of social engineering and living-off-the-land techniques,” the Microsoft Defender Security Research Team
+said
+.</p>
+
+<p>“It uses renamed Windows utilities to blend into normal system activity, retrieves payloads from trusted cloud services such as AWS, Tencent Cloud, and Backblaze B2, and installs malicious Microsoft Installer (MSI) packages to maintain control of the system.”
+The use of legitimate tools and trusted platforms is a deadly combination, as it allows threat actors to blend in normal network activity and increase the likelihood of success of their attacks. The activity begins with the attackers distributing malicious VBS files via WhatsApp messages that, when executed, create hidden folders in “C:\ProgramData” and drop renamed versions of legitimate Windows utilities like “curl.exe” (renamed as “netapi.dll”) and “bitsadmin.exe” (renamed as “sc.exe”). Upon gaining an initial foothold, the attackers aim to establish persistence and escalate privileges, ultimately installing malicious MSI packages on victim systems. This is achieved by downloading auxiliary VBS files hosted on AWS S3, Tencent Cloud, and Backblaze B2 using the renamed binaries.</p>
+
+<p>“Once the secondary payloads are in place, the malware begins tampering with User Account Control (UAC) settings to weaken system defenses,” Redmond said. “It continuously attempts to launch cmd.exe with elevated privileges, retrying until UAC elevation succeeds or the process is forcibly terminated, modifying registry entries under HKLM\Software\Microsoft\Win, and embedding persistence mechanisms to ensure the infection survives system reboots.”
+These actions allow the threat actors to gain elevated privileges without user interaction via a combination of Registry manipulation with UAC bypass techniques, and ultimately deploy unsigned MSI installers. This includes legitimate tools like AnyDesk that provide attackers with persistent remote access, enabling the attackers to exfiltrate data or deploy more malware. “This campaign demonstrates a sophisticated infection chain combining social engineering (WhatsApp delivery), stealth techniques (renamed legitimate tools, hidden attributes), and cloud-based payload hosting,” Microsoft said.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="block-the-prompt-not-the-work-the-end-of-doctor-no"><a id="article-3"></a>Block the Prompt, Not the Work: The End of “Doctor No”</h2>
+
+<p>There is a character that keeps appearing in enterprise security departments, and most CISOs know exactly who that is. It doesn’t build. It doesn’t enable. Its entire function is to say “No.”
+No to ChatGPT.</p>
+
+<p>No to DeepSeek. No to the file-sharing tool the product team swears by. For years, this looked like security. But in 2026, “Doctor No” is no longer just a management headache – it is a systemic security liability.</p>
+
+<p>Because when you block the work, users don’t stop. They reroute. The Tax-Evaders of Productivity
+When security feels like a tax on efficiency, employees find a way to “evade” it. The industry has long relied on Endpoint Agents to enforce control.</p>
+
+<p>But as any CISO knows, these agents come with a heavy “tax.” They hook into the OS kernel, they’re invasive, they notoriously break during macOS updates, and they make high-performance machines run hot. The result? Users find workarounds. Files move into personal Gmail.</p>
+
+<p>Prompts are pasted into unmanaged AI tools. This is the Workaround Economy – a shadow infrastructure that exists not despite your security, but because of it. And the defining characteristic of this economy is that it operates with zero organizational visibility. The Illusion of Control: The “Theatrical” Stack
+Most teams still default to blocking because their legacy tools were never built to do much else.</p>
+
+<p>It’s not that these capabilities don’t exist; it’s that they are architecturally untenable for modern web work. The SSL Inspection Trap:
+Firewalls, Secure Web Gateways (SWG), and even many modern
+SASE/SSE solutions
+technically attempt to “see” encrypted traffic through SSL decryption. But in a world of certificate pinning and complex web app “plumbing,” this brute-force approach is a high-risk trade-off. Because these tools sit
+between
+the user and the web, they frequently break the very tools – like Slack, WhatsApp, or high-performance GenAI interfaces – that the business relies on.</p>
+
+<p>For a CISO, the choice is binary and brutal: turn on inspection and break the user experience, or turn it off and remain blind. The Visibility Gap: EDR sees machine-level processes, and legacy DLP scans files at rest. But for most organizations, the live, streaming browser session remains a black box. While some newer ‘suite’ extensions attempt to peek inside, they only work on managed devices where the IT team has total control.</p>
+
+<p>Even then, they often come with a hidden cost:
+micro-latencies that make typing feel ‘laggy,’ rendering errors that break complex web app interfaces, and heavy CPU usage that turns a high-end laptop into a space heater. And even still, they remain blind to the prompt typed on a contractor’s laptop, a partner’s browser, or an unmanaged home device—the exact places where sensitive data is most likely to leak before the user even clicks ‘send’. The Extension Jungle: You can block a URL, but can you see the
+browser extension silently harvesting credentials
+? Most stacks cannot.</p>
+
+<p>Blocking a website while leaving the browser session unmonitored is Theatrical Security. It provides the appearance of a policy without the reality of protection. The Law Firm Lesson: A Case of “Ghost” Compliance
+A prominent U.S. law firm recently discovered the danger of this gap.</p>
+
+<p>When data sovereignty concerns arose around DeepSeek, they did what seemed right: they blocked the domain. IT closed the ticket. Leadership felt covered. A subsequent visibility exercise told a different story.</p>
+
+<p>Seventy percent of their users had already installed an AI “wrapper” extension. Because the extension executed entirely inside the browser session, it was invisible to the firewall and the endpoint agent. Corporate traffic was being silently routed through servers in China. No alert had fired.</p>
+
+<p>No policy had triggered. They had blocked the website. They hadn’t blocked the risk. While satisfied to find this gap, that feeling was quickly overshadowed by the particular stress of discovering that a control you’d trusted was purely theatrical.</p>
+
+<p>The compliance implications could have been dire. The New Standard: Secure the Session, Not the Device
+The browser has become the new OS of work. Security that lives anywhere else is simply too far away from the “Point of Risk.”
+The standard in 2026 is moving away from invasive agents and toward Session-Level Governance. The goal is a toolset that provides surgical control – governing the data, not the destination.</p>
+
+<dl>
+  <dt>This requires a standard of security that can:</dt>
+  <dt>Execute Prompt-Level DLP</dt>
+  <dd>Identifying and redacting sensitive code or PII in real-time, within the buffer, before the “Send” button is ever clicked. Govern the Extension Layer: Identifying and risk-scoring the “silent” extensions that bypass domain blocks entirely. Enforce Agentless Controls: Providing clipboard and upload governance that works on any browser, on any device (including BYOD and contractors), without the “kernel-hooking” performance tax that drives users toward workarounds. From Gatekeeper to Enabler
+The role of security teams is changing.</dd>
+</dl>
+
+<p>Instead of defining themselves as “gatekeepers”, most successful security leaders are now becoming a visibility layer – one that enables the business to say “Yes” because they can finally see, and govern, what happens when people work. The question is no longer whether your users are using AI. They are. The question is whether your security stack is helping them do it safely, or simply forcing them into the shadows.</p>
+
+<p>Keep the good work. Block the bad. That is the standard now for the modern digital workplace. To learn more about how to govern GenAI use – with prompt-level visibility and real-time DLP – without blocking the productivity your teams depend on, visit:
+redaccess.io/use-case-genai/
+Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="casbaneiro-phishing-targets-latin-america-and-europe-using-dynamic-pdf-lures"><a id="article-4"></a>Casbaneiro Phishing Targets Latin America and Europe Using Dynamic PDF Lures</h2>
+
+<p>A multi-pronged phishing campaign is targeting Spanish-speaking users in organizations across Latin America and Europe to deliver Windows banking trojans like
+Casbaneiro
+(aka Metamorfo) via another malware called
+Horabot
+. The activity has been attributed to a Brazilian cybercrime threat actor tracked as
+Augmented Marauder and Water Saci
+. The e-crime group was
+first documented
+by Trend Micro in October 2025. “This threat group employs a wider-ranging attack model focused on a bespoke delivery and propagation mechanism that includes WhatsApp,
+ClickFix
+techniques, and email-centric phishing,” BlueVoyant security researchers Thomas Elkins and Joshua Green
+said
+in a technical breakdown published Tuesday.</p>
+
+<p>“It is now evident that while these Brazil-based operators heavily leverage script-based WhatsApp automation to compromise retail and consumer users in Latin America, they concurrently maintain and deploy an advanced, email-hijacking engine to penetrate enterprise perimeters there and Europe as well.”
+The starting point of the campaign is a phishing email that employs court summons-themed messages to deceive recipients into opening a password-protected PDF attachment. Clicking on an embedded link in the document directs the victim to a malicious link and initiates an automatic download of a ZIP archive, which, in turn, leads to the execution of interim HTML Application (HTA) and VBS payloads. The VBS script is designed to carry out environment and anti-analysis checks similar to those found in Horabot artifacts, including checks for Avast antivirus software, and proceeds to retrieve next-stage payloads from a remote server. Among the downloaded files are AutoIt-based loaders, each of which extracts and runs encrypted payload files with “.ia” or “.at” extensions to eventually launch two malware families: Casbaneiro (“staticdata.dll”) and Horabot (“at.dll”).</p>
+
+<p>While Casbaneiro is the primary payload, Horabot is used as a propagation mechanism for the malware. Casbaneiro’s Delphi DLL module contacts a command-and-control (C2) server to fetch a PowerShell script that employs Horabot to distribute the malware via phishing emails to harvested contacts from Microsoft Outlook. “Rather than distributing a static file or hardcoded link as seen in older Horabot campaigns, this script initiates an HTTP POST request to a remote PHP API (hxxps://tt.grupobedfs[.]com/…/gera_pdf.php), passing a randomly generated four-digit PIN,” BlueVoyant said. “The server dynamically forges a bespoke, password-protected PDF impersonating a Spanish judicial summons, which is returned to the infected host.</p>
+
+<p>The script then iterates over the filtered email list, utilizing the compromised user’s own email account to send a tailored phishing email with the newly generated PDF attached.”
+Also used in tandem is a secondary Horabot-related DLL (“at.dll”) that functions as a spam and account hijacking tool targeting Yahoo, Live, and Gmail accounts to send phishing emails via Outlook. Horabot is
+assessed
+to be put to use in attacks targeting Latin America since at least November 2020. Water Saci has a history of using WhatsApp Web as a distribution vector for disseminating banking trojans like Maverick and Casbaneiro in a worm-like manner. However, recent campaigns highlighted by Kaspersky have
+leveraged
+the ClickFix social engineering tactic to dupe users into running malicious HTA files with the end goal of deploying Casbaneiro and the Horabot spreader.</p>
+
+<p>“Taken together, the integration of ClickFix social engineering, alongside dynamic PDF generation and WhatsApp automation, demonstrates an agile adversary that is continually innovating and executing diverse attack paths to bypass modern security controls,” the researchers concluded. “This adversary is maintaining a bifurcated, multi-pronged attack infrastructure, dynamically deploying the WhatsApp-centric Maverick chain and concurrently utilizing both ClickFix and email-based Horabot attack paths.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-chrome-zero-day-cve-2026-5281-under-active-exploitation--patch-released"><a id="article-5"></a>New Chrome Zero-Day CVE-2026-5281 Under Active Exploitation — Patch Released</h2>
+
+<p>Google on Thursday
+released
+security updates for its Chrome web browser to address 21 vulnerabilities, including a zero-day flaw that it said has been exploited in the wild. The high-severity vulnerability,
+CVE-2026-5281
+(CVSS score: N/A), concerns a use-after-free bug in
+Dawn
+, an open-source and cross-platform implementation of the WebGPU standard. “Use-after-free in Dawn in Google Chrome prior to 146.0.7680.178 allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page,” according to a description of the flaw in the NIST’s National Vulnerability Database (NVD). As is customary for these alerts, Google did not provide any further details on how the shortcoming is being exploited and who may be behind the effort.</p>
+
+<p>This is typically done so as to ensure that a majority of users are updated with a fix and prevent other actors from joining the exploitation bandwagon. “Google is aware that an exploit for CVE-2026-5281 exists in the wild,” the company acknowledged. The development arrives merely after Google shipped fixes for two high-severity flaws (
+CVE-2026-3909 and CVE-2026-3910
+) that were exploited as zero-days. In February, the tech giant also addressed an actively exploited use-after-free bug in Chrome’s CSS component (
+CVE-2026-2441
+).</p>
+
+<p>In total, Google has patched a total of four actively weaponized Chrome zero-days since the start of the year. For optimal protection, users are advised to update their Chrome browser to versions 146.0.7680.177/178 for Windows and Apple macOS, and 146.0.7680.177 for Linux. To make sure the latest updates are installed, users can navigate to More &gt; Help &gt; About Google Chrome and select Relaunch. Users of other Chromium-based browsers, such as Microsoft Edge, Brave, Opera, and Vivaldi, are also advised to apply the fixes as and when they become available.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="3-reasons-attackers-are-using-your-trusted-tools-against-you-and-why-you-dont-see-it-coming"><a id="article-6"></a>3 Reasons Attackers Are Using Your Trusted Tools Against You (And Why You Don’t See It Coming)</h2>
+
+<p>For years, cybersecurity has followed a familiar model: block malware, stop the attack. Now, attackers are moving on to what’s next. Threat actors now use malware less frequently in favor of what’s already inside your environment, including abusing trusted tools, native binaries, and legitimate admin utilities to move laterally, escalate privileges, and persist without raising alarms. Most organizations fail to see this risk until after the damage is done.</p>
+
+<p>To help visualize this challenge, consider a complimentary
+Internal Attack Surface Assessment
+— a guided, low-friction way to see where trusted tools may be working against you. Now, let’s look at how this risk operates within your environment, and 3 reasons why attackers prefer using your own tools against you. 1. Most Attacks No Longer Look Like Attacks
+Threat actors prefer attacks that don’t look like attacks.</p>
+
+<p>Recent analysis of over 700,000 high-severity incidents shows a
+clear shift
+:
+84% of attacks now abuse legitimate tools to evade detection. This is the essence of Living off the Land (LOTL). Instead of dropping payloads that trigger alerts, attackers use built-in tools like PowerShell, WMIC, and Certutil — the same tools your IT team relies on every day. These actions blend into normal operations, making it extremely difficult to distinguish between legitimate use and malicious intent.</p>
+
+<p>The result is a dangerous blind spot. Security teams are no longer just looking for “bad files.” They’re trying to interpret behavior — often in real time, under pressure, and without full context. And by the time something clearly looks wrong, the attacker is already deep inside the environment. 2.</p>
+
+<p>Your Attack Surface Is Larger Than You Think — And Mostly Unmanaged
+Attackers look for unmanaged tools you already have. Consider a clean Windows 11 system. Out of the box, it includes
+hundreds of native binaries
+— many of which can be abused for LOTL attacks. These tools are trusted by default, embedded into the OS, and often required for legitimate tasks or application functionality.</p>
+
+<p>That creates some fundamental challenges. You can’t simply block them without breaking workflows. You can’t easily monitor them without generating noise. In most cases, you don’t know how broadly they’re accessible across your organization.</p>
+
+<p>Analysis shows that up to 95% of access to risky tools is unnecessary. One factor is uncontrolled access to these tools; another is allowing them to perform every function they are capable of, including functions rarely used by IT but frequently used by attackers. Every unnecessary permission becomes a potential attack path. And when attackers don’t need to introduce anything new, your defenses are already at a disadvantage.</p>
+
+<ol>
+  <li>Detection Alone Can’t Keep Up
+Detection is so strong that attackers are looking for alternatives. EDR and XDR are critical and highly effective for detecting malware and threats that stand out from normal activity. However, detection is increasingly becoming an exercise in interpretation as threat actors abuse legitimate tools to blend in.</li>
+</ol>
+
+<p>Is that PowerShell command legitimate? Is that process execution expected? Now add speed. Modern attacks, increasingly assisted by AI, move faster than teams can investigate.</p>
+
+<p>By the time suspicious behavior is confirmed, lateral movement and persistence may already be established. That’s why relying solely on detection is no longer enough. What Most Teams Lack: Internal Attack Surface Visibility
+If understanding the scope of your internal attack surface feels like something you should investigate, you’re right. But most teams lack the time or resources to map the details.</p>
+
+<p>Which tools are accessible across the organization? Where access is excessive or unnecessary? How do those access patterns translate into real attack paths? Even when the risk is understood conceptually, proving it, and prioritizing it, is difficult.</p>
+
+<p>That’s why this issue persists. From Reactive to Proactive: Start With Insight
+Closing this gap doesn’t start with adding another tool. It starts with understanding your true risk. The Bitdefender
+Complimentary Internal Attack Surface Assessment
+will provide you with a clear, data-driven view of how exposed you are due to your trusted tools, so you can clearly see the scope of your internal attack surface.</p>
+
+<p>This guided assessment focuses on identifying unnecessary access, surfacing real risk, and providing prioritized recommendations, without disrupting your users or adding operational overhead for you. See Your Environment the Way Attackers Do
+LOTL attacks are becoming the default. This means the most significant risk is what’s already in your environment, and the sooner you understand how attackers can move through your systems using trusted tools, the sooner you can reduce those pathways and prevent a successful attack. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="google-attributes-axios-npm-supply-chain-attack-to-north-korean-group-unc1069"><a id="article-7"></a>Google Attributes Axios npm Supply Chain Attack to North Korean Group UNC1069</h2>
+
+<p>Google has
+formally attributed
+the
+supply chain compromise
+of the popular Axios npm package to a financially motivated North Korean threat activity cluster tracked as
+UNC1069
+. “We have attributed the attack to a suspected North Korean threat actor we track as UNC1069,” John Hultquist, chief analyst at Google Threat Intelligence Group (GTIG), told The Hacker News in a statement. “North Korean hackers have deep experience with supply chain attacks, which they’ve historically used to steal cryptocurrency. The full breadth of this incident is still unclear, but given the popularity of the compromised package, we expect it will have far reaching impacts.”
+The development comes after
+threat actors seized control
+of the package maintainer’s npm account to push two trojanized versions 1.14.1 and 0.30.4 that introduced a malicious dependency named “plain-crypto-js” that’s used to deliver a cross-platform backdoor capable of infecting Windows, macOS, and Linux systems.</p>
+
+<p>Rather than introducing any code changes to Axios, the attack leverages a postinstall hook within the “package.json” file of the malicious dependency to achieve stealthy execution. Once the compromised Axios package is installed, npm automatically triggers the execution of malicious code in the background. Specifically, the “plain-crypto-js” package functions as a “payload delivery vehicle” for an obfuscated JavaScript dropper dubbed SILKBELL (“setup.js”), which fetches the appropriate next-stage from a remote server based on the victim’s operating system. As previously detailed by The Hacker News, the Windows execution branch delivers PowerShell malware, a C++ Mach-O binary for macOS, and a Python backdoor for Linux systems.</p>
+
+<p>The dropper also performs a cleanup to remove itself and replace the “plain-crypto-js” package’s “package.json” file with a clean version that does not have the postinstall hook. Image Source: Elastic Security Labs
+The backdoor, codenamed WAVESHAPER.V2, is assessed to be an updated version of
+WAVESHAPER
+, a C++ backdoor deployed by UNC1069 in attacks aimed at the cryptocurrency sector. The threat actor has been operational since 2018. The supply chain attack’s links to UNC1069 were first flagged by Elastic Security Labs, citing functionality overlaps.</p>
+
+<p>The three WAVESHAPER.V2 variants support four different commands, while beaconing to the command-and-control (C2) server at 60-second intervals -
+kill
+, to terminate the malware’s execution process. rundir
+, to enumerate directory listings, along with file paths, sizes, and creation/modification timestamps. runscript
+, to run AppleScript, PowerShell, or shell commands based on the operating system. peinject
+, to decode and execute arbitrary binaries.</p>
+
+<p>“WAVESHAPER.V2 is a direct evolution of WAVESHAPER, a macOS and Linux backdoor previously attributed to UNC1069,” Mandiant and GTIG said. “While the original WAVESHAPER uses a lightweight, raw binary C2 protocol and employs code packing, WAVESHAPER.V2 communicates using JSON, collects additional system information, and supports more backdoor commands.”
+“Despite these upgrades, both versions accept their C2 URL dynamically via command-line arguments, share identical C2 polling behaviors and an uncommon User-Agent string, and deploy secondary payloads to identical temporary directories (e.g., /Library/Caches/com.apple.act.mond).”
+The links to North Korea are also bolstered by the fact that the macOS binary
+references
+developer build paths like “Jain_DEV/client_mac/macWebT/macWebT,” where “macWebT” links directly to
+BlueNoroff’s “webT” module
+from
+RustBucket
+and
+Hidden Risk
+malware campaigns in 2023, according to researcher
+Giuseppe Massaro
+. To
+mitigate the threat
+, users are advised to audit dependency trees for compromised versions (and downgrade to a safe version, if found), pin Axios to a known safe version in the “package-lock.json” file to prevent accidental upgrades, check for presence of “plain-crypto-js” in “node_modules,” terminate malicious processes, block C2 domain (“sfrclak[.]com,” IP address: 142.11.206[.]73), isolate affected systems, and rotate all credentials. “The Axios attack should be understood as a template, not a one-time event.</p>
+
+<p>The level of operational sophistication documented here, including compromised maintainer credentials, pre-staged payloads built for three operating systems, both release branches hit in under 40 minutes, and built-in forensic self-destruction, reflects a threat actor that planned this as a scalable operation,” ReversingLabs Chief Software Architect Tomislav Peričin told The Hacker News. “If this campaign is now appearing in PyPI and NuGet, that’s consistent with what the attack mechanics already suggest: the goal was maximum developer reach. Organizations need to audit not just their npm dependencies, but every package manager feeding their build pipelines, and treat any secrets exposed in affected environments as compromised, regardless of which registry they touched.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="claude-code-source-leaked-via-npm-packaging-error-anthropic-confirms"><a id="article-8"></a>Claude Code Source Leaked via npm Packaging Error, Anthropic Confirms</h2>
+
+<p>Anthropic on Tuesday confirmed that internal code for its popular artificial intelligence (AI) coding assistant, Claude Code, had been inadvertently released due to a human error. “No sensitive customer data or credentials were involved or exposed,” an Anthropic spokesperson
+said
+in a statement shared with CNBC News. “This was a release packaging issue caused by human error, not a security breach. We’re rolling out measures to prevent this from happening again.”
+The discovery came after the AI upstart released
+version 2.1.88
+of the Claude Code npm package, with users spotting that it contained a source map file that could be used to access Claude Code’s source code – comprising nearly 2,000 TypeScript files and more than 512,000 lines of code.</p>
+
+<p>The version is no longer available for download from npm. Security researcher Chaofan Shou was the first to
+publicly flag
+it on X, stating “Claude code source code has been leaked via a map file in their npm registry!” The X post has since amassed more than 28.8 million views. The leaked codebase remains accessible via a
+public GitHub repository
+, where it has surpassed 84,000 stars and 82,000 forks. A source code leak of this kind is significant, as it gives software developers and Anthropic’s competitors a blueprint for how the popular coding tool works.</p>
+
+<p>Users who have
+dug into the code
+have published details of its
+self-healing memory architecture
+to overcome the model’s
+fixed context window constraints
+, as well as other internal components. These
+include
+a tools system to facilitate various capabilities like file read or bash execution, a query engine to handle LLM API calls and orchestration, multi-agent orchestration to spawn “sub-agents” or swarms to carry out complex tasks, and a bidirectional communication layer that connects IDE extensions to Claude Code CLI. The leak has also shed light on a feature called
+KAIROS
+that allows Claude Code to operate as a persistent, background agent that can periodically fix errors or run tasks on its own without waiting for human input, and even send push notifications to users. Complementing this proactive mode is a
+new “dream” mode
+that will allow Claude to constantly think in the background to develop ideas and iterate existing ones.</p>
+
+<p>Perhaps the most intriguing detail is the tool’s Undercover Mode for making “stealth” contributions to open-source repositories. “You are operating UNDERCOVER in a PUBLIC/OPEN-SOURCE repository. Your commit messages, PR titles, and PR bodies MUST NOT contain ANY Anthropic-internal information. Do not blow your cover,” reads the system prompt.</p>
+
+<p>Another fascinating finding involves Anthropic’s attempts to covertly fight
+model distillation attacks
+. The system has
+controls in place
+that inject fake tool definitions into API requests to poison training data if competitors attempt to scrape Claude Code’s outputs. Typosquat npm Packages Pushed to Registry
+With Claude Code’s internals now laid bare, the development risks providing bad actors with ammunition to bypass guardrails and trick the system into performing unintended actions, such as running malicious commands or exfiltrating data. “Instead of brute-forcing jailbreaks and prompt injections, attackers can now study and fuzz exactly how data flows through Claude Code’s four-stage context management pipeline and craft payloads designed to survive compaction, effectively persisting a backdoor across an arbitrarily long session,” AI security company Straiker
+said
+.</p>
+
+<p>The more pressing concern is the fallout from the
+Axios supply chain attack
+, as users who installed or updated Claude Code via npm on March 31, 2026, between 00:21 and 03:29 UTC may have pulled with it a trojanized version of the HTTP client that contains a cross-platform remote access trojan. Users are advised to immediately downgrade to a safe version and rotate all secrets. What’s more, attackers are already capitalizing on the leak to typosquat internal npm package names in an attempt to target those who may be trying to compile the leaked Claude Code source code and stage
+dependency confusion attacks
+. The names of the packages, all published by a user named “
+pacifier136
+,” are listed below -
+audio-capture-napi
+color-diff-napi
+image-processor-napi
+modifiers-napi
+url-handler-napi
+“Right now they’re empty stubs (<code class="language-plaintext highlighter-rouge">module.exports = {}</code>), but that’s how these attacks work – squat the name, wait for downloads, then push a malicious update that hits everyone who installed it,” security researcher Clément Dumas
+said
+in a post on X.</p>
+
+<p>The incident is the second major blunder for Anthropic within a week. Details about the company’s
+upcoming AI model
+, along with other internal data, were left accessible via the company’s content management system (CMS) last week. Anthropic subsequently acknowledged it’s been testing the model with early access customers, stating it’s “most capable we’ve built to date,” per
+Fortune
+. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="android-developer-verification-rollout-begins-ahead-of-september-enforcement"><a id="article-9"></a>Android Developer Verification Rollout Begins Ahead of September Enforcement</h2>
+
+<p>Google on Monday said it’s officially rolling out Android developer verification to all developers to combat the problem of bad actors distributing harmful apps while “hiding behind anonymity.”
+The development comes ahead of a planned
+verification mandate
+that goes into effect in Brazil, Indonesia, Singapore, and Thailand this September, before it expands globally next year. As part of this effort, Google is requiring app developers who distribute apps outside of Google Play to create an account in the Android Developer Console to confirm their identity. Those who distribute apps through Android’s official app marketplace and have verified their identity may be “already set,” the tech giant said. “For the vast majority of users, the experience of installing apps will stay exactly the same,” Matthew Forsythe, director of product management for Android App Safety,
+said
+.</p>
+
+<p>“It’s only when a user tries to install an unregistered app that they’ll require ADB or
+advanced flow
+, helping us keep the broader community safe while preserving the flexibility for our power users.”
+Android Studio developers can expect to see their app’s registration status right from within the integrated development environment (IDE) in the next two months when they generate a signed App Bundle or APK. Developers who have completed Play Console’s developer verification requirements will have their eligible Play apps automatically registered. If an app cannot be registered, developers are requested to follow a manual app claim process. As announced a couple of weeks ago, power users always have an option to enable sideloading of unregistered APK files through an advanced flow that requires an authentication step to confirm they are taking this step of their own volition and a one-off, 24-hour waiting period to deter scammers.</p>
+
+<p>“This flow is a one-time process for power users – but it was designed carefully to prevent those in the midst of a scam attempt from being coerced by high-pressure tactics to install malicious software,” Forsythe said. The development comes as Apple has
+revised
+its Developer Program License Agreement to enforce privacy rules regarding third-party wearables’ access to live activities and notifications. Apple explicitly noted that third parties “may not use Forwarding Information for advertising, profiling, training models, or monitoring location,” adding they “may not disseminate the Forwarding Information to any other Application, or any other device besides Your Authorized Target Accessory.”
+The newly added section also emphasized that developers cannot remotely store any forwarding information on a cloud service, make modifications that “materially” change the meaning of the content, or decrypt the data anywhere other than the accessory itself. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="trueconf-zero-day-exploited-in-attacks-on-southeast-asian-government-networks"><a id="article-10"></a>TrueConf Zero-Day Exploited in Attacks on Southeast Asian Government Networks</h2>
+
+<p>A high-severity security flaw in the TrueConf client video conferencing software has been exploited in the wild as a zero-day as part of a campaign targeting
+government entities in Southeast Asia
+dubbed
+TrueChaos
+. The vulnerability in question is
+CVE-2026-3502
+(CVSS score: 7.8), a lack of integrity check when fetching application update code, allowing an attacker to distribute a tampered update, resulting in the execution of arbitrary code. It has been patched in the TrueConf Windows client starting with
+version 8.5.3
+, released earlier this month. “The flaw stems from the abuse of TrueConf’s updater validation mechanism, allowing an attacker who controls the on-premises TrueConf server to distribute and execute arbitrary files across all connected endpoints,” Check Point
+said
+in a report published today.</p>
+
+<p>In other words, an attacker who manages to gain control of the on-premises TrueConf server can substitute the update package with a poisoned version, which then gets pulled by the client application installed on customers’ endpoints, owing to the fact that it does not enforce adequate validation to ensure that the server-provided update has not been tampered with. The TrueChaos campaign has been found to weaponize this flaw in the update mechanism to likely deploy the open-source Havoc command-and-control (C2) framework to vulnerable endpoints. The activity has been attributed with moderate confidence to a Chinese-nexus threat actor. Attacks exploiting the vulnerability were first recorded by the cybersecurity company at the beginning of 2026, with the implicit trust the client places in the update mechanism being weaponized to push a rogue installer that, in turn, leverages DLL side-loading to launch a DLL backdoor.</p>
+
+<p>The DLL implant (“7z-x64.dll”) has also been observed performing hands-on-keyboard actions to conduct reconnaissance, set up persistence, and retrieve additional payloads (“iscsiexe.dll”) from an FTP server (“47.237.15[.]197”). The primary objective of “iscsiexe.dll” is to ensure the execution of a benign binary (“poweriso.exe”) that’s dropped to sideload the backdoor. Although the exact final-stage malware delivered as part of the attack is not clear, it’s assessed with high confidence that the end goal is to deploy the Havoc implant. TrueChaos’ links to a Chinese-nexus threat actor are based on the observed tactics, such as the use of DLL side-loading, Alibaba Cloud, and Tencent for C2 infrastructure, and the fact that the same victim was targeted within the same time frame by
+ShadowPad
+, a sophisticated backdoor widely used by China-linked hacking groups.</p>
+
+<p>On top of that, the use of Havoc has been attributed to another Chinese threat actor called
+Amaranth-Dragon
+in intrusions aimed at government and law enforcement agencies across Southeast Asia in 2025. “The exploitation of CVE-2026-3502 did not require the attacker to compromise each endpoint individually,” Check Point said. “Instead, the attacker abused the trusted relationship between a central on-premises TrueConf server and its clients. By replacing a legitimate update with a malicious one, they turned the product’s normal update flow into a malware distribution channel across multiple connected government networks.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="vertex-ai-vulnerability-exposes-google-cloud-data-and-private-artifacts"><a id="article-11"></a>Vertex AI Vulnerability Exposes Google Cloud Data and Private Artifacts</h2>
+
+<p>Cybersecurity researchers have disclosed a security “blind spot” in Google Cloud’s Vertex AI platform that could allow artificial intelligence (AI) agents to be weaponized by an attacker to gain unauthorized access to sensitive data and compromise an organization’s cloud environment. According to Palo Alto Networks Unit 42, the issue relates to how the Vertex AI permission model can be misused by taking advantage of the
+service agent
+‘s excessive permission scoping by default. “A misconfigured or compromised agent can become a ‘double agent’ that appears to serve its intended purpose, while secretly exfiltrating sensitive data, compromising infrastructure, and creating backdoors into an organization’s most critical systems,” Unit 42 researcher Ofir Shaty
+said
+in a report shared with The Hacker News. Specifically, the cybersecurity company found that the Per-Project, Per-Product Service Agent (
+P4SA
+) associated with a deployed AI agent built using Vertex AI’s Agent Development Kit (
+ADK
+) had excessive permissions granted by default.</p>
+
+<p>This opened the door to a scenario where the P4SA’s default permissions could be used to extract the credentials of a service agent and conduct actions on its behalf. After deploying the Vertex agent via
+Agent Engine
+, any call to the agent invokes Google’s metadata service and exposes the credentials of the service agent, along with the Google Cloud Platform (GCP) project that hosts the AI agent, the identity of the AI agent, and the scopes of the machine that hosts the AI agent. Unit 42 said it was able to use the stolen credentials to jump from the AI agent’s execution context into the customer project, effectively undermining isolation guarantees and permitting unrestricted read access to all Google Cloud Storage buckets’ data within that project. “This level of access constitutes a significant security risk, transforming the AI agent from a helpful tool into a potential insider threat,” it added.</p>
+
+<p>That’s not all. With the deployed Vertex AI Agent Engine running within a Google-managed tenant project, the extracted credentials also granted access to the Google Cloud Storage buckets within the tenant, offering more details about the platform’s internal infrastructure. However, the credentials were found to lack the necessary permissions required to access the exposed buckets. To make matters worse, the same P4SA service agent credentials also enabled access to restricted, Google-owned Artifact Registry repositories that were revealed during the deployment of the Agent Engine.</p>
+
+<p>An attacker could leverage this behavior to download container images from private repositories that constitute the core of the Vertex AI Reasoning Engine. What’s more, the compromised P4SA credentials not only made it possible to download images that were listed in logs during the Agent Engine deployment, but also exposed the contents of Artifact Registry repositories, including several other restricted images. “Gaining access to this proprietary code not only exposes Google’s intellectual property, but also provides an attacker with a blueprint to find further vulnerabilities,” Unit 42 explained. “The misconfigured Artifact Registry highlights a further flaw in access control management for critical infrastructure.</p>
+
+<p>An attacker could potentially leverage this unintended visibility to map Google’s internal software supply chain, identify deprecated or vulnerable images, and plan further attacks.”
+Google has since
+updated its official documentation
+to clearly spell out how Vertex AI uses resources, accounts, and agents. The tech giant has also recommended that customers use Bring Your Own Service Account (BYOSA) to replace the default service agent and enforce the principle of least privilege (PoLP) to ensure that the agent has only the permissions it needs to perform the task at hand. “Granting agents broad permissions by default violates the principle of least privilege and is a dangerous security flaw by design,” Shaty said. “Organizations should treat AI agent deployment with the same rigor as new production code.</p>
+
+<p>Validate permission boundaries, restrict OAuth scopes to least privilege, review source integrity and conduct controlled security testing before production rollout.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-ai-arms-race--why-unified-exposure-management-is-becoming-a-boardroom-priority"><a id="article-12"></a>The AI Arms Race – Why Unified Exposure Management Is Becoming a Boardroom Priority</h2>
+
+<p>The cybersecurity landscape is accelerating at an unprecedented rate. What is emerging is not simply a rise in the number of vulnerabilities or tools, but a dramatic increase in speed. Speed of attack, speed of exploitation, and speed of change across modern environments. This is the defining challenge of the new era of digital warfare: the weaponization of Artificial Intelligence.</p>
+
+<p>Threat actors, from nation-states to sophisticated criminal enterprises, are no longer just attacking. They are automating the entire kill chain. In this AI arms race, traditional defensive strategies are no longer sufficient. Periodic point-in-time assessments, manual triage, and human-speed response were already under pressure in fast-moving environments.</p>
+
+<p>Against AI-enabled adversaries, they are increasingly inadequate. Solutions like
+PlexTrac
+are built to help organizations move beyond fragmented findings, disconnected tools, and slow manual workflows by unifying exposure management, remediation, and validation in a single operational system. As the gap between discovery and exploitation continues to shrink, security teams need a way to continuously assess exposure, prioritize what matters, and drive action quickly enough to keep pace. To keep up with adversaries using AI, defenders must use AI as well.</p>
+
+<p>Specifically, they need the convergence of two critical capabilities: Autonomous Exposure Assessment and Continuous Threat Assessment powered by Agentic AI. The Modern Adversary – AI in the Arsenal of Threat Actors
+To understand the defense, it is necessary to understand the attack. AI has become a force multiplier for threat actors. Adversaries are using generative AI to create highly targeted phishing campaigns at scale.</p>
+
+<p>They are using machine learning to analyze defenses, identify vulnerabilities automatically, and chain together complex attack paths faster than any human operator. Perhaps most alarming is the rise of polymorphic malware, which can rewrite its own code in real time to evade signature-based detection. Gone are the days of manually researching and discovering vulnerabilities, determining whether one or more can be chained together, and deciding whether they can be used to reach a target. Today, that cycle can be compressed into hours or days through AI-driven automation.</p>
+
+<p>In short, threat actors are now operating with greater speed, stealth, and efficiency than ever before. Staying Ahead with Unified Exposure Management</p>
+<ol>
+  <li>Sustainable Autonomous Exposure Assessment
+In this high-velocity environment, understanding the attack surface is the foundation of defense. But traditional vulnerability management is broken.</li>
+</ol>
+
+<p>It is too slow, too noisy, and produces flat, disconnected data. This is where AI-powered exposure assessment platforms like
+PlexTrac
+matter. PlexTrac functions as the sensory system of a modern defense strategy. It does not just scan for CVEs.</p>
+
+<p>It ingests data from across the ecosystem — cloud misconfigurations, identity risks, application flaws, pentest findings, and more — to create a unified, dynamic view of risk. With PlexTrac, organizations can:
+Cut through the noise
+Apply context-aware scoring to prioritize the vulnerabilities that actually present meaningful risk, instead of overwhelming teams with thousands of “critical” alerts. Visualize the attack path
+Move beyond isolated findings and see how a threat actor could chain seemingly minor weaknesses into a domain-wide compromise. Move from reactive to proactive
+Use automated assessments and predictive insight to identify where risk may emerge next, so teams can strengthen defenses before attacks occur.</p>
+
+<ol>
+  <li>Continuous Threat Assessment with Agentic AI
+Exposure assessment provides visibility, but visibility alone is only a prerequisite to action. To stay ahead in the AI arms race, organizations need autonomous, continuous validation. This is where Agentic AI becomes important.</li>
+</ol>
+
+<p>Agentic AI represents a meaningful shift from traditional AI copilots. Rather than waiting for prompts, agentic systems can plan, reason, and execute multi-step tasks with greater autonomy. This transforms Continuous Threat Assessment from a concept into a practical capability. Autonomous Pentesting
+Agentic AI can operate as a synthetic red teamer, continuously testing defenses.</p>
+
+<p>It does not sleep, it does not fatigue, and it can simulate modern AI-driven attack techniques in real time. This includes the ability to:
+Plan and adapt attack paths
+Rather than running through a static checklist, these systems can analyze network topology, prioritize targets, and construct multi-stage attack paths. If they encounter a barrier, they can adjust tactics in ways that better resemble a skilled human operator. Emulate adversary behaviors
+Using foundational models trained on large sets of threat intelligence, these systems can emulate known TTPs or simulate emerging AI-enabled attack methods.</p>
+
+<p>Validate defensive stack effectiveness
+They can continuously test whether SIEM, EDR, and XDR tools are actually detecting the right behaviors and alerting the right people, providing proof of defensive effectiveness rather than assumed coverage. Adapt in real time
+As network configurations change or new threat intelligence emerges, agentic systems can update their assessment logic and testing procedures to keep pace with the real threat environment. By automating much of the repetitive work of red teaming, organizations can free human operators to focus on truly novel, sophisticated, and nuanced attack vectors. 3.</p>
+
+<p>Closing the Loop – AI-Driven Remediation and Validation
+Finding a vulnerability is not enough if it still takes weeks to fix. Adversaries exploit this delay. This is why PlexTrac’s role in closing the loop is so important. Exposure management cannot stop at detection.</p>
+
+<p>It must extend into remediation and validation. When an exploitable path is identified, AI-enabled workflows inside an exposure management platform can help move that issue into action faster:
+Instant context and ticket creation
+The moment a critical path is validated, a detailed remediation ticket can be generated in systems like Jira or ServiceNow, complete with reproduction steps, severity context, and required action. Automated policy updates
+If a firewall is misconfigured, the necessary configuration change can be drafted and prepared for human approval before deployment. Orchestrated patch management
+For critical vulnerabilities, the workflow can prioritize the patch, support testing in staging, and accelerate deployment to reduce mean time to remediate.</p>
+
+<p>Automated validation
+Agents can validate whether the controls put in place to remediate an issue have actually taken effect, helping teams reduce risk while gaining better value from their existing security stack. By integrating Agentic AI-powered red teaming, remediation, and validation into an exposure management platform, PlexTrac gives organizations the ability to fight AI with AI. This is how security teams move from constant vulnerability to provable, continuous posture assurance. A New Path Forward for Cybersecurity Resilience
+Cybersecurity resilience now depends on proactive insight, continuous validation, and the ability to move faster than manual workflows allow.</p>
+
+<p>The goal is to move from a chaotic, reactive posture to one that is intentional, resilient, and measurable. PlexTrac is focused on helping security teams make that shift by combining unified exposure management with AI-driven capabilities that automate the tedious, consolidate the fragmented, and accelerate action. The AI arms race is here. The question is no longer whether organizations will be targeted by threat actors using AI.</p>
+
+<p>The question is whether they will develop the resilience, insight, and bounded autonomy required to withstand them. Note:
+This article was expertly written and contributed by Rohit Unnikrishnan, Chief Product &amp; Technology Officer at PlexTrac. Rohit is a seasoned cyber security executive with a background in Product Management, Market Analysis, Strategy, Sales and Engineering. Over the last two decades, he has worn many hats - engineer, operator, sales, product manager and entrepreneur.</p>
+
+<p>With his diverse experience, he brings a unique ability to manage cross-functional teams and execute on multi-disciplinary engagements. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

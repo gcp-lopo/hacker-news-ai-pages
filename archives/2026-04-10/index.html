@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-04-10 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">EngageLab SDK Flaw Exposed 50M Android Users, Including 30M Crypto Wallets</a></li>
+      
+        <li><a href="#article-2">UAT-10362 Targets Taiwanese NGOs with LucidRook Malware in Spear-Phishing Campaigns</a></li>
+      
+        <li><a href="#article-3">ThreatsDay Bulletin: Hybrid P2P Botnet, 13-Year-Old Apache RCE and 18 More Stories</a></li>
+      
+        <li><a href="#article-4">The Hidden Security Risks of Shadow AI in Enterprises</a></li>
+      
+        <li><a href="#article-5">Adobe Reader Zero-Day Exploited via Malicious PDFs Since December 2025</a></li>
+      
+        <li><a href="#article-6">Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</a></li>
+      
+        <li><a href="#article-7">Bitter-Linked Hack-for-Hire Campaign Targets Journalists Across MENA Region</a></li>
+      
+        <li><a href="#article-8">New Chaos Variant Targets Misconfigured Cloud Deployments, Adds SOCKS Proxy</a></li>
+      
+        <li><a href="#article-9">Masjesu Botnet Emerges as DDoS-for-Hire Service Targeting Global IoT Devices</a></li>
+      
+        <li><a href="#article-10">APT28 Deploys PRISMEX Malware in Campaign Targeting Ukraine and NATO Allies</a></li>
+      
+        <li><a href="#article-11">Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)</a></li>
+      
+        <li><a href="#article-12">Anthropic's Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems</a></li>
+      
+        <li><a href="#article-13">N. Korean Hackers Spread 1,700 Malicious Packages Across npm, PyPI, Go, Rust</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-04-10-ai创业新闻">2026-04-10 AI创业新闻</h1>
+
+<h2 id="engagelab-sdk-flaw-exposed-50m-android-users-including-30m-crypto-wallets"><a id="article-1"></a>EngageLab SDK Flaw Exposed 50M Android Users, Including 30M Crypto Wallets</h2>
+
+<p>Details have emerged about a now-patched security vulnerability in a widely used third-party Android software development kit (SDK) called
+EngageLab SDK
+that could have put millions of cryptocurrency wallet users at risk. “This flaw allows apps on the same device to bypass Android security sandbox and gain unauthorized access to private data,” the Microsoft Defender Security Research Team
+said
+in a report published today. EngageLab SDK offers a
+push notification service
+, which, according to its website, is designed to deliver ”timely notifications” based on user behavior already tracked by developers. Once integrated into an app, the SDK offers a way to send personalized notifications and drive real-time engagement.</p>
+
+<p>The tech giant said a significant number of apps using the SDK are part of the cryptocurrency and digital wallet ecosystem, and that the affected wallet apps accounted for more than 30 million installations. When non‑wallet apps built on the same SDK are included, the installation count surpasses 50 million. Microsoft did not reveal the names of the apps, but noted that all those detected apps using vulnerable versions of the SDK have been removed from the Google Play Store. Following responsible disclosure in April 2025, EngageLab released
+version 5.2.1
+in November 2025 to address the vulnerability.</p>
+
+<p>The issue, identified in version 4.5.4, has been described as an intent redirection vulnerability. Intents in Android refer to
+messaging objects
+that are used to request an action from another app component. Intent redirection occurs when the contents of an intent that a vulnerable app sends are manipulated by taking advantage of its trusted context (i.e., permissions) to gain unauthorized access to protected components, expose sensitive data, or escalate privileges within the Android environment. An attacker could exploit this vulnerability by means of a malicious app installed on the device through some other means to access internal directories associated with an app that has the SDK integrated, resulting in unauthorized access to sensitive data.</p>
+
+<p>There is no evidence that the vulnerability was ever exploited in a malicious context. That said, developers who integrate the SDK are recommended to update to the latest version as soon as possible, especially given that even trivial flaws in upstream libraries can have cascading impacts and impact millions of devices. “This case shows how weaknesses in third‑party SDKs can have large‑scale security implications, especially in high‑value sectors like digital asset management,” Microsoft said. “Apps increasingly rely on third‑party SDKs, creating large and often opaque supply‑chain dependencies.</p>
+
+<p>These risks increase when integrations expose exported components or rely on trust assumptions that aren’t validated across app boundaries.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="uat-10362-targets-taiwanese-ngos-with-lucidrook-malware-in-spear-phishing-campaigns"><a id="article-2"></a>UAT-10362 Targets Taiwanese NGOs with LucidRook Malware in Spear-Phishing Campaigns</h2>
+
+<p>A previously undocumented threat cluster dubbed
+UAT-10362
+has been attributed to spear-phishing campaigns targeting Taiwanese non-governmental organizations (NGOs) and suspected universities to deploy a new Lua-based malware called LucidRook. “LucidRook is a sophisticated stager that embeds a Lua interpreter and Rust-compiled libraries within a dynamic-link library (DLL) to download and execute staged Lua bytecode payloads,” Cisco Talos researcher Ashley Shen
+said
+. The cybersecurity company said it discovered the activity in October 2025, with the attack using RAR or 7-Zip archives lures to deliver a dropper called LucidPawn, which then opens a decoy file and launches LucidRook. A notable characteristic of the intrusion set is the use of DLL side-loading to execute both LucidPawn and LucidRook.</p>
+
+<p>There are two distinct infection chains that lead to LucidRook, one using a Windows Shortcut (LNK) file with a PDF icon and another involving an executable that masquerades as an antivirus program from Trend Micro. The entire sequence is listed below -
+LNK-based infection chain</p>
+<ul>
+  <li>When the user clicks the LNK file, assuming it’s a PDF document, it executes a PowerShell script to run a legitimate Windows binary (“index.exe”) present in the archive, which then sideloads a malicious DLL (i.e., LucidPawn). The dropper, for its part, once again employs DLL side-loading to run LucidRook. EXE-based infection chain</li>
+  <li>When the purported Trend Micro program (“Cleanup.exe”) within the 7-Zip archive is launched, it acts as a simple .NET dropper that employs DLL side-loading to run LucidRook.</li>
+</ul>
+
+<p>Upon execution, the binary displays a message stating the cleanup process has completed. A 64-bit Windows DLL, LucidRook, is heavily obfuscated to deter analysis and detection. Its functionality is two-pronged: it collects system information and exfiltrates it to an external server, and then receives an encrypted Lua bytecode payload for subsequent decryption and execution on the compromised machine using the embedded Lua 5.4.8 interpreter. “In both cases, the actor abused an Out-of-band Application Security Testing (OAST) service and compromised FTP servers for command-and-control (C2) infrastructure,” Talos said.</p>
+
+<p>LucidPawn also implements a geofencing technique that specifically queries the system UI language and continues execution only if it matches Traditional Chinese environments associated with Taiwan (“zh-TW”). This offers two-fold advantages, as it limits execution to the intended victim geography and avoids getting flagged in common analysis sandboxes. Furthermore, at least one variant of the dropper has been found to deploy a 64-bit Windows DLL named LucidKnight that’s capable of exfiltrating system information via Gmail to a temporary email address. The presence of the reconnaissance tool alongside LucidRook suggests the adversary operates a tiered toolkit, potentially using LucidKnight to profile targets before delivering the LucidRook stager.</p>
+
+<p>Not much is known about UAT-10362 at this stage other than the fact that it’s likely a sophisticated threat actor whose campaigns are targeted rather than opportunistic, while prioritizing flexibility, stealth, and victim-specific tasking. “The multi-language modular design, layered anti-analysis features, stealth-focused payload handling of the malware, and reliance on compromised or public infrastructure indicate UAT-10362 is a capable threat actor with mature operational tradecraft,” Talos said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="threatsday-bulletin-hybrid-p2p-botnet-13-year-old-apache-rce-and-18-more-stories"><a id="article-3"></a>ThreatsDay Bulletin: Hybrid P2P Botnet, 13-Year-Old Apache RCE and 18 More Stories</h2>
+
+<p>Thursday. Another week, another batch of things that probably should’ve been caught sooner but weren’t. This one’s got some range — old vulnerabilities getting new life, a few “why was that even possible” moments, attackers leaning on platforms and tools you’d normally trust without thinking twice. Quiet escalations more than loud zero-days, but the kind that matter more in practice anyway.</p>
+
+<p>Mix of malware, infrastructure exposure, AI-adjacent weirdness, and some supply chain stuff that’s… not great. Let’s get into it. Resilient hybrid botnet surge
+Phorpiex Botnet Detailed
+A new variant of the botnet known as
+Phorpiex
+(aka Trik) has been observed, using a hybrid communication model that combines traditional C2 HTTP polling with a peer-to-peer (P2P) protocol over both TCP and UDP to ensure operational continuity in the face of server takedowns.</p>
+
+<p>The malware acts as a conduit for encrypted payloads, making it challenging for external parties to inject or modify commands. The primary goal of Phorpiex’s Twizt variant is to drop a clipper that re-routes cryptocurrency transactions, as well as distribute high-volume sextortion email spam and facilitate
+ransomware deployment
+(e.g., LockBit Black, Global). It also exhibits worm-like behavior by propagating through removable and remote drives, and drop modules responsible for exfiltrating mnemonic phrases and scanning for Local File Inclusion (LFI) vulnerabilities. “Phorpiex has consistently demonstrated its capability to evolve, shifting from a pure spam operation to a sophisticated platform,” Bitsight
+said
+.</p>
+
+<p>“The Phorpiex botnet remains a highly adaptive and resilient threat.” There are about 125,000 infections daily on average, with the most affected countries being Iran, Uzbekistan, China, Kazakhstan, and Pakistan. Chained flaws enable stealth RCE
+13-Year-Old Flaw in Apache ActiveMQ Classic
+A remote code execution (RCE) vulnerability that lurked in Apache ActiveMQ Classic for 13 years could be chained with an older flaw (CVE-2024-32114) to bypass authentication. Tracked as CVE-2026-34197 (CVSS score: 8.8), the newly identified bug allows attackers to invoke management operations through the Jolokia API and trick the message broker into retrieving a remote configuration file and executing operating system commands. According to Horizon3.ai, the security defect is a bypass for CVE-2022-41678, a bug that allows authenticated attackers to trigger arbitrary code execution and write web shells to disk.</p>
+
+<p>“The vulnerability requires credentials, but default credentials (admin:admin) are common in many environments,” Horizon3.ai researcher Naveen Sunkavally
+said
+. “On some versions (6.0.0 - 6.1.1), no credentials are required at all due to another vulnerability, CVE-2024-32114, which inadvertently exposes the Jolokia API without authentication. In those versions, CVE-2026-34197 is effectively an unauthenticated RCE.” The newly discovered security defect was
+addressed
+in ActiveMQ Classic versions 5.19.4 and 6.2.3. Cyber fraud losses hit record highs
+Cybercrime Costs Victims $17.7B in 2025
+Cyber-enabled fraud cost victims over $17.7 billion during 2025, as financial losses to internet-enabled fraud continue to grow.</p>
+
+<p>The total loss exceeds $20.87 billion, up 26% from 2024. “Cyber-enabled fraud is responsible for almost 85% of all losses reported to IC3 [Internet Crime Complaint Center] in 2025,” the U.S. Federal Bureau of Investigation (FBI)
+said
+. “Cryptocurrency investment fraud was the highest source of financial losses to Americans in 2025, with $7.2 billion reported in losses.” In all investment scams led the pack with $8.6 billion in reported losses, followed by business email compromise ($3 billion) and tech support scams ($2.1 billion).</p>
+
+<p>Sixty-three new ransomware variants were identified last year, leading to more than $32 million in losses. Akira, Qilin, INC./Lynx/Sinobi, BianLian, Play, Ransomhub, Lockbit, Dragonforce, Safepay, and Medusa emerged as the top ten variants to hit critical manufacturing, healthcare, public health, and government entities. AI-driven DDoS tactics escalate
+8M DDoS Attacks in H2 2025
+According to data from NETSCOUT, more than 8 million DDoS attacks were recorded across 203 countries and territories between July and December 2025. “The attack count remained stable compared to the first half of the year, but the nature and sophistication of attacks changed dramatically,” the company
+said
+.</p>
+
+<p>“The TurboMirai class of IoT botnets, including AISURU and Eleven11 (RapperBot), emerged as a major force. DDoS-for-hire platforms are now integrating dark-web LLMs and conversational AI, lowering the technical barrier for launching complex, multi-vector attacks. Even unskilled threat actors can now orchestrate sophisticated campaigns using natural-language prompts, increasing risk for all industries.”
+Insider breach exposes private photos
+Former Meta Employee Probed for Downloading 30K Facebook Photos
+A former Meta employee in the U.K. is under investigation over allegations that he illegally downloaded about 30,000 private photos from Facebook.</p>
+
+<p>According to
+The Guardian
+, the accused developed a software program to evade Facebook’s internal security systems and access users’ private images. Meta uncovered the breach more than a year ago, terminated the employee, and referred the case to law enforcement. The company said it also notified affected users, although it’s not clear how many were impacted. Help desk attacks enable enterprise breaches
+UNC6783 Compromises BPOs to Target High-Value Firms
+Google said it’s tracking a financially motivated threat cluster called UNC6783 that’s tied to the “Raccoon” persona and is targeting dozens of high-profile organizations across multiple sectors by compromising business process outsourcing (BPO) providers and help desk staff for later data extortion.</p>
+
+<p>“The campaign relies on live chat social engineering to direct employees to spoofed Okta logins using [org].zendesk-support[##].com domains,” Austin Larsen, Google Threat Intelligence Group (GITG) principal threat analyst,
+said
+. “Their phishing kit steals clipboard contents to bypass MFA and enroll their own devices for persistent access. We also observed them using fake security updates (ClickFix) to drop remote access malware.” Organizations are advised to prioritize FIDO2 hardware keys for high-risk roles, monitor live chat for suspicious links, and regularly audit newly enrolled MFA devices. Magecart skimmer hides in SVG
+PolyShell Flaw Behind New Magecart Campaign
+A large-scale Magecart campaign is using invisible 1x1 pixel SVG elements to inject a fake checkout overlay on 99 Magento e-commerce stores, exfiltrating payment data to six attacker-controlled domains.</p>
+
+<p>“In the early hours of April 7th, nearly 100 Magento stores got mass-infected with a ‘double-tap’ skimmer: a credit card stealer hidden inside an invisible SVG element,” Sansec
+said
+. “The likely entry vector is the
+PolyShell vulnerability
+that continues to affect unprotected Magento stores.” Like other attacks of this kind, the skimmer shows victims a convincing “Secure Checkout” overlay, complete with card validation and billing fields. Once the payment details are captured, it silently redirects the shopper to the real checkout page. Adobe has yet to release a security update to address the PolyShell flaw in production versions of Magento.</p>
+
+<p>Emoji-coded signals evade detection
+Criminals’ Use of Emojis Dissected
+Cybercriminals are
+using emojis
+across illicit communities to signal financial activity, access and account compromise, tooling and service offerings, represent targets or regions, and communicate momentum or importance. Using emojis allows bad actors to bypass security controls. “Emojis provide a shared visual layer that allows actors to communicate core concepts without relying entirely on text,” Flashpoint
+said
+. “This is particularly valuable in: large Telegram channels with international membership, cross-border fraud operations, [and] decentralized marketplaces.</p>
+
+<p>This ability to compress meaning into visual shorthand helps scale operations and coordination across diverse actor networks.”
+Stealth RAT delivered via MSI
+ClickFix Delivers Node.js Stealer
+A ClickFix campaign targeting Windows users is leveraging malicious MSI installers to deliver a Node.js-based information stealer. “This Windows payload is a highly adaptable remote access Trojan (RAT) that minimizes its forensic footprint by using dynamic capability loading,” Netskope
+said
+. “The core stealing modules and communication protocols are never stored on the victim’s disk. Instead, they are delivered in-memory only after a successful C2 connection is established.</p>
+
+<p>To further obfuscate the attacker’s infrastructure, the malware routes gRPC streaming traffic over the Tor network, providing a persistent and masked bidirectional channel.”
+macOS attack bypasses Terminal safeguards
+ClickFix Variant Targets macOS
+More ClickFix, this time targeting macOS. According to Jamf, a ClickFix-style macOS attack is abusing the “applescript://” URL scheme to launch Script Editor and deliver an Atomic Stealer infostealer payload, thereby bypassing Terminal entirely. The attack leverages fake Apple-themed web pages that include instructions to “reclaim disk space on your Mac” by clicking on an “Execute” button that triggers the “applescript://” URL scheme. The new approach is likely a response to a
+new security feature
+introduced by Apple in macOS 26.4 that scans commands pasted into Terminal before they’re executed.</p>
+
+<p>“It’s a meaningful friction point, but as this campaign illustrates, when one door closes, attackers find another,” security researcher Thijs Xhaflaire
+said
+. PyPI package exfiltrates AI prompts
+Malicious Python Package Steals AI Prompts
+A malicious PyPI package named hermes-px has been advertised as a “Secure AI Inference Proxy” but contains functionality to steal users’ prompts. “The package actually hijacks a Tunisian university’s private AI endpoint, bundles a stolen and rebranded Anthropic Claude Code system prompt, launders all responses to hide the true upstream source, and exfiltrates every user message directly to the attacker’s Supabase database, bypassing the very Tor anonymity it promises,” JFrog
+said
+. Exposed PLCs targeted by state actors
+More than 5K Rockwell Automation/Allen-Bradley Exposed PLCs
+Data from Censys has revealed that there are 5,219 internet-exposed hosts that self-identify as Rockwell Automation/Allen-Bradley devices.</p>
+
+<p>“The United States accounts for 74.6% of global exposure (3,891 hosts), with a disproportionate share on cellular carrier ASNs indicative of field-deployed devices on cellular modems,” it
+said
+. “Spain (110), Taiwan (78), and Italy (73) represent the largest non-Anglosphere concentrations. Iceland’s presence (36 hosts) is disproportionate to its population and warrants attention, given its geothermal energy infrastructure.” The disclosure follows a
+joint advisory
+from U.S. agencies that warned of ongoing exploitation of internet-facing Rockwell Automation/Allen-Bradley programmable logic controllers (PLCs) by Iranian-affiliated nation-state actors since March 2026 to breach U.S.</p>
+
+<p>critical infrastructure sectors, causing operational disruption and financial loss in some cases. The agencies said the attacks are reminiscent of similar attacks on PLCs by Cyber Av3ngers in late 2023. Code leak weaponized for malware spread
+Claude Code Leak Fuels Stealer Campaigns
+In late March 2026, Anthropic inadvertently
+exposed internal Claude Code source material
+via a misconfigured npm package, which included approximately 512,000 lines of internal TypeScript. While the exposure lasted only about three hours, it triggered rapid mirroring of the source code across GitHub, prompting Anthropic to
+issue takedown notices
+(and later a
+partial retraction
+).</p>
+
+<p>Needless to say, threat actors wasted no time and
+took advantage
+of the topical nature of the leak to distribute Vidar Stealer, PureLogs Stealer, and GhostSocks proxy malware through fake leaked Claude Code GitHub repositories. “The campaign abuses GitHub Releases as a trusted malware delivery channel, using large trojanized archives and disposable accounts to repeatedly evade takedowns,” Trend Micro
+said
+. “The combined functionality of the malware payloads enables credential theft, cryptocurrency wallet exfiltration, session hijacking, and residential proxy abuse across Windows, giving the operators multiple monetization paths from a single infection.”
+Lumma successor adopts evasive tactics
+Meet Remus, 64-Bit Version of Lumma Stealer
+A new 64-bit version of Lumma Stealer called Remus (historically called Tenzor) has emerged in the wild following Lumma’s takedown and the doxxing of its alleged core members. “The first Remus campaigns date back to February 2026, with the malware switching from Steam/Telegram dead drop resolvers to
+EtherHiding
+and employing new anti-analysis checks,” Gen researchers
+said
+.</p>
+
+<p>Besides using identical code, direct syscalls/sysenters, and the same string obfuscation technique, another detail linking the two is the use of an application-bound encryption method, only observed in Lumma Stealer to date. Court rulings split on AI risk label
+Anthropic Faces Legal Setback
+In a setback for Anthropic, a Washington, D.C., federal appeals court declined to block the U.S. Department of Defense’s national security designation of the AI company as a
+supply chain risk
+. The development comes after another appeals court in San Francisco came to the opposite conclusion in a separate legal challenge by Anthropic, granting it a
+preliminary injunction
+that bars the Trump administration from enforcing a ban on the use of AI chatbot Claude.The company has said the designation could cost the company billions of ⁠dollars in lost business and reputational harm.</p>
+
+<p>As Reuters
+notes
+, the lawsuit is one of two that Anthropic filed over the Trump administration’s unprecedented move to classify it as a supply chain risk after it refused to allow the military to use Claude for domestic mass surveillance or autonomous weapons. Trojanized tools deliver crypto clipper
+Fake Proxifiers Hosted on GitHub Lead to Clipper Malware
+In a
+new campaign
+observed by Kaspersky, unwitting users searching for proxy clients like Proxifier on search engines like Google and Yandex are being directed to malicious GitHub repositories that host an executable, which acts as a wrapper around the legitimate Proxifier installer.Once launched, it configures Microsoft Defender Antivirus exclusions, launches the real Proxifier installer, sets up persistence, and runs a PowerShell script that reaches out to Pastebin to retrieve a next-stage payload. The downloaded PowerShell script is responsible for retrieving another script containing the Clipper malware from GitHub. The malware substitutes cryptocurrency wallet addresses copied to the clipboard with an attacker-controlled wallet with the intention of rerouting financial transactions.</p>
+
+<p>Since the start of 2025, more than 2,000 Kaspersky users – most of them in India and Vietnam – have encountered the threat. SaaS platforms abused for phishing delivery
+Phishing Campaigns Weaponize Trust
+Threat actors are leveraging notification pipelines in popular collaboration platforms to deliver spam and phishing emails. Because these emails are dispatched from the platform’s own infrastructure (e.g., Jira’s Invite Customers feature), they are unlikely to be blocked by email security tools. “These emails are transmitted using the legitimate mail delivery infrastructure associated with GitHub and Jira, minimizing the likelihood that they will be blocked in transit to potential victims,” Cisco Talos
+said
+.</p>
+
+<p>“By taking advantage of the built-in notification functionality available within these platforms, adversaries can more effectively circumvent email security and monitoring solutions and facilitate more effective delivery to potential victims.” The development coincides with a phishing campaign targeting multiple organizations with invitation lures sent from compromised email accounts that lead to the
+deployment
+of legitimate remote monitoring and management (RMM) tools like LogMeIn Resolve. The campaign, tracked as
+STAC6405
+, has been ongoing since April 2025. In one case, the threat actor has been found to leverage a pre-existing installation of ScreenConnect to download a HeartCrypt-protected ZIP file that ultimately leads to the installation of malware that’s consistent with
+ValleyRAT
+. Other campaigns have leveraged
+procurement-themed emails
+to direct users to cloud-hosted PDFs containing embedded links that, when clicked, take victims to Dropbox credential harvesting pages.</p>
+
+<p>Threat actors have also
+distributed executable files
+disguised as copyright violation notices to trick them into installing
+PureLogs Stealer
+as part of a multi-stage campaign. What’s more, Reddit posts advertising the premium version of TradingView have acted as a conduit for Vidar and Atomic Stealer to steal valuable data from both Windows and macOS systems. “The threat actor actively comments on their own posts with different accounts, creating the illusion of a busy and helpful community,” Hexastrike
+said
+. “More concerning, any comments from real users pointing out that the downloads are malware get deleted within minutes.</p>
+
+<p>The operation is hands-on and closely monitored.”
+Linux SMB flaw leaks crypto keys
+Security Flaw in Linux Kernel’s ksmbd SMB3 Server
+A high-severity security flaw has been disclosed in the Linux kernel’s
+ksmbd
+SMB3 server. Tracked as
+CVE-2026-23226
+(CVSS score: 8.8), it falls under the same bug class as
+CVE-2025-40039
+, which was patched in October 2025. “When two connections share a session over SMB3 multichannel, the kernel can read a freed channel struct – exposing the per-channel AES-128-CMAC signing key and causing a kernel panic,” Orca
+said
+. “An attacker needs valid SMB credentials and network access to port 445.” Alternatively, the vulnerability can be exploited by an attacker to leak the per-channel AES-128-CMAC key used to sign all SMB3 traffic, enabling them to forge signatures, impersonate the server, or bypass signature verification.</p>
+
+<p>It has been fixed in the commit “e4a8a96a93d.”
+Prompt injection turns AI into attack tool
+Turning Claude Code into an Attack Tool
+New research has demonstrated it’s possible to trick Anthropic’s vibe coding tool Claude Code into performing a full-scope penetration attack and credential theft by modifying a project’s “CLAUDE.md” file to bypass the coding agent’s safety guardrails. The instructions explicitly tell Claude Code to help the developer complete a penetration testing assessment against their own website and assist them in their tasks. “Claude Code should scan CLAUDE.md before every session, flagging instructions that would otherwise trigger a refusal if attempted directly within a prompt,” LayerX
+said
+. “When Claude detects instructions that appear to violate its safety guardrails, it should present a warning and allow the developer to review the file before taking any actions.”
+AI exploit silently leaks enterprise data
+GrafanaGhost Exfiltrates Data from Grafana Instances
+Grafana has patched a security vulnerability that could have enabled attackers to trick its artificial intelligence (AI) capabilities into leaking sensitive data by means of an indirect prompt injection and without requiring any user interaction.</p>
+
+<p>The attack has been codenamed GrafanaGhost by Noma Security. “By bypassing the client-side protections and security guardrails that restrict external data requests, GrafanaGhost allows an attacker to bridge the gap between your private data environment and an external server,” the cybersecurity company
+said
+. “Because the exploit ignores model restrictions and operates autonomously, sensitive enterprise data can be leaked silently in the background.” GrafanaGhost is stealthy, as it requires no login credentials and does not depend on a user clicking a malicious link. The attack is another example of how AI-assisted features integrated into enterprise environments can be abused to access and extract critical data assets while remaining entirely invisible to defenders.</p>
+
+<p>Android framework abused for payment fraud
+Threat Actors Exploit LSPosed for Large-Scale Payment Fraud in India
+LSPosed
+is a powerful framework for rooted Android devices that allows users to modify the behavior of the system and apps in real-time without actually making any modifications to APK files. According to CloudSEK, threat actors are now weaponizing the tool to remotely inject fraudulent SMS messages and spoof user identities in modern payment ecosystems via a malicious module called “Digital Lutera.” The attack effectively undermines
+SIM-binding restrictions
+applied to banking and instant payment apps in India. However, for this approach to work, the threat actor requires a victim to install a Trojan that can intercept SMS messages sent to/from the device. While the attack previously combined a trojanized mobile device (the victim) and a modified mobile payment APK (on the attacker’s device) to trick bank servers into believing the victim’s SIM card is physically present in the attacker’s phone, the latest iteration leans on LSPosed to achieve the same goals.</p>
+
+<p>A key requisite to this attack is that the attacker must have a rooted Android device with the LSPosed module and the legitimate, unmodified payment app installed. “This new attack vector allows threat actors to hijack legitimate, unmodified payment applications by ‘gaslighting’ the underlying Android operating system,” CloudSEK
+said
+. “By using LSPosed, the threat actor ensures the payment app’s signature remains valid, making it invisible to many standard integrity checks.”
+That’s the week. A lot of ground covered — old problems with new angles, platforms being abused in ways they weren’t designed for, and a few things that are just going to keep getting worse before anyone seriously addresses them.</p>
+
+<p>Patch what you can. Audit what you’ve trusted by default. And maybe double-check anything that touches AI right now — that space is getting messy fast. Same time next Thursday.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-hidden-security-risks-of-shadow-ai-in-enterprises"><a id="article-4"></a>The Hidden Security Risks of Shadow AI in Enterprises</h2>
+
+<p>As AI tools become more accessible, employees are adopting them without formal approval from IT and security teams. While these tools may boost productivity, automate tasks, or fill gaps in existing workflows, they also operate outside the visibility of security teams, bypassing controls and creating new blind spots in what is known as shadow AI. While similar to the phenomenon of shadow IT, shadow AI goes beyond unapproved software by involving systems that process, generate, and potentially retain sensitive data. The result is a category of risk that most organizations are not yet equipped to govern: uncontrolled data exposure, expanded attack surfaces, and weakened identity security.</p>
+
+<p>Why shadow AI is spreading so quickly
+Shadow AI is expanding rapidly across organizations because it is easy to adopt and instantly useful, yet largely unregulated. Unlike traditional enterprise software, most AI tools require little to no setup, allowing employees to start using them immediately. According to a 2024
+Salesforce
+survey, 55% of employees reported using AI tools that had not been approved by their organization. Since many organizations lack clear AI usage policies, employees must decide which tools to use and how to use them on their own, often without understanding the security implications.</p>
+
+<p>Employees may use generative AI tools like ChatGPT or Claude in everyday workflows, and while this can improve productivity, it can result in sensitive data being shared externally without oversight. Whether or not the AI vendor uses that data for model training depends on the platform and account type, but in either case, the data has left the organization’s security boundary. At the department level, shadow AI may appear when teams integrate AI APIs or third-party models into applications without a formal security review. These integrations can expose internal data and introduce new attack vectors that security teams cannot see or control.</p>
+
+<p>Rather than trying to eliminate shadow AI entirely, organizations must actively manage the risks it creates. How shadow AI is a security problem
+Shadow AI is often framed as a governance issue, but it is a security problem at its core. Unlike traditional shadow IT, where employees adopt unapproved software, shadow AI involves systems that actively process and store data beyond the scope of security teams, turning unsanctioned AI usage into a broader risk of data exposure and access misuse. Shadow AI can lead to untraceable data leaks
+Employees may share customer data, financial information, or internal business documents with AI tools to complete tasks more efficiently.</p>
+
+<p>Developers who troubleshoot code may inadvertently paste scripts containing hardcoded API keys, database credentials, or access tokens, exposing sensitive credentials without realizing it. Once the data reaches a third-party AI platform, organizations lose visibility into how it is stored or used. As a result, data can leave an organization without an audit trail, making it difficult, if not impossible, to trace or contain a breach. Under GDPR and HIPAA, this type of uncontrolled data transfer can constitute a reportable violation.</p>
+
+<p>Shadow AI rapidly expands the attack surface
+Every AI tool creates a new potential attack vector for cybercriminals. When unapproved tools are adopted without oversight, they may include unvetted APIs or plugins that are insecure or malicious. Employees accessing AI platforms through personal accounts or devices place that activity entirely outside the organization’s security controls, and traditional network monitoring cannot see it. As organizations begin deploying AI agents that operate autonomously within workflows, the risk grows even more severe.</p>
+
+<p>These systems interact with multiple applications and platforms, creating complex and largely hidden pathways that cybercriminals can exploit. Shadow AI bypasses traditional security controls
+Traditional security controls were not built to handle today’s AI usage. Most AI platforms operate over HTTPS, meaning standard firewall rules and network monitoring cannot inspect the content of those interactions without SSL inspection in place — a control many organizations have not deployed. Conversational AI interfaces also don’t behave like traditional applications, making it harder for security tools to monitor or log activity.</p>
+
+<p>Because of this, data can be shared with external AI systems without triggering any alerts. Shadow AI impacts identity security
+Shadow AI introduces serious Identity and Access Management (IAM) challenges. For example, employees might create several accounts across AI platforms, leading to fragmented and unmanaged identities. Developers may even connect AI tools to systems using service accounts, creating
+Non-Human Identities
+(NHIs) without proper oversight.</p>
+
+<p>If organizations lack centralized governance, these identities can become poorly monitored and difficult to manage throughout their lifecycle, increasing the risk of unauthorized access and long-term exposure. How organizations can reduce shadow AI risk
+As AI becomes more integrated into daily workflows, organizations must aim to reduce risk while enabling safe, productive usage. This requires security teams to shift from blocking AI tools altogether to managing how they are used in the workplace, emphasizing visibility and user behavior. Organizations can reduce shadow AI risk by following these steps:
+Establish clear AI usage policies:
+Define which AI tools are allowed and what data can be shared.</p>
+
+<p>Security policies should be easy to follow and intuitive, since overly restrictive rules will only push employees toward using unsanctioned tools. Provide approved AI alternatives:
+When employees don’t have access to useful tools, they are more likely to find their own. Offering approved, secure AI solutions that meet organizational standards reduces the need for shadow AI. Improve visibility into AI usage patterns:
+While full visibility may not always be possible, organizations should monitor network traffic, privileged access and API activity to better understand how employees are using AI.</p>
+
+<p>Educate employees on AI security risks:
+Many employees focus only on the productivity advantages of AI tools rather than the security risks. Providing training on safe AI usage and data handling can dramatically reduce unintentional exposure. Benefits of effectively managing shadow AI
+Organizations that proactively manage shadow AI will gain greater control over how AI is used across their environments. Effectively managing shadow AI provides several benefits, including:
+Full visibility into which AI tools are in use and what data they are accessing
+Reduced regulatory exposure under frameworks like GDPR, HIPAA, and the EU AI Act
+Faster and safer AI adoption with vetted tools and thorough guidelines
+Higher adoption of approved AI tools, reducing reliance on insecure alternatives
+Security must account for shadow AI
+AI adoption is becoming normalized in the workplace, and employees will continue seeking tools that help them work faster.</p>
+
+<p>Given how easy AI tools are to access and how rarely usage policies keep pace with adoption, some degree of shadow AI in any large organization is inevitable. Instead of trying to block AI tools entirely, organizations should focus on enabling their safe use by enhancing visibility into AI activity and ensuring that both human and machine identities are properly governed. Keeper®
+supports this approach directly, helping organizations control privileged access to the systems AI tools interact with, enforce least-privilege access for all identities, including human users and AI agents, and maintain a full audit trail of activity across critical infrastructure. As AI agents become more prevalent in enterprise workflows, governing the identities and access paths they rely on becomes as important as governing the tools themselves.</p>
+
+<p>Note
+:
+This article was thoughtfully written and contributed for our audience by Ashley D’Andrea, Content Writer at Keeper Security. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="adobe-reader-zero-day-exploited-via-malicious-pdfs-since-december-2025"><a id="article-5"></a>Adobe Reader Zero-Day Exploited via Malicious PDFs Since December 2025</h2>
+
+<p>Threat actors have been exploiting a previously unknown zero-day vulnerability in Adobe Reader using maliciously crafted PDF documents since at least December 2025. The finding, detailed by EXPMON’s Haifei Li, has been
+described
+as a highly-sophisticated PDF exploit. The
+artifact
+(“Invoice540.pdf”) first appeared on the VirusTotal platform on November 28, 2025. A
+second sample
+was uploaded to VirusTotal on March 23, 2026.</p>
+
+<p>Given the name of the PDF document, it’s likely that there is an element of social engineering involved, with the attackers luring unsuspecting users into opening the files on Adobe Reader. Once launched, it automatically triggers the execution of obfuscated JavaScript to harvest sensitive data and receive additional payloads. Security researcher Gi7w0rm, in an
+X post
+, said the PDF documents observed contain Russian language lures and refer to issues regarding current events related to the oil and gas industry in Russia. “The sample acts as an initial exploit with the capability to collect and leak various types of information, potentially followed by remote code execution (RCE) and sandbox escape (SBX) exploits,” Li said.</p>
+
+<p>“It abuses zero-day/unpatched vulnerability in Adobe Reader that allows it to execute privileged Acrobat APIs, and it is confirmed to work on the latest version of Adobe Reader.”
+It also comes with capabilities to exfiltrate the collected information to a remote server (“169.40.2[.]68:45191”) and receive additional JavaScript code to be executed. This mechanism, Li argued, could be used to collect local data, perform advanced fingerprinting attacks, and set the stage for follow-on activity, including delivering additional exploits to achieve code execution or sandbox. The exact nature of this next-stage exploit remains unknown as no response was received from the server. This, in turn, could imply the local testing environment from which the request was issued did not meet the necessary criteria to receive the payload.</p>
+
+<p>“Nevertheless, this zero-day/unpatched capability for broad information harvesting and the potential for subsequent RCE/SBX exploitation is enough for the security community to remain on high alert,” Li said. (This is a developing story. Please check back for more details.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="inside-the-2026-cyber-workforce-skills-shortages-and-shifts-in-the-age-of-ai"><a id="article-6"></a>Inside the 2026 Cyber Workforce: Skills, Shortages, and Shifts in the Age of AI</h2>
+
+<h2 id="bitter-linked-hack-for-hire-campaign-targets-journalists-across-mena-region"><a id="article-7"></a>Bitter-Linked Hack-for-Hire Campaign Targets Journalists Across MENA Region</h2>
+
+<p>An apparent hack-for-hire campaign likely orchestrated by a threat actor with suspected ties to the Indian government targeted journalists, activists, and government officials across the Middle East and North Africa (MENA), according to findings from
+Access Now
+,
+Lookout
+, and
+SMEX
+. Two of the targets included prominent Egyptian journalists and government critics, Mostafa Al-A’sar and Ahmed Eltantawy, who were at the receiving end of a series of spear-phishing attacks that sought to compromise their Apple and Google accounts in October 2023 and January 2024 by directing them to fake pages that tricked them into entering their credentials and two-factor authentication (2FA) codes. “The attacks were carried out from 2023 to 2024, and both targets are prominent critics of the Egyptian government who have previously faced political imprisonment; one of them was previously targeted with
+spyware
+,” Access Now’s Digital Security Helpline said. Also singled out as part of these efforts was an anonymous Lebanese journalist, who received phishing messages in May 2025 through the Apple Messages app and WhatsApp containing malicious links that, when clicked, tricked users into entering their account credentials as part of a supposed verification step from Apple.</p>
+
+<p>“The phishing campaign included persistent attacks via iMessage/Apple Messenger and WhatsApp app, […] impersonating Apple Support,” SMEX, a digital rights non-profit in the West Asia and North Africa (WANA) region, said. “While the main focus of this campaign appears to be Apple services, evidence suggests that other messaging platforms, namely Telegram and Signal, were also targeted.”
+In the case of Al-A’sar, the spear-phishing attack aimed at compromising his Google account began with a LinkedIn message from a sock puppet persona named “Haifa Kareem,” who approached him with a job opportunity. After the journalist shared their mobile number and email address with the LinkedIn user, he received an email from the latter on January 24, 2024, instructing him to join a Zoom call by clicking on a link shortened using Rebrandly. The URL is assessed to be a consent-based phishing attack that leverages Google’s OAuth 2.0 to grant the attacker unauthorized access to the victim’s account through a malicious web application named “en-account.info.”
+“Unlike the previous attack, where the attacker impersonated an Apple account login and used a fake domain, this attack employs OAuth consent to leverage legitimate Google assets to deceive targets into providing their credentials,” Access Now said.</p>
+
+<p>“If the targeted user is not logged in to Google, they are prompted to enter their credentials (username and password). More commonly, if the user is already logged in, they are prompted to grant permission to an application that the attacker controls, using a third-party sign-in feature that is familiar to most Google users.”
+Some of the domains used in these phishing attacks are listed below -
+signin-apple.com-en-uk[.]co
+id-apple.com-en[.]io
+facetime.com-en[.]io
+secure-signal.com-en[.]io
+telegram.com-en[.]io
+verify-apple.com-ae[.]net
+join-facetime.com-ae[.]net
+android.com-ae[.]net
+encryption-plug-in-signal.com-ae[.]net
+Interestingly, the use of the domain ”com-ae[.]net” overlaps with an Android spyware campaign that Slovakian cybersecurity company ESET documented in October 2025, highlighting the use of deceptive websites impersonating Signal, ToTok, and Botim to deploy
+ProSpy and ToSpy
+to unspecified targets in the U.A.E. Specifically, the domain ”encryption-plug-in-signal.com-ae[.]net” was used as an initial access vector for ProSpy by claiming to be a non-existent encryption plugin for Signal.The spyware comes fitted with capabilities to exfiltrate sensitive data like contacts, SMS messages, device metadata, and local files. Neither of the Egyptian journalists’ accounts was ultimately infiltrated.</p>
+
+<p>However, SMEX revealed that the initial attack that targeted the Lebanese journalist on May 19, 2025, completely compromised their Apple Account and resulted in the addition of a virtual device to the account to gain persistent access to the victim’s data. The second wave of attacks was unsuccessful. While there is no evidence that the three journalists were targeted with spyware, the evidence shows that threat actors can use the methods and infrastructure associated with the attacks to deliver malicious payloads and exfiltrate sensitive data. “This suggests that the operation we identified may be part of a broader regional surveillance effort aimed at monitoring communications and harvesting personal data,” Access Now said.</p>
+
+<p>Lookout, in its own analysis of these campaigns, attributed the disparate efforts to a hack-for-hire operation with ties to
+Bitter
+, a threat cluster that’s assessed to be tasked with intelligence gathering efforts in the interests of the Indian government. The espionage campaign has been operational since at least 2022. Based on the phishing domains observed and ProSpy malware lures, the campaign has likely targeted victims in Bahrain, the U.A.E., Saudi Arabia, the U.K., Egypt, and potentially the U.S., or alumni of U.S. universities, indicating the attacks go beyond members of Egyptian and Lebanese civil society.</p>
+
+<p>“The operation features a combination of targeted spear-phishing delivered through fake social media accounts and messaging applications leveraging persistent social engineering efforts, which may result in the delivery of Android spyware depending on the target’s device,” the cybersecurity company said. The campaign’s links to Bitter stem from
+infrastructure connections
+between ”
+com-ae[.]net
+“ and ”
+youtubepremiumapp[.]com
+,” a domain flagged by
+Cyble
+and
+Meta
+in August 2022 as linked to Bitter in relation to an espionage effort that used fake sites mimicking trusted services like YouTube, Signal, Telegram, and WhatsApp to distribute an Android malware dubbed Dracarys. Lookout’s analysis has also uncovered similarities between Dracarys and ProSpy, despite the latter being developed years later using Kotlin instead of Java. “Both families use worker logic to handle tasks, and they name the worker classes similarly.</p>
+
+<p>They also both use numbered C2 commands,” the company added. “While ProSpy exfiltrates data to server endpoints starting with ’v3,’ Dracarys exfiltrates data to server endpoints starting with ’r3.’”
+These connections notwithstanding, what makes the campaign unusual is that Bitter has never been attributed to espionage campaigns targeting civil society members. This has raised two possibilities: either it’s the work of a hack-for-hire operation with ties to Bitter or the threat actor itself is behind it, in which case it could indicate an expansion of its targeting scope. “We do not know whether this represents an expansion of Bitter’s role, or if it is an indication of overlap between Bitter and an unknown hack-for-hire group,” Lookout added.</p>
+
+<p>“What we do know is that mobile malware continues to be a primary means of spying on civil society, whether it is purchased through a commercial surveillance vendor, outsourced to a hack-for-hire organization, or deployed directly by a nation state.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="new-chaos-variant-targets-misconfigured-cloud-deployments-adds-socks-proxy"><a id="article-8"></a>New Chaos Variant Targets Misconfigured Cloud Deployments, Adds SOCKS Proxy</h2>
+
+<p>Cybersecurity researchers have flagged a new variant ofmalware called
+Chaos
+that’scapable of hitting misconfigured cloud deployments, marking an expansion of the botnet’s targeting infrastructure. “Chaos malware is increasingly targeting misconfigured cloud deployments, expanding beyond its traditional focus on routers and edge devices,” Darktrace
+said
+in a new report. Chaos was
+first documented
+by Lumen Black Lotus Labs in September 2022, describing it as a cross-platform malware capable of targeting Windows and Linux environments to run remote shell commands, drop additional modules, propagate to other hosts by brute-forcing SSH keys, mine cryptocurrency, and launch distributed denial-of-service (DDoS) attacks via HTTP, TLS, TCP, UDP, and WebSocket. The malware is assessed to be an evolution of another DDoS malware known as
+Kaiji
+that has singled out misconfigured Docker instances.It’s currently not known who is behind the operation, but the presence of Chinese language characters and the use of China-based infrastructure suggest that the threat actor could be of Chinese origin.</p>
+
+<p>Darktrace said it identified the new variant targeting its honeypot network last month, a deliberately misconfigured Hadoop instance that enables remote code execution on the service. In the attack spotted by the cybersecurity company, the intrusion commenced with an HTTP request to the Hadoop deployment to create a new application. The application, for its part, embedded a sequence of shell commands to retrieve a Chaos agent binary from an attacker-controlled server (“pan.tenire[.]com”), set permissions to allow all users to read, modify, or run it (“chmod 777”), and then actually execute the binary and delete the artifact from disk to minimize the forensic trail. An interesting aspect of the attack is that the domain was previously put to use in connection with an email phishing campaign carried out by the Chinese cybercrime group Silver Fox to deliver decoy documents and ValleyRAT malware.</p>
+
+<p>The campaign was codenamed
+Operation Silk Lure
+by Seqrite Labs in October 2025. The 64-bit ELF binary is a restructured and updated version of Chaos that reworks several of its functions, while keeping most of its core feature set intact. One of the more significant changes, however, concerns the removal of functions that enabled it to spread via SSH and exploit router vulnerabilities. Taking their place is a new SOCKS proxy feature that allows the compromised system to be used for ferrying traffic, thereby concealing the true origins of malicious activity and making it harder for defenders to detect and block the attack.</p>
+
+<p>“In addition, several functions that were previously believed to be inherited from Kaiji have also been changed, suggesting that the threat actors have either rewritten the malware or refactored it extensively,” Darktrace added. The addition of the proxy feature is likely a sign that threat actors behind the malware are lookingto further monetize the botnet beyond cryptocurrency mining and
+DDoS-for-hire
+, and keep up with their competitors in the cybercrime market by offering a diverse slate of illicit services. “While Chaos is not a new malware, its continued evolution highlights the dedication of cybercriminals to expand their botnets and enhance the capabilities at their disposal,” Darktrace concluded. “The recent shift in botnets such as
+AISURU
+and Chaos to include proxy services as core features demonstrates that denial-of-service is no longer the only risk these botnets pose to organizations and their security teams.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="masjesu-botnet-emerges-as-ddos-for-hire-service-targeting-global-iot-devices"><a id="article-9"></a>Masjesu Botnet Emerges as DDoS-for-Hire Service Targeting Global IoT Devices</h2>
+
+<p>Cybersecurity researchers have lifted the curtain on a stealthy botnet that’s designed for distributed denial-of-service (DDoS) attacks. Called
+Masjesu
+, the botnet has been advertised via Telegram as a DDoS-for-hire service since it first surfaced in 2023. It’s capable of targeting a wide range of IoT devices, such as routers and gateways, spanning multiple architectures. “Built for persistence and low visibility, Masjesu favors careful, low-key execution over widespread infection, deliberately avoiding blocklisted IP ranges such as those belonging to the Department of Defense (DoD) to ensure long-term survival,” Trellix security researcher Mohideen Abdul Khader F
+said
+in a Tuesday report.</p>
+
+<p>It’s worth noting that the commercial offering also goes by the moniker XorBot owing to its use of XOR-based encryption to conceal strings, configurations, and payload data. It was
+first documented
+by Chinese security vendor NSFOCUS in December 2023, linking it to an operator named “synmaestro.”
+A
+subsequent iteration
+of the botnet observed a year later was found to have added 12 different command injection and code execution exploits to target routers, cameras, DVRs, and NVRs from D-Link, Eir, GPON, Huawei, Intelbras, MVPower, NETGEAR, TP-Link, and Vacron, and obtain initial access. Also added were new modules to conduct DDoS flood attacks. “As an emerging botnet family, XorBot is showing a strong growth momentum, continuously infiltrating and controlling new IoT devices,” NSFOCUS said in November 2024.</p>
+
+<p>“Notably, these controllers are increasingly inclined to use social media platforms such as Telegram as the main channels for recruitment and promotion, attracting target ‘customers’ through initial active promotional activities, laying a solid foundation for the subsequent expansion and development of the botnet.”
+The latest findings from Trellix show that Masjesu has marketed the ability to carry out volumetric DDoS attacks, emphasizing its diverse botnet infrastructure and its suitability for targeting content delivery networks (CDNs), game servers, and enterprises. Attacks mounted by the botnet primarily originate from Vietnam, Ukraine, Iran, Brazil, Kenya, and India, with Vietnam accounting for nearly 50% of the observed traffic. Once deployed on a compromised device, the malware moves to create and bind a socket with a hard-coded TCP port (55988) to enable the attacker to connect directly. If this operation fails, the attack chain is immediately killed.</p>
+
+<p>Otherwise, the malware proceeds to set up persistence, ignore termination-related signals, stop commonly used processes like wget and curl, possibly to disrupt competing botnets, and then connects to an external server to receive DDoS attack commands for executing them against targets of interest. Masjesu also boasts of self-propagating capabilities, allowing it to probe random IP addresses for open ports and wrangle successfully compromised devices into its infrastructure. One notable addition to the list of exploitation targets is Realtek routers, which is carried out by scanning for 52869 – a port associated with
+Realtek SDK’s
+miniigd
+daemon. Multiple DDoS botnets, such as
+JenX
+and
+Satori
+, have embraced the
+same approach
+in the past.</p>
+
+<p>“The botnet continues to expand by infecting a broad range of IoT devices across multiple architectures and manufacturers,” Trellix said. “Notably, Masjesu appears to avoid targeting sensitive critical organizations that could trigger significant legal or law-enforcement attention, a strategy that likely improves its long-term survivability.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="apt28-deploys-prismex-malware-in-campaign-targeting-ukraine-and-nato-allies"><a id="article-10"></a>APT28 Deploys PRISMEX Malware in Campaign Targeting Ukraine and NATO Allies</h2>
+
+<p>The Russian threat actor known as
+APT28
+(aka Forest Blizzard and Pawn Storm) has been linked to a fresh spear-phishing campaign targeting Ukraine and its allies to deploy a previously undocumented malware suite codenamed
+PRISMEX
+. “PRISMEX combines advanced steganography, component object model (COM) hijacking, and legitimate cloud service abuse for command-and-control,” Trend Micro researchers Feike Hacquebord and Hiroyuki Kakara
+said
+in a technical report. The campaign is believed to be active since at least  September 2025. The activity has targeted various sectors in Ukraine, including central executive bodies, hydrometeorology, defense, and emergency services, as well as rail logistics (Poland), maritime and transportation (Romania, Slovenia, Turkey), and logistical support partners involved in ammunition initiatives (Slovakia, Czech Republic), and military and NATO partners.</p>
+
+<p>The campaign is notable for the rapid weaponization of newly disclosed flaws, such as
+CVE-2026-21509
+and
+CVE-2026-21513
+, to breach targets of interest, with infrastructure preparation observed on January 12, 2026, exactly two weeks before the former was publicly disclosed. In late February 2025, Akamai also disclosed that APT28 may have weaponized CVE-2026-21513 as a zero-day based on a Microsoft Shortcut (LNK) exploit that was uploaded to VirusTotal on January 30, 2026, well before the Windows maker pushed out a fix as part of its Patch Tuesday update on February 10, 2026. This pattern of zero-day exploitation indicates that the threat actor had advanced knowledge of the vulnerabilities prior to them being revealed by Microsoft. An interesting overlap between campaigns exploiting the two vulnerabilities is the domain “wellnesscaremed[.]com.” This commonality, combined with the timing of the two exploits, has raised the possibility that the threat actors are stringing together CVE-2026-21513 and CVE-2026-21509 into a sophisticated two-stage attack chain.</p>
+
+<p>“The first vulnerability (CVE-2026-21509) forces the victim’s system to retrieve a malicious .LNK file, which then exploits the second vulnerability (CVE-2026-21513) to bypass security features and execute payloads without user warnings,” Trend Micro theorized. The attacks culminate in the deployment of either
+MiniDoor
+, an Outlook email stealer, or a collection of interconnected malware components collectively known as PRISMEX, so named for the use of a steganographic technique to conceal payloads within image files. These include -
+PrismexSheet
+, a malicious Excel dropper with VBA macros that extracts payloads embedded within the file using steganography, establishes persistence via
+COM hijacking
+, and displays a decoy document related to drone inventory lists and drone prices after macros are enabled. PrismexDrop
+, a native dropper that readies the environment for follow-on exploitation and uses scheduled tasks and COM DLL hijacking for persistence.</p>
+
+<p>PrismexLoader
+(aka PixyNetLoader), a proxy DLL that extracts the next-stage .NET payload scattered across a PNG image’s (“SplashScreen.png”) file structure using a bespoke “Bit Plane Round Robin” algorithm and runs it entirely in memory. PrismexStager
+, a COVENANT Grunt implant that abuses Filen.io cloud storage for C2. It’s worth mentioning here that some aspects of the campaign were previously documented by Zscaler ThreatLabz under the moniker
+Operation Neusploit
+. APT28’s use of
+COVENANT
+, an open-source command-and-control (C2) framework, was first highlighted by the Computer Emergency Response Team of Ukraine (CERT-UA) in June 2025.</p>
+
+<p>PrismexStager is assessed to be an expansion of MiniDoor and
+NotDoor
+(aka GONEPOSTAL), a Microsoft Outlook backdoor deployed by the hacking group in late 2025. In at least one incident in October 2025, the COVENANT Grunt payload was found to not only facilitate information gathering, but also run a destructive wiper command that erases all files under the “%USERPROFILE%” directory. This dual capability lends weight to the hypothesis that these campaigns could be designed for both espionage and sabotage. “This operation demonstrates that Pawn Storm remains one of the most aggressive Russia-aligned intrusion sets,” Trend Micro said.</p>
+
+<p>“The targeting pattern reveals a strategic intent to compromise the supply chain and operational planning capabilities of Ukraine and its NATO partners.”
+“The strategic focus on targeting the supply chains, weather services, and humanitarian corridors supporting Ukraine represents a shift toward operational disruption that may presage more destructive activities.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="shrinking-the-iam-attack-surface-through-identity-visibility-and-intelligence-platforms-ivip"><a id="article-11"></a>Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)</h2>
+
+<p>The Fragmented State of Modern Enterprise Identity
+Enterprise IAM is approaching a breaking point. As organizations scale, identity becomes increasingly fragmented across thousands of applications, decentralized teams, machine identities, and autonomous systems. The result is Identity Dark Matter: identity activity that sits outside the visibility of centralized IAM and beyond the reach of security teams. According to
+Orchid Security
+’s
+analysis
+, 46% of enterprise identity activity occurs outside centralized IAM visibility.</p>
+
+<p>In other words, nearly half of the enterprise identity surface may be operating unseen. This hidden layer includes unmanaged applications, local accounts, opaque authentication flows, and over-permissioned non-human identities. It is further amplified by disconnected tools, siloed ownership, and the rapid rise of Agentic AI. The consequence is a widening gap between what the security organizations think they have and the access that actually exists.</p>
+
+<p>That gap is where modern identity risk now lives. Defining the IVIP Category: The Visibility &amp; Observability Layer
+To close these gaps, Gartner has introduced the Identity Visibility and Intelligence Platform (IVIP) as a fundamental “System of Systems.” Within the Identity Fabric framework, IVIPs occupy Layer 5: Visibility and Observability, providing an independent layer of oversight above access management and governance. By formal definition, an IVIP solution rapidly ingests and unifies IAM data, leveraging AI-driven analytics to provide a single window into identity events, user-resource relationships, and posture. Feature
+Traditional IAM / IGA
+IVIP / Observability
+Visibility Scope
+Integrated and governed applications only
+Comprehensive: managed, unmanaged, and disconnected systems
+Data Source
+Owner attestations and manual documentation
+Continuous runtime insight and application-level telemetry
+Analysis Method
+Static configuration reviews and “Inference”
+Continuous discovery and evidence-based proof
+Intelligence
+Basic rule-based logic
+LLM-powered intent discovery and behavior analysis
+What an IVIP Must Actually Do
+A credible IVIP cannot be just another identity repository.</p>
+
+<p>It has to serve as an active intelligence engine for the enterprise identity ecosystem. First, it must provide
+continuous
+discovery
+of both human and non-human identities across every relevant system, including those that sit outside formal IAM onboarding. Second, it must act as an
+identity data platform
+, unifying fragmented information from directories, applications, and infrastructure into a more coherent source of truth. Third, it must deliver
+intelligence
+, using analytics and AI to convert scattered identity signals into meaningful security insight.</p>
+
+<p>From a technical standpoint, that means supporting capabilities such as
+automated
+remediation
+, so posture gaps can be corrected directly across the IAM stack;
+real-time signal sharing
+, using standards like CAEP to trigger immediate security actions; and
+intent-based intelligence
+, where LLMs help interpret the purpose behind identity activity and separate normal operational behavior from truly risky patterns. This is the shift from identity visibility to identity understanding and ultimately, to identity control. Orchid Security: Delivering the IVIP Control Plane
+Orchid Security operationalizes the Identity Visibility and Intelligence Platform (IVIP) model by transforming fragmented identity signals into continuous, application-level intelligence. Rather than relying solely on centralized IAM integrations, Orchid builds visibility directly from the application estate itself, allowing organizations to discover, unify, and analyze identity activity across systems that traditional tools cannot see.</p>
+
+<ol>
+  <li>Visibility and Data Scope: Seeing the Full Application and Identity Estate
+A core IVIP requirement is
+continuous discovery
+of identities and the systems they operate in. Orchid achieves this through binary analysis and dynamic instrumentation, enabling it to inspect
+native authentication and authorization logic directly inside applications and infrastructure
+without requiring APIs, source-code changes, or lengthy integrations. This approach provides a critical advantage in application estate discovery.</li>
+</ol>
+
+<p>Many enterprises cannot govern identities across applications that central security teams do not even know exist. Orchid surfaces these systems first, because you cannot assess, govern, or secure what you cannot see. By identifying the real application estate, including custom apps, COTS, legacy systems, and shadow IT, Orchid reveals the identity dark matter embedded within them, such as local accounts, undocumented authentication paths, and unmanaged machine identities. 2.</p>
+
+<p>Data Unification: Building the Identity Evidence Layer
+IVIP platforms must unify fragmented identity data into a consistent operational picture. Orchid accomplishes this by capturing
+proprietary audit telemetry from inside applications
+and combining it with logs and signals from centralized IAM systems. The result is an
+evidence-based identity data layer
+that shows how identities actually behave across the environment. Instead of relying on configuration assumptions or incomplete integrations, organizations gain a unified view of:
+Identities across applications and infrastructure
+Authentication and authorization flows
+Privilege relationships and external access paths
+This unified evidence allows security teams to reconcile the gap between documented policy and real operational access.</p>
+
+<ol>
+  <li>Intelligence: Converting Telemetry into Actionable Insight
+An IVIP must transform identity telemetry into actionable intelligence. Orchid’s cross-estate identity audits demonstrate how powerful this layer becomes when identity activity is analyzed directly at the application level. Across enterprise environments,
+Orchid observes
+that:
+85% of applications contain accounts from legacy or external domains
+, with
+20% using consumer email domains
+, creating major data-exfiltration risk.</li>
+</ol>
+
+<p>70% of applications contain excessive privileges
+, with
+60% granting broad administrative or API access to third parties
+. 40% of all accounts are orphaned
+, rising to
+60% in some legacy environments
+. These insights are not inferred from policy; they are observed directly from identity behavior inside applications. This moves organizations from a posture of configuration-based inference to
+evidence-driven identity intelligence
+.</p>
+
+<p>Extending IVIP to the Next Identity Frontier: AI Agents
+Autonomous AI agents represent the next wave of identity dark matter, often operating with independent identities and permissions that fall outside traditional governance models. Orchid extends the IVIP framework to these emerging identities through its
+Guardian Agent
+architecture, enabling organizations to apply Zero Trust governance to AI-driven activity. Secure AI-agent adoption is guided by five principles:
+Human-to-Agent Attribution:
+Every agent action is linked to a responsible human owner. Activity Audit:
+A complete chain of custody is recorded (Agent → Tool/API → Action → Target).</p>
+
+<p>Context-Aware Guardrails:
+Access decisions are evaluated dynamically based on the sensitivity of the resource and the human owner’s entitlements. Least Privilege:
+Just-in-Time access replaces persistent privileged credentials. Automated Remediation:
+Risky behavior can trigger automated responses such as credential rotation or session termination. By combining
+application estate discovery, identity telemetry, and AI-driven intelligence
+, Orchid fulfills the core IVIP mission: turning invisible identity activity into a governed, observable, and controllable security surface.</p>
+
+<p>Measuring Success: Outcome-Driven Metrics (ODMs) and Remediation
+Identity decisions are only as good as the data behind them. CISOs must pivot from “deployed controls” to Outcome-Driven Metrics (ODMs). ODM Example:
+Instead of counting IGA licenses, measure the reduction of unused (dormant) entitlements from 70% to 10% within a fiscal quarter. Protection-Level Agreements (PLAs):
+Negotiate target outcomes with the business.</p>
+
+<p>A PLA might mandate the revocation of critical access within 24 hours for a leaver, significantly shrinking the attacker’s window of opportunity. Business ROI:
+By moving to continuous observability, organizations can shrink audit preparation from months to minutes through automated compliance evidence generation. Strategic Implementation Roadmap for IAM Leaders
+To reduce the attack surface, we recommend the following prioritized actions:
+Form a Cross-Disciplinary Task Force:
+Align IT operations, app owners, IAM owners and GRC to break down technical silos. Perform Risk-Quantified Gap Analysis:
+Begin with machine identities, as these often represent the highest risk and lowest visibility.</p>
+
+<p>Implement No-Code Remediation:
+Close posture drift (e.g., suspending orphaned accounts, weak password complexity) automatically as it is discovered. Leverage Unified Visibility for High-Stakes Events:
+Utilize IVIP telemetry during M&amp;A or growth events to audit the identity posture of acquired assets before they are integrated into the primary network. Audit for Business Risk:
+Use continuous visibility to detect violations at the application level that traditional tools miss. Final Statement
+Unified visibility is no longer a secondary feature; it is the essential control plane.</p>
+
+<p>Organizations must move beyond the “locked front door” and implement identity observability to govern the dark matter where modern attackers hide. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="anthropics-claude-mythos-finds-thousands-of-zero-day-flaws-across-major-systems"><a id="article-12"></a>Anthropic’s Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems</h2>
+
+<p>Artificial Intelligence (AI) company Anthropic announced a new cybersecurity initiative called
+Project Glasswing
+that will use a preview version of its new frontier model,
+Claude Mythos
+, to find and address security vulnerabilities. The model will be
+used
+by a small set of organizations, including Amazon Web Services, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks, along with Anthropic, to secure critical software. The company said it’s forming this initiative in response to capabilities observed in its general-purpose frontier model that demonstrate a “level of coding capability where they can surpass all but the most skilled humans at finding and exploiting software vulnerabilities.” Because of its cybersecurity capabilities and concerns that they could be abused, Anthropic has opted not to make the model generally available. Mythos Preview, Anthropic claimed, has already
+discovered
+thousands of high-severity zero-day vulnerabilities in every major operating system and web browser.</p>
+
+<p>Some of these include a now-patched 27-year-old bug in OpenBSD, a 16-year-old flaw in FFmpeg, and a memory-corrupting vulnerability in a memory-safe virtual machine monitor. In one instance highlighted by the company, Mython Preview is said to have autonomously come with a web browser exploit that chained together four vulnerabilities to escape the renderer and operating system sandboxes. Anthropic also
+noted
+in the preview’s system card that the model solved a corporate network attack simulation that would have taken a human expert more than 10 hours. In perhaps what’s one of the most eyebrow-raising findings, Mythos Preview managed to follow instructions from a researcher running an evaluation to escape a secured “sandbox” computer it was provided with, indicating a “potentially dangerous capability” to bypass its own safeguards.</p>
+
+<p>The model did not stop there. It further went on to perform a series of additional actions, including devising a multi-step exploit to gain broad internet access from the sandbox system and send an email message to the researcher, who was eating a sandwich in a park. “In addition, in a concerning and unasked-for effort to demonstrate its success, it posted details about its exploit to multiple hard-to-find, but technically public-facing, websites,” Anthropic said. The company pointed out that
+Project Glasswing
+is an “urgent attempt” to employ frontier model capabilities for defensive purposes before those same capabilities are adopted by hostile actors.</p>
+
+<p>It’s also committing up to $100 million in usage credits for Mythos Preview, as well as $4 million in direct donations to open-source security organizations. “We did not explicitly train Mythos Preview to have these capabilities,” Anthropic said. “Rather, they emerged as a downstream consequence of general improvements in code, reasoning, and autonomy. The same improvements that make the model substantially more effective at patching vulnerabilities also make it substantially more effective at exploiting them.”
+News of Mythos
+leaked
+last month after details about the model were inadvertently stored in a publicly accessible data cache due to human error.</p>
+
+<p>The draft material described it as the most powerful and capable AI model built to date. Days later, Anthropic suffered a second security lapse that accidentally exposed nearly 2,000 source code files and over half a million lines of code associated with Claude Code for about three hours. The leak also led to the discovery of a security issue that bypasses certain safeguards when the AI coding agent is presented with a command composed of more than 50 subcommands. The issue has since been formally addressed by Anthropic in Claude Code
+version 2.1.90
+, released last week.</p>
+
+<p>“Claude Code, Anthropic’s flagship AI coding agent that executes shell commands on developers’ machines, silently ignores user-configured security deny rules when a command contains more than 50 subcommands,” AI security company Adversa
+said
+. “A developer who configures ‘never run rm’ will see rm blocked when run alone, but the same ‘rm’ runs without restriction if preceded by 50 harmless statements. The security policy silently vanishes.”
+“Security analysis costs tokens. Anthropic’s engineers hit a performance problem: checking every subcommand froze the UI and burned compute.</p>
+
+<p>Their fix: stop checking after 50. They traded security for speed. They traded safety for cost.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="n-korean-hackers-spread-1700-malicious-packages-across-npm-pypi-go-rust"><a id="article-13"></a>N. Korean Hackers Spread 1,700 Malicious Packages Across npm, PyPI, Go, Rust</h2>
+
+<p>The North Korea-linked persistent campaign known as
+Contagious Interview
+has spread its tentacles by publishing malicious packages targeting the Go, Rust, and PHP ecosystems. “The threat actor’s packages were designed to impersonate legitimate developer tooling […], while quietly functioning as malware loaders, extending Contagious Interview’s established playbook into a coordinated cross-ecosystem supply chain operation,” Socket security researcher Kirill Boychenko
+said
+in a Tuesday report. The complete list of identified packages is as follows -
+npm: dev-log-core, logger-base, logkitx, pino-debugger, debug-fmt, debug-glitz
+PyPI: logutilkit, apachelicense, fluxhttp, license-utils-kit
+Go: github[.]com/golangorg/formstash, github[.]com/aokisasakidev/mit-license-pkg
+Rust: logtrace
+Packagist: golangorg/logkit
+These loaders are designed to fetch platform-specific second-stage payloads, which turn out to be a piece of malware with infostealer and remote access trojan (RAT) capabilities. It’s primarily focused on gathering data from web browsers, password managers, and cryptocurrency wallets.</p>
+
+<p>However, a Windows version of the malware delivered via “license-utils-kit” incorporates what’s described by Socket as a “full post-compromise implant” that’s equipped to run shell commands, log keystrokes, steal browser data, upload files, terminate web browsers, deploy AnyDesk for remote access, create an encrypted archive, and download additional modules. “That makes this cluster notable not just for its cross-ecosystem reach, but for the depth of post-compromise functionality embedded in at least part of the campaign,” Boychenko added. What makes the latest set of libraries noteworthy is that the malicious code is not triggered during installation.Rather, it’s embedded into seemingly legitimate functions that align with the package’s advertised purpose. For instance, in the case of “logtrace,” the code is concealed within “Logger::trace(i32),” a method that’s unlikely to raise a developer’s suspicion.</p>
+
+<p>The expansion of Contagious Interview across five open-source ecosystems is a further sign that the campaign is a well-resourced and persistent supply chain threat engineered to systematically infiltrate these platforms as initial access pathways to breach developer environments for espionage and financial gain. In all, Socket said it has identified
+more than 1,700 malicious packages
+linked to the activity since the start of January 2025. The discovery is part of a broader software supply chain compromise campaign undertaken by North Korean hacking groups. This includes the
+poisoning
+of the popular Axios npm package to distribute an implant called WAVESHAPER.V2 after taking control of the package maintainer’s npm account via a tailored social engineering campaign.</p>
+
+<p>The attack has been attributed to a financially motivated threat actor known as UNC1069, which overlaps with BlueNoroff, Sapphire Sleet, and Stardust Chollima. Security Alliance (SEAL), in a report published today, said it blocked 164 UNC1069-linked domains impersonating services like Microsoft Teams and Zoom between February 6 and April 7, 2026. “UNC1069 operates multi-week, low-pressure social engineering campaigns across Telegram, LinkedIn, and Slack – either impersonating known contacts or credible brands or by leveraging access to previously compromised company and individual accounts – before delivering a fraudulent Zoom or Microsoft Teams meeting link,” SEAL
+said
+. These fake meeting links are used to serve ClickFix-like lures, resulting in the execution of malware that contacts an attacker-controlled server for data theft and targeted post-exploitation activity across Windows, macOS, and Linux.</p>
+
+<p>“Operators deliberately do not act immediately following initial access. The implant is left dormant or passive for a period following compromise,” SEAL added. “The target typically reschedules the failed call and continues normal operations, unaware that the device is compromised. This patience extends the operational window and maximizes the value extracted before any incident response is triggered.”
+In a statement shared with The Hacker News, Microsoft said financially-driven North Korean threat actors are actively evolving their toolset and infrastructure, using domains masquerading as U.S.-based financial institutions and video conferencing applications for social engineering.</p>
+
+<p>“What we are seeing consistently is ongoing evolution in how DPRK-linked, financially motivated actors operate, shifts in tooling, infrastructure, and targeting, but with clear continuity in behavior and intent,” Sherrod DeGrippo, general manager for threat intelligence at Microsoft, said. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-03-19 AI创业新闻</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,600,700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div class="site-container">
+    <aside class="site-sidebar">
+      
+        <nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="/hacker-news-ai-pages/">🤖 <span>AI创业新闻</span></a>
+  </div>
+  
+  
+    <ul class="nav-articles">
+      <li class="nav-section-title">今日文章</li>
+      
+        <li><a href="#article-1">OFAC Sanctions DPRK IT Worker Network Funding WMD Programs Through Fake Remote Jobs</a></li>
+      
+        <li><a href="#article-2">Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access</a></li>
+      
+        <li><a href="#article-3">Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE</a></li>
+      
+        <li><a href="#article-4">Claude Code Security and Magecart: Getting the Threat Model Right</a></li>
+      
+        <li><a href="#article-5">9 Critical IP KVM Flaws Enable Unauthenticated Root Access Across Four Vendors</a></li>
+      
+        <li><a href="#article-6">Product Walkthrough: How Mesh CSMA Reveals and Breaks Attack Paths to Crown Jewels</a></li>
+      
+        <li><a href="#article-7">Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit</a></li>
+      
+        <li><a href="#article-8">Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS</a></li>
+      
+        <li><a href="#article-9">AI Flaws in Amazon Bedrock, LangSmith, and SGLang Enable Data Exfiltration and RCE</a></li>
+      
+        <li><a href="#article-10">LeakNet Ransomware Uses ClickFix via Hacked Sites, Deploys Deno In-Memory Loader</a></li>
+      
+        <li><a href="#article-11">AI is Everywhere, But CISOs are Still Securing It with Yesterday's Skills and Tools, Study Finds</a></li>
+      
+        <li><a href="#article-12">Konni Deploys EndRAT Through Phishing, Uses KakaoTalk to Propagate Malware</a></li>
+      
+    </ul>
+  
+  <a href="/hacker-news-ai-pages/archives/" class="archives-btn" style="background: linear-gradient(90deg, #1dd1a1 0%, #3498db 100%); color: #fff; padding: 0.6em 1.3em; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.08rem; box-shadow: 0 2px 8px #1dd1a122; margin-top: 2.5rem; text-align: center; display: block;">历史归档</a>
+</nav> 
+      
+    </aside>
+    <main class="site-main">
+      <div class="archive-article-content">
+  <h1 id="2026-03-19-ai创业新闻">2026-03-19 AI创业新闻</h1>
+
+<h2 id="ofac-sanctions-dprk-it-worker-network-funding-wmd-programs-through-fake-remote-jobs"><a id="article-1"></a>OFAC Sanctions DPRK IT Worker Network Funding WMD Programs Through Fake Remote Jobs</h2>
+
+<p>The U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC) has sanctioned six individuals and two entities for their involvement in the Democratic People’s Republic of Korea (DPRK)
+information technology (IT) worker scheme
+with an aim to defraud U.S. businesses and generate illicit revenue for the regime to fund its weapons of mass destruction (WMD) programs. “The North Korean regime targets American companies through deceptive schemes carried out by its overseas IT operatives, who weaponize sensitive data and extort businesses for substantial payments,”
+said
+Secretary of the Treasury Scott Bessent.</p>
+
+<p>The
+fraudulent scheme
+, also called Coral Sleet/Jasper Sleet, PurpleDelta and Wagemole, relies on bogus documentation, stolen identities, and fabricated personas to help the IT workers obscure their true origins and land jobs at legitimate companies in the U.S. and elsewhere. A disproportionate portion of the salaries is then funneled back to North Korea to facilitate the nation’s missile programs in violation of international sanctions. In some cases, these efforts are
+complemented
+by the deployment of malware to steal proprietary and sensitive information, as well as engaging in extortion efforts by demanding ransoms in return for not publicly leaking the stolen data.</p>
+
+<p>The individuals and entities targeted by the latest round of OFAC sanctions are listed below -
+Amnokgang Technology Development Company
+, an IT company that manages delegations of overseas IT workers and conducts other illicit procurement activities to obtain and sell military and commercial technology through their overseas networks. Nguyen Quang Viet
+, the Chief Executive Officer of Vietnamese company
+Quangvietdnbg International Services Company Limited
+that facilitates currency conversion services for North Koreans. The company is estimated to have converted about $2.5 million into cryptocurrency between mid-2023 and mid-2025. Do Phi Khanh
+, an associate of Kim Se Un, who was
+sanctioned
+by the U.S.</p>
+
+<p>in July 2025. Do is alleged to have acted as Kim’s proxy and allowed Kim to use his identity to open bank accounts and launder proceeds from IT workers. Hoang Van Nguyen
+, who also assists Kim in opening bank accounts and enables cryptocurrency transactions for Kim. Yun Song Guk
+, a North Korean national who led a group of IT workers conducting freelance IT work from Boten, Laos, since at least 2023.</p>
+
+<p>Yun has coordinated several dozen financial transactions amounting to more than $70,000 with
+Hoang Minh Quang
+relating to IT services, and has worked with
+York Louis Celestino Herrera
+to develop freelance IT service contracts. The development comes as LevelBlue highlighted the IT worker scheme’s use of Astrill VPN to conduct their operations while located in countries like China, owing to the service’s ability to bypass China’s Great Firewall. The idea is to tunnel traffic through U.S. exit nodes, effectively allowing them to masquerade as legitimate domestic employees.</p>
+
+<p>“These threat actors commonly operate from China rather than North Korea for two reasons: more reliable Internet infrastructure and the ability to leverage VPN services to conceal their true geographic origin,” security researcher Tue Luu
+said
+. “Lazarus Group’s subgroups, including
+Contagious Interview
+, rely on this capability to access the global Internet unrestricted, manage command-and-control infrastructure, and mask their true location.”
+The cybersecurity company also said it detected an unsuccessful attempt made by North Korea to infiltrate an organization by replying to a help wanted ad. The IT worker, who was hired on August 15, 2025, as a remote employee to work on Salesforce data, was terminated 10 days later after exhibiting indicators showing consistent logins from China. A notable aspect of Jasper Sleet’s tradecraft is the use of artificial intelligence to enable identity fabrication, social engineering, and long‑term operational persistence at low cost, underscoring how AI‑powered services can lower technical barriers and augment threat actors’ capabilities.</p>
+
+<p>“Jasper Sleet leverages AI across the attack lifecycle to get hired, stay hired, and misuse access at scale,” Microsoft
+said
+. “Threat actors are using AI to shortcut the reconnaissance process that informs the development of convincing digital personas tailored to specific job markets and roles.”
+Another crucial component involves using an AI application called Faceswap to insert the faces of North Korean IT workers into stolen identity documents and to generate polished headshots for resumes. In doing so, these efforts not only aim to improve the precision of their campaigns, but also increase the credibility by crafting convincing digital identities. Furthermore, the remote IT worker threat is assessed to have leveraged agentic AI tools to create fake company websites, and to rapidly generate, refine, and reimplement malware components, in some cases by jailbreaking large language models (LLMs).</p>
+
+<p>“Threat actors such as North Korean remote IT workers rely on long‑term, trusted access,” Microsoft said. “Because of this fact, defenders should treat fraudulent employment and access misuse as an insider‑risk scenario, focusing on detecting misuse of legitimate credentials, abnormal access patterns, and sustained low‑and‑slow activity.”
+In a detailed report published by Flare and IBM X-Force examining the tactics and techniques employed by the IT worker operatives, it has come to light that the threat actors use timesheets for tracking job applications and work progress, IP Messenger (aka IPMsg) for decentralized internal communication, and Google Translate to translate job descriptions, craft applications, and even interpret responses from tools like ChatGPT. The IT worker scheme is built atop a multi-tiered operational structure involving recruiters, facilitators, IT workers, and collaborators, each of whom play a distinct part -
+Recruiters, who are responsible for screening potential IT workers and recording initial interview sessions to send to facilitators. Facilitators and IT workers, who are tasked with persona creation, obtaining freelance or full-time employment, and onboarding new hires.</p>
+
+<p>Collaborators, who are recruited to donate their personal identity and/or information to help the IT workers complete the hiring process and receive company-issued laptops. “With the help of recruited western collaborators, primarily from LinkedIn and GitHub, who, willingly or unwillingly, provide their identities for use in the IT worker fraud scheme, NKITW are able to penetrate more deeply and reliably into an organization, for a longer period of time,” the companies
+said
+in a report shared with The Hacker News. “North Korea’s IT worker operations are widespread and deeply integrated within the DPRK party-state. It is an integral component in the DPRK’s revenue-generation and sanctions-evasion machinery.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="interlock-ransomware-exploits-cisco-fmc-zero-day-cve-2026-20131-for-root-access"><a id="article-2"></a>Interlock Ransomware Exploits Cisco FMC Zero-Day CVE-2026-20131 for Root Access</h2>
+
+<p>Amazon Threat Intelligence is warning of an active
+Interlock
+ransomware campaign that’s exploiting a recently disclosed critical security flaw in Cisco Secure Firewall Management Center (FMC) Software. The vulnerability in question is
+CVE-2026-20131
+(CVSS score: 10.0), a case of insecure deserialization of user-supplied Java byte stream, which could allow an unauthenticated, remote attacker to bypass authentication and execute arbitrary Java code as root on an affected device. According to data gleaned from the tech giant’s
+MadPot
+global sensor network
+, the security flaw is said to have been exploited as a zero-day since January 26, 2026, more than a month before it was publicly disclosed by Cisco. “This wasn’t just another vulnerability exploit; Interlock had a zero-day in their hands, giving them a week’s head start to compromise organizations before defenders even knew to look.</p>
+
+<p>Upon making this discovery, we shared our findings with Cisco to help support their investigation and protect customers,” CJ Moses, chief information security officer (CISO) of Amazon Integrated Security, said in a
+report
+shared with The Hacker News. The discovery, Amazon said, was made possible, thanks to an operational security blunder on the part of the threat actor that exposed their cybercrime group’s operational toolkit via a misconfigured infrastructure server, offering insights into its multi-stage attack chain, bespoke remote access trojans, reconnaissance scripts, and evasion techniques. The attack chain involves sending crafted HTTP requests to a specific path in the affected software with an aim to execute arbitrary Java code, after which the compromised system issues an HTTP PUT request to an external server to confirm successful exploitation. Once this step is complete, the commands are sent to fetch an ELF binary from a remote server, which hosts other tools linked to Interlock.</p>
+
+<p>The list of identified tools is as follows -
+A PowerShell reconnaissance script used for systematic Windows environment enumeration, gathering details about operating system and hardware, running services, installed software, storage configuration, Hyper-V virtual machine inventory, user file listings across Desktop, Documents, and Downloads directories, browser artifacts from Chrome, Edge, Firefox, Internet Explorer, and 360 browser, active network connections, and RDP authentication events from Windows event logs. Custom remote access trojans written in JavaScript and Java for command-and-control, interactive shell access, arbitrary command execution, bidirectional file transfer, and SOCKS5 proxy capability. It also supports self-update and self-delete mechanisms to replace or remove the artifact without having to reinfect the machine and challenge forensic investigation. A Bash script for configuring Linux servers as HTTP reverse proxies to obscure the attacker’s true origins.</p>
+
+<p>The script delivers
+fail2ban
+, an open-source Linux intrusion prevention tool, and compiles and spawns an HAProxy instance that listens on port 80 and forwards all inbound HTTP traffic to a hard-coded target IP address. Furthermore, the infrastructure laundering script runs a log erasure routine as a cron job every five minutes to aggressively delete and purge the contents of *.log files and suppress shell history by unsetting the HISTFILE variable. A memory-resident web shell for inspecting incoming requests for specially crafted parameters containing encrypted command payloads, which are then decrypted and executed. A lightweight network beacon for phoning attacker-controlled infrastructure likely to validate successful code execution or confirm network port reachability following initial exploitation.</p>
+
+<p>ConnectWise ScreenConnect for persistent remote access and for serving as an alternative pathway should other footholds be detected and removed. Volatility Framework
+, an open-source memory forensics framework
+The links to Interlock stem from “convergent” technical and operational indicators, including the embedded ransom note and TOR negotiation portal. Evidence shows that the threat actor is likely operational during the UTC+3 time zone. In light of active exploitation of the flaw, users are advised to apply patches as soon as possible, conduct security assessments to identify potential compromise, review ScreenConnect deployments for unauthorized installations, and implement defense-in-depth strategies.</p>
+
+<p>“The real story here isn’t just about one vulnerability or one ransomware group—it’s about the fundamental challenge zero-day exploits pose to every security model,” Moses said. “When attackers exploit vulnerabilities before patches exist, even the most diligent patching programs can’t protect you in that critical window.”
+“This is precisely why defense-in-depth is essential—layered security controls provide protection when any single control fails or hasn’t yet been deployed. Rapid patching remains foundational in vulnerability management, but defense in depth helps organizations not to be defenseless during the window between exploit and patch.”
+The disclosure comes as Google
+revealed
+that ransomware actors are changing their tactics in response to declining payment rates, targeting vulnerabilities in common VPNs and firewalls for initial access and leaning less on external tooling and more on built-in Windows capabilities. Multiple threat clusters, both ransomware operators themselves and initial access brokers, have also been found to employ malvertising and/or search engine optimization (SEO) tactics to distribute malware payloads for initial access.</p>
+
+<p>Other commonly observed techniques include the use of compromised credentials, backdoors, or legitimate remote desktop software to establish a foothold, as well as relying on built-in and already installed tools for reconnaissance, privilege escalation, and lateral movement. “While we anticipate ransomware to remain one of the most dominant threats globally, the reduction in profits may cause some threat actors to seek other monetization methods,” Google said. “This could manifest as increased data theft extortion operations, the use of more aggressive extortion tactics, or opportunistically using access to victim environments for secondary monetization mechanisms such as using compromised infrastructure to send phishing messages.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="critical-unpatched-telnetd-flaw-cve-2026-32746-enables-unauthenticated-root-rce"><a id="article-3"></a>Critical Unpatched Telnetd Flaw (CVE-2026-32746) Enables Unauthenticated Root RCE</h2>
+
+<p>Cybersecurity researchers have disclosed a critical security flaw impacting the GNU InetUtils telnet daemon (telnetd) that could be exploited by an unauthenticated remote attacker to execute arbitrary code with elevated privileges.  The vulnerability, tracked as CVE-2026-32746 , carries a CVSS score of 9.8 out of 10.0. It has been described as a case of out-of-bounds write in the LINEMODE Set Local Characters (SLC) suboption handler that results in a buffer overflow, ultimately paving the way for code execution.  Israeli cybersecurity company Dream, which discovered and reported the flaw on March 11, 2026, said it affects all versions of the Telnet service implementation through 2.7. A fix for the vulnerability is expected to be available no later than April 1, 2026.   “An unauthenticated remote attacker can exploit this by sending a specially crafted message during the initial connection handshake — before any login prompt appears,” Dream said  in an alert. “Successful…</p>
+
+<h2 id="claude-code-security-and-magecart-getting-the-threat-model-right"><a id="article-4"></a>Claude Code Security and Magecart: Getting the Threat Model Right</h2>
+
+<p>When a Magecart payload hides inside the EXIF data of a dynamically loaded third-party favicon, no repository scanner will catch it – because the malicious code never actually touches your repo. As teams adopt Claude Code Security for static analysis, this is the exact technical boundary where AI code scanning stops and client-side runtime execution begins. A detailed analysis of where Claude Code Security stops — and what runtime monitoring covers — is available
+here
+. A
+Magecart skimmer
+recently found in the wild used a three-stage loader chain to hide its payload inside a favicon’s EXIF metadata — never touching the merchant’s source code, never appearing in a repository, and executing entirely in the shopper’s browser at checkout.</p>
+
+<p>The attack raises a question that’s worth getting precise about: which category of tool is actually supposed to catch this? Magecart Lives Outside Your Codebase
+Magecart‑style attacks are rarely about classic vulnerabilities in your own source code. They are supply chain infiltrations. The malicious JavaScript typically arrives via compromised third‑party assets: tag managers, payment/checkout widgets, analytics tools, CDN‑hosted scripts, and images that are loaded into the browser at runtime.</p>
+
+<p>The victim organization didn’t write that code, doesn’t review it in PRs, and it often doesn’t exist in their repository at all. That means a repository‑based static analysis tool, such as Claude Code Security, is therefore limited by design in this scenario, because it can only analyze what’s in the repo or what you explicitly feed it. Any skimmer that lives solely in modified third‑party resources or dynamically loaded binaries in production never enters its field of view. That’s not a bug in the product; it’s a scope mismatch.</p>
+
+<p>The Attack Flow: How the Skimmer Hides
+Here is the initial loader seen on compromised websites:
+This stub dynamically loads a script from what appears to be a legitimate Shopify CDN URL. The loaded script then constructs the actual malicious URL using obfuscated index arrays:
+Once decoded, this points to //b4dfa5[.]xyz/favicon.ico. What happens next is where the technique gets interesting: the script retrieves the favicon as binary data, parses the EXIF metadata to extract a malicious string, and executes it via new Function() — the payload lives inside image metadata, so it’s invisible to anything that isn’t watching the browser at runtime. The final exfiltration call POSTs stolen payment data silently to an attacker-controlled server:
+The chain has four properties that matter for the tooling discussion that follows: the initial loader looks like a benign third-party include; the payload is hidden in binary image metadata; exfiltration happens directly from the shopper’s browser; and none of it requires touching the merchant’s own source code.</p>
+
+<p>What Claude Code Security Can and Can’t See
+Claude Code Security is designed to scan codebases, trace data flows, and suggest fixes for vulnerabilities in the code you or your teams write. That makes it useful for securing first‑party applications, but it also defines its blind spots for this attack class. In this scenario, it has no practical visibility into malicious code that’s only injected into third‑party, CDN, or tag‑manager‑hosted scripts that are never stored in your repos. It can’t interrogate payloads hidden in binary assets like favicons or images that are not part of your source tree either.</p>
+
+<p>It can’t assess the risk or live reputation of attacker‑controlled domains that only appear at runtime, and real‑time detection of anomalous browser‑side network requests during checkout is also beyond its scope. Where it could contribute (though not as the primary control) would be in cases where your own code contains dynamic script‑injection logic, a pattern that a code analysis tool may flag as risky. And if first‑party code hard‑codes suspicious exfiltration endpoints or uses unsafe data‑collection logic, static analysis can highlight those flows for review. The top four rows are what matter most in a Magecart scenario, and Claude Code Security has no runtime visibility into any of them.</p>
+
+<p>The bottom two represent a fundamentally different threat: a developer accidentally writing malicious-looking code in their own repository. Magecart is One Vector, Not the Whole Attack Surface
+The favicon steganography technique above is sophisticated, but it’s one instance of a broader pattern. Web supply chain attacks arrive through several distinct mechanisms, each with the same defining characteristic: the malicious activity happens at runtime, in the browser, through assets the merchant didn’t create. See how AI-generated, polymorphic JavaScript is raising the stakes →
+A few others worth naming:
+Malicious iframe injection.</p>
+
+<p>A compromised third-party widget silently overlays a legitimate checkout form with an attacker-controlled iframe. The user sees the real page, but their keystrokes are sent to the attacker. Nothing in the merchant’s repository changes. Pixel tracker abuse.</p>
+
+<p>Analytics and advertising pixels — nearly universal on e-commerce sites — are loaded from external CDNs. When those CDNs are compromised or the pixel provider itself is breached, the tracking code running on every page becomes an exfiltration channel. The merchant’s code still calls the same legitimate-looking endpoint it always did. DOM-based credential harvesting.</p>
+
+<p>A script loaded via a tag manager silently listens for form field events on login or payment pages, capturing data before it’s ever submitted. The attack lives entirely in the event handler registered at runtime, not in anything a static scanner would ever see. Each of these follows the same logic as the Magecart case: the threat lives outside the repository, executes in a context that static analysis cannot observe, and targets the gap between what you shipped and what actually runs in your users’ browsers. You can find the
+full breakdown
+of how each vector maps to tooling coverage — and what a defense-in-depth program looks like across all of them — in the guide linked below.</p>
+
+<p>Why Runtime Monitoring Is Critical (But Not the Only Control)
+For
+web supply chain threats
+like this Magecart campaign, continuous monitoring of what actually runs in users’ browsers is the primary layer with direct visibility into the attack as it happens. Client‑side runtime monitoring platforms answer a couple of questions that static tools cannot:
+“What code is executing in my users’ browsers right now, and what is it doing?”
+At the same time, runtime monitoring is only one part of the picture. It works best as part of a defense‑in‑depth strategy. Static analysis and supply‑chain governance reduce the attack surface, while runtime monitoring catches what slips through, and what lives entirely outside your repos.</p>
+
+<p>Reframing the “Test”: Category, Not Capability
+Evaluating a repo-centric tool like Claude Code Security against a runtime attack is a category error, not a product failure. It’s like expecting a smoke detector to put out fires. It’s the wrong tool for that job, but the ideal one for what it was designed to do. For a fire-safe building, you need smoke detectors and fire extinguishers, and for a safe website, you need Claude Code Security and runtime monitoring in your stack.</p>
+
+<p>For Magecart and similar client‑side skimming attacks, you need that runtime window into the browser. Static repository scanning, by itself, simply doesn’t see where these attacks truly live. If you’re mapping tooling to threat classes at the CISO level, we’ve put together a short guide on how code security and runtime monitoring fit together across the full range of web supply chain vectors — and where each one stops being useful. CISO’s Guide to Claude Code Security →
+Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="9-critical-ip-kvm-flaws-enable-unauthenticated-root-access-across-four-vendors"><a id="article-5"></a>9 Critical IP KVM Flaws Enable Unauthenticated Root Access Across Four Vendors</h2>
+
+<p>Cybersecurity researchers have warned about the risks posed by low-cost IP KVM (Keyboard, Video, Mouse over Internet Protocol) devices, which can grant attackers extensive control over compromised hosts. The nine vulnerabilities, discovered by
+Eclypsium
+, span four different products from GL-iNet Comet RM-1, Angeet/Yeeso ES3 KVM, Sipeed NanoKVM, and JetKVM. The most severe of them allow unauthenticated actors to gain root access or run malicious code. “The common themes are damning: missing firmware signature validation, no brute-force protection, broken access controls, and exposed debug interfaces,” researchers Paul Asadoorian and Reynaldo Vasquez Garcia
+said
+in an analysis.</p>
+
+<p>With IP KVM devices enabling remote access to the target machine’s keyboard, video output, and mouse input at the BIOS/UEFI level, successful exploitation of vulnerabilities in these products can expose systems to potential takeover risks, undermining security controls put in place. The list of shortcomings is as follows -
+CVE-2026-32290
+(CVSS score: 4.2) - An insufficient verification of firmware authenticity in GL-iNet Comet KVM (Fix being planned)
+CVE-2026-32291
+(CVSS score: 7.6) - A Universal Asynchronous Receiver-Transmitter (UART) root access vulnerability in GL-iNet Comet KVM (Fix being planned)
+CVE-2026-32292
+(CVSS score: 5.3) - An insufficient brute-force protection vulnerability in GL-iNet Comet KVM (Fixed in version 1.8.1 BETA)
+CVE-2026-32293
+(CVSS score: 3.1) - An insecure initial provisioning via unauthenticated cloud connection vulnerability in GL-iNet Comet KVM (Fixed in version 1.8.1 BETA)
+CVE-2026-32294
+(CVSS score: 6.7) - An insufficient update verification vulnerability in JetKVM (Fixed in version 0.5.4)
+CVE-2026-32295
+(CVSS score: 7.3) - An insufficient rate limiting vulnerability in JetKVM (Fixed in version 0.5.4)
+CVE-2026-32296
+(CVSS score: 5.4) - A configuration endpoint exposure vulnerability in Sipeed NanoKVM (Fixed in NanoKVM version 2.3.1 and NanoKVM Pro version 1.2.4)
+CVE-2026-32297
+(CVSS score: 9.8) - A missing authentication for a critical function vulnerability in Angeet ES3 KVM leading to arbitrary code execution (No fix available)
+CVE-2026-32298
+(CVSS score: 8.8) - An operating system command injection vulnerability in Angeet ES3 KVM leading to arbitrary command execution (No fix available)
+“These are not exotic zero-days requiring months of reverse engineering,” the researchers noted. “These are fundamental security controls that any networked device should implement. Input validation.</p>
+
+<p>Authentication. Cryptographic verification. Rate limiting. We are looking at the same class of failures that plagued early IoT devices a decade ago, but now on a device class that provides the equivalent of physical access to everything it connects to.”
+An adversary can weaponize these issues to inject keystrokes, boot from removable media to bypass disk encryption or Secure Boot protections, circumvent lock screens and access systems, and, more importantly, remain undetected by security software installed at the operating system level.</p>
+
+<p>This is not the first time vulnerabilities have been disclosed in IP KVM devices. In July 2025, Russian cybersecurity vendor Positive Technologies
+flagged five flaws
+in ATEN International switches (CVE-2025-3710, CVE-2025-3711, CVE-2025-3712, CVE-2025-3713, and CVE-2025-3714) that could pave the way for denial-of-service or remote code execution. What’s more, such IP KVM switches like PiKVM or TinyPilot
+have been put to use
+by North Korean IT workers residing in countries like China to remotely connect to company-issued laptops hosted on laptop farms. As mitigations, it’s recommended to enforce multi-factor authentication (MFA) where supported, isolate KVM devices on a dedicated management VLAN, restrict internet access, use tools like Shodan to check for external exposure, monitor for unexpected network traffic to/from the devices, and keep the firmware up-to-date.</p>
+
+<p>“A compromised KVM is not like a compromised IoT device sitting on your network. It is a direct, silent channel to every machine it controls,” Eclypsium said. “An attacker who compromises the KVM can hide tools and backdoors on the device itself, consistently re-infecting host systems even after remediation.”
+“Since some firmware updates lack signature verification on most of these devices, a supply-chain attacker could tamper with the firmware at distribution time and have it persist indefinitely.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="product-walkthrough-how-mesh-csma-reveals-and-breaks-attack-paths-to-crown-jewels"><a id="article-6"></a>Product Walkthrough: How Mesh CSMA Reveals and Breaks Attack Paths to Crown Jewels</h2>
+
+<p>Security teams today are not short on tools or data. They are overwhelmed by both. Yet within the terabytes of alerts, exposures, and misconfigurations – security teams still struggle to understand context:
+Q: Which exposures, misconfigurations, and vulnerabilities chain together to create viable attack paths to crown jewels? Even the most mature security teams can’t answer that easily.</p>
+
+<p>The problem isn’t the tools. It’s that the tools don’t talk to each other. This is precisely the problem Gartner’s Cybersecurity Mesh Architecture (CSMA) framework was designed to solve – and it’s what
+Mesh Security
+has operationalized with the world’s first purpose-built CSMA platform. In this article, we’ll walk through what CSMA is and how Mesh CSMA:
+Discovers attack paths to crown jewels
+Prioritizes based on active threats
+Eliminates attack paths systematically
+What Is CSMA, and Why Does It Matter Now?</p>
+
+<p>Before we dive into the platform, let’s clarify what CSMA is. CSMA
+, as defined by Gartner, is a composable, distributed security layer that connects your existing stack, giving you the context unification of a platform atop your best-of-breed tools. With CSMA, risk can be understood holistically rather than in silos. The Problem: Isolated Tools Miss the Attack Story
+We’ve all seen findings like these sitting in separate dashboards:
+A developer has installed a legitimate-looking AI coding assistant from the VS Code Marketplace
+That extension has been flagged as potentially trojanized — but the alert sits in one tool, unconnected to anything else
+The developer’s workstation has long session timeouts and no device isolation policy enforced
+The developer’s credentials have broad access to a production AWS account
+That AWS account has direct, unrestricted access to a production RDS database storing customer PII
+In isolation, each signal looks manageable: a marketplace policy flag here, a session timeout misconfiguration there.</p>
+
+<p>Security teams see them, log them, and deprioritize them. None of them look like P1s on their own. But strung together, they tell a very different story: a clear, multi-hop attack path from a developer’s workstation straight to your most sensitive customer data. No breach has occurred – but the path is open, viable, and waiting.</p>
+
+<p>Layer in threat intelligence, and the risk becomes even harder to ignore: threat actors are actively targeting developer environments and supply chain entry points as their preferred foothold into production infrastructure. Did you chain your tools flagged separately? It maps almost exactly to their playbook. Mesh Live Threat Exposure
+This is a live threat exposure.</p>
+
+<p>Not a breach, but an exploitable path that exists in your environment right now, invisible because no single tool can see all of it at once. That’s exactly what Mesh CSMA was created to solve. By unifying context across your entire stack, Mesh surfaces these cross-domain attack paths before they’re exploited – so your team can break the chain before an attacker ever walks it. How Mesh CSMA Works
+Mesh CSMA turns fragmented signals into meaningful, cross-domain threat stories.</p>
+
+<p>So security teams can focus on what matters. Here’s how Mesh works. Step 1: Connect – Agentless, No Rip-and-Replace
+Mesh begins by integrating with your existing stack: all tools, data lakes, and infrastructure. (What does Mesh integrate with?</p>
+
+<p>See
+150+ integrations here
+. Mesh Integrations
+Step 2: See – The Mesh Context Graph™
+Next, Mesh automatically discovers your
+Crown Jewels:
+production databases, customer data repositories, financial systems, code signing infrastructure – and anchors the entire risk model around them. This is the core principle that makes Mesh different: risk is understood relative to what actually matters to the business, not relative to the loudest alerts. From there, Mesh builds the
+Mesh Context Graph™
+– a continuously updating, identity-centric graph of every entity in your environment: users, machines, workloads, services, data stores, and the relationships between them.</p>
+
+<p>Unlike asset inventories, which tell you what exists, the Mesh Context Graph™ tells you
+how everything connects
+. It maps access paths, trust relationships, entitlement chains, and network exposure in a single unified model – all traced back to your Crown Jewels. Mesh Context Graph
+Step 3: Assess – Viable Attack Path Discovery
+This is where Mesh diverges from traditional exposure management tools. CTEM platforms and vulnerability scanners surface CVEs and misconfigurations.</p>
+
+<p>But a CVSS 9.8 vulnerability on an isolated, internet-facing asset with no path to anything sensitive is a very different risk than a CVSS 5.5 misconfiguration on a service account that has direct access to your production database. Mesh understands the difference. The platform correlates findings across domains – cloud posture misconfigurations, identity entitlement overreach, detection blind spots, unpatched vulnerabilities – and traces them forward against the Context Graph to determine which combinations create viable, multi-hop attack chains to Crown Jewels. Then, it prioritizes based on live threat intelligence.</p>
+
+<dl>
+  <dt>The result: a ranked, actionable list of complete cross-domain attack paths, each showing:</dt>
+  <dt>Entry point</dt>
+  <dd>how an attacker would gain initial access
+Pivot chain</dd>
+  <dd>each intermediate hop through the environment
+Target</dd>
+  <dd>which Crown Jewel is reachable
+Why it’s viable</dd>
+  <dd>the specific misconfigurations, access paths, or detection gaps enabling it
+Threat context</dd>
+  <dd>whether known active threat actors are currently exploiting this
+Mesh Crown Jewel Exposures
+With Mesh, you can click into each Live Threat Exposure and visualize the attack path, turning isolated signals into a meaningful risk remediation road map. Mesh Attack Path Visualization
+Step 4: Eliminate – Breaking the Chain
+Surfacing attack paths is only half the value. Mesh closes them. For each identified attack path, Mesh generates specific, prioritized remediation actions mapped to the existing tools already in your stack.</dd>
+</dl>
+
+<p>Rather than generic guidance like “patch this CVE,” Mesh tells you: revoke this specific role binding, enforce MFA on this service account, update this CSPM policy, isolate this workload. Critically, Mesh orchestrates remediation across domains – a single attack path might require a fix in your CSPM tool, a change in your IGA platform, and a policy update in your ZTNA solution. Mesh coordinates those actions without forcing your team to manually context-switch between consoles. Step 5: Defend – Continuous Validation and Detection Gap Coverage
+Mesh doesn’t stop at posture.</p>
+
+<p>It also continuously validates your detection layer – identifying blind spots where attack techniques would succeed but generate no alerts. This closes the loop between prevention and detection. Security teams can see not only
+where attackers can go
+but
+where they would go undetected if they tried
+. Detection gaps are surfaced alongside posture gaps within the same unified risk model, enabling prioritization that reflects true business risk.</p>
+
+<p>Mesh continuously re-evaluates the environment as infrastructure changes, new tools are onboarded, and threat intelligence updates. The attack path map is never a point-in-time snapshot – it’s a live model. Mesh Auto Investigation Timeline
+What Makes This Different from SIEM, XDR, or CTEM? SIEM and XDR
+detect threats after signals are generated.</p>
+
+<p>They rely on events that have already happened and require significant tuning to reduce false positives. They don’t model attack paths proactively. CTEM platforms
+prioritize vulnerabilities based on exploitability scores, but most operate within a single domain (cloud, endpoint, identity) and struggle to model how risks from different domains chain together. Large platform vendors
+achieve context unification but at the cost of vendor lock-in and the forced replacement of specialized tools.</p>
+
+<p>Mesh takes a different approach. Aligning precisely with what Gartner envisioned for CSMA, Mesh unifies context across all existing tools, data lakes, and infrastructure, enabling continuous exposure elimination without requiring you to rip anything out. Who Is Mesh Built For? Mesh CSMA is built for security teams that have already invested in best-of-breed tools and are now dealing with the consequences of fragmented security:
+Dozens of dashboards, zero context
+Disjointed security data, generating noise instead of insights
+Manual correlation, connecting the dots between tools
+The platform recently closed a $12M Series A led by Lobby Capital with participation from Bright Pixel Capital and S1 (SentinelOne) Ventures.</p>
+
+<p>Your Next Move: Learn More About Mesh CSMA–
+Security tools show isolated risks. Mesh shows attack paths to Crown Jewels – and eliminates them. Want to see live threat exposures in your environment? Try Mesh free
+for 7 days.</p>
+
+<p>Or register for the live webinar:
+Who Can Reach Your Crown Jewels? Attack Path Modeling with Mesh CSMA
+to see Mesh identify real attack paths live. Found this article interesting? This article is a contributed piece from one of our valued partners.</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ubuntu-cve-2026-3888-bug-lets-attackers-gain-root-via-systemd-cleanup-timing-exploit"><a id="article-7"></a>Ubuntu CVE-2026-3888 Bug Lets Attackers Gain Root via systemd Cleanup Timing Exploit</h2>
+
+<p>A high-severity security flaw affecting default installations of Ubuntu Desktop versions 24.04 and later could be exploited to escalate privileges to the root level. Tracked as
+CVE-2026-3888
+(CVSS score: 7.8), the issue could allow an attacker to seize control of a susceptible system. “This flaw (CVE-2026-3888) allows an unprivileged local attacker to escalate privileges to full root access through the interaction of two standard system components:
+snap-confine
+and systemd-tmpfiles,” the Qualys Threat Research Unit (TRU)
+said
+. “While the exploit requires a specific time-based window (10–30 days), the resulting impact is a complete compromise of the host system.”
+The problem, Qualys noted, stems from the unintended interaction of snap-confine, which manages execution environments for snap applications by creating a sandbox, and systemd-tmpfiles, which automatically cleans up temporary files and directories (e.g.,/tmp, /run, and /var/tmp) older than a defined threshold.</p>
+
+<p>The vulnerability has been patched in the following versions -
+Ubuntu 24.04 LTS - snapd versions prior to 2.73+ubuntu24.04.1
+Ubuntu 25.10 LTS - snapd versions prior to 2.73+ubuntu25.10.1
+Ubuntu 26.04 LTS (Dev) - snapd versions prior to 2.74.1+ubuntu26.04.1
+Upstream snapd - versions prior to 2.75
+The attack requires low privileges and no user interaction, although the attack complexity is high due to the time-delay mechanism in the exploit chain. “In default configurations, systemd-tmpfiles is scheduled to remove stale data in /tmp,” Qualys said. “An attacker can exploit this by manipulating the timing of these cleanup cycles.”
+The attack plays out in the following manner -
+The attacker must wait for the system’s cleanup daemon to delete a critical directory (/tmp/.snap) required by snap-confine. The default period is 30 days in Ubuntu 24.04 and 10 days in later versions.</p>
+
+<p>Once deleted, the attacker recreates the directory with malicious payloads. During the next sandbox initialization, snap-confine
+bind mounts
+these files as root, allowing the execution of arbitrary code within the privileged context. In addition, Qualys said it discovered a race condition flaw in the uutils coreutils package that allows an unprivileged local attacker to replace directory entries with symbolic links (aka symlinks) during root-owned cron executions. “Successful exploitation could lead to arbitrary file deletion as root or further privilege escalation by targeting snap sandbox directories,” the cybersecurity company said.</p>
+
+<p>“The vulnerability was reported and mitigated prior to the public release of Ubuntu 25.10. The default rm command in Ubuntu 25.10 was reverted to GNU coreutils to mitigate this risk immediately. Upstream fixes have since been applied to the uutils repository.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="apple-fixes-webkit-vulnerability-enabling-same-origin-policy-bypass-on-ios-and-macos"><a id="article-8"></a>Apple Fixes WebKit Vulnerability Enabling Same-Origin Policy Bypass on iOS and macOS</h2>
+
+<p>Apple on Tuesday released its first round of
+Background Security Improvements
+to address a security flaw in WebKit that affects iOS, iPadOS, and macOS. The vulnerability, tracked as
+CVE-2026-20643
+(CVSS score: N/A), has been described as a cross-origin issue in WebKit’s Navigation API that could be exploited to bypass the same-origin policy when processing maliciously crafted web content. The flaw affects iOS 26.3.1, iPadOS 26.3.1, macOS 26.3.1, and macOS 26.3.2. It has been addressed with improved input validation in iOS 26.3.1 (a), iPadOS 26.3.1 (a), macOS 26.3.1 (a), and macOS 26.3.2 (a).</p>
+
+<p>Security researcher Thomas Espach has been credited with discovering and reporting the shortcoming. Apple
+notes
+that Background Security Improvements are meant for delivering lightweight security releases for components such as the Safari browser, WebKit framework stack, and other system libraries through smaller, ongoing security patches rather than issuing them as part of larger software updates. The feature is supported and enabled for future releases starting with iOS 26.1, iPadOS 26.1, and macOS 26. In cases where compatibility issues are discovered, the improvements may be temporarily removed and then enhanced in a subsequent software update, Apple adds.</p>
+
+<p>Users can control Background Security Improvements via the Privacy and Security menu in the Settings app. To ensure that they are automatically installed, it’s advised to keep the “Automatically Install” option on. It’s worth noting that if users opt to have this setting disabled, they will have to wait until the improvements are included in the next software update. Viewed in that light, the feature is analogous to
+Rapid Security Response
+, which it
+introduced
+in iOS 16 as a way to install minor security updates.</p>
+
+<p>“If a Background Security Improvement has been applied, and you choose to remove it, your device reverts to the baseline software update (for example, iOS 26.3) with no Background Security Improvements applied,” Apple noted in a help document. The development comes little over a month after Apple
+issued
+fixes for an actively exploited zero-day impacting iOS, iPadOS, macOS Tahoe, tvOS, watchOS, and visionOS (CVE-2026-20700, CVSS score: 7.8) that could result in arbitrary code execution. Last week, the iPhone maker also
+expanded patches
+for four security flaws (CVE-2023-43010, CVE-2023-43000, CVE-2023-41974, and CVE-2024-23222) that were weaponized as part of the Coruna exploit kit. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="ai-flaws-in-amazon-bedrock-langsmith-and-sglang-enable-data-exfiltration-and-rce"><a id="article-9"></a>AI Flaws in Amazon Bedrock, LangSmith, and SGLang Enable Data Exfiltration and RCE</h2>
+
+<p>Cybersecurity researchers have disclosed details of a new method for exfiltrating sensitive data from artificial intelligence (AI) code execution environments using domain name system (DNS) queries. In a report published Monday, BeyondTrust
+revealed
+that Amazon Bedrock AgentCore Code Interpreter’s sandbox mode permits outbound DNS queries that an attacker can exploit to enable interactive shells and bypass network isolation. The issue, which does not have a CVE identifier, carries a CVSS score of 7.5 out of 10.0. Amazon Bedrock AgentCore Code Interpreter
+is a fully managed service that enables AI agents to securely execute code in
+isolated sandbox environments
+, such that agentic workloads cannot access external systems.</p>
+
+<p>It was launched by Amazon in August 2025. The fact that the service allows DNS queries despite “no network access” configuration can allow “threat actors to establish command-and-control channels and data exfiltration over DNS in certain scenarios, bypassing the expected network isolation controls,” Kinnaird McQuade, chief security architect at BeyondTrust, said. In an experimental attack scenario, a threat actor can abuse this behavior to set up a bidirectional communication channel using DNS queries and responses, obtain an interactive reverse shell, exfiltrate sensitive information through DNS queries if their IAM role has permissions to access AWS resources like S3 buckets storing that data, and perform command execution. What’s more, the DNS communication mechanism can be abused to deliver additional payloads that are fed to the Code Interpreter, causing it to poll the DNS command-and-control (C2) server for commands stored in DNS A records, execute them, and return the results via DNS subdomain queries.</p>
+
+<p>It’s worth noting that Code Interpreter requires an IAM role to access AWS resources. However, a simple oversight can cause an overprivileged role to be assigned to the service, granting it broad permissions to access sensitive data. “This research demonstrates how DNS resolution can undermine the network isolation guarantees of sandboxed code interpreters,” BeyondTrust said. “By using this method, attackers could have exfiltrated sensitive data from AWS resources accessible via the Code Interpreter’s IAM role, potentially causing downtime, data breaches of sensitive customer information, or deleted infrastructure.”
+Following responsible disclosure in September 2025, Amazon has determined it to be intended functionality rather than a defect, urging customers to use
+VPC mode
+instead of sandbox mode for complete network isolation.</p>
+
+<p>The tech giant is also recommending the use of a
+DNS firewall
+to filter outbound DNS traffic. “To protect sensitive workloads, administrators should inventory all active AgentCore Code Interpreter instances and immediately migrate those handling critical data from Sandbox mode to VPC mode,” Jason Soroko, senior fellow at Sectigo, said. “Operating within a VPC provides the necessary infrastructure for robust network isolation, allowing teams to implement strict security groups, network ACLs, and Route53 Resolver DNS Firewalls to monitor and block unauthorized DNS resolution. Finally, security teams must rigorously audit the IAM roles attached to these interpreters, strictly enforcing the principle of least privilege to restrict the blast radius of any potential compromise.”
+LangSmith Susceptible to Account Takeover Flaw
+The disclosure comes as Miggo Security disclosed a high-severity security flaw in
+LangSmith
+(
+CVE-2026-25750
+, CVSS score: 8.5) that exposed users to potential token theft and account takeover.</p>
+
+<p>The issue, which affects both self-hosted and cloud deployments, has been addressed in LangSmith version 0.12.71 released in December 2025. The shortcoming has been characterized as a case of URL parameter injection stemming from a lack of validation on the baseUrl parameter, enabling an attacker to steal a signed-in user’s bearer token, user ID, and workspace ID transmitted to a server under their control through social engineering techniques like tricking the victim into clicking on a specially crafted link like below -
+Cloud - smith.langchain[.]com/studio/?baseUrl=https://attacker-server.com
+Self-hosted - <LangSmith_domain_of_the_customer>/studio/?baseUrl=https://attacker-server.com
+Successful exploitation of the vulnerability could allow an attacker to gain unauthorized access to the AI's trace history, as well as expose internal SQL queries, CRM customer records, or proprietary source code by reviewing tool calls. "A logged-in LangSmith user could be compromised merely by accessing an attacker-controlled site or by clicking a malicious link," Miggo researchers Liad Eliyahu and Eliana Vuijsje
+said
+. "This vulnerability is a reminder that AI observability platforms are now critical infrastructure.</LangSmith_domain_of_the_customer></p>
+
+<p>As these tools prioritize developer flexibility, they often inadvertently bypass security guardrails. This risk is compounded because, like ‘traditional’ software, AI Agents have deep access to internal data sources and third-party services.”
+Unsafe Pickle Deserialization Flaws in SGLang
+Security vulnerabilities have also been flagged in SGLang, a popular open-source framework for serving large language models and multimodal AI models, which, if successfully exploited, could trigger
+unsafe pickle deserialization
+, potentially resulting in remote code execution. The vulnerabilities, discovered by Orca security researcher Igor Stepansky, remain unpatched as of writing. A brief description of the flaws is as follows -
+CVE-2026-3059
+(CVSS score: 9.8) - An unauthenticated remote code execution vulnerability through the ZeroMQ (aka ZMQ) broker, which deserializes untrusted data using pickle.loads() without authentication.</p>
+
+<p>It affects SGLang’s multimodal generation module. CVE-2026-3060
+(CVSS score: 9.8) - An unauthenticated remote code execution vulnerability through the disaggregation module, which deserializes untrusted data using pickle.loads() without authentication. It affects SGLang’ encoder parallel disaggregation system. CVE-2026-3989
+(CVSS score: 7.8) - The use of an insecure pickle.load() function without validation and proper deserialization in SGLang’s “replay_request_dump.py,” which can be exploited by providing a malicious pickle file.</p>
+
+<p>“The first two allow unauthenticated remote code execution against any SGLang deployment that exposes its multimodal generation or disaggregation features to the network,” Stepansky
+said
+. “The third involves insecure deserialization in a crash dump replay utility.”
+In a coordinated advisory, the CERT Coordination Center (CERT/CC) said SGLang is vulnerable to CVE-2026-3059 when the multimodal generation system is enabled, and to CVE-2026-3060 when the encoder parallel disaggregation system is enabled. “If either condition is met and an attacker knows the TCP port on which the ZMQ broker is listening and can send requests to the server, they can exploit the vulnerability by sending a malicious pickle file to the broker, which will then deserialize it,” CERT/CC
+said
+. Users of SGLang are recommended to restrict access to the service interfaces and ensure they are not exposed to untrusted networks.</p>
+
+<p>It’s also advised to implement adequate network segmentation and access controls to prevent unauthorized interaction with the ZeroMQ endpoints. While there is no evidence that these vulnerabilities have been exploited in the wild, it’s crucial to monitor for unexpected inbound TCP connections to the ZeroMQ broker port, unexpected child processes spawned by the SGLang Python process, file creation in unusual locations by the SGLang process, and outbound connections from the SGLang process to unexpected destinations. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="leaknet-ransomware-uses-clickfix-via-hacked-sites-deploys-deno-in-memory-loader"><a id="article-10"></a>LeakNet Ransomware Uses ClickFix via Hacked Sites, Deploys Deno In-Memory Loader</h2>
+
+<p>The ransomware operation known as LeakNet has adopted the ClickFix  social engineering tactic delivered through compromised websites as an initial access method.  The use of ClickFix, where users are tricked into manually running malicious commands to address non-existent errors, is a departure from relying on traditional methods for obtaining initial access, such as through stolen credentials acquired from initial access brokers (IABs), ReliaQuest said  in a technical report published today.  The second important aspect of these attacks is the use of a staged command-and-control (C2) loader built on the Deno JavaScript runtime to execute malicious payloads directly in memory.  “The key takeaway here is that both entry paths lead to the same repeatable post-exploitation sequence every time,” the cybersecurity company said. “That gives defenders something concrete to work with: known behaviors you can detect and disrupt at each stage, well before ransomware deployment, r…</p>
+
+<h2 id="ai-is-everywhere-but-cisos-are-still-securing-it-with-yesterdays-skills-and-tools-study-finds"><a id="article-11"></a>AI is Everywhere, But CISOs are Still Securing It with Yesterday’s Skills and Tools, Study Finds</h2>
+
+<p>A majority of security leaders are struggling to defend AI systems with tools and skills that are not fit for the challenge, according to the
+AI and Adversarial Testing Benchmark Report 2026
+from Pentera. The report, based on a survey of 300 US CISOs and senior security leaders, examines how organizations are securing AI infrastructure and highlights critical gaps tied to skills shortages and reliance on security controls not designed for the AI era. AI adoption is outpacing security visibility
+AI systems are rarely deployed in isolation. They are layered across and integrated into existing corporate technology, from cloud platforms and identity systems to applications and data pipelines.</p>
+
+<p>With ownership spread across disparate teams, effective centralized oversight has collapsed. As a result, 67 percent of CISOs reported limited visibility into how AI is being used across their organization. None of the respondents indicated they have full visibility; rather, they acknowledge being aware of or accepting some form of unmanaged or unsanctioned AI usage. Without a clear view of where AI systems operate or what resources they can access, security teams struggle to assess risk effectively.</p>
+
+<p>Basic questions, such as which identities AI systems rely on, what data they can reach, or how they behave when controls fail, often remain unanswered. Skills, not budget, are the primary barrier
+Although AI security is now a regular topic in boardrooms and executive discussions, the study shows that the biggest challenges are not financial. CISOs identified the following as their top obstacles to securing AI infrastructure:
+Lack of internal expertise (50 percent)
+Limited visibility into AI usage (48 percent)
+Insufficient security tools designed specifically for AI systems (36 percent)
+Only 17 percent cited budget constraints as a primary concern. This suggests that many organizations are willing to invest in AI security, but do not yet have the specialized skills needed to evaluate AI-related risks in real environments.</p>
+
+<p>AI systems introduce behaviors that security teams are still learning to assess, including autonomous decision-making, indirect access paths, and privileged interaction between systems. Without the right expertise and active testing, it becomes difficult to evaluate whether existing controls are effective as intended. Legacy controls are carrying most of the load
+In the absence of AI-specific best practices, skills, and tooling, most enterprises are extending existing security controls to cover AI infrastructure. The study found that 75 percent of CISOs rely on legacy security controls, such as endpoint, application, cloud, or API security tools, to protect AI systems.</p>
+
+<p>Only 11 percent reported having security tools designed specifically to secure AI infrastructure. This approach reflects a familiar pattern seen during previous technology shifts, where organizations initially adapt existing defenses before more tailored security practices emerge. While this can provide basic coverage, controls built for traditional systems may not account for how AI changes access patterns and expands potential attack paths. A familiar challenge, now applied to AI
+Taken together, the findings show that AI security challenges stem from foundational gaps rather than a lack of awareness or intent.</p>
+
+<p>As AI becomes a core part of enterprise infrastructure, the report suggests that organizations will need to focus on building expertise and improving how they validate security controls across environments where AI is already operating. To explore the full findings, download the
+AI and Adversarial Testing Benchmark Report 2026
+for a deeper discussion of the data and key takeaways. Note:
+This article was written by Ryan Dory, Director, Technical Advisors at Pentera. Found this article interesting?</p>
+
+<p>This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="konni-deploys-endrat-through-phishing-uses-kakaotalk-to-propagate-malware"><a id="article-12"></a>Konni Deploys EndRAT Through Phishing, Uses KakaoTalk to Propagate Malware</h2>
+
+<p>North Korean threat actors have been observed sending phishing to compromise targets and obtain access to a victim’s KakaoTalk desktop application to distribute malicious payloads to certain contacts. The activity has been attributed by South Korean threat intelligence firm Genians to a hacking group referred to as
+Konni
+. “Initial access was achieved through a spear-phishing email disguised as a notice appointing the recipient as a North Korean human rights lecturer,” the Genians Security Center (GSC)
+noted
+in an analysis. “After the spear-phishing attack succeeded, the victim executed a malicious LNK file, resulting in infection with remote access malware.</p>
+
+<p>The malware remained concealed and persistent on the victim’s endpoint for an extended period, stealing internal documents and sensitive information.”
+The threat actor is said to have remained on the compromised host for an extended period of time, leveraging the unauthorized access to siphon internal documents and make use of the KakaoTalk application to selectively propagate the malware to specific contacts. The attack is notable for abusing the trust associated with compromised victims to deceive and ensnare additional targets. This is not the first time Konni has employed the messaging app as a distribution vector. In November 2025, the hacking group was
+found
+abusing signed-in KakaoTalk chat app sessions to send malicious payloads to victims’ contacts in the form of a ZIP archive, while simultaneously initiating a remote wipe of their Android devices using stolen Google credentials.</p>
+
+<p>The starting point of the latest attack campaign is a spear-phishing email that’s used as a ploy to trick recipients into opening a ZIP file attachment containing a Windows shortcut (LNK). Upon execution, the LNK file downloads a next-stage payload from an external server, establishes persistence using scheduled tasks, and ultimately executes the malware, while displaying a PDF decoy document to the user as a distraction mechanism. Written in AutoIt, the downloaded malware is a remote access trojan (RAT) named
+EndRAT
+(aka EndClient RAT), which allows the operator to remotely commandeer the compromised host through capabilities like file management, remote shell access, data transfer, and persistence. Further analysis of the infected host has uncovered the presence of various malicious artifacts, including AutoIt scripts corresponding to
+RftRAT
+and
+Remcos RAT
+, indicating that the adversary deemed the victim as valuable enough to drop multiple RAT families for improved resilience.</p>
+
+<p>An important aspect of the attack is the threat actor’s abuse of the victim’s KakaoTalk application installed on the infected system to distribute malicious files in the form of ZIP files to other individuals in their contact list and deploy the same malware. This essentially turns existing victims into intermediaries for further attacks. “This campaign is assessed as a multi-stage attack operation that extends beyond simple spear-phishing, combining long-term persistence, information theft, and account-based redistribution,” Genians said. “The actor selected certain contacts from the victim’s friend list and sent them additional malicious files.</p>
+
+<p>In doing so, the attacker used filenames disguised as materials introducing North Korea-related content to induce recipients to open the files.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+
+</div> 
+    </main>
+  </div>
+  <script src="/hacker-news-ai-pages/assets/js/main.js"></script>
+</body>
+</html> 
