@@ -282,6 +282,39 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj92eUjjTTMJPizvUJGwq7Ych7nrXHwGRNt3hS9yjNGRJk5d3pdIKjeZhQDVuFp0DnKjP4qoieGWFjswm7nHDLBaxWC3DxFIfLfRjMSEXd0Ta04vcTrbCpS9PEXebUUbMBxBt0VOb-PKVk-7Cq0FjuMXl4VtKneb5a3ujCo872goPN22GBFFhReJtWsQJLK/s16000/oll.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj92eUjjTTMJPizvUJGwq7Ych7nrXHwGRNt3hS9yjNGRJk5d3pdIKjeZhQDVuFp0DnKjP4qoieGWFjswm7nHDLBaxWC3DxFIfLfRjMSEXd0Ta04vcTrbCpS9PEXebUUbMBxBt0VOb-PKVk-7Cq0FjuMXl4VtKneb5a3ujCo872goPN22GBFFhReJtWsQJLK/s16000/oll.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Ollama Out-of-Bounds Read Vulnerability Allows Remote Process Memory Leak
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              May 10, 2026
+             </span>
+             <span class="h-tags">
+              Vulnerability / Data Breach
+             </span>
+            </div>
+            <div class="home-desc">
+             Cybersecurity researchers have disclosed a critical security vulnerability in Ollama  that, if successfully exploited, could allow a remote, unauthenticated attacker to leak its entire process memory.  The out-of-bounds read flaw, which likely impacts over 300,000 servers globally, is tracked as CVE-2026-7482  (CVSS score: 9.1). It has been codenamed   Bleeding Llama  by Cyera.  Ollama  is a popular open-source framework that allows large language models (LLMs) to be run locally instead of on the cloud. On GitHub, the project has more than 171,000 stars and has been forked over 16,100 times.  "Ollama before 0.17.1  contains a heap out-of-bounds read vulnerability in the GGUF model loader," according to a description  of the flaw in CVE.org. "The /api/create endpoint accepts an attacker-supplied GGUF file in which the declared tensor offset and size exceed the file's actual length; during quantization in fs/ggml/gguf.go and server/quantization.go (WriteTo()), the ser...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
@@ -341,12 +374,38 @@
              </span>
             </div>
             <div class="home-desc">
-             Threat hunters have flagged a previously undocumented Brazilian banking trojan dubbed TCLBANKER  that's capable of targeting 59 banking, fintech, and cryptocurrency platforms.  The activity is being tracked by Elastic Security Labs under the moniker REF3076 . The malware family is assessed to be a major update of the Maverick , which is known to leverage a worm called SORVEPOTEL to spread via WhatsApp Web to a victim's contacts. The Maverick campaign is attributed to a threat cluster that Trend Micro calls Water Saci.  At the core of the attack chain is a loader with robust anti-analysis capabilities that deploys two embedded modules: a full-featured banking trojan and a worm component that uses WhatsApp and Microsoft Outlook for propagation.  "The observed infection chain bundles a malicious MSI installer inside a ZIP file," security researchers Jia Yu Chan, Daniel Stepanic, Seth Goodwin, and Terrance DeJesus said . "These MSI installer packages are abusing a s...
+             Threat hunters have flagged a previously undocumented Brazilian banking trojan dubbed TCLBANKER  that's capable of targeting 59 banking, fintech, and cryptocurrency platforms.  The activity is being tracked by Elastic Security Labs under the moniker REF3076 . The malware family is assessed to be a major update of the Maverick  family, which is known to leverage a worm called SORVEPOTEL to spread via WhatsApp Web to a victim's contacts. The Maverick campaign is attributed to a threat cluster that Trend Micro calls Water Saci.  At the core of the attack chain is a loader with robust anti-analysis capabilities that deploys two embedded modules: a full-featured banking trojan and a worm component that uses WhatsApp and Microsoft Outlook for propagation.  "The observed infection chain bundles a malicious MSI installer inside a ZIP file," security researchers Jia Yu Chan, Daniel Stepanic, Seth Goodwin, and Terrance DeJesus said . "These MSI installer packages are abus...
             </div>
            </div>
           </div>
          </a>
         </div>
+        <section class="body-post clear newsfeed">
+         <a class="story-link" href="https://thehackernews.uk/oauth-mcp-guide" rel="nofollow noopener" target="_blank" title="cyber security">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisDNJIRpR3PyyDs0p0JD2jkmHvywXZ6cp9zrj704DI2bEvh-0V_8pwctq1m1vNlbhetuld4BtdPyPLIN5I74JaSzH16icuLr7dpHDFf6elzhwcRZU-C0RkFiYdcUzBhXGywzStKoXZ04Tm21BrawiPKFe6BTNyi15GRuXQXSs43uSng_izqyY-q4iOR9pN/s728-e100/nudge-1.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             OAuth review checklist: 4 steps to assess risk [Free Guide]
+            </h2>
+            <div class="item-label">
+             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
+             Nudge Security
+             <span class="h-tags">
+              SaaS Security / AI Security
+             </span>
+            </div>
+            <div class="home-desc">
+             A step-by-step guide to Salesforce Experience Site pentesting, including novel Apex enumeration.
+            </div>
+           </div>
+          </div>
+         </a>
+        </section>
         <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/fake-call-history-apps-stole-payments.html">
           <div class="clear home-post-box cf">
@@ -380,71 +439,34 @@
           </div>
          </a>
         </div>
-        <section class="body-post clear newsfeed">
-         <a class="story-link" href="https://thehackernews.uk/wiz-secure-coding" rel="nofollow noopener" target="_blank" title="cyber security">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKoIrXecTx2m3gT6tHAFTRihap7rbyiVdIBcm54HmSQgleiRCXdzkWz2CAsg7oJ5rd_1Z8FuykkpNrfrN4B0P1rR6fqCauUNI8u9RPdBYaBEIr1QEEMTz6WBk_6g4pFT7e_qOYiFWoTD0PvIVEczIMpMM1fewi7tU73bPZiK-dhGS1fB5xpbuJhLewEVBX/s728-e100/vibe.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             From Prompts to Production: The Technical Guide to Secure Vibe Coding
-            </h2>
-            <div class="item-label">
-             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
-             Wiz
-             <span class="h-tags">
-              AI Security / Vibe Coding
-             </span>
-            </div>
-            <div class="home-desc">
-             Strengthen security across your AI development workflows and secure AI-generated applications with Vibe Coding best practices.
-            </div>
-           </div>
-          </div>
-         </a>
-        </section>
         <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/one-click-total-shutdown-patient-zero.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt='One Click, Total Shutdown: The "Patient Zero" Webinar on Killing Stealth Breaches' class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz_1BMhUux9JB2X26ToAMnW32GttimEIwRX1fG4_LrlZjedjkjzps_Ad-eiSX-2LlJ1FFIw3g1kvH1kKrgwETmSgTk8wal5a7AJQNIY2IH3317GaUYEj-_3tko2hxjKBc1ms0WQ7UjHHTst0aKtjFz1jOPasyD8x5U_GQW4KdhKxDPHhlmYVOY9TM6vLy_/s1600/zz-webinar.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt='One Click, Total Shutdown: The "Patient Zero" Webinar on Killing Stealth Breaches' decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz_1BMhUux9JB2X26ToAMnW32GttimEIwRX1fG4_LrlZjedjkjzps_Ad-eiSX-2LlJ1FFIw3g1kvH1kKrgwETmSgTk8wal5a7AJQNIY2IH3317GaUYEj-_3tko2hxjKBc1ms0WQ7UjHHTst0aKtjFz1jOPasyD8x5U_GQW4KdhKxDPHhlmYVOY9TM6vLy_/s1600/zz-webinar.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             One Click, Total Shutdown: The "Patient Zero" Webinar on Killing Stealth Breaches
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              May 08, 2026
-             </span>
-             <span class="h-tags">
-              Artificial Intelligence / Threat Detection
-             </span>
-            </div>
-            <div class="home-desc">
-             The hardest part of cybersecurity isn't the technology, it’s the people.  Every major breach you’ve read about lately usually starts the same way: one employee, one clever email, and one "Patient Zero" infection.  In 2026, hackers are using AI to make these "first clicks" nearly impossible to spot. If a single laptop gets compromised on your watch, do you have a plan to stop it from taking down the whole company?   Register for the Webinar: The Patient Zero Playbook   What is "Patient Zero"?  In medicine, Patient Zero is the first person to carry a disease into a population. In cybersecurity, it’s the first device an attacker hits. Once they are "in," they don't stay there—they move fast to find your data, your passwords, and your backups.  What You Will Learn  Thisisn't a boring lecture. It is a technical deep dive into how modern breaches start and how to kill them instantly. We are covering:   The AI Phish:  How attackers use gene...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/05/quasar-linux-rat-steals-developer.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="Quasar Linux RAT Steals Developer Credentials for Software Supply Chain Compromise" class="home-img-src lazyload" data-src="https://blogger.googleuserco
+             <img alt='One Click, Total Shutdown: The "Patient Zero" Webinar on Killing Stealth Breaches' class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz_1BMhU
+
+[DEBUG] https://thehackernews.com/2026/05/ollama-out-of-bounds-read-vulnerability.html content length: 7307
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
 [DEBUG] https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html content length: 1872
 <!DOCTYPE html>
@@ -468,7 +490,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
-[DEBUG] https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html content length: 5995
+[DEBUG] https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html content length: 6001
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
@@ -489,6 +511,21 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.uk/oauth-mcp-guide content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.nudgesecurity.com/content/the-oauth-mcp-investigation-checklist?utm_medium=sponsored&amp;utm_source=thn&amp;utm_content=newsfeed&amp;utm_campaign=oauth&amp;utm_term=oauth-mcp-checklist" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   The OAuth &amp; MCP Investigation Checklist | Nudge Security
+  </title>
+  <meta content="The OAuth &amp; MCP Investigation Checklist | Nudge Security" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
 
 [DEBUG] https://thehackernews.com/2026/05/fake-call-history-apps-stole-payments.html content length: 6751
 <!DOCTYPE html>
@@ -512,21 +549,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
-[DEBUG] https://thehackernews.uk/wiz-secure-coding content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.wiz.io/lp/the-technical-guide-to-secure-vibe-coding?utm_source=hackernews&amp;utm_medium=display&amp;utm_campaign=FY27Q1_INB_FORM_The-Technical-Guide-to-Secure-Vibe-Coding&amp;sfcid=701Vh00000aOOKiIAO&amp;utm_term=FY27Q2-hackernews-newsfeed-May&amp;utm_content=Secure-Vibe-Coding-Guide" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   Technical Guide to Secure Vibe Coding: Prompts to Production | Wiz
-  </title>
-  <meta content="Technical Guide to Secure Vibe Coding: Prompts to Production | Wiz" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
 [DEBUG] https://thehackernews.com/2026/05/one-click-total-shutdown-patient-zero.html content length: 1798
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
@@ -549,6 +571,21 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
+[DEBUG] https://thehackernews.uk/apex-site-security content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.reco.ai/blog/salesforce-experience-site-pentest-apex-predator" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   How to Test a Salesforce Experience Site Like an Apex Predator
+  </title>
+  <meta content="How to Test a Salesforce Experience Site Like an Apex Predator" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
+
 [DEBUG] https://thehackernews.com/2026/05/quasar-linux-rat-steals-developer.html content length: 3768
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
@@ -570,21 +607,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.uk/vpn-threat-report content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.zscaler.com/campaign/threatlabz-vpn-risk-report" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   Zscaler ThreatLabz 2026 VPN Risk Report
-  </title>
-  <meta content="Zscaler ThreatLabz 2026 VPN Risk Report" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
 
 [DEBUG] https://thehackernews.com/2026/05/one-missed-threat-per-week-what-25m.html content length: 8230
 <!DOCTYPE html>
@@ -697,28 +719,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
 [DEBUG] https://thehackernews.com/2026/05/pan-os-rce-exploit-under-active-use.html content length: 3287
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.com/2026/05/threatsday-bulletin-edge-plaintext.html content length: 27829
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
