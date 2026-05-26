@@ -282,6 +282,39 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via npm, PyPI, and CratesIO" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOb58wXNPgRDazHcSLTObawPnMVsCDUEAoFclGVn3CC8qe6Pr_0-Gce-SxCO7FJ5HzU23WE_soU5iTc0zvLL0zzbXPcO8MqVgHIIAKXJo4ExcujDPV9yiIdN1X1jV63ACBN66_ktTeQ0FVmYsCTJC3tpyxpUBrvxLh_xqF-mKOZy8uaqz3QKyf6XpJHC4z/s1600/npm-python-rust.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via npm, PyPI, and CratesIO" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOb58wXNPgRDazHcSLTObawPnMVsCDUEAoFclGVn3CC8qe6Pr_0-Gce-SxCO7FJ5HzU23WE_soU5iTc0zvLL0zzbXPcO8MqVgHIIAKXJo4ExcujDPV9yiIdN1X1jV63ACBN66_ktTeQ0FVmYsCTJC3tpyxpUBrvxLh_xqF-mKOZy8uaqz3QKyf6XpJHC4z/s1600/npm-python-rust.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             TrapDoor Supply Chain Attack Spreads Credential-Stealing Malware via npm, PyPI, and CratesIO
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              May 25, 2026
+             </span>
+             <span class="h-tags">
+              Supply Chain Attack / Malware
+             </span>
+            </div>
+            <div class="home-desc">
+             A new coordinated cross-ecosystem software supply chain attack campaign has targeted npm, PyPI, and Crates.io to distribute credential-stealing malware.   The campaign, codenamed TrapDoor , spans more than 34 malicious packages across over 384 versions. The earliest activity was recorded on May 22, 2026, at 8:20 p.m. UTC, with new packages published to the ecosystems in waves from a cluster of accounts in quick succession.   "TrapDoor targets developers in crypto, DeFi, Solana, and AI communities," Socket said. "The malicious packages are designed to steal developer secrets, crypto wallets, SSH keys, cloud credentials, browser data, and environment variables."   "Several npm packages also deploy a shared payload, trap-core.js, that scans for credentials, validates AWS and GitHub tokens, attempts SSH-based lateral movement, and plants persistence through .cursorrules, CLAUDE.md, Git hooks, shell hooks, systemd, cron, and SSH."   It's worth noting tha...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/npm-adds-2fa-gated-publishing-and.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
@@ -347,6 +380,32 @@
           </div>
          </a>
         </div>
+        <section class="body-post clear newsfeed">
+         <a class="story-link" href="https://thehackernews.uk/sans-maturity-ebook" rel="nofollow noopener" target="_blank" title="cyber security">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfBYF0XtcfHPkDpimZ8LiiWkawO4Gzf7wAnOHUA-vkBKdenpO1a0fUUcQap5A9KlulPynMn4pw6CAc5VbDyvRnskfpk7S45wMGmy2JOn6VUCGnj4FQZdmc0UMS7om9SCgyMUm6DxUc-CJrpkwPyxTReo-mTDfZnzZ_isCx0gM2dhx-Mm1z2tGwiHa9Yr_V/s728-e100/sans-a.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Securing AI Use Within Your Organization Starts Here
+            </h2>
+            <div class="item-label">
+             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
+             SANS Institute
+             <span class="h-tags">
+              AI Security
+             </span>
+            </div>
+            <div class="home-desc">
+             The risks of ungoverned AI within your organization are compounding at machine speed. Turn your AI security priorities into actionable steps with this step-by-step guide.
+            </div>
+           </div>
+          </div>
+         </a>
+        </section>
         <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html">
           <div class="clear home-post-box cf">
@@ -380,73 +439,14 @@
           </div>
          </a>
         </div>
-        <section class="body-post clear newsfeed">
-         <a class="story-link" href="https://thehackernews.uk/sans-may-discount" rel="nofollow noopener" target="_blank" title="cyber security">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghRpZZ0VtzzLuG_dJQEYvnxaPdtijo_pmkkyBUvPLxuE0LqNdH_BG5qjNal79441pyGvZTdChkZOgocUyOVdff1B9Rxce7MecnMPzC2_rVAhp17hkYzgHZd8XANVTBgRo5CPdT62qgKhAbnWKhRNnFOwT5uEFDK-vC7RgWjGvCviIjVcdyg3WXiwLgLBL6/s728-e100/sans-2.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Military Appreciation Month: 10% Off SANS Cybersecurity Training
-            </h2>
-            <div class="item-label">
-             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
-             SANS Institute
-             <span class="h-tags">
-              Cybersecurity Training
-             </span>
-            </div>
-            <div class="home-desc">
-             Get 10% off SANS training this May—online or in person. Use code MILITARY10. U.S. only.
-            </div>
-           </div>
-          </div>
-         </a>
-        </section>
         <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkqwlAgmL-HrE2pSx8xqfY4-AyYZ59wK4x5AWtnCXSHRoBO1wcYTpWw42Fe6VRoAT77e914MSqZW56fKX95IueHTCrk10XNn2Yxh7CU8iCdX5lzFowGeVkolW-4E3po81w9pFMsaLR_r85abtUv3bwvQMa6pP1BAiSj4DrmapTiYr1twfV61tvGdWJRgs8/s1600/lang-hack.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkqwlAgmL-HrE2pSx8xqfY4-AyYZ59wK4x5AWtnCXSHRoBO1wcYTpWw42Fe6VRoAT77e914MSqZW56fKX95IueHTCrk10XNn2Yxh7CU8iCdX5lzFowGeVkolW-4E3po81w9pFMsaLR_r85abtUv3bwvQMa6pP1BAiSj4DrmapTiYr1twfV61tvGdWJRgs8/s1600/lang-hack.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Laravel-Lang PHP Packages Compromised to Deliver Cross-Platform Credential Stealer
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              May 23, 2026
-             </span>
-             <span class="h-tags">
-              Supply Chain Attack / Malware
-             </span>
-            </div>
-            <div class="home-desc">
-             Cybersecurity researchers have flagged a fresh software supply chain attack campaign that has targeted multiple PHP packages belonging to  Laravel-Lang to deliver a comprehensive credential-stealing framework.   The affected packages include -      laravel-lang/lang    laravel-lang/http-statuses    laravel-lang/attributes    laravel-lang/actions   "The timing and pattern of the newly published tags point to a broader compromise of the Laravel Lang organization's release process, rather than a single malicious package version," Socket said . "The tags were published in rapid succession on May 22 and May 23, 2026, with many versions appearing only seconds apart."   More than 700 versions associated with these packages have been identified, indicating automated mass tagging or republishing. It's suspected that the attacker may have managed to obtain access to organization-level credentials, repository automation, or release infrastructure.   The core malicious...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="LiteSpeed cPanel Plugin CVE-2026-48172 Exploited to Run Scripts as Root" class="home-img-src lazyload" data-src="https://blog
+             <img alt="Laravel-Lang PHP Packages Compr
 
-[DEBUG] https://thehackernews.com/2026/05/npm-adds-2fa-gated-publishing-and.html content length: 2352
+[DEBUG] https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html content length: 4965
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
@@ -468,7 +468,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
-[DEBUG] https://thehackernews.com/2026/05/packagist-supply-chain-attack-infects-8.html content length: 2919
+[DEBUG] https://thehackernews.com/2026/05/npm-adds-2fa-gated-publishing-and.html content length: 2340
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
@@ -489,6 +489,43 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.com/2026/05/packagist-supply-chain-attack-infects-8.html content length: 2920
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.uk/sans-maturity-ebook content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.sans.org/mlp/2026-ai-security-maturity-model-ebook?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_content=AISMM26_HP_Newsfeed_A&amp;utm_campaign=AI_Security_Maturity_Model_eBook_2026&amp;utm_rdetail=Global&amp;utm_goal=Leads&amp;utm_type=Global_Campaign" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   Download the SANS AI Security Maturity Model™ eBook | GIAC | SANS Institute
+  </title>
+  <meta content="Download the SANS AI Security Maturity Model™ eBook | GIAC | SANS Institute" property="og:title">
+   <meta content="website" property="og:type"/>
+  </meta>
+ </head>
+</html>
+
 
 [DEBUG] https://thehackernews.com/2026/05/claude-mythos-ai-finds-10000-high.html content length: 4151
 <!DOCTYPE html>
@@ -512,44 +549,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
-[DEBUG] https://thehackernews.uk/sans-may-discount content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.sans.org/mlp/military-appreciation-discount?utm_medium=Sponsored_Content&amp;utm_source=Hacker_News&amp;utm_rdetail=NA&amp;utm_goal=Orders&amp;utm_type=Live_Training_Events&amp;utm_content=THN_May__MILPromo_HomepageNews2&amp;utm_campaign=Military_Appreciation_2026" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   10% Off SANS Training for Military Appreciation Month | SANS Institute
-  </title>
-  <meta content="10% Off SANS Training for Military Appreciation Month | SANS Institute" property="og:title">
-   <meta content="website" property="og:type"/>
-  </meta>
- </head>
-</html>
-
-
-[DEBUG] https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html content length: 4753
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html content length: 2207
+[DEBUG] https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html content length: 4982
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
@@ -585,6 +585,28 @@
  </head>
 </html>
 
+
+[DEBUG] https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html content length: 2207
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
 [DEBUG] https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html content length: 1976
 <!DOCTYPE html>
@@ -652,7 +674,7 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
-[DEBUG] https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html content length: 6023
+[DEBUG] https://thehackernews.com/2026/05/megalodon-github-attack-targets-5561.html content length: 7166
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
@@ -697,28 +719,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
 [DEBUG] https://thehackernews.com/2026/05/kimwolf-ddos-botnet-operator-arrested.html content length: 2595
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.com/2026/05/cisa-adds-exploited-langflow-and-trend.html content length: 2244
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
