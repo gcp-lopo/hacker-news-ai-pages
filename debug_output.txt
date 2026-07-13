@@ -282,6 +282,131 @@
       <div class="widget Blog" data-version="1" id="Blog1">
        <div class="blog-posts clear">
         <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhodiWPXDsex6YL7v4e2n_D5MJFMht76GRRmHTdiG61tfEmsoZyow4tkiS3ORACILDl2fNP27YQkw1XLSBKGcom-DhCVzzPDdkdSgeMGdxcVL_rgO70x5LqZcjxKAPTtFOquB8LwSBPWrSpflqCzns-cFZ_EVm0WZfV7wSoPM3S-7_IGtCT3AjxY0rfITU/s1600/npm-js.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhodiWPXDsex6YL7v4e2n_D5MJFMht76GRRmHTdiG61tfEmsoZyow4tkiS3ORACILDl2fNP27YQkw1XLSBKGcom-DhCVzzPDdkdSgeMGdxcVL_rgO70x5LqZcjxKAPTtFOquB8LwSBPWrSpflqCzns-cFZ_EVm0WZfV7wSoPM3S-7_IGtCT3AjxY0rfITU/s1600/npm-js.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 11, 2026
+             </span>
+             <span class="h-tags">
+              Software Supply Chain / Malware
+             </span>
+            </div>
+            <div class="home-desc">
+             The jscrambler npm package was compromised, and simply installing its 8.14.0 release runs an infostealer on your machine. Published on July 11, 2026, the malicious version carries a preinstall hook that drops and executes a native binary, one build each for Windows, macOS, and Linux.   Socket flagged the release  six minutes after it was published . If you or one of your build systems pulled it in that window, the payload has already run with whatever access your install process had.   None of this is in the prior release, 8.13.0.  The package diff  shows two new files under dist/: setup.js, a small loader, and intro.js. Despite the name, intro.js is not JavaScript but a roughly 7.8MB container packing three gzip-compressed native binaries, one each for Linux, Windows, and macOS.   On install, setup.js picks the binary for the host operating system, writes it under a random name in the system temp directory...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimRVwRIhs54UhNHyRll9YzVxICmTpgqwjAK1Sy7vYt6FAzb9oImcFpuM0J8dOWdtdjCdlROkternhP9r5jZD9HNvwVwcyRzhesdYgbVjUpJk7p4rxDDJSdEUibs1Gk-Ihy1bTcxs8fA7kgG49ImfTWEZO6068Ui-_X6sTTraCg8lFuucYJrUJi2RhdXyG2/s1600/pakistan.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimRVwRIhs54UhNHyRll9YzVxICmTpgqwjAK1Sy7vYt6FAzb9oImcFpuM0J8dOWdtdjCdlROkternhP9r5jZD9HNvwVwcyRzhesdYgbVjUpJk7p4rxDDJSdEUibs1Gk-Ihy1bTcxs8fA7kgG49ImfTWEZO6068Ui-_X6sTTraCg8lFuucYJrUJi2RhdXyG2/s1600/pakistan.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 11, 2026
+             </span>
+             <span class="h-tags">
+              Threat Intelligence / Cyber Espionage
+             </span>
+            </div>
+            <div class="home-desc">
+             Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by suspected China- and India-aligned threat actors between February 2024 and April 2026.   "At Balochistan Police, the compromised assets included servers hosting web applications that manage police and citizen data, such as criminal and biometric records," Aleksandar Milenkoski, principal threat researcher at SentinelOne SentinelLABS, said  in a report published this week.   The activity targeted network appliances and servers hosting web applications that manage biometric records, hotel and tenant registrations linked to national identity records, criminal case files, and personnel records.   The China-nexus threat actor is also said to have compromised one of these web applications to deploy a custom implant masquerading as a portal update. The application in question, named Complaint Management System (CMS), serves pol...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <div class="body-post clear">
+         <a class="story-link" href="https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirVz95zYTg61VRro9unfJCWWwwUrv3pQdtyNT7rPL8iCg6n0S6bky4dqPiluQHfSvQMIO9cyYgrz-07ZCx8yG_qND_J9XJ_0BoUON9p3zj0etafNvjg45txAeu4uCDEMxGDNv2tIxNuqrC0OsKG_sWZp5QIlEkbqZ_g_EEcAdXUQbuo_EgsXwT3mERTTk/s1600/zimbra-email-hack.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+            <noscript>
+             <img alt="Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirVz95zYTg61VRro9unfJCWWwwUrv3pQdtyNT7rPL8iCg6n0S6bky4dqPiluQHfSvQMIO9cyYgrz-07ZCx8yG_qND_J9XJ_0BoUON9p3zj0etafNvjg45txAeu4uCDEMxGDNv2tIxNuqrC0OsKG_sWZp5QIlEkbqZ_g_EEcAdXUQbuo_EgsXwT3mERTTk/s1600/zimbra-email-hack.jpg"/>
+            </noscript>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions
+            </h2>
+            <div class="item-label">
+             <span class="h-datetime">
+              <i class="icon-font icon-calendar">
+               
+              </i>
+              Jul 11, 2026
+             </span>
+             <span class="h-tags">
+              Vulnerability / Email Security
+             </span>
+            </div>
+            <div class="home-desc">
+             Zimbra is urging customers to apply updates to address a critical security vulnerability impacting the Classic Web Client that could result in arbitrary code execution.   The vulnerability has been described  as a case of stored cross-site scripting (XSS) that could allow specially crafted emails to execute malicious scripts in a user's session. It has yet to be assigned a CVE identifier.   "The update fixes a security issue in the Classic Web Client where a specially crafted email could run malicious code when the email is opened," Zimbra said . "If exploited, it could allow access to mailbox information, session data, or account settings."   XSS vulnerabilities occur when an application includes untrusted data in a web page without proper validation or escaping. This allows attackers to inject and execute malicious JavaScript in victims' browsers, which can result in session hijacking, credential theft, and account compromise.   Stored XSS, or persistent ...
+            </div>
+           </div>
+          </div>
+         </a>
+        </div>
+        <section class="body-post clear newsfeed">
+         <a class="story-link" href="https://thehackernews.uk/reco-ai-survey" rel="nofollow noopener" target="_blank" title="cyber security">
+          <div class="clear home-post-box cf">
+           <div class="home-img clear">
+            <div class="img-ratio">
+             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXI-XpcnnayJGTbLouvqz63YgroZKkBO3ZLPurNTQOAZEs5P1UL8FpXGCoIdBodffuLJxAdgdrZCU3t1aXxtRQ1kcD_2th-G90tjPN6AR5MHdTir_g4E0ReLUVflj5Eq13rf7LwpW4Gm8Wu9Gu2g13MQ7JyJ6J6v2DUoq2vyAn8ZLohE1ydkN9kzSGQO7x/s728-e100/reco.gif" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
+            </div>
+           </div>
+           <div class="clear home-right">
+            <h2 class="home-title">
+             Take the AI Sprawl CISO Survey. Get fast track to BlackHat swag
+            </h2>
+            <div class="item-label">
+             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
+             Reco
+             <span class="h-tags">
+              AI Security / SaaS Security
+             </span>
+            </div>
+            <div class="home-desc">
+             Answer questions on AI sprawl. First access to the peer benchmark report.
+            </div>
+           </div>
+          </div>
+         </a>
+        </section>
+        <div class="body-post clear">
          <a class="story-link" href="https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html">
           <div class="clear home-post-box cf">
            <div class="home-img clear">
@@ -319,132 +444,87 @@
           <div class="clear home-post-box cf">
            <div class="home-img clear">
             <div class="img-ratio">
-             <img alt="Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTNxzPo9jxkW3GuuZLBgtPOrG3vZ3va6E710jDJu_JF0jCpyQ1JTpymdVwdSH2VHL6-Ib6YLInvKsuNwgFJxna1nvDhwKMZ_hycTik5OgQniZei2FQ59-F3s80lsnPmhQ1aJsr7qIWWrf63V0AtHQxd_1Nlk6LkVEheoN5lRYH8aTeBoJ-kM1-bOjUgAwa/s1600/npm-malware-2.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTNxzPo9jxkW3GuuZLBgtPOrG3vZ3va6E710jDJu_JF0jCpyQ1JTpymdVwdSH2VHL6-Ib6YLInvKsuNwgFJxna1nvDhwKMZ_hycTik5OgQniZei2FQ59-F3s80lsnPmhQ1aJsr7qIWWrf63V0AtHQxd_1Nlk6LkVEheoN5lRYH8aTeBoJ-kM1-bOjUgAwa/s1600/npm-malware-2.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              Jul 10, 2026
-             </span>
-             <span class="h-tags">
-              Software Supply Chain / Malware
-             </span>
-            </div>
-            <div class="home-desc">
-             Unknown threat actors compromised the Injective Labs SDK project's GitHub repository and leveraged it to publish a malicious package on the npm registry to steal cryptocurrency wallet private keys and mnemonic seed phrases.   The compromised version, @injectivelabs/sdk-ts@1.20.21 , came embedded with fake telemetry functionality that exfiltrated data from cryptocurrency wallets. The version was released on July 8, 2026, but has since been deprecated  on the registry. That said, the release artifacts belonging to the compromised version are still available  for download from GitHub as of writing.   "The malicious functionality was introduced to the project's official GitHub repository through commits submitted by a GitHub account belonging to a developer with an established history of contributions to the repository," Socket said .   The software supply chain security firm said the threat actor behind the attack also published version 1.20.21 across 17 additional @inj...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihuE5rUYRadx5Q2auJjv9dVeFNIP8XSwSTaH0PDwGLUA54MXlPy3AyI532a8OnhXadtWnCCH30qvUKW9C3rCOu1LPld1or5_lXwNhRVqbohHNInDzNd1f9E77Sox5yB-ir7H69LmlYRKnoqnFASOMFa2TIK2RfTThJvu_oofIXHCpiRbXGXWy-bquBWsw/s1600/bootloader.gif" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihuE5rUYRadx5Q2auJjv9dVeFNIP8XSwSTaH0PDwGLUA54MXlPy3AyI532a8OnhXadtWnCCH30qvUKW9C3rCOu1LPld1or5_lXwNhRVqbohHNInDzNd1f9E77Sox5yB-ir7H69LmlYRKnoqnFASOMFa2TIK2RfTThJvu_oofIXHCpiRbXGXWy-bquBWsw/s1600/bootloader.gif"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              Jul 10, 2026
-             </span>
-             <span class="h-tags">
-              Firmware Security / Vulnerability
-             </span>
-            </div>
-            <div class="home-desc">
-             Researchers at firmware security firm Binarly have found six new flaws in U-Boot, the small program that starts up hardware as varied as home routers, smart cameras, and the management chips inside data-center servers.   Four of the bugs can crash a device. The other two could let an attacker who slips a malicious image in front of the bootloader run their own code, before the device has confirmed that the software is genuine.   That last part is the point. A bootloader runs before the operating system, so a flaw here can undermine everything that loads after it. All six bugs are reached while U-Boot is still reading an untrusted image, before it has checked the signature.   What Binarly found   U-Boot can bundle a kernel, device tree, ramdisk, and other boot components into one package, a FIT (Flattened Image Tree), and it checks that package's digital signature before handing over control.   Binarly went looking for weak spots in that check and found six. Most of the vulner...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <section class="body-post clear newsfeed">
-         <a class="story-link" href="https://thehackernews.uk/reco-ai-survey" rel="nofollow noopener" target="_blank" title="cyber security">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="cyber security" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiXI-XpcnnayJGTbLouvqz63YgroZKkBO3ZLPurNTQOAZEs5P1UL8FpXGCoIdBodffuLJxAdgdrZCU3t1aXxtRQ1kcD_2th-G90tjPN6AR5MHdTir_g4E0ReLUVflj5Eq13rf7LwpW4Gm8Wu9Gu2g13MQ7JyJ6J6v2DUoq2vyAn8ZLohE1ydkN9kzSGQO7x/s728-e100/reco.gif" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Take the AI Sprawl CISO Survey. Get fast track to BlackHat swag
-            </h2>
-            <div class="item-label">
-             <img alt="website" class="no-lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTE1Yzg5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmg yME0xMiAyYTE1IDE1IDAgMCAxIDAgMjBNMTIgMmExNSAxNSAwIDAgMCAwIDIwIi8+PC9zdmc+" style="max-width: 12px; margin-right: 8px;"/>
-             Reco
-             <span class="h-tags">
-              AI Security / SaaS Security
-             </span>
-            </div>
-            <div class="home-desc">
-             Answer questions on AI sprawl. First access to the peer benchmark report.
-            </div>
-           </div>
-          </div>
-         </a>
-        </section>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched" class="home-img-src lazyload" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0BbJcQ3TUJxFvOCpAChyC5saD3RGgDCtLtVG-Wupee7poBksO2TzSWFtzQmjjoXuZ-9hnCNR3HuWdSsBv7YZl477fdOcjoOBh72RY4vJ9R0hxUWktV2R7wgTsRa-_Zz5Bj_ZGfQOVT8v292QJ55C9hMumk-IgXd-PVZ6LFu2ZDyCGwjNtJhCYb4W-mPDO/s1600/ll.jpg" decoding="async" height="380" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjggMzgwIiB3aWR0aD0iNzI4IiBoZWlnaHQ9IjM4MCI+CiAgPHJlY3Qgd2lkdGg9IjcyOCIgaGVpZ2h0PSIzODAiIGZpbGw9IiNmMGY1ZmZGRiI+PC9yZWN0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjI2cHgiIGZpbGw9IiMzMzMzMzMiPi4uLjwvdGV4dD4gICAKPC9zdmc+" width="728"/>
-            </div>
-            <noscript>
-             <img alt="Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched" decoding="async" loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0BbJcQ3TUJxFvOCpAChyC5saD3RGgDCtLtVG-Wupee7poBksO2TzSWFtzQmjjoXuZ-9hnCNR3HuWdSsBv7YZl477fdOcjoOBh72RY4vJ9R0hxUWktV2R7wgTsRa-_Zz5Bj_ZGfQOVT8v292QJ55C9hMumk-IgXd-PVZ6LFu2ZDyCGwjNtJhCYb4W-mPDO/s1600/ll.jpg"/>
-            </noscript>
-           </div>
-           <div class="clear home-right">
-            <h2 class="home-title">
-             Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched
-            </h2>
-            <div class="item-label">
-             <span class="h-datetime">
-              <i class="icon-font icon-calendar">
-               
-              </i>
-              Jul 10, 2026
-             </span>
-             <span class="h-tags">
-              Vulnerability / Hardware Security
-             </span>
-            </div>
-            <div class="home-desc">
-             Researchers at Ledger's Donjon security team  have shown that a precisely timed laser pulse, aimed at the chip inside a Tangem crypto wallet card, can reset the card's password to anything the attacker picks.   No old password. No backup card. Once it is reset, whoever did it controls the wallet and can move the coins out.   This is not an emergency for most owners. The attack needs the physical card in hand and a lab that Donjon puts at around $250,000. It also means cutting the card open, which leaves damage no one can miss. It cannot be done over the internet, and there is no fix coming: Tangem cards cannot take software updates, so every card already sold carries the flaw.   The one group that should act now is anyone whose card is lost or stolen and holds serious value.   How the card is meant to protect you   A Tangem wallet looks like a plain bank card. Tap it to your phone, and a companion app talks to a Samsung S3D232A chip inside. That chip is a ...
-            </div>
-           </div>
-          </div>
-         </a>
-        </div>
-        <div class="body-post clear">
-         <a class="story-link" href="https://thehackernews.com/2026/07/researcher-details-whatsapp-to-host.html">
-          <div class="clear home-post-box cf">
-           <div class="home-img clear">
-            <div class="img-ratio">
-             <img alt="Researcher Details WhatsApp-to-Host Attack Chain Using Three OpenClaw Flaws" class="home-img-src lazyload" data-src="https://blogger.googleusercon
+             <img alt="Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages" class="home-img-src lazyload" data-src="https://blogger.googleu
+
+[DEBUG] https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html content length: 7352
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html content length: 5736
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html content length: 2127
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
+  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
+  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="#3B35AE" name="theme-color"/>
+  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
+  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <meta content="280117418781535" property="fb:app_id"/>
+  <meta content="The Hacker News" property="og:site_name"/>
+  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
+  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
+
+[DEBUG] https://thehackernews.uk/reco-ai-survey content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://hubs.ly/Q04nBvwY0" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   AI Sprawl CISO Survey | Reco
+  </title>
+  <meta content="AI Sprawl CISO Survey | Reco" property="og:title"/>
+  <meta content="website" property="og:type"/>
+ </head>
+</html>
+
 
 [DEBUG] https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html content length: 3670
 <!DOCTYPE html>
@@ -490,6 +570,20 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
+[DEBUG] https://thehackernews.uk/vpn-threat-report content length: 0
+<html>
+ <head>
+  <meta content="0; url=https://www.zscaler.com/campaign/threatlabz-vpn-risk-report" http-equiv="refresh"/>
+  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
+  <title>
+   Zscaler ThreatLabz 2026 VPN Risk Report
+  </title>
+  <meta content="Zscaler ThreatLabz 2026 VPN Risk Report" property="og:title"/>
+  <meta content="website" property="og:type"/>
+ </head>
+</html>
+
+
 [DEBUG] https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html content length: 5359
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
@@ -511,20 +605,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.uk/reco-ai-survey content length: 0
-<html>
- <head>
-  <meta content="0; url=https://hubs.ly/Q04nBvwY0" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   AI Sprawl CISO Survey | Reco
-  </title>
-  <meta content="AI Sprawl CISO Survey | Reco" property="og:title"/>
-  <meta content="website" property="og:type"/>
- </head>
-</html>
-
 
 [DEBUG] https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html content length: 6184
 <!DOCTYPE html>
@@ -569,20 +649,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.uk/vpn-threat-report content length: 0
-<html>
- <head>
-  <meta content="0; url=https://www.zscaler.com/campaign/threatlabz-vpn-risk-report" http-equiv="refresh"/>
-  <link href="data:image/x-icon;," rel="shortcut icon" type="image/x-icon"/>
-  <title>
-   Zscaler ThreatLabz 2026 VPN Risk Report
-  </title>
-  <meta content="Zscaler ThreatLabz 2026 VPN Risk Report" property="og:title"/>
-  <meta content="website" property="og:type"/>
- </head>
-</html>
-
 
 [DEBUG] https://thehackernews.com/2026/07/new-modbeacon-rat-uses-grpc-streaming.html content length: 3317
 <!DOCTYPE html>
@@ -695,50 +761,6 @@
   <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
 
 [DEBUG] https://thehackernews.com/2026/07/hackers-use-fake-microsoft-entra.html content length: 5260
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.com/2026/07/attackers-exploit-ill-bloom.html content length: 7293
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
- <head>
-  <meta charset="utf-8"/>
-  <link href="https://blogger.googleusercontent.com" rel="preconnect"/>
-  <link href="https://thehackernews.uk" rel="dns-prefetch"/>
-  <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=6.0" name="viewport"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="yes" name="apple-mobile-web-app-capable"/>
-  <meta content="#3B35AE" name="theme-color"/>
-  <meta content="#3B35AE" name="msapplication-navbutton-color"/>
-  <meta content="#3B35AE" name="apple-mobile-web-app-status-bar-style"/>
-  <link href="/manifest.json" rel="manifest"/>
-  <meta content="280117418781535" property="fb:app_id"/>
-  <meta content="The Hacker News" property="og:site_name"/>
-  <link href="https://thehackernews.com/downloads/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s32-e365/thn.jpg" rel="icon" sizes="32x32" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvNmf3E5pprZ3zqP8lszq74Wt97SvbJo5yeuyep0U6-nGs0vdarg4_WUrc5r6L0ML0xE-BsPipJd2-1PMHTvO1/s64-e365/thn.jpg" rel="icon" sizes="64x64" type="image/jpeg"/>
-  <link href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQQyjwPYjJP0wddSEB8Dlpr3dlnQUs52-WmlrZfqJoBPeOvv2Zoqlq-FhEAz_Xeprj_mtrI1MGCW1JS840JUjVEK6VoNe6zCNNTw_7YmyvN
-
-[DEBUG] https://thehackernews.com/2026/07/ransomware-negotiator-gets-70-months-in.html content length: 3161
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
  <head>
