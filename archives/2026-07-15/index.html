@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-07-15 AI创业新闻 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-07-15 AI创业新闻</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-07-15-ai创业新闻">2026-07-15 AI创业新闻</h1>
+
+<h2 id="microsoft-patches-record-622-flaws-including-two-zero-days-under-active-attack"><a id="article-1"></a>Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack</h2>
+
+<p>Microsoft shipped its largest
+Patch Tuesday
+on record today, and two of the fixes close holes that attackers are already exploiting. The release covers 622 of Microsoft’s own CVEs by its
+Security Update Guide
+count, more than triple
+June’s previous high of around 200
+. Those two live bugs are the ones to grab first. Microsoft credits incident responders for both.</p>
+
+<p>Both are elevation-of-privilege flaws in identity and collaboration infrastructure: CVE-2026-56164 in on-premises SharePoint Server and CVE-2026-56155 in Active Directory Federation Services. Neither is one of the splashy remote code execution criticals. They are privilege bugs in two systems that matter more than their scores suggest: the company document store, and the box that signs its logins. The two zero-days to patch first
+CVE-2026-56164
+, a SharePoint Server flaw Microsoft says is being exploited in attacks, lets an unauthenticated attacker escalate privileges over the network.</p>
+
+<p>No credentials, no user interaction, remote. Microsoft credited it to Mandiant’s incident responders and Google’s FLARE team, which points to discovery inside active attacks, though Microsoft has not said how it was exploited or by whom. If you run self-hosted SharePoint, this is the one to grab first, and there is a second clock on it: today is also the day SharePoint Server 2016 and 2019 reach the end of extended support. Unlike Windows Server or SQL Server, neither has a paid ESU program to fall back on.</p>
+
+<p>Beyond patching, Microsoft’s advisory notes that enabling AMSI in Full Mode on the server blunts the attack. SharePoint has been an attacker magnet since the
+ToolShell chain
+tore through unpatched servers in 2025, and it has not stopped being one. CVE-2026-56155
+, an Active Directory Federation Services flaw Microsoft also flags as exploited, lets an already-authenticated attacker elevate privileges locally through weak access controls. Microsoft’s own DART incident-response unit gets the credit.</p>
+
+<p>AD FS is the box that signs the tokens for the rest of the estate trusts, which is why a flaw labeled “local” on that host is worth more attention than the label suggests. Microsoft has not said what privileges it grants, or how attackers used it. Worth knowing for anyone tracking remediation deadlines: neither CVE is on
+CISA’s Known Exploited Vulnerabilities catalog
+as of this writing. Microsoft’s own exploitability rating already marks both as exploited.</p>
+
+<p>Do not wait for a KEV listing to make it official. Microsoft also rates the SharePoint bug fairly low on severity, which is a good reminder that the severity label is not the thing to sort by this month. A third bug, and a SharePoint chain landing in August
+The third zero-day was publicly disclosed but is not under attack: CVE-2026-50661, another
+BitLocker bypass
+. It needs physical access to the device, so it is not a remote emergency.</p>
+
+<p>Patch it, but it does not jump the queue. It continues a run of BitLocker bypasses stretching back through bitskrieg and
+YellowKey
+earlier this year. SharePoint drew a second notable fix. Rapid7 Labs disclosed
+CVE-2026-55040
+, a JWT authentication bypass they built for their Pwn2Own Berlin entry.</p>
+
+<p>The score depends on who you ask: Rapid7 puts it at 5.3 and says Microsoft assigned it medium severity, while ZDI
+reads
+the release as Critical at 9.1. What it does is not in dispute. Rapid7 chained it to a separate remote code execution bug to reach unauthenticated RCE against a vulnerable server, and the RCE half is not patched yet; Microsoft is slated to fix it in August. That makes July bypass the fix that breaks the chain.</p>
+
+<p>A four-point spread on one bug also tells you what a severity number is worth this month. The RC4 cleanup that can break logins
+This update also finishes Microsoft’s multi-year Kerberos RC4 hardening. The July rollout removes the RC4DefaultDisablementPhase rollback switch, the escape hatch admins have leaned on since Microsoft began the crackdown in January. After this, RC4 works only for accounts explicitly configured to allow it.</p>
+
+<p>If any service account in your environment still requests RC4 Kerberos tickets, it can fail authentication the moment the update lands. The order matters: audit first, using the RC4 audit events Microsoft added in January, then rotate the passwords on flagged service accounts, so Windows generates AES keys for them, then patch. Rotation only fixes accounts missing AES keys. Anything pinned to RC4 by configuration, or a legacy client that speaks nothing else, needs its own fix before the update lands.</p>
+
+<p>This one does not get you breached; it breaks things, but it will page you at 2am if you skip the audit. Why a quiet month set a record
+July is historically one of the lightest months on Microsoft’s calendar, which makes a release this size stand out. Windows alone accounts for 416 of the 622, and ZDI counts 95 remote code execution bugs across the release. Here is where the rest sits, and what is worth pulling out of each pile:
+Product family
+CVEs
+Worth pulling out
+Windows
+416
+Both the AD FS zero-day (
+CVE-2026-56155
+) and the disclosed BitLocker bypass (
+CVE-2026-50661
+) live here.</p>
+
+<p>Top score of the release is a VMSwitch RCE,
+CVE-2026-57092
+at 9.9. Also five DHCP RCEs, and 21 NTFS and ReFS driver bugs that ZDI reads as one shared root cause. Office
+82
+Counted once. Microsoft lists the same 82 again under a separate Office 2016 track, which is why some outlets report 164.</p>
+
+<p>Microsoft Edge
+46
+ZDI counts 21 as Microsoft’s own rather than Chromium re-listings. Developer Tools
+27
+Security feature bypasses across Visual Studio, VS Code, and GitHub Copilot, mostly injection and path traversal. SharePoint Server
+17
+The exploited zero-day (
+CVE-2026-56164
+) and Rapid7’s chain bypass (
+CVE-2026-55040
+), plus a Critical RCE pair including
+CVE-2026-50522
+at 9.8. Azure
+11
+Nothing flagged as urgent.</p>
+
+<p>SQL Server
+8
+An RCE pair,
+CVE-2026-54117
+and
+CVE-2026-54118
+, both 8.8. Defender
+5
+Two Critical RCEs. Exchange Server
+5
+A stored XSS in Outlook Web Access,
+CVE-2026-55008
+, at 9.6. Microsoft files it under spoofing, which undersells it.</p>
+
+<p>Other
+5
+Nothing flagged as urgent. Counts are from Microsoft’s Security Update Guide, which totals 622 unique CVEs this month. ZDI, counting independently, landed on 621, and its July review is the source for the per-family callouts. Microsoft called this one five days early.</p>
+
+<p>In a
+July 9 post
+, it told customers to expect a “higher volume of security updates included in each security release” as AI helps it uncover more issues. That work includes
+MDASH
+, its multi-model agentic scanning system, which found 16 of the bugs in May’s Patch Tuesday by itself. Microsoft has not said how many of July’s 622 came out of that pipeline. The same automation cuts both ways.</p>
+
+<p>Once a patch ships, attackers can diff it against the last build, find the bug it closes, and build a working exploit before most shops have finished testing. That eats the old “wait a week” cushion and shrinks the gap to Exploit Wednesday. It also guts CVSS-based triage. When a release carries 600-plus CVEs and a large share are rated High or Critical, “critical” stops sorting anything.</p>
+
+<p>This month’s two exploited bugs make the point: neither is a headline 9.8, both are mid-tier privilege flaws, and both are already in use. Sort by what is being exploited, using KEV, EPSS, and Microsoft’s exploited flag, not by score, and patch faster than you used to. The number on the box is only going up. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="sap-patches-cvss-99-netweaver-abap-flaw-that-could-expose-or-modify-data"><a id="article-2"></a>SAP Patches CVSS 9.9 NetWeaver ABAP Flaw That Could Expose or Modify Data</h2>
+
+<p>SAP has rolled out updates to address
+multiple vulnerabilities
+as part of its July 2026 security updates, including a critical flaw in SAP NetWeaver Application Server ABAP. The vulnerability in question is
+CVE-2026-44747
+(CVSS score: 9.9), an out-of-bounds write flaw that allows an authenticated attacker to leverage logical errors in memory management to cause a memory corruption that could lead to unauthorized data access, modification, or system unavailability. “As a temporary workaround the note proposes to disable all ICF nodes with a specific property in transaction SICF,” SAP security firm Onapsis
+said
+. “Since the workaround will disable opening transactions in SAP GUI for HTML, it is not an option for all customers and it is strongly recommended to install the patching ABAP Kernel version.”
+Also addressed by SAP are two other critical vulnerabilities -
+CVE-2026-27690
+(CVSS score: 9.1) - An HTTP request/response smuggling flaw in SAP Approuter deployments in non-Cloud Foundry environments that allows an unauthenticated attacker to send a specially crafted HTTP request that leads to request-response desynchronization and results in the exposure of user responses and triggers denial-of-service (DoS) attacks.</p>
+
+<p>CVE-2026-44761
+(CVSS score: 9.1) - A use of default credentials flaw in SAP Commerce Cloud that could retain a sample OAuth 2.0 client with publicly documented sample credentials originating from a sample configuration provided in SAP Help Portal documentation. “If left unchanged, an unauthenticated attacker could use these well-known credentials to obtain a valid access token and invoke certain APIs to read and modify data,” according to a description of CVE-2026-44761 in the NIST National Vulnerability Database (NVD). “Successful exploitation results in high impact on confidentiality and integrity, with no impact on availability.”
+Onapsis noted that the vulnerability stems from sample configuration scripts previously provided in the SAP Help Portal. These scripts, originally meant for development and testing, configure OAuth 2.0 clients with hard-coded, well-known credentials.</p>
+
+<p>“Older versions of the documentation did not explicitly warn customers against importing these default settings into production,” it noted. “An unauthenticated attacker can leverage these publicly available, default credentials to obtain a valid access token. With this token, they can invoke specific APIs to read and alter system data. Exploitation requires that the customer executed the sample script and retained the resulting OAuth 2.0 client in production without replacing the hard-coded secret.”
+It’s worth noting that customers who removed the sample client or replaced the secret with a strong, unique value are not impacted by the bug.</p>
+
+<p>Customers are recommended to audit their production environments for the presence of the affected sample OAuth 2.0 client. If the client exists, it must be removed. Although there is no evidence of the flaws being exploited in the wild, it’s advised to apply the necessary updates for optimal protection. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="researchers-say-claude-for-chrome-flaw-lets-rogue-extensions-trigger-gmail-reads"><a id="article-3"></a>Researchers Say Claude for Chrome Flaw Lets Rogue Extensions Trigger Gmail Reads</h2>
+
+<p>Any other browser extension that can run a script on claude.ai can still trigger Claude for Chrome tasks aimed at your Gmail, your latest Google Doc and its comments, and your Calendar. Both this and ClaudeBleed need a rogue extension that can already run a script on claude.ai; the difference is scope. Anthropic restricted the arbitrary-prompt path in May as part of its response to the
+ClaudeBleed
+flaw, boxing external callers into a fixed set of tasks, but
+Manifold Security
+says the gap is still open in v1.0.80, the current release, eight versions later. If you run Claude for Chrome and any other extension that can touch claude.ai, you are in scope.</p>
+
+<p>In the default “ask before acting” mode, the forged task still hits an approval box you have to click. If you switched on “Act without asking,” the hands-off automation mode, it runs with no prompt at all. The quickest guard is to turn “Act without asking” off and review any extension with permission to read or change data on claude.ai. That restores the approval step but does not remove the forged-click path, and there is no patch as of July 14.</p>
+
+<p>The Hacker News unpacked the current build and confirmed both mechanisms remain in v1.0.80. The trigger accepts a forged click
+After
+ClaudeBleed
+, Anthropic stopped letting the page hand Claude any text it wanted and boxed external callers into nine fixed task IDs baked into the extension bundle. Three are onboarding practice prompts, three drive DoorDash, Salesforce, and Zillow, and the last three,
+usecase-gmail
+,
+usecase-gdocs
+, and
+usecase-calendar
+, are the ones that read your mail, your latest doc and its comments, and your calendar. The allowlist is a real improvement.</p>
+
+<p>The page can no longer put words in Claude’s mouth. The weak point is what pulls the trigger. A content script in the extension listens on claude.ai for a click on a specific element (
+#claude-onboarding-button
+), reads its
+data-task-id
+, and if the ID is one of the nine allowlisted tasks, sends the extension an
+open_side_panel
+message carrying it. The panel opens with the matching prompt loaded.</p>
+
+<p>What the handler never checks is
+event.isTrusted
+, the browser flag that tells a real user click from one a script dispatched. So any extension whose content script can reach the DOM on claude.ai can build the element, set the task ID, and dispatch a synthetic click. The extension treats it as a genuine tap. Manifold demonstrated the trigger with six lines pasted into the claude.ai console, with
+isTrusted: false
+in the logs confirming the fake click was honored.</p>
+
+<p>With browser control on, the default once onboarding finishes, that forged click loads the
+usecase-gmail
+task into the panel. In default mode, an approval box still stands between that and any actual read, and the user has to click it. Manifold rates the flaw CVSS 7.7 High in that mode, and 9.6 Critical once a user has enabled “Act without asking,” where the same task runs silently. The one-line fix, the researchers say, rejects synthetic clicks at the top of the handler.</p>
+
+<p>It has not shipped. A quieter flaw sits underneath
+The second issue is not remotely reachable today, but it is what removes the approval step if another flaw ever exposes it. When Claude’s side panel loads with
+?skipPermissions=true
+in its URL, it boots straight into
+skip_all_permission_checks
+and starts acting without asking. No gesture, no consent screen.</p>
+
+<p>A red banner warning that Claude can now take most actions online does appear, but only after the privileged session is already running. The banner tells you what happened. It does not stop it from happening. For now, that URL can only be built by the extension itself, so there is no direct remote path.</p>
+
+<p>A future bug that lets a lower-privileged context set that parameter could turn the forged-click trick into a fully silent account read. That path could be exposed by a URL-accepting message handler, a panel-building regression, or an XSS flaw in the options page. Manifold’s fix is to stop reading permission mode from the URL and boot the panel in ask mode every time. Manifold maps the working attack to the OWASP Top 10 for LLM apps as indirect prompt injection, since the attacker triggers one of the extension’s nine allowlisted prompts with a forged click, and the silent-execution risk to excessive agency.</p>
+
+<p>Both reproduce whether the side panel is set to Opus, Sonnet, or Fable. The bug is in the extension, not the model. Reported in May, still in the shipping code
+Manifold reported both issues on May 21 against v1.0.72. Anthropic acknowledged them the next day, then closed both.</p>
+
+<p>It shut the forged-click report on the grounds that the underlying trust-boundary problem was already tracked under the earlier ClaudeBleed report, which
+Anthropic said
+“remains open pending a complete fix.”
+It closed the URL report as informative, arguing that the parameter is only ever set by the extension for tasks the user already told it to run unattended. Yet the internal report meant to cover that fix was marked resolved before June 9, and eight releases later, the vulnerable code has not moved: Manifold checked v1.0.80 on July 7 and found the content-script click handler and the side-panel initialization byte-for-byte identical to the v1.0.72 it first reported. Anthropic had not published a public response to Manifold’s findings as of July 14, and whether “resolved” means a fix is still coming or a call that the leftover risk does not warrant one is not something anyone outside the company can tell. The scan bore that out.</p>
+
+<p>The Hacker News pulled version 1.0.80 from the
+Chrome Web Store
+, updated July 7, and available to all paid subscribers, unpacked it, and went through all 90 of its JavaScript bundles: the onboarding click handler fires on any matching click with no
+event.isTrusted
+guard, and the side panel reads
+skipPermissions
+from its own URL and switches into
+skip_all_permission_checks
+when it is set. As of that date, we found no CVE for either issue and no advisory from Anthropic. None of this is new for the extension. A separate flaw patched earlier this year
+let any website silently inject prompts into it
+, and ClaudeBleed began the same way in late April, when LayerX found that Claude for Chrome trusted the claude.ai origin instead of checking which script was actually talking to it, drove the assistant from a zero-permission extension, and found Anthropic’s first mitigation incomplete.</p>
+
+<p>LayerX called ClaudeBleed a confused-deputy problem, a program with real authority acting for the wrong caller. Claude Code
+has shown a version of the same failure: a hostile repository could exfiltrate a developer’s Anthropic API keys. Anthropic calls the extension
+a beta
+, and it is open to every paid Claude subscriber. Put an AI agent in your browser with your accounts already signed in, and another extension that can reach it can drive the capabilities Claude exposes, within the fixed task set and whatever approval mode you have set.</p>
+
+<p>Both findings weaken the same boundary: Claude accepts a script-generated click as your intent, and its permission state can be set from a URL. Eight releases on, that boundary is still where Manifold left it in May. Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="the-ai-security-starter-pack"><a id="article-4"></a>The AI Security Starter Pack</h2>
+
+<h2 id="labubarat-masquerades-as-nvidia-software-to-control-windows-hosts"><a id="article-5"></a>LabubaRAT Masquerades as NVIDIA Software to Control Windows Hosts</h2>
+
+<p>Cybersecurity researchers have flagged a previously undocumented Rust-based remote access trojan (RAT) codenamed
+LabubaRAT
+that masquerades as NVIDIA software to blend into target environments. “LabubaRAT creates a reusable foothold for hands-on activity,” Blackpoint Cyber researchers Sam Decker and Nevan Beal
+said
+in an analysis published today. “Once deployed, it can profile the host, identify security tools, receive operator commands, move files, capture screenshots, and proxy traffic through the affected system.”
+The implant also supports multiple communication methods, including HTTPS, WebView2, and DNS tunneling, allowing attackers to maintain access to compromised hosts even if one pathway is detected and closed off. There are some signs that LabubuRAT is being offered under a malware-as-a-service (MaaS) model.</p>
+
+<p>The starting point of the attack chain is an executable named “nvidia-sysruntime.exe,” which impersonates NVIDIA’s container runtime toolkit. The sample, instead of hard-coding its command-and-control (C2) information, accepts a runtime configuration through command-line arguments. This allows the campaign operator to define various parameters that are key to establishing communication with the remote server, including the server details (“pipicka[.]xyz”) and the polling interval used by the implant. Alternatively, the attacker can also supply these individual values in the form of one single Base64-encoded argument.</p>
+
+<p>“Because those values were provided at launch, the same compiled binary could be reused with different infrastructure, organizations, or campaign groupings instead of relying on a hard-coded server,” the researchers noted. The configuration is then stored in a local SQLite database, following which it undertakes discovery operations to inventory the list of web browsers and security products installed on the host, specifically checking for the presence of Google Chrome, Mozilla Firefox, Microsoft Edge, Brave, Microsoft Defender, CrowdStrike, SentinelOne, Carbon Black, Sophos, Malwarebytes, Bitdefender, ESET, Kaspersky, McAfee, Symantec, and Trend Micro. In addition, it gathers the hostname, RAM size, CPU model, and the Windows User Account Control (UAC) state as a way to prepare the environment for the next stage, as some RAT functionality may be dictated by the security tools present on the system. Once launched, LabubaRAT supports a wide range of functions, such as command execution, PowerShell execution, JavaScript execution, screenshot capture, file upload and download, archive handling, and SOCKS5 proxy support.</p>
+
+<p>“Those capabilities gave the operator enough control to interact with the host, move files in and out of the environment, route traffic through the system, and maintain access without relying on a separate loader or narrowly scoped follow-on tool,” Blackpoint Cyber said. The malware is a reference to the “LabubaPanel” title associated with its C2 infrastructure and a Labubu-themed favicon. “The sample combined runtime configuration, local state, host profiling, multiple communication paths, and operator tasking into a complete remote access tool,” Blackpoint Cyber said. “The malware gave an operator a practical way to enroll hosts, understand the environment around each agent, execute commands, move files, capture screenshots, proxy traffic, and maintain user level autostart.”
+“The LabubaPanel branding provided the clearest external naming clue, but the more important finding is the framework-like structure behind it: a Rust based RAT built to be configured, enrolled, and operated across multiple deployments.”
+Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="rabbitmq-flaws-could-leak-oauth-secrets-and-expose-cross-tenant-queue-metadata"><a id="article-6"></a>RabbitMQ Flaws Could Leak OAuth Secrets and Expose Cross-Tenant Queue Metadata</h2>
+
+<p>Cybersecurity researchers have disclosed details of two access control-related flaws impacting the RabbitMQ message broker service that could allow attackers to leak OAuth client secrets, expose enterprise messaging infrastructure to takeover risks, and bypass tenant boundaries. Miggo’s security team, which
+discovered
+and reported the flaws, said one “leaks the broker’s confidential OAuth secret to an unauthenticated attacker in a single request, a direct path to full broker takeover in the configurations that use that secret.” The second vulnerability allows any logged-in user to silently read other tenants’ data. Both shortcomings are said to have been present in the codebase since early 2024, impacting RabbitMQ release lines from 3.13.0 and later. They have been addressed in versions 4.3.0, 4.2.6, 4.1.11, 4.0.20, and 3.13.15.</p>
+
+<p>There is no evidence of active exploitation of either of the vulnerabilities prior to the public disclosure. A brief description of the two flaws is below -
+CVE-2026-57219
+(CVSS score: 8.7) - An obsolete HTTP API endpoint (“GET /api/auth”) that reveals client secret on RabbitMQ installations that had OAuth 2 configured to use the management.oauth_client_secret configuration key, allowing an attacker to exchange it for an administrator token and obtain full control of every message, queue, user, and broker setting. CVE-2026-57221
+(CVSS score: 5.3) - A missing authorization that allows any authenticated user who can connect to a virtual host to enumerate all queue and exchange names in that virtual host and read queue message counts and consumer counts, regardless of their actual permissions. “The endpoint’s authorization check was hard-coded to always allow the request, unlike every other sensitive management endpoint,” Miggo said about CVE-2026-57219.</p>
+
+<p>“The risk is sharpest wherever the management port is reachable by an untrusted network: cloud or multi-tenant setups, or a management UI accidentally exposed to the internet.”
+Besides patching to the latest versions, it’s advised to rotate the OAuth client secret if the management interface is reachable over the internet, limit access to port 15672 to prevent the management interface from being reachable over the network, separate tenants by virtual host, and implement firewall rules to block access to the vulnerable endpoint on unpatched instances. The disclosure comes as RabbitMQ maintainers addressed two critical-severity flaws that could result in a
+TLS client-authentication bypass
+(CVSS score: 9.1) and allow an attacker in an adversary-in-the-middle (AitM) position to
+forge JSON Web Key Set (JWKS) responses
+and cause the broker to accept arbitrary JWTs (CVSS score: 9.2). Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="11-old-microsoft-signed-linux-uefi-shims-could-let-attackers-bypass-secure-boot"><a id="article-7"></a>11 Old Microsoft-Signed Linux UEFI Shims Could Let Attackers Bypass Secure Boot</h2>
+
+<p>Cybersecurity researchers have discovered 11 old, Microsoft-signed, Unified Extensible Firmware Interface (UEFI) applications that could be abused to bypass Secure Boot on most systems using the modern firmware standard. “An attacker exploiting one of these vulnerable applications can execute untrusted code during system boot, enabling deployment of malicious UEFI bootkits or other malware,” ESET researcher Martin Smolár
+said
+in a report published today. The UEFI shim bootloaders expose any UEFI-based machine that trusts Microsoft’s “
+Microsoft Corporation UEFI CA 2011
+“ third-party UEFI certificate authority (CA) certificate, irrespective of the installed operating system. The certificate is used to sign third-party boot components intended to run under Secure Boot.</p>
+
+<p>It expired as of June 27, 2026, and has been replaced by Microsoft UEFI CA 2023 and Microsoft Option ROM UEFI CA 2023. The shim is a lightweight, open-source UEFI bootloader that acts as an intermediary between a computer’s motherboard firmware and the Linux operating system. Its primary purpose is to allow Linux distributions to boot when Secure Boot is enabled. It’s worth noting that the shim itself is signed with a key trusted by the firmware, mostly a Microsoft signature, as its certificates come pre-installed on UEFI-based devices.</p>
+
+<p>The sequence proceeds like this: the UEFI firmware loads the shim and validates its signature against the Microsoft CA stored in the firmware. The shim then validates the second-stage bootloader (in most cases, GRUB 2) against its own embedded vendor certificate. GRUB 2 finally validates the kernel using the same vendor certificate. The Slovak cybersecurity company said the outdated-but-trusted shims can be exploited to execute arbitrary code when the system boots up, allowing bad actors to deploy UEFI bootkits like Bootkitty, HybridPetya, or BlackLotus even when Secure Boot protections are enabled.</p>
+
+<p>The UEFI bootloaders of the open-source shim project, mainly from version 0.9 and earlier, have since been revoked by Microsoft as part of its
+June 2026 Patch Tuesday
+update following responsible disclosure earlier this February. The list of the impacted shim bootloaders is below -
+Spyrus WTGCreator from UEFI shim loader (0.7 or lower)
+RedHat RedHat Enterprise Linux (7.2) from UEFI shim loader (0.9)
+RedHat CentOS (7.2) from UEFI shim loader (0.9)
+Baramundi software baramundi Management Suite (up to 2024R1) from UEFI shim loader (0.8)
+WhiteCanyon/Blancco WipeDrive (8.0.0 through 8.1.3) from UEFI shim loader (0.7)
+Finland’s Matriculation Examination Board Abitti 1 (1.0) from UEFI shim loader (0.8)
+NTC IT ROSA, LLC ROSA Linux (R10, R9) from UEFI shim loader (0.9)
+Oracle America, Inc. OracleLinux (7.2) from UEFI shim loader (0.9)
+PC-Doctor, Inc. PC Doctor Service Center (15, 16) from UEFI shim loader (0.9)
+OpenSuse OpenSuse UEFI Shim loader (0.9)
+OpenSuse OpenSuse Shim (2.1) from UEFI Shim loader (0.9)
+A consequence of this loophole is that an attacker could exploit these susceptible shim bootloaders to bypass newer security mechanisms by making use of the bring your own vulnerable driver (BYOVD) attack technique to run arbitrary code during the early boot phase, even before the operating system is initialized.</p>
+
+<p>Linux systems also come with a security feature called a Machine Owner Key (MOK) allowlist that lets users authorize unsigned drivers to be loaded while UEFI Secure Boot is active. Although a MOK denylist was introduced in shim version 0.9 as a way to revoke old signing certificates associated with a vulnerable UEFI binary and re-sign patched versions. In this context, an attacker could replace the victim’s up-to-date shim with an older Microsoft-signed UEFI shim and bypass MOK denylist enforcement by taking advantage of the fact that the allowlist still trusts the old certificate. This, in turn, could allow an attacker’s shim to load vulnerable binaries without restriction and obtain arbitrary code execution.</p>
+
+<p>That’s not all. The attack also subverts Secure Boot Advanced Targeting (SBAT), which is designed to revoke vulnerable boot components as opposed to maintaining a huge blocklist of individual cryptographic hashes corresponding to each file. Put differently, the mechanism is used to update the minimum acceptable generation whenever a vulnerability is discovered in a boot chain component. If an attempted boot uses an older, vulnerable version, the system blocks it and throws an error.</p>
+
+<p>The CERT Coordination Center (CERT/CC), in an advisory issued last month, said the vendor-specific bootloaders have not been updated to address vulnerabilities in the upstream project after they became publicly known and fixed. “As a result, vulnerable bootloaders remained signed and trusted by Secure Boot systems because they had not been revoked through the Microsoft-signed DBX revocation list,” it
+noted
+. “This created a long-term supply chain exposure in which outdated and vulnerable boot components could still be executed on fully patched systems.”
+The result is that an attacker with administrative privileges or the ability to modify the boot process could abuse one of the above vulnerable shim bootloaders to bypass Secure Boot protections and execute arbitrary code before the operating system loads, paving the way for entrenched persistence that can survive operating system reboots and, in a few cases, its reinstallation. Because all this occurs before the operating system and security products are initialized, malicious code executed through the bootloaders can also sidestep detection by built-in security controls and endpoint detection and response (EDR) solutions.</p>
+
+<p>The issues are tracked under the CVE identifiers
+CVE-2026-8863
+and CVE-2026-10797, with the latter referring to a
+long-patched issue
+in shim that allowed the certificate-based revocation mechanism to be bypassed by modifying the second-stage bootloader’s signature header. ESET has warned that the expiration of the “Microsoft Corporation UEFI CA 2011” certificate has no bearing on the Secure Boot verification process as long as the bootloaders signed with the expired certificate are not explicitly revoked by hash. “What makes these old shims dangerous is not a novel vulnerability, it’s that no new vulnerability is needed to bypass UEFI Secure Boot,” ESET said. “An attacker needs no complicated exploitation primitives – only a copy of an old, still-trusted, but unrevoked shim binary and a basic understanding of how UEFI shims work.</p>
+
+<p>That is enough to bypass such an essential security feature as UEFI Secure Boot.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="study-of-85-crypto-wallet-extensions-finds-address-leaks-and-cross-site-tracking-risks"><a id="article-8"></a>Study of 85 Crypto Wallet Extensions Finds Address Leaks and Cross-Site Tracking Risks</h2>
+
+<p>Researchers at KU Leuven tested 85 of the most popular crypto wallets that run as browser extensions and found that the wallets themselves leak enough to link and track the people using them. The way these wallets talk to websites and blockchain servers can tie a person’s separate addresses together and let outsiders follow them from site to site. And on a site that already holds a name or email, the same leaks can put a real name to an “anonymous” crypto identity. This is not a hack.</p>
+
+<p>The wallets behave exactly as they were built to. The 85 extensions together have about 35 million users listed on the Chrome Web Store. The team, from the university’s DistriNet security group,
+posted the paper
+this month and will present it at the PETS 2026 privacy conference in Calgary in late July. They ran real wallets against real Web3 sites and mapped out five privacy weaknesses in how wallets and websites interact.</p>
+
+<p>When they reported the most far-reaching one to the wallet makers before publishing, most declined to call it a bug at all. Problem 1: Your separate addresses get linked
+Many people keep several wallet addresses on purpose, to keep parts of their financial life apart. That only works if nobody can tell the addresses belong to the same person. But to show your balance, a wallet constantly pings outside servers, and those requests carry your address, in the clear, to whoever runs the server.</p>
+
+<p>When a wallet puts two of your addresses in one request, that server learns they are yours. Seventeen wallets exposed connections between a user’s separate addresses. Thirteen did it the obvious way, bundling two addresses into one request. Four more gave themselves away by firing separate requests within milliseconds of each other, a weaker but still useful signal.</p>
+
+<p>Together, those wallets cover about 23 million of the installs studied. Whoever runs the server, or anyone who later gets its data, can stitch the addresses into one profile. Problem 2: Logging out often doesn’t log you out
+This problem and the next one share a starting point: a website can tell which wallets you have installed. Each wallet announces itself to any page it loads, so a script can read the exact set you carry, a fingerprint that works even if you never connect a wallet and even if you block cookies.</p>
+
+<p>The researchers found that 36 of the 85 wallets do this, and their users make up about 82% of the installs studied. Those same 36 are the group behind the numbers below. When you connect a wallet to a site and later disconnect, you assume the site loses access. Often it doesn’t, for two separate reasons.</p>
+
+<p>First, many sites never actually tell the wallet to cut off access. Of the 30 popular Web3 apps the team tested, only 11 sent a real revoke command when a user clicked Disconnect or Logout. The rest just cleared their own screen. Second, even when the command is sent, many wallets ignore it.</p>
+
+<p>In 22 of those 36 wallets, the site could still read your address after asking the wallet to revoke it, and that access survived clearing cookies and restarting the browser. That makes the address a powerful tracking tag. It is globally unique, and unlike a cookie, it does not disappear when you clear your browser. The stale permission sits inside the extension until you open the wallet’s “Connected Sites” list and remove the site by hand; until then, a script on the page keeps reading the address in the background.</p>
+
+<p>Problem 3: A wallet you once connected to can expose you on other sites
+The last problem reaches the furthest. Of those same 36 wallets, 23 will hand out your address from inside a frame that one page has loaded from another site. On its own, that does nothing. The catch is what a shared tracker can do with it.</p>
+
+<p>Say the same tracking script runs on a crypto app you once connected to and on an ordinary, unrelated website. On the ordinary site, the tracker quietly loads that crypto app inside an invisible frame. The app’s page was already authorized by the wallet, and these wallets answer from inside the frame, so the wallet hands the address back to the script with no click from the user. The app has to allow being embedded for this to work, though plenty of them do.</p>
+
+<p>Link that address to a name or email the site already has on file, and a pseudonymous crypto profile turns into a named person. A wallet address is a public record of its balances, transactions, and token holdings. Tie that to a real identity and a browsing history, and an attacker has a named target whose money is now in view. The researchers showed this path is real and usable; they did not claim trackers are already running it at scale.</p>
+
+<p>What to do, and how the industry responded
+For users, the fixes are only partial. Open your wallet and clear out old site permissions you no longer use. That stops the stale-address tracking from Problem 2, but it does nothing about the address leaks to servers or the installed-wallet fingerprint. The researchers’
+demo
+shows how your own wallet behaves; it runs in your browser and, they say, stores nothing.</p>
+
+<p>Use a throwaway wallet to be safe. It also helps to keep different activities on separate wallets or browser profiles. The bigger fixes are out of users’ hands. The researchers focused their disclosure on that cross-site problem and told the affected wallet makers before publishing.</p>
+
+<p>By a February 2026 retest, Coinbase Wallet and Coin98 had already fixed it, and Hana Wallet did so later. But of the eight vendors the paper says replied through their bug bounty programs, most declined to treat it as a bug. MetaMask called it a known issue, closed the report as a duplicate, and said it had no immediate plans to stop injecting its provider because that would break too many apps. Rabby said the attack would need the same malicious script running on two sites at once, calling that “virtually impossible,” and concluded that “the vulnerability does not exist.” OKX agreed the finding was technically correct, but closed it as informational because it exposes data without stealing money.</p>
+
+<p>Bybit, Backpack, and Core called it low-risk or out of scope. The
+full replies
+are published in the researchers’ repository. The study builds on
+2023 research
+by Christof Ferreira Torres and colleagues, who first showed browser wallets leaking addresses to outside servers. This work catches leaks that earlier tools missed, maps out the cross-site tracking, and shows how the same leak could be used to unmask people.</p>
+
+<p>Where scanners like WalletRadar and WalletProbe hunt for outright bugs, this paper shows that a wallet does not need a bug to expose you. That sets it apart from the
+fake wallet extensions
+caught stealing keys last year. There, criminals stole. Here, nothing is stolen, and the leak is built in.</p>
+
+<p>The paper went up on arXiv on July 7 and is set for presentation at PETS 2026 in Calgary, July 20 to 25. For now, the wallets work as designed, and several of their makers have said, in effect, that the design is fine. The real fix is not another warning to users. It is wallets that stop exposing themselves inside embedded frames, and an ecosystem standard that says what logging out must actually do.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="how-pentera-turns-ai-security-workflows-into-validation-engines"><a id="article-9"></a>How Pentera Turns AI Security Workflows into Validation Engines</h2>
+
+<p>AI security agents are starting to influence real security decisions. They summarize findings, prioritize remediation, recommend next steps, and help teams move faster. But most still rely on fragmented risk signals: scanner output, severity scores, threat intelligence, configuration findings, and exposure data. That fragmentation matters because attackers do not move through environments one tool category at a time.</p>
+
+<p>They chain exposures across identities, networks, cloud assets, applications, and security controls. If the AI workflow only sees isolated findings, it cannot understand whether those findings create a real attack path. As AI-powered attackers accelerate exploitation, security teams need more than faster AI-assisted workflows. They need workflows grounded in evidence that can prove which risks are exploitable.</p>
+
+<p>These systems can correlate information and identify patterns, but without validation, they cannot answer the question security teams ultimately care about:
+Can an attacker actually exploit this in our environment, and can we prove it? Without validation, AI automates security guesswork. With validation, it can act on attack evidence. For security teams, that distinction matters because the cost of acting on the wrong signal is wasted effort, delayed remediation, and continued exposure.</p>
+
+<p>From Risk Signals to Attack Evidence
+Consider a common vulnerability management scenario. A scanner identifies hundreds of vulnerabilities across an environment. An AI assistant reviews the results and highlights the most severe findings based on CVSS scores, exploit intelligence, and exposure context. The workflow looks efficient, but it is still making decisions from disconnected signals.</p>
+
+<p>A critical vulnerability may be unreachable. A high-severity finding may sit behind multiple security controls. A medium-severity weakness may actually be part of a successful attack path leading to privileged access. This is where security validation becomes critical.</p>
+
+<p>Security validation tests whether exposures, misconfigurations, credentials, and security controls can actually be leveraged in a real attack path. Rather than estimating risk, validation produces evidence of what is exploitable, what is blocked, and what needs to be fixed. Pentera’s AI-powered security validation
+platform applies this approach by safely emulating real-world attack techniques against production environments to determine which exposures can actually be leveraged by an attacker. When Pentera executes a test, it does more than identify vulnerabilities.</p>
+
+<p>The platform safely performs the same techniques used by attackers to validate exposure across internal infrastructure, external attack surfaces, cloud environments, identity systems, and security controls. Instead of producing a list of theoretical weaknesses, Pentera generates validated attack paths that demonstrate how an attacker could move across the environment, chaining exposures across assets, identities, controls, and attack surfaces. Each step includes evidence showing:
+The technique used
+The systems reached
+The credentials obtained
+The privileges gained
+The assets at risk
+The objective achieved
+This changes the
+remediation conversation
+. The team is no longer debating whether a finding might matter.</p>
+
+<p>It is deciding how quickly to eliminate a validated attack path. The workflow changes from “review, infer, prioritize, ticket” to “validate, prove, prioritize, remediate, re-test.”
+Bringing Validation Into AI Security Workflows
+The challenge is that validation data often lives separately from the workflows where security teams actually work. Analysts investigate findings in one tool. Engineers remediate issues in another.</p>
+
+<p>AI-driven workflows need validated evidence from somewhere else before they can recommend action with confidence. To bridge that gap, Pentera introduced an MCP (Model Context Protocol) Server that makes Pentera validation data available directly to MCP-compatible AI assistants. Instead of exporting reports, reconciling findings, or stitching context together across tools, organizations can connect Pentera validation data into the AI workflows analysts already use. Once connected, AI agents can retrieve findings, review validated attack paths, access test results, and initiate validation activities through existing AI-based tools and workflows using natural language.</p>
+
+<p>This is not another AI copilot summarizing more security data. Pentera gives the AI workflow validated attack evidence: what was tested, what was exploitable, what controls were bypassed, and what proof supports the finding. Example prompts:
+“Show me all validated attack paths from the latest Pentera test that resulted in privileged access.”
+“Which critical scanner findings were actually validated by Pentera?”
+“Show me evidence of lateral movement from the latest test.”
+What Changes In The Workflow
+Once connected to Pentera through MCP, AI workflows move from passive analysis to validation-driven action. Validate before ticketing.</p>
+
+<p>A scanner flags a critical issue. The analyst asks the AI assistant whether the exposure was
+validated by Pentera
+. The assistant returns the relevant attack path, the technique used, the affected asset, and whether the attack achieved privilege escalation or lateral movement. Prioritize exploitable attack paths.</p>
+
+<p>Instead of sorting hundreds of findings by severity, the AI workflow cross-references scanner results with Pentera validation data and surfaces the exposures proven exploitable in the customer environment. This is especially important when the highest-risk exposure is not the highest-severity finding but the finding that connects to a validated attack path. Enrich remediation workflows. Validated findings can be routed into ticketing systems with attack evidence attached: exploited weakness, reached system, obtained credentials, gained privilege, and business-impact context.</p>
+
+<p>Revalidate after remediation. After a fix is applied, the AI workflow can use Pentera validation data to confirm whether the attack path was closed, turning remediation from a ticket update into a verified outcome. Example prompts:
+“Which of these findings are actually exploitable?”
+“Which attack path presents the highest business risk?”
+“Show evidence of lateral movement achieved during the last test.”
+Security Considerations for Enterprise Deployments
+Security teams evaluating MCP integrations often ask the same question: What data is exposed, and where does it go? Pentera’s MCP Server is designed for controlled enterprise deployments:
+Runs locally as a Docker container
+Uses STDIO communication
+Opens no inbound ports
+Requires no external management interface
+Inherits existing Pentera RBAC permissions
+Operates only within the permissions of the associated Pentera API client
+Logs interactions for auditability
+This lets organizations bring validation data into AI workflows without exposing a new network service or bypassing existing governance controls.</p>
+
+<p>As AI workflows become more autonomous, the validation layer must remain governed by enterprise permissions, audit trails, and deployment boundaries. The Shift From Risk Inference to Validation
+MCP support is more than a new integration point. It reflects a broader shift in security operations: AI systems are being asked to prioritize risk, recommend actions, and drive remediation decisions. Scanner output can suggest risk.</p>
+
+<p>Threat intelligence can indicate relevance. Exposure data can show context. Only security validation can determine whether an attacker can actually chain exposures into a successful attack. This is where AI-assisted security operations should go.</p>
+
+<p>When a scanner reports a critical exposure, a CNAPP raises an alert, or a new threat emerges, the workflow should not stop at detection or prioritization. It should ask the next question automatically: can this actually be exploited in our environment? Pentera’s MCP Server brings validation directly into AI workflows. The outcome is not just faster analysis.</p>
+
+<p>It is AI-assisted security decision-making grounded in real attack evidence: prioritized by exploitability, connected to remediation, and verified after the fix. Found this article interesting? This article is a contributed piece from one of our valued partners. Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="oauth-client-id-spoofing-lets-attackers-validate-stolen-microsoft-entra-credentials"><a id="article-10"></a>OAuth Client ID Spoofing Lets Attackers Validate Stolen Microsoft Entra Credentials</h2>
+
+<p>At least two distinct threat actors are weaponizing a novel evasion technique called
+OAuth client ID spoofing
+in cloud campaigns, while slipping past telemetry. The activity allows users to enumerate user accounts and validate stolen credentials in Microsoft Entra ID environments, without ever generating a successful sign-in event that would otherwise alert defenders. And bad actors have begun to exploit this gap to obtain unauthorized access to an organization’s cloud services. “A blind spot in cloud sign-in telemetry: Entra ID returns different error responses depending on whether a supplied OAuth client ID is valid,” Proofpoint said in a statement.</p>
+
+<p>“Attackers exploit this to infer valid usernames and correct passwords at scale, effectively checking stolen credential lists without logging a successful login.”
+In other words, the attacks leverage the OAuth client ID, a globally unique identifier (GUID) assigned to applications when requesting access to user data, and is passed as “
+client_id
+“ in authentication requests. By providing spoofed client IDs, it enables account enumeration without a registered OAuth application and permits attackers to infer both password and account validity without generating a successful sign-in event. “The
+Entra sign‑in logs
+are a primary telemetry source for identifying malicious authentication activity, including user enumeration, password spraying, and initial access attempts,” Proofpoint researcher Rachel Rabin
+said
+. Threat clusters like
+UNK_CustomCloak
+have been observed spoofing User-Agent strings to orchestrate brute-force campaigns targeting Microsoft Entra ID environments by exploiting a legacy, discontinued first-party application called Windows Live Custom Domains to bypass standard sign-in restrictions and probe user passwords across over 4,000 tenants.</p>
+
+<p>But the latest efforts mark an evolution of this tradecraft by spoofing the OAuth client IDs via HTTP POST requests to Microsoft’s OAuth 2.0 token endpoint using the Resource Owner Password Credentials (
+ROPC
+) flow. Specifically, this involves supplying a syntactically valid client ID but one that does not correspond to a real application. In such scenarios, only the application ID is recorded in the Entra sign-in log without a corresponding application name. The response, which contains an Azure Active Directory Security Token Service (
+AADSTS
+) error code, can then be used to infer whether the account exists and whether the password is correct without a registered application.</p>
+
+<p>“If the spoofed client ID is not a proper UUIDv4, Entra does not reject the request outright,” Proofpoint explained. “Attackers can therefore analyze this error response to identify valid accounts and passwords, despite using malformed client IDs.”
+“When a spoofed client ID is used, no corresponding application name is recorded in the sign-in log. This means that detections that look for surges against a specific application name may miss this activity entirely, as the field is blank.”
+Armed with this information, attackers could identify accounts that could be exploited for stealthy access, at the same time making it challenging for defenders to identify suspicious activity. Proofpoint said it has identified two large campaigns that have independently adopted the technique towards the end of December 2025, indicating the approach is being increasingly incorporated into attacker tradecraft as opposed to being an isolated incident:
+UNK_pyreq2323
+(from January to March 2026), which used more than 700,000 spoofed client IDs from Amazon Web Services (AWS) infrastructure to target more than 1 million accounts across nearly 4,000 tenants, causing lockouts for roughly 28% of targeted users due to failed attempts.</p>
+
+<p>UNK_OutFlareAZ
+(starting Dec 2025), which leveraged Cloudflare infrastructure to target over 2 million users with 3.7 million randomized spoofed application IDs. Both the campaigns have been observed using valid UUIDs rather than malformed identifiers and demonstrate patterns that align with precompiled username wordlists. That said, while UNK_OutFlareAZ enumerated users alphabetically, UNK_pyreq2323 did not. Another aspect in which they differed was in how the client IDs were spoofed.</p>
+
+<p>UNK_pyreq2323 is said to have modified the trailing digits of a known application ID, and then reused spoofed IDs across up to 12 users. In contrast, UNK_OutFlareAZ generated a unique client ID per request. “By fragmenting authentication attempts across many fictional applications, activity becomes harder to correlate and may evade per-application detections and rate limiting,” Proofpoint said. “Organizations may attempt to mitigate traditional enumeration attacks by applying Conditional Access policies scoped to applications commonly targeted for enumeration.</p>
+
+<p>Spoofed client IDs won’t trigger CA policies that are scoped to a specific application.”
+Although the problem of OAuth client ID spoofing is specific to Microsoft, Yaniv Miron, director of threat research at Proofpoint, told The Hacker News that “we do believe that other identity providers are possibly exposed to such issues.”
+“Spoofing in general has been a well-known method for years; adversaries will attempt to spoof anything that they can (different fields usually), including client ID,” Miron added. “Adversaries are constantly monitoring threat researchers’ blogs and publications, so we believe that they are adopting public research into their attacks.”
+(The story was updated after publication to include a response from Proofpoint.)
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="grok-build-uploaded-entire-git-repositories-to-xai-storage-not-just-files-it-read"><a id="article-11"></a>Grok Build Uploaded Entire Git Repositories to xAI Storage, Not Just Files It Read</h2>
+
+<p>xAI’s Grok Build coding CLI was uploading entire Git repositories, full commit history and all, to a Google Cloud Storage bucket run by xAI, not just the files a coding task needed. A researcher publishing as
+cereblab
+, testing version
+0.2.93
+, captured one of those uploads, cloned the git bundle out of the intercepted request, and pulled back a file the agent had been told in plain terms not to open. The upload rode a separate channel from the model itself, and the byte split is hard to argue with. On a 12 GB repo of files the model never read, model-turn traffic to
+/v1/responses
+came to about 192 KB while the storage channel to
+/v1/storage
+moved 5.10 GiB, a roughly 27,800x gap between what the model needed and what left the machine.</p>
+
+<p>That storage upload ran as 73 chunks of about 75 MB, every one returning HTTP 200, and across the researcher’s size sweep the volume tracked total repo size. The destination bucket,
+grok-code-session-traces
+, is named in the binary and in a staged
+metadata.json
+whose per-file paths point at
+gs://grok-code-session-traces/
+. The unread file was
+src/_probe/never_read_canary.txt
+, planted with a unique marker. Cloning the captured bundle recovered it verbatim along with the repo’s full commit history, and the same test replicated on a second, unrelated repo.</p>
+
+<p>What the captures establish is transmission, acceptance, and storage, not training. The teardown does not claim xAI trained on the code, that staff read it, or that gitignored files are always swept in. Tracked files plus history is what the wire shows. The secrets path is separate and simpler.</p>
+
+<p>When Grok reads a file, its contents go into the model turn, and a tracked
+.env
+went with them unredacted, canary
+API_KEY
+and
+DB_PASSWORD
+values and all. The same content also landed in a
+session_state
+archive bound for storage. The planted secrets were fake, so nothing real leaked in the test. The behavior is still the problem: a credential file the agent read during a task went out and was stored with no redaction.</p>
+
+<p>The setting most developers would reach for did nothing here. With “Improve the model” turned off, Grok still uploaded the repository, and the server’s own
+/v1/settings
+response kept returning
+trace_upload_enabled: true
+. That toggle governs whether your data trains the model. It does not govern whether your code leaves the machine.</p>
+
+<p>Those are two different controls, and only one of them was exposed to the user. Every cloud coding agent has to send some source to a remote model to do its job, so the first channel is expected. Sending the entire tracked repository and its history is a wider boundary than sending the files a task needs. A repo can hold proprietary code, internal URLs, customer data, and credentials that were removed from the working tree but still sit in commit history.</p>
+
+<p>In
+cereblab’s own cross-tool comparison
+, Claude Code and Codex sent no repository bundle; Gemini sent none in an idle test, though its realistic-task run was quota-blocked before it finished. Grok Build was the outlier. Those are still cloud tools that send the files they open, so “local only” is the wrong mental model for any of them. But wholesale collection of the workspace was specific to Grok Build.</p>
+
+<p>xAI’s response
+On July 13 the same
+0.2.93
+binary stopped making storage requests. cereblab retested six times and saw zero
+/v1/storage
+uploads, and the server now returned
+disable_codebase_upload: true
+and
+trace_upload_enabled: false
+. The developer Peter Dedene
+reported the same flag returned for his account
+, so the shutoff was not only cereblab’s single-machine observation. The tested client stayed on
+0.2.93
+while its server settings changed, so this was a server-side switch, not a fix shipped in an update.</p>
+
+<p>xAI has not confirmed whether it reaches every account or is permanent. xAI has so far addressed the issue on X rather than through a security advisory or changelog note. The
+@SpaceXAI account
+said enterprise teams on zero data retention never have code or trace data stored, that API-key use respects ZDR, and that consumers who have not enabled it can run
+/privacy
+in the CLI to disable retention and delete previously synced data. Elon Musk went further,
+saying
+all user data uploaded before now would be “completely and utterly deleted,” with nothing left behind.</p>
+
+<p>ZDR covers enterprise teams and API use, so for individual subscribers the
+/privacy
+command is the control on offer. For anyone who already ran the tool, the move is not to wait on xAI. Rotate any credential Grok could have sent: anything it read, anything in a tracked file, and anything in the git history the bundle carried, including a secret you committed and later deleted. A file that was gitignored and never committed stayed out of the bundle.</p>
+
+<p>A committed one rode along in the history, and deleting it later does not pull it back. A separate analysis of build 0.2.99
+found the upload code still in the binary, held off by the server flag, so xAI can turn it back on without an update. And it still has not said why full repositories were uploaded by default, how long they were kept, or how many users were affected. A training opt-out is not a promise that your code stays put, and what leaves the machine is worth checking yourself.</p>
+
+<p>Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="us-sanctions-first-vpn-service-and-malware-cryptor-seller-over-ransomware-support"><a id="article-12"></a>U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support</h2>
+
+<p>The U.S. Treasury Department’s Office of Foreign Assets Control (OFAC) has
+designated
+two individuals and a VPN service provider for enabling ransomware actors’ and other cybercriminals’ malicious activities, including ransomware attacks against Americans. The VPN, named
+First VPN Service
+(
+1VPNS
+), has been accused of offering its tools to ransomware groups, along with its 45-year-old Ukrainian administrator, Dmytro Rashevskyi. The department has also sanctioned Yegeniy Vladimirovich Silayev, a Belarusian national, for selling cryptors to help conceal ransomware and other malware as safe programs to avoid being detected by security tools.</p>
+
+<p>First VPN was
+dismantled
+in May 2026 as part of a joint law enforcement operation by European and North American authorities for assisting criminal actors to obscure the origins of ransomware attacks, data theft, scanning, and denial-of-service attacks. The service had been operational since 2014, advertising that it neither keeps a log of users’ identities or activities nor cooperates with law enforcement to tackle illegal activity originating from servers it rents to customers. Per the Treasury, several ransomware groups are said to have purchased First VPN to carry out attacks on U.S. companies and institutions and hide their true origins, deploy malware, and manage exfiltrated data.</p>
+
+<p>Victims of ransomware attacks that involved the VPN infrastructure included U.S. businesses, financial services companies, hospitals, and municipal governments. Ransomware groups using services supplied by the designated parties allegedly caused billions of dollars in losses to American businesses and critical infrastructure providers, U.S. officials said.</p>
+
+<p>“Rashevskyi has used false identities, including ‘Maksim Sorin’ and ‘Roman Chabanenko,’ to buy infrastructure from companies that might otherwise refuse to do business with him because of complaints of abuse from internet service providers about illegal activity originating from 1VPNS servers,” the department said. U.K. and E.U. Impose Sanctions on Russian Individuals and Entities
+The disclosure coincides with the U.K.</p>
+
+<p>and E.U. sanctioning Russian cyber networks for their “persistent and increasingly reckless attempts to sow chaos and division across Europe.” The sanctions target 24 individuals and entities behind destructive cyber and hybrid operations, including operators involved in proxy networks linked to the Russian Intelligence Services (RIS). This includes Russia’s Main Intelligence Directorate (GRU) senior leadership members Vyacheslav Stafeyev, Ivan Senin, and Ivan Kasyanenko for their role in directing GRU cyber and hybrid threat operations. In tandem,
+Centre 16
+of the Federal Security Service (FSB) has been attributed to
+disruptive sabotage operations
+against Poland’s energy grid late last year.</p>
+
+<p>”
+GRU Unit 29155
+cyber division worked with cybercriminals, including the company IMPULS, to recruit hackers and cyber specialists from universities and academies across Russia,” the U.K. government
+said
+. The sanctions are also aimed at individuals
+behind Lumma Stealer
+for enabling cybercriminals to collect sensitive information from compromised devices at scale. Russia is said to have used the stealer’s stolen credentials to conduct cyber espionage operations against targets globally to support the Kremlin’s objectives.</p>
+
+<p>“Cybercriminals, self-proclaimed hacktivists and private companies linked to Russia, including actors operating under its instructions, direction or control, have also carried out, enabled and facilitated a wide range of malicious activities,” the E.U. said
+. “We strongly condemn Russia’s behaviour and misuse of this cyber ecosystem, targeting public services and critical infrastructure, causing disruptions and financial losses. By calling out Russia’s malicious behaviour and imposing costs on those responsible for such activities, the EU underscores its determination to uphold accountability in cyberspace.”
+Russian State-Sponsored Targeting Goes After Routers
+The sanctions also arrive against the
+backdrop
+of a
+new advisory
+issued by the U.S.</p>
+
+<p>Federal Bureau of Investigation (FBI) about FSB Center 16 cyber actors’ exploitation of poorly configured and vulnerable networking devices across the world to opportunistically hack into multiple critical infrastructure sector networks. “The Russian FSB Center 16 cyber actors primarily use scanning to identify poorly configured networking devices, primarily routers, for exploitation,” the agency said. “The actors scan for Internet IP ranges with active Simple Network Management Protocol (SNMP) agents that accept common or default community strings for authentication.”
+These scans, which are run via proxies, consist of SNMP Set-Requests from a spoofed IP address containing Object Identifiers (OIDs) that instruct the SNMP agent on poorly configured networking devices to copy its configuration to a file and transfer it to an attacker-controlled virtual private server (VPS) or compromised FTP server. The activity also involves abusing common vulnerabilities and exposures (CVEs) in Cisco devices, such as
+CVE-2018-0171
+and
+CVE-2008-4128
+, as a way to discover and exploit poorly configured networking appliances.</p>
+
+<p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has since
+added
+CVE-2008-4128 to its Known Exploited Vulnerabilities (
+KEV
+) catalog, requiring federal agencies to apply the fixes by July 16, 2026. The threat actors behind the campaign are
+tracked
+under various
+names
+, including Berserk Bear, Crouching Yeti, Dragonfly, Energetic Bear, Ghost Blizzard, Energetic Bear, and Static Tundra. In August 2025, Cisco warned of active exploitation of CVE-2018-0171, urging customers to apply the necessary fixes as soon as possible.</p>
+
+<p>“This is an ongoing issue that has impacted various U.S. and foreign networks across multiple sectors, including the Defense Industrial Base, communications, energy, financial services, government facilities, and healthcare sectors,” the U.S. National Security Agency (NSA)
+said
+. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="148-npm-packages-disguised-as-student-proxies-turned-browsers-into-a-ddos-botnet"><a id="article-13"></a>148 npm Packages Disguised as Student Proxies Turned Browsers Into a DDoS Botnet</h2>
+
+<p>A campaign of 148 npm packages disguised as student web proxies turned visitors’ browsers into a distributed denial-of-service botnet for roughly two weeks in May, according to new research from JFrog. The packages did not go after the developers who might install them. The operators used the registry as free hosting for a booby-trapped proxy site and let the students who came to dodge school web filters supply the attack traffic. The packages shipped under names like charlie-kirk, ilovefemboys, and miguelphonk, each carrying a proxy app branded “Lucide” and dressed as a tutoring landing page called Riverbend Tutoring or Northstar Tutoring.</p>
+
+<p>On the surface, the proxy worked, letting students slip past content filters to reach games and blocked sites. Underneath, it loaded a remote code loader whose payload the operators could swap at will, plus a WebSocket flood generator built to speak the Wisp proxy protocol. Anyone who opened a page joined the swarm without knowing it. None of this runs at install time.</p>
+
+<p>The packages carry no lifecycle hooks and no native build scripts, and they were never written to be imported into a project. The self-replicating
+Shai-Hulud worm
+that hit more than 500 packages in September 2025 harvested developer secrets and republished itself with stolen tokens. Days before it, a
+phishing attack on the maintainer known as qix
+slipped wallet-draining code into chalk, debug, and 16 other packages with billions of weekly downloads between them. Those attacks fire the moment a package installs and target the people building software.</p>
+
+<p>This one skips the build pipeline and waits in a browser tab. An earlier
+advisory from SafeDep
+cataloged 141 of the packages in May and read the operation as adware and registry abuse: popunder ads, third-party monetization scripts, and Google Analytics tracking bolted onto a Scramjet proxy aimed at students. That held up for what was visible on the surface. JFrog pulled the thread
+further.</p>
+
+<p>The team deobfuscated the app’s entry bundle, a 5.4 MB single line of JavaScript that unpacked into more than 20,600 lines of readable code, and recovered archived payloads from the Wayback Machine to reconstruct the campaign’s timeline. Two modules sat underneath the adware, both firing before the React interface renders. The first, which JFrog calls
+G2
+, is a remote script loader, and it fetches code about as unsafely as possible. It pulls JavaScript from a GitHub repository through the jsDelivr CDN, points at the mutable main branch instead of a pinned commit, ships no Subresource Integrity check, and runs whatever comes back with the proxy site’s own origin privileges: full access to cookies, local storage, and same-origin endpoints.</p>
+
+<p>A no-referrer policy keeps the request from advertising where it came from. Whoever holds the GitHub account behind it can change the code running in every visitor’s browser whenever they want. The repository was returning a 404 by the time JFrog looked, but an archived copy from May 30 preserved what it had served: a crude HTTP flood. Every 500 milliseconds, the script builds a fresh one-million-character string and fires it as a no-cors POST at cdn.caan.edu, which JFrog identifies as the public domain of a nursing school in Matteson, Illinois.</p>
+
+<p>The requests never wait for a response, so they stack up. JFrog clocks each active visitor at roughly 2 MB per second of upload, meaning a thousand open proxy tabs would push around 2 GB per second at the target. A randomized query parameter defeats caching proxies, and no-cors skips the CORS preflight, so nothing throttles the packets. The second module,
+I2
+, is the sharper one.</p>
+
+<p>It fetches a plain text file, websocket.txt, holding a target WebSocket URL and a socket count capped between 1 and 1,024, then opens that many connections in a staggered loop. The archived config aimed each browser at 30 connections to a Wisp endpoint on lunaron[.]top, itself a live proxy busy injecting malvertising. Wisp
+is a low-overhead Mercury Workshop protocol for tunneling many TCP and UDP sockets over a single WebSocket, and it is common plumbing in the same browser-proxy scene these packages imitate. Once connected, each browser sets its socket to binary mode and, every 100 milliseconds, sends a valid Wisp CONNECT frame followed by a CLOSE frame, both pointed at localhost:1.</p>
+
+<p>The frames are correct little-endian Wisp packets, so the target is not the student’s own machine. It is the remote Wisp server on the far end of the connection. That makes it a control-plane attack rather than a volumetric one. A single browser running the full 1,024 sockets can push a Wisp server to allocate and tear down about 10,240 connections a second while writing more than 20,000 log lines in the same stretch.</p>
+
+<p>JFrog notes that Mercury Workshop’s
+wisp-server-node
+opens a fresh socket for every CONNECT frame without checking whether the destination is a loopback or private address, and logs each attempt. That exhausts file descriptors, floods log storage, and drops the proxy. wisp-server-node is already deprecated; its maintainers are pointing users elsewhere over exactly this class of security and stability problem. So the campaign turned a student proxy tool into a weapon against the servers that other student proxies depend on, and aimed a separate flood at a school on the side.</p>
+
+<p>The infrastructure is clustered tightly and not built to hide. JFrog traced the builds to a GitHub organization named lucideproxy whose accounts were registered seconds apart, tied to a commit email at geeked[.]wtf and a Discord handle. Ninety of the 93 deployment hostnames it found resolved to one IP address, 92.38.177[.]17, hosted by G-Core Labs. Between the juvenile package names, an auto-publish shell script left inside the tarballs, and a “TY WAVES + CHATGPT ILY” comment SafeDep found in the service worker, both firms read the operator as young.</p>
+
+<p>One account pushed 116 packages in under 35 minutes, and npm did nothing to slow it down. JFrog’s commit history lays out the arc. The project started as plain adware in March, added the remote loader and the Wisp generator in a two-day burst in mid-May, ran the live flood against the nursing school at the end of the month, then stripped the malicious modules back out on May 31 as reporting started. A second wave on July 8, under a new account, brought the total to 148 packages and shipped the cleaned-up, adware-only build.</p>
+
+<p>The app is still obfuscated, still loads third-party scripts from attacker domains, and the loader still points at a mutable branch. The DDoS capability is not gone, only switched off. JFrog notes the operators keep the ability to re-arm it: one commit to that mutable branch, no package update required. Many of the campaign’s packages have since been pulled from npm and replaced with the registry’s standard 0.0.1-security placeholder.</p>
+
+<p>A spot check by The Hacker News across the package families on July 14, 2026, found most gone but charlie-kirk still serving the two versions JFrog flagged as malicious, 2.0.0 and 3.0.1. Because the threat ships as a client-side web app rather than an install-time implant, JFrog’s remediation follows the delivery method. Administrators on school and corporate networks, where these proxies pull the most traffic, should block the campaign’s domains at the DNS level. The monetization and script hosts the current build still reaches, among them woofbeginner[.]com and c.vipersfutbol[.]com, are the ones to block first.</p>
+
+<p>Anyone who has loaded one of the proxy sites should clear the browser cache and local storage and unregister any service worker left behind by a tutoring or proxy domain. Teams whose build environments fetched the named packages should pull them from manifests and lockfiles and rebuild clean. JFrog’s write-up carries the full list of 148 packages, domains, IP addresses, and hashes. The Hacker News has reached out to JFrog for further details on the botnet’s scale and whether the WebSocket attack ran against a live target, and will update this story with any response.</p>
+
+<p>Dependency scanners and install-time sandboxes are built to catch code that runs on npm install. This code never asked to be installed. As long as public registries double as free CDNs, the packages worth worrying about may increasingly be the ones no build pipeline ever pulls. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="microsoft-maps-three-salesforce-attack-paths-tied-to-a-year-of-shinyhunters-activity"><a id="article-14"></a>Microsoft Maps Three Salesforce Attack Paths Tied to a Year of ShinyHunters Activity</h2>
+
+<p>Attackers whose methods line up with the data-extortion group
+ShinyHunters
+have spent the past year walking into corporate Salesforce environments without exploiting a single flaw in the platform. The way in has been the trust the organization had already extended, usually through the OAuth connections that tie Salesforce to the apps and third-party vendors around it. In
+research published July 13
+, Microsoft mapped the campaigns, which ran from mid-2025 into mid-2026, to three distinct techniques. It also worked with Salesforce to roll out new detection and governance tooling aimed at addressing the activity authentication logs miss.</p>
+
+<p>That is what makes this hard to catch. When the access comes from a real user who approved a connected app, or from an integration the company already trusts, the traffic reads as ordinary use, and sign-in and authentication monitoring barely registers it. What matters is what the app or account does once it is in, and that is exactly what most Salesforce logging was not built to show. Microsoft groups the activity into three intrusion paths:
+vishing calls
+that trick employees into approving a malicious connected app,
+stolen OAuth tokens
+from compromised software vendors, and
+misconfigured guest access
+to Salesforce sites.</p>
+
+<p>Each maps onto a Salesforce incident from the past year, and Microsoft says it saw the activity across tenants in industries including retail, education, and manufacturing. The phone call
+The first path is the one that kicked off the whole run. Starting in mid-2025, the actors placed voice-phishing (vishing) calls posing as IT support and talked employees through Salesforce’s OAuth consent screen, getting them to authorize an attacker-controlled connected app dressed up as Salesforce’s own Data Loader tool. Once consent was granted, the app could make API calls as that user, letting the attackers enumerate the org’s Salesforce data, hold persistent access to CRM records, and hunt for credentials that might open the door to other SaaS platforms.</p>
+
+<p>No malware, no stolen password replay. Just a phone call and a consent click. This is the campaign Google’s Threat Intelligence Group (GTIG) and Mandiant
+documented in mid-2025
+, tracking the initial access as UNC6040 and the follow-on extortion as UNC6240, both of which kept claiming to be ShinyHunters to lean harder on victims. Google confirmed one of its own corporate Salesforce instances was hit in June 2025, with the attackers taking largely public business contact data before Google cut them off.</p>
+
+<p>The same wave was publicly linked to breaches at Chanel and Pandora, with Adidas, Qantas, Allianz Life, and several LVMH brands also named as targets. Mandiant’s advice to defenders was blunt: these calls exploit a help desk’s instinct to be helpful, standard identity checks often do not apply, and the safe move is to hang up and call back on a known-good channel. Stolen tokens from trusted vendors
+The second path skips the employee entirely. Instead of phishing a user, the attackers compromise a third-party vendor whose app already holds OAuth access to its customers’ Salesforce orgs, steal the connection secrets or tokens, and use them to query and export data across many downstream instances at once.</p>
+
+<p>Because the traffic comes from an approved integration, it does not trigger sign-in alarms and blends into normal automation. Microsoft points to three incidents here. The August 2025
+Salesloft Drift compromise
+is the biggest and the clearest: attackers stole OAuth and refresh tokens tied to the Drift AI chat integration and turned them against Salesforce customer environments. Google estimated that the Drift token theft potentially exposed more than 700 organizations, among them Cloudflare, Zscaler, Palo Alto Networks, Proofpoint, PagerDuty, and Tanium.</p>
+
+<p>Google tracks the cluster as UNC6395; Cloudflare’s Cloudforce One calls it GRUB1. Salesloft later traced the root cause to the attacker’s access to its GitHub account as early as March 2025, which was used to reach Drift’s AWS environment and harvest the tokens. The operators were there for secrets, running SOQL queries to sift through support cases and other objects for AWS keys, Snowflake tokens, and passwords, then deleting their query jobs to slow down anyone investigating. The November 2025
+Gainsight incident
+ran the same play against a different vendor.</p>
+
+<p>Salesforce pulled Gainsight-published apps after spotting unusual API activity, and GTIG tied the campaign to ShinyHunters affiliates across more than 200 affected Salesforce instances. The people behind the ShinyHunters name claimed the Salesloft and Gainsight waves together reached close to 1,000 organizations, a figure that has not been independently confirmed. The most recent case, from June 2026, is the
+Klue compromise
+. Attackers got into the competitive-intelligence platform through a long-disused but still-active legacy credential left over from a test integration that was never deployed, pushed a code update that harvested customers’ OAuth tokens, and used those to reach Salesforce and Gong data belonging to Klue customers, including
+Huntress
+and Recorded Future.</p>
+
+<p>Microsoft tracks the Klue actor as Storm-3138. One naming wrinkle for anyone cross-referencing reports: most of the industry, Huntress and Datadog included, ties the Klue extortion to a group calling itself Icarus, and a Telegram account claiming to be ShinyHunters also took credit. The labels blur because these identities overlap and get claimed opportunistically, which holds across this whole set of campaigns. Guest access left open
+The third path needs no credentials at all.</p>
+
+<p>Microsoft saw a rise in suspicious guest-user activity against Salesforce Aura endpoints, the framework behind Experience Cloud sites. Where guest-user permissions were misconfigured, the actors reached Aura functionality without authenticating. Calling the GraphQL Aura controller, they used cursor-based pagination to pull records past the standard 2,000-record query limit, walking off with far more than the guest role was meant to expose. Microsoft’s related detection points to the
+AuraInspector
+tooling used to probe these endpoints.</p>
+
+<p>No exploit was involved. The org had left the guest role able to see more than it should, and the actors read it for everything it was worth. What Microsoft and Salesforce shipped to catch it
+The signal that does exist lives in what happens after access: which connected app made a call, what OAuth scopes it holds, how much it is querying, and whether any of that is normal for the tenant. Microsoft worked with Salesforce to surface exactly that in Defender for Cloud Apps.</p>
+
+<p>For customers running Salesforce Shield Event Monitoring, the upgraded Salesforce connector onboards the Real-Time Event Monitoring framework for near-real-time detection and adds connected-app attribution, tying activity to a specific app identity and its granted OAuth scopes, along with more session and API context. Alongside detection, Microsoft added posture and governance features for connected OAuth apps: a view of highly privileged apps holding elevated scopes, a way to surface unused apps that have sat inactive for 90 days or more while keeping live permissions, and a 0 to 100 risk score per app that teams can wire to alerts and policies. The aim is to find the over-permissioned and forgotten integrations before someone else does. Shrinking the OAuth attack surface
+Microsoft’s guidance is practical and matches what the vendors said after each incident: connect Salesforce instances to Defender for Cloud Apps for the extra telemetry, turn on and actually watch Salesforce event logs, and lock down Experience Cloud guest-user access.</p>
+
+<p>Beyond the product-specific steps, the durable fixes are the familiar ones. Inventory the connected apps, cut the ones nobody uses, scope the rest to least privilege, and be ready to revoke and rotate tokens the moment an integration starts behaving oddly. The pattern under all three paths is the same. The identity controls most companies spent the last decade building were made for human logins: MFA, conditional access, and session policies.</p>
+
+<p>The OAuth apps, integration accounts, and service credentials that do the actual work in a modern Salesforce stack mostly sit outside all of it, unwatched and over-permissioned. The attackers who figured this out ran it for a year, and more than once, the way in was nothing more exotic than a credential someone forgot to switch off. The Hacker News has reached out to Microsoft for further details on its attribution of the actors behind these campaigns and will update this story with any response. Found this article interesting?</p>
+
+<p>Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+<h2 id="crashstealer-macos-malware-uses-notarized-dropper-to-pass-gatekeeper-checks"><a id="article-15"></a>CrashStealer macOS Malware Uses Notarized Dropper to Pass Gatekeeper Checks</h2>
+
+<p>Cybersecurity researchers have flagged a new macOS information stealer called
+CrashStealer
+that’s capable of harvesting sensitive data from compromised systems. Unlike other information stealers that are built on AppleScript droppers or Objective-C-based wrappers, CrashStealer is implemented in native C++, according to Jamf Threat Labs. “It validates the victim’s login password locally before harvesting, collects broadly across browsers, cryptocurrency wallets, password managers, and the keychain, encrypts what it collects with AES-GCM before exfiltrating over libcurl, and persists by copying and re-signing itself,” security researcher Thijs Xhaflaire
+said
+in a report shared with The Hacker News. CrashStealer is said to be distributed by means of a signed and Apple-notarized dropper that’s distributed as a disk image file named “Werkbit.app.” Because both the disk image and binary are notarized and carry a valid developer ID (“Emil Grigorov (WWB7JA7AQV)”), it passes Gatekeeper checks.</p>
+
+<p>The disk image itself originates from the domain “werkbit[.]io,” which was registered in June 2026. In an interesting twist, the download is gated behind a meeting PIN, meaning the installer is served only to those site visitors who arrive with the right code rather than everyone. The discovery of additional domains and shared backend infrastructure tied to the same operation points to CrashStealer being part of a larger, multi-platform campaign. Once mounted, the disk image presents the user with an installation setup screen that instructs them to right-click the app and choose “Open” to get them to run it.</p>
+
+<p>Once launched, the “veltod” executable contacts a GitHub repository (“github.com/mgothiclove”) to retrieve a file named “sys.cache.”
+The file is then used to extract a curl command and pull a shell script, which acts as a downloader to fetch and stage the next payload (“CrashReporter.dmg”) and saves it to the “/tmp” directory. The malware, upon execution, establishes persistence as a LaunchAgent, resists analysis, presents a password prompt and validates the entered credential locally, unlocks the login keychain using the validated password, lists installed security and analysis tooling, before proceeding to collect browser data, cryptocurrency wallet extensions, password manager data, and keychain material. The complete list of data harvested is below -
+Credentials from Chromium-family browsers, including Google Chrome, Brave, Microsoft Edge, Opera and Opera GX, Vivaldi, Chromium, and Naver Whale
+Roughly 80 cryptocurrency wallet extensions, including MetaMask, Phantom, Coinbase, Trust Wallet, Rabby, OKX Wallet, Exodus, Keplr, Solflare, and Backpack
+14 password managers, including 1Password, Bitwarden, LastPass, Dashlane, Keeper, KeePassXC, NordPass, Enpass and RoboForm
+Files from ~/Documents and ~/Downloads directories
+The harvested data is then packaged into a ZIP archive and exfiltrated to an attacker-controlled server (“179.43.166[.]242”). “CrashStealer’s delivery chain shows real care: rather than a bare, unsigned lure, the operators front the attack with a signed and notarized dropper that clears Gatekeeper before quietly fetching, re-signing and launching the payload,” Jamf said.</p>
+
+<p>“What sets it apart from the commodity stealer crowd is less what it collects than how it is built: client-side AES-GCM encryption of the collected files, and an emphasis on analysis resistance through control-flow flattening, encrypted strings and layered anti-debugging.”
+Found this article interesting? Follow us on
+Google News
+,
+Twitter
+and
+LinkedIn
+to read more exclusive content we post.</p>
+
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>

@@ -1,35 +1,35 @@
-# Hacker News AI 创业新闻聚合
+# AI 与数据工作流雷达
 
-本项目每日自动抓取 [The Hacker News](https://thehackernews.com/) 上与 AI 创业相关的文章，按日期自动存档为 `.md` 文件，并通过 GitHub Pages 提供极简、科技感、带导航栏的聚合展示。
+这是 Lopo Blog 的候选资讯工具，数据源为 [The Hacker News](https://thehackernews.com/)。
 
-## 功能特性
-- 每日自动抓取 AI 创业相关新闻
-- 按日期自动归档为 Markdown 文件
-- 首页和每个存档页左侧均有可跳转的导航栏
-- 支持 GitHub Actions 自动化与 GitHub Pages 静态托管
-- 极简、科技感 UI
+它不再泛化聚合 AI 与创业新闻，而是优先筛选：
 
-## 快速开始
-1. 安装依赖：`pip install -r requirements.txt`
-2. 本地抓取：`python fetch_hackernews_ai_articles.py`
-3. 本地预览：`bundle exec jekyll serve`
-4. 访问：`http://localhost:4000/hacker-news-ai/`
+- AI 编程与开发工具；
+- 数据工作流、自动化和开源工具；
+- AI 使用中的数据安全、提示注入和供应链风险。
 
-## 自动化
-- 已配置 GitHub Actions，每天自动抓取并归档
-- 归档文件位于 `_archives/YYYY-MM-DD.md`
+## 内容管道
 
-## 目录结构
-- `_archives/`：每日新闻归档（Markdown）
-- `_includes/`：导航栏等可复用组件
-- `_layouts/`：页面布局模板
-- `assets/`：样式与脚本
-- `index.html`：首页
-- `archives.md`：历史归档页
-- `fetch_hackernews_ai_articles.py`：抓取脚本
+```text
+来源列表
+→ AI 信号识别
+→ 与个人内容主线相关的主题分类
+→ 候选资讯队列
+→ 人工阅读全文与交叉核验
+→ 代码案例、检查清单或博客文章
+```
 
-## 访问效果
-- 首页展示今日新闻，左侧导航可跳转各归档
-- 每日归档页展示当天所有新闻，左侧导航可跳转各新闻
+`_data/content_candidates.json` 保存候选状态、入选原因和可转化方向。自动命中不代表本站推荐、事实核验或专业建议。
 
---- 
+站点只保留标题、来源摘要、标签和原文链接，不抓取或重新发布文章全文。
+
+## 本地运行
+
+```bash
+pip install -r requirements.txt
+python fetch_hackernews_ai_articles.py
+bundle install
+bundle exec jekyll serve
+```
+
+Pull Request 只抓取、构建、验证并上传私有预览；合并或定时任务才会提交归档并发布到公开 Pages 仓库。
