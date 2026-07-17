@@ -26,7 +26,7 @@
   <div class="radar-hero__meta">
     <span>5 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-07-16 12:46</span>
+    <span>更新于 2026-07-17 12:49</span>
   </div>
 </header>
 
@@ -38,6 +38,46 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html" target="_blank" rel="noopener noreferrer">n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span></div>
+      <p>n8n , the workflow automation platform, handed out the wrong accounts at login. On Enterprise instances configured to trust more than one external token issuer, it matched an incoming JWT to a local user on the  sub  claim alone and ignored  iss .   A valid token from issuer A carrying a  sub  that belongs to someone under issuer B logged you in as them. Their password never came into it. n8n shipped the fix on June 24.   The flaw is tracked as  CVE-2026-59208 . The CVE record did not go public until July 9. n8n  credits the report  to the GitHub account bearsyankees , whose profile lists Strix, which makes an AI penetration testing agent.   Strix  says  it pointed out that the agent at the token-exchange flow and found the identity-binding bug there.   Two issuers, one account   Token exchange is n8n's Enterprise route for  OEM partners who embed the product , an  RFC 8693 implementation  that spares their users a second...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html" target="_blank" rel="noopener noreferrer">New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span><span>AI 与数据安全</span></div>
+      <p>Ask an AI agent to summarize the reviews on a product page, and a single planted review can make it click "Buy Now" instead. Ask a coding assistant to apply a maintainer's fix from a GitHub thread, and a fake comment can make it run a stranger's command on your computer.   Neither trick hijacks the agent's task. Each one just corrupts the facts it trusts and lets it carry on with the job you asked for.   That is the shape of a new class of attack laid out in a  paper posted July 6  by researchers from Seoul National University, the University of Illinois Urbana-Champaign, and Largosoft.   They call it agent data injection , or ADI. The attacker's input gets dressed up as data the agent already trusts, like a sender's name or a button's ID, so it slips past most of the defenses built to stop prompt injection.   The gap comes from how an agent reads. It takes in two kinds of things: instructions, meaning what you and the app's developer tell it to d...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html" target="_blank" rel="noopener noreferrer">AI Can Find Bugs, But Human Knowledge Still Proves Them</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
+      <p>Artificial intelligence (AI) is changing offensive security, but it has not changed the standard that matters most: a finding has to be proven before it becomes useful. AI-assisted tools can read code quickly, generate payloads, summarize attack surfaces, explain unfamiliar APIs, and run repetitive testing workflows at impressive speed. That is a real advantage for security teams. It also creates a new kind of pressure, because the industry can now produce more vulnerability-looking output than ever before.   The problem is that output is not the same as evidence. A generated report can sound polished, include a severity rating, and even contain a proof-of-concept that looks reasonable at first glance. None of that proves the bug exists in the deployed environment. None of it proves exploitability, impact, or risk. In offensive testing, the hard part has never been writing something that sounds like a vulnerability report. The hard part is demonstrating what is actually true.   That d...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" target="_blank" rel="noopener noreferrer">OpenAI’s GPT-Red Automates Prompt Injection Testing to Harden GPT-5.6 Sol</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>OpenAI has disclosed details of GPT-Red , an internal automated red-teaming model that scales prompt injection vulnerability discovery with an aim to fix issues before the tools are deployed widely.   "GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks," the artificial intelligence (AI) company said . "We use GPT‑Red to adversarially train GPT‑5.6 , making it much more robust to prompt injections."   The model works just like a human red-teamer. It sends a prompt, monitors how a GPT model responds, and iterates its way towards a malicious goal, such as uploading sensitive data to an external server.   The development comes as adversarial prompt injections continue to be a persistent thorn in the flesh of large language models, which can be tricked into executing a carefully crafted instruction⁠ that can produce undesirable consequences.   As agentic systems continue to be hooked to third-party data sources ...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 15, 2026</span></div>
       <h3><a href="https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html" target="_blank" rel="noopener noreferrer">TuxBot v3 Evolution Shows Signs of LLM-Assisted IoT Botnet Development</a></h3>
       <div class="topic-list"><span>AI 与数据安全</span></div>
@@ -45,46 +85,6 @@
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
       <a class="candidate-card__link" href="https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 15, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html" target="_blank" rel="noopener noreferrer">SASE Has An AI Blind Spot. Inspecting Packets Is No Longer Enough.</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
-      <p>For years, routing traffic through cloud proxies was good enough. Then work moved to the browser, AI entered the workflow, and the inspection model stopped keeping up.   Enterprise workflows now live across SaaS applications, browsers, and an expanding ecosystem of generative AI tools, unsanctioned browser extensions, and autonomous agents. Employees routinely paste intellectual property into public LLMs for code optimization, while automated agents query internal documentation and move data across systems at machine speed. The challenge is not that SASE failed, but that data interactions have shifted to the presentation layer, an area network-centric architectures were never designed to see. This structural paradigm shift is explored in detail within The Guide to Modern SASE Architecture .   Why Traditional Enforcement Struggles   Traditional SASE relies on backhauling traffic to cloud proxies for decryption, inspection, and policy enforcement. However, modern internet protocols, spe...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/sase-has-ai-blind-spot-inspecting.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 15, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/new-webinar-closing-approval-gap-in-ai.html" target="_blank" rel="noopener noreferrer">New Webinar: Closing the Approval Gap in AI-Era Ad Tech</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>A single approved marketing tag can quietly load fourth-party code your security team has never seen, granting full access to your forms, customer data, and checkout pages.   This  on-demand webinar  reveals how this Approval Gap forms, and gives your team the blueprint to close it before an auditor, regulator, or attacker finds it first.   The Reality of the Approval Gap   It's a pattern every security and IT team recognizes:   You ran the security review. You approved the vendor. You moved on.</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/new-webinar-closing-approval-gap-in-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 15, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html" target="_blank" rel="noopener noreferrer">Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>Open a repository in Cursor on Windows and, if a file named git.exe is sitting in the project root, Cursor runs it. No click, no approval dialog, no warning that anything in the folder is about to execute.   Whatever that binary does, it does as you, with your source, your SSH keys and your cloud tokens. Cursor keeps re-running it for as long as the project stays open.   No prompt injection, no agent, no model in the loop, and no prior access to the machine: opening the folder is the entire exploit, and the result is arbitrary code execution as the logged-in user.   AI security firm Mindgard reported the flaw to Cursor on December 15, 2025 and  published full technical details  on Tuesday, seven months later. There is still no patch, and Cursor has published no advisory for the issue.   The mechanism takes about a sentence. Cursor checks several locations for a Git binary when a project loads, and one of them is the workspace itself. Process Monitor output in t...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 14, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html" target="_blank" rel="noopener noreferrer">Researchers Say Claude for Chrome Flaw Lets Rogue Extensions Trigger Gmail Reads</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>Any other browser extension that can run a script on claude.ai can still trigger Claude for Chrome tasks aimed at your Gmail, your latest Google Doc and its comments, and your Calendar.   Both this and ClaudeBleed need a rogue extension that can already run a script on claude.ai; the difference is scope. Anthropic restricted the arbitrary-prompt path in May as part of its response to the  ClaudeBleed  flaw, boxing external callers into a fixed set of tasks, but  Manifold Security  says the gap is still open in v1.0.80, the current release, eight versions later.   If you run Claude for Chrome and any other extension that can touch claude.ai, you are in scope. In the default "ask before acting" mode, the forged task still hits an approval box you have to click.   If you switched on "Act without asking," the hands-off automation mode, it runs with no prompt at all. The quickest guard is to turn "Act without asking" off and review any extension with permissio...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/claude-for-chrome-flaw-lets-other.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
