@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>5 条候选资讯</span>
+    <span>3 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-07-17 12:49</span>
+    <span>更新于 2026-07-18 12:35</span>
   </div>
 </header>
 
@@ -38,53 +38,33 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html" target="_blank" rel="noopener noreferrer">n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer</a></h3>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 17, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html" target="_blank" rel="noopener noreferrer">New NadMesh Botnet Hunts Exposed AI Services for Cloud Keys and Kubernetes Tokens</a></h3>
       <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>n8n , the workflow automation platform, handed out the wrong accounts at login. On Enterprise instances configured to trust more than one external token issuer, it matched an incoming JWT to a local user on the  sub  claim alone and ignored  iss .   A valid token from issuer A carrying a  sub  that belongs to someone under issuer B logged you in as them. Their password never came into it. n8n shipped the fix on June 24.   The flaw is tracked as  CVE-2026-59208 . The CVE record did not go public until July 9. n8n  credits the report  to the GitHub account bearsyankees , whose profile lists Strix, which makes an AI penetration testing agent.   Strix  says  it pointed out that the agent at the token-exchange flow and found the identity-binding bug there.   Two issuers, one account   Token exchange is n8n's Enterprise route for  OEM partners who embed the product , an  RFC 8693 implementation  that spares their users a second...</p>
+      <p>A Go botnet called NadMesh turned up in early July hunting exposed AI services, and the operator's own dashboard claims 3,811 unique AWS keys.   A Shodan harvester keeps the scan queue stocked with ComfyUI, Ollama , n8n , Open WebUI , Langflow , and Gradio: the image generators, local model runners, and workflow builders that teams stand up fast and firewall late.   The intel feed behind that counter shows 47 credential hauls and 41 model inventories in its last 100 records. Those inventories carry DeepSeek, GLM, and Kimi identifiers tagged :cloud, which suggests that what the bots catalogue reaches past the box itself.   QiAnXin's XLab published  a report on Friday, named the malware after the "n4d mesh controller" string in its source, and screenshotted the panel. The figures on it are the operator's own, captured July 10, and they do not agree with each other.   A counter reading 17,700 total deploys sits above a funnel claiming 95,700 in the past 24 hours. On...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html" target="_blank" rel="noopener noreferrer">New Agent Data Injection Attack Can Make AI Agents Misclick or Run Attacker Commands</a></h3>
-      <div class="topic-list"><span>AI 编程与开发工具</span><span>AI 与数据安全</span></div>
-      <p>Ask an AI agent to summarize the reviews on a product page, and a single planted review can make it click "Buy Now" instead. Ask a coding assistant to apply a maintainer's fix from a GitHub thread, and a fake comment can make it run a stranger's command on your computer.   Neither trick hijacks the agent's task. Each one just corrupts the facts it trusts and lets it carry on with the job you asked for.   That is the shape of a new class of attack laid out in a  paper posted July 6  by researchers from Seoul National University, the University of Illinois Urbana-Champaign, and Largosoft.   They call it agent data injection , or ADI. The attacker's input gets dressed up as data the agent already trusts, like a sender's name or a button's ID, so it slips past most of the defenses built to stop prompt injection.   The gap comes from how an agent reads. It takes in two kinds of things: instructions, meaning what you and the app's developer tell it to d...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 17, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html" target="_blank" rel="noopener noreferrer">E.U. Orders Google to Open Android Mic, Camera and Screen to Rival AI Assistants</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>The European Commission on Thursday ordered Google to give rival AI assistants the same reach into Android that Gemini already has: the camera, the microphone, whatever is on screen, a wake word that fires with the display off, and the ability to drive other apps in the background by imitating taps and typing.   Google has to ship it in the next major release, Android 18, and by 1 August 2027 at the latest.   That is one of two binding specification decisions  adopted on 16 July under the Digital Markets Act, six months after the Commission opened proceedings on 27 January.   The second makes Google hand anonymised Search query, click, and ranking data to rival search engines, and to AI chatbots that do search, for a cost-based fee. Neither is a fine.   Specification proceedings only say what a gatekeeper has to build; the Commission's separate power to open a non-compliance case , fines included, is untouched. Android carries around 60% of European mobile users.   Five features g...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/new-agent-data-injection-attack-can.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html" target="_blank" rel="noopener noreferrer">AI Can Find Bugs, But Human Knowledge Still Proves Them</a></h3>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 17, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/the-race-to-field-military-autonomy-is.html" target="_blank" rel="noopener noreferrer">The Race to Field Military Autonomy Is On, Can Trusted Information Infrastructure Keep Pace?</a></h3>
       <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
-      <p>Artificial intelligence (AI) is changing offensive security, but it has not changed the standard that matters most: a finding has to be proven before it becomes useful. AI-assisted tools can read code quickly, generate payloads, summarize attack surfaces, explain unfamiliar APIs, and run repetitive testing workflows at impressive speed. That is a real advantage for security teams. It also creates a new kind of pressure, because the industry can now produce more vulnerability-looking output than ever before.   The problem is that output is not the same as evidence. A generated report can sound polished, include a severity rating, and even contain a proof-of-concept that looks reasonable at first glance. None of that proves the bug exists in the deployed environment. None of it proves exploitability, impact, or risk. In offensive testing, the hard part has never been writing something that sounds like a vulnerability report. The hard part is demonstrating what is actually true.   That d...</p>
+      <p>Military forces are under increasing pressure to field autonomous capabilities faster than ever before. Across the U.S., UK, and NATO, new investment, evolving defense strategies, and accelerated acquisition pathways are transforming how capability is delivered, rewarding programs that can move from concept to operational deployment at commercial speed.   Now the focus shifts to the trusted information infrastructure that allows them to operate together at mission speed.   As autonomous aircraft, uncrewed maritime vessels, ground systems, satellites and AI-enabled mission applications become increasingly connected, so too does the information that powers them. Telemetry, ISR, command data, AI outputs, sensor-to-shooter workflows and coalition intelligence all need to move seamlessly across platforms, domains, and partners.   The future force won't be defined by autonomous systems alone, it will be defined by the trusted information infrastructure that connects them.   Defense Has ...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/ai-can-find-bugs-but-human-knowledge.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 16, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" target="_blank" rel="noopener noreferrer">OpenAI’s GPT-Red Automates Prompt Injection Testing to Harden GPT-5.6 Sol</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>OpenAI has disclosed details of GPT-Red , an internal automated red-teaming model that scales prompt injection vulnerability discovery with an aim to fix issues before the tools are deployed widely.   "GPT‑Red is a strong red-teamer, and our previous models are highly vulnerable to its prompt injection attacks," the artificial intelligence (AI) company said . "We use GPT‑Red to adversarially train GPT‑5.6 , making it much more robust to prompt injections."   The model works just like a human red-teamer. It sends a prompt, monitors how a GPT model responds, and iterates its way towards a malicious goal, such as uploading sensitive data to an external server.   The development comes as adversarial prompt injections continue to be a persistent thorn in the flesh of large language models, which can be tricked into executing a carefully crafted instruction⁠ that can produce undesirable consequences.   As agentic systems continue to be hooked to third-party data sources ...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/openais-gpt-red-automates-prompt.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 15, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html" target="_blank" rel="noopener noreferrer">TuxBot v3 Evolution Shows Signs of LLM-Assisted IoT Botnet Development</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>Cybersecurity researchers have disclosed details of a previously unreported Internet-of-Things (IoT) botnet framework dubbed TuxBot v3 Evolution  that shows signs of being developed with assistance from a large language model (LLM), albeit with not so successful results.   "While the AI complied with their request to generate botnet code, it included a safety disclaimer that the developer failed to remove before shipping," Palo Alto Networks Unit 42 said . "Although the LLM clearly aided in constructing the botnet, several functions in the analyzed samples failed to work correctly."   The cybersecurity company said a manual code review would have resolved these errors and that it's possible more polished iterations of the malware exist out there in the wild.   The botnet framework consists of multiple components: a C-based bot agent that cross-compiles for multiple architectures (e.g., ARM, MIPS, MIPSEL, MIPS64, x86_64, PowerPC, and RISC-V), a Go-based command-...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/the-race-to-field-military-autonomy-is.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
