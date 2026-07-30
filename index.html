@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>4 条候选资讯</span>
+    <span>3 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-07-29 12:55</span>
+    <span>更新于 2026-07-30 12:43</span>
   </div>
 </header>
 
@@ -38,43 +38,33 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 28, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html" target="_blank" rel="noopener noreferrer">Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>Anthropic says Claude Mythos Preview  helped derive an end-to-end key-recovery attack against HAWK-256 and a 200- to 800-fold speedup for an attack on seven-round AES-128.   The HAWK attack exploits a previously unused symmetry in the lattice behind the signature scheme. Anthropic's released implementation gives an expected end-to-end runtime of about three hours and 42 minutes on a 96-core server. The AES result removes a 256-way guessing step from an existing meet-in-the-middle attack.   Anthropic said neither result affects production systems. HAWK remains a candidate in a National Institute of Standards and Technology (NIST) post-quantum standardization process, and the public recovery code only targets the smaller HAWK-256 parameter.   The Advanced Encryption Standard (AES) result applies to seven of AES-128's ten rounds and still requires an impractical number of chosen plaintexts. The company said no production software needs to change as a result.   Anthropic published...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span></div>
+      <p>Cybersecurity researchers have flagged a maximum-severity security flaw in Ruflo , an open-source agent meta-harness for Anthropic Claude Code and OpenAI Codex, that could result in unauthenticated remote code execution.   The vulnerability, tracked as CVE-2026-59726  (CVSS score: 10.0), impacts all versions of the project before version 3.16.3. It has been codenamed RufRoot  by Noma Security's research team, Noma Labs.   Originally launched as Claude Flow, Ruflo is an AI multi-agent orchestration platform and harness that allows users to deploy multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. The project has more than 66,500 stars on GitHub.   The crux of the vulnerability is that Ruflo exposed 233 tools, including shell command execution, database operations, agent management, and memory storage, through an unauthenticated Model Context Protocol (MCP) bridge that's open to the network by default.   Specifically, the "docker-comp...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 28, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html" target="_blank" rel="noopener noreferrer">JFrog Confirms OpenAI Models Exploited Artifactory Zero-Day Before Hugging Face Breach</a></h3>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html" target="_blank" rel="noopener noreferrer">Mythos Asks the Right Question. It Doesn't Answer It.</a></h3>
       <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>JFrog has confirmed that OpenAI models exploited a zero-day  in self-hosted Artifactory while trying to reach the open internet from a sealed evaluation environment.   Artifactory is JFrog's software repository manager. OpenAI says the models then escalated privileges and moved laterally until they reached an internet-connected node. JFrog says it has since developed and released fixes for cloud and self-hosted customers.   The Artifactory exploit occurred inside OpenAI's environment. OpenAI says a separate attack path later reached Hugging Face's systems. JFrog says its cloud customers are already protected. Self-hosted users should review the Artifactory release notes  and move to the remediating build for their maintained branch.   Several Artifactory CVE records were published on July 27 with affected-version ranges and fixed-version thresholds, but neither JFrog nor OpenAI has said whether any of those records correspond to the vulnerabilities used during the evaluati...</p>
+      <p>AI is compressing exploit timelines. The real question isn't whether your vulnerability management playbook needs to change, it's which part of it you've been getting wrong all along.   The conversation happening in security circles right now goes something like this: Mythos is here. Exploit timelines are collapsing. Does the vulnerability management playbook need to change?   The honest answer is yes. But not the part most people are focused on.   The discussion around Mythos, Anthropic's frontier model and its implications for offensive security, tends to center on discovery. AI accelerates reconnaissance. It helps attackers identify exposures faster, chain techniques more efficiently, and move at machine speed through environments that were previously protected, in part, by the attacker's own time constraints.   That's real. And it matters.   But here's the part getting less attention: most security teams weren't winning the prioritization battle bef...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 28, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html" target="_blank" rel="noopener noreferrer">Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit</a></h3>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html" target="_blank" rel="noopener noreferrer">OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach</a></h3>
       <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>STAR Labs has published a Linux kernel exploit that turns an ordinary local user into root on the CentOS Stream 9 build it targeted. The flaw, tracked as CVE-2026-53264  (CVSS score: 7.8), is a use-after-free race in the kernel's network traffic-control subsystem. Researcher Lee Jia Jie said artificial intelligence (AI) helped him find the bug and speed up exploit development. This is local privilege escalation, not remote code execution, so an attacker needs a foothold on the machine before any of it applies. The demonstrated exploit also requires unprivileged user namespaces, the CONFIG_NET_ACT_GACT  and CONFIG_NET_CLS_FLOWER  kernel options, and a kernel-specific return-oriented programming (ROP) chain containing hardcoded offsets. Those conditions narrow the immediate exposure, but full exploit source code is now public.   The upstream fix landed on June 1, 2026, and has since been backported to several stable kernel branches. The Linux CNA record  lists vulnerable ranges begi...</p>
+      <p>OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped  its sealed evaluation environment and broke into Hugging Face's production environment  also hacked multiple third-party accounts and services as part of the attack.   The latest disclosure  shows that the security incident, which stemmed from an internal security test, was more extensive in scope than previously thought.   The AI company said its ongoing review of the incident revealed a "small number of cases" where the models, including GPT-5.6 Sol and an "even more capable pre-release model," identified and used exposed credentials at the account-level on other publicly-available services.   "This includes four accounts on four services as part of the Hugging Face incident (and a few accounts accessed as part of other evaluations)," it said.   "One of these four accounts was used as an outbound relay and staging path, and another account was used for data st...</p>
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 27, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html" target="_blank" rel="noopener noreferrer">NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
-      <p>NVIDIA and 36 other organizations have formed the Open Secure AI Alliance  to develop and share open technologies, techniques, and tools for securing software and artificial intelligence (AI) agents.   The 37-member group spans cloud, security, enterprise software, and AI companies, including Microsoft, Cisco, Cloudflare, CrowdStrike, Hugging Face, IBM, Palo Alto Networks, Red Hat, and the Linux Foundation.   Its stated scope covers the full agent stack, including identity, permissions, isolation, guardrails, logs, model formats, multi-model scanning, and secure coding workflows.   The pitch is that cyber defenders need AI models they can read, change, and run on their own hardware, not only closed systems reached through a vendor's application programming interface (API).   The launch also brings its first named technical contribution: NVIDIA-labs OO Agents (NOOA) , an Apache 2.0 research framework designed to make agent behavior easier to test, trace, audit, and govern. The laun...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
