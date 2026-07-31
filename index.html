@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>3 条候选资讯</span>
+    <span>2 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-07-30 12:43</span>
+    <span>更新于 2026-07-31 13:20</span>
   </div>
 </header>
 
@@ -38,6 +38,16 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 30, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html" target="_blank" rel="noopener noreferrer">Microsoft Copilot for Word Can Copy Hidden Prompts Into New Documents</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span></div>
+      <p>Hidden instructions in a Word document can make Microsoft 365 Copilot rewrite figures in a report, then copy the same instructions into the finished file. Håkon Måløy disclosed the technique  on July 28, 144 days after reporting it to Microsoft.   In his proof of concept, the internally generated file triggered the same behavior when it was used in a second Copilot drafting session.   Måløy's timeline says Microsoft confirmed the reported behavior on March 31 and deployed two mitigations. The first blocked the original prompt wording; the second upgraded the underlying model to GPT-5.5.   He said the full chain worked with modified instructions on GPT-5.6 the next day, and the attack class still reproduced on July 28. "The vulnerability class therefore remains exploitable at the time of publication," Måløy said.   The attack is not zero-click and does not execute conventional malware. It requires a Copilot drafting or editing operation, and the malicious document must en...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
       <h3><a href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</a></h3>
       <div class="topic-list"><span>数据工作流与自动化</span></div>
@@ -45,26 +55,6 @@
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
       <a class="candidate-card__link" href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html" target="_blank" rel="noopener noreferrer">Mythos Asks the Right Question. It Doesn't Answer It.</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>AI is compressing exploit timelines. The real question isn't whether your vulnerability management playbook needs to change, it's which part of it you've been getting wrong all along.   The conversation happening in security circles right now goes something like this: Mythos is here. Exploit timelines are collapsing. Does the vulnerability management playbook need to change?   The honest answer is yes. But not the part most people are focused on.   The discussion around Mythos, Anthropic's frontier model and its implications for offensive security, tends to center on discovery. AI accelerates reconnaissance. It helps attackers identify exposures faster, chain techniques more efficiently, and move at machine speed through environments that were previously protected, in part, by the attacker's own time constraints.   That's real. And it matters.   But here's the part getting less attention: most security teams weren't winning the prioritization battle bef...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/mythos-asks-right-question-it-doesnt.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html" target="_blank" rel="noopener noreferrer">OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>OpenAI on Tuesday revealed the rogue artificial intelligence (AI) agent that escaped  its sealed evaluation environment and broke into Hugging Face's production environment  also hacked multiple third-party accounts and services as part of the attack.   The latest disclosure  shows that the security incident, which stemmed from an internal security test, was more extensive in scope than previously thought.   The AI company said its ongoing review of the incident revealed a "small number of cases" where the models, including GPT-5.6 Sol and an "even more capable pre-release model," identified and used exposed credentials at the account-level on other publicly-available services.   "This includes four accounts on four services as part of the Hugging Face incident (and a few accounts accessed as part of other evaluations)," it said.   "One of these four accounts was used as an outbound relay and staging path, and another account was used for data st...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
