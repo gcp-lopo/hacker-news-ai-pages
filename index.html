@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>2 条候选资讯</span>
+    <span>3 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-07-31 13:20</span>
+    <span>更新于 2026-08-01 13:13</span>
   </div>
 </header>
 
@@ -38,6 +38,26 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 31, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html" target="_blank" rel="noopener noreferrer">Chinese Hacker Commands DeepSeek via Telegram to Launch Autonomous Attacks</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
+      <p>Palo Alto Networks' Unit 42 says a Chinese-speaking threat actor used DeepSeek through the open-source Hermes Agent framework to launch attacks autonomously.   After an initial Telegram instruction, the agent found internet-facing systems and selected public exploits. The researchers recovered no further operator input in the session.   The operator, tracked through the aliases knaithe and KnYuan , launched exploitation attempts against more than 460 targets using autonomous and conventional workflows.   Unit 42 described seven exploit tracks. They span eight Common Vulnerabilities and Exposures (CVE) identifiers because the n8n chain combines two vulnerabilities. The DeepSeek-led attacks against Langflow and n8n failed because the exposed systems did not meet the exploits' configuration requirements.   In separate manual operations, Unit 42 reported data exfiltration from three organizations through the NetScaler memory-overread flaw CVE-2026-3055  and command execution on 11...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/chinese-hacker-commands-deepseek-via.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 31, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/07/anthropic-says-claude-mistook-open.html" target="_blank" rel="noopener noreferrer">Anthropic Says Claude Mistook the Open Internet for a CTF and Breached Three Organizations</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>Anthropic on Thursday became the latest artificial intelligence (AI) company to reveal  that three of its models, including Claude Opus 4.7, Mythos 5, and an unnamed research model, had breached three unnamed organizations during cybersecurity testing without its knowledge.   The AI firm said the earliest incidents date back to April 2026, adding it made the discoveries after launching a "large-scale retrospective review" in response to a recent disclosure  from OpenAI that a combination of its models escaped the sandboxed environment by exploiting a previously unreported zero-day in Artifactory to obtain internet access and break into Hugging Face's production systems with an end goal to cheat on an evaluation.   "After reviewing 141,006 evaluation runs where Claude could have obtained internet access, we identified three incidents in which a model accessed the internet from within or while interacting with the evaluation environment of Irregular, one of our third-...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/anthropic-says-claude-mistook-open.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 30, 2026</span></div>
       <h3><a href="https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html" target="_blank" rel="noopener noreferrer">Microsoft Copilot for Word Can Copy Hidden Prompts Into New Documents</a></h3>
       <div class="topic-list"><span>AI 编程与开发工具</span></div>
@@ -45,16 +65,6 @@
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践</p>
       <a class="candidate-card__link" href="https://thehackernews.com/2026/07/microsoft-copilot-for-word-can-copy.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Jul 29, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">Ruflo MCP Flaw Lets Unauthenticated Attackers Run Commands and Poison AI Memory</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>Cybersecurity researchers have flagged a maximum-severity security flaw in Ruflo , an open-source agent meta-harness for Anthropic Claude Code and OpenAI Codex, that could result in unauthenticated remote code execution.   The vulnerability, tracked as CVE-2026-59726  (CVSS score: 10.0), impacts all versions of the project before version 3.16.3. It has been codenamed RufRoot  by Noma Security's research team, Noma Labs.   Originally launched as Claude Flow, Ruflo is an AI multi-agent orchestration platform and harness that allows users to deploy multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. The project has more than 66,500 stars on GitHub.   The crux of the vulnerability is that Ruflo exposed 233 tools, including shell command execution, database operations, agent management, and memory storage, through an unauthenticated Model Context Protocol (MCP) bridge that's open to the network by default.   Specifically, the "docker-comp...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/07/ruflo-mcp-flaw-lets-unauthenticated.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
