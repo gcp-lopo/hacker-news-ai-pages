@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>2 条候选资讯</span>
+    <span>3 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-08-04 12:50</span>
+    <span>更新于 2026-08-05 12:51</span>
   </div>
 </header>
 
@@ -38,6 +38,26 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 04, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/when-vibe-hacking-turns-ai-into-junior.html" target="_blank" rel="noopener noreferrer">When Vibe Hacking Turns AI into the Junior Hacker Every Adversary Always Wanted</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>The cybersecurity industry has spent decades assuming that offensive capability scales with technical expertise.   That assumption is starting to break.   Security teams have long estimated risk by ranking attacker sophistication. Nation-state actors sat at one end. Organized criminal groups followed. Inexperienced attackers, dismissed as "script kiddies," sat at the other end, running public tools they didn't fully understand.   Generative AI is collapsing that ranking.   The next generation of attackers won't necessarily bring years of exploit development or reverse engineering experience. Instead, they'll use AI to close knowledge gaps by accelerating research, explaining unfamiliar concepts, generating code, troubleshooting errors, and adapting known techniques to new environments.   The barrier to entry is dropping fast.   The Economics of Cyberattacks Are Changing   Every major technology shift changes economics as it changes the solutions we rely on.   Clo...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/when-vibe-hacking-turns-ai-into-junior.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 04, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html" target="_blank" rel="noopener noreferrer">Google Deletes 3 ADK AI Workflows After Malicious GitHub Issue Could Trigger Privileged Agent</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span><span>数据工作流与自动化</span></div>
+      <p>Google deleted three AI agent workflows from its Agent Development Kit (ADK)  Python repository. Pillar Security showed that a public GitHub issue could manipulate a triage agent into triggering a privileged code-fixing agent.   The researchers said the public agent could be prompt-injected into posting /adk-issue-fix  as adk-bot . They identified the bot as a collaborator, so that comment satisfied the privileged workflow's owner, member, or collaborator gate. The trusted bot identity  became the authorization bridge.   The team demonstrated arbitrary code execution on the continuous integration (CI) runner and exfiltration of the bot personal access token (PAT). The privileged job also held a Google API key and a Google Cloud service-account credential. Its researcher-controlled proof-of-concept attacks do not identify in-the-wild exploitation or a compromised ADK release.   The exposed component was the repository automation, not a flaw in the distributed ADK Python package. Fo...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践；评估对可复现分析、依赖管理或数据质量流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 03, 2026</span></div>
       <h3><a href="https://thehackernews.com/2026/08/fomo-in-soc-where-ai-platforms-like.html" target="_blank" rel="noopener noreferrer">FOMO in the SOC: Where AI Platforms like Claude Actually Fit</a></h3>
       <div class="topic-list"><span>AI 与数据安全</span></div>
@@ -45,16 +65,6 @@
       <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
       <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
       <a class="candidate-card__link" href="https://thehackernews.com/2026/08/fomo-in-soc-where-ai-platforms-like.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 03, 2026</span></div>
-      <h3><a href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html" target="_blank" rel="noopener noreferrer">Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code</a></h3>
-      <div class="topic-list"><span>AI 编程与开发工具</span><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
-      <p>Three high-severity security flaws have been disclosed in Hugging Face's Diffusers  library that could allow crafted model repositories to stealthily execute arbitrary code on machines that load it, opening the artificial intelligence (AI) supply chain to security risk.   "These vulnerabilities are bypassing trust_remote_code, the safeguard designed to stop unreviewed code from running in the custom pipelines loading process," Zafran Labs researchers Gal Zaban and Ido Shani said  in an analysis published last week.   The shortcomings have been collectively named FaceHugger .   With Hugging Face becoming the "GitHub of the AI era" and its libraries and repositories prevalent in enterprise environments, vulnerabilities in libraries like Diffusers can grant attackers extensive access owing to how the library is embedded into production pipelines, CI/CD systems, and container images.   Diffusers is a Python package  that serves as a library of state-of-the-art (SOT...</p>
-      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
-      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践；评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
