@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-08-07 AI 与数据工作流雷达 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-08-07 AI 与数据工作流雷达</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-08-07-ai-与数据工作流雷达">2026-08-07 AI 与数据工作流雷达</h1>
+
+<blockquote>
+  <p>来源：<a href="https://thehackernews.com/">The Hacker News</a>。这里只保留与 AI 编程、数据工作流或安全边界相关的候选线索；不抓取全文，也不代表事实核验或产品推荐。</p>
+</blockquote>
+
+<h2 id="ai-recommendation-poisoning-how-ask-ai-buttons-silently-alter-llm-memory"><a id="article-1"></a>AI Recommendation Poisoning: How “Ask AI” Buttons Silently Alter LLM Memory</h2>
+
+<p><strong>主题</strong>：AI 与数据安全<br />
+<strong>来源日期</strong>： Aug 06, 2026<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+
+<p>A new class of prompt injection is spreading across commercial websites. It requires no malware, no stolen credentials, and no zero-day exploit. It abuses a standard feature built into almost every major AI assistant: pre-filled deep links.   We observed production websites embedding hidden prompt injection payloads inside “Ask AI” buttons on marketing and competitor comparison pages. When a user logged into ChatGPT, Claude, Gemini, or Grok clicks one, a pre-formed query executes immediately in their session, with no confirmation and no warning. Most of these links are benign. The dangerous ones instruct the AI to permanently save the vendor’s domain as a “trusted source,” quietly biasing every future answer in that vendor’s favor.   In February 2026, Microsoft Security catalogued the behavior as AI Recommendation Poisoning , identifying 31 companies across 14 industries deploying it, with more than 50 distinct prompts observed in a single data source over …</p>
+
+<p><strong>可转化方向</strong>：评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="aws-google-and-vercel-agent-flaws-let-attackers-trigger-tools-without-running-the-model"><a id="article-2"></a>AWS, Google, and Vercel Agent Flaws Let Attackers Trigger Tools Without Running the Model</h2>
+
+<p><strong>主题</strong>：AI 编程与开发工具 / AI 与数据安全<br />
+<strong>来源日期</strong>： Aug 06, 2026<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+
+<p>Security flaws in agent infrastructure from Amazon Web Services (AWS), Google, and Vercel let untrusted or forged instructions reach an agent’s tools with no check that a model turn had authorized them.   In several of the attack paths, the model never ran at all, so system prompts, content filters, and model-level guardrails never got a chance to intervene.   The affected products include Amazon Bedrock AgentCore’s InvokeHarness API, Google’s Agent Development Kit (ADK) for Python, and the Vercel AI SDK harness packages for the Codex and OpenCode coding agents. AWS has fixed the managed service, Google addressed the issues in ADK 2.5.0, and Vercel patched @ai-sdk/harness-codex in version 1.0.29 and @ai-sdk/harness-opencode in version 1.0.28.   These are not identical vulnerabilities and do not share the same attack conditions. AWS involved an authenticated remote request, Google’s paths required attacker-controlled session events or user-authored function calls, and V…</p>
+
+<p><strong>可转化方向</strong>：评估是否能转化为临床编程、代码审查或自动化实践；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>
