@@ -24,9 +24,9 @@
   <h1>少抓一点，更接近可以转化为实践的内容</h1>
   <p>从 The Hacker News 中筛选与 AI 编程、数据工作流和安全边界相关的候选资讯，为博客选题和技术实践提供线索，而不是建立泛资讯瀑布流。</p>
   <div class="radar-hero__meta">
-    <span>3 条候选资讯</span>
+    <span>7 条候选资讯</span>
     <span>状态：待人工评估</span>
-    <span>更新于 2026-08-18 10:44</span>
+    <span>更新于 2026-08-19 10:46</span>
   </div>
 </header>
 
@@ -36,6 +36,46 @@
     <p>自动命中不代表推荐。只有经过阅读全文、实践验证或交叉核验后，才进入博客内容。</p>
   </div>
   <div class="candidate-grid">
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 18, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" target="_blank" rel="noopener noreferrer">Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span></div>
+      <p>Varonis Threat Labs has disclosed three vulnerabilities in Microsoft Copilot Personal that it said could allow a single click on a crafted link to silently pull data from connected apps and other information available to the victim's Copilot session.   The flaws, which the researchers collectively named CoSnitch , turn in part on an undocumented URL parameter that the assistant itself surfaced during testing.   The company said it reported the issue to Microsoft in December 2025 and that patches shipped on August 18, 2026.   CoSnitch is tracked as  CVE-2026-24301  in Microsoft's Security Update Guide. The research names Copilot Personal, the consumer assistant hosted at copilot.microsoft.com, and does not state that the same behavior affected Microsoft 365 Copilot.   The researchers said they found no evidence that CoSnitch was exploited in the wild. They reached the parameter by repeatedly asking Copilot why a prompt could not be made to run without user interaction, an ap...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 18, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html" target="_blank" rel="noopener noreferrer">Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
+      <p>Two critical vulnerabilities impacting MLflow, an open-source artificial intelligence (AI) platform, and FUXA, an open-source, web-based SCADA / HMI software built for operational technology (OT) and industrial automation, are witnessing malicious scanning and exploitation efforts.   According to independent reports from watchTowr and VulnCheck, the vulnerabilities in question are as follows -      CVE-2026-64849  (CVSS score: 9.3) - An unauthenticated Server-Side Request Forgery (SSRF) vulnerability in MLflow that can allow an attacker who can reach the Tracking Server (mlflow server) to issue HTTP requests to arbitrary internal cloud metadata endpoints and extract sensitive data. (Affects versions < 3.15.0)    CVE-2026-25895  (CVSS score: 9.5) - A missing authentication for a critical function and path traversal vulnerability in FUXA that can allow an unauthenticated, remote attacker to write arbitrary files to the server file system and achieve remote code execution. (Affects ve...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理或数据质量流程的启发；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 18, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html" target="_blank" rel="noopener noreferrer">AI "Mind Viruses" Can Spread Between Agents Through Persistent Prompt Files</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>Security researchers at Anthropic and Switzerland's EPFL have demonstrated that self-propagating payloads can spread from one artificial intelligence (AI) agent to the next through the editable system prompt files that autonomous agent harnesses use to carry state between sessions.   The work, released as a preprint on August 10, 2026, tests the technique in a simulated six-agent coding collaboration and in a chain of paired agents modeled on OpenClaw , the open-source autonomous assistant formerly known as Clawdbot and Moltbot .   There is no evidence that the technique has spread successfully in the wild, and the same paper reports that a review of archived posts from Moltbook, the social network for AI agents, found no successful agent-to-agent propagation despite several attempts.   A one-paragraph warning added to an agent's system prompt reduced spread to near zero across the payloads tested. Fifteen generations of adversarial optimization run against that warning on C...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 18, 2026</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html" target="_blank" rel="noopener noreferrer">CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span><span>AI 与数据安全</span></div>
+      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added  a critical flaw impacting Ray to its Known Exploited Vulnerabilities ( KEV ) catalog, citing evidence of active exploitation.   Ray  is an open-source, Python-native distributed computing framework designed to scale artificial intelligence and machine learning workloads. As of writing, the GitHub project  has more than 43,500 stars and has been forked over 7,900 times.   The vulnerability in question relates to CVE-2025-62593  (CVSS score: 9.4), which can result in remote code execution via web browsers like Mozilla Firefox and Apple Safari by means of a DNS rebinding attack .   "Due to the longstanding decision by the Ray Development team to not implement any sort of authentication on critical endpoints, like the /api/jobs & /api/job_agent/jobs/ has once again led to a severe vulnerability that allows attackers to execute arbitrary code against Ray," according to an advisory shared by Ray ...</p>
+      <p><strong>为什么值得看：</strong>命中与个人工作流相关的 AI/数据主题；需要阅读全文判断是否具备临床编程、研究或可复现分析价值。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查或自动化实践；评估 AI 辅助研究和编程中的隐私、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
     
     <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span> Aug 17, 2026</span></div>
