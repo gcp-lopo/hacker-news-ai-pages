@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>2</strong> 条候选</span>
+      <span><strong>3</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-08-25 10:48</span>
+      <span>更新 2026-08-26 10:54</span>
     </div>
   </div>
 </header>
@@ -51,13 +51,23 @@
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-08-21</span></div>
-      <h3><a href="https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html" target="_blank" rel="noopener noreferrer">14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor With AI-Assisted C2</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>Cybersecurity researchers have discovered a set of trojanized npm packages that masquerade as working calendar and streak utilities but are engineered to stealthily deliver an artificial intelligence (AI)-powered Linux implant dubbed RedC2 4.0.   "When the module loads, it locates the bundled binary, marks it executable, and launches it as a detached background process," TrendAI, Trend Micro's enterprise cybersecurity business, said  in a report published Thursday. "No install hook function call is needed; a single import anywhere in the dependency graph, even a transitive one, is enough to execute the payload."   The list of identified packages is below -      streak-metrics-math@1.0.0,1.0.1    kit-map-vim@1.0.0    streak-map-cache@1.0.0    streak-map-kit@1.0.0    map-streak-kit@1.0.0    streak-cache-map@1.0.0    streak-calc-metrics@1.0.0    streak-calc-math@1.0.0    streak-math-abz@1.0.0    streak-metricsaz@1.0.0    streak-math-metrics@1.0.0    streak-metrica...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-08-25</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/a-malicious-webpage-could-poison-your.html" target="_blank" rel="noopener noreferrer">A Malicious Webpage Could Poison Your Local AI Model Behind NVIDIA NemoClaw</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>Oasis Security has disclosed a weakness in NVIDIA NemoClaw  that could let an attacker-controlled webpage take unauthenticated control of the local Ollama instance serving an AI agent and plant hidden instructions inside the model itself.   The findings were shared with The Hacker News ahead of publication, and the report says Oasis Security reported them to NVIDIA's Product Security Incident Response Team (PSIRT) beforehand. The research carries no CVE identifier. No exploitation has been reported as of August 25, 2026.   Oasis Security's head of research, Elad Luz, told The Hacker News that NemoClaw v0.0.35 fixed the issue on macOS and Linux. There is no fix on the Windows and WSL path, according to Luz, where v0.0.34 added a Windows installation that carries a warning instead.   NemoClaw is NVIDIA's open source reference stack for running agents such as OpenClaw inside its OpenShell sandboxes, and Ollama is one of its supported local inference backends.   The report des...</p>
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/14-trojanized-npm-packages-drop-redc2.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/a-malicious-webpage-could-poison-your.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-08-25</span></div>
+      <h3><a href="https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html" target="_blank" rel="noopener noreferrer">Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>Marimo has addressed a high-severity security flaw in its notebook software that allowed an attacker to execute an attacker-supplied Model Context Protocol (MCP) command in a specially crafted notebook, according to VulnCheck's CVE Numbering Authority (CNA) record.   The CNA record says the command can run as a local subprocess when the notebook is opened in edit mode.   The vulnerability, tracked as  CVE-2026-75149 , is a code injection issue affecting versions prior to 0.23.15. VulnCheck's CVE Numbering Authority (CNA) record assigns it a CVSS v4 score of 8.7 and a CVSS v3.1 score of 8.8, with user interaction required and no attacker authentication required.   Marimo has addressed the issue in version 0.23.15. The CVE was published on August 19. Users running an affected release should move to a version outside the affected range.   According to  OSV's CVE import , a crafted notebook can supply an attacker-controlled MCP server command through notebook configurat...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
