@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>1</strong> 条候选</span>
+      <span><strong>3</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-09-09 14:48</span>
+      <span>更新 2026-09-10 14:43</span>
     </div>
   </div>
 </header>
@@ -41,13 +41,33 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-08</span></div>
-      <h3><a href="https://thehackernews.com/2026/09/what-it-took-to-reach-1-billion-build.html" target="_blank" rel="noopener noreferrer">What It Took to Reach 1 Billion Build Manifests</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span></div>
-      <p>In the last six months, Chainguard doubled its output from 500 million to more than 1 billion container build manifests. We also surpassed 3,000 unique container images and 675,000 image versions in our catalog. Those are the headline numbers, but I want to share what's actually behind them. The number itself is less interesting than the system that produced it, and why we had to fundamentally rethink that system to get here.   What a build manifest actually represents   Let’s be precise about what we're counting. How do we define a “build manifest”? Think of it as every time the Chainguard Factory produces a new, verifiable artifact: a fresh image for go:1.26.5 , a rebuild of nginx triggered by a libc patch, a new architecture variant, a regenerated SBOM after a dependency change - all these events cause a new build and therefore new artifacts.   At our scale, a single project like Python  might have dozens of supported versions, each with multiple architecture builds, each r...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html" target="_blank" rel="noopener noreferrer">Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
+      <p>Cybercriminals are hijacking artificial intelligence (AI) user accounts via information stealer logs to create "stolen keys" that grant illicit access to tools from model providers like Google, Anthropic, and others.    Information stealers like Lumma Stealer or Vidar are equipped to harvest a wide range of data from compromised systems. This can include credential, session tokens, and API keys.   Once the data is stolen, threat actors who have purchased access to these off-the-shelf offerings put them up for sale on underground forums in the form of stealer logs to enable follow-on attacks.   "Session tokens and API keys are sought specifically by threat actors because it is often possible to replay those secrets and bypass credential-based authentication," Jeremy Kirk, director of threat intelligence at Okta, said  in a report shared with The Hacker News.   "Once successfully replayed, a threat actor is effectively logged in to an LLM service without actua...</p>
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/what-it-took-to-reach-1-billion-build.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发；评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html" target="_blank" rel="noopener noreferrer">DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span></div>
+      <p>A flaw in DeepSeek Harness , DeepSeek's open-source tool for running AI coding agents on a developer's machine, let a sandboxed agent turn off its own sandbox with a single command.   The tool runs an agent's commands inside an operating-system sandbox, so that an agent working on untrusted files cannot write outside its workspace. The agent could remove that limit by calling the tool's own web interface on the same machine, and its commands would then run outside the sandbox without an approval prompt.   It worked on a default installation until DeepSeek fixed the tool on August 27, and it required attacker-supplied text that the agent read to prompt it to make the call.   The flaw is tracked as CVE-2026-82533 . VulnCheck, which assigned the identifier,  published the record  on September 8 and rated the flaw 9.4 out of 10.   OX Research , the security firm that reported the flaw, said one shell command was enough. The command invoked the tool's local interface an...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查、测试或自动化实践</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html" target="_blank" rel="noopener noreferrer">U.S. Agencies Accuse China AI Firms of Distilling Claude, GPT, Gemini, and Grok</a></h3>
+      <div class="topic-list"><span>AI 工程与可信性</span></div>
+      <p>U.S. cybersecurity and intelligence agencies have accused  China-based artificial intelligence (AI) companies of conducting "systematic extraction" of proprietary functionalities and capabilities of American frontier models through distillation attacks.   The activity has been described as occurring at an industrial-scale and one that forms the "core" of their AI development strategy, according to a bulletin released by the National Security Agency (NSA), the Cybersecurity and Infrastructure Security Agency (CISA), and the Federal Bureau of Investigation (FBI).   "While 'distillation' is recognized as a legitimate and useful technique in AI research, China-based AI companies are engaging in aggressive, malicious, and targeted distillation activities at an industrial scale that extract restricted proprietary functionalities and capabilities of U.S. frontier AI models," the authoring agencies said .   The joint advisory noted that Chinese AI firms l...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
