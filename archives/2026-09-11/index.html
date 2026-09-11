@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-09-11 AI 与数据工作流雷达 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-09-11 AI 与数据工作流雷达</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-09-11-ai-与数据工作流雷达">2026-09-11 AI 与数据工作流雷达</h1>
+
+<blockquote>
+  <p>来源：<a href="https://thehackernews.com/">The Hacker News</a>。这里只保留与 AI 编程、数据/研究工作流、安全边界或可信工程直接相关的高信号线索；不抓取全文，也不代表事实核验或产品推荐。</p>
+</blockquote>
+
+<h2 id="infostealer-logs-expose-replayable-ai-tokens-that-can-bypass-mfa"><a id="article-1"></a>Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA</h2>
+
+<p><strong>主题</strong>：数据工作流与自动化 / AI 与数据安全<br />
+<strong>来源日期</strong>：2026-09-09<br />
+<strong>相关性分数</strong>：8<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Cybercriminals are hijacking artificial intelligence (AI) user accounts via information stealer logs to create “stolen keys” that grant illicit access to tools from model providers like Google, Anthropic, and others.    Information stealers like Lumma Stealer or Vidar are equipped to harvest a wide range of data from compromised systems. This can include credential, session tokens, and API keys.   Once the data is stolen, threat actors who have purchased access to these off-the-shelf offerings put them up for sale on underground forums in the form of stealer logs to enable follow-on attacks.   “Session tokens and API keys are sought specifically by threat actors because it is often possible to replay those secrets and bypass credential-based authentication,” Jeremy Kirk, director of threat intelligence at Okta, said  in a report shared with The Hacker News.   “Once successfully replayed, a threat actor is effectively logged in to an LLM service without actua…</p>
+
+<p><strong>可转化方向</strong>：评估对可复现分析、依赖管理、数据质量或研究工程流程的启发；评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="nearly-1-in-10-exposed-litellm-gateways-accepted-the-example-sk-1234-admin-key"><a id="article-2"></a>Nearly 1 in 10 Exposed LiteLLM Gateways Accepted the Example “sk-1234” Admin Key</h2>
+
+<p><strong>主题</strong>：数据工作流与自动化<br />
+<strong>来源日期</strong>：2026-09-10<br />
+<strong>相关性分数</strong>：4<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Nearly one in ten of the internet-facing LiteLLM servers that  Wiz Research  scanned in February accepted  sk-1234 , the example admin key in LiteLLM’s own setup guide.   LiteLLM is an open-source AI gateway, the software a company puts between its applications and the model providers it pays for. That key is the gateway’s administrator credential.   Anyone who holds it can read every model provider’s API key stored on the server. In Wiz’s tests, it also reached the cloud IAM credentials of the machine the gateway runs on.   Changing the key needs no upgrade, and it closes every path in Wiz’s report that depends on holding it.   Where the Number Comes From   Wiz ran one scan. It found 3,074 LiteLLM gateways on Shodan in February, and 294 of them accepted the key.   In 191 of those 294, no key was set at all, so they would have accepted anything. The rest had the setup guide’s value left in place.   A second scan in August found more than 85,000 instances, but W…</p>
+
+<p><strong>可转化方向</strong>：评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+
+<p><a href="https://thehackernews.com/2026/09/nearly-1-in-10-exposed-litellm-gateways.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="deepseek-harness-flaw-let-ai-agents-disable-their-own-file-sandbox-without-approval"><a id="article-3"></a>DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval</h2>
+
+<p><strong>主题</strong>：AI 编程与开发工具<br />
+<strong>来源日期</strong>：2026-09-09<br />
+<strong>相关性分数</strong>：4<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>A flaw in DeepSeek Harness , DeepSeek’s open-source tool for running AI coding agents on a developer’s machine, let a sandboxed agent turn off its own sandbox with a single command.   The tool runs an agent’s commands inside an operating-system sandbox, so that an agent working on untrusted files cannot write outside its workspace. The agent could remove that limit by calling the tool’s own web interface on the same machine, and its commands would then run outside the sandbox without an approval prompt.   It worked on a default installation until DeepSeek fixed the tool on August 27, and it required attacker-supplied text that the agent read to prompt it to make the call.   The flaw is tracked as CVE-2026-82533 . VulnCheck, which assigned the identifier,  published the record  on September 8 and rated the flaw 9.4 out of 10.   OX Research , the security firm that reported the flaw, said one shell command was enough. The command invoked the tool’s local interface an…</p>
+
+<p><strong>可转化方向</strong>：评估是否能转化为临床编程、代码审查、测试或自动化实践</p>
+
+<p><a href="https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="us-agencies-accuse-china-ai-firms-of-distilling-claude-gpt-gemini-and-grok"><a id="article-4"></a>U.S. Agencies Accuse China AI Firms of Distilling Claude, GPT, Gemini, and Grok</h2>
+
+<p><strong>主题</strong>：AI 工程与可信性<br />
+<strong>来源日期</strong>：2026-09-09<br />
+<strong>相关性分数</strong>：2<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>U.S. cybersecurity and intelligence agencies have accused  China-based artificial intelligence (AI) companies of conducting “systematic extraction” of proprietary functionalities and capabilities of American frontier models through distillation attacks.   The activity has been described as occurring at an industrial-scale and one that forms the “core” of their AI development strategy, according to a bulletin released by the National Security Agency (NSA), the Cybersecurity and Infrastructure Security Agency (CISA), and the Federal Bureau of Investigation (FBI).   “While ‘distillation’ is recognized as a legitimate and useful technique in AI research, China-based AI companies are engaging in aggressive, malicious, and targeted distillation activities at an industrial scale that extract restricted proprietary functionalities and capabilities of U.S. frontier AI models,” the authoring agencies said .   The joint advisory noted that Chinese AI firms l…</p>
+
+<p><strong>可转化方向</strong>：关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
+
+<p><a href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>

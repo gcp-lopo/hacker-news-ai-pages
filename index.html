@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>3</strong> 条候选</span>
+      <span><strong>4</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-09-10 14:43</span>
+      <span>更新 2026-09-11 14:42</span>
     </div>
   </div>
 </header>
@@ -48,6 +48,16 @@
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
       <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发；评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
       <a class="candidate-card__link" href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-10</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/nearly-1-in-10-exposed-litellm-gateways.html" target="_blank" rel="noopener noreferrer">Nearly 1 in 10 Exposed LiteLLM Gateways Accepted the Example "sk-1234" Admin Key</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span></div>
+      <p>Nearly one in ten of the internet-facing LiteLLM servers that  Wiz Research  scanned in February accepted  sk-1234 , the example admin key in LiteLLM's own setup guide.   LiteLLM is an open-source AI gateway, the software a company puts between its applications and the model providers it pays for. That key is the gateway's administrator credential.   Anyone who holds it can read every model provider's API key stored on the server. In Wiz's tests, it also reached the cloud IAM credentials of the machine the gateway runs on.   Changing the key needs no upgrade, and it closes every path in Wiz's report that depends on holding it.   Where the Number Comes From   Wiz ran one scan. It found 3,074 LiteLLM gateways on Shodan in February, and 294 of them accepted the key.   In 191 of those 294, no key was set at all, so they would have accepted anything. The rest had the setup guide's value left in place.   A second scan in August found more than 85,000 instances, but W...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/nearly-1-in-10-exposed-litellm-gateways.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
