@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-09-12 AI 与数据工作流雷达 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-09-12 AI 与数据工作流雷达</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-09-12-ai-与数据工作流雷达">2026-09-12 AI 与数据工作流雷达</h1>
+
+<blockquote>
+  <p>来源：<a href="https://thehackernews.com/">The Hacker News</a>。这里只保留与 AI 编程、数据/研究工作流、安全边界或可信工程直接相关的高信号线索；不抓取全文，也不代表事实核验或产品推荐。</p>
+</blockquote>
+
+<h2 id="anthropic-says-seven-china-based-ai-labs-ran-industrial-scale-claude-distillation-attacks"><a id="article-1"></a>Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks</h2>
+
+<p><strong>主题</strong>：数据工作流与自动化<br />
+<strong>来源日期</strong>：2026-09-11<br />
+<strong>相关性分数</strong>：4<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Anthropic on Thursday said it identified and disrupted industrial-scale illicit distillation attacks against Claude from seven labs based in China, including Alibaba, Moonshot, DeepSeek, Z.ai (aka Zhipu), and MiniMax.   Knowledge distillation by itself is a legitimate training method . It refers to a machine learning technique  where a large, powerful AI model assumes the role of a “teacher” to train a smaller, less-capable or faster “student” model to copy its capabilities.   Illicit distillation, on the other hand, is an industrial-scale campaign that covertly extracts a model’s capabilities and replicates them in another model without authorization, typically by making use of networks of fake accounts created with stolen credit cards, login credentials, and API keys.   Frontier AI labs in the West, including those from Google  and OpenAI , have repeatedly called out distillation attacks aimed at their models. Anthropic said it has observed unauthorized labs …</p>
+
+<p><strong>可转化方向</strong>：评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+
+<p><a href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="nearly-1-in-10-exposed-litellm-gateways-accepted-the-example-sk-1234-admin-key"><a id="article-2"></a>Nearly 1 in 10 Exposed LiteLLM Gateways Accepted the Example “sk-1234” Admin Key</h2>
+
+<p><strong>主题</strong>：数据工作流与自动化<br />
+<strong>来源日期</strong>：2026-09-10<br />
+<strong>相关性分数</strong>：4<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Nearly one in ten of the internet-facing LiteLLM servers that  Wiz Research  scanned in February accepted  sk-1234 , the example admin key in LiteLLM’s own setup guide.   LiteLLM is an open-source AI gateway, the software a company puts between its applications and the model providers it pays for. That key is the gateway’s administrator credential.   Anyone who holds it can read every model provider’s API key stored on the server. In Wiz’s tests, it also reached the cloud IAM credentials of the machine the gateway runs on.   Changing the key needs no upgrade, and it closes every path in Wiz’s report that depends on holding it.   Where the Number Comes From   Wiz ran one scan. It found 3,074 LiteLLM gateways on Shodan in February, and 294 of them accepted the key.   In 191 of those 294, no key was set at all, so they would have accepted anything. The rest had the setup guide’s value left in place.   A second scan in August found more than 85,000 instances, but W…</p>
+
+<p><strong>可转化方向</strong>：评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+
+<p><a href="https://thehackernews.com/2026/09/nearly-1-in-10-exposed-litellm-gateways.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="claude-used-to-automate-exploitation-and-data-theft-across-multiple-victims"><a id="article-3"></a>Claude Used to Automate Exploitation and Data Theft Across Multiple Victims</h2>
+
+<p><strong>主题</strong>：AI 与数据安全<br />
+<strong>来源日期</strong>：2026-09-11<br />
+<strong>相关性分数</strong>：3<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Anthropic has warned that cybercriminals and state-sponsored hackers alike are using its Claude models for cyber attacks, weapons design, propaganda, and mass surveillance between December 2025 and August 2026.   The threat actors, which the artificial intelligence (AI) company has branded Generative Threat Groups (GTGs), span state-sponsored groups, financially motivated criminals, commercial spyware vendors, state propaganda institutions, and politically motivated individuals.   “The cybersecurity skills of AI models means that AI has collapsed the labor and tooling gap that used to separate well-resourced, state-sponsored operations from individual operators,” Anthropic said . “The use of AI went beyond simple questions and responses from a chatbot but rather involved the use of multi-agent frameworks executing reconnaissance, exploitation, and data exfiltration.”   Among the notable cases highlighted by Anthropic is the development of an AI-assisted workflow by…</p>
+
+<p><strong>可转化方向</strong>：评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>

@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>4</strong> 条候选</span>
+      <span><strong>3</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-09-11 14:42</span>
+      <span>更新 2026-09-12 14:36</span>
     </div>
   </div>
 </header>
@@ -41,13 +41,13 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
-      <h3><a href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html" target="_blank" rel="noopener noreferrer">Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA</a></h3>
-      <div class="topic-list"><span>数据工作流与自动化</span><span>AI 与数据安全</span></div>
-      <p>Cybercriminals are hijacking artificial intelligence (AI) user accounts via information stealer logs to create "stolen keys" that grant illicit access to tools from model providers like Google, Anthropic, and others.    Information stealers like Lumma Stealer or Vidar are equipped to harvest a wide range of data from compromised systems. This can include credential, session tokens, and API keys.   Once the data is stolen, threat actors who have purchased access to these off-the-shelf offerings put them up for sale on underground forums in the form of stealer logs to enable follow-on attacks.   "Session tokens and API keys are sought specifically by threat actors because it is often possible to replay those secrets and bypass credential-based authentication," Jeremy Kirk, director of threat intelligence at Okta, said  in a report shared with The Hacker News.   "Once successfully replayed, a threat actor is effectively logged in to an LLM service without actua...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-11</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html" target="_blank" rel="noopener noreferrer">Anthropic Says Seven China-Based AI Labs Ran Industrial-Scale Claude Distillation Attacks</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span></div>
+      <p>Anthropic on Thursday said it identified and disrupted industrial-scale illicit distillation attacks against Claude from seven labs based in China, including Alibaba, Moonshot, DeepSeek, Z.ai (aka Zhipu), and MiniMax.   Knowledge distillation by itself is a legitimate training method . It refers to a machine learning technique  where a large, powerful AI model assumes the role of a "teacher" to train a smaller, less-capable or faster "student" model to copy its capabilities.   Illicit distillation, on the other hand, is an industrial-scale campaign that covertly extracts a model's capabilities and replicates them in another model without authorization, typically by making use of networks of fake accounts created with stolen credit cards, login credentials, and API keys.   Frontier AI labs in the West, including those from Google  and OpenAI , have repeatedly called out distillation attacks aimed at their models. Anthropic said it has observed unauthorized labs ...</p>
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发；评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
     <article class="candidate-card">
@@ -61,23 +61,13 @@
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
-      <h3><a href="https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html" target="_blank" rel="noopener noreferrer">DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval</a></h3>
-      <div class="topic-list"><span>AI 编程与开发工具</span></div>
-      <p>A flaw in DeepSeek Harness , DeepSeek's open-source tool for running AI coding agents on a developer's machine, let a sandboxed agent turn off its own sandbox with a single command.   The tool runs an agent's commands inside an operating-system sandbox, so that an agent working on untrusted files cannot write outside its workspace. The agent could remove that limit by calling the tool's own web interface on the same machine, and its commands would then run outside the sandbox without an approval prompt.   It worked on a default installation until DeepSeek fixed the tool on August 27, and it required attacker-supplied text that the agent read to prompt it to make the call.   The flaw is tracked as CVE-2026-82533 . VulnCheck, which assigned the identifier,  published the record  on September 8 and rated the flaw 9.4 out of 10.   OX Research , the security firm that reported the flaw, said one shell command was enough. The command invoked the tool's local interface an...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-11</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html" target="_blank" rel="noopener noreferrer">Claude Used to Automate Exploitation and Data Theft Across Multiple Victims</a></h3>
+      <div class="topic-list"><span>AI 与数据安全</span></div>
+      <p>Anthropic has warned that cybercriminals and state-sponsored hackers alike are using its Claude models for cyber attacks, weapons design, propaganda, and mass surveillance between December 2025 and August 2026.   The threat actors, which the artificial intelligence (AI) company has branded Generative Threat Groups (GTGs), span state-sponsored groups, financially motivated criminals, commercial spyware vendors, state propaganda institutions, and politically motivated individuals.   "The cybersecurity skills of AI models means that AI has collapsed the labor and tooling gap that used to separate well-resourced, state-sponsored operations from individual operators," Anthropic said . "The use of AI went beyond simple questions and responses from a chatbot but rather involved the use of multi-agent frameworks executing reconnaissance, exploitation, and data exfiltration."   Among the notable cases highlighted by Anthropic is the development of an AI-assisted workflow by...</p>
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查、测试或自动化实践</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
-    </article>
-    
-    <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-09</span></div>
-      <h3><a href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html" target="_blank" rel="noopener noreferrer">U.S. Agencies Accuse China AI Firms of Distilling Claude, GPT, Gemini, and Grok</a></h3>
-      <div class="topic-list"><span>AI 工程与可信性</span></div>
-      <p>U.S. cybersecurity and intelligence agencies have accused  China-based artificial intelligence (AI) companies of conducting "systematic extraction" of proprietary functionalities and capabilities of American frontier models through distillation attacks.   The activity has been described as occurring at an industrial-scale and one that forms the "core" of their AI development strategy, according to a bulletin released by the National Security Agency (NSA), the Cybersecurity and Infrastructure Security Agency (CISA), and the Federal Bureau of Investigation (FBI).   "While 'distillation' is recognized as a legitimate and useful technique in AI research, China-based AI companies are engaging in aggressive, malicious, and targeted distillation activities at an industrial scale that extract restricted proprietary functionalities and capabilities of U.S. frontier AI models," the authoring agencies said .   The joint advisory noted that Chinese AI firms l...</p>
-      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
