@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-09-18 AI 与数据工作流雷达 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-09-18 AI 与数据工作流雷达</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-09-18-ai-与数据工作流雷达">2026-09-18 AI 与数据工作流雷达</h1>
+
+<blockquote>
+  <p>来源：<a href="https://thehackernews.com/">The Hacker News</a>。这里只保留与 AI 编程、数据/研究工作流、安全边界或可信工程直接相关的高信号线索；不抓取全文，也不代表事实核验或产品推荐。</p>
+</blockquote>
+
+<h2 id="critical-docker-sandboxes-flaw-lets-malicious-guest-code-read-and-modify-macos-host-files"><a id="article-1"></a>Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files</h2>
+
+<p><strong>主题</strong>：AI 编程与开发工具<br />
+<strong>来源日期</strong>：2026-09-17<br />
+<strong>相关性分数</strong>：4<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Malicious code running inside a Docker Sandboxes  virtual machine on macOS could escape the project directory shared into it and read or change files anywhere else on the host, Docker warns in a  security announcement  on September 15.   The escape runs with the rights of the host account that runs the virtual machine. The flaw,  CVE-2026-77179 , is rated Critical, affects versions 0.28.0 up to but not including 0.42.0 on macOS, and was fixed in  0.42.0  on September 7.   Docker Sandboxes runs each AI coding agent in its own small virtual machine with the project directory shared in. The code that could escape is whatever runs inside that machine, such as a coding agent that has been turned against its user, or anything malicious the agent installs and runs.   Docker has not reported any exploitation. CISA’s added assessment on the CVE record lists exploitation as none, and the flaw is not in CISA’s Known Exploited Vulnerabilities catalog as of the ca…</p>
+
+<p><strong>可转化方向</strong>：评估是否能转化为临床编程、代码审查、测试或自动化实践</p>
+
+<p><a href="https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="ai-securitys-greatest-hits"><a id="article-2"></a>AI Security’s Greatest Hits</h2>
+
+<p><strong>主题</strong>：AI 与数据安全<br />
+<strong>来源日期</strong>：未提供<br />
+<strong>相关性分数</strong>：3<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Get 7 of the most widely used AI security resources in one pack. Each asset provides practical tools for securing AI apps, models, and agents.</p>
+
+<p><strong>可转化方向</strong>：评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.uk/wiz-ai-pack">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="openai-reveals-six-model-incidents-involving-hidden-failures-and-unauthorized-uploads"><a id="article-3"></a>OpenAI Reveals Six Model Incidents Involving Hidden Failures and Unauthorized Uploads</h2>
+
+<p><strong>主题</strong>：AI 工程与可信性<br />
+<strong>来源日期</strong>：2026-09-17<br />
+<strong>相关性分数</strong>：2<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>OpenAI on Wednesday disclosed  six new instances of “unexpected or concerning model behavior” that took place over the past six months, while sharing a new framework for reporting, tracking, investigating, and disclosing model misalignment  in a bid to improve transparency.   “As AI systems grow more advanced and more widely deployed, we need to build a broader and better-informed consensus on the progress of alignment research,” OpenAI said. “We do not believe that the AI industry has solved alignment and monitoring to a sufficient degree to continue responsibly scaling at maximum speed for much longer.”   “Decisions about how AI development should proceed in the months and years to come need to draw on evidence that people outside the companies building frontier models can examine for themselves.”   The six incidents  are outside of the recently disclosed  misaligned activity targeting Hugging Face , DseWiki , and RubyGems . Details of the inc…</p>
+
+<p><strong>可转化方向</strong>：关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
+
+<p><a href="https://thehackernews.com/2026/09/openai-reveals-six-model-incidents.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>
