@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>2</strong> 条候选</span>
+      <span><strong>3</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-09-22 14:56</span>
+      <span>更新 2026-09-23 14:50</span>
     </div>
   </div>
 </header>
@@ -39,6 +39,16 @@
     <p>自动命中不代表推荐。只有经过阅读全文，并回到官方文档、原始研究或供应商公告交叉核验后，才进入实践或博客内容。</p>
   </div>
   <div class="candidate-grid">
+    
+    <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-09-22</span></div>
+      <h3><a href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" target="_blank" rel="noopener noreferrer">Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials</a></h3>
+      <div class="topic-list"><span>数据工作流与自动化</span></div>
+      <p>A critical vulnerability in  Bifrost , an open-source AI gateway that routes requests to more than 20 LLM providers, allows an unauthenticated attacker to run arbitrary commands on the gateway server with a single HTTP request.   The flaw, tracked as  CVE-2026-90898  (CVSS score: 9.8), affects all versions of the Bifrost HTTP transport before 2.1.0 when management authentication is disabled, which is the default configuration. A fix is available in transports/v2.1.0.   Yuval Moravchick of  JFrog Security Research , who discovered the flaw, said an attacker can register a stdio-type MCP client through a single unauthenticated POST to the management API endpoint /api/mcp/client. Bifrost starts the specified command immediately, before any MCP handshake, as the gateway process user.   On the official Docker image, that user is appuser. Because the gateway stores API keys for every connected provider, executing commands on the gateway process grants the attack...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
     
     <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span></span></div>
