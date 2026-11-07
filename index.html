@@ -26,9 +26,9 @@
     <p class="radar-hero__lede">从偏安全的资讯源里，只保留值得进一步核验的 AI 编程、数据/研究工作流与可信工程线索。</p>
     <p class="radar-hero__note">当前来源为 The Hacker News，因此这里不是 AI 行业全景，也不追求资讯数量。候选只负责发现，进入实践或博客前仍需阅读全文，并回到官方文档、原始研究或供应商公告核验。</p>
     <div class="radar-hero__meta" aria-label="雷达状态">
-      <span><strong>2</strong> 条候选</span>
+      <span><strong>3</strong> 条候选</span>
       <span>待人工评估</span>
-      <span>更新 2026-11-06 16:38</span>
+      <span>更新 2026-11-07 15:53</span>
     </div>
   </div>
 </header>
@@ -41,6 +41,16 @@
   <div class="candidate-grid">
     
     <article class="candidate-card">
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-11-07</span></div>
+      <h3><a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html" target="_blank" rel="noopener noreferrer">Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub</a></h3>
+      <div class="topic-list"><span>AI 编程与开发工具</span><span>数据工作流与自动化</span></div>
+      <p>Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can read them.   When a user selects " Yes, and don't ask again ," Anthropic's AI coding assistant can save the command, word-for-word, including the secret, in a project settings file.   Software security company Apiiro said yesterday that 1,122 public copies of that file hold at least one secret, though it did not test whether any still work. One company the researchers notified earlier this week confirmed its key had been live.   The file is .claude/settings.local.json. Removing it from a project does not undo the leak, because older versions stay in git history and in forks of the repository. The researchers' advice is to rotate first: change every password, token, and key the file has ever held, then clean up.   How a Secret Lands in the File   By default, Claude Code asks before it runs most shell commands. If the u...</p>
+      <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+      <p><strong>可转化方向：</strong>评估是否能转化为临床编程、代码审查、测试或自动化实践；评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+    </article>
+    
+    <article class="candidate-card">
       <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-11-05</span></div>
       <h3><a href="https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html" target="_blank" rel="noopener noreferrer">Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction</a></h3>
       <div class="topic-list"><span>AI 与数据安全</span></div>
@@ -51,13 +61,13 @@
     </article>
     
     <article class="candidate-card">
-      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-11-04</span></div>
-      <h3><a href="https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html" target="_blank" rel="noopener noreferrer">Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit</a></h3>
-      <div class="topic-list"><span>AI 与数据安全</span></div>
-      <p>Cybersecurity researchers have disclosed details of an OpenAI Codex jailbreak bundle that's designed to modify an artificial intelligence (AI) agent's trusted instructions to insert advertisements for a third-party AI gateway.   The phenomenon has been codenamed prompt adware  by Check Point Research.   Called Haiou (meaning Seagull in Chinese), the jailbreak modifies OpenAI Codex's configuration files to inject advertisements for the jailbreak author's website into subsequent agent responses.   "The advertised service is an opaque, OpenAI-compatible LLM gateway, a middleware between an application and an LLM provider," Check Point Research said  in a technical report. "The likely business model is to use the freely distributed jailbreak bundle as an acquisition channel for the paid gateway service."   Adware is a type of software that displays unwanted advertisements, which can appear on users' computers or mobile devices, often in the form of ...</p>
+      <div class="candidate-card__top"><span class="status-chip">待评估</span><span>2026-11-06</span></div>
+      <h3><a href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html" target="_blank" rel="noopener noreferrer">OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits</a></h3>
+      <div class="topic-list"><span>AI 工程与可信性</span></div>
+      <p>OpenAI on Thursday unveiled GPT‑6 Cyber , which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment.   The new model is "more capable at finding and fixing vulnerabilities, and far more reliable staying within the boundaries researchers set," OpenAI said . It has classified the model as Critical in cybersecurity under its Preparedness Framework.   The artificial intelligence (AI) company said GPT‑6 Cyber  is also better than its predecessors like GPT‑5.6 Cyber and GPT‑6 Astra when it comes to following task boundaries and avoiding exploiting out-of-scope services in 99.93% of cases, up from 94.49% for GPT-5.6 Cyber.   It also scores 48.5% on ExploitGym, a cybersecurity benchmark that evaluates the capabilities of AI agents to autonomously turn known software vulnerabilities into functioning, real-world exploits. In comparison, GPT-5.6 Cyber scored 32.1%.   OpenAI ...</p>
       <p><strong>为什么值得看：</strong>命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
-      <p><strong>可转化方向：</strong>评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
-      <a class="candidate-card__link" href="https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
+      <p><strong>可转化方向：</strong>关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
+      <a class="candidate-card__link" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html" target="_blank" rel="noopener noreferrer">阅读原始来源 →</a>
     </article>
     
   </div>
