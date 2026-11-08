@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="聚焦 AI 辅助编程、数据工作流、可复现研究与安全边界的候选资讯。">
+  <title>2026-11-08 AI 与数据工作流雷达 | AI 与数据工作流雷达</title>
+  <link rel="stylesheet" href="/hacker-news-ai-pages/assets/css/main.css">
+</head>
+<body>
+  <nav class="radar-nav" aria-label="主导航">
+    <a class="radar-brand" href="/hacker-news-ai-pages/">
+      <span class="radar-brand__mark">L</span>
+      <span><strong>LOPO</strong><small>Workflow Radar</small></span>
+    </a>
+    <div class="radar-nav__links">
+      <a href="/hacker-news-ai-pages/">最新候选</a>
+      <a href="/hacker-news-ai-pages/archives/">历史归档</a>
+      <a href="https://gcp-lopo.github.io/">返回主博客</a>
+    </div>
+  </nav>
+  <main class="radar-main"><header class="radar-hero radar-hero--compact">
+  <p class="radar-eyebrow">DAILY WORKFLOW ARCHIVE</p>
+  <h1>2026-11-08 AI 与数据工作流雷达</h1>
+  <p>候选线索仅供信息发现，请在引用或实践前回到原始来源核验。</p>
+</header>
+<article class="archive-article"><h1 id="2026-11-08-ai-与数据工作流雷达">2026-11-08 AI 与数据工作流雷达</h1>
+
+<blockquote>
+  <p>来源：<a href="https://thehackernews.com/">The Hacker News</a>。这里只保留与 AI 编程、数据/研究工作流、安全边界或可信工程直接相关的高信号线索；不抓取全文，也不代表事实核验或产品推荐。</p>
+</blockquote>
+
+<h2 id="claude-codes-dont-ask-again-file-exposes-passwords-and-keys-in-1122-public-copies-on-github"><a id="article-1"></a>Claude Code’s “Don’t Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub</h2>
+
+<p><strong>主题</strong>：AI 编程与开发工具 / 数据工作流与自动化<br />
+<strong>来源日期</strong>：2026-11-07<br />
+<strong>相关性分数</strong>：9<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can read them.   When a user selects “ Yes, and don’t ask again ,” Anthropic’s AI coding assistant can save the command, word-for-word, including the secret, in a project settings file.   Software security company Apiiro said yesterday that 1,122 public copies of that file hold at least one secret, though it did not test whether any still work. One company the researchers notified earlier this week confirmed its key had been live.   The file is .claude/settings.local.json. Removing it from a project does not undo the leak, because older versions stay in git history and in forks of the repository. The researchers’ advice is to rotate first: change every password, token, and key the file has ever held, then clean up.   How a Secret Lands in the File   By default, Claude Code asks before it runs most shell commands. If the u…</p>
+
+<p><strong>可转化方向</strong>：评估是否能转化为临床编程、代码审查、测试或自动化实践；评估对可复现分析、依赖管理、数据质量或研究工程流程的启发</p>
+
+<p><a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="researchers-bypass-chatgpt-lockdown-mode-to-exfiltrate-chats-without-user-interaction"><a id="article-2"></a>Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction</h2>
+
+<p><strong>主题</strong>：AI 与数据安全<br />
+<strong>来源日期</strong>：2026-11-05<br />
+<strong>相关性分数</strong>：3<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>Cybersecurity researchers have disclosed details  of a now-patched vulnerability that could be exploited to bypass Lockdown Mode protections in OpenAI ChatGPT.   Lockdown Mode was introduced  by the artificial intelligence (AI) company in June 2026 as an optional setting to minimize data exfiltration risks  arising from prompt injections.   “The flaw could enable silent chat data theft, phishing, and malware delivery, including zero-click data exfiltration in the ChatGPT desktop application,” Eli Smadja, head of research at Check Point, said in a report shared with The Hacker News.   The problem stems from HTML page previews inside ChatGPT code blocks, which allow HTML content to be rendered directly within the application. Given that executing user-supplied HTML and JavaScript can introduce security risks of its own, the content is placed inside a sandbox so that it cannot access data from the app, such as cookies and local storage.   The sandbox also prevents the rendere…</p>
+
+<p><strong>可转化方向</strong>：评估 AI 辅助研究和编程中的隐私、凭据、供应链与安全边界</p>
+
+<p><a href="https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+
+<h2 id="openai-launches-gpt-6-cyber-after-ai-helps-find-81-firefox-flaws-948-linux-exploits"><a id="article-3"></a>OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits</h2>
+
+<p><strong>主题</strong>：AI 工程与可信性<br />
+<strong>来源日期</strong>：2026-11-06<br />
+<strong>相关性分数</strong>：2<br />
+<strong>候选状态</strong>：待评估<br />
+<strong>为什么值得看</strong>：命中与临床统计、研究工程或可信 AI 工作流直接相关的高信号主题；仍需阅读全文并回到官方文档、原始研究或供应商公告交叉核验。</p>
+
+<p>OpenAI on Thursday unveiled GPT‑6 Cyber , which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment.   The new model is “more capable at finding and fixing vulnerabilities, and far more reliable staying within the boundaries researchers set,” OpenAI said . It has classified the model as Critical in cybersecurity under its Preparedness Framework.   The artificial intelligence (AI) company said GPT‑6 Cyber  is also better than its predecessors like GPT‑5.6 Cyber and GPT‑6 Astra when it comes to following task boundaries and avoiding exploiting out-of-scope services in 99.93% of cases, up from 94.49% for GPT-5.6 Cyber.   It also scores 48.5% on ExploitGym, a cybersecurity benchmark that evaluates the capabilities of AI agents to autonomously turn known software vulnerabilities into functioning, real-world exploits. In comparison, GPT-5.6 Cyber scored 32.1%.   OpenAI …</p>
+
+<p><strong>可转化方向</strong>：关注模型评估、可信 AI、监控与工程治理对实际 AI 工作流的启发</p>
+
+<p><a href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">前往 The Hacker News 阅读原文</a></p>
+
+<hr />
+</article>
+</main>
+  <footer>自动聚合只用于信息发现 · 请回到原始来源核验</footer>
+</body>
+</html>
